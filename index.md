@@ -1,30 +1,83 @@
 ---
-title: Home
+title: Welcome to FeatureBase help
 layout: home
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+FeatureBase Help contains high level overviews of software functionality, plus procedural documentation for FeatureBase Cloud and the self-managed Community edition.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## What is FeatureBase?
 
-More specifically, the created site:
+FeatureBase is a feature-oriented database platform that powers real-time analytics and machine learning applications by executing low-latency, high-throughput, and highly concurrent workloads. Similar to the evolution of data formats from row-oriented to columnar, FeatureBase further evolves columnar into a feature-oriented format that makes each distinct data value individually addressable (accessible, readable, writable and retrievable).
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+Our novel approach minimizes I/O on queries by allowing the database engine to read and write exactly the data it needs and intelligently compress that data in memory. The result is a step-function improvement in analytical workloads.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+* [Learn more on featurebase.com](https://featurebase.com)
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+## Before you begin
 
-To get started with creating a site, just click "[use this template]"!
+* [Learn more about FeatureBase](https://www.featurebase.com/){:target="_blank"}
+* [Contact FeatureBase support](https://www.featurebase.com/contact-us){:target="_blank"}
 
-----
+## Comparing Cloud and Community editions
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+These tables provided a side-by-side comparison of Cloud and Community functionality.
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+## Infrastructure
+
+| Feature | Cloud  | Community  | Notes  |
+| ------ | ----- | ----------- | ----------- |
+| Click to Deploy |  Yes | No | Windows installations require a Hypervisor  |
+| Automated Scale Up/Down|  No | No |   |
+| Automated Scale In/Out |  No | No |   |
+| Regional Deployment |  No | Yes |   |
+
+## Data Ingestion
+
+| Feature | Cloud  | Community  | Notes  |
+| ------ | ----- | ----------- | ----------- |
+| Streaming (HTTPS)  |  Yes | No |   |
+| Kafka (Pull-based) |  No | Yes | Client-side kafka consumption & push for Cloud |
+| Database (Pull-based) |  No | Yes |  Client-side database consumption & push for Cloud |
+| CSV/Bulk Ingest  |  No | Yes |  Client-side file consumption & push for Cloud |
+
+## Data Consumption
+
+| Feature | Cloud  | Community  | Notes  |
+| ------ | ----- | ----------- | ----------- |
+| Query UI  |  Yes | Yes |   |
+| FeatureBase SQL - HTTPS |  Yes | No | Any language/tool (Python, Go, etc) that can read over HTTPS  |
+| FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
+| gRPC Endpoint |  No | Yes |   |
+| Postgres Endpoint |  No | Yes |   |
+| Unbounded Queries (Advanced Queries) |  No | Yes | Cloud Limited to 6mb and/or 30sec  |
+| PQL Query Builder |  No | Yes |   |
+| Python Client |  No | Yes |   |
+| Grafana Plug-In |  No | Yes |   |
+| Postgres Lookup Database Option |  No | Yes |   |
+
+## Operations
+
+| Feature | Cloud  | Community  | Notes  |
+| ------ | ----- | ----------- | ----------- |
+| Backup + Restore |  No | Yes |   |
+| Data Replication |  Yes | Yes |  |
+| Metrics & Monitoring |  No | Yes |   |
+| Editable FeatureBase Config File |  No | Yes |   |
+
+## Security
+
+| Feature | Cloud  | Community  | Notes  |
+| ------ | ----- | ----------- | ----------- |
+| Encryption In Flight |  Yes | Yes |  |
+| Encryption at Rest |  Yes | Yes |   |
+| Authentication + Authorization (OAuth) |  Yes | Yes |  |
+| Role-Based Access Control (Basic) |  No | Yes |   |
+| User Management |  Yes | Yes |  |
+| Audit Logging |  Yes | Yes |   |
+
+## Next Step
+
+You can choose to setup a cloud account, or install FeatureBase on a local server.
+
+* [Setup your FeatureBase cloud account](/cloud/cloud-introduction)
+* [Install FeatureBase Community locally](/community/community-setup/community-install-config)

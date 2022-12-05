@@ -1,22 +1,35 @@
 # FeatureBase site README
 
 Site uses a *gemfile* approach to the theme, which means:
-* theme files are held remotely in Github
-* local customizations are possible (and implemented in this system)
-This has the following benefits:
-* Clearer indication of what's our files and what's theme-specific
+* uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
+* uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-* [Just the docs theme help site](https://just-the-docs.github.io)
+This approach means:
+* this repository contains **only** FeatureBase content and customizations
+* it's simpler to determine what's ours and what's theme-based
+
+## Theme help
+
+[Just the docs theme help site](https://just-the-docs.github.io)
+
+FeatureBase specific information is below.
 
 ## Local build
 
+### Gemfile dependencies
+
+Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
+
+### Download
+
 For first time use:
-* Download the repo and open a terminal in that folder
-* Enter the following:
+* Clone the repo then cd to the folder `featurebase-docs`
+* Download theme dependencies:
 ```
 bundle
 ```
-To build:
+
+## Build site
 ```
 bundle exec jekyll serve
 ```
@@ -34,21 +47,17 @@ Hyperlink color is site-wide and governed by setting in featurebase.scss:
 $link-color: $purple-000;
 ```
 
-## Top of page nav
+## Navigation
+
+NOTE: Navigation link colors are governed by featurebase.scss
+
+### Top of site nav
 
 * Includes 3x external links that open in new window.
 * This is to allow users to keep their current context, and then tab to additional information
 * Will also include a Glossary link for FeatureBase help which will explain terminology and provide additional information
 
-## Navigation link colors
-
-Governed by setting in featurebase.scss as indicated above.
-
-## Callout boxes (AKA highlight boxes)
-
-Content to come from index.html in this demo site at future date.
-
-## LH sidebar nav structure
+### LH sidebar nav structure
 
 Navigation structure in LH sidebar is **not** tied to the folder structure.
 
@@ -56,114 +65,55 @@ Instead it uses page YAML to determine what's going on.
 
 [Navbar YAML syntax explained in theme help](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#pages-with-children)
 
+## Callout boxes (AKA highlight boxes)
+
+### Note
+
+```
+<p class="note">This is a note callout</p>
+
+# Or use
+
+{: .note }
+This is a note callout
+
+```
+
+{: .note }
+This is a note callout
+
+### Warning
+
+{: .warning }
+This is a warning callout
+
+### Success
+
+```
+<p class="success">Q'PLA! This is a success callout with a joke because it's that time of the day.</p>
+
+Or use
+
+{: .success }
+Q'PLA! This is a success callout with a joke because it's that time of the day.
+
+```
+
+{: .success }
+Q'PLA! This is a success callout with a joke because it's that time of the day.
 
 
+### Important
 
+```
+<p class="important">AWOOGAH! This is something important!</p>
 
----
+# or use
 
-(Original Readme content - delete when ready)
+{: .important}
+AWOOGAH! This is something important!
 
-# just-the-docs-template
+```
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
-
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
-
-More specifically, the created site:
-
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
-
-To get started with creating a site, just click "[use this template]"!
-
-After completing the creation of your new site on GitHub, update it as needed:
-
-## Replace the content of the template pages
-
-Update the following files to your own content:
-
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
-
-## Changing the version of the theme and/or Jekyll
-
-Simply edit the relevant line(s) in the `Gemfile`.
-
-## Adding a plugin
-
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
-
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
-
-- Add the following to your site's `Gemfile`:
-
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
-
-- And add the following to your site's `_config.yml`:
-
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
-
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
-
-## Publishing your site on GitHub Pages
-
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
-
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
-
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
-
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
-
-2.  Push your updated `_config.yml` to your site on GitHub.
-
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
-
-## Building and previewing your site locally
-
-Assuming [Jekyll] and [Bundler] are installed on your computer:
-
-1.  Change your working directory to the root directory of your site.
-
-2.  Run `bundle install`.
-
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
-
-    The built site is stored in the directory `_site`.
-
-## Publishing your built site on a different platform
-
-Just upload all the files in the directory `_site`.
-
-## Customization
-
-You're free to customize sites that you create with this template, however you like!
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
+{: .important}
+AWOOGAH! This is something important!
