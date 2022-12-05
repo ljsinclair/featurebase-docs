@@ -21,7 +21,8 @@ nav_order: 1
 
 ## Naming standards
 
-{% include /concepts/table-naming-standard.md %}
+{% include /cloud/object-naming-standard.md%}
+{% include /cloud/cloud-table-naming-standard.md %}
 
 ## Step 1: view tables
 
@@ -29,9 +30,9 @@ nav_order: 1
 
 ## Step 2: create table
 
-1. Click **Create table**
-2. Select the destination database if available.
-3. Enter a name and description if required
+1. Click **Create table**.
+2. Select the destination database.
+3. Enter a table name and an optional description.
 
 ## Step 3: choose the primary key
 

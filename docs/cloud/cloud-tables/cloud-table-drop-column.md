@@ -5,8 +5,16 @@ parent: Manage tables
 grand_parent: Cloud
 nav_order: 5
 ---
-# How do I drop a column from a FeatureBase Cloud table?
+# How do I delete a column from a FeatureBase Cloud table?
 {: .no_toc }
+
+You may need to delete a column if:
+* the data-type is incorrect for incoming data
+* the column contains incorrect data
+
+## Warnings
+
+* Deleted column data cannot be recovered.
 
 {% include /docs/page-toc.md %}
 
@@ -22,8 +30,6 @@ nav_order: 5
 {% include /cloud/cloud-view-table-list.md %}
 
 ## Step 2: Drop the selected column
-
-WARNING: Deletion is permanent.
 
 1. Click the table name.
 2. Click **Columns**.

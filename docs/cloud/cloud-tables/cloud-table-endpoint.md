@@ -6,10 +6,11 @@ grand_parent: Cloud
 nav_order: 3
 ---
 
-# Where do I find the table endpoint in FeatureBase Cloud?
+How do I obtain metadata on my table?
+
 {: .no_toc }
 
-The table endpoint is used when importing data from an external data source.
+The table endpoint is used to obtain metadata on a table via the API.
 
 {% include /docs/page-toc.md %}
 

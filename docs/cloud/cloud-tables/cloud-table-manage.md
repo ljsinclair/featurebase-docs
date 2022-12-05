@@ -25,9 +25,9 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 {% include /concepts/data-modeling-overview.md %}
 
-* [Learn about data modeling](/concepts/data-modeling-overview)
-
 IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
+
+* [Learn about data modeling](/concepts/data-modeling-overview)
 
 ## Table primary key
 
@@ -41,14 +41,16 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 ## Naming standard
 
-{% include /concepts/table-naming-standard.md %}
+{% include /cloud/object-naming-standard.md%}
+{% include /cloud/cloud-table-naming-standard.md %}
+{% include /cloud/cloud-column-naming-standard.md%}
 
 ## Managing tables in FeatureBase Cloud
 
 * [Create table](/cloud/cloud-tables/cloud-table-create)
 * [Add table columns](/cloud/cloud-databases/cloud-table-add-column)
 * [Drop table columns](/cloud/cloud-databases/cloud-table-drop-column)
-* [Drop table](/cloud/cloud-databases/cloud-table-drop)
+* [Delete table](/cloud/cloud-databases/cloud-table-delete)
 
 ## Managing tables using the Cloud API
 
