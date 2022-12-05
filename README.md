@@ -1,103 +1,216 @@
-# just-the-docs-template
+# FeatureBase site README
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+Site uses a *gemfile* approach to the theme, which means:
+* uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
+* uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+This approach means:
+* this repository contains **only** FeatureBase content and customizations
+* it's simpler to determine what's ours and what's theme-based
 
-More specifically, the created site:
+## Theme help
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+[Just the docs theme help site](https://just-the-docs.github.io)
 
-To get started with creating a site, just click "[use this template]"!
+FeatureBase specific information is below.
 
-After completing the creation of your new site on GitHub, update it as needed:
+## Local build
 
-## Replace the content of the template pages
+### Gemfile dependencies
 
-Update the following files to your own content:
+Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
 
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
+### First time use
 
-## Changing the version of the theme and/or Jekyll
+For first time use:
+* Clone the repo then cd to the folder `featurebase-docs`
+* Download theme dependencies:
+```
+bundle
+```
 
-Simply edit the relevant line(s) in the `Gemfile`.
+## Build site
+```
+bundle exec jekyll serve
+```
 
-## Adding a plugin
 
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
+# Site settings in `/_config.yml`
 
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+| Settings | Found under... |
+|---|---|
+| site name | `title: FeatureBase help` |
+| hyperlinks at top of page | `# top of page nav` |
+| Featurebase logo | `logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"` |
+| Top of page navigation | `# Top of page nav` |
+| Stylesheet design | `color_scheme: featurebase` |
+| Search | `search_enabled: true` plus additional settings below |
+| Callout text highlighting | # Text highlighting callouts |
 
-- Add the following to your site's `Gemfile`:
+NOTE: It's also possible to add Google analytics and other stuff to the site. [Learn about site settings](https://just-the-docs.github.io/just-the-docs/docs/configuration/) |
 
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
+## FeatureBase logo
 
-- And add the following to your site's `_config.yml`:
+Logo is found at top left and based on the approved logo
 
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
-  
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+Logo file found in: `/assets/images/FeatureBase-Logo-Gradient-Wide.png`
 
-## Publishing your site on GitHub Pages
+## Top of site nav
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+Current setup:
+* 3x links that open in new window
+* new window means users can retain their place in FeatureBase help and refer to other sites in new tabs
 
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
+**To Do** Add a glossary link once that's been written
 
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+## Stylesheet design
 
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
+| Implemented | Found under |
+|---|---|
+| FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
+| Featurebase css styles | `/_sass/custom/custom.scss` |
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+Hyperlink color is site-wide and governed by setting in `featurebase.scss`:
 
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+```
+$link-color: $purple-000;
+```
 
-## Building and previewing your site locally
+## Search
 
-Assuming [Jekyll] and [Bundler] are installed on your computer:
+* [Learn about just-the-docs search](https://just-the-docs.github.io/just-the-docs/docs/search/)
 
-1.  Change your working directory to the root directory of your site.
+## Callout text highlighting
 
-2.  Run `bundle install`.
+Callout boxes are styled to FeatureBase standard colors.
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+### Note
 
-    The built site is stored in the directory `_site`.
+```
+<p class="note">This is a note callout</p>
 
-## Publishing your built site on a different platform
+# Or use
 
-Just upload all the files in the directory `_site`.
+{: .note }
+This is a note callout
 
-## Customization
+```
 
-You're free to customize sites that you create with this template, however you like!
+### Warning
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+```
+<p class="warning">This is a warning callout</p>
 
-----
+# Or use
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+{: .warning }
+This is a warning callout
 
-[Jekyll]: https://jekyllrb.com
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
+```
+
+### Success
+
+```
+<p class="success">Q'PLA! This is a success callout with a joke because it's that time of the day.</p>
+
+Or use
+
+{: .success }
+Q'PLA! This is a success callout with a joke because it's that time of the day.
+
+```
+
+### Important
+
+```
+<p class="important">AWOOGAH! This is something important!</p>
+
+# or use
+
+{: .important}
+AWOOGAH! This is something important!
+
+```
+
+# Body Footer
+
+Footer is an include file found in `/_includes/footer_custom.html`
+
+# Writing content and sidebar navigation
+
+All page content is saved to the `/docs` folder.
+
+### Colors
+
+Navigation link colours are governed by the `$link-color` setting in `featurebase.scss`.
+
+## Navigation
+
+By default any page with a `title` will automatically appear in navigation regardless of subfolders.
+
+Page order in the tree is governed by YAML at the top of each page.
+
+Theme supports 3 levels:
+
+```
+                             # Required YAML for each page:
+├── level 1                  # title: level 1
+├── level 1 parent           # level 1 parent, has_children: true
+│   ├── level 2 child        # parent: level 1 parent
+│   ├── level 2 child        # parent: level 1 parent
+│   ├── level 2 parent       # parent: level 1 parent, has_children: true
+│   │   ├── level 3 child    # parent: level 2 parent, grandparent: level 1 parent
+│   │   ├── level 3 child    # parent: level 2 parent, grandparent: level 1 parent
+```
+
+Pages with children are represented as an expandable/collapsible node in the tree.
+
+### Level 1 page YAML (required on all pages)
+
+```
+title: Navbar title
+layout: default
+nav_order: 1
+```
+
+Where:
+* title - page title that appears in the navigation
+* layout - page design, default is the simplest so don't change
+* nav_order - integer representing the position of the page in descending order 1...n
+
+### Level 2 page YAML
+
+```
+# required YAML plus...
+parent: parent title
+has_children: [true|false]
+```
+
+Where:
+* parent - title of the node above the page in the tree
+* has_children - `true` means the nav appears as an expandable node
+
+### Level 3 page YAML
+
+```
+# required YAML plus...
+parent: parent_title
+grandparent: grandparent_title
+```
+
+Where:
+* parent -- title of node above the page in the tree
+* grandparent -- title of first level node
+
+## Standard content for pages
+
+It's **really** important to include this information and shortcode on each page.
+
+| Standard content | Description | Source/example |
+|---|---|---|
+| Page heading | Heading 1 as a question | `# How do I create cloud tables` |
+| disable auto TOC for child pages | All pages auto-generate a list of child pages if they are available. This isn't useful on all pages | Add `{: .no_toc }` after the heading |
+| page description | Give a basic description of the page. Ideally this isn't a retread of the heading, but it's ok if it is. | Learn what's involved with creating a table in FeatureBase cloud. |
+| page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include /docs/page-toc.md %}` |
+| Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
+| Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
