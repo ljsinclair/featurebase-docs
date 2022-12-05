@@ -1,7 +1,7 @@
 ---
 title: FeatureBase Cloud trial account
 layout: default
-parent: Cloud troubleshooting home
+parent: Cloud troubleshooting
 grand_parent: Cloud
 nav_order: 1
 ---

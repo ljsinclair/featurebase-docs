@@ -1,5 +1,5 @@
 ---
-title: FeatureBase help home
+title: FeatureBase help
 layout: home
 has_children: false
 nav_order: 1
