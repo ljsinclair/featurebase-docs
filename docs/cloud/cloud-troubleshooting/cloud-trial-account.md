@@ -14,7 +14,7 @@ nav_order: 1
 
 ## What can I do with my trial account
 
-* [Learn about FeatureBase Cloud](/cloud/cloud-introduction)
+* [Learn about FeatureBase Cloud](/cloud/cloud-home)
 * [Learn about FeatureBase databases](/cloud/cloud-databases/cloud-db-manage)
 * [Evaluate the system by creating a database with pre-loaded data](/cloud/cloud-databases/cloud-db-create-sample)
 
