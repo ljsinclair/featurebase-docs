@@ -34,7 +34,36 @@ bundle
 bundle exec jekyll serve
 ```
 
-## Design
+
+# Site settings in `/_config.yml`
+
+| Settings | Found under... |
+|---|---|
+| site name | `title: FeatureBase help` |
+| hyperlinks at top of page | `# top of page nav` |
+| Featurebase logo | `logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"` |
+| Top of page navigation | `# Top of page nav` |
+| Stylesheet design | `color_scheme: featurebase` |
+| Search | `search_enabled: true` plus additional settings below |
+| Callout text highlighting | # Text highlighting callouts |
+
+NOTE: It's also possible to add Google analytics and other stuff to the site. [Learn about site settings](https://just-the-docs.github.io/just-the-docs/docs/configuration/) |
+
+## FeatureBase logo
+
+Logo is found at top left and based on the approved logo
+
+Logo file found in: `/assets/images/FeatureBase-Logo-Gradient-Wide.png`
+
+## Top of site nav
+
+Current setup:
+* 3x links that open in new window
+* new window means users can retain their place in FeatureBase help and refer to other sites in new tabs
+
+**To Do** Add a glossary link once that's been written
+
+## Stylesheet design
 
 | Implemented | Found under |
 |---|---|
@@ -47,30 +76,13 @@ Hyperlink color is site-wide and governed by setting in `featurebase.scss`:
 $link-color: $purple-000;
 ```
 
-## Navigation
+## Search
 
-Navigation link colours are governed by the `$link-color` setting in `featurebase.scss`.
+* [Learn about just-the-docs search](https://just-the-docs.github.io/just-the-docs/docs/search/)
 
-### Top of site nav
+## Callout text highlighting
 
-* Includes 3x external links that open in new window.
-* This is to allow users to keep their current context, and then [alt|cmd]+tab for additional information
-* Will also include a Glossary link for FeatureBase help which will explain terminology and provide additional information
-
-### LH sidebar nav structure
-
-Navigation structure in LH sidebar is **not** tied to the folder structure.
-
-Instead it uses page YAML to determine what's going on.
-
-[Navbar YAML syntax explained in theme help](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#pages-with-children)
-
-## Footer
-
-Footer is an include file found in `/_includes/footer_custom.html`
-
-
-## Callout boxes (AKA highlight boxes)
+Callout boxes are styled to FeatureBase standard colors.
 
 ### Note
 
@@ -84,13 +96,17 @@ This is a note callout
 
 ```
 
-{: .note }
-This is a note callout
-
 ### Warning
+
+```
+<p class="warning">This is a warning callout</p>
+
+# Or use
 
 {: .warning }
 This is a warning callout
+
+```
 
 ### Success
 
@@ -104,9 +120,6 @@ Q'PLA! This is a success callout with a joke because it's that time of the day.
 
 ```
 
-{: .success }
-Q'PLA! This is a success callout with a joke because it's that time of the day.
-
 ### Important
 
 ```
@@ -119,18 +132,25 @@ AWOOGAH! This is something important!
 
 ```
 
-{: .important}
-AWOOGAH! This is something important!
+# Body Footer
 
-## Writing and editing content
+Footer is an include file found in `/_includes/footer_custom.html`
 
-See the [Documentation style guide in Confluence](https://molecula.atlassian.net/wiki/spaces/DOCS/pages/1010860035/Style+Guide)
+# Writing content and sidebar navigation
 
-## Page order in left hand navigation
+All page content is saved to the `/docs` folder.
+
+### Colors
+
+Navigation link colours are governed by the `$link-color` setting in `featurebase.scss`.
+
+## Navigation
+
+By default any page with a `title` will automatically appear in navigation regardless of subfolders.
 
 Page order in the tree is governed by YAML at the top of each page.
 
-Theme supports 3 levels of content which can be conceptualised as three generations of a family:
+Theme supports 3 levels:
 
 ```
                              # Required YAML for each page:
@@ -182,18 +202,15 @@ Where:
 * parent -- title of node above the page in the tree
 * grandparent -- title of first level node
 
-### Additional standard content for pages
+## Standard content for pages
 
-| standard content | Description | Source/example |
+It's **really** important to include this information and shortcode on each page.
+
+| Standard content | Description | Source/example |
 |---|---|---|
-| page heading | Heading 1 as a question | `# How do I create cloud tables` |
+| Page heading | Heading 1 as a question | `# How do I create cloud tables` |
 | disable auto TOC for child pages | All pages auto-generate a list of child pages if they are available. This isn't useful on all pages | Add `{: .no_toc }` after the heading |
 | page description | Give a basic description of the page. Ideally this isn't a retread of the heading, but it's ok if it is. | Learn what's involved with creating a table in FeatureBase cloud. |
 | page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include /docs/page-toc.md %}` |
 | Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
 | Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
-
-
-
-
-The theme allows you to create what I'll call a "stub page" which is a page with little to no content that can stand-in as a parent node for child pages. A page like this auto-inserts a list of child pages after your content. This isn't useful for pages with detailed content, so you needand auto-inserts a TOC of child pages. This isn't useful on pages with detailed content
