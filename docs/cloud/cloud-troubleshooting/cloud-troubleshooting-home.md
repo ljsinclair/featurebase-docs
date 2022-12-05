@@ -10,5 +10,3 @@ has_toc: false
 # Troubleshooting FeatureBase Cloud
 
 Check our troubleshooting pages for workarounds and fixes to problems you are encountering.
-
-Raise issues on GitHub if you can't find a solution here.
