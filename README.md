@@ -1,3 +1,22 @@
+# SITE BUILD DISABLED as of 2022-12-06
+
+This site is IN DEVELOPMENT and not ready for public consumption.
+
+* Repo is set to **private** which prevents build occurring
+* Build scripts are **disabled** to avoid being bombarded with build messages
+
+Doc updates are publicly available in /molecula/documentation > outputs to > docs.featurebase.com
+
+## Deployment setup
+
+* Set repo to public: https://github.com/FeatureBaseDB/featurebase-docs/settings > scroll down and click **Change Visibility** > Public
+* Restart scripts: https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml
+* Change CName records on featurebase.com to point to new site
+
+
+
+ this is a PRIVATE repository and the GitHub Pages build has been disabled because the site is under development.
+
 # FeatureBase site README
 
 Site uses a *gemfile* approach to the theme, which means:
