@@ -20,7 +20,7 @@ FeatureBase specific information is below.
 
 Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
 
-### Download
+### First time use
 
 For first time use:
 * Clone the repo then cd to the folder `featurebase-docs`
@@ -38,10 +38,10 @@ bundle exec jekyll serve
 
 | Implemented | Found under |
 |---|---|
-| FeatureBase colors, red, blue, purple | /_sass/color_schemes/featurebase.scss |
-| Featurebase css styles | /_sass/custom/custom.scss |
+| FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
+| Featurebase css styles | `/_sass/custom/custom.scss` |
 
-Hyperlink color is site-wide and governed by setting in featurebase.scss:
+Hyperlink color is site-wide and governed by setting in `featurebase.scss`:
 
 ```
 $link-color: $purple-000;
@@ -49,12 +49,12 @@ $link-color: $purple-000;
 
 ## Navigation
 
-NOTE: Navigation link colors are governed by featurebase.scss
+Navigation link colours are governed by the `$link-color` setting in `featurebase.scss`.
 
 ### Top of site nav
 
 * Includes 3x external links that open in new window.
-* This is to allow users to keep their current context, and then tab to additional information
+* This is to allow users to keep their current context, and then [alt|cmd]+tab for additional information
 * Will also include a Glossary link for FeatureBase help which will explain terminology and provide additional information
 
 ### LH sidebar nav structure
@@ -64,6 +64,11 @@ Navigation structure in LH sidebar is **not** tied to the folder structure.
 Instead it uses page YAML to determine what's going on.
 
 [Navbar YAML syntax explained in theme help](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#pages-with-children)
+
+## Footer
+
+Footer is an include file found in `/_includes/footer_custom.html`
+
 
 ## Callout boxes (AKA highlight boxes)
 
@@ -101,7 +106,6 @@ Q'PLA! This is a success callout with a joke because it's that time of the day.
 
 {: .success }
 Q'PLA! This is a success callout with a joke because it's that time of the day.
-
 
 ### Important
 

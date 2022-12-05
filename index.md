@@ -1,9 +1,17 @@
 ---
-title: Welcome to FeatureBase help
+title: FeatureBase help home
 layout: home
+has_children: false
+nav_order: 1
+has_toc: false
 ---
 
+# Welcome to FeatureBase help
+{: .no_toc }
+
 FeatureBase Help contains high level overviews of software functionality, plus procedural documentation for FeatureBase Cloud and the self-managed Community edition.
+
+{% include /docs/page-toc.md %}
 
 ## What is FeatureBase?
 
