@@ -1,3 +1,69 @@
+# FeatureBase site README
+
+Site uses a *gemfile* approach to the theme, which means:
+* theme files are held remotely in Github
+* local customizations are possible (and implemented in this system)
+This has the following benefits:
+* Clearer indication of what's our files and what's theme-specific
+
+* [Just the docs theme help site](https://just-the-docs.github.io)
+
+## Local build
+
+For first time use:
+* Download the repo and open a terminal in that folder
+* Enter the following:
+```
+bundle
+```
+To build:
+```
+bundle exec jekyll serve
+```
+
+## Design
+
+| Implemented | Found under |
+|---|---|
+| FeatureBase colors, red, blue, purple | /_sass/color_schemes/featurebase.scss |
+| Featurebase css styles | /_sass/custom/custom.scss |
+
+Hyperlink color is site-wide and governed by setting in featurebase.scss:
+
+```
+$link-color: $purple-000;
+```
+
+## Top of page nav
+
+* Includes 3x external links that open in new window.
+* This is to allow users to keep their current context, and then tab to additional information
+* Will also include a Glossary link for FeatureBase help which will explain terminology and provide additional information
+
+## Navigation link colors
+
+Governed by setting in featurebase.scss as indicated above.
+
+## Callout boxes (AKA highlight boxes)
+
+Content to come from index.html in this demo site at future date.
+
+## LH sidebar nav structure
+
+Navigation structure in LH sidebar is **not** tied to the folder structure.
+
+Instead it uses page YAML to determine what's going on.
+
+[Navbar YAML syntax explained in theme help](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#pages-with-children)
+
+
+
+
+
+---
+
+(Original Readme content - delete when ready)
+
 # just-the-docs-template
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
@@ -44,7 +110,7 @@ To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.ym
   plugins:
     - jekyll-default-layout
   ```
-  
+
 Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
 
 ## Publishing your site on GitHub Pages
