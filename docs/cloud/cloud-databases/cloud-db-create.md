@@ -11,14 +11,18 @@ nav_order: 2
 
 This procedure explains how to create a Database in FeatureBase Cloud.
 
+NOTE: You can also [create a database with pre-loaded data](/cloud/cloud-databases/cloud-db-create-sample)
+
 {% include /docs/page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/cloud/cloud-databases/cloud-db-manage)
-* [Perform data modeling](/concepts/data-modeling-overview) prior to creating databases to avoid issues.
-* FeatureBase Trial accounts are limited to one database and development database shapes (8GB or 16GB)
+
+## Trial accounts
+
+{% include /cloud/trial-account-limits.md %}
 
 ## Cloud database shapes
 
@@ -28,25 +32,25 @@ This procedure explains how to create a Database in FeatureBase Cloud.
 
 ## Naming standards
 
-{% include /concepts/database-naming-standard.md %}
+{% include /concepts/object-naming-standard.md %}
+{% include /cloud/cloud-db-naming-standard.md %}
 
-## How do I create a FeatureBase Database?
+## Create Database
 
-1. Click **Databases** > **New database**
-2. Name your database.
-3. Choose the database type:
+{% include /cloud/cloud-db-new-name.md %}
 
-| Type | Description | Further information |
-|---|---|---|
-| Start with pre-loaded database sample | 1 million records |  |
-| Start with a clean database | Choose from development or production shapes. | [Database shapes](/cloud/cloud-databases/cloud-db-shapes) |
+* Choose from development shapes intended for testing:
 
-<ol start="4"><!--added because numbering restarts after para break-->
-  <li>Click **Create database**.</li>
-</ol>
+{% include /cloud/cloud-db-shape-dev.md %}
+
+* Or choose a production shape instead:
+
+{% include /cloud/cloud-db-shape-prod.md %}
+{% include /cloud/cloud-db-click-create.md %}
+
 ## Next step
 
-* [Learn how to add tables](/cloud/cloud-tables/cloud-table-create)
+* [Learn how to create tables](/cloud/cloud-tables/cloud-table-create)
 
 ## Further information
 

@@ -13,10 +13,9 @@ Learn how to delete a FeatureBase Cloud database.
 
 {% include /docs/page-toc.md %}
 
-
 ## Warnings
 
-* You must drop database tables **before** deleting a database.
+* You must delete database tables **before** deleting a database.
 * Databases cannot be recovered once deleted.
 * Deletion may take some time.
 
@@ -24,9 +23,9 @@ Learn how to delete a FeatureBase Cloud database.
 
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/cloud/cloud-databases/cloud-db-create)
-* [Drop tables](/cloud/cloud-tables/cloud-table-drop)
+* [delete tables](/cloud/cloud-tables/cloud-table-delete)
 
-## How to delete a database
+## Delete a database
 
 1. Click **Databases**.
 2. Click &#8942; on the database to delete.

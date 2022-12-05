@@ -19,23 +19,21 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* FeatureBase Cloud Trial accounts are limited to one database
 
-## Data modeling
+## Trial accounts
 
-{% include /concepts/data-modeling-overview.md %}
-
-* [Learn about data modeling](/concepts/data-modeling-overview)
+{% include /cloud/trial-account-limits.md %}
 
 ## Cloud database shapes
 
-{% include /concepts/database-shape-summary.md %}
+{% include /cloud/cloud-db-shape-summary.md %}
 
 * [Learn about cloud database shapes](/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
 
-{% include /concepts/database-naming-standard.md %}
+{% include /concepts/object-naming-standard.md %}
+{% include /cloud/cloud-db-naming-standard.md %}
 
 ## Database states
 

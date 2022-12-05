@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 3
 ---
 
-# How do I determine the database status?
+# What states can my Database have?
 {: .no_toc }
 
 {% include /concepts/db-states-summary.md %}
@@ -27,7 +27,7 @@ nav_order: 3
 | UPDATING |  Updates may occur due to hardware changes or software patches. |  |
 | DELETING |  Occurs when a database is deleted and hardware is being spun down. | [Delete a cloud database](/cloud/cloud-databases/cloud-db-delete) |
 | DELETED |  Post deletion state that indicates successful deletion. |
-| FAILED |  An issue has occurred on the database that requires attention. |
+| FAILED |  [Contact FeatureBase support](https://www.featurebase.com/contact-us) to help with this issue. |
 
 ## Further information
 
