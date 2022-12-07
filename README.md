@@ -13,10 +13,6 @@ Doc updates are publicly available in /molecula/documentation > outputs to > doc
 * Restart scripts: https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml
 * Change CName records on featurebase.com to point to new site
 
-
-
- this is a PRIVATE repository and the GitHub Pages build has been disabled because the site is under development.
-
 # FeatureBase site README
 
 Site uses a *gemfile* approach to the theme, which means:
@@ -98,10 +94,14 @@ Current setup:
 | FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
 | Featurebase css styles | `/_sass/custom/custom.scss` |
 
-Hyperlink color is site-wide and governed by setting in `featurebase.scss`:
+## Hyperlinks
+
+Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
+
+Open hyperlink in new tab:
 
 ```
-$link-color: $purple-000;
+[anchor text](URL){:target="_blank"}
 ```
 
 ## Search
@@ -160,17 +160,13 @@ AWOOGAH! This is something important!
 
 ```
 
-# Body Footer
+## Body Footer
 
 Footer is an include file found in `/_includes/footer_custom.html`
 
 # Writing content and sidebar navigation
 
 All page content is saved to the `/docs` folder.
-
-### Colors
-
-Navigation link colours are governed by the `$link-color` setting in `featurebase.scss`.
 
 ## Navigation
 
@@ -242,3 +238,20 @@ It's **really** important to include this information and shortcode on each page
 | page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include /docs/page-toc.md %}` |
 | Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
 | Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
+
+### Common/reusable content
+
+Common/reusable content is stored in the `/_includes` folder:
+* cloud - cloud specific content
+* community - community specific content
+* concepts - descriptions and definitions of conceptual information which can include stuff that's common to cloud and community (e.g., database descriptions)
+
+Files are markdown unless absolutely necessary to use something like html.
+
+Add an include file as follows:
+
+```
+{% include /folder/filename.md %}
+```
+
+broken include files **will** break the build.
