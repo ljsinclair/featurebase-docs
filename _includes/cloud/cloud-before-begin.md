@@ -1,4 +1,4 @@
-* [Learn about FeatureBase Cloud](/cloud/cloud-introduction)
+* [Learn about FeatureBase Cloud](/cloud/cloud-home)
 * [Setup a cloud account and login](/cloud/cloud-setup/cloud-quickstart-guide)
 
 <!-- Fix when the https://github.com/molecula/documentation/pull/268 goes in

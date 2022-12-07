@@ -21,6 +21,10 @@ aux_links:
   API docs: https://api-docs-featurebase-cloud.redoc.ly/
   Contact us: https://www.featurebase.com/contact-us
 
+# permalink info found on https://jekyllrb.com/docs/permalinks/
+
+permalink: pretty
+
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"
 
