@@ -52,12 +52,14 @@ bundle exec jekyll serve
 ## Broken link checker
 
 * html-proofer added to `Gemfile`
-* serve site with `bundle exec jekyll build`
-* test broken links with `bundle exec htmlproofer ./_site`
 
-You're looking for anything that expressly says "broken".
-External links don't count at this point
-You'll get a lot of `ref` errors which is about image files.
+Run broken link check with the batch file:
+
+```
+bash check-links.sh
+```
+
+NOTE: Everything but external links needs to be fixed.
 
 # Site settings in `/_config.yml`
 
