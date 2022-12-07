@@ -1,1 +1,1 @@
-[Contact FeatureBase support](se@featurebase.com)
+[Contact FeatureBase support](https://www.featurebase.com/contact-us){:target="_blank"}
