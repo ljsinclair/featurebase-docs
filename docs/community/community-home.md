@@ -7,5 +7,3 @@ has_toc: false
 ---
 
 # Community home
-
-Proof of concept page

@@ -20,18 +20,14 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 ## Install FeatureBase on Linux
 
-{% include /docs/community/install-fb-linux-source.md %}
+{% include /community/install-fb-linux-source.md %}
 
 ## Authorize FeatureBase with MacOS Gatekeeper system
 
-{% include /docs/community/issue-fb-mac-gatekeeper.md %}
+{% include /community/issue-fb-mac-gatekeeper.md %}
 
 ## Next step
 
 * [Startup and connect to FeatureBase](/startup-connect-fb-local)
 
 ## Further information
-
-## Get support
-
-{% include /docs/get-support-source.md %}

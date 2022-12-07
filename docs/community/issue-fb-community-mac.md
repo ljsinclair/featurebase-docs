@@ -18,7 +18,7 @@ This may be caused by the MacOS Gatekeeper system
 
 ## Solution
 
-{% include /docs/community/issue-fb-mac-gatekeeper.md %}
+{% include /community/issue-fb-mac-gatekeeper.md %}
 
 
 ## Further information
@@ -26,8 +26,3 @@ This may be caused by the MacOS Gatekeeper system
 If these steps don't work, you can try reinstalling the software.
 
 * [How do I install FeatureBase Community on mac](/docs/community/install-featurebase-mac)
-
-
-## Get support
-
-{% include /docs/get-support-source.md %}

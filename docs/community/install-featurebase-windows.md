@@ -23,12 +23,8 @@ FeatureBase is a Linux application which does not run natively on Windows operat
 
 ## Install FeatureBase community on the virtual environment
 
-{% include /docs/community/install-fb-linux-source.md %}
+{% include /community/install-fb-linux-source.md %}
 
 ## Next step
 
 * [Startup and connect to FeatureBase](/startup-connect-fb-local)
-
-## Get support
-
-{% include /docs/get-support-source.md %}

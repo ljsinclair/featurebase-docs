@@ -45,7 +45,3 @@ http://localhost:10101/
 ## Troubleshooting
 
 * [Issue: FeatureBase Community won't startup on Mac](/community/issue-fb-community-mac.md)
-
-## Get support
-
-{% include /docs/get-support-source.md %}
