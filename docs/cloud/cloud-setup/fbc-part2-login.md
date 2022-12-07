@@ -30,7 +30,3 @@ You can login to FeatureBase Cloud in two ways:
 ## Next step
 
 * [Learn how to setup a FeatureBase Database and tables](/cloud/cloud-databases/cloud-db-manage)
-
-## Get support
-
-{% include /docs/get-support-source.md %}

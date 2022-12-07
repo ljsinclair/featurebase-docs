@@ -31,7 +31,3 @@ This is a 21 day trial period
 ## Next step
 
 * [Login to FeatureBase Cloud](https://cloud.featurebase.com/login)
-
-## Get support
-
-{% include /docs/get-support-source.md %}
