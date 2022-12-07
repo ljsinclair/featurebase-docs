@@ -9,4 +9,4 @@ has_toc: false
 
 # Troubleshooting FeatureBase Cloud
 
-Check our troubleshooting pages for workarounds and fixes to problems you are encountering.
+Check our troubleshooting pages for workarounds and fixes to problems you are encountering with FeatureBase cloud.

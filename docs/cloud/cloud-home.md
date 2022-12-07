@@ -23,7 +23,7 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 ## Cloud trial
 
-* [Learn about FeatureBase Cloud trial accounts](/docs/cloud-troubleshooting/cloud-trial-account)
+* [Learn about FeatureBase Cloud trial accounts](/docs/cloud/cloud-troubleshooting/cloud-trial-account)
 
 ## Terms and conditions
 
@@ -33,7 +33,7 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 If you experience issues, refer to the troubleshooting pages:
 
-* [FeatureBase Cloud troubleshooting](/docs/cloud-troubleshooting/cloud-troubleshooting-home)
+* [FeatureBase Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home)
 
 ## Next step
 
