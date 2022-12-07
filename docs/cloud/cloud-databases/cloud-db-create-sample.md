@@ -31,4 +31,4 @@ NOTE: You can also [create a database of your own](/docs/cloud/cloud-databases/c
 
 ## Next step
 
-* [Query sample data](/docs/cloud/query-cloud-data/querydata)
+* [Query sample data](/docs/cloud/cloud-query/cloud-query-data)
