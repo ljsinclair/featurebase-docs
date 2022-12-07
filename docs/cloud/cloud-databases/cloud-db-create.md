@@ -11,14 +11,14 @@ nav_order: 2
 
 This procedure explains how to create a Database in FeatureBase Cloud.
 
-NOTE: You can also [create a database with pre-loaded data](/cloud/cloud-databases/cloud-db-create-sample)
+NOTE: You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
 {% include /docs/page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage databases](/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Trial accounts
 
@@ -28,7 +28,7 @@ NOTE: You can also [create a database with pre-loaded data](/cloud/cloud-databas
 
 {% include /concepts/database-shape-summary.md %}
 
-* [Learn about cloud database shapes](/cloud/cloud-databases/cloud-db-shape)
+* [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
 
@@ -50,9 +50,9 @@ NOTE: You can also [create a database with pre-loaded data](/cloud/cloud-databas
 
 ## Next step
 
-* [Learn how to create tables](/cloud/cloud-tables/cloud-table-create)
+* [Learn how to create tables](/docs/cloud/cloud-tables/cloud-table-create)
 
 ## Further information
 
 * [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
-* [Learn how to delete a database](/cloud/cloud-databases/cloud-db-delete)
+* [Learn how to delete a database](/docs/cloud/cloud-databases/cloud-db-delete)

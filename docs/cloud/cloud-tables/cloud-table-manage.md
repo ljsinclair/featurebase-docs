@@ -19,7 +19,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage Cloud databases](/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Data modeling
 
@@ -37,7 +37,7 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 {% include /cloud/cloud-pk-table.md%}
 
-* [Learn about data types and constraints](/cloud/cloud-data-modeling/data-types)
+* [Learn about data types and constraints](/docs/cloud/cloud-data-modeling/data-types)
 
 ## Naming standard
 
@@ -47,10 +47,10 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 ## Managing tables in FeatureBase Cloud
 
-* [Create table](/cloud/cloud-tables/cloud-table-create)
-* [Add table columns](/cloud/cloud-databases/cloud-table-add-column)
-* [Drop table columns](/cloud/cloud-databases/cloud-table-drop-column)
-* [Delete table](/cloud/cloud-databases/cloud-table-delete)
+* [Create table](/docs/cloud/cloud-tables/cloud-table-create)
+* [Add table columns](/docs/cloud/cloud-databases/cloud-table-add-column)
+* [Drop table columns](/docs/cloud/cloud-databases/cloud-table-drop-column)
+* [Delete table](/docs/cloud/cloud-databases/cloud-table-delete)
 
 ## Managing tables using the Cloud API
 
@@ -62,4 +62,4 @@ Tables that exist in the same database can be joined.
 
 ## Next step
 
-* [Learn about setting up data ingestion](/cloud/cloud-data-ingestion/ingest-data-overview)
+* [Learn about setting up data ingestion](/docs/cloud/cloud-data-ingestion/ingest-data-overview)

@@ -28,7 +28,7 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 {% include /cloud/cloud-db-shape-summary.md %}
 
-* [Learn about cloud database shapes](/cloud/cloud-databases/cloud-db-shape)
+* [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
 
@@ -39,12 +39,12 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 {% include /concepts/db-states-summary.md %}
 
-* [Learn about cloud database states](/cloud/cloud-databases/cloud-db-states)
+* [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
 
 ## Managing databases in FeatureBase Cloud
 
-* [Create database](/cloud/cloud-databases/cloud-db-create)
-* [Drop database](/cloud/cloud-databases/cloud-db-delete)
+* [Create database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Managing databases using the FeatureBase API
 
@@ -52,4 +52,4 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 ## Next step
 
-* [Learn how to manage FeatureBase Cloud tables](/cloud/cloud-tables/cloud-table-manage)
+* [Learn how to manage FeatureBase Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)

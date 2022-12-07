@@ -16,8 +16,8 @@ The table query endpoint is used when running remote table queries via the API.
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md%}
-* [Create a database](/cloud/cloud-databases/cloud-db-create)
-* [Create a table](/cloud/cloud-tables/cloud-table-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 
 ## Step 1: view tables
 

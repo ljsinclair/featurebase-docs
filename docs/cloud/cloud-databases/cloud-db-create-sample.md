@@ -15,7 +15,7 @@ Our sample dataset contains 1 billion customer records with attributes that are 
 
 It will take approximately 10 minutes to create the database.
 
-NOTE: You can also [create a database of your own](/cloud/cloud-databases/cloud-db-create) then create tables and add data.
+NOTE: You can also [create a database of your own](/docs/cloud/cloud-databases/cloud-db-create) then create tables and add data.
 
 {% include /docs/page-toc.md %}
 
@@ -31,4 +31,4 @@ NOTE: You can also [create a database of your own](/cloud/cloud-databases/cloud-
 
 ## Next step
 
-* [Query sample data](/cloud/query-cloud-data/querydata)
+* [Query sample data](/docs/cloud/query-cloud-data/querydata)

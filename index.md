@@ -87,5 +87,5 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 You can choose to setup a cloud account, or install FeatureBase on a local server.
 
-* [Setup your FeatureBase cloud account](/cloud/cloud-home)
-* [Install FeatureBase Community locally](/community/community-setup/community-install-config)
+* [Setup your FeatureBase cloud account](/docs/cloud/cloud-home)
+* [Install FeatureBase Community locally](/docs/community/community-home)

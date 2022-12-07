@@ -15,8 +15,8 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Before you begin
 
-* [Learn more about FeatureBase cloud](/cloud/cloud-home)
-* [Learn about the 21 day trial period](/cloud/cloud-home#cloud-trial)
+* [Learn more about FeatureBase cloud](/docs/cloud/cloud-home)
+* [Learn about the 21 day trial period](/docs/cloud/cloud-home#cloud-trial)
 * [Read the terms of service](https://www.featurebase.com/cloud-terms)
 * Have contact details and a password ready
 
@@ -30,4 +30,4 @@ This is a 21 day trial period
 
 ## Next step
 
-* [Login to FeatureBase Cloud](/cloud/cloud-setup/fbc-part2-login)
+* [Login to FeatureBase Cloud](/docs/cloud/cloud-login)

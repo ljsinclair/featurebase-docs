@@ -35,7 +35,7 @@ curl --location --request POST 'https://api.featurebase.com/v2/invites' \
 }'
 ```
 
-Upon receiving an invitation, a user will click the link and either sign up, if they are not a current user, or sign in and be prompted to move organizations. Please see [below](/cloud/cloud-configuration/users#moving-organizations) for more information on moving organizations.
+Upon receiving an invitation, a user will click the link and either sign up, if they are not a current user, or sign in and be prompted to move organizations. Please see [below](/docs/cloud/cloud-configuration/users#moving-organizations) for more information on moving organizations.
 
 ## Deactivating Users
 

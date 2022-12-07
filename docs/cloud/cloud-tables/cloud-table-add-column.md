@@ -14,8 +14,8 @@ nav_order: 2
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/cloud/cloud-databases/cloud-db-create)
-* [Create a table](/cloud/cloud-tables/cloud-table-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 
 ## Column data types and constraints
 
@@ -43,4 +43,4 @@ NOTE: Table columns cannot be edited once created.
 ## Further information
 
 * [Create table column API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTableColumn)
-* [Learn how to delete a table column](/cloud/cloud-tables/cloud-table-delete-column)
+* [Learn how to delete a table column](/docs/cloud/cloud-tables/cloud-table-delete-column)

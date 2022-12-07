@@ -98,11 +98,10 @@ Current setup:
 
 Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
 
-Open hyperlink in new tab:
+WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
 
-```
-[anchor text](URL){:target="_blank"}
-```
+* Internal: `[meaningful anchor text](/docs/folder/filename)` (no extension)
+* External: `[meaningful anchor text](https://url){:target="_blank"}`
 
 ## Search
 

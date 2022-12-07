@@ -27,11 +27,11 @@ You can test FeatureBase cloud free for 21 days. After this time your account wi
 
 {% include /cloud/trial-account-limits.md %}
 
-* Contact [FeatureBase support](/cloud/support) to license your account.
+* Contact [FeatureBase support](/docs/cloud/support) to license your account.
 
 ## Frequently asked questions
 
-* [Read the Cloud FAQ](/cloud/cloudfaq)
+* [Read the Cloud FAQ](/docs/cloud/cloudfaq)
 
 ## Terms and conditions
 
@@ -41,4 +41,4 @@ All users must agree to the Terms of Service before they can sign up.
 
 ## Next step
 
-* [Learn how to setup your FeatureBase Cloud account](/cloud/fbc-part1-signup)
+* [Learn how to setup your FeatureBase Cloud account](/docs/cloud/cloud-signup)
