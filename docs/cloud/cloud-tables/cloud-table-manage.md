@@ -3,7 +3,7 @@ title: Manage tables
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 4
+nav_order: 5
 has_toc: false
 ---
 
@@ -27,7 +27,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
-* [Learn about data modeling](/concepts/data-modeling-overview)
+* [Learn about data modeling](/docs/concepts/data-modeling-overview)
 
 ## Table primary key
 
@@ -49,7 +49,7 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 * [Create table](/docs/cloud/cloud-tables/cloud-table-create)
 * [Add table columns](/docs/cloud/cloud-tables/cloud-table-add-column)
-* [Drop table columns](/docs/cloud/cloud-tables/cloud-table-drop-column)
+* [Delete table columns](/docs/cloud/cloud-tables/cloud-table-delete-column)
 * [Delete table](/docs/cloud/cloud-tables/cloud-table-delete)
 
 ## Managing tables using the Cloud API
@@ -62,4 +62,4 @@ Tables that exist in the same database can be joined.
 
 ## Next step
 
-* [Learn about setting up data ingestion](/docs/cloud/cloud-data-ingestion/ingest-data-overview)
+* [Learn about setting up data ingestion](/docs/cloud/cloud-ingest/cloud-ingest-manage)
