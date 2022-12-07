@@ -23,7 +23,7 @@ You may need to delete a column if:
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
-* [Create a table column](/docs/cloud/cloud-databases/cloud-table-add-column)
+* [Create a table column](/docs/cloud/cloud-tables/cloud-table-add-column)
 
 ## Step 1: View all tables
 

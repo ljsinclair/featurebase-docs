@@ -17,7 +17,7 @@ nav_order: 1
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create)
-* [Learn how to manage tables](/docs/cloud/cloud-databases/cloud-table-manage)
+* [Learn how to manage tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
 ## Naming standards
 
@@ -43,7 +43,7 @@ nav_order: 1
 
 ## Next step
 
-* [Learn how to add columns to a table](/docs/cloud/cloud-databases/cloud-table-add-column)
+* [Learn how to add columns to a table](/docs/cloud/cloud-tables/cloud-table-add-column)
 
 ## Further information
 
