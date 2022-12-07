@@ -1,8 +1,9 @@
-### Step 1: Download FeatureBase
+### Step 1: Download a FeatureBase release for your environment
 
-Download the installer suitable for your environment:
+FeatureBase supports MacOS (darwin), ARM and AMD (intel) processors.
 
-[Download Featurebase from the Community repository in Github](https://github.com/FeatureBaseDB/FeatureBase/releases)
+* [Open the FeatureBase releases site](https://github.com/FeatureBaseDB/FeatureBase/releases)
+* Download release  and save to the ``/Downloads` directory.
 
 ### Step 2: Untar the install files to the Featurebase directory
 
@@ -10,7 +11,8 @@ Download the installer suitable for your environment:
 2. Enter the following command to untar the FeatureBase application files to `/username/featurebase`:
 
 ```
-# tar xvfz featurebase-v1.3.0-community-<os><architecture>.tar.gz -C ~/featurebase
+cd Downloads
+tar xvfz featurebase-v1.3.0-community-<os><architecture>.tar.gz -C ~/featurebase
 ```
 
 Where:
