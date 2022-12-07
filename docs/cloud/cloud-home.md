@@ -31,7 +31,7 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 ## Troubleshooting
 
-If you experience issues, refer to the troubleshooting pages:
+Refer to troubleshooting pages if you experience issues:
 
 * [FeatureBase Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home)
 
