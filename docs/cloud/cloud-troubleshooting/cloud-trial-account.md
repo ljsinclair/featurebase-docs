@@ -6,20 +6,23 @@ grand_parent: Cloud
 nav_order: 1
 ---
 
-# FeatureBase Cloud trial account
-
-## What are the limits of my trial account?
+## What features does a trial account have?
 
 {% include /cloud/trial-account-limits.md %}
 
-## What can I do with my trial account
+## How long does the trial last?
 
-* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
-* [Learn about FeatureBase databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Evaluate the system by creating a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
-
-## How long does my trial last?
-
-The trial lasts 21 days at which time all databases, tables and data sources will no longer be available.
+You can test FeatureBase cloud free for 21 days. After this time your account will be limited to login only.
 
 * {% include contact-support.md %} to extend your trial or purchase a license.
+
+## Terms and conditions
+
+{% include /cloud/cloud-terms-conditions.md %}
+
+## Further information
+
+* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
+* [Sign up for FeatureBase Cloud](/docs/cloud/cloud-signup)
+* [Login to FeatureBase Cloud](/docs/cloud/cloud-login)
+* [Evaluate the system by creating a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)

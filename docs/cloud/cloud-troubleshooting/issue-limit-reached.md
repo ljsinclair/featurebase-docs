@@ -3,7 +3,7 @@ title: Limit reached error
 layout: default
 parent: Cloud troubleshooting
 grand_parent: Cloud
-nav_order: 1
+nav_order: 2
 ---
 
 # Issue - Limit reached when creating databases and ingesting data
