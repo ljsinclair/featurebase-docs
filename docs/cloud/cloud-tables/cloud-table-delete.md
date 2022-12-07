@@ -15,7 +15,7 @@ There are a number of reasons why you may choose to drop a table, including:
 * database deletion
 * data deletion
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Warnings
 
@@ -41,4 +41,4 @@ There are a number of reasons why you may choose to drop a table, including:
 ## Further information
 
 * [Delete table API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/deletetable)
-* [Learn how to create tables](/docs/cloud/cloud-database/create-table)
+* [Learn how to create tables](/docs/cloud/cloud-databases/create-table)

@@ -9,7 +9,7 @@ nav_order: 2
 # How do I add a column to an existing table in FeatureBase Cloud?
 {: .no_toc }
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

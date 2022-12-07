@@ -11,7 +11,7 @@ nav_order: 5
 
 Learn how to delete a FeatureBase Cloud database.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Warnings
 

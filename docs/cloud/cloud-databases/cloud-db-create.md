@@ -13,7 +13,7 @@ This procedure explains how to create a Database in FeatureBase Cloud.
 
 NOTE: You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

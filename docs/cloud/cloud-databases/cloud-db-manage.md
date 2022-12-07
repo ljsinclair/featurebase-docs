@@ -14,7 +14,7 @@ This page provides an overview of FeatureBase databases and links to guide you t
 
 FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

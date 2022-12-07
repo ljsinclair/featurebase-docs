@@ -12,7 +12,7 @@ How do I obtain metadata on my table?
 
 The table endpoint is used to obtain metadata on a table via the API.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

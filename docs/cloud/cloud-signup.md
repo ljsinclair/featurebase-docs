@@ -11,7 +11,7 @@ nav_order: 1
 
 Sign up to FeatureBase cloud using these instructions.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

@@ -11,7 +11,7 @@ nav_order: 4
 
 The table query endpoint is used when running remote table queries via the API.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

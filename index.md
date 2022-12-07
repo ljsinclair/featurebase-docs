@@ -11,7 +11,7 @@ has_toc: false
 
 FeatureBase Help contains high level overviews of software functionality, plus procedural documentation for FeatureBase Cloud and the self-managed Community edition.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## What is FeatureBase?
 

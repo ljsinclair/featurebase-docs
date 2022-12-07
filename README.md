@@ -234,7 +234,7 @@ It's **really** important to include this information and shortcode on each page
 | Page heading | Heading 1 as a question | `# How do I create cloud tables` |
 | Exclude a heading from TOC | Add under the page heading to stop it appearing in the TOC | Add `{: .no_toc }` after the heading |
 | page description | Give a basic description of the page. Ideally this isn't a retread of the heading, but it's ok if it is. | Learn what's involved with creating a table in FeatureBase cloud. |
-| page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include /docs/page-toc.md %}` |
+| page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include page-toc.md %}` |
 | Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
 | Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
 

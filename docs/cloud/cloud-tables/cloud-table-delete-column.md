@@ -16,7 +16,7 @@ You may need to delete a column if:
 
 * Deleted column data cannot be recovered.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

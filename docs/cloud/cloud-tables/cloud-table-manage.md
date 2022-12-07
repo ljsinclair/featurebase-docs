@@ -14,7 +14,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 {% include /concepts/create-table-summary.md %}
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

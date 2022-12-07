@@ -9,17 +9,16 @@ nav_order: 1
 # What types of database can I create in FeatureBase Cloud?
 {: .no_toc }
 
-<!--source https://molecula.atlassian.net/wiki/spaces/PROD/pages/893222913/Packaging+Pricing -->
 {% include /concepts/database-shape-summary.md %}
 
 IMPORTANT: Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Contact FeatureBase Support](https://www.featurebase.com/contact-us) to upgrade your account to access production database shapes
+* {% include contact-support.md %} to upgrade your account to access production database shapes
 
 ### Trial account and Development shapes
 
@@ -37,5 +36,5 @@ Production shapes are available on paid accounts. These have:
 
 ## Further information
 
-* [Learn how to manage FeatureBase Cloud databases](/docs/cloud/cloud-database/cloud-db-manage)
+* [Learn how to manage FeatureBase Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Query database shapes via the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/getServiceProperties)

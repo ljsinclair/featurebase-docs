@@ -11,7 +11,7 @@ nav_order: 2
 
 This page explains where you can login to FeatureBase cloud.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

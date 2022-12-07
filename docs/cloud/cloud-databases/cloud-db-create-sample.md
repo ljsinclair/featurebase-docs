@@ -17,7 +17,7 @@ It will take approximately 10 minutes to create the database.
 
 NOTE: You can also [create a database of your own](/docs/cloud/cloud-databases/cloud-db-create) then create tables and add data.
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 

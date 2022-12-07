@@ -11,7 +11,7 @@ nav_order: 4
 
 {% include /concepts/db-states-summary.md %}
 
-{% include /docs/page-toc.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 
@@ -27,7 +27,7 @@ nav_order: 4
 | UPDATING |  Updates may occur due to hardware changes or software patches. |  |
 | DELETING |  Occurs when a database is deleted and hardware is being spun down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
 | DELETED |  Post deletion state that indicates successful deletion. |
-| FAILED |  [Contact FeatureBase support](https://www.featurebase.com/contact-us) to help with this issue. |
+| FAILED |  {% include contact-support.md %} to help with this issue. |
 
 ## Further information
 
