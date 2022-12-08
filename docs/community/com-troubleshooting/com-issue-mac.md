@@ -18,7 +18,7 @@ This may be caused by the MacOS Gatekeeper system
 
 ## Solution
 
-{% include /community/com-troubleshooting/com-issue-mac-gatekeeper-source.md %}
+{% include /community/com-issue-mac-gatekeeper-source.md %}
 
 
 ## Further information
