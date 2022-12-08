@@ -18,9 +18,9 @@ These instructions explain how to run FeatureBase Community after you’ve insta
 
 * [Learn about Featurebase](index.html)
 * Install FeatureBase on the destination system:
-  * [Install FeatureBase on Linux](/docs/com-install-linux)
-  * [Install FeatureBase on Mac](/docs/com-install-mac)
-  * [Install FeatureBase on Windows](/docs/com-install-windows)
+  * [Install FeatureBase on Linux](/docs/community/com-install-linux)
+  * [Install FeatureBase on Mac](/docs/community/com-install-mac)
+  * [Install FeatureBase on Windows](/docs/community/com-install-windows)
 * Install Mozilla Firefox or Google Chrome on the target system
 
 ## How do I start the FeatureBase Community server?
