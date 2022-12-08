@@ -13,7 +13,7 @@ These instructions explain how to run FeatureBase Community after you’ve insta
 {% include /page-toc.md %}
 
 {: .note }
-NOTE: FeatureBase does not currently run on Mac Safari
+FeatureBase does not currently run on Mac Safari
 
 ## Before you begin
 

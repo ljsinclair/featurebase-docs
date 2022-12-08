@@ -4,4 +4,4 @@ FeatureBase Cloud has the concept of "shapes" which define:
 * how many Virtual Central Processing Units (vCPUs) are available to perform ingestion and queries
 
 {: .note }
-NOTE: Production shapes are not available on trial accounts.
+Production shapes are not available on trial accounts.

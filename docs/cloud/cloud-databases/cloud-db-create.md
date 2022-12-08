@@ -12,7 +12,7 @@ nav_order: 2
 This procedure explains how to create a Database in FeatureBase Cloud.
 
 {: .note }
-NOTE: You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
+You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
 {% include page-toc.md %}
 
