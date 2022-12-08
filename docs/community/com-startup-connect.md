@@ -44,4 +44,4 @@ http://localhost:10101/
 
 ## Troubleshooting
 
-* [Issue: FeatureBase Community won't startup on Mac](/community/com-troubleshooting/com-issue-mac.md)
+* [Issue: FeatureBase Community won't startup on Mac](/docs/community/com-troubleshooting/com-issue-mac.md)

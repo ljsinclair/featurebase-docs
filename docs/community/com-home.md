@@ -46,8 +46,8 @@ The FeatureBase Community application requires:
 
 Refer to troubleshooting pages if you experience issues:
 
-* [FeatureBase Community troubleshooting](/docs/community/community-troubleshooting/com-troubleshooting-home)
+* [FeatureBase Community troubleshooting](/docs/community/com-troubleshooting/com-troubleshooting-home)
 
 ## Next step
 
-* [Startup and connect to FeatureBase Community](/docs/community/startup-connect)
+* [Startup and connect to FeatureBase Community](/docs/community/com-startup-connect)
