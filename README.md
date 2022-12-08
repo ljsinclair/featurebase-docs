@@ -98,15 +98,6 @@ Current setup:
 | FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
 | Featurebase css styles | `/_sass/custom/custom.scss` |
 
-## Hyperlinks
-
-Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
-
-WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
-
-* Internal: `[meaningful anchor text](/docs/folder/filename)` (no extension)
-* External: `[meaningful anchor text](https://url){:target="_blank"}`
-
 ## Search
 
 * [Learn about just-the-docs search](https://just-the-docs.github.io/just-the-docs/docs/search/)
@@ -246,7 +237,7 @@ It's **really** important to include this information and shortcode on each page
 
 ### File naming
 
-### UI file naming
+#### UI file naming
 
 ```
 <product>-<feature>-<task>
@@ -284,6 +275,18 @@ Examples:
 * pql-all
 * sql-table-create
 
+
+### Hyperlinks
+
+Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
+
+WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
+
+| Type of link | Structure | Example |
+|---|---|---|
+| Internal | `[meaningful anchor text](/docs/folder/filename)` | `[Learn how to create tables in FeatureBase cloud](/docs/cloud/cloud-tables/cloud-table-create)` |
+| External | `[meaningful anchor text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com){:target="_blank"} |
+
 ### Common/reusable content
 
 Common/reusable content is stored in the `/_includes` folder:
@@ -299,5 +302,7 @@ Add an include file as follows:
 ```
 {% include /folder/filename.md %}
 ```
+
+NOTE: if there is a filename conflict with a content file, add the suffix `source` to the end of the filename. e.g., c`om-install-linux.md` is the content page, while `com-install-linux-source.md` is the include file.
 
 WARNING: Missing include files **will** break the build.
