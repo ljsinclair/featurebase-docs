@@ -16,11 +16,11 @@ These instructions explain how to run FeatureBase Community after you’ve insta
 
 ## Before you begin
 
-* [Learn about Featurebase](welcome.md)
+* [Learn about Featurebase](index.html)
 * Install FeatureBase on the destination system:
-  * [Install FeatureBase on Linux](/docs/install-featurebase-linux)
-  * [Install FeatureBase on Mac](/docs/install-featurebase-mac)
-  * [Install FeatureBase on Windows](/docs/install-featurebase-windows)
+  * [Install FeatureBase on Linux](/docs/com-install-linux)
+  * [Install FeatureBase on Mac](/docs/com-install-mac)
+  * [Install FeatureBase on Windows](/docs/com-install-windows)
 * Install Mozilla Firefox or Google Chrome on the target system
 
 ## How do I start the FeatureBase Community server?
@@ -44,4 +44,4 @@ http://localhost:10101/
 
 ## Troubleshooting
 
-* [Issue: FeatureBase Community won't startup on Mac](/community/com-issue-mac.md)
+* [Issue: FeatureBase Community won't startup on Mac](/community/com-troubleshooting/com-issue-mac.md)
