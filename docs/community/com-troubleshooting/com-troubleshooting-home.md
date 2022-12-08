@@ -1,5 +1,5 @@
 ---
-title: Community troubleshooting
+title: Troubleshooting
 layout: default
 parent: Community
 has_children: true
