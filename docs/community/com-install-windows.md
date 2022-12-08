@@ -10,7 +10,7 @@ nav_order: 3
 
 Follow these instructions to setup your Windows environment to install FeatureBase Community.
 
-{% include /docs/page-toc.md %}
+{% include /page-toc.md %}
 
 FeatureBase is a Linux application which does not run natively on Windows operating systems. Therefore you must install a hypervisor on the target system before installing FeatureBase.
 

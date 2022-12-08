@@ -10,7 +10,7 @@ nav_order: 2
 
 Follow these instructions to install FeatureBase on a MacOS environment.
 
-{% include /docs/page-toc.md %}
+{% include /page-toc.md %}
 
 ## Before you begin
 

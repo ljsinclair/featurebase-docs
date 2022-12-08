@@ -10,7 +10,7 @@ nav_order: 4
 
 These instructions explain how to run FeatureBase Community after you’ve installed on the target system.
 
-{% include /docs/page-toc.md %}
+{% include /page-toc.md %}
 
 <p class="note">NOTE: FeatureBase does not currently run on Mac Safari</p>
 
