@@ -23,6 +23,6 @@ Follow these instructions to install FeatureBase on a Linux environment.
 
 ## Next step
 
-* [Startup and connect to FeatureBase](/com-startup-connect)
+* [Startup and connect to FeatureBase](/docs/community/com-startup-connect)
 
 ## Further information

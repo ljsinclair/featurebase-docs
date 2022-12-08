@@ -27,4 +27,4 @@ FeatureBase is a Linux application which does not run natively on Windows operat
 
 ## Next step
 
-* [Startup and connect to FeatureBase](/com-startup-connect)
+* [Startup and connect to FeatureBase](/docs/community/com-startup-connect)
