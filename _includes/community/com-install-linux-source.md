@@ -2,15 +2,17 @@
 
 FeatureBase supports MacOS (darwin), ARM and AMD (intel) processors.
 
-* [Open the FeatureBase releases site](https://github.com/FeatureBaseDB/FeatureBase/releases)
-* Download release  and save to the ``/Downloads` directory.
+* [Open the FeatureBase releases page on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases)
+* Download release to the `/Downloads` directory.
 
-### Step 2: Untar the install files to the Featurebase directory
+### Step 2: Untar the install files to the FeatureBase directory
 
-1. Open a terminal window
-2. Enter the following command to untar the FeatureBase application files to `/username/featurebase`:
+Open a terminal window then enter the following commands from your `user/home` directory to:
+* create a FeatureBase directory
+* untar the FeatureBase release to that directory
 
 ```
+mkdir ~/featurebase
 cd Downloads
 tar xvfz featurebase-v1.3.0-community-<os><architecture>.tar.gz -C ~/featurebase
 ```
@@ -24,6 +26,7 @@ Where:
 * Enter the following commands to move the folders to the correct directory:
 
 ```
-mv featurebase-*-community-darwin-arm64/ opt
+cd ~/featurebase
+mv featurebase-*-<os><architecture>/ opt
 mv idk-*-arm64 idk
 ```
