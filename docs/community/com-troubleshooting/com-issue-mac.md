@@ -2,7 +2,7 @@
 title: Issue mac startup
 layout: default
 grand_parent: Community
-parent: Startup & connect
+parent: Community troubleshooting
 has_children: false
 nav_order: 1
 ---
