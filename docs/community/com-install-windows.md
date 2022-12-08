@@ -16,7 +16,7 @@ FeatureBase is a Linux application which does not run natively on Windows operat
 
 ## Before you begin
 
-* Learn about [FeatureBase community]()
+* Learn about [FeatureBase Community](/docs/community/com-home)
 * [Setup Windows Hyper-V and install Ubuntu Linux](https://wiki.ubuntu.com/Hyper-V) OR
 * [Install Ubuntu on VirtualBox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
 

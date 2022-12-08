@@ -12,16 +12,17 @@ These instructions explain how to run FeatureBase Community after you’ve insta
 
 {% include /page-toc.md %}
 
-<p class="note">NOTE: FeatureBase does not currently run on Mac Safari</p>
+{: .note }
+NOTE: FeatureBase does not currently run on Mac Safari
 
 ## Before you begin
 
-* [Learn about Featurebase](index.html)
-* Install FeatureBase on the destination system:
+* Learn about [FeatureBase Community](/docs/community/com-home)
+* Install FeatureBase on the system:
   * [Install FeatureBase on Linux](/docs/community/com-install-linux)
   * [Install FeatureBase on Mac](/docs/community/com-install-mac)
   * [Install FeatureBase on Windows](/docs/community/com-install-windows)
-* Install Mozilla Firefox or Google Chrome on the target system
+* Install Mozilla Firefox or Google Chrome on the system
 
 ## How do I start the FeatureBase Community server?
 

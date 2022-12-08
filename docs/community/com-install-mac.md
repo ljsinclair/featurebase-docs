@@ -14,9 +14,7 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 ## Before you begin
 
-* Learn about [FeatureBase](/index.html)
-* Obtain ROOT credentials for command line
-
+* Learn about [FeatureBase Community](/docs/community/com-home)
 
 ## Install FeatureBase on Linux
 

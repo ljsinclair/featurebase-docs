@@ -32,6 +32,7 @@ nav_order: 2
 
 ## Step 2: Add a column to a table
 
+{: .note }
 NOTE: Table columns cannot be edited once created.
 
 1. Click the table name.

@@ -14,8 +14,7 @@ Follow these instructions to install FeatureBase on a Linux environment.
 
 ## Before you begin
 
-* Learn about [FeatureBase](/index.html)
-* Obtain SUDO credentials for command line
+* Learn about [FeatureBase Community](/docs/community/com-home)
 
 ## Install FeatureBase on Linux
 
