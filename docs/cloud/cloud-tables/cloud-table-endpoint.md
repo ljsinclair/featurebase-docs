@@ -6,8 +6,7 @@ grand_parent: Cloud
 nav_order: 3
 ---
 
-How do I obtain metadata on my table?
-
+# How do I obtain metadata on my table?
 {: .no_toc }
 
 The table endpoint is used to obtain metadata on a table via the API.

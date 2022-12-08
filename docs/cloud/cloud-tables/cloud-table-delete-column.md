@@ -5,6 +5,7 @@ parent: Manage tables
 grand_parent: Cloud
 nav_order: 5
 ---
+
 # How do I delete a column from a FeatureBase Cloud table?
 {: .no_toc }
 
