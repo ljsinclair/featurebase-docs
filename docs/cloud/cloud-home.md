@@ -13,7 +13,7 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 {% include page-toc.md %}
 
-## Key Cloud Features
+## Summary of features
 
 * Fully-managed database offering with simple “click to deploy” that avoids the pain of infrastructure procurement and maintenance.
 * Low-latency Database designed for queries across billions of records without impact from large ingest streams that are both inserting and updating records.
