@@ -1,8 +1,8 @@
 ---
 title: Issue mac startup
 layout: default
-grand_parent: Community
 parent: Troubleshooting
+grand_parent: Community
 has_children: false
 nav_order: 1
 ---
