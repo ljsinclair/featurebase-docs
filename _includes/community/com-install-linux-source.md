@@ -2,7 +2,7 @@
 
 FeatureBase supports MacOS (darwin), ARM and AMD (intel) processors.
 
-* [Open the FeatureBase releases page on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases)
+* [Open the FeatureBase releases page on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
 * Download release to the `/Downloads` directory.
 
 ### Step 2: Untar the install files to the FeatureBase directory
