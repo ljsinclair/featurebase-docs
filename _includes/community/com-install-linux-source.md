@@ -18,8 +18,8 @@ tar xvfz featurebase-v1.3.0-community-<os><architecture>.tar.gz -C ~/featurebase
 ```
 
 Where:
-* <os> = linux or darwin (Apple Mac)
-* <architecture> = AMD for intel, or ARM
+* `<os>` = linux or darwin (Apple Mac)
+* `<architecture>` = AMD for intel, or ARM
 
 ### Step 3: Move the directories
 
