@@ -2,7 +2,6 @@
 title: Startup & connect
 layout: default
 parent: Community
-has_children: true
 nav_order: 4
 ---
 

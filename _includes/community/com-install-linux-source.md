@@ -14,19 +14,20 @@ Open a terminal window then enter the following commands from your `user/home` d
 ```
 mkdir ~/featurebase
 cd Downloads
-tar xvfz featurebase-v1.3.0-community-<os><architecture>.tar.gz -C ~/featurebase
+tar xvfz featurebase-<version>-community-<os><architecture>.tar.gz -C ~/featurebase
 ```
 
 Where:
-* `<os>` = linux or darwin (Apple Mac)
+* `<version>` is the FeatureBase version (e.g., v1.30.)
+* `<os>` = linux or darwin for Apple Mac
 * `<architecture>` = AMD for intel, or ARM
 
-### Step 3: Move the directories
+### Step 3: Move the files to new directories
 
-* Enter the following commands to move the folders to the correct directory:
+* Enter the following commands to move the folders to a new directory:
 
 ```
 cd ~/featurebase
-mv featurebase-*-<os><architecture>/ opt
-mv idk-*-arm64 idk
+mv featurebase-* opt
+mv idk-* idk
 ```
