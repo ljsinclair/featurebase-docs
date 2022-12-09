@@ -51,15 +51,18 @@ bundle exec jekyll serve
 
 ## Broken link checker
 
-* html-proofer added to `Gemfile`
+* html-proofer has been added to `Gemfile`
+* load for the first time on a repository by running `bundle` at the command line.
 
-Run broken link check with the batch file:
+Then run the broken link checker using the batch file:
 
 ```
 bash check-links.sh
 ```
 
-NOTE: Everything but external links needs to be fixed.
+NOTE: It's important to fix internal links. External links will be reported as broken, but these need to be tested manually.
+
+* html-proofer added to `Gemfile`
 
 # Site settings in `/_config.yml`
 
