@@ -72,5 +72,3 @@ Ordinarily, using range-encoded bitmaps to represent values requires n+1 bitmaps
 Bit sliced indexing is used to represent the number of bitmaps, reduce storage overheads and to make queries more efficient.
 
 * [Learn about range encoded bitmaps and bit sliced indexing](https://www.featurebase.com/blog/range-encoded-bitmaps){:target="_blank"}
-
-## 
