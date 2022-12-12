@@ -43,7 +43,6 @@ test_id__ID, test_bool__BOOL, test_STRING__STRING, test_TIMESTAMP__timestamp
 1, 0, escaped text in ""quotation marks"", 2022-01-01
 2, 1, "string with, comma", 2022-01-02
 3, "", test, 1900-01-01
-
 ```
 
 ### CSV file with no defined data types

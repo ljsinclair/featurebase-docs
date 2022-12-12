@@ -33,8 +33,7 @@ The import process involves N steps, some of which are performed by the user, so
 
 ## Data modeling
 
-INFO ON WHAT'S INVOLVED
-CASE STUDIES COULD BE USEFUL HERE
+* [Learn about data modeling and bitmap indexes](/docs/concepts/data-modeling-overview)
 
 {: .note}
 You will need to experiment to get the data modeling correct for your use case.
