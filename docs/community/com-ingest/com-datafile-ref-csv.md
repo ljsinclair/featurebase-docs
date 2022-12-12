@@ -1,17 +1,16 @@
 ---
-title: Part 2 - Prepare CSV
+title: CSV ingest reference
 layout: default
-parent: Import data using CSV
+parent: Import data
 grand_parent: Community
 nav_order: 2
 ---
 
-The CSV file must be constructed in a specific manner to successfully import your records to FeatureBase Community.
+This reference file provides information required to create a CSV file to import data to FeatureBase Community.
 
 ## Before you begin
 
-* [Learn how to manage CSV ingestion](/docs/community/com-csv-ingest/com-csv-ingest-manage)
-* [part 1 - data modeling](/docs/community/com-csv-ingest/com-csv-ingest-step1)
+* [Learn how to manage ingestion](/docs/community/com-ingest/com-csv-ingest-manage)
 * Learn about [RFC-4180 standard for CSV files](https://datatracker.ietf.org/doc/html/rfc4180#section-2) which is required for CSV ingestion.
 
 ## Syntax
@@ -26,7 +25,7 @@ field-value,...field-value
 | Argument | Description |
 |---|---|
 | column-name | Destination table column name |
-| data type | Column data type is optional but must be defined before data is ingested. |
+| data type | Column data type is required but can be defined in a CSV data file or in command-line settings when setting up the CSV ingester. |
 
 ## Additional information
 
@@ -48,6 +47,8 @@ test_id__ID, test_bool__BOOL, test_STRING__STRING, test_TIMESTAMP__timestamp
 ```
 
 ### CSV file with no defined data types
+
+This approach can be used when defining data types at the command line, or if the destination table already exists.
 
 ```csv
 test_id, test_bool, test_STRING, test_TIMESTAMP
