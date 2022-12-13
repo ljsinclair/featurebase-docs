@@ -23,6 +23,7 @@ FeatureBase Community has the following benefits
 * built-in SQL query UI
 * command-line backup and restore
 * Monitoring UI
+* Prometheus metrics
 
 ## License
 
