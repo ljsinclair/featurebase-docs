@@ -51,15 +51,18 @@ bundle exec jekyll serve
 
 ## Broken link checker
 
-* html-proofer added to `Gemfile`
+* html-proofer has been added to `Gemfile`
+* load for the first time on a repository by running `bundle` at the command line.
 
-Run broken link check with the batch file:
+Then run the broken link checker using the batch file:
 
 ```
 bash check-links.sh
 ```
 
-NOTE: Everything but external links needs to be fixed.
+NOTE: It's important to fix internal links. External links will be reported as broken, but these need to be tested manually.
+
+* html-proofer added to `Gemfile`
 
 # Site settings in `/_config.yml`
 
@@ -75,11 +78,13 @@ NOTE: Everything but external links needs to be fixed.
 
 NOTE: It's also possible to add Google analytics and other stuff to the site. [Learn about site settings](https://just-the-docs.github.io/just-the-docs/docs/configuration/) |
 
-## FeatureBase logo
+## FeatureBase logo & favicon
 
 Logo is found at top left and based on the approved logo
 
 Logo file found in: `/assets/images/FeatureBase-Logo-Gradient-Wide.png`
+
+favicon.ico is found in the root.
 
 ## Top of site nav
 
@@ -95,15 +100,6 @@ Current setup:
 |---|---|
 | FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
 | Featurebase css styles | `/_sass/custom/custom.scss` |
-
-## Hyperlinks
-
-Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
-
-WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
-
-* Internal: `[meaningful anchor text](/docs/folder/filename)` (no extension)
-* External: `[meaningful anchor text](https://url){:target="_blank"}`
 
 ## Search
 
@@ -171,9 +167,11 @@ All page content is saved to the `/docs` folder.
 
 ## Navigation
 
-By default any page with a `title` will automatically appear in navigation regardless of subfolders.
+Navigation ignores the folder structure, instead it will automatically insert any page with YAML `title` into the tree.
 
-Page order in the tree is governed by YAML at the top of each page.
+You need to add some more YAML to make the page appear in the correct place.
+
+### Three levels of navigation
 
 Theme supports 3 levels:
 
@@ -240,12 +238,65 @@ It's **really** important to include this information and shortcode on each page
 | Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
 | Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
 
+### File naming
+
+#### UI file naming
+
+```
+<product>-<feature>-<task>
+```
+
+| Item | Description |
+|---|---|
+| product | cloud or com (community) |
+| feature | features include install, database, table, etc |
+| task | a task to perform in the feature |
+
+For example:
+* cloud-database-create - creates a database in the cloud product
+* com-install-linux - install FeatureBase community on Linux
+
+NOTE: you may think this will mean more pages, and you'd be right. However, more pages with a single focus are easier to follow than endless scroll pages that have everything in the one place.
+
+#### Reference file naming
+
+NOTE: At time of writing (2022-12-08) this naming standard is NOT IMPLEMENTED. Changes will come in the very near future.
+
+Reference files are named to this standard:
+
+```
+<language><feature><task>
+```
+
+| Item | Description |
+|---|---|
+| language | PQL or SQL (sql-preview) |
+| feature | The same as above, where there's something you can CRUD |
+| task | what you can do to the feature |
+
+Examples:
+* pql-all
+* sql-table-create
+
+
+### Hyperlinks
+
+Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
+
+WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
+
+| Type of link | Structure | Example |
+|---|---|---|
+| Internal | `[meaningful anchor text](/docs/folder/filename)` | `[Learn how to create tables in FeatureBase cloud](/docs/cloud/cloud-tables/cloud-table-create)` |
+| External | `[meaningful anchor text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com){:target="_blank"} |
+
 ### Common/reusable content
 
 Common/reusable content is stored in the `/_includes` folder:
-* cloud - cloud specific content
-* community - community specific content
-* concepts - descriptions and definitions of conceptual information which can include stuff that's common to cloud and community (e.g., database descriptions)
+* /cloud - cloud specific content
+* /community - community specific content
+* /concepts - descriptions and definitions of conceptual information which can include stuff that's common to cloud and community (e.g., database descriptions)
+* /sql-preview - shared content used in SQL preview pages (e.g., timeQuantum and ttl which are included in IDSET and STRINGSET )
 
 Files are markdown unless absolutely necessary to use something like html.
 
@@ -255,4 +306,6 @@ Add an include file as follows:
 {% include /folder/filename.md %}
 ```
 
-broken include files **will** break the build.
+NOTE: if there is a filename conflict with a content file, add the suffix `source` to the end of the filename. e.g., c`om-install-linux.md` is the content page, while `com-install-linux-source.md` is the include file.
+
+WARNING: Missing include files **will** break the build.

@@ -1,0 +1,1 @@
+| exp-split-batch-mode | bool | Tell go-pilosa to build bitmaps locally over many batches and import them at the end. Experimental. Does not support int or mutex fields. Don't use this unless you know what you're doing. |

@@ -1,10 +1,10 @@
 ---
-title: Community troubleshooting
+title: Troubleshooting
 layout: default
 parent: Community
 has_children: true
 nav_order: 9
-has_toc: false
+has_toc: true
 ---
 
 # Troubleshooting FeatureBase Community

@@ -32,7 +32,8 @@ nav_order: 2
 
 ## Step 2: Add a column to a table
 
-NOTE: Table columns cannot be edited once created.
+{: .note }
+Table columns cannot be edited once created.
 
 1. Click the table name.
 2. Click **Columns** > **Add column**.
