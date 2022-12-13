@@ -1,5 +1,5 @@
 ---
-title: Part 3 - CSV Data ingestion
+title: CSV ingester reference
 layout: default
 parent: Import data using CSV
 grand_parent: Community
@@ -10,10 +10,8 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 
 ## Before you begin
 
-
-* [Learn how to manage CSV ingestion](/docs/community/com-csv-ingest/com-csv-ingest-manage)
-* [Part 1 - data modeling](/docs/community/com-csv-ingest/com-csv-ingest-step1)
-* [Part 2 - prepare the CSV file](/docs/community/com-csv-ingest/com-csv-ingest-step2)
+* [Learn how to manage CSV ingestion](/docs/community/com-ingest/com-ingest-manage)
+* [Prepare the CSV file](/docs/community/com-ingest/com-datafile-ref-csv)
 
 ## Syntax
 
@@ -32,6 +30,8 @@ molecula-consumer-csv \
 | --flag | ingest flags | [molecula-consumer-csv flags](#flags) |
 | table-name | alphanumeric table name, must be lower-case and start with a letter. Underscores and hyphens are permitted. |
 | files | One ore more defined data files may be processed at a time |
+
+## Additional information
 
 | Flag | Type | Description |
 |---|---|---|
