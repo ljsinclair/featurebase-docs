@@ -19,13 +19,16 @@ FeatureBase Community is open source and available to install:
 
 FeatureBase Community has the following benefits
 * can be deployed on multiple environments and regionally
-* import data using CSV, or Kafka
+* import data using CSV, SQL or Kafka
 * built-in SQL query UI
 * command-line backup and restore
+* Monitoring UI
 
 ## License
 
+FeatureBase Community can be used under the Apache 2.0 license
 
+* [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## System requirements
 
@@ -33,8 +36,7 @@ The FeatureBase Community application requires:
 
 * ARM64 or AMD64 (Intel) processor
 * nMB RAM
-* nMB Disk (not including data)
-* sudo privileges
+* 175MB Disk (not including data)
 
 ## Install FeatureBase Community
 
