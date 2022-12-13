@@ -18,27 +18,34 @@ This overview explains the process of importing data to FeatureBase using three 
 
 ## Before you begin
 
-* Install FeatureBase Community (links to install pages)
+{% include /community/com-before-begin-source.md %}
 
 ## Import process
 
-The import process involves N steps, some of which are performed by the user, some by the application.
+The import process is performed in four parts:
 
-| Step | Description | Further information |
-|---|---|---|
-| Data modeling | Determine the data to import, and map source and destination datatypes |  |
-| Create the source file | As a security feature, FeatureBase never connects to your source databases. The system relies on data files that contain column names, data types and data that are then imported. |  |
-| Run ingestion | FeatureBase community provides command-line applications to import and process source files. |  |
-| Ingestion process | Ingestion processes source data into Roaring Bitmap Format then copies it to the database in batches. |  |
+* [Data modeling](#data-modeling)
+* [Create source files](#create-source-files)
+* [Run command-line ingest tools](#run-ingest-tools)
+* [Query data to test results](#query-data-to-test-results)
 
-## Data modeling
+You may need to repeat these steps to get the best results.
+
+## Step one: data modeling
+
+Data modeling involves analysing your requirements to determine the most efficient table structure for your needs.
+
+* Narrow down the data you need to query
+* Map data to data types
 
 * [Learn about data modeling and bitmap indexes](/docs/concepts/data-modeling-overview)
 
 {: .note}
 You will need to experiment to get the data modeling correct for your use case.
 
-## Create source file
+## Step two: create source files
+
+As a security feature, FeatureBase never connects to your source databases. The system relies on data files that contain column names, data types and data that are then imported.
 
 Refer to the following reference files for advice on how to build source files in your chosen format.
 
@@ -46,10 +53,32 @@ Refer to the following reference files for advice on how to build source files i
 * [SQL format reference]
 * [Apache Kafka format reference]
 
-## Run ingestion
+## Step 3: run ingest tools
 
-Refer to the following reference files for advice on how to setup a matching ingestion application at the command line.
+The **Ingest** process has two stages:
+1. Process source data into Roaring Bitmap Format
+2. Copy processed data to FeatureBase Community in batches
+
+Refer to the following reference files for advice on how to configure command-line ingest tools.
 
 * [CSV ingester reference]
 * [SQL ingester reference]
 * [Apache Kafka ingester reference]
+
+## Step 4: query data
+
+FeatureBase Community provides tools to query your data to determine if the results are as expected.
+
+* [Query data](#)
+* [Query builder](#)
+* [API queries](#)
+
+## Step 5: troubleshooting
+
+You may experience unexpected consequences when importing data to FeatureBase.
+
+Perform troubleshooting steps to resolve issues
+
+* [Discrepancy between source and data records] -- ADAPT crime story
+* [Reduce number of rows for time-stamped data] -- ADAPT crime story
+* 

@@ -6,7 +6,7 @@ grand_parent: Community
 nav_order: 2
 ---
 
-This reference file provides information required to create a CSV file to import data to FeatureBase Community.
+This reference page provides information on how to structure a CSV file with data so it can be [imported to FeatureBase Community using the command line CSV ingest tool](/docs/community/com-ingest/com-ingest-ref-csv).
 
 ## Before you begin
 
@@ -16,16 +16,16 @@ This reference file provides information required to create a CSV file to import
 ## Syntax
 
 ```csv
-<column-name>[__<data-type>],...<column-name>[__<data-type>]
-field-value,...field-value
+{column-name[__<data-type>],...<column-name>[__<data-type>]}
+{field-value,...field-value}
 ```
 
 ## Arguments
 
 | Argument | Description |
 |---|---|
-| column-name | Destination table column name |
-| data type | Column data type is required but can be defined in a CSV data file or in command-line settings when setting up the CSV ingester. |
+| column-name | Destination column name |
+| data type | data type can be defined in the CSV file or using command line arguments with the CSV ingest tool. |
 
 ## Additional information
 
@@ -47,7 +47,7 @@ test_id__ID, test_bool__BOOL, test_STRING__STRING, test_TIMESTAMP__timestamp
 
 ### CSV file with no defined data types
 
-This approach can be used when defining data types at the command line, or if the destination table already exists.
+Use this method if the target table already exists, or when defining data types with the CSV ingest tool.
 
 ```csv
 test_id, test_bool, test_STRING, test_TIMESTAMP
@@ -55,3 +55,7 @@ test_id, test_bool, test_STRING, test_TIMESTAMP
 2, 1, "string with, comma", 2022-01-02
 3, "", test, 1900-01-01
 ```
+
+## Further information
+
+* [Command line CSV ingester reference](/docs/community/com-ingest/com-ingest-ref-csv)
