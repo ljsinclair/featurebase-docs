@@ -13,7 +13,7 @@ has_toc: false
 This overview explains the process of importing data to FeatureBase using three methods:
 * CSV
 * SQL
-* Apache Kafka.
+* Apache Kafka
 
 {% include page-toc.md %}
 
@@ -44,18 +44,15 @@ Refer to these reference files for information on how to setup and import data u
 ## Kafka import method
 
 -->
-<!--
+
 ## Troubleshooting
 
 You may experience unexpected consequences when importing data to FeatureBase.
 
 Perform troubleshooting steps to resolve issues
 
-NOTE FOR REVIEWER > This will form part of the work to create Data modeling docs.
+{% include /community/com-ingest-missing-value-processing.md %}
 
-* [Discrepancy between source and data records] -- ADAPT crime story
-* [Reduce number of rows for time-stamped data] -- ADAPT crime story
--->
 ## Next step
 <!-- Coming in future PR where I document these
 * [Query data using SQL]
