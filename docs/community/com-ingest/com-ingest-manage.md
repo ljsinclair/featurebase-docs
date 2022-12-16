@@ -57,6 +57,7 @@ NOTE FOR REVIEWER > This will form part of the work to create Data modeling docs
 * [Reduce number of rows for time-stamped data] -- ADAPT crime story
 -->
 ## Next step
-
+<!-- Coming in future PR where I document these
 * [Query data using SQL]
 * [Query data using the Query builder]
+-->
