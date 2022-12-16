@@ -1,0 +1,11 @@
+### CSV ingest tool flags for header-defined.csv
+
+The required header is defined in the source file
+
+```shell
+molecula-consumer-csv \
+    --batch-size=10000 \
+    --auto-generate \
+    --index=csv-ingest-header-define-file \
+    --files=header-defined.csv \
+```

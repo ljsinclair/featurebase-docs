@@ -1,1 +1,6 @@
-| exp-split-batch-mode | bool | Tell go-pilosa to build bitmaps locally over many batches and import them at the end. Experimental. Does not support int or mutex fields. Don't use this unless you know what you're doing. |
+## Experimental flags
+
+| Flag | Description |
+|---|---|
+| `--exp-split-batch-mode` | Tell FeatureBase client to build bitmaps locally over many batches and import them at the end. Does not support `int` or `mutex` fields. |
+| `--use-shard-transactional-endpoint` | Use alternate import endpoint. Currently unstable/testing |

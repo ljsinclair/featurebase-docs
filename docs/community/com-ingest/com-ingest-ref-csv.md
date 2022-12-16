@@ -1,12 +1,18 @@
 ---
 title: CSV ingester reference
 layout: default
-parent: Import data using CSV
+parent: Import data
 grand_parent: Community
-nav_order: 3
+nav_order: 2
 ---
 
+# CSV ingest tool reference
+{: .no_toc}
+
+
 Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
@@ -16,42 +22,37 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 ## Syntax
 
 ```
-molecula-consumer-csv \
---flag...
- --flag \
---index=table-name
---files=data-file.csv,...
+molecula-consumer-csv       \
+  --source-and-target-flags \
+  --csv-flags               \
+  --id-flags                \
+  --batch-flags             \
+  --error-flags             \
+  --log-stat-flags          \
+  --testing-flags           \
+  --auth-flags              \
 ```
 
-## Arguments
+{% include community/com-ingest-flag-common.md %}
 
-| Argument | Description | Further information |
-|---|---|---|
-| --flag | ingest flags | [molecula-consumer-csv flags](#flags) |
-| table-name | alphanumeric table name, must be lower-case and start with a letter. Underscores and hyphens are permitted. |
-| files | One ore more defined data files may be processed at a time |
+{% include community/com-ingest-flag-csv.md %}
 
-## Additional information
+{% include community/com-ingest-flag-common-id.md %}
 
-| Flag | Type | Description |
-|---|---|---|
-| --auto-generate | |
-| --batch-size |  |
-| --files | strings | List of one or more source files, URLs or directories to ingest |
-| --header | strings | Define the destination table column names and data types where they are not defined in the CSV file |
-| --ignore-header | bool | Ignore the header row in source file when defining one using `--header` or where destination table already exists. **CHECKME!** |
-| --index | Alphanumeric destination table name with columns and data types defined by the CSV header row or using `--header` |
-| --just-do-it | bool | Force incorrectly configured headers to lower case and record values processed as String/Set data types |
-| --pilosa-hosts | URL of running FeatureBase server in form `https://localhost:10101` |
-| --tls.certificate | tls certificate name (e.g., `featurebase.local.crt`) |
-| --tls.key | tls local key (e.g., `featurebase.local.key`) |
-| --tls.skip-verify | Optional flag to skip TLS verificatio |
+{% include community/com-ingest-flag-common-batch.md %}
 
+{% include community/com-ingest-flag-common-error.md %}
+
+{% include community/com-ingest-flag-common-log-stat.md %}
+
+{% include community/com-ingest-flag-common-testing.md %}
+
+{% include community/com-ingest-flag-csv-sql-auth.md %}
 
 ## Additional information
 
-* Enter `molecula-ingest-csv -h` at the command line for a full list of flags.
-* --header definition is identical to that of the CSV file: `<column-name>[__<data-type>],...<column-name>[__<data-type>]`
+{: note}
+List all the flags by entering `idk/molecula-consumer-csv` from the `/featurebase` directory.
 
 ### Missing value processing
 
@@ -73,36 +74,12 @@ Missing and empty string values are handled the same.
 
 ## Examples
 
-### Ingest data file with defined column names and data types
+{% include /community/com-ingest-csv-header-datafile.md %}
 
-```
-molecula-ingest-csv data-file.csv --ignore-header
-```
+{% include /community/com-ingest-csv-header-flag.md %}
 
-### Define header row on command line.
+{% include /community/com-ingest-csv-header-flag-tls.md %}
 
-Use this method if the CSV file does not define column data types.
+## Further information
 
-```
-molecula-consumer-csv \
-    --batch-size=10000 \
-    --auto-generate \
-    --header=asset_tag__String,fan_time__RecordTime_2006-01-02,fan_val__String_F_YMD \
-    --ignore-header
-    --index=csv-ingest-test \
-    --files=sample.csv,sample2.csv \
-```
-
-### Ingest over tls
-
-```shell
-molecula-consumer-csv \
-    --pilosa-hosts=https://localhost:10101
-    --tls.certificate=featurebase.local.crt \
-    --tls.key=featurebase.local.key \
-    --tls.skip-verify \
-    --batch-size=10000 \
-    --auto-generate \
-    --index=csv-ingest-test \
-    --files=sample.csv \
-```
+* [Example CSV files and ingest tool flags](/docs/community/com-ingest/com-ingest-example-csv)

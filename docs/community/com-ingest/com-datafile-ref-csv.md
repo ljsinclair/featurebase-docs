@@ -3,29 +3,36 @@ title: CSV datafile reference
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 2
+nav_order: 1
 ---
+
+# CSV datafile reference
+{: .no_toc}
 
 This reference page provides information on how to structure a CSV file with data so it can be [imported to FeatureBase Community using the command line CSV ingest tool](/docs/community/com-ingest/com-ingest-ref-csv).
 
+{% include page-toc.md %}
+
 ## Before you begin
 
-* [Learn how to manage ingestion](/docs/community/com-ingest/com-csv-ingest-manage)
+* [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
 * Learn about [RFC-4180 standard for CSV files](https://datatracker.ietf.org/doc/html/rfc4180#section-2) which is required for CSV ingestion.
 
 ## Syntax
 
-```csv
-{column-name[__<data-type>],...<column-name>[__<data-type>]}
-{field-value,...field-value}
+```
+{source_column_name}[__data_type[_constraint-value...]],...
+{record,...}
 ```
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| column-name | Destination column name |
-| data type | data type can be defined in the CSV file or using command line arguments with the CSV ingest tool. |
+| Argument | Description | Required |
+|---|---|---|
+| source_column_name | Source column name to translate to FeatureBase index | Yes |
+| data_type | Target data type. | Can be omitted if defined with ingest tool `--header` flag. |
+| constraint_value | Available target data type constraint | Can be omitted if defined with ingest tool `--header` flag |
+| record | record data to be translated to FeatureBase | Yes |
 
 ## Additional information
 
@@ -36,26 +43,10 @@ This reference page provides information on how to structure a CSV file with dat
 
 ## Examples
 
-### CSV with defined column names and data types
+{% include /community/com-datafile-csv-header-defined.md %}
 
-```csv
-test_id__ID, test_bool__BOOL, test_STRING__STRING, test_TIMESTAMP__timestamp
-1, 0, escaped text in ""quotation marks"", 2022-01-01
-2, 1, "string with, comma", 2022-01-02
-3, "", test, 1900-01-01
-```
+{% include /community/com-datafile-csv-header-undefined.md %}
 
-### CSV file with no defined data types
+## Next step
 
-Use this method if the target table already exists, or when defining data types with the CSV ingest tool.
-
-```csv
-test_id, test_bool, test_STRING, test_TIMESTAMP
-1, 0, escaped text in ""quotation marks"", 2022-01-01
-2, 1, "string with, comma", 2022-01-02
-3, "", test, 1900-01-01
-```
-
-## Further information
-
-* [Command line CSV ingester reference](/docs/community/com-ingest/com-ingest-ref-csv)
+* [CSV ingest tool reference](/docs/community/com-ingest/com-ingest-ref-csv)
