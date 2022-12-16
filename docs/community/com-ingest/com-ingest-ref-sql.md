@@ -27,7 +27,7 @@ Source column names are used to specify column names for each record.
 ```
 molecula-consumer-sql       \
   --source-and-target-flags \
-  --csv-flags               \
+  --sql-flags               \
   --id-flags                \
   --batch-flags             \
   --error-flags             \
@@ -74,13 +74,9 @@ List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebas
 
 {% include /community/com-ingest-flag-sql-server.md %}
 
-## Examples
+{% include /community/com-ingest-sql-assets-table.md %}
 
-{% include /community/com-ingest-csv-header-datafile.md %}
-
-{% include /community/com-ingest-csv-header-flag.md %}
-
-{% include /community/com-ingest-csv-header-flag-tls.md %}
+{% include /community/com-ingest-sql-egents-table.md %}
 
 ## Further information
 

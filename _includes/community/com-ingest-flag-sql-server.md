@@ -1,6 +1,6 @@
-## Ingest data from SQL server database
+### Ingest data from SQL server database
 
-DESCRIPTION
+Use `SELECT` query at the command-line to import data from a source SQL-Server database table and create in FeatureBase.
 
 ```shell
 molecula-consumer-sql \
