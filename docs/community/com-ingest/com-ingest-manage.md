@@ -21,48 +21,42 @@ This overview explains the process of importing data to FeatureBase using three 
 
 {% include /community/com-before-begin-source.md %}
 
-## Step one: data modeling
+## Perform data modeling
 
-Data modeling involves analysing your requirements to determine the most efficient table structure for your needs.
+{% include /concepts/data-modeling-summary.md %}
 
-* Narrow down the data you need to query
-* Map data to data types
+* [Learn about data modeling](/concepts/overview-data-modeling.md)
 
-* [Learn about data modeling and bitmap indexes](/docs/concepts/overview-data-modeling)
+## CSV import method
 
-{: .note}
-You will need to experiment to get the data modeling correct for your use case.
-
-## Step two: create source files
-
-Refer to the following reference files for advice on how to build source files in your chosen format.
+Refer to these reference files for information on how to setup and import data using a CSV file.
 
 * [CSV format reference](/docs/community/com-ingest/com-datafile-ref-csv)
-* [SQL format reference](/docs/community/com-ingest/com-datafile-ref-sql)
-* [Apache Kafka format reference]
-
-## Step 3: run ingest tools
-
-Refer to the following reference files for advice on how to configure command-line ingest tools.
-
 * [CSV ingester reference](/docs/community/com-ingest/com-ingest-ref-csv)
-* [SQL ingester reference](/docs/community/com-ingest/com-ingest-ref-sql)
-* [Apache Kafka ingester reference]
+* [CSV file and ingest examples](/docs/community/com-ingest/com-ingest-example-csv)
 
-## Step 4: query data
+<!-- Coming in next PR
+## SQL import method
 
-FeatureBase Community provides tools to query your data to determine if the results are as expected.
+-->
 
-* [Query data](#)
-* [Query builder](#)
-* [API queries](#)
+<!-- Coming after SQL PR
+## Kafka import method
 
-## Step 5: troubleshooting
+-->
+<!--
+## Troubleshooting
 
 You may experience unexpected consequences when importing data to FeatureBase.
 
 Perform troubleshooting steps to resolve issues
 
+NOTE FOR REVIEWER > This will form part of the work to create Data modeling docs.
+
 * [Discrepancy between source and data records] -- ADAPT crime story
 * [Reduce number of rows for time-stamped data] -- ADAPT crime story
-*
+-->
+## Next step
+
+* [Query data using SQL]
+* [Query data using the Query builder]

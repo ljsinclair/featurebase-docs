@@ -9,10 +9,7 @@ nav_order: 1
 # Data modeling overview
 {: .no_toc }
 
-Data modeling is a process of identifying:
-* the source data to query
-* target data types suitable for your data
-* ways to make querying the data more efficient
+{% include /concepts/summary-data-modeling.md%}
 
 {% include page-toc.md %}
 
@@ -20,5 +17,25 @@ Data modeling is a process of identifying:
 
 {% include /community/com-before-begin-source.md %}
 
+<!--
 
-## 
+See Jira https://molecula.atlassian.net/browse/DOCS-131
+
+## Data transformation
+
+General description
+
+Provide 1:1 list of source to target data types
+
+## FeatureBase data types and constraints
+
+There's one in the /data-types/data-types-home page in the other repo
+
+Link to the data types homepage so users can learn about the data types
+
+## Use cases/FAQ
+
+This section is about providing use cases and methods to handle them.
+Based on the following pages:
+*
+-->
