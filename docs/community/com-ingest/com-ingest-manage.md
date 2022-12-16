@@ -23,7 +23,7 @@ This overview explains the process of importing data to FeatureBase using three 
 
 ## Perform data modeling
 
-{% include /concepts/data-modeling-summary.md %}
+{% include /concepts/summary-data-modeling.md %}
 
 * [Learn about data modeling](/concepts/overview-data-modeling.md)
 
