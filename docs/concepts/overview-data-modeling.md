@@ -1,8 +1,7 @@
 ---
 title: Data modeling overview
 layout: default
-parent: Concepts-home
-has_children: false
+parent: Concepts
 nav_order: 1
 ---
 
