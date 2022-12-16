@@ -3,7 +3,7 @@ title: SQL ingester reference
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 4
+nav_order: 5
 ---
 
 The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table using a SQL endpoint.
