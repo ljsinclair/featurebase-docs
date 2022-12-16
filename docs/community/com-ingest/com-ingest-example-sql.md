@@ -5,3 +5,10 @@ parent: Import data
 grand_parent: Community
 nav_order: 6
 ---
+
+
+
+
+
+
+{% include /community/com-ingest-flag-sql-server.md %}
