@@ -25,7 +25,7 @@ This overview explains the process of importing data to FeatureBase using three 
 
 {% include /concepts/summary-data-modeling.md %}
 
-* [Learn about data modeling](/concepts/overview-data-modeling)
+* [Learn about data modeling](/docs/concepts/overview-data-modeling/)
 
 ## CSV import method
 

@@ -27,7 +27,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
-* [Learn about data modeling](/docs/concepts/overview-data-modeling)
+* [Learn about data modeling](/docs/docs/concepts/overview-data-modeling/)
 
 ## Table primary key
 
