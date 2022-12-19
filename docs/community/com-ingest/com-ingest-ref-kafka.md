@@ -9,7 +9,12 @@ nav_order: 8
 # Kafka ingest tool reference
 {: .no_toc}
 
-Ingest Apache Kafka <files, data, etc> using the `molecula-ingest-kafka` ingest tool.
+{% include /community/com-ingest-kafka-summary.md %}
+
+The following ingest methods are available:
+* Kafka
+* Kafka Consumer
+* Kafka Delete
 
 {% include page-toc.md %}
 
@@ -17,6 +22,17 @@ Ingest Apache Kafka <files, data, etc> using the `molecula-ingest-kafka` ingest 
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
 * [Prepare the Kafka file](/docs/community/com-ingest/com-datafile-ref-kafka)
+* [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+* [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
+* [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
+
+* [Learn about ]
+
+The Kafka consumer requires:
+- A list of Kafka hosts
+- A FeatureBase index name (`--index <indexname>`),
+- Exactly one primary key method (`--primary-key-field <fieldnames>`, `--id-field <fieldname>` or `--auto-generate`),
+
 
 ## Syntax
 

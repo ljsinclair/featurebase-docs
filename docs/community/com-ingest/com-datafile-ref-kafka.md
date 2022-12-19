@@ -9,34 +9,47 @@ nav_order: 7
 # Kafka datafile reference
 {: .no_toc}
 
+{% include /community/com-ingest-kafka-summary.md %}
 
 
----CSV CONTENT BELOW--DELETE WHEN READY---
-
-This reference page provides information on how to structure a CSV file with data so it can be [imported to FeatureBase Community using the command line CSV ingest tool](/docs/community/com-ingest/com-ingest-ref-csv).
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
-* Learn about [RFC-4180 standard for CSV files](https://datatracker.ietf.org/doc/html/rfc4180#section-2) which is required for CSV ingestion.
+* [Learn about Avro serialization format](https://avro.apache.org/docs/){:target="_blank"}
+* [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
 
-## Syntax
 
+
+
+
+## Header syntax
+
+The header file is formatted as an array of objects, each describing a single field to be converted to FeatureBase
+
+```json
+[
+	{
+		"name": "the name of the destination field in FeatureBase",
+		"path": ["the location within the JSON blob to locate the value of this field"],
+		"type": "string",
+		"config": {
+			"example": "An optional parameter for a field type."
+		}
+	}
+]
 ```
-{source_column_name}[__data_type[_constraint-value...]],...
-{record,...}
-```
 
-## Arguments
+## Header arguments
 
 | Argument | Description | Required |
 |---|---|---|
-| source_column_name | Source column name to translate to FeatureBase index | Yes |
-| data_type | Target data type. | Can be omitted if defined with ingest tool `--header` flag. |
-| constraint_value | Available target data type constraint | Can be omitted if defined with ingest tool `--header` flag |
-| record | record data to be translated to FeatureBase | Yes |
+| name | Name of target field in FeatureBase index | Yes |
+| path | Location of value within JSON blob | Yes |
+| type | data type | Yes |
+| config | optional constraints and parameters for the data type |
 
 ## Additional information
 
