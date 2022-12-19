@@ -9,36 +9,33 @@ nav_order: 8
 # Kafka ingest tool reference
 {: .no_toc}
 
-
-
----CSV CONTENT BELOW DELETE WHEN READY---
-
-Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
+Ingest Apache Kafka <files, data, etc> using the `molecula-ingest-kafka` ingest tool.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
-* [Prepare the CSV file](/docs/community/com-ingest/com-datafile-ref-csv)
+* [Prepare the Kafka file](/docs/community/com-ingest/com-datafile-ref-kafka)
 
 ## Syntax
 
 ```
 molecula-consumer-csv       \
   --source-and-target-flags \
-  --csv-flags               \
+  --kafka-flags               \
   --id-flags                \
   --batch-flags             \
   --error-flags             \
   --log-stat-flags          \
   --testing-flags           \
-  --auth-flags              \
+  --kafka-auth-flags              \
 ```
 
+---CSV CONTENT BELOW DELETE WHEN READY---
 {% include community/com-ingest-flag-common.md %}
 
-{% include community/com-ingest-flag-csv.md %}
+{% include community/com-ingest-flag-kafka.md %}
 
 {% include community/com-ingest-flag-common-id.md %}
 
@@ -50,7 +47,7 @@ molecula-consumer-csv       \
 
 {% include community/com-ingest-flag-common-testing.md %}
 
-{% include community/com-ingest-flag-csv-sql-auth.md %}
+{% include community/com-ingest-flag-kafka-auth.md %}
 
 ## Additional information
 
