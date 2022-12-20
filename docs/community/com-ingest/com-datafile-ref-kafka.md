@@ -29,8 +29,42 @@ LIST DEPENDENCY> STACKOVERFLOW QUESTION: https://stackoverflowteams.com/c/molecu
 * [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic)
 * [Write data to the Kafka topic]URL here
 
+{: .important}
+The syntax below indicates minimum viable settings and can be modified to meet your requirements.
 
-##
+## JSON data file syntax
+
+```
+
+```
+
+## JSON message syntax
+
+JSON message is required to [DO SOMETHING SPECIFIC]
+
+```
+{
+    "int-kafka-path": 12345,
+    "string-kafka-path": "arbitraryString"
+}
+```
+
+## JSON header file syntax
+
+JSON header files are required when using `molecula-consumer-kafka-static` for a Kafka system with static schemas, not managed by Confluent Schema Management.
+
+```
+[
+    {
+        "name": "int-featurebase-name",
+        "path": [
+            "<int-kafka-path"
+        ],
+        "type": "<data-type>"
+    },
+]
+```
+
 
 
 

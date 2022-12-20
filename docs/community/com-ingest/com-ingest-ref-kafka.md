@@ -26,14 +26,6 @@ The following ingest methods are available:
 * [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
 * [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
 
-* [Learn about ]
-
-The Kafka consumer requires:
-- A list of Kafka hosts
-- A FeatureBase index name (`--index <indexname>`),
-- Exactly one primary key method (`--primary-key-field <fieldnames>`, `--id-field <fieldname>` or `--auto-generate`),
-
-
 ## Syntax
 
 ```
