@@ -54,7 +54,11 @@ molecula-consumer-csv       \
 {: note}
 List all the flags by entering `idk/molecula-consumer-csv` from the `/featurebase` directory.
 
-{% include /community/com-ingest-missing-value-processing.md %}
+{% include /community/com-ingest-flag-extra-auth.md %}
+
+{% include /community/com-ingest-flag-extra-env-var.md %}
+
+{% include /community/com-ingest-extra-missing-val.md %}
 
 ## Examples
 

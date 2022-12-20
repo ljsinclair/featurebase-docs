@@ -4,7 +4,7 @@ Missing and empty string values are handled the same.
 
 | Field data type | Expected behaviour |
 |---|---|
-|`"ID"`| Raise error during ingestion if `"ID"` is selected for primary-key-field. Otherwise, behave same as `"String"`. |
+|`"ID"`| Error if `"ID"` selected for primary-key-field. Otherwise, behave same as `"String"`. |
 |`"DateInt"`| Raise error during ingestion - timestamp must have a valid value.|
 |`"Timestamp"`| Raise error during ingestion - input is not time. |
 |`"RecordTime"`| Do not update value in index. |

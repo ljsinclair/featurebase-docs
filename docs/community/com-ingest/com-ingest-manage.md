@@ -51,7 +51,7 @@ You may experience unexpected consequences when importing data to FeatureBase.
 
 Perform troubleshooting steps to resolve issues
 
-{% include /community/com-ingest-missing-value-processing.md %}
+{% include /community/com-ingest-extra-missing-val.md %}
 
 ## Next step
 <!-- Coming in future PR where I document these
