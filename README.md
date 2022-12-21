@@ -31,6 +31,31 @@ FeatureBase specific information is below.
 
 ## Local build
 
+### Docker Setup
+
+There is a `Dockerfile` and `docker-compose.yml` which can be amended if you are getting warning messages related to version incompatibilities.
+
+To spin up the container/build process:
+
+`docker compose up serve`
+
+Note that that this initial creation of the image/container can take some time when starting for the first time (or from scratch after a `docker system prune -a`)
+
+To view the local site on port `4000` head to:
+
+http://localhost:4000/ or
+http://<local-ip>:4000
+
+You an edit the files in this repo and refresh the page to view changes immediately.
+
+**To Do**
+
+- [ ] Fix live loading for immediate feedback related to recent changes
+- [ ] Speed up initial build 
+- [ ] Snake oil cert for https://
+- [ ] Add test service utilizing `check-links.sh` to docker-compose.yml
+- [ ] Add spellcheck and lint service 
+
 ### Gemfile dependencies
 
 Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
