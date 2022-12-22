@@ -2,7 +2,6 @@
 
 | flag | data type | Description | Default | Required |
 |---|---|---|---|---|
-| `--pack-bools` | string | If non-empty, boolean fields are packed into two `set` fields—one with this name, and one with <name>-exists. | "bools" |  |
 | `--allow-decimal-out-of-range` |  | Allow ingest to continue when it encounters out of range decimals in `Decimal` Fields. | false |  |
 | `--allow-int-out-of-range` |  | Allow ingest to continue when it encounters out of range integers in `Int` Fields. | false |  |
 | `--allow-timestamp-out-of-range` |  | Allow ingest to continue when it encounters out of range timestamps in `Timestamp` Fields. | false |  |
