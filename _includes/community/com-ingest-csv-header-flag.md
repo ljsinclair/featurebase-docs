@@ -1,7 +1,7 @@
 ### Define header for multiple CSV files with mismatched headers
 
 In this example, one CSV file has defined a header while the other has not.
-This mismatch is overcome by defining the `--header` and ignoring file headers using `--ignore-header`
+This mismatch is overcome by defining the `--header` then using `--ignore-header` to direct the ingest tool to ignore the header row in the source files.
 
 ```shell
 molecula-consumer-csv \
