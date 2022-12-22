@@ -1,4 +1,4 @@
-## Source and target flags
+## Common flags
 
 | Flag | Data type | Description | Default | Required |
 |---|---|---|---|---|

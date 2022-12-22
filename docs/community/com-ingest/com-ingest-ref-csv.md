@@ -23,7 +23,7 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 
 ```
 molecula-consumer-csv       \
-  --source-and-target-flags \
+  --common-flags \
   --csv-flags               \
   --id-flags                \
   --error-flags             \
