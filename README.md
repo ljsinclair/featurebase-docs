@@ -33,7 +33,7 @@ FeatureBase specific information is below.
 
 ### Docker Setup
 
-There is a `Dockerfile` and `docker-compose.yml` which can be amended if you are getting warning messages related to version incompatibilities.
+There is a `Dockerfile` and `docker-compose.yml` if you run into an issue please create an issue or ticket with the warning messages or errors seen.
 
 To spin up the container/build process:
 
@@ -47,14 +47,6 @@ http://localhost:4000/ or
 http://<local-ip>:4000
 
 You an edit the files in this repo and refresh the page to view changes immediately.
-
-**To Do**
-
-- [ ] Fix live loading for immediate feedback related to recent changes
-- [ ] Speed up initial build 
-- [ ] Snake oil cert for https://
-- [ ] Add test service utilizing `check-links.sh` to docker-compose.yml
-- [ ] Add spellcheck and lint service 
 
 ### Gemfile dependencies
 
