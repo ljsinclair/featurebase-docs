@@ -1,6 +1,6 @@
 ## Authentication flags
 
-| flag | data type | Description | Default |Required |
+| Flag | Data type | Description | Default |Required |
 |---|---|---|---|---|
 | `--auth-token` | string | Authentication Token for FeatureBase |  |  |
 | `--tls.ca-certificate` | string | Path to CA certificate file on the target FeatureBase instance, or literal PEM data. |  |  |

@@ -26,7 +26,6 @@ molecula-consumer-csv       \
   --source-and-target-flags \
   --csv-flags               \
   --id-flags                \
-  --batch-flags             \
   --error-flags             \
   --log-stat-flags          \
   --testing-flags           \
@@ -38,8 +37,6 @@ molecula-consumer-csv       \
 {% include community/com-ingest-flag-csv.md %}
 
 {% include community/com-ingest-flag-common-id.md %}
-
-{% include community/com-ingest-flag-common-batch.md %}
 
 {% include community/com-ingest-flag-common-error.md %}
 
