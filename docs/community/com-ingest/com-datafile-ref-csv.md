@@ -21,7 +21,7 @@ This reference page provides information on how to structure a CSV file with dat
 ## Syntax
 
 ```
-{source_column_name}[__data_type[_constraint-value...]],...
+{source_column_name}[__data-type[_constraint-value...]],...
 {record,...}
 ```
 
@@ -30,11 +30,15 @@ This reference page provides information on how to structure a CSV file with dat
 | Argument | Description | Required |
 |---|---|---|
 | source_column_name | Source column name to translate to FeatureBase index | Yes |
-| data_type | Target data type. | Can be omitted if defined with ingest tool `--header` flag. |
-| constraint_value | Available target data type constraint | Can be omitted if defined with ingest tool `--header` flag |
+| data-type | Target data type. | Can be omitted if defined with ingest tool `--header` flag. |
+| constraint_value | Data type constraint for FeatureBase data types. | Can be omitted if defined with ingest tool `--header` flag |
 | record | record data to be translated to FeatureBase | Yes |
 
 ## Additional information
+
+Header column names, data-types and constraints have special meaning and must be explicitly defined:
+* in the CSV file, or
+* using command-line flags
 
 * Use double quotes `"..."` to enclose fields containing:
   * Line breaks (CRLF)
