@@ -45,14 +45,6 @@ Refer to these reference files for information on how to setup and import data u
 
 -->
 
-## Troubleshooting
-
-You may experience unexpected consequences when importing data to FeatureBase.
-
-Perform troubleshooting steps to resolve issues
-
-{% include /community/com-ingest-extra-missing-val.md %}
-
 ## Next step
 <!-- Coming in future PR where I document these
 * [Query data using SQL]
