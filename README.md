@@ -31,6 +31,23 @@ FeatureBase specific information is below.
 
 ## Local build
 
+### Docker Setup
+
+There is a `Dockerfile` and `docker-compose.yml` if you run into an issue please create an issue or ticket with the warning messages or errors seen.
+
+To spin up the container/build process:
+
+`docker compose up serve`
+
+Note that that this initial creation of the image/container can take some time when starting for the first time (or from scratch after a `docker system prune -a`)
+
+To view the local site on port `4000` head to:
+
+http://localhost:4000/ or
+http://<local-ip>:4000
+
+You an edit the files in this repo and refresh the page to view changes immediately.
+
 ### Gemfile dependencies
 
 Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
