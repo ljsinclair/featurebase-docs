@@ -22,14 +22,14 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 ## Syntax
 
 ```
-molecula-consumer-csv       \
-  --common-flags \
-  --csv-flags               \
-  --id-flags                \
-  --error-flags             \
-  --log-stat-flags          \
-  --testing-flags           \
-  --auth-flags              \
+molecula-consumer-csv \
+  <common-flags>      \
+  <csv-flags>         \
+  <id-flags>          \
+  <error-flags>       \
+  <log-stat-flags>    \
+  <testing-flags>     \
+  <auth-flags>        \
 ```
 
 {% include community/com-ingest-flag-common.md %}
