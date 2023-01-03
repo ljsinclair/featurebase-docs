@@ -1,8 +1,12 @@
 ---
-title: How do I change my organization name and address for billing?
+title:
 ---
+## How do I change my organization name and address for billing?
+{: .no_toc }
 
 {% include /cloud-config/cloud-summary-org.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

@@ -8,7 +8,9 @@ has_toc: false
 ---
 
 ## How do I invite Cloud users?
+{: .no_toc }
 
+{% include page-toc.md %}
 {% include /cloud-config/cloud-summary-users.md %}
 
 ## Before you begin

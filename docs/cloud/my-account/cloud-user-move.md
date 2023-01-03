@@ -1,11 +1,20 @@
 ---
-title: How do I move my account to another FeatureBase organization?
+title: Move account
+layout: default
+parent: Manage my account
+grand_parent: Cloud
+nav_order: 2
 ---
+
+## How do I move my account to another FeatureBase organization?
+{: .no_toc }
 
 Active FeatureBase users may be invited to join a different organization.
 
 {: .warning}
 You **cannot** login to your original organization if you accept the move.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

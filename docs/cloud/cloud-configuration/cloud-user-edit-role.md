@@ -1,7 +1,9 @@
 ---
 title: How do I change a user role?
 ---
+{: .no_toc }
 
+{% include page-toc.md %}
 {% include /cloud-config/cloud-user-roles.md %}
 
 ## Before you begin

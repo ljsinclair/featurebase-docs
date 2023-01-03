@@ -1,7 +1,9 @@
 ---
 title: How do I view and search for users
 ---
+{: .no_toc }
 
+{% include page-toc.md %}
 View and search for users from the Configuration > Manage users page.
 
 ## Before you begin

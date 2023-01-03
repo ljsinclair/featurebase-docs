@@ -1,11 +1,20 @@
 ---
-title: How do I activate my FeatureBase account?
+title: Activate account
+layout: default
+parent: Manage my account
+grand_parent: Cloud
+nav_order: 1
 ---
+
+## How do I activate my FeatureBase account?
+{: .no_toc }
 
 FeatureBase users are invited to join an organization via email.
 
 {: .note}
 You may need to add `noreply@molecula.com` and `noreply@verificationemail.com` to your safe-senders list.
+
+{% include page-toc.md %}
 
 ## Create your FeatureBase account
 

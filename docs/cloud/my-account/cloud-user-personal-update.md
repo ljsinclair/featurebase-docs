@@ -1,9 +1,18 @@
 ---
-title: How do I update my details and change password?
+title: Update account
+layout: default
+parent: Manage my account
+grand_parent: Cloud
+nav_order: 2
 ---
+
+## How do I update my details and change password?
+{: .no_toc }
 
 {% include /cloud-config/cloud-user-profile-summary.md %}
 {% include /cloud-config/cloud-username-nochange.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

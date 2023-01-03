@@ -2,6 +2,11 @@
 title: How do I change the billing address for my account?
 ---
 
+## How do I change the billing address for my account?
+{: .no_toc }
+
+{% include page-toc.md %}
+
 {% include /cloud-config/cloud-summary-billing-contact.md %}
 
 ## Before you begin

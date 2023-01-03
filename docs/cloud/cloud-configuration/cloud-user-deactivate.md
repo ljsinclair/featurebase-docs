@@ -1,6 +1,9 @@
 ---
 title: How do I activate or deactivate a Cloud user?
 ---
+{: .no_toc }
+
+{% include page-toc.md %}
 
 {% include /cloud-config/cloud-user-deactivate-summary.md%}
 
