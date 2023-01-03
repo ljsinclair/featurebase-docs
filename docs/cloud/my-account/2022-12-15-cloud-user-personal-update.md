@@ -2,8 +2,8 @@
 title: How do I update my details and change password?
 ---
 
-{% include /cloud/cloud-user-profile-summary.md %}
-{% include /cloud/cloud-username-nochange.md %}
+{% include /cloud-config/cloud-user-profile-summary.md %}
+{% include /cloud-config/cloud-username-nochange.md %}
 
 ## Before you begin
 

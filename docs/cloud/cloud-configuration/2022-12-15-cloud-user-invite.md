@@ -2,15 +2,15 @@
 title: How do I invite Cloud users?
 ---
 
-{% include /cloud/cloud-summary-users.md %}
+{% include /cloud-config/cloud-summary-users.md %}
 
 ## Before you begin
 
-{% include /cloud/cloud-user-admin-role-needed.md %}
+{% include /cloud-config/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
 
-{% include /cloud/cloud-username-nochange.md %}
+{% include /cloud-config/cloud-username-nochange.md %}
 
 ## Invite a cloud user
 
@@ -29,7 +29,7 @@ It is included in the invitation email, but you can also provide the URL via a d
 
 * Click **Configuration** > **Manage users**.
 * Scroll to **Invited users**
-* {%  include /cloud/icon-edit-unicode.md %} on the user > **Copy invite URL**.
+* {%  include /cloud-icons/icon-edit-unicode.md %} on the user > **Copy invite URL**.
 
 ## Next step
 

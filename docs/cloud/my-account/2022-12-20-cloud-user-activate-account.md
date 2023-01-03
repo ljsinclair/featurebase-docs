@@ -4,7 +4,8 @@ title: How do I activate my FeatureBase account?
 
 FeatureBase users are invited to join an organization via email.
 
-NOTE: You may need to add `noreply@molecula.com` and `noreply@verificationemail.com` to your safe-senders list.
+{: .note}
+You may need to add `noreply@molecula.com` and `noreply@verificationemail.com` to your safe-senders list.
 
 ## Create your FeatureBase account
 

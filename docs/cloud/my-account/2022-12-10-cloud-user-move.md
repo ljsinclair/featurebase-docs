@@ -4,7 +4,8 @@ title: How do I move my account to another FeatureBase organization?
 
 Active FeatureBase users may be invited to join a different organization.
 
-WARNING: Accepting the move means you **cannot** login to your original organization.
+{: .warning}
+You **cannot** login to your original organization if you accept the move.
 
 ## Before you begin
 
@@ -12,7 +13,8 @@ WARNING: Accepting the move means you **cannot** login to your original organiza
 
 ## Moving your account
 
-NOTE: You can opt-out of the account move by ignoring the email or clicking **No, thanks** on the confirmation page.
+{: .note}
+You can opt-out of the account move by ignoring the email or click **No, thanks** on the confirmation page.
 
 * Click **Move account** in the invitation email.
 * Click **Move account** on the FeatureBase confirmation page.
