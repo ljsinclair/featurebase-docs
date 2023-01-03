@@ -34,20 +34,20 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 ## Naming standards
 
 {% include /concepts/object-naming-standard.md %}
-{% include /cloud/cloud-db-naming-standard.md %}
+{% include /cloud-db/cloud-db-naming-standard.md %}
 
 ## Create Database
 
-{% include /cloud/cloud-db-new-name.md %}
+{% include /cloud-db/cloud-db-new-name.md %}
 
 * Choose from development shapes intended for testing:
 
-{% include /cloud/cloud-db-shape-dev.md %}
+{% include /cloud-db/cloud-db-shape-dev.md %}
 
 * Or choose a production shape instead:
 
-{% include /cloud/cloud-db-shape-prod.md %}
-{% include /cloud/cloud-db-click-create.md %}
+{% include /cloud-db/cloud-db-shape-prod.md %}
+{% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
 

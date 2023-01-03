@@ -22,11 +22,11 @@ nav_order: 1
 ## Naming standards
 
 {% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-table-naming-standard.md %}
+{% include /cloud-table/cloud-table-naming-standard.md %}
 
 ## Step 1: view tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: create table
 
@@ -36,7 +36,7 @@ nav_order: 1
 
 ## Step 3: choose the primary key
 
-{% include /cloud/cloud-pk-table.md %}
+{% include /cloud-table/cloud-table-pk.md %}
 
 1. Select the ID type.
 2. Click **Create**.

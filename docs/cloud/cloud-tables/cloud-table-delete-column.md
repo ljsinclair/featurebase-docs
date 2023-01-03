@@ -28,7 +28,7 @@ You may need to delete a column if:
 
 ## Step 1: View all tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: Drop the selected column
 

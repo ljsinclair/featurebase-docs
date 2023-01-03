@@ -24,11 +24,11 @@ nav_order: 2
 ## Naming standard
 
 {% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-column-naming-standard.md %}
+{% include /cloud-table/cloud-table-col-name-std.md %}
 
 ## Step 1: View all tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: Add a column to a table
 

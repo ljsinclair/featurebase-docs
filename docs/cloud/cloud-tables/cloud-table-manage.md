@@ -31,19 +31,19 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 ## Table primary key
 
-{% include /cloud/cloud-pk-table.md %}
+{% include /cloud-table/cloud-table-pk.md %}
 
 ## Column data types and constraints
 
-{% include /cloud/cloud-pk-table.md%}
+{% include /cloud-table/cloud-table-pk.md%}
 
 <!--* [Learn about data types and constraints](/docs/sql-preview/data-types/data-types-home)-->
 
 ## Naming standard
 
 {% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-table-naming-standard.md %}
-{% include /cloud/cloud-column-naming-standard.md%}
+{% include /cloud-table/cloud-table-naming-standard.md %}
+{% include /cloud-table/cloud-table-col-name-std.md%}
 
 ## Managing tables in FeatureBase Cloud
 

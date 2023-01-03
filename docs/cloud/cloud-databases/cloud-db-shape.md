@@ -24,7 +24,7 @@ IMPORTANT: Cloud Database shapes incur an hourly fee, chargeable at the end of t
 
 Two database shapes are available on all accounts. These are intended for development and testing purposes.
 
-{% include /cloud/cloud-db-shape-dev.md %}
+{% include /cloud-db/cloud-db-shape-dev.md %}
 
 ### Production shapes
 
@@ -32,7 +32,7 @@ Production shapes are available on paid accounts. These have:
 * overprovisioned disk space and memory to ensure best performance
 * data replication should a node go down.
 
-{% include /cloud/cloud-db-shape-prod.md %}
+{% include /cloud-db/cloud-db-shape-prod.md %}
 
 ## Further information
 
