@@ -3,7 +3,7 @@ title: Move account
 layout: default
 parent: Manage my account
 grand_parent: Cloud
-nav_order: 2
+nav_order: 3
 ---
 
 ## How do I move my account to another FeatureBase organization?
