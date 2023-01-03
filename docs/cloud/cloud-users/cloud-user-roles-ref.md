@@ -8,7 +8,6 @@ has_toc: false
 ---
 
 ## User roles reference
-{: .no_toc }
 
 {% include /cloud-config/cloud-user-roles.md %}
 
