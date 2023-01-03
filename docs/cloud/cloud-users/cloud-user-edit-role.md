@@ -1,10 +1,18 @@
 ---
-title: How do I change a user role?
+title: Update user role
+layout: default
+parent: Manage users
+grand_parent: Cloud
+nav_order: 3
+has_toc: false
 ---
+
+## How do I update a user role?
 {: .no_toc }
 
-{% include page-toc.md %}
 {% include /cloud-config/cloud-user-roles.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

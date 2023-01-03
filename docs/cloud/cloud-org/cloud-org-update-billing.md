@@ -1,8 +1,12 @@
 ---
-title: How do I change the billing address for my account?
+title: Update billing contact address
+layout: default
+parent: Manage databases
+grand_parent: Cloud
+nav_order: 2
 ---
 
-## How do I change the billing address for my account?
+## How do I change the billing contact address?
 {: .no_toc }
 
 {% include page-toc.md %}

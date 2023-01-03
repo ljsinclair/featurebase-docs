@@ -1,7 +1,12 @@
 ---
-title:
+title: Update organization details
+layout: default
+parent: Manage databases
+grand_parent: Cloud
+nav_order: 1
 ---
-## How do I change my organization name and address for billing?
+
+## How do I update my organization details?
 {: .no_toc }
 
 {% include /cloud-config/cloud-summary-org.md %}

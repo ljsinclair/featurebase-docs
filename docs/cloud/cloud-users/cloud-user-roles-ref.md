@@ -1,9 +1,15 @@
 ---
-title: Cloud user roles reference
+title: User roles
+layout: default
+parent: Manage users
+grand_parent: Cloud
+nav_order: 5
+has_toc: false
 ---
+
+## User roles reference
 {: .no_toc }
 
-{% include page-toc.md %}
 {% include /cloud-config/cloud-user-roles.md %}
 
 ## Further information

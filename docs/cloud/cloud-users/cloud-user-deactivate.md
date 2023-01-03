@@ -1,14 +1,21 @@
 ---
-title: How do I activate or deactivate a Cloud user?
+title: Activate or deactivate users
+layout: default
+parent: Manage users
+grand_parent: Cloud
+nav_order: 4
+has_toc: false
 ---
-{: .no_toc }
 
-{% include page-toc.md %}
+## How do I activate or deactivate a Cloud user?
+{: .no_toc }
 
 {% include /cloud-config/cloud-user-deactivate-summary.md%}
 
 {: .note}
 You can [change the user role](/cloud/cloud-configuration/cloud-user-edit-role) rather than deactivating the account.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

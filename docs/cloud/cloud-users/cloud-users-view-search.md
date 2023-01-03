@@ -1,10 +1,18 @@
 ---
-title: How do I view and search for users
+title: View users
+layout: default
+parent: Manage users
+grand_parent: Cloud
+nav_order: 2
+has_toc: false
 ---
+
+## How do I view and search for users
 {: .no_toc }
 
-{% include page-toc.md %}
 View and search for users from the Configuration > Manage users page.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

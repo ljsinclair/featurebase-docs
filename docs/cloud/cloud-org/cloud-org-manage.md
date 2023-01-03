@@ -1,10 +1,9 @@
 ---
 title: Manage organization
 layout: default
-parent: Configuration
-grand_parent: Cloud
-nav_order: 1
+parent: Cloud
 has_children: true
+nav_order: 8
 has_toc: false
 ---
 
