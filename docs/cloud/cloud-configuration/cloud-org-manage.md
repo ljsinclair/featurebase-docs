@@ -1,8 +1,17 @@
 ---
-title: How do I manage my organization?
+title: Manage organization
+layout: default
+parent: Configuration
+grand_parent: Cloud
+nav_order: 1
 ---
 
+## How do I manage my organization?
+{: .no_toc }
+
 {% include /cloud-config/cloud-summary-org.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

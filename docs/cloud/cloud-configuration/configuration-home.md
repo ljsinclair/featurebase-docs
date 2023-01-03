@@ -1,8 +1,18 @@
 ---
-title: How do I manage my Cloud organization and users?
+title: Configuration
+layout: default
+parent: Cloud
+has_children: true
+nav_order: 10
+has_toc: false
 ---
 
+## How do I manage my Cloud organization and users?
+{: .no_toc }
+
 The **Configuration** page provides access to manage your Cloud organization and cloud users.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
