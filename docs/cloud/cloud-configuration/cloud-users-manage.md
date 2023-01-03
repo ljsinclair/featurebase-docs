@@ -1,8 +1,19 @@
 ---
-title: How do I manage cloud users?
+title: Manage users
+layout: default
+parent: Configuration
+grand_parent: Cloud
+nav_order: 2
+has_children: true
+has_toc: false
 ---
 
+## How do I manage cloud users?
+{: .no_toc }
+
 {% include /cloud-config/cloud-summary-users.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

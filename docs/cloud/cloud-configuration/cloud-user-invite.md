@@ -1,6 +1,13 @@
 ---
-title: How do I invite Cloud users?
+title: Invite users
+layout: default
+parent: Manage users
+grand_parent: Configuration
+nav_order: 1
+has_toc: false
 ---
+
+## How do I invite Cloud users?
 
 {% include /cloud-config/cloud-summary-users.md %}
 

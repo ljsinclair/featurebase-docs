@@ -4,6 +4,8 @@ layout: default
 parent: Configuration
 grand_parent: Cloud
 nav_order: 1
+has_children: true
+has_toc: false
 ---
 
 ## How do I manage my organization?
