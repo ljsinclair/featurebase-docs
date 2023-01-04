@@ -1,15 +1,28 @@
 ---
-title: Data types and constraints
+title: Data types & constraints     # page title for nav
+layout: default
+parent: Sql-preview home   # L1 page title (requires has_children: true in L1 page)
+has_children: false      # no children for this page
+nav_order: 1
+has_toc: false           # no auto generated list of L3 pages
 ---
+
+# Data types and constraints
+{: .no_toc }
 
 Data types and constraints are used to define table columns when creating tables via SQL.
 
 NOTE: For ease of use, Constraint information is included with the relevant Data type reference.
 
+{% include page-toc.md %}
+
 ## Before you begin
 
-* [Create a Cloud database using the UI](/cloud/cloud-databases/cloud-db-create), OR
+Create a FeatureBase database using one of these methods:
+
+* [Create a Cloud database using the UI](/cloud/cloud-databases/cloud-db-create)
 * [Create a Cloud database using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
+* [Create a Community database](#)
 
 ## Data types
 
