@@ -1,5 +1,5 @@
 ---
-title: SQL-preview home    # Page title that appears in nav
+title: SQL-preview    # Page title that appears in nav
 layout: default
 has_children: true      # L2 pages appear beneath page in nav
 nav_order: 9            # position in nav

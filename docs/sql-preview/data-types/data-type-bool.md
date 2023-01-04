@@ -1,6 +1,12 @@
 ---
-title: BOOL data type
+title: BOOL          # page title for nav
+layout: default
+parent: Data types & Constraints         # L2 page title (requires has_children: true in L2 page)
+grand_parent: SQL-preview   # L1 page title (requires has_children: true in L1 page)
+nav_order: 3
 ---
+
+## BOOL data type
 
 ## Syntax
 
