@@ -9,7 +9,7 @@ nav_order: 1
 # What types of database can I create in FeatureBase Cloud?
 {: .no_toc }
 
-{% include /concepts/database-shape-summary.md %}
+{% include /cloud-db/cloud-summary-db-shape.md %}
 
 IMPORTANT: Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
 

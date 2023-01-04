@@ -11,10 +11,8 @@ theme: just-the-docs
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 
 # Top of page nav
-
   # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
-
   # Anchor text and hyperlinks that appear in top of page nav
 aux_links:
   Featurebase home: https://featurebase.com
@@ -22,13 +20,13 @@ aux_links:
   Contact us: https://www.featurebase.com/contact-us
 
 # permalink info found on https://jekyllrb.com/docs/permalinks/
-
+# WARNING: SITE LINKS WILL BREAK IF THIS IS CHANGED FROM `pretty`
 permalink: pretty
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"
 
-color_scheme: featurebase
+color_scheme: featurebase # file URL: /_sass/color_schemes/featurebase.css
 
 # Enable or disable the site search
 # Supports true (default) or false

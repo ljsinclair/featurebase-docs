@@ -6,7 +6,7 @@ has_children: false
 nav_order: 1
 ---
 
-# Bitmap data overview
+# What are bitmap indexes
 {: .no_toc }
 
 

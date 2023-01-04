@@ -9,7 +9,7 @@ nav_order: 2
 ## How do I update my details and change password?
 {: .no_toc }
 
-{% include /cloud-config/cloud-user-profile-summary.md %}
+{% include /cloud-config/cloud-summary-user-profile.md %}
 {% include /cloud-config/cloud-username-nochange.md %}
 
 {% include page-toc.md %}

@@ -27,14 +27,14 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## Cloud database shapes
 
-{% include /concepts/database-shape-summary.md %}
+{% include /cloud-db/cloud-summary-db-shape.md %}
 
 * [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
 
-{% include /concepts/object-naming-standard.md %}
-{% include /cloud-db/cloud-db-naming-standard.md %}
+{% include /concepts/standard-naming-obj.md %}
+{% include /cloud-db/cloud-standard-naming-db.md %}
 
 ## Create Database
 

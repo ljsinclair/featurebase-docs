@@ -37,6 +37,6 @@ has_toc: false
 
 ## How do I activate and deactivate cloud users?
 
-{% include /cloud-config/cloud-user-deactivate-summary.md%}
+{% include /cloud-config/cloud-summary-user-deactivate.md%}
 
 * [Learn how to activate and deactivate a cloud user](/cloud/cloud-configuration/cloud-user-deactivate)

@@ -23,8 +23,8 @@ nav_order: 2
 
 ## Naming standard
 
-{% include /cloud/object-naming-standard.md%}
-{% include /cloud-table/cloud-table-col-name-std.md %}
+{% include /cloud/standard-naming-obj.md%}
+{% include /cloud-table/cloud-standard-naming-col.md %}
 
 ## Step 1: View all tables
 
