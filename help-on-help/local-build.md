@@ -14,19 +14,30 @@ WARNING: We **do not** recommend local installation of system files because of v
 * Request Read/Write access to `featurebase/featurebase-docs` if you do not already have it
 * Clone repository
 
-## Docker Setup
-
-`Dockerfile` and `docker-compose.yml` can be found in the root directory.
+## Docker
 
 ### Before you begin
 
 * Install [Docker Desktop](https://www.docker.com/get-started/)
+* [Learn about Docker build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"}
 
-### Initial creation of image/container
+### Load Docker container from Dockerfile
+
+Perform this action once.
+
+`Dockerfile` and `docker-compose.yml` can be found in the root directory.
 
 NOTE: This process can take some time if starting from scratch or after executing `docker system prune -a`
 
-To spin up the container/build process:
+1. Use the Dockerfile to load the container
+
+| OS | CLI | Command
+|---|---|
+| Windows | Powershell | `Get-Content Dockerfile | docker build -` |
+| Linux | Bash | `$ docker build - < Dockerfile` |
+| Mac | Terminal | `$ docker build - < Dockerfile` |
+
+### Serve the container
 
 ```
 docker compose up serve
@@ -39,9 +50,9 @@ To view the local site on port `4000` head to:
 http://localhost:4000/ or
 http://<local-ip>:4000
 
-### Editing files
+## Editing files
 
-You an edit the files in this repo and refresh the page to view changes immediately.
+You an edit the files in the repo and refresh the page to view changes immediately.
 
 ## Virtual Machine
 
