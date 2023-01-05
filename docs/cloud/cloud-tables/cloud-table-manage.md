@@ -41,7 +41,7 @@ IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
 
 ## Naming standard
 
-{% include /cloud/standard-naming-obj.md%}
+{% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md%}
 

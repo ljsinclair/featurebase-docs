@@ -21,7 +21,7 @@ nav_order: 1
 
 ## Naming standards
 
-{% include /cloud/standard-naming-obj.md%}
+{% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 
 ## Step 1: view tables
