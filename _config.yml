@@ -10,9 +10,6 @@ theme: just-the-docs
 #    url: https://github.com/just-the-docs/just-the-docs
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 
-# Exclude folders from build
-exclude: [/help-on-help]
-
 # Top of page nav
   # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
