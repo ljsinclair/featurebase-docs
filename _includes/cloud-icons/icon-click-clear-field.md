@@ -1,1 +1,1 @@
-Click ⊗
+Click &#2297;
