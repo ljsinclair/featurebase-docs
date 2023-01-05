@@ -11,10 +11,13 @@ User needs to click the 3-dot menu in Cloud > Databases to open the context menu
 
 |---|---|
 | Instruction | Click <3-dot-menu> for the database, then click **Delete**. |
-| Include file | `Click &#8942;` |
+| Construction | [include file] for the database, then click **Delete** |
+| Include file content | `Click &#8942;` |
 | Method to insert into text | `{% include /cloud-icons/icon-click-context-menu.md %} for the database, then click **Delete**.` |
 
 ## Cloud product
+
+Cloud icon include files are found in `/_includes/cloud-icons`
 
 | UI button | Unicode character | Include file |
 |---|---|---|
