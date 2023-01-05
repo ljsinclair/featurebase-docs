@@ -1,7 +1,7 @@
 ---
 title: Update billing contact address
 layout: default
-parent: Manage databases
+parent: Manage organization
 grand_parent: Cloud
 nav_order: 2
 ---

@@ -1,9 +1,9 @@
 ---
-title: BOOL          # page title for nav
+title: BOOL
 layout: default
-parent: Data types & Constraints         # L2 page title (requires has_children: true in L2 page)
-grand_parent: SQL-preview   # L1 page title (requires has_children: true in L1 page)
-nav_order: 3
+parent: Data types
+grand_parent: SQL preview
+nav_order: 1
 ---
 
 ## BOOL data type

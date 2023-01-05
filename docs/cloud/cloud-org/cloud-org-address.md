@@ -1,7 +1,7 @@
 ---
 title: Update organization details
 layout: default
-parent: Manage databases
+parent: Manage organization
 grand_parent: Cloud
 nav_order: 1
 ---

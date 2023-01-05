@@ -1,10 +1,10 @@
 ---
-title: Data types & constraints     # page title for nav
+title: Data types
 layout: default
-parent: Sql-preview   # L1 page title (requires has_children: true in L1 page)
-has_children: false      # no children for this page
-nav_order: 1
-has_toc: false           # no auto generated list of L3 pages
+parent: Sql preview
+has_children: true
+nav_order: 2
+has_toc: false
 ---
 
 # Data types and constraints

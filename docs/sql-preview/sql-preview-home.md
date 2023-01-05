@@ -1,9 +1,9 @@
 ---
-title: SQL-preview    # Page title that appears in nav
+title: Sql preview
 layout: default
-has_children: true      # L2 pages appear beneath page in nav
-nav_order: 9            # position in nav
-has_toc: true          # auto-generate list of L2 pages
+has_children: true
+nav_order: 8
+has_toc: true
 ---
 
 # SQL Preview home
