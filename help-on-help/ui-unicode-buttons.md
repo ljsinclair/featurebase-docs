@@ -22,3 +22,5 @@ User needs to click the 3-dot menu in Cloud > Databases to open the context menu
 | search field delete | `&#2297;` | icon-click-clear-field.md |
 
 ## Community product
+
+In progress as of 2023-01-05
