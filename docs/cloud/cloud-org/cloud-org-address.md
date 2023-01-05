@@ -22,7 +22,7 @@ nav_order: 1
 
 ## Change organization details
 
-{% include /cloud-config/cloud-open-org-settings-step.md %}
+* Click **Configuration** > **Organization settings**
 * Update your organization name and address as required
 * Optionally change the Technical and Billing contact addresses.
 * Click **Update**.
