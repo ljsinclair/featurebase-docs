@@ -1,7 +1,7 @@
 ---
 title: Update billing contact address
 layout: default
-parent: Manage organization
+parent: Configuration
 grand_parent: Cloud
 nav_order: 2
 ---
@@ -9,9 +9,9 @@ nav_order: 2
 ## How do I change the billing contact address?
 {: .no_toc }
 
-{% include page-toc.md %}
-
 {% include /cloud-config/cloud-summary-billing-contact.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 

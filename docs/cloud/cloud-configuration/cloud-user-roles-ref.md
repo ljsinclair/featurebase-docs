@@ -1,9 +1,9 @@
 ---
 title: User roles
 layout: default
-parent: Manage users
+parent: Configuration
 grand_parent: Cloud
-nav_order: 5
+nav_order: 8
 has_toc: false
 ---
 

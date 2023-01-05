@@ -1,9 +1,9 @@
 ---
 title: Update user role
 layout: default
-parent: Manage users
+parent: Configuration
 grand_parent: Cloud
-nav_order: 3
+nav_order: 6
 has_toc: false
 ---
 

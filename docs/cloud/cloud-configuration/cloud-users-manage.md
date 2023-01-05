@@ -1,9 +1,9 @@
 ---
 title: Manage users
 layout: default
-parent: Cloud
-has_children: true
-nav_order: 9
+parent: Configuration
+grand_parent: Cloud
+nav_order: 3
 has_toc: false
 ---
 

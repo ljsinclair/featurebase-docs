@@ -1,17 +1,18 @@
 ---
 title: Invite users
 layout: default
-parent: Manage users
+parent: Configuration
 grand_parent: Cloud
-nav_order: 1
+nav_order: 5
 has_toc: false
 ---
 
 ## How do I invite Cloud users?
 {: .no_toc }
 
-{% include page-toc.md %}
 {% include /cloud-config/cloud-summary-users.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
 
