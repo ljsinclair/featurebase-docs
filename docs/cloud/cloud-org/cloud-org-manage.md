@@ -1,13 +1,12 @@
 ---
-title: Manage organization
+title: Update organization details
 layout: default
-parent: Cloud
-has_children: true
-nav_order: 8
-has_toc: false
+parent: Manage organization
+grand_parent: Cloud
+nav_order: 1
 ---
 
-## How do I manage my organization?
+## How do I update my organization details?
 {: .no_toc }
 
 {% include /cloud-config/cloud-summary-org.md %}
@@ -16,21 +15,14 @@ has_toc: false
 
 ## Before you begin
 
+* [Learn about FeatureBase Cloud pricing](https://www.featurebase.com/pricing)
+* {% include contact-support.md %} to arrange an upgrade
 {% include /cloud-config/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 
-## How do I change my organization name and address?
+## Change organization details
 
-* [Learn how to change organization details](/cloud/cloud-configuration/cloud-org-address)
-
-## How do I change my billing address for my account?
-
-{% include /cloud-config/cloud-summary-billing-contact.md %}
-
-* [Learn how to update billing details](/cloud/cloud-configuration/cloud-org-update-billing)
-
-## How do I change my technical contact details?
-
-{% include /cloud-config/cloud-summary-tech-contact.md %}
-
-* [Learn how to update technical contact address](/cloud/cloud-configuration/cloud-org-update-tech-contact)
+* Click **Configuration** > **Organization settings**
+* Update your organization name and address as required
+* Optionally change the Technical and Billing contact addresses.
+* Click **Update**.
