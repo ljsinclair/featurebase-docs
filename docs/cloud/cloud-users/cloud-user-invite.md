@@ -38,7 +38,7 @@ It is included in the invitation email, but you can also provide the URL via a d
 
 * Click **Configuration** > **Manage users**.
 * Scroll to **Invited users**
-* {%  include /cloud-icons/icon-edit-unicode.md %} on the user > **Copy invite URL**.
+* {%  include /cloud-icons/icon-click-context-menu.md %} on the user > **Copy invite URL**.
 
 ## Next step
 

@@ -27,12 +27,12 @@ You can [change the user role](/cloud/cloud-configuration/cloud-user-edit-role) 
 ## Deactivate a user
 
 * Click **Configuration** > **Manage users**
-* {% include /cloud-icons/icon-edit-unicode.md %} on the **Active** user > **Deactivate user**.
+* {% include /cloud-icons/icon-click-context-menu.md %} on the **Active** user > **Deactivate user**.
 
 ## Reactivate a user
 
 * Click **Configuration** > **Manage users**
-* {% include /cloud-icons/icon-edit-unicode.md %} on the **Deactivated** user > **Reactivate User**.
+* {% include /cloud-icons/icon-click-context-menu.md %} on the **Deactivated** user > **Reactivate User**.
 
 ## Further information
 

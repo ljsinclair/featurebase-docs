@@ -1,2 +1,2 @@
 * Click **Configuration** > **Manage users**
-* {% include /cloud/icon-edit-unicode.md %} on the user > **Edit**.
+* {% include /cloud/icon-click-context-menu.md %} on the user > **Edit**.

@@ -18,14 +18,19 @@ This site is IN DEVELOPMENT and not ready for public consumption.
 
 ## Site documentation
 
-Rather than turn the readme into an endless scroll I've created separate README files for each area of interest:
+Rather than turn the readme into an endless scroll I've created separate help-on-help files.
 
-| File | Description |
-|---|---|---|
-| [README-theme.md]() | Site setup and where to find files and dependencies |
-| [README-local-build.md]() | How to setup a local build |
-| [README-broken-link-check]() | Two methods to check for broken links before committing and creating a Pull Request |
-| [README-content-nav]() | Explains how page YAML governs the sidebar navigation |
-| [README-content-callouts]() | Use callouts to highlight important text |
-| [README-common-include]() | How to use common include files |
-| [README-ui-unicode-buttons]() | Unicode for use in docs rather than taking screenshots of SVG buttons (THIS IS NOT IDEAL) |
+These are found in the `/help-on-help` folder which is **excluded** from the build in the `/_config.yml` file
+
+Help on help content covers the following subjects:
+
+* Theme setup
+* Where to find files
+* Building the system locally
+* File naming standards
+* How the sidebar navigation works
+* How common content `include` files work
+* Writing guidance
+* How to add hyperlinks (hint: one-word anchor text is BAD.)
+* How to highlight important information with colored callout boxes
+* How to check for broken links
