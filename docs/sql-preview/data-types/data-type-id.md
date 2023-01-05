@@ -1,6 +1,12 @@
 ---
-title: ID numeric datatype
+title: ID
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 3
 ---
+
+# ID numeric datatype
 
 ## Syntax
 

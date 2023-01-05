@@ -1,6 +1,12 @@
 ---
-title: IDSET data type
+title: IDSET
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 3
 ---
+
+# IDSET data type
 
 IDSET is a FeatureBase datatype used with `timeQuantum` and `ttl` constraints.
 

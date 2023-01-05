@@ -1,6 +1,12 @@
 ---
-title: DECIMAL data type
+title: DECIMAL
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 2
 ---
+
+# DECIMAL data type
 
 Decimal is a numeric data type used with `scale` constraint.
 

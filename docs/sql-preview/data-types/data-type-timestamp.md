@@ -1,6 +1,12 @@
 ---
-title: TIMESTAMP data type
+title: TIMESTAMP
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 7
 ---
+
+# TIMESTAMP data type
 
 Timestamp is a date-time data type used with `timeunit` and `epoch` constraints.
 

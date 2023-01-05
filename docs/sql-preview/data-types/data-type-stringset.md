@@ -1,6 +1,12 @@
 ---
-title: STRINGSET data type
+title: Decimal
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 6
 ---
+
+# STRINGSET data type
 
 STRINGSET is a FeatureBase datatype used with `TIMEQUANTUM` and `TTL` (Time To Live) constraints.
 

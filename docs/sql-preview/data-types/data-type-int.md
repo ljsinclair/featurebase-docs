@@ -1,6 +1,12 @@
 ---
-title: INT data type
+title: INT
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 4
 ---
+
+# INT data type
 
 Int is a numeric datatype used with the `min` and `max` constraints.
 

@@ -1,6 +1,12 @@
 ---
-title: STRING data type
+title: STRING
+layout: default
+parent: Data types
+grand_parent: SQL preview
+nav_order: 5
 ---
+
+# STRING data type
 
 ## Syntax
 

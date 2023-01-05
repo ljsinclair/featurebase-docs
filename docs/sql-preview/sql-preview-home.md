@@ -1,5 +1,5 @@
 ---
-title: Sql preview
+title: SQL preview
 layout: default
 has_children: true
 nav_order: 8

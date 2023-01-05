@@ -28,6 +28,9 @@ logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"
 
 color_scheme: featurebase # file URL: /_sass/color_schemes/featurebase.css
 
+# Exclude folders from build
+excludes: ['/sql-preview/statements','/sql-preview/operators-expressions', '/sql-preview/statements']
+
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true

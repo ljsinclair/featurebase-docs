@@ -1,7 +1,7 @@
 ---
 title: Data types
 layout: default
-parent: Sql preview
+parent: SQL preview
 has_children: true
 nav_order: 2
 has_toc: false
