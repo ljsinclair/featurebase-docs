@@ -30,7 +30,7 @@ Learn how to delete a FeatureBase Cloud database.
 * Click **Databases**.
 <ul>
 <li>
-Click <span class="material-icons md-18">more_vert</span> on the database to delete.
+Click <span class="material-icons">more_vert</span> on the database to delete.
 </li>
 </ul>
 * Click **Delete**.
