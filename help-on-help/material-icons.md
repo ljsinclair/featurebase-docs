@@ -24,7 +24,7 @@ https://mui.com/material-ui/material-icons/
 |---|---|---|
 | Announcement (top right) | `<Icon>Announcement</icon>` | <Icon>Announcement</icon> |
 | Home | `<Icon>Home</icon>` | <Icon>Home</Icon> |
-| Databases |
+| Databases | `<Icon>DynamicFeed</icon>` | <Icon>DynamicFeed</Icon> |
 | Tables | `<Icon>TableView</icon>` | <Icon>TableView</icon> |
 | Data sources | `<Icon>CloudUpload</icon>`| <Icon>CloudUpload</icon> |
 | Query | `<Icon>ManageSearch</icon>` | <Icon>ManageSearch</icon> |
