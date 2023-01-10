@@ -31,6 +31,6 @@ https://mui.com/material-ui/material-icons/
 | Configuration | `<Icon>Settings</icon>` | <Icon>Settings</icon> |
 | Get Help | `<Icon>HelpOutline</icon>` | <Icon>HelpOutline</icon> |
 | Search field cancel | `<Icon>Cancel</icon>` | <Icon>Cancel</icon> |
-| Grid submenu | `<Icon>MoreVert</icon>` | <Icon>MoreVert</icon> |
+| Grid 3 vertical dot submenu | `<Icon>MoreVert</icon>` | <Icon>MoreVert</icon> |
 | Query > Run query | `<Icon>PlayCircle</icon>` | <Icon>PlayCircle</icon> |
 | Query > History > Folder icon | `<Icon>FolderOpen</icon>` | <Icon>FolderOpen</icon> |
