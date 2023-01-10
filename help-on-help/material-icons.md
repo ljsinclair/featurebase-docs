@@ -10,8 +10,27 @@ https://mui.com/material-ui/material-icons/
 
 ## Theme modifications
 
-* added `/_includes/head_custom.html` and added the styleguide reference
+* added material icons stylesheet ref to `/_includes/head_custom.html`
 
 ## Usage
 
-I've created include files to keep the help icons in sync with the UI.
+```
+<Icon>icon-name</Icon>
+```
+
+Icons in use
+
+| Menu item/page | icon | Renders as |
+|---|---|---|
+| Announcement (top right) | Announcement | 
+| Home | `<Icon>Home</icon>` | <Icon>Home</Icon> |
+| Databases |
+| Tables | TableView |  |
+| Data sources | CloudUpload
+| Query | ManageSearch
+| Configuration | Settings
+| Get Help | HelpOutline |
+| Search field cancel | Cancel |
+| Grid submenu | MoreVert |
+| Query > Run query | PlayCircle |
+| Query > History > Folder icon | FolderOpen |
