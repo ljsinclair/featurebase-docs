@@ -2,9 +2,9 @@ version: '3'
 
 services:
   serve:
-    build: . 
-    image: serve-jeckyll-docs-fb
-    container_name: docs-site-container
+    build: .
+    image: serve-jekyll-docs-fb
+    container_name: featurebase-docs-site-container
     command: jekyll serve --watch --force_polling --verbose --livereload
     volumes:
       - .:/srv/jekyll:consistent
@@ -12,4 +12,3 @@ services:
       - '4000:4000'
     expose:
       - '4000'
-

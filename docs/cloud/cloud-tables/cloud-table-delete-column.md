@@ -34,7 +34,7 @@ You may need to delete a column if:
 
 1. Click the table name.
 2. Click **Columns**.
-3. Click &#8942; on the column > **Delete**.
+3. Click <span class="material-icons md-18">more_vert</span> on the column > **Delete**.
 5. Enter "DELETE" in the confirmation dialog.
 6. Click **Delete**.
 
