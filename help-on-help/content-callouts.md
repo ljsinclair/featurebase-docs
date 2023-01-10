@@ -4,6 +4,7 @@ Highlight important information sparingly with Callout boxes.
 
 Colors are governed by `/_sass/color_schemes/featurebase.scss`
 
+* [Learn about callout boxes](https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/)
 
 ### Note
 
