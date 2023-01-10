@@ -28,7 +28,7 @@ Learn how to delete a FeatureBase Cloud database.
 ## Delete a database
 
 1. Click **Databases**.
-2. Click <Icon>MoreVert</icon> on the database to delete.
+2. Click <Icon>MoreVert</Icon> on the database to delete.
 3. Click **Delete**.
 4. Enter "Delete" in the confirmation dialog.
 5. Click **Delete**.

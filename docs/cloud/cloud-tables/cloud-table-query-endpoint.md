@@ -25,5 +25,5 @@ The table query endpoint is used when running remote table queries via the API.
 
 ## Step 2: view the query endpoint
 
-1. Click <Icon>MoreVert</icon> for the table to query.
+1. Click <Icon>MoreVert</Icon> for the table to query.
 2. Choose **Copy query endpoint**

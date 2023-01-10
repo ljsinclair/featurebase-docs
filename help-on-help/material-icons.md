@@ -22,15 +22,15 @@ https://mui.com/material-ui/material-icons/
 
 | Menu item/page | icon | Renders as |
 |---|---|---|
-| Announcement (top right) | `<Icon>Announcement</icon>` | <Icon>Announcement</icon> |
-| Home | `<Icon>Home</icon>` | <Icon>Home</Icon> |
-| Databases | `<Icon>DynamicFeed</icon>` | <Icon>DynamicFeed</Icon> |
-| Tables | `<Icon>TableView</icon>` | <Icon>TableView</icon> |
-| Data sources | `<Icon>CloudUpload</icon>`| <Icon>CloudUpload</icon> |
-| Query | `<Icon>ManageSearch</icon>` | <Icon>ManageSearch</icon> |
-| Configuration | `<Icon>Settings</icon>` | <Icon>Settings</icon> |
-| Get Help | `<Icon>HelpOutline</icon>` | <Icon>HelpOutline</icon> |
-| Search field cancel | `<Icon>Cancel</icon>` | <Icon>Cancel</icon> |
-| Grid 3 vertical dot submenu | `<Icon>MoreVert</icon>` | <Icon>MoreVert</icon> |
-| Query > Run query | `<Icon>PlayCircle</icon>` | <Icon>PlayCircle</icon> |
-| Query > History > Folder icon | `<Icon>FolderOpen</icon>` | <Icon>FolderOpen</icon> |
+| Announcement (top right) | `<Icon>Announcement</Icon>` | <Icon>Announcement</Icon> |
+| Home | `<Icon>Home</Icon>` | <Icon>Home</Icon> |
+| Databases | `<Icon>DynamicFeed</Icon>` | <Icon>DynamicFeed</Icon> |
+| Tables | `<Icon>TableView</Icon>` | <Icon>TableView</Icon> |
+| Data sources | `<Icon>CloudUpload</Icon>`| <Icon>CloudUpload</Icon> |
+| Query | `<Icon>ManageSearch</Icon>` | <Icon>ManageSearch</Icon> |
+| Configuration | `<Icon>Settings</Icon>` | <Icon>Settings</Icon> |
+| Get Help | `<Icon>HelpOutline</Icon>` | <Icon>HelpOutline</Icon> |
+| Search field cancel | `<Icon>Cancel</Icon>` | <Icon>Cancel</Icon> |
+| Grid 3 vertical dot submenu | `<Icon>MoreVert</Icon>` | <Icon>MoreVert</Icon> |
+| Query > Run query | `<Icon>PlayCircle</Icon>` | <Icon>PlayCircle</Icon> |
+| Query > History > Folder icon | `<Icon>FolderOpen</Icon>` | <Icon>FolderOpen</Icon> |
