@@ -25,4 +25,4 @@ The table endpoint is used to obtain metadata on a table via the API.
 
 ## Step 2: obtain table endpoint
 
-* Click <span class="material-icons">more_vert</span> > **Copy table endpoint**.
+* Click <span class="material-icons md-18">more_vert</span> > **Copy table endpoint**.

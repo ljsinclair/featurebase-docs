@@ -25,16 +25,22 @@ This includes:
 
 ## Styleguide
 
-Material icons stylesheet added via include file:
+### Material icons
 
-`/_includes/head_custom.html`
+Modifications to:
+* custom header
+* custom scss
 
-Theme customizations are found in the `/_sass` directory.
+Refer to /help-on-help/material-icons for more information
+
+### Featurebase styles and colors
 
 | File/Folder | Settings |
 |---|---|
 | `/_sass/color_schemes/featurebase.scss` | `/_config.yml` > `color_scheme: featurebase` |
 | Custom CSS | `/_sass/custom/custom.css` | Automatically loaded |
+
+### Further information
 
 * [Theme typography](https://just-the-docs.github.io/just-the-docs/docs/ui-components/typography/)
 * [built-in colors](https://just-the-docs.github.io/just-the-docs/docs/utilities/color/)
