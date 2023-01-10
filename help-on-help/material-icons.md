@@ -15,22 +15,24 @@ https://mui.com/material-ui/material-icons/
 ## Usage
 
 ```
-<Icon>icon-name</Icon>
+<span class="material-symbols-outlined">icon_name</span>
 ```
 
 ## Icons in use
 
+Icon source = [Material icons filled](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons)
+
 | Menu item/page | icon | Renders as |
 |---|---|---|
-| Announcement (top right) | `<Icon>Announcement</Icon>` | <Icon>Announcement</Icon> |
-| Home | `<Icon>Home</Icon>` | <Icon>Home</Icon> |
-| Databases | `<Icon>DynamicFeed</Icon>` | <Icon>DynamicFeed</Icon> |
-| Tables | `<Icon>TableView</Icon>` | <Icon>TableView</Icon> |
-| Data sources | `<Icon>CloudUpload</Icon>`| <Icon>CloudUpload</Icon> |
-| Query | `<Icon>ManageSearch</Icon>` | <Icon>ManageSearch</Icon> |
-| Configuration | `<Icon>Settings</Icon>` | <Icon>Settings</Icon> |
-| Get Help | `<Icon>HelpOutline</Icon>` | <Icon>HelpOutline</Icon> |
-| Search field cancel | `<Icon>Cancel</Icon>` | <Icon>Cancel</Icon> |
-| Grid 3 vertical dot submenu | `<Icon>MoreVert</Icon>` | <Icon>MoreVert</Icon> |
-| Query > Run query | `<Icon>PlayCircle</Icon>` | <Icon>PlayCircle</Icon> |
-| Query > History > Folder icon | `<Icon>FolderOpen</Icon>` | <Icon>FolderOpen</Icon> |
+| Announcement (top right) | `<span class="material-symbols-outlined">sms_failed</span>` | <span class="material-symbols-outlined">sms_failed</span> |
+| Home | `<span class="material-symbols-outlined">home</span>` | <span class="material-symbols-outlined">Home</span> |
+| Databases | `<span class="material-symbols-outlined">dynamic_feed</span>` | <span class="material-symbols-outlined">DynamicFeed</span> |
+| Tables | `<span class="material-symbols-outlined">table_view</span>` | <span class="material-symbols-outlined">table_view</span> |
+| Data sources | `<span class="material-symbols-outlined">cloud_upload</span>`| <span class="material-symbols-outlined">cloud_upload</span> |
+| Query | `<span class="material-symbols-outlined">manage_search</span>` | <span class="material-symbols-outlined">manage_search</span> |
+| Configuration | `<span class="material-symbols-outlined">settings</span>` | <span class="material-symbols-outlined">settings</span> |
+| Get Help | `<span class="material-symbols-outlined">help_outline</span>` | <span class="material-symbols-outlined">help_outline</span> |
+| Search field cancel | `<span class="material-symbols-outlined">cancel</span>` | <span class="material-symbols-outlined">cancel</span> |
+| Grid 3 vertical dot submenu | `<span class="material-symbols-outlined">more_vert</span>` | <span class="material-symbols-outlined">more_vert</span> |
+| Query > Run query | `<span class="material-symbols-outlined">play_circle_filled</span>` | <span class="material-symbols-outlined">play_circle_filled</span> |
+| Query > History > Folder icon | `<span class="material-symbols-outlined">folder_open</span>` | <span class="material-symbols-outlined">folder_open</span> |

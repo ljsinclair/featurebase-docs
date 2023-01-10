@@ -34,7 +34,7 @@ There are a number of reasons why you may choose to drop a table, including:
 
 ## Step 2: Drop the selected table
 
-1. Click <Icon>MoreVert</Icon> > **Drop table**
+1. Click <span class="material-symbols-outlined">more_vert</span> > **Drop table**
 2. Enter "DELETE" in the confirmation dialog.
 3. Click **Drop table**.
 
