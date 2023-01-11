@@ -31,6 +31,6 @@ Edit your first and last name and your password
 ## Edit a user profile as an Administrator
 
 * Click **Configuration** > **Manage users**
-* {% include /cloud-icons/icon-edit-unicode.md %} on the user > **Edit**.
+* Click <span class="material-icons md-18">more_vert</span>  on the user > **Edit**.
 * Edit the user first and last name as required.
 * Click **Update**.

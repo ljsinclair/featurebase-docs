@@ -29,7 +29,7 @@ has_toc: false
 ## Change user role
 
 * Click **Configuration** > **Manage users**
-* {% include /cloud-icons/icon-edit-unicode.md %} on the user > **Edit**.
+* Click <span class="material-icons md-18">more_vert</span>  on the user > **Edit**.
 * Change the role as required.
 * Click **Update**.
 
