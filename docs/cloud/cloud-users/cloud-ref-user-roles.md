@@ -1,0 +1,24 @@
+---
+title: Reference - Cloud user roles
+layout: default
+parent: Manage users
+grand_parent: Cloud
+nav_order: 8
+has_toc: false
+---
+
+# Reference: Cloud user roles
+{: .no_toc }
+
+{% include /cloud-config/cloud-summary-user-roles.md %}
+
+{% include page-toc.md %}
+
+{% include /cloud-config/cloud-summary-user-privs.md %}
+{% include /cloud-config/cloud-summary-db-privs.md %}
+{% include /cloud-config/cloud-summary-table-privs.md %}
+{% include /cloud-config/cloud-summary-org-privs.md %}
+
+## Further information
+
+* [Learn how to change user roles](/cloud/cloud-configuration/cloud-user-edit-role)
