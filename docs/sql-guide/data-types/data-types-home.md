@@ -18,8 +18,13 @@ For ease of use, Constraint information is included with the relevant Data type 
 
 ## Before you begin
 
-* [Create a Cloud database using the UI](/docs/cloud/cloud-databases/cloud-db-create), OR
-* [Create a Cloud database using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
+* Create a database in two ways:
+  1. [Create a Cloud database using the UI](/docs/cloud/cloud-databases/cloud-db-create)
+  2. [Create a Cloud database using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
+* Create a table in three ways:
+  1. [Create table using the UI](/docs/cloud/cloud-tables/cloud-table-create)
+  2. [Create table using SQL](/docs/sql-guide/statements/statement-table-create)
+  3. [Create table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
 
 ## Data types
 
@@ -28,7 +33,7 @@ Data types used to define the type of data that a table column can contain. They
 ### Mapping data types
 
 | SQL Data Type | FeatureBase Data Type |
-|---------------|---|
+|---|---|
 | int | int |
 | bool | bool |
 | timestamp | timestamp |

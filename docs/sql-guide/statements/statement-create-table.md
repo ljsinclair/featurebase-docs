@@ -16,7 +16,7 @@ Creates a FeatureBase table. The the table already exists and `IF NOT EXISTS` is
 
 ## Syntax
 
-![expr](/img/sql/create_table_stmt.svg)
+![expr](/assets/images/sql-guide/create_table_stmt.svg)
 
 ## Arguments
 
@@ -39,24 +39,24 @@ Creates a FeatureBase table. The the table already exists and `IF NOT EXISTS` is
 
 #### column_def
 
-![expr](/img/sql/column_def.svg)
+![expr](/assets/images/sql-guide/column_def.svg)
 
 #### type_name
 
-![expr](/img/sql/type_name.svg)
+![expr](/assets/images/sql-guide/type_name.svg)
 
 See also [Data Types](/sql-preview/data-types/data-types-home).
 
 #### column_constraint
 Column constraints are optional for columns.
 
-![expr](/img/sql/column_constraint.svg)
+![expr](/assets/images/sql-guide/column_constraint.svg)
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
 #### table_options
 
-![expr](/img/sql/table_options.svg)
+![expr](/assets/images/sql-guide/table_options.svg)
 
 | **Table Option** | **Comment**                                                           |
 |------------------|-----------------------------------------------------------------------|

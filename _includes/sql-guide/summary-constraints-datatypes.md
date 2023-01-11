@@ -2,7 +2,7 @@ Constraints are applied:
 * to data types to modify and optimize how table data is stored and accessed
 * when a column is created
 
-![expr](/img/sql/column_constraint.svg)
+![expr](/assets/images/sql-guide/column_constraint.svg)
 
 | Constraint | Data type |
 |---|---|
