@@ -60,19 +60,10 @@ Data types used to define the type of data that a table column can contain. They
 
 ## Constraints
 
-Constraints are applied to data types to modify and optimize how table data is stored and accessed.
-
-Constraints are applied when a column is created.
-
-| Constraint | Data type |
-|---|---|
-| EPOCH | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
-| MIN, MAX | [INT](/docs/sql-guide/data-types/data-type-int) |
-| SCALE | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
-| TIMEQUANTUM, TTL | [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |
-| TIMEUNIT | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp) |
+{% include /sql-guide/summary-constraints-datatypes.md %}
 
 ## Further information
 
 * [Create a Cloud table](/docs/cloud/cloud-tables/cloud-table-create)
+* [Create a Cloud table with SQL](/docs/sql-guide/statements/statement-create-table)
 * [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTable)

@@ -9,11 +9,24 @@ has_toc: false
 # FeatureBase SQL guide
 {: .no_toc }
 
+## Naming standard
+
+
+{% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /cloud-table/cloud-standard-naming-col.md %}
+{% include /cloud-table/cloud-summary-naming-pk.md %}
+
 ## Statements
+
+* [SQL statements](/docs/sql-guide/statements/statements-home)
 
 ## Functions
 
+* [SQL functions](/docs/sql-guide/functions/functions-home)
+
 ## Data types
+
+* [SQL data types](/docs/sql-guide/data-types/data-types-home)
 
 ## Operators
 

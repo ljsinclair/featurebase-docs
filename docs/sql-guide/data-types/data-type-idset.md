@@ -21,7 +21,7 @@ IDSET [TIMEQUANTUM {value} [TTL '{value}}']]
 | Argument | Description |
 |---|---|
 | IDSET | Data type used where there is a need to set multiple ID values for a single column |
-{% include /sql-preview/timequantum-ttl-args.md %}
+{% include /sql-guide/timequantum-ttl-args.md %}
 
 ## Additional information
 
@@ -34,6 +34,6 @@ The IDSET data type:
 
 NOTE: Use the INT data type to perform range queries using `<` or `>`
 
-{% include /sql-preview/timequantum-additional.md %}
+{% include /sql-guide/timequantum-additional.md %}
 
-{% include /sql-preview/ttl-additional.md %}
+{% include /sql-guide/ttl-additional.md %}
