@@ -40,23 +40,23 @@ Data types used to define the type of data that a table column can contain. They
 
 ### Numeric data types
 
-* [BOOL](/sql-preview/data-types/data-type-bool)
-* [DECIMAL](/sql-preview/data-types/data-type-decimal)
-* [ID](/sql-preview/data-types/data-type-id)
-* [INT](/sql-preview/data-types/data-type-int)
+* [BOOL](/docs/sql-guide/data-types/data-type-bool)
+* [DECIMAL](/docs/sql-guide/data-types/data-type-decimal)
+* [ID](/docs/sql-guide/data-types/data-type-id)
+* [INT](/docs/sql-guide/data-types/data-type-int)
 
 ### String data types
 
-* [STRING](/sql-preview/data-types/data-type-string)
+* [STRING](/docs/sql-guide/data-types/data-type-string)
 
 ### Date/Time data types
 
-* [TIMESTAMP](/sql-preview/data-types/data-type-timestamp)
+* [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
 
 ### FeatureBase data types
 
-* [IDSET](/sql-preview/data-types/data-type-idset)
-* [STRINGSET](/sql-preview/data-types/data-type-stringset)
+* [IDSET](/docs/sql-guide/data-types/data-type-idset)
+* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)
 
 ## Constraints
 
@@ -66,11 +66,11 @@ Constraints are applied when a column is created.
 
 | Constraint | Data type |
 |---|---|
-| EPOCH | [TIMESTAMP](/sql-preview/data-types/data-type-timestamp)
-| MIN, MAX | [INT](/sql-preview/data-types/data-type-int) |
-| SCALE | [DECIMAL](/sql-preview/data-types/data-type-decimal) |
-| TIMEQUANTUM, TTL | [IDSET](/sql-preview/data-types/data-type-idset)<br/> [STRINGSET](/sql-preview/data-types/data-type-stringset) |
-| TIMEUNIT | [TIMESTAMP](/sql-preview/data-types/data-type-timestamp) |
+| EPOCH | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
+| MIN, MAX | [INT](/docs/sql-guide/data-types/data-type-int) |
+| SCALE | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
+| TIMEQUANTUM, TTL | [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |
+| TIMEUNIT | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp) |
 
 ## Further information
 

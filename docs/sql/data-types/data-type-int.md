@@ -30,4 +30,4 @@ INT is not suitable for queries that
 * group by
 * include data sets with low cardinality
 
-Instead, use the [ID data type](/sql-preview/data-types/data-type-id).
+Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
