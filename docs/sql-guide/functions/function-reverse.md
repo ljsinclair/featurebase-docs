@@ -3,7 +3,7 @@ title: REVERSE
 layout: default
 parent: Functions
 grand_parent: SQL guide
-nav_order: 2
+nav_order: 3
 ---
 
 # REVERSE() function
