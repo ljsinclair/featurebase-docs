@@ -3,7 +3,7 @@ title: Configuration
 layout: default
 parent: Cloud
 has_children: false
-nav_order: 10
+nav_order: 7
 has_toc: false
 ---
 
