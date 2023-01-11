@@ -33,6 +33,7 @@ replaceall(expr,exprOld,exprNew)
 `replaceall()` returns a string that is the result of replacing all occurrences of `exprOld` in `expr` with `exprNew`.
 
 ## Remarks
+
 None
 
 ## Examples
