@@ -5,7 +5,7 @@ It's important to check for broken links **before** committing changes and creat
 There are two methods:
 
 * All systems -- dead_link_seeker.py
-* PC/Linux -- check-links.sh
+* PC/Linux/Docker -- htmlproofer
 
 ## Mac -- dead_link_seeker.py
 
@@ -32,14 +32,19 @@ Arguments:
 | address | local or remote address | http://127.0.0.1:4000/<br/>http://docs.featurebase.com/ |
 | v | verbose mode |
 
-## PC/Linux -- check-links.sh
+## PC/Linux/Docker -- htmlproofer
 
-`htmlproofer` is a Ruby Gem that's included in `gemfile.lock`
+### Before you begin
 
-The `check-links.sh` script can be run locally on PC or Linux machines.
+HTMLproofer requires HTML site files which can be created:
+* by running `jekyll serve` or `jekyll build` commands on a local setup
+* created automatically when running the Docker image
 
+### Run the command from the repository directory
+
+Either CD to `/featurebase-docs` or open a terminal on a running Docker image.
 ```
-bash check-links.sh
+exec htmlproofer ./_site
 ```
 
 ## False positives
