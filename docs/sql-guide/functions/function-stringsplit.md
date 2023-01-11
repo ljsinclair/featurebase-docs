@@ -1,9 +1,14 @@
 ---
-id: sql-stringsplit
 title: STRINGSPLIT
+layout: default
+parent: Functions
+grand_parent: SQL guide
+nav_order: 5
 ---
 
-`Stringsplit()` function splits a string into multiple substrings based on a specified separator.
+# STRINGSPLIT function
+
+The `Stringsplit()` function splits a string into multiple substrings based on a specified separator.
 
 ## Syntax
 
@@ -13,24 +18,27 @@ stringsplit(expr,seperator,position)
 
 ## Arguments
 
-_expr_ 
-The input string to split. The argument `expr` is any expression of type `string`.
-
-_seperator_
-A character or string that will be used to split the evaluated expression `expr`. `seperator` can be any expression of type `string`
-
-_position_ *(optional)* (Default value : 0)
-Substring to retrive from the resulting array of substrings. `position` can be any expression of type `int`. 
+| Argument | Description | Data type |
+|---|---|---|
+| `expr` | The input string to split. | `string` |
+| `seperator` | A character or string that will be used to split the evaluated expression `expr`. | `string` |
+| `position` | Optional substring to retrive from the resulting array of substrings. Defaults to 0 | `int` |
 
 ## Return Type
+
 `string`
 
 ## Return Value
+
 `stringsplit()` returns the substring at the position, from the resulting array of substrings.
+
 ## Remarks
+
 None
+
 ## Examples
-A. Split strings and return second substring
+
+### Split strings and return second substring
 
 ```sql
 create table segments
@@ -47,7 +55,8 @@ select _id, stringsplit(segment,',',1) as segment from segments;
 +-----+----------+
 ```
 
-B. Split with a column as seperator.
+### Split with a column as seperator.
+
 ```sql
 create table segments
     (_id id, segment string, seperator);

@@ -1,9 +1,14 @@
 ---
-id: sql-rtrim
-tittle: RTRIM
+title: RTRIM
+layout: default
+parent: Functions
+grand_parent: SQL guide
+nav_order: 4
 ---
 
-`RTRIM()` function removes the trailing whitespaces from input string from the selected column.
+# RTRIM function
+
+The `RTRIM()` function removes the trailing whitespaces from input string from the selected column.
 
 ## Syntax
 
@@ -13,17 +18,24 @@ rtrim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description |
+|---|---|
+| `expr` | Any expression of type `string` |
 
 ## Return Type
+
 `string`
 
 ## Return Value
+
 `rtrim()` returns the input string after removing trailing whitespaces
+
 ## Remarks
+
 None
+
 ## Examples
+
 Trimming strings in a column
 
 ```sql

@@ -1,38 +1,39 @@
 ---
-id: sql-reverse
 title: REVERSE
+layout: default
+parent: Functions
+grand_parent: SQL guide
+nav_order: 2
 ---
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality (more information [here](/sql-preview/sql-preview)). Additionally, this page represents a work in progress that is subject to frequent changes. |
+# REVERSE function
 
----
+The `Reverse()` function returns the reversed strings from the selected column.
 
-## REVERSE()
-
-`Reverse()` function returns the reversed strings from the selected column.
-
-### Syntax
+## Syntax
 
 ```
 reverse(expr)
 ```
 
-### Arguments
+## Arguments
 
 _expr_
 The argument `expr` is any expression of type `string`.
 
-### Return Type
+## Return Type
+
 `string`
 
-### Return Value
+## Return Value
+
 `reverse()` returns the reversed input string
-### Remarks
+## Remarks
+
 None
-### Examples
-A. Reversing strings in a column
+## Examples
+
+### Reversing strings in a column
 
 ```sql
 create table segments
@@ -49,7 +50,8 @@ select _id, reverse(segment) as reversed from segments;
 +-----+----------+
 ```
 
-B. Testing nested reverse function
+### Testing nested reverse function
+
 ```sql
 create table segments
     (_id id, segment string);

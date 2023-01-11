@@ -1,9 +1,14 @@
 ---
-id: sql-trim
 title: TRIM
+layout: default
+parent: Functions
+grand_parent: SQL guide
+nav_order: 7
 ---
 
-`TRIM()` function removes the leading and trailing whitespaces from input string from the selected column.
+# TRIM ()
+
+The `TRIM()` function removes the leading and trailing whitespaces from input string from the selected column.
 
 ## Syntax
 
@@ -13,17 +18,24 @@ trim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description |
+|---|---|
+| `expr` | Any expression of type `string` |
 
 ## Return Type
+
 `string`
 
 ## Return Value
+
 `trim()` returns the input string after removing leading and trailing whitespaces
+
 ## Remarks
+
 None
+
 ## Examples
+
 Trimming strings in a column
 
 ```sql
