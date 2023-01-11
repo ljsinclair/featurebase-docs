@@ -42,7 +42,7 @@ You can copy the invitation URL and provide it to the user if required.
 
 * Click **Configuration** > **Manage users**.
 * Scroll to **Invited users**.
-* {%  include /cloud-icons/icon-edit-unicode.md %} on the user > **Copy invite URL**.
+* Click <span class="material-icons md-18">more_vert</span> on the user > **Copy invite URL**.
 
 ## Next step
 
