@@ -15,7 +15,8 @@ FeatureBase users may be invited to join a different organization.
 
 {% include /cloud-users/cloud-summary-user-move.md %}
 
-NOTE: Users can opt-out of the account move by ignoring the email or click **No, thanks** on the confirmation page.
+{: .note}
+Users can opt-out of the account move by ignoring the email or click **No, thanks** on the confirmation page.
 
 ## Before you begin
 
@@ -24,7 +25,8 @@ NOTE: Users can opt-out of the account move by ignoring the email or click **No,
 
 ## How do I move my account to another organization?
 
-WARNING: Accepting the move means you **cannot** access your original organization.
+{: .warning}
+Accepting the move means you **cannot** access your original organization.
 
 ## Step one - delete resources
 

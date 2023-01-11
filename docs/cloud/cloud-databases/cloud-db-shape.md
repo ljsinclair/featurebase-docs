@@ -11,7 +11,8 @@ nav_order: 1
 
 {% include /cloud-db/cloud-summary-db-shape.md %}
 
-IMPORTANT: Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
+{: .important}
+Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
 
 {% include page-toc.md %}
 

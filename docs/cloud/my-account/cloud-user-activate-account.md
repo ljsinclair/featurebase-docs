@@ -24,7 +24,8 @@ FeatureBase users can create an FeatureBase account in two ways:
 
 You will receive an email when an Administrator invites you to join a FeatureBase organization.
 
-NOTE: You may need to add `noreply@molecula.com` and `noreply@verificationemail.com` to your safe-senders list to receive invitation and confirmation emails.
+{: .note}
+You may need to add `noreply@molecula.com` and `noreply@verificationemail.com` to your safe-senders list to receive invitation and confirmation emails.
 
 ### Step 1 - enter your account details
 

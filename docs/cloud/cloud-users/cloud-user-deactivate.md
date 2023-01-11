@@ -16,7 +16,8 @@ An Administrator can revoke the Login privilege by **deactivating** the account.
 
 The privilege can be restored by **activating** the account.
 
-NOTE: {% include contact-support.md%} to delete user accounts.
+{: .note}
+{% include contact-support.md%} to delete user accounts.
 
 {% include page-toc.md %}
 
@@ -29,7 +30,8 @@ NOTE: {% include contact-support.md%} to delete user accounts.
 
 ## Deactivate a user
 
-NOTE: You may choose to [change the user role](/docs/cloud/cloud-users/cloud-user-edit-role) rather than deactivating the account.
+{: .note}
+You may choose to [change the user role](/docs/cloud/cloud-users/cloud-user-edit-role) rather than deactivating the account.
 
 * Click **Configuration** > **Manage users**
 * Click <span class="material-icons md-18">more_vert</span>  on the **Active** user > **Deactivate user**.

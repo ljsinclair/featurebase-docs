@@ -32,7 +32,8 @@ The IDSET data type:
   * grouping by
   * searching for discrete values
 
-NOTE: Use the INT data type to perform range queries using `<` or `>`
+{: .note}
+Use the INT data type to perform range queries using `<` or `>`
 
 {% include /sql-guide/timequantum-additional.md %}
 
