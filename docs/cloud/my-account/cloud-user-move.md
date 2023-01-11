@@ -30,7 +30,7 @@ WARNING: Accepting the move means you **cannot** access your original organizati
 
 Resources cannot be transferred and must be deleted before an account move can take place.
 
-* [Learn how to drop tables](/docs/cloud/cloud-tables/cloud-table-drop)
+* [Learn how to drop tables](/docs/cloud/cloud-tables/cloud-table-delete)
 * [Learn how to delete databases](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Step two - accept the invitation to move your account
