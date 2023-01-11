@@ -23,13 +23,13 @@ NOTE: {% include contact-support.md%} to delete user accounts.
 ## Before you begin
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}
-* [Learn about the user status](/cloud/cloud-configuration/cloud-ref-user-status)
+* [Learn about the user status](/docs/cloud/cloud-users/cloud-ref-user-status)
 {% include /cloud/cloud-before-begin.md %}
-* [Invite a cloud user](/cloud/cloud-configuration/cloud-user-invite)
+* [Invite a cloud user](/docs/cloud/cloud-users/cloud-user-invite)
 
 ## Deactivate a user
 
-NOTE: You may choose to [change the user role](/cloud/cloud-configuration/cloud-user-edit-role) rather than deactivating the account.
+NOTE: You may choose to [change the user role](/docs/cloud/cloud-users/cloud-user-edit-role) rather than deactivating the account.
 
 * Click **Configuration** > **Manage users**
 * Click <span class="material-icons md-18">more_vert</span>  on the **Active** user > **Deactivate user**.
@@ -41,5 +41,5 @@ NOTE: You may choose to [change the user role](/cloud/cloud-configuration/cloud-
 
 ## Further information
 
-* [Learn about user roles and privileges](/cloud/cloud-configuration/cloud-ref-user-roles)
-* [Learn how to edit a user role](/cloud/cloud-configuration/cloud-user-edit-role)
+* [Learn about user roles and privileges](/docs/cloud/cloud-users/cloud-ref-user-roles)
+* [Learn how to edit a user role](/docs/cloud/cloud-users/cloud-user-edit-role)

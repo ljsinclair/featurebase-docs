@@ -21,4 +21,4 @@ has_toc: false
 
 ## Further information
 
-* [Learn how to change user roles](/cloud/cloud-configuration/cloud-user-edit-role)
+* [Learn how to change user roles](/docs/cloud/cloud-users/cloud-user-edit-role)

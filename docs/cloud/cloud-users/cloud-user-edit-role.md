@@ -23,8 +23,8 @@ has_toc: false
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
-* [Invite a cloud user](/cloud/cloud-configuration/cloud-user-invite)
+* [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
+* [Invite a cloud user](/docs/cloud/cloud-users/cloud-user-invite)
 
 ## Change user role
 
@@ -35,4 +35,4 @@ has_toc: false
 
 ## Further information
 
-* [Learn how to deactivate and activate users](/cloud/cloud-configuration/cloud-user-deactivate)
+* [Learn how to deactivate and activate users](/docs/cloud/cloud-users/cloud-user-deactivate)

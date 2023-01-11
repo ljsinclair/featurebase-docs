@@ -18,7 +18,7 @@ FeatureBase users can create an FeatureBase account in two ways:
 
 ## Sign up to create a new organization and account
 
-* [Learn how to sign-up and create a new FeatureBase organization](/cloud/cloud-signup)
+* [Learn how to sign-up and create a new FeatureBase organization](/docs/cloud/cloud-signup)
 
 ## Accept an invitation
 
@@ -46,4 +46,4 @@ Your user is now **Active** and you have the **user** role.
 
 ## Next step
 
-* [Learn about FeatureBase user roles](/cloud/cloud-configuration/cloud-ref-user-roles)
+* [Learn about FeatureBase user roles](/docs/cloud/cloud-users/cloud-ref-user-roles)

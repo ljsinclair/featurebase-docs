@@ -13,5 +13,5 @@ has_toc: false
 
 ## Further information
 
-* [Learn how invite users to an organization](/cloud/cloud-configuration/cloud-user-invite)
-* [Learn how to move your account to another organization](/cloud/my-account/cloud-user-move)
+* [Learn how invite users to an organization](/docs/cloud/cloud-users/cloud-user-invite)
+* [Learn how to move your account to another organization](/docs/cloud/my-account/cloud-user-move)

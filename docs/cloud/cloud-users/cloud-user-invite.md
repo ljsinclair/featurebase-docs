@@ -18,7 +18,7 @@ has_toc: false
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
+* [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
 
 {% include /cloud-users/cloud-username-nochange.md %}
 
@@ -46,8 +46,8 @@ You can copy the invitation URL and provide it to the user if required.
 
 ## Next step
 
-* [Learn how to change user roles](/cloud/cloud-configuration/cloud-user-edit-role)
+* [Learn how to change user roles](/docs/cloud/cloud-users/cloud-user-edit-role)
 
 ## Further information
 
-* [Learn about the user status](/cloud/cloud-configuration/cloud-ref-user-status)
+* [Learn about the user status](/docs/cloud/cloud-users/cloud-ref-user-status)

@@ -2,6 +2,6 @@
 
 | Privilege | Applicable role(s) |
 |---|---|
-| [Create databases](/cloud/cloud-databases/cloud-db-create) | User, Administrator |
+| [Create databases](/docs/cloud/cloud-databases/cloud-db-create) | User, Administrator |
 | Read & query databases | User, Administrator |
 | Delete databases | User, Administrator |

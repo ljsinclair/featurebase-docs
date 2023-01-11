@@ -17,7 +17,7 @@ View and search for users from the Configuration > Manage users page.
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
+* [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
 
 ## View all users
 

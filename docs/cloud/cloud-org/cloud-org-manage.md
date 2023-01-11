@@ -21,16 +21,16 @@ has_toc: false
 
 ## How do I change my organization name and address?
 
-* [Learn how to change organization details](/cloud/cloud-configuration/cloud-org-address)
+* [Learn how to change organization details](/docs/cloud/cloud-org/cloud-org-address)
 
 ## How do I change my billing address for my account?
 
 {% include /cloud-org/cloud-summary-billing-contact.md %}
 
-* [Learn how to update billing details](/cloud/cloud-configuration/cloud-org-update-billing)
+* [Learn how to update billing details](/docs/cloud/cloud-org/cloud-org-update-billing)
 
 ## How do I change my technical contact details?
 
 {% include /cloud-org/cloud-summary-tech-contact.md %}
 
-* [Learn how to update technical contact address](/cloud/cloud-configuration/cloud-org-update-tech-contact)
+* [Learn how to update technical contact address](/docs/cloud/cloud-org/cloud-org-update-tech-contact)
