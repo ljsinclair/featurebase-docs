@@ -1,6 +1,6 @@
 # Regenerating SQL SVGs
 
-The scripts found in the /assets/sql-bnf folder are used to regenerate images found in /assets/sql-guide
+Scripts found in this folder are used to regenerate SQL-guide images found in `/assets/images/sql-guide`.
 
 ## makebnf.sh
 
