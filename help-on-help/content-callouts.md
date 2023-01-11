@@ -6,6 +6,10 @@ Colors are governed by `/_sass/color_schemes/featurebase.scss`
 
 * [Learn about callout boxes](https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/)
 
+| Don't use this format | Use this instead |
+|---|---|
+| `**ℹ️NOTE**` | `{: .note}` on line above paragraph |
+
 ### Note
 
 ```
