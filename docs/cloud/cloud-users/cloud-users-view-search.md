@@ -1,9 +1,9 @@
 ---
 title: View users
 layout: default
-parent: Configuration
+parent: Manage users
 grand_parent: Cloud
-nav_order: 4
+nav_order: 1
 has_toc: false
 ---
 
@@ -26,4 +26,4 @@ View and search for users from the Configuration > Manage users page.
 ## Search for users
 
 * Enter part or all the user email in the search field.
-* {% include /cloud-icons/icon-click-clear-field.md %} to remove the filter.
+* {% include /cloud-icons/icon-clear-field-unicode.md %} to remove the filter.

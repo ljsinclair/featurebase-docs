@@ -1,12 +1,12 @@
 ---
-title: Update organization details
+title: Update organization
 layout: default
-parent: Configuration
+parent: Manage organization
 grand_parent: Cloud
 nav_order: 1
 ---
 
-## How do I update my organization details?
+# How do I change my organization name and address?
 {: .no_toc }
 
 {% include /cloud-config/cloud-summary-org.md %}
@@ -15,9 +15,9 @@ nav_order: 1
 
 ## Before you begin
 
-* [Learn about FeatureBase Cloud pricing](https://www.featurebase.com/pricing)
-* {% include contact-support.md %} to arrange an upgrade
 {% include /cloud-config/cloud-user-admin-role-needed.md %}
+* [Learn about FeatureBase Cloud pricing](https://www.featurebase.com/pricing){:target="_blank"}
+* {% include contact-support.md %} to arrange an upgrade
 {% include /cloud/cloud-before-begin.md %}
 
 ## Change organization details
