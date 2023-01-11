@@ -14,7 +14,7 @@ has_toc: false
 
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md %}
-{% include /cloud-table/cloud-summary-naming-pk.md %}
+{% include /cloud-table/cloud-summary-table-pk.md %}
 
 ## Statements
 

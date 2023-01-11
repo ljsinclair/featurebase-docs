@@ -34,7 +34,7 @@ Creates a FeatureBase table. The the table already exists and `IF NOT EXISTS` is
 
 ## Table `_id`
 
-{% include /cloud-table/cloud-summary-naming-pk.md %}
+{% include /cloud-table/cloud-summary-table-pk.md %}
 
 
 #### column_def
