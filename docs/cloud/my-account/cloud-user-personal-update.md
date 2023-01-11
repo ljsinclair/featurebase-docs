@@ -9,10 +9,15 @@ nav_order: 2
 ## How do I update my details and change password?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-user-profile.md %}
-{% include /cloud-config/cloud-username-nochange.md %}
+All users can view their user profile, change their first and last name and reset their password.
 
-{% include page-toc.md %}
+The user profile summary displays:
+* Full name
+* User role (can be changed by Administrators)
+* Dates the profile was created and last modified
+* The account status
+
+{% include /cloud-config/cloud-username-nochange.md %}
 
 ## Before you begin
 
