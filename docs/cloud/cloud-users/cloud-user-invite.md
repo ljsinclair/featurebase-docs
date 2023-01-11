@@ -10,17 +10,17 @@ has_toc: false
 ## How do I invite Cloud users?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-users.md %}
+{% include /cloud-users/cloud-summary-users.md %}
 
 {% include page-toc.md %}
 
 ## Before you begin
 
-{% include /cloud-config/cloud-user-admin-role-needed.md %}
+{% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
 
-{% include /cloud-config/cloud-username-nochange.md %}
+{% include /cloud-users/cloud-username-nochange.md %}
 
 ## How do I invite a user to my organization?
 

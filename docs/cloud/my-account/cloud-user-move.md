@@ -13,7 +13,7 @@ FeatureBase users may be invited to join a different organization.
 
 {% include page-toc.md %}
 
-{% include /cloud-config/cloud-summary-user-move.md %}
+{% include /cloud-users/cloud-summary-user-move.md %}
 
 NOTE: Users can opt-out of the account move by ignoring the email or click **No, thanks** on the confirmation page.
 

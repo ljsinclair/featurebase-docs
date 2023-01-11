@@ -10,13 +10,13 @@ has_toc: false
 # How do I update my organization details?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-org.md %}
+{% include /cloud-org/cloud-summary-org.md %}
 
 {% include page-toc.md %}
 
 ## Before you begin
 
-{% include /cloud-config/cloud-user-admin-role-needed.md %}
+{% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 
 ## How do I change my organization name and address?
@@ -25,12 +25,12 @@ has_toc: false
 
 ## How do I change my billing address for my account?
 
-{% include /cloud-config/cloud-summary-billing-contact.md %}
+{% include /cloud-org/cloud-summary-billing-contact.md %}
 
 * [Learn how to update billing details](/cloud/cloud-configuration/cloud-org-update-billing)
 
 ## How do I change my technical contact details?
 
-{% include /cloud-config/cloud-summary-tech-contact.md %}
+{% include /cloud-org/cloud-summary-tech-contact.md %}
 
 * [Learn how to update technical contact address](/cloud/cloud-configuration/cloud-org-update-tech-contact)

@@ -10,14 +10,14 @@ has_toc: false
 # Reference: Cloud user roles
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-user-roles.md %}
+{% include /cloud-users/cloud-summary-user-roles.md %}
 
 {% include page-toc.md %}
 
-{% include /cloud-config/cloud-summary-user-privs.md %}
-{% include /cloud-config/cloud-summary-db-privs.md %}
-{% include /cloud-config/cloud-summary-table-privs.md %}
-{% include /cloud-config/cloud-summary-org-privs.md %}
+{% include /cloud-users/cloud-summary-user-privs.md %}
+{% include /cloud-users/cloud-summary-db-privs.md %}
+{% include /cloud-users/cloud-summary-table-privs.md %}
+{% include /cloud-users/cloud-summary-org-privs.md %}
 
 ## Further information
 

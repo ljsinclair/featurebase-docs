@@ -18,7 +18,7 @@ FeatureBase users can create an FeatureBase account in two ways:
 
 ## Sign up to create a new organization and account
 
-* [Learn how to sign-up and create a new FeatureBase organization](/cloud/fbc-part1-signup)
+* [Learn how to sign-up and create a new FeatureBase organization](/cloud/cloud-signup)
 
 ## Accept an invitation
 

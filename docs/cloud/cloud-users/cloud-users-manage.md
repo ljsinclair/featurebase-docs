@@ -10,7 +10,7 @@ has_toc: false
 # How do I manage cloud users?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-users.md %}
+{% include /cloud-users/cloud-summary-users.md %}
 
 {% include page-toc.md %}
 
@@ -30,7 +30,7 @@ has_toc: false
 
 ## How do I control user roles and privileges?
 
-{% include /cloud-config/cloud-summary-user-roles.md %}
+{% include /cloud-users/cloud-summary-user-roles.md %}
 
 * [Learn about user roles and privileges](/cloud/cloud-configuration/cloud-ref-user-roles)
 * [Learn how to edit user roles](/cloud/cloud-configuration/cloud-user-edit-role)

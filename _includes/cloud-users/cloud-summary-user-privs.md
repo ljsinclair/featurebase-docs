@@ -2,7 +2,7 @@
 
 | Privilege | Applicable role(s) |
 |---|---|
-| [Login](/cloud/fbc-part2-login) | User, Administrator |
+| [Login](/cloud/cloud-login) | User, Administrator |
 | [Invite users](/cloud/cloud-configuration/cloud-user-invite) | Administrator |
 | [Copy invite URL](/cloud/cloud-configuration/cloud-user-invite#provide-invitation-url-optional) | Administrator|
 | [Read user profiles](/cloud/cloud-configuration/cloud-users-view-search) | User(Own account), Administrator |

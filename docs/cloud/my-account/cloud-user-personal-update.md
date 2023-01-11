@@ -17,7 +17,7 @@ The user profile summary displays:
 * Dates the profile was created and last modified
 * The account status
 
-{% include /cloud-config/cloud-username-nochange.md %}
+{% include /cloud-users/cloud-username-nochange.md %}
 
 ## Before you begin
 

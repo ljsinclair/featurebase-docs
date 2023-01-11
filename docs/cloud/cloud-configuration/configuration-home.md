@@ -17,12 +17,12 @@ The **Configuration** page provides access to manage your FeatureBase organizati
 
 ## Managing your organization
 
-{% include /cloud-config/cloud-summary-org.md %}
+{% include /cloud-org/cloud-summary-org.md %}
 
 * [Learn how to make changes to your organization](/cloud/cloud-configuration/cloud-org-manage)
 
 ## Managing cloud users
 
-{% include /cloud-config/cloud-summary-users.md %}
+{% include /cloud-users/cloud-summary-users.md %}
 
 * [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)

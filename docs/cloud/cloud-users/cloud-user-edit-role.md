@@ -10,18 +10,18 @@ has_toc: false
 ## How do I change a user role?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-user-roles.md %}
+{% include /cloud-users/cloud-summary-user-roles.md %}
 
 {% include page-toc.md %}
 
-{% include /cloud-config/cloud-summary-user-privs.md %}
-{% include /cloud-config/cloud-summary-db-privs.md %}
-{% include /cloud-config/cloud-summary-table-privs.md %}
-{% include /cloud-config/cloud-summary-org-privs.md %}
+{% include /cloud-users/cloud-summary-user-privs.md %}
+{% include /cloud-users/cloud-summary-db-privs.md %}
+{% include /cloud-users/cloud-summary-table-privs.md %}
+{% include /cloud-users/cloud-summary-org-privs.md %}
 
 ## Before you begin
 
-{% include /cloud-config/cloud-user-admin-role-needed.md %}
+{% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/cloud/cloud-configuration/cloud-users-manage)
 * [Invite a cloud user](/cloud/cloud-configuration/cloud-user-invite)

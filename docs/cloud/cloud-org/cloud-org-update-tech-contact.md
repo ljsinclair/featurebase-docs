@@ -9,13 +9,13 @@ nav_order: 3
 # How do I change my organization technical contact address?
 {: .no_toc }
 
-{% include /cloud-config/cloud-summary-tech-contact.md %}
+{% include /cloud-org/cloud-summary-tech-contact.md %}
 
 {% include page-toc.md %}
 
 ## Before you begin
 
-{% include /cloud-config/cloud-user-admin-role-needed.md %}
+{% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 
 ## Update technical contact email address

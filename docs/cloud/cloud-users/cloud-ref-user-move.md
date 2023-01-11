@@ -9,7 +9,7 @@ has_toc: false
 
 # Reference: move Cloud users
 
-{% include /cloud-config/cloud-summary-user-move.md%}
+{% include /cloud-users/cloud-summary-user-move.md%}
 
 ## Further information
 
