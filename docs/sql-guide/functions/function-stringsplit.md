@@ -55,19 +55,19 @@ select _id, stringsplit(segment,',',1) as segment from segments;
 +-----+----------+
 ```
 
-### Split with a column as seperator.
+### Split with a column as separator
 
 ```sql
 create table segments
-    (_id id, segment string, seperator);
+    (_id id, segment string, separator);
 
-insert into segments(_id, segment, seperator)
+insert into segments(_id, segment, separator)
     values (1,'red,blue', ',')
 
-insert into segments(_id, segment, seperator)
+insert into segments(_id, segment, separator)
     values (2,'green:yellow', ':')
 
-select _id, stringsplit(segment, seperator, 0) as segment from segments;
+select _id, stringsplit(segment, separator, 0) as segment from segments;
 +-----+----------+
 | _id | segment  |
 +-----+----------+

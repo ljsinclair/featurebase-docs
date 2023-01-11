@@ -18,9 +18,9 @@ rtrim(expr)
 
 ## Arguments
 
-| Argument | Description |
+| Argument | Description | Data type |
 |---|---|
-| `expr` | Any expression of type `string` |
+| `expr` | Any expression. | `string` |
 
 ## Return Type
 
@@ -36,7 +36,7 @@ None
 
 ## Examples
 
-Trimming strings in a column
+### Trim strings in a column
 
 ```sql
 create table segments

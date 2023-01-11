@@ -8,7 +8,7 @@ nav_order: 8
 
 # UPPER() function
 
-The `UPPER()` function returns the converted strings to upper case from the selected column.
+The `UPPER()` function returns the converted strings to upper-case from the selected column.
 
 ## Syntax
 
@@ -18,9 +18,9 @@ upper(expr)
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| `expr` | Any expression of type string |
+| Argument | Description | Data type |
+|---|---|---|
+| `expr` | Any expression | `string` |
 
 ## Return Type
 
@@ -36,7 +36,7 @@ None
 
 ## Examples
 
-Converting strings to Upper case in a column
+### Convert strings to upper-case in a column
 
 ```sql
 create table segments

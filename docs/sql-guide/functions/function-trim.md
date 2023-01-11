@@ -36,7 +36,7 @@ None
 
 ## Examples
 
-Trimming strings in a column
+### Trim strings in a column
 
 ```sql
 create table segments

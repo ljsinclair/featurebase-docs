@@ -18,24 +18,26 @@ replaceall(expr,exprOld,exprNew)
 
 ## Arguments
 
-_expr_
-The evaluated expression in which all occurrences of `exprOld` should be replaced with `exprNew`. `expr` can be any expression of type `string`
-
-_exprOld_
-The substring that should be replaced. `exprOld` can be any expression of type `string`
-
-_exprNew_
-The substring that should be used as a replacement for `exprOld`. `exprNew` can be any expression of type `string`
+| Arguments | Description | Data type |
+|---|---|---|
+| `expr` | The evaluated expression in which all occurrences of `exprOld` should be replaced with `exprNew`. | `string` |
+| `exprOld` | The substring that should be replaced. | `string` |
+| `exprNew` | The substring that should be used as a replacement for `exprOld`. | `string` |
 
 ## Return Type
+
 `string`
 
 ## Return Value
+
 `replaceall()` returns a string that is the result of replacing all occurrences of `exprOld` in `expr` with `exprNew`.
+
 ## Remarks
 None
+
 ## Examples
-A. Replacing all the occurances
+
+### Replace string
 
 ```sql
 create table segments
@@ -52,7 +54,8 @@ select _id, segment ,replaceall(segment, 'world','universe') as replaced from se
 +-----+--------------+-----------------+
 ```
 
-B. Replace all with reversed string.
+### Replace with reversed string
+
 ```sql
 create table segments
     (_id id, segment string, rev string);

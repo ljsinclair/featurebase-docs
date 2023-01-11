@@ -18,8 +18,9 @@ ltrim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description | Data type |
+|---|---|---|
+| `expr` | Any expression. | `string` |
 
 ## Return Type
 
@@ -35,7 +36,7 @@ None
 
 ## Examples
 
-Trimming strings in a column
+### Trim strings in a column
 
 ```sql
 create table segments

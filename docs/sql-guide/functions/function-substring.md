@@ -33,7 +33,9 @@ substring(expr,startIndex,length)
 `substring()` returns the extracted substring
 
 ## Remarks
+
 None
+
 ## Examples
 
 ### Substring of the string in a column
@@ -53,7 +55,8 @@ select _id, substring(segment,0,3) as substr from segments;
 +-----+----------+
 ```
 
-### Substring of a reversed string.
+### Substring of a reversed string
+
 ```sql
 create table segments
     (_id id, segment string);
