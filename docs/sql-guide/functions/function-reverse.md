@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 2
 ---
 
-# REVERSE function
+# REVERSE() function
 
 The `Reverse()` function returns the reversed strings from the selected column.
 

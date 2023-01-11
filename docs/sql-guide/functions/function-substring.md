@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 6
 ---
 
-# SUBSTRING()
+# SUBSTRING() function
 
 `Substring()` extracts a substring from the given string, starting at the specified start index and with the specified length.
 

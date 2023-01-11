@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-# STRINGSPLIT function
+# STRINGSPLIT() function
 
 The `Stringsplit()` function splits a string into multiple substrings based on a specified separator.
 

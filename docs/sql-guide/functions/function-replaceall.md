@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 2
 ---
 
-# REPLACEALL function
+# REPLACEALL() function
 
 The `ReplaceAll()` function replaces all occurrences of the expression `exprOld` in the evaluated expression `expr` with a new expression `exprNew`.
 

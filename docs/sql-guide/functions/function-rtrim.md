@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 4
 ---
 
-# RTRIM function
+# RTRIM() function
 
 The `RTRIM()` function removes the trailing whitespaces from input string from the selected column.
 

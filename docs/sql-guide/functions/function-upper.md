@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 8
 ---
 
-# UPPER ()
+# UPPER() function
 
 The `UPPER()` function returns the converted strings to upper case from the selected column.
 

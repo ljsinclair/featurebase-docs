@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 1
 ---
 
-# LTRIM function
+# LTRIM () function
 
 The `LTRIM()` function removes the leading whitespaces from input string from the selected column.
 
