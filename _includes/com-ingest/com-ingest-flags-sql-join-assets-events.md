@@ -2,7 +2,7 @@
 
 The `SELECT` statement:
 * returns `event` data along with `weight` of relative `asset_tag`
-* creates `locale` field based on the first three characters from the `pk` field
+* creates `locale` field based on the first three characters from the `events.pk` field
 * joins `assets.asset_tag` and `events.asset_tag`
 The ingester then:
 * converts the records to Roaring Bitmap format
