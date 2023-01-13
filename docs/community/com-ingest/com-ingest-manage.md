@@ -35,15 +35,13 @@ Refer to these reference files for information on how to setup and import data u
 * [CSV ingester reference](/docs/community/com-ingest/com-ingest-ref-csv)
 * [CSV file and ingest examples](/docs/community/com-ingest/com-ingest-example-csv)
 
-<!-- Coming in next PR
 ## SQL import method
 
--->
+* [SQL format reference](/docs/community/com-ingest/com-source-ref-sql)
+* [SQL ingester reference](/docs/community/com-ingest/com-ingest-ref-sql)
+* [SQL ingest examples](/docs/community/com-ingest/com-ingest-example-sql)
 
-<!-- Coming after SQL PR
 ## Kafka import method
-
--->
 
 <!-- Coming in future PR where I document these
 ## Next step
