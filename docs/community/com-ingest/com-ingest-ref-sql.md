@@ -11,8 +11,9 @@ nav_order: 4
 
 The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table using a SQL endpoint.
 
-Once your SQL file(s) are constructed, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
+Once your SQL file(s) are built, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
 
+{: .important}
 Source column names are used to specify column names for each record.
 
 {% include page-toc.md %}
@@ -25,50 +26,43 @@ Source column names are used to specify column names for each record.
 ## Syntax
 
 ```
-molecula-consumer-sql       \
-  --source-and-target-flags \
-  --sql-flags               \
-  --id-flags                \
-  --batch-flags             \
-  --error-flags             \
-  --log-stat-flags          \
-  --testing-flags           \
-  --auth-flags              \
+molecula-consumer-sql        \
+  <source-and-target-flags>  \
+  <sql-flags>                \
+  <id-flags>                 \
+  <batch-flags>              \
+  <error-flags>              \
+  <log-stat-flags>           \
+  <testing-flags>            \
+  <auth-flags>               \
 ```
 
-<!-- Enable once com-ingest-csv PR is merged
+{% include /com-ingest/com-ingest-flag-common.md %}
 
-{% include community/com-ingest-flag-common.md %}
+{% include /com-ingest/com-ingest-flag-sql.md %}
 
-{% include community/com-ingest-flag-sql.md %}
+{% include /com-ingest/com-ingest-flag-common-id.md %}
 
-{% include community/com-ingest-flag-common-id.md %}
+{% include /com-ingest/com-ingest-flag-common-batch.md %}
 
-{% include community/com-ingest-flag-common-batch.md %}
+{% include /com-ingest/com-ingest-flag-common-error.md %}
 
-{% include community/com-ingest-flag-common-error.md %}
+{% include /com-ingest/com-ingest-flag-common-log-stat.md %}
 
-{% include community/com-ingest-flag-common-log-stat.md %}
+{% include /com-ingest/com-ingest-flag-common-testing.md %}
 
-{% include community/com-ingest-flag-common-testing.md %}
-
-{% include community/com-ingest-flag-csv-sql-auth.md %}
-
--->
+{% include /com-ingest/com-ingest-flag-csv-sql-auth.md %}
 
 ## Additional information
 
-{: note}
+{: .note}
 List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebase` directory.
 
 ## Additional information
 
-<!-- Enable once com-ingest-csv is merged and deployed
-
- {% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
+{% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
 
 {% include /com-ingest/com-ingest-missing-value-processing.md %}
--->
 
 ## Examples
 
