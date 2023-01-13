@@ -26,9 +26,9 @@ You can also [create a database of your own](/docs/cloud/cloud-databases/cloud-d
 
 ## Create database with pre-loaded data
 
-{% include /cloud/cloud-db-new-name.md %}
-{% include /cloud/cloud-db-load-sample.md %}
-{% include /cloud/cloud-db-click-create.md %}
+{% include /cloud-db/cloud-db-new-name.md %}
+{% include /cloud-db/cloud-db-load-sample.md %}
+{% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
 

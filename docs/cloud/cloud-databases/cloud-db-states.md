@@ -9,7 +9,7 @@ nav_order: 4
 # What states can my Database have?
 {: .no_toc }
 
-{% include /concepts/db-states-summary.md %}
+{% include /concepts/summary-db-states.md %}
 
 {% include page-toc.md %}
 
