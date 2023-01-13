@@ -19,7 +19,7 @@ This overview explains the process of importing data to FeatureBase using three 
 
 ## Before you begin
 
-{% include /com-ingest/com-before-begin-source.md %}
+{% include /community/com-before-begin-source.md %}
 
 ## Perform data modeling
 
