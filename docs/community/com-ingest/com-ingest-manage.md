@@ -31,8 +31,8 @@ This overview explains the process of importing data to FeatureBase using three 
 
 Refer to these reference files for information on how to setup and import data using a CSV file.
 
-* [CSV format reference](/docs/community/com-ingest/com-datafile-ref-csv)
-* [CSV ingester reference](/docs/community/com-ingest/com-ingest-ref-csv)
+* [CSV format reference](/docs/community/com-ingest/com-ref-source-csv)
+* [CSV ingester reference](/docs/community/com-ingest/com-ref-ingest-csv)
 * [CSV file and ingest examples](/docs/community/com-ingest/com-ingest-example-csv)
 
 <!-- Coming in next PR

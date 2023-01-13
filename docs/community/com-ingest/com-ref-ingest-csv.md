@@ -16,7 +16,7 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 ## Before you begin
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
-* [Prepare the CSV file](/docs/community/com-ingest/com-datafile-ref-csv)
+* [Prepare the CSV file](/docs/community/com-ingest/com-ref-source-csv)
 
 ## Syntax
 
