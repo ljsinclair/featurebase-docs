@@ -1,3 +1,8 @@
+### SQL ingest flags to import from assets table
+
+`SELECT` queries the MySQL table, then the ingester:
+* converts the records to Roaring Bitmap format
+* imports the records to the `asset_list` FeatureBase index.
 
 ```shell
 molecula-consumer-sql \

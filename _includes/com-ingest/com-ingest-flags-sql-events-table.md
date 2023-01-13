@@ -1,6 +1,9 @@
-## SQL ingest tool change data type
+### SQL ingest tool change data type
 
-Use SQL functions at the command-line to convert `fan_vol` from `string` to `int` data type.
+`SELECT` queries the MySQL table, then the ingester:
+* converts the data to Roaring Bitmap format
+* alters `fan_vol` data type from `string` to `int`
+* imports the records to the `event_list` FeatureBase index.
 
 ```shell
 molecula-consumer-sql \
