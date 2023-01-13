@@ -42,3 +42,7 @@ Once connected to the source database, SQL queries copy data which is then batch
 {% include /com-ingest/com-ingest-sql-assets-table.md %}
 
 {% include /com-ingest/com-ingest-sql-events-table.md %}
+
+## Next step
+
+Refer to [SQL ingest reference](/docs/community/com-ingest/com-ingest-ref-sql) to learn how to use the command-line SQL ingest tool

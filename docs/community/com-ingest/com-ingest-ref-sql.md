@@ -9,9 +9,7 @@ nav_order: 5
 # SQL ingest tool reference
 {: .no_toc}
 
-The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table using a SQL endpoint.
-
-Once your SQL file(s) are built, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
+The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table  using a SQL endpoint.
 
 {: .important}
 Source column names are used to specify column names for each record.
@@ -21,7 +19,7 @@ Source column names are used to specify column names for each record.
 ## Before you begin
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
-* [Prepare the SQL ](/docs/community/com-ingest/com-datafile-ref-csv)
+* [Prepare the SQL](/docs/community/com-ingest/com-datafile-ref-csv)
 
 ## Syntax
 
@@ -57,8 +55,6 @@ molecula-consumer-sql        \
 
 {: .note}
 List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebase` directory.
-
-## Additional information
 
 {% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
 
