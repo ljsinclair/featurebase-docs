@@ -1,6 +1,12 @@
 ---
 title: INSERT
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+# INSERT statement
 
 Inserts data into a FeatureBase table. Using insert you can insert multiple rows of data.
 

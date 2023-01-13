@@ -1,8 +1,14 @@
 ---
 title: SHOW COLUMNS
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
 
-### Syntax
+# SHOW COLUMNS statement
+
+## Syntax
 
 ```sql
 SHOW COLUMNS FROM table;
@@ -10,7 +16,7 @@ SHOW COLUMNS FROM table;
 
 ![expr](/img/sql/show_columns.svg)
 
-### Returns
+## Returns
 
 | **Column Name** | **Data Type** | **Description** |
 |-----------------|---------------|-----------------|

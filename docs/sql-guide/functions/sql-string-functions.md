@@ -1,15 +1,12 @@
 ---
-id: stringscalarfunctions
-title: SQL String Functions
+title: STRING functions
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 1
 ---
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality (more information [here](/sql-preview/sql-preview)). Additionally, this page represents a work in progress that is subject to frequent changes. |
-
----
-
-## String Functions
+# String Functions
 
 [REVERSE()](/sql-preview/functions/sql-reverse#reverse){:target="_blank"}
 
@@ -26,4 +23,3 @@ title: SQL String Functions
 [RTRIM()](/sql-preview/functions/sql-rtrim#rtrim){:target="_blank"}
 
 [LTRIM()](/sql-preview/functions/sql-ltrim#ltrim){:target="_blank"}
-

@@ -1,6 +1,12 @@
 ---
 title: SHOW TABLES
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+# SHOW TABLES statement
 
 Shows the list of FeatureBase tables that exist on the server.
 

@@ -10,7 +10,7 @@ nav_order: 4
 
 IDSET is a FeatureBase datatype used with `timeQuantum` and `ttl` constraints.
 
-## API syntax
+## DDL syntax
 
 ```
 IDSET [TIMEQUANTUM {value} [TTL '{value}}']]

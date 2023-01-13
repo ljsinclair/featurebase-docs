@@ -1,6 +1,12 @@
 ---
 title: ALTER TABLE
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+# ALTER TABLE statement
 
 Alters a FeatureBase table.
 

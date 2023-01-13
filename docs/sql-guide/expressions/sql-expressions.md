@@ -1,15 +1,12 @@
 ---
-title: SQL Operators and Expressions
+title: SQL Expressions
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality (more information [here](/sql-preview/sql-preview)). Additionally, this page represents a work in progress that is subject to frequent changes. |
-
----
-
-
-## Expressions
+# SQL Expressions
 
 ### identifier
 ![expr](/img/sql/identifier.svg)
