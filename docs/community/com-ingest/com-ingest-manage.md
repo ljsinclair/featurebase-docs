@@ -45,8 +45,8 @@ Refer to these reference files for information on how to setup and import data u
 
 -->
 
-## Next step
 <!-- Coming in future PR where I document these
+## Next step
 * [Query data using SQL]
 * [Query data using the Query builder]
 -->

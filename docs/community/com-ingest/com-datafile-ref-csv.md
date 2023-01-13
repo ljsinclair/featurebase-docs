@@ -9,7 +9,7 @@ nav_order: 1
 # CSV datafile reference
 {: .no_toc}
 
-This reference page provides information on how to structure a CSV file with data so it can be [imported to FeatureBase Community using the command line CSV ingest tool](/docs/community/com-ingest/com-ingest-ref-csv).
+This reference page provides information on how to structure a CSV file with data ready to be imported to FeatureBase Community.
 
 {% include page-toc.md %}
 
@@ -36,9 +36,11 @@ This reference page provides information on how to structure a CSV file with dat
 
 ## Additional information
 
-Header column names, data-types and constraints have special meaning and must be explicitly defined:
-* in the CSV file, or
-* using command-line flags
+{: .important}
+>Header column names, data-types and constraints have special meaning and **must** be explicitly defined:
+>* in the CSV file, or
+>* using CSV ingest flags defined at the command line.
+
 
 * Use double quotes `"..."` to enclose fields containing:
   * Line breaks (CRLF)
@@ -53,4 +55,4 @@ Header column names, data-types and constraints have special meaning and must be
 
 ## Next step
 
-* [CSV ingest tool reference](/docs/community/com-ingest/com-ingest-ref-csv)
+Refer to the [CSV ingest tool reference](/docs/community/com-ingest/com-ingest-ref-csv) for instructions on importing the CSV file to FeatureBase Community.
