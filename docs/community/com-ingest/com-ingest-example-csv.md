@@ -29,6 +29,6 @@ This page provides examples of CSV files and CSV ingest tool flags that you can 
 
 {% include /com-ingest/com-ingest-csv-header-datafile.md %}
 
-{% include/community/com-ingest-csv-header-flag.md %}
+{% include /com-ingest/com-ingest-csv-header-flag.md %}
 
 {% include /com-ingest/com-ingest-csv-header-flag-tls.md %}
