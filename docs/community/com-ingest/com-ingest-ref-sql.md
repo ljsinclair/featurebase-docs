@@ -70,7 +70,7 @@ List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebas
 
 {% include /com-ingest/com-ingest-sql-assets-table.md %}
 
-{% include /com-ingest/com-ingest-sql-egents-table.md %}
+{% include /com-ingest/com-ingest-sql-events-table.md %}
 
 ## Further information
 
