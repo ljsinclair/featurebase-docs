@@ -10,7 +10,7 @@ nav_order: 8
 
 Timestamp is a date-time data type used with `timeunit` and `epoch` constraints.
 
-## Syntax
+## DDL syntax
 
 ```
 TIMESTAMP [TIMEUNIT {value}] [EPOCH {value}]

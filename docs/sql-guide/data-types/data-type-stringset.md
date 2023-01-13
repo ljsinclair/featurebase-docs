@@ -10,7 +10,7 @@ nav_order: 7
 
 STRINGSET is a FeatureBase datatype used with `TIMEQUANTUM` and `TTL` (Time To Live) constraints.
 
-## Syntax
+## DDL syntax
 
 ```
 STRINGSET [TIMEQUANTUM {value} [TTL '{value}']]
