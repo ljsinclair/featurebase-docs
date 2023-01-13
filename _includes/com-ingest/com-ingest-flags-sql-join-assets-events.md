@@ -1,9 +1,9 @@
 ### Join Assets and Events tables into a single FeatureBase index
 
-The `SELECT` statement:
-* returns `event` data along with `weight` of relative `asset_tag`
-* creates `locale` field based on the first three characters from the `events.pk` field
-* joins `assets.asset_tag` and `events.asset_tag`
+The `SELECT` statement queries the MySQL `events` table to:
+* return `event` data along with `weight` of relative `asset_tag`
+* create `locale` field based on the first three characters from the `events.pk` field
+* join `assets.asset_tag` and `events.asset_tag` 
 The ingester then:
 * converts the records to Roaring Bitmap format
 * imports the records to the `events_plus_weight` FeatureBase index.
