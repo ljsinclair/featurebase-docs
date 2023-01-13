@@ -19,7 +19,7 @@ Source column names are used to specify column names for each record.
 ## Before you begin
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
-* [Prepare the SQL](/docs/community/com-ingest/com-datafile-ref-csv)
+* [Prepare the SQL](/docs/community/com-ingest/com-ref-source-sql)
 
 ## Syntax
 
