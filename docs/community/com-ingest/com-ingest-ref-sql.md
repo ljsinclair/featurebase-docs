@@ -64,10 +64,6 @@ List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebas
 
 {% include /com-ingest/com-ingest-flag-sql-server.md %}
 
-{% include /com-ingest/com-ingest-sql-assets-table.md %}
-
-{% include /com-ingest/com-ingest-sql-events-table.md %}
-
 ## Further information
 
 * [Example SQL and ingest tool flags](/docs/community/com-ingest/com-ingest-example-sql)
