@@ -1,6 +1,8 @@
 ### Connect securely over TLS and define header flags
 
-Securely connect to FeatureBase by defining tls certificates found on the FeatureBase server. Then define the header using `--header` then ignore the file headers using `--ignore-header`
+Use this method to:
+* ignore CSV headers and define theme at the command line
+* define FeatureBase server `tls` certificates to securely connect to a remote server.
 
 ```shell
 molecula-consumer-csv \

@@ -45,12 +45,12 @@ molecula-consumer-csv \
 
 {% include /com-ingest/com-ingest-flag-csv-sql-auth.md %}
 
+{% include /com-ingest/com-ingest-flag-extra-auth.md %}
+
 ## Additional information
 
-{: note}
+{: .note}
 List all the flags by entering `idk/molecula-consumer-csv` from the `/featurebase` directory.
-
-{% include /com-ingest/com-ingest-flag-extra-auth.md %}
 
 {% include /com-ingest/com-ingest-flag-extra-env-var.md %}
 

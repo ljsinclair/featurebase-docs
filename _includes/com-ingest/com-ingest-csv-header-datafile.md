@@ -1,5 +1,6 @@
 ### CSV ingest tool flags for header-defined.csv
 
+{: .note}
 The required header is defined in the source file
 
 ```shell
