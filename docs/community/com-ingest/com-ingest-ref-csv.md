@@ -31,19 +31,19 @@ molecula-consumer-csv \
   <auth-flags>        \
 ```
 
-{% include com-ingest/com-ingest-flag-common.md %}
+{% include /com-ingest/com-ingest-flag-common.md %}
 
-{% include com-ingest/com-ingest-flag-csv.md %}
+{% include /com-ingest/com-ingest-flag-csv.md %}
 
-{% include com-ingest/com-ingest-flag-common-id.md %}
+{% include /com-ingest/com-ingest-flag-common-id.md %}
 
-{% include com-ingest/com-ingest-flag-common-error.md %}
+{% include /com-ingest/com-ingest-flag-common-error.md %}
 
-{% include com-ingest/com-ingest-flag-common-log-stat.md %}
+{% include /com-ingest/com-ingest-flag-common-log-stat.md %}
 
-{% include com-ingest/com-ingest-flag-common-testing.md %}
+{% include /com-ingest/com-ingest-flag-common-testing.md %}
 
-{% include com-ingest/com-ingest-flag-csv-sql-auth.md %}
+{% include /com-ingest/com-ingest-flag-csv-sql-auth.md %}
 
 ## Additional information
 
