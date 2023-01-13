@@ -30,11 +30,11 @@ There are a number of reasons why you may choose to drop a table, including:
 
 ## Step 1: View table list
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: Drop the selected table
 
-1. Click &#8942; > **Drop table**
+1. Click <span class="material-icons md-18">more_vert</span> > **Drop table**
 2. Enter "DELETE" in the confirmation dialog.
 3. Click **Drop table**.
 

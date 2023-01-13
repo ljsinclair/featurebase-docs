@@ -3,7 +3,7 @@ title: Manage tables
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 5
+nav_order: 4
 has_toc: false
 ---
 
@@ -12,7 +12,7 @@ has_toc: false
 
 This page provides an overview of FeatureBase tables and links to guide you through creating, altering and dropping tables.
 
-{% include /concepts/create-table-summary.md %}
+{% include /concepts/summary-table-create.md %}
 
 {% include page-toc.md %}
 
@@ -25,25 +25,26 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 {% include /concepts/summary-data-modeling.md %}
 
-IMPORTANT: Perform data modeling **before** creating tables to avoid issues.
+{: .important}
+Perform data modeling **before** creating tables to avoid issues.
 
 * [Learn about data modeling](/docs/concepts/overview-data-modeling)
 
 ## Table primary key
 
-{% include /cloud/cloud-pk-table.md %}
+{% include /cloud-table/cloud-summary-table-pk.md %}
 
 ## Column data types and constraints
 
-{% include /cloud/cloud-pk-table.md%}
+{% include /cloud-table/cloud-summary-table-pk.md%}
 
 <!--* [Learn about data types and constraints](/docs/sql-preview/data-types/data-types-home)-->
 
 ## Naming standard
 
-{% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-table-naming-standard.md %}
-{% include /cloud/cloud-column-naming-standard.md%}
+{% include /concepts/standard-naming-obj.md%}
+{% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /cloud-table/cloud-standard-naming-col.md%}
 
 ## Managing tables in FeatureBase Cloud
 

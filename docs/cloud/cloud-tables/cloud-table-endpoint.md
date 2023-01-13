@@ -21,8 +21,8 @@ The table endpoint is used to obtain metadata on a table via the API.
 
 ## Step 1: view tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: obtain table endpoint
 
-* Click &#8942; > **Copy table endpoint**.
+* Click <span class="material-icons md-18">more_vert</span> > **Copy table endpoint**.

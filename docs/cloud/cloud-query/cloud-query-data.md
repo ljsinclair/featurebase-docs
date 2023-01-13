@@ -3,7 +3,7 @@ title: Query data
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 3
+nav_order: 6
 has_toc: false
 ---
 
@@ -13,3 +13,5 @@ has_toc: false
 Introduction here
 
 {% include page-toc.md %}
+
+## Before you begin
