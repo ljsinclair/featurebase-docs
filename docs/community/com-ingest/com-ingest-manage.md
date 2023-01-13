@@ -37,8 +37,8 @@ Refer to these reference files for information on how to setup and import data u
 
 ## SQL import method
 
-* [SQL format reference](/docs/community/com-ingest/com-source-ref-sql)
-* [SQL ingester reference](/docs/community/com-ingest/com-ingest-ref-sql)
+* [SQL format reference](/docs/community/com-ingest/com-ref-source-sql)
+* [SQL ingester reference](/docs/community/com-ingest/com-ref-ingest-sql)
 * [SQL ingest examples](/docs/community/com-ingest/com-ingest-example-sql)
 
 ## Kafka import method

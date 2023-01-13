@@ -45,4 +45,4 @@ Once connected to the source database, SQL queries copy data which is then batch
 
 ## Next step
 
-Refer to [SQL ingest reference](/docs/community/com-ingest/com-ingest-ref-sql) to learn how to use the command-line SQL ingest tool
+Refer to [SQL ingest reference](/docs/community/com-ingest/com-ref-ingest-sql) to learn how to use the command-line SQL ingest tool
