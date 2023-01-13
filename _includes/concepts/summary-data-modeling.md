@@ -1,6 +1,8 @@
-At a high level, copying data to FeatureBase indexes is a data transformation process. It is possible to make an identical copy of your RDBMS tables and transfer data to FeatureBase, but for added benefits, you can choose to restructure your data to make queries more efficient.
+You can duplicate your existing RDBMS data structures within FeatureBase.
 
-Data modeling involves planning the most efficient approach for your needs, including:
-* Determining what you need to learn from your queries
-* Assessing the data to export and mapping to FeatureBase data types
-* Experimenting to get the best results
+But to get the best results, users should perform a Data modeling process to:
+* determine the specific data they wish to query
+* take advantage of FeatureBase-specific data types and constraints
+* run queries on the data to test if the structure meets expectations
+
+By performing Data Modeling, customers may reduce their raw data footprint by up to 90% and thus make queries even faster.
