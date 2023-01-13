@@ -8,14 +8,14 @@ nav_order: 6
 
 ## Tables
 
-{% include /community/com-ingest-sql-assets-table.md %}
+{% include /com-ingest/com-ingest-sql-assets-table.md %}
 
-{% include /community/com-ingest-sql-events-table.md %}
+{% include /com-ingest/com-ingest-sql-events-table.md %}
 
 ## SQL ingest examples with flags
 
-{% include /community/com-ingest-flags-sql-assets-table.md %}
+{% include /com-ingest/com-ingest-flags-sql-assets-table.md %}
 
-{% include /community/com-ingest-flags-sql-assets-table.md %}
+{% include /com-ingest/com-ingest-flags-sql-assets-table.md %}
 
-{% include /community/com-ingest-flags-sql-join-assets-events.md %}
+{% include /com-ingest/com-ingest-flags-sql-join-assets-events.md %}

@@ -65,18 +65,18 @@ List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebas
 
 <!-- Enable once com-ingest-csv is merged and deployed
 
- {% include /community/com-ingest-flag-sql-connect-string.md%}
+ {% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
 
-{% include /community/com-ingest-missing-value-processing.md %}
+{% include /com-ingest/com-ingest-missing-value-processing.md %}
 -->
 
 ## Examples
 
-{% include /community/com-ingest-flag-sql-server.md %}
+{% include /com-ingest/com-ingest-flag-sql-server.md %}
 
-{% include /community/com-ingest-sql-assets-table.md %}
+{% include /com-ingest/com-ingest-sql-assets-table.md %}
 
-{% include /community/com-ingest-sql-egents-table.md %}
+{% include /com-ingest/com-ingest-sql-egents-table.md %}
 
 ## Further information
 

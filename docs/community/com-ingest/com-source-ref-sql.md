@@ -22,7 +22,7 @@ The SQL ingest tool connects to the source database using your login credentials
 
 <!-- Enable once com-ingest-csv is merged and deployed
 
- {% include /community/com-ingest-flag-sql-connect-string.md%}
+ {% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
 
 -->
 
