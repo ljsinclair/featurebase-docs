@@ -1,10 +1,12 @@
 ### Join Assets and Events tables into a single FeatureBase index
 
-Use a SQL query at the command-line to join the `assets` and `events` table data into a single FeatureBase index.
-
-The query performs these tasks:
-* Import `event` data along with `weight` of relative `asset_tag`
-* create `locale` field based on the first three characters from the `pk` field
+The `SELECT` statement:
+* returns `event` data along with `weight` of relative `asset_tag`
+* creates `locale` field based on the first three characters from the `pk` field
+* joins `assets.asset_tag` and `events.asset_tag`
+The ingester then:
+* converts the records to Roaring Bitmap format
+* imports the records to the `events_plus_weight` FeatureBase index.
 
 ```shell
 molecula-consumer-sql \
