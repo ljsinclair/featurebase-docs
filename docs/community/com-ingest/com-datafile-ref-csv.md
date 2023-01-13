@@ -47,9 +47,9 @@ Header column names, data-types and constraints have special meaning and must be
 
 ## Examples
 
-{% include /community/com-datafile-csv-header-defined.md %}
+{% include /com-ingest/com-datafile-csv-header-defined.md %}
 
-{% include /community/com-datafile-csv-header-undefined.md %}
+{% include /com-ingest/com-datafile-csv-header-undefined.md %}
 
 ## Next step
 

@@ -21,14 +21,14 @@ This page provides examples of CSV files and CSV ingest tool flags that you can 
 
 ## CSV source files
 
-{% include /community/com-datafile-csv-header-defined.md %}
+{% include /com-ingest/com-datafile-csv-header-defined.md %}
 
-{% include /community/com-datafile-csv-header-undefined.md %}
+{% include /com-ingest/com-datafile-csv-header-undefined.md %}
 
 ## CSV ingest tool setup
 
-{% include /community/com-ingest-csv-header-datafile.md %}
+{% include /com-ingest/com-ingest-csv-header-datafile.md %}
 
 {% include/community/com-ingest-csv-header-flag.md %}
 
-{% include /community/com-ingest-csv-header-flag-tls.md %}
+{% include /com-ingest/com-ingest-csv-header-flag-tls.md %}
