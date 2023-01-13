@@ -9,7 +9,6 @@ nav_order: 2
 # CSV ingest tool reference
 {: .no_toc}
 
-
 Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
 
 {% include page-toc.md %}
@@ -32,19 +31,19 @@ molecula-consumer-csv \
   <auth-flags>        \
 ```
 
-{% include community/com-ingest-flag-common.md %}
+{% include com-ingest/com-ingest-flag-common.md %}
 
-{% include community/com-ingest-flag-csv.md %}
+{% include com-ingest/com-ingest-flag-csv.md %}
 
-{% include community/com-ingest-flag-common-id.md %}
+{% include com-ingest/com-ingest-flag-common-id.md %}
 
-{% include community/com-ingest-flag-common-error.md %}
+{% include com-ingest/com-ingest-flag-common-error.md %}
 
-{% include community/com-ingest-flag-common-log-stat.md %}
+{% include com-ingest/com-ingest-flag-common-log-stat.md %}
 
-{% include community/com-ingest-flag-common-testing.md %}
+{% include com-ingest/com-ingest-flag-common-testing.md %}
 
-{% include community/com-ingest-flag-csv-sql-auth.md %}
+{% include com-ingest/com-ingest-flag-csv-sql-auth.md %}
 
 ## Additional information
 
