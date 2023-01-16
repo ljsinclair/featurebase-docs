@@ -1,9 +1,10 @@
 ---
 title: SQL Operators
 layout: default
-parent: operators
-grand_parent: SQL guide
+parent: SQL guide
+has_children: true
 nav_order: 4
+has_toc: false
 ---
 
 # SQL Operators
