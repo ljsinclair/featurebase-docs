@@ -27,12 +27,12 @@ has_toc: false
 
 ## String scalar functions
 
-* [ASCII()](/sql-guide/functions/function-ascii)
-* [REVERSE()](/sql-guide/functions/function-reverse)
-* [SUBSTRING()](/sql-guide/functions/function-substring)
-* [UPPER()](/sql-guide/functions/function-upper)
-* [STRINGSPLIT()](/sql-guide/functions/function-stringsplit)
-* [REPLACEALL()](/sql-guide/functions/function-replaceall)
-* [TRIM()](/sql-guide/functions/function-trim)
-* [RTRIM()](/sql-guide/functions/function-rtrim)
-* [LTRIM()](/sql-guide/functions/function-ltrim)
+* [ASCII()](/docs/sql-guide/functions/function-ascii)
+* [REVERSE()](/docs/sql-guide/functions/function-reverse)
+* [SUBSTRING()](/docs/sql-guide/functions/function-substring)
+* [UPPER()](/docs/sql-guide/functions/function-upper)
+* [STRINGSPLIT()](/docs/sql-guide/functions/function-stringsplit)
+* [REPLACEALL()](/docs/sql-guide/functions/function-replaceall)
+* [TRIM()](/docs/sql-guide/functions/function-trim)
+* [RTRIM()](/docs/sql-guide/functions/function-rtrim)
+* [LTRIM()](/docs/sql-guide/functions/function-ltrim)

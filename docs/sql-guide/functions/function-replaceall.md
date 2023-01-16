@@ -69,4 +69,4 @@ select _id, segment, replaceall(segment, 'tac', reverse(rev)) as replaced from s
 
 ## Further information
 
-* [REVERSE()](/sql-guide/functions/function-reverse)
+* [REVERSE()](/docs/sql-guide/functions/function-reverse)
