@@ -1,7 +1,7 @@
 ---
 title: TRIM()
 layout: default
-parent: functions
+parent: SQL functions
 grand_parent: SQL guide
 nav_order: 11
 ---

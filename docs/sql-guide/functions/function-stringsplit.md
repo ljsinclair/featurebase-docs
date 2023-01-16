@@ -1,7 +1,7 @@
 ---
 title: STRINGSPLIT()
 layout: default
-parent: functions
+parent: SQL functions
 grand_parent: SQL guide
 nav_order: 9
 ---

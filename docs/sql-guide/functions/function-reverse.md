@@ -1,7 +1,7 @@
 ---
 title: REVERSE()
 layout: default
-parent: functions
+parent: SQL functions
 grand_parent: SQL guide
 nav_order: 4
 ---
