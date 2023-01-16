@@ -8,7 +8,7 @@ nav_order: 2
 
 # LTRIM() string function
 
-`LTRIM()` function removes the leading whitespaces from input string from the selected column.
+`LTRIM()` function removes leading whitespace from a specified string in the selected column.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ ltrim(expr)
 
 | Argument | Description |
 |---|---|
-| expr | any expression with a `string` data type. |
+| `expr` | Any `string` expression. |
 
 ## Returns
 

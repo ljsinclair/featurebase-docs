@@ -8,7 +8,7 @@ nav_order: 4
 
 # REVERSE() string function
 
-`Reverse()` function returns the reversed strings from the selected column.
+`Reverse()` function reverses all instances of a specified string in the selected column.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ reverse(expr)
 
 | Argument | Description |
 |---|---|
-| expr | Any string expression |
+| expr | Any `string` expression. |
 
 ## Returns
 

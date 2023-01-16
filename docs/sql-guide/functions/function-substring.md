@@ -8,7 +8,7 @@ nav_order: 10
 
 # SUBSTRING() string function
 
-`Substring()` extracts a substring from the given string, starting at the specified start index and with the specified length.
+`Substring()` extracts a substring value from a specified string based on a designated start index and optional length.
 
 ## Syntax
 
@@ -20,15 +20,15 @@ substring(expr,startIndex,length)
 
 | Argument | Description | Data type | Return value |
 |---|---|---|---|
-| `expr` | Input string to extract a substring |
-| `startIndex` | The starting index of the substring in the evaluated expression is an `int` data type starting from zero. |
-| `length` | An optional integer length of the substring to extract. Defaults to end of evaluated `expr`. |
+| `expr` | Input `string` used to extract a substring |
+| `startIndex` | Required `int` value for the starting index of the substring in the evaluated expression. Starts from zero. |
+| `length` | Optional `int` value that represents the length of the substring to extract. Defaults to end of evaluated `expr`. |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `string` | Returns the extracted substring based on `startIndex` and optional `length`. |
+| `string` | Returns a substring based on the `startIndex` value and optional `length`. |
 
 ## Examples
 
@@ -49,7 +49,8 @@ select _id, substring(segment,0,3) as substr from segments;
 +-----+----------+
 ```
 
-B. Substring of a reversed string.
+### Substring of a reversed string
+
 ```sql
 create table segments
     (_id id, segment string);

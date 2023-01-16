@@ -8,7 +8,7 @@ nav_order: 11
 
 # TRIM() string function
 
-`TRIM()` function removes the leading and trailing whitespaces from input string from the selected column.
+`TRIM()` function removes the leading and trailing whitespace from a specified string in the selected column.
 
 ## Syntax
 
@@ -18,15 +18,15 @@ trim(expr)
 
 ## Arguments
 
-| Argument | Description | Data type | Return value |
+| Argument | Description |
 |---|---|---|---|
-| expr | Any `string` expression |
+| `expr` | Any `string` expression. |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `string` | Input string after removal of leading and trailing whitespace. |
+| `string` | `expr` with leading and trailing whitespace removed. |
 
 ## Examples
 

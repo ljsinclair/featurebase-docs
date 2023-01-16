@@ -8,25 +8,25 @@ nav_order: 1
 
 # ASCII String function
 
-`Ascii()` returns the ASCII code value of the string expression.
+`Ascii()` returns the ASCII value of the specified string.
 
 ## Syntax
 
 ```
-ascii(str_expr)
+ascii(expr)
 ```
 
 ## Arguments
 
 | Argument | Description | Length |
 |---|---|---|---|
-| `str_expr` | A string expression | 1 |
+| `expr` | Any `string` expression. | 1 |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `int` | ASCII code value of `str_expr` |
+| `int` | ASCII code value of `expr`. |
 
 ## Examples
 

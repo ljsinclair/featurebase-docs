@@ -20,7 +20,7 @@ stringsplit(expr,seperator,position)
 
 | Argument | Description |
 |---|---|
-| `expr` | Input string to split. |
+| `expr` | Any `string` expression. |
 | `separator` | Character string used to split the evaluated expression. |
 | `position` | Optional integer substring to retrieve from the resulting array of substrings |
 

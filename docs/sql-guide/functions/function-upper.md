@@ -8,7 +8,7 @@ nav_order: 12
 
 # UPPER() string function
 
-`UPPER()` function returns the converted strings to Upper case from the selected column.
+`UPPER()` function converts the specified string to upper-case in the column.
 
 ## Syntax
 
@@ -20,13 +20,13 @@ upper(expr)
 
 | Argument | Description |
 |---|---|
-| `expr` | Any `string` expression |
+| `expr` | Any `string` expression. |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `string` | `expr` string converted to upper-case. |
+| `string` | `expr` converted to upper-case. |
 
 
 ## Examples

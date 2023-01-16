@@ -8,7 +8,7 @@ nav_order: 5
 
 # RTRIM () string function
 
-`RTRIM()` function removes the trailing whitespaces from input string from the selected column.
+`RTRIM()` function removes the trailing whitespace from a specified string in the selected column.
 
 ## Syntax
 
@@ -20,7 +20,8 @@ rtrim(expr)
 
 | Argument | Description |
 |---|---|
-| `expr` | Any string expression. |
+| `expr` | Any `string` expression. |
+
 ## Returns
 
 | Data type | Value |

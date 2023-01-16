@@ -8,7 +8,7 @@ nav_order: 3
 
 # REPLACEALL() string function
 
-`ReplaceAll()` replaces all occurrences of the expression `exprOld` in the evaluated expression `expr` with a new expression `exprNew`.
+`ReplaceAll()` evaluates column values and replaces all specified strings with a new value.
 
 ## Syntax
 
@@ -18,9 +18,9 @@ replaceall(expr,exprOld,exprNew)
 
 ## Arguments
 
-| Argument | Description | Data type | Return value |
-|---|---|---|---|
-| `expr` | String expression to evaluate |
+| Argument | Description |
+|---|---|
+| `expr` | Any `string` expression. |
 | `exprOld` | String expression to replace |
 | `exprNew` | String expression that replaces `exprOld` |
 
@@ -28,7 +28,7 @@ replaceall(expr,exprOld,exprNew)
 
 | Data type | Value |
 |---|---|
-| `string` | String with `exprOld` replaced by `exprNew` |
+| `string` | All `exprOld` values replaced by `exprNew` in the column |
 
 ## Examples
 
