@@ -21,7 +21,7 @@ has_toc: false
 ## string_literal
 
 
-### decimal_literal
+## decimal_literal
 
 
 ## set_literal
@@ -38,5 +38,5 @@ has_toc: false
 ## paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
-### case_expr
+## case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
