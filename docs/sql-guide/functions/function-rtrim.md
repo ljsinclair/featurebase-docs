@@ -1,7 +1,12 @@
 ---
-id: sql-rtrim
-tittle: RTRIM
+title: RTRIM()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 5
 ---
+
+# RTRIM () string function
 
 `RTRIM()` function removes the trailing whitespaces from input string from the selected column.
 

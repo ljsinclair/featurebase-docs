@@ -1,43 +1,40 @@
 ---
-id: sql-substring
-title: SUBSTRING
+title: SUBSTRING()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 10
 ---
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality (more information [here](/sql-preview/sql-preview)). Additionally, this page represents a work in progress that is subject to frequent changes. |
-
----
-
-## SUBSTRING()
+# SUBSTRING() string function
 
 `Substring()` extracts a substring from the given string, starting at the specified start index and with the specified length.
 
-### Syntax
+## Syntax
 
 ```
 substring(expr,startIndex,length)
 ```
 
-### Arguments
+## Arguments
 
-_expr_ 
+_expr_
 The input string from which to extract the substring. The argument `expr` is any expression of type `string`.
 
 _startIndex_
 The starting index of the substring in the evaluated expression, starting at zero. `startIndex` can be any expression of type `int`
 
 _length_ *(optional)* (Default: end of evaluated `expr`)
-The length of the substring to extract. `length` can be any expression of type `int`. 
+The length of the substring to extract. `length` can be any expression of type `int`.
 
-### Return Type
+## Return Type
 `string`
 
-### Return Value
+## Return Value
 `substring()` returns the extracted substring
-### Remarks
+## Remarks
 None
-### Examples
+## Examples
 A. Substring of the string in a column
 
 ```sql

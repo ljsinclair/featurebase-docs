@@ -1,37 +1,34 @@
 ---
-id: sql-reverse
-title: REVERSE
+title: REVERSE()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 4
 ---
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality (more information [here](/sql-preview/sql-preview)). Additionally, this page represents a work in progress that is subject to frequent changes. |
-
----
-
-## REVERSE()
+# REVERSE() string function
 
 `Reverse()` function returns the reversed strings from the selected column.
 
-### Syntax
+## Syntax
 
 ```
 reverse(expr)
 ```
 
-### Arguments
+## Arguments
 
 _expr_
 The argument `expr` is any expression of type `string`.
 
-### Return Type
+## Return Type
 `string`
 
-### Return Value
+## Return Value
 `reverse()` returns the reversed input string
-### Remarks
+## Remarks
 None
-### Examples
+## Examples
 A. Reversing strings in a column
 
 ```sql

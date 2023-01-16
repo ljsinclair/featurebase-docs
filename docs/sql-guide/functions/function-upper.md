@@ -1,28 +1,33 @@
 ---
-id: sql-upper
-title: UPPER
+title: UPPER()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 12
 ---
+
+# UPPER() string function
 
 `UPPER()` function returns the converted strings to Upper case from the selected column.
 
-#### Syntax
+## Syntax
 
 ```
 upper(expr)
 ```
 
-#### Arguments
+## Arguments
 
 The argument `expr` is any expression of type string
 
-#### Return Type
+## Return Type
 `string`
 
-#### Return Value
+## Return Value
 `upper()` returns the input string converted to upper case
-#### Remarks
+## Remarks
 None
-#### Examples
+## Examples
 Converting strings to Upper case in a column
 
 ```sql

@@ -1,7 +1,12 @@
 ---
-id: sql-ltrim
-tittle: LTRIM
+title: LTRIM()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 2
 ---
+
+# LTRIM() string function
 
 `LTRIM()` function removes the leading whitespaces from input string from the selected column.
 

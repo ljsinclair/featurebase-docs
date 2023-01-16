@@ -26,12 +26,12 @@ nav_order: 1
 
 ## String functions
 
-* [ASCII()]*
-* [REVERSE()](/sql-guide/functions/function-reverse#reverse){:target="_blank"}
-* [SUBSTRING()](/sql-guide/functions/function-substring#substring){:target="_blank"}
-* [UPPER()](/sql-guide/functions/function-upper#upper){:target="_blank"}
-* [STRINGSPLIT()](/sql-guide/functions/function-stringsplit#stringsplit){:target="_blank"}
-* [REPLACEALL()](/sql-guide/functions/function-replaceall#replaceall){:target="_blank"}
-* [TRIM()](/sql-guide/functions/function-trim#trim){:target="_blank"}
-* [RTRIM()](/sql-guide/functions/function-rtrim#rtrim){:target="_blank"}
-* [LTRIM()](/sql-guide/functions/function-ltrim#ltrim){:target="_blank"}
+* [ASCII()](/sql-guide/functions/function-ascii)
+* [REVERSE()](/sql-guide/functions/function-reverse)
+* [SUBSTRING()](/sql-guide/functions/function-substring)
+* [UPPER()](/sql-guide/functions/function-upper)
+* [STRINGSPLIT()](/sql-guide/functions/function-stringsplit)
+* [REPLACEALL()](/sql-guide/functions/function-replaceall)
+* [TRIM()](/sql-guide/functions/function-trim)
+* [RTRIM()](/sql-guide/functions/function-rtrim)
+* [LTRIM()](/sql-guide/functions/function-ltrim)

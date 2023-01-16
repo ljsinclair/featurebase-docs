@@ -1,7 +1,12 @@
 ---
-id: sql-stringsplit
-title: STRINGSPLIT
+title: STRINGSPLIT()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 9
 ---
+
+# STRINGSPLIT() string function
 
 `Stringsplit()` function splits a string into multiple substrings based on a specified separator.
 
@@ -13,14 +18,14 @@ stringsplit(expr,seperator,position)
 
 ## Arguments
 
-_expr_ 
+_expr_
 The input string to split. The argument `expr` is any expression of type `string`.
 
 _seperator_
 A character or string that will be used to split the evaluated expression `expr`. `seperator` can be any expression of type `string`
 
 _position_ *(optional)* (Default value : 0)
-Substring to retrive from the resulting array of substrings. `position` can be any expression of type `int`. 
+Substring to retrive from the resulting array of substrings. `position` can be any expression of type `int`.
 
 ## Return Type
 `string`

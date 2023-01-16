@@ -1,9 +1,14 @@
 ---
-id: sql-ascii
-title: ASCII
+title: ASCII()
+layout: default
+parent: functions
+grand_parent: SQL guide
+nav_order: 1
 ---
 
-`Ascii()` function returns the ASCII code value of the string expression.
+# ASCII String function
+
+`Ascii()` returns the ASCII code value of the string expression.
 
 ## Syntax
 
@@ -14,14 +19,14 @@ ascii(str_expr)
 ## Arguments
 
 _str_expr_
-A string expression of length 1. 
- 
+A string expression of length 1.
+
 
 ## Return Type
 `int`
 
 ## Return Value
-`ascii()` returns the ASCII code value of the string expression `str_expr`. 
+`ascii()` returns the ASCII code value of the string expression `str_expr`.
 
 ## Remarks
 None
