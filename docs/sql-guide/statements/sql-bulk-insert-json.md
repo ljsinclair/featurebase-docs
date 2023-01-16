@@ -1,6 +1,12 @@
 ---
-title: Tutorial - Ingest NDJSON with BULK INSERT
+title: BULK INSERT JSON ingest
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+# Ingest JSON with BULK INSERT
 
 ## Before you begin
 {% include /sql-guide/before_ingest.md %}
@@ -11,7 +17,7 @@ title: Tutorial - Ingest NDJSON with BULK INSERT
 
 ```sql
 CREATE TABLE github-stats (
-_id ID, 
+_id ID,
 type STRING,
 actor_id ID,
 actor_login STRING,
@@ -33,7 +39,7 @@ created_at TIMESTAMP
 
 ```sql
 BULK INSERT INTO github-stats (
-_id, 
+_id,
 type,
 actor_id,
 actor_login,

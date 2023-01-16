@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 1
 ---
 
-## CREATE TABLE
+## CREATE TABLE statement
 
 Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful. The identifier for the table must conform to the rules of FeatureBase identifiers.
 

@@ -1,6 +1,12 @@
 ---
 title: BULK INSERT
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+## BULK INSERT statement
 
 Bulk inserts data into a FeatureBase table. Using bulk insert you can insert multiple rows of data from a file, URL or an inline blob, using CSV or NDJSON formats. Additionally bulk insert allows for lightweight data transformation all within one request.
 
