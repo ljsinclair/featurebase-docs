@@ -3,7 +3,7 @@ title: SQL Operators
 layout: default
 parent: operators
 grand_parent: SQL guide
-nav_order: 1
+nav_order: 4
 ---
 
 # SQL Operators
