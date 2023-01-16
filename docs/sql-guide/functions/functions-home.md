@@ -8,6 +8,9 @@ has_toc: false
 ---
 
 # SQL functions
+{: .no_toc }
+
+{% include page-toc.md %}
 
 ## Table Valued Functions
 

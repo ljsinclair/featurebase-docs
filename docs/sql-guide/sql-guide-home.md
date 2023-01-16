@@ -9,6 +9,8 @@ has_toc: false
 # FeatureBase SQL guide
 {: .no_toc }
 
+{% include page-toc.md %}
+
 ## Naming standard
 
 {% include /cloud-table/cloud-standard-naming-table.md %}
