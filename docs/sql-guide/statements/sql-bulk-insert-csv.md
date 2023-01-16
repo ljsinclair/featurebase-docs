@@ -1,6 +1,13 @@
 ---
-title: Tutorial - Ingest a CSV with BULK INSERT
+title: BULK INSERT CSV ingest
+layout: default
+parent: Statements
+grand_parent: SQL guide
+nav_order: 1
 ---
+
+# Ingest a CSV with BULK INSERT
+
 
 ## Before you begin
 {% include /sql-guide/before_ingest.md %}
