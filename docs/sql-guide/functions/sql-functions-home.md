@@ -26,11 +26,11 @@ nav_order: 1
 
 ## String functions
 
-* [REVERSE()](/sql-preview/functions/sql-reverse#reverse){:target="_blank"}
-* [SUBSTRING()](/sql-preview/functions/sql-substring#substring){:target="_blank"}
-* [UPPER()](/sql-preview/functions/sql-upper#upper){:target="_blank"}
-* [STRINGSPLIT()](/sql-preview/functions/sql-stringsplit#stringsplit){:target="_blank"}
-* [REPLACEALL()](/sql-preview/functions/sql-replaceall#replaceall){:target="_blank"}
-* [TRIM()](/sql-preview/functions/sql-trim#trim){:target="_blank"}
-* [RTRIM()](/sql-preview/functions/sql-rtrim#rtrim){:target="_blank"}
-* [LTRIM()](/sql-preview/functions/sql-ltrim#ltrim){:target="_blank"}
+* [REVERSE()](/sql-guide/functions/sql-reverse#reverse){:target="_blank"}
+* [SUBSTRING()](/sql-guide/functions/sql-substring#substring){:target="_blank"}
+* [UPPER()](/sql-guide/functions/sql-upper#upper){:target="_blank"}
+* [STRINGSPLIT()](/sql-guide/functions/sql-stringsplit#stringsplit){:target="_blank"}
+* [REPLACEALL()](/sql-guide/functions/sql-replaceall#replaceall){:target="_blank"}
+* [TRIM()](/sql-guide/functions/sql-trim#trim){:target="_blank"}
+* [RTRIM()](/sql-guide/functions/sql-rtrim#rtrim){:target="_blank"}
+* [LTRIM()](/sql-guide/functions/sql-ltrim#ltrim){:target="_blank"}
