@@ -3,7 +3,7 @@ title: Tutorial - Ingest a CSV with BULK INSERT
 ---
 
 ## Before you begin
-{% include /docs/sql-guide/before_ingest.md %}
+{% include /sql-guide/before_ingest.md %}
 
 [Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download)
 
