@@ -1,9 +1,10 @@
 ---
 title: SQL functions
 layout: default
-parent: functions
-grand_parent: SQL guide
-nav_order: 1
+parent: SQL guide
+has_children: true
+nav_order: 3
+has_toc: false
 ---
 
 # SQL functions
