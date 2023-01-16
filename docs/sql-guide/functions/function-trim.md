@@ -18,27 +18,29 @@ trim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description | Data type | Return value |
+|---|---|---|---|
+| expr | Any `string` expression |
 
-## Return Type
-`string`
+## Returns
 
-## Return Value
-`trim()` returns the input string after removing leading and trailing whitespaces
-## Remarks
-None
+| Data type | Value |
+|---|---|
+| `string` | Input string after removal of leading and trailing whitespace. |
+
 ## Examples
-Trimming strings in a column
+
+### Trim strings from a column
 
 ```sql
 create table segments
     (_id id, segment string);
 
 insert into segments(_id,segment)
-    values (1,' green ')
+    values (1,'   green   ')
 
 select _id, trim(segment) as TrimmedStr from segments;
+
 +-----+------------+
 | _id | TrimmedStr |
 +-----+------------+

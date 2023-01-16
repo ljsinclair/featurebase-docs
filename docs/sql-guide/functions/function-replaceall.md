@@ -8,7 +8,7 @@ nav_order: 3
 
 # REPLACEALL() string function
 
-`ReplaceAll()` function replaces all occurrences of the expression `exprOld` in the evaluated expression `expr` with a new expression `exprNew`.
+`ReplaceAll()` replaces all occurrences of the expression `exprOld` in the evaluated expression `expr` with a new expression `exprNew`.
 
 ## Syntax
 
@@ -18,24 +18,21 @@ replaceall(expr,exprOld,exprNew)
 
 ## Arguments
 
-_expr_
-The evaluated expression in which all occurrences of `exprOld` should be replaced with `exprNew`. `expr` can be any expression of type `string`
+| Argument | Description | Data type | Return value |
+|---|---|---|---|
+| `expr` | String expression to evaluate |
+| `exprOld` | String expression to replace |
+| `exprNew` | String expression that replaces `exprOld` |
 
-_exprOld_
-The substring that should be replaced. `exprOld` can be any expression of type `string`
+## Returns
 
-_exprNew_
-The substring that should be used as a replacement for `exprOld`. `exprNew` can be any expression of type `string`
+| Data type | Value |
+|---|---|
+| `string` | String with `exprOld` replaced by `exprNew` |
 
-## Return Type
-`string`
-
-## Return Value
-`replaceall()` returns a string that is the result of replacing all occurrences of `exprOld` in `expr` with `exprNew`.
-## Remarks
-None
 ## Examples
-A. Replacing all the occurances
+
+### Replace `hello world` string
 
 ```sql
 create table segments
@@ -51,8 +48,10 @@ select _id, segment ,replaceall(segment, 'world','universe') as replaced from se
 |   1 | hello world! | hello universe! |
 +-----+--------------+-----------------+
 ```
+### Nested REPLACE() and REVERSE() functions
 
-B. Replace all with reversed string.
+Replace `exprOld` with reversed `exprNew`
+
 ```sql
 create table segments
     (_id id, segment string, rev string);
@@ -67,3 +66,7 @@ select _id, segment, replaceall(segment, 'tac', reverse(rev)) as replaced from s
 |   1 | tic tac      | tic toc         |
 +-----+--------------+-----------------+
 ```
+
+## Further information
+
+* [REVERSE()](/sql-guide/functions/function-reverse)

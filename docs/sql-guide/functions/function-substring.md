@@ -18,24 +18,21 @@ substring(expr,startIndex,length)
 
 ## Arguments
 
-_expr_
-The input string from which to extract the substring. The argument `expr` is any expression of type `string`.
+| Argument | Description | Data type | Return value |
+|---|---|---|---|
+| `expr` | Input string to extract a substring |
+| `startIndex` | The starting index of the substring in the evaluated expression is an `int` data type starting from zero. |
+| `length` | An optional integer length of the substring to extract. Defaults to end of evaluated `expr`. |
 
-_startIndex_
-The starting index of the substring in the evaluated expression, starting at zero. `startIndex` can be any expression of type `int`
+## Returns
 
-_length_ *(optional)* (Default: end of evaluated `expr`)
-The length of the substring to extract. `length` can be any expression of type `int`.
+| Data type | Value |
+|---|---|
+| `string` | Returns the extracted substring based on `startIndex` and optional `length`. |
 
-## Return Type
-`string`
-
-## Return Value
-`substring()` returns the extracted substring
-## Remarks
-None
 ## Examples
-A. Substring of the string in a column
+
+### Substring of the string in a column
 
 ```sql
 create table segments

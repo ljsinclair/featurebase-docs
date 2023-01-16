@@ -18,18 +18,19 @@ reverse(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`.
+| Argument | Description |
+|---|---|
+| expr | Any string expression |
 
-## Return Type
-`string`
+## Returns
 
-## Return Value
-`reverse()` returns the reversed input string
-## Remarks
-None
+| Data type | Value |
+|---|---|
+| `string` | Reversed `expr` string. |
+
 ## Examples
-A. Reversing strings in a column
+
+### Reverse strings in a column
 
 ```sql
 create table segments
@@ -46,7 +47,10 @@ select _id, reverse(segment) as reversed from segments;
 +-----+----------+
 ```
 
-B. Testing nested reverse function
+### Nested reverse function
+
+A nested reverse function reverses the string, then reverses it back.
+
 ```sql
 create table segments
     (_id id, segment string);

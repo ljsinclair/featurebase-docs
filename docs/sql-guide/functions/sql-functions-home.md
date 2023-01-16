@@ -24,7 +24,7 @@ nav_order: 1
 * [SETCONTAINSANY()](/docs/sql-guide/functions/function-setcontainsany)
 * [SETCONTAINSALL()](/docs/sql-guide/functions/function-setcontainsall)
 
-## String functions
+## String scalar functions
 
 * [ASCII()](/sql-guide/functions/function-ascii)
 * [REVERSE()](/sql-guide/functions/function-reverse)

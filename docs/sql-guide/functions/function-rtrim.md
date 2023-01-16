@@ -18,18 +18,18 @@ rtrim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description |
+|---|---|
+| `expr` | Any string expression. |
+## Returns
 
-## Return Type
-`string`
+| Data type | Value |
+|---|---|
+| `string` | `expr` with trailing whitespace removed. |
 
-## Return Value
-`rtrim()` returns the input string after removing trailing whitespaces
-## Remarks
-None
 ## Examples
-Trimming strings in a column
+
+### Trim column strings
 
 ```sql
 create table segments

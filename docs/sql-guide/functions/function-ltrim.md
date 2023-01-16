@@ -18,18 +18,19 @@ ltrim(expr)
 
 ## Arguments
 
-_expr_
-The argument `expr` is any expression of type `string`
+| Argument | Description |
+|---|---|
+| expr | any expression with a `string` data type. |
 
-## Return Type
-`string`
+## Returns
 
-## Return Value
-`ltrim()` returns the input string after removing leading whitespaces
-## Remarks
-None
+| Data type | Value |
+|---|---|
+| `string` | Input string with leading whitespace removed. |
+
 ## Examples
-Trimming strings in a column
+
+### Trim strings in a column
 
 ```sql
 create table segments

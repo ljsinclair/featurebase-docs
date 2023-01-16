@@ -18,24 +18,21 @@ stringsplit(expr,seperator,position)
 
 ## Arguments
 
-_expr_
-The input string to split. The argument `expr` is any expression of type `string`.
+| Argument | Description |
+|---|---|
+| `expr` | Input string to split. |
+| `separator` | Character string used to split the evaluated expression. |
+| `position` | Optional integer substring to retrieve from the resulting array of substrings |
 
-_seperator_
-A character or string that will be used to split the evaluated expression `expr`. `seperator` can be any expression of type `string`
+## Returns
 
-_position_ *(optional)* (Default value : 0)
-Substring to retrive from the resulting array of substrings. `position` can be any expression of type `int`.
+| Data type | Value |
+|---|---|
+| `string` | Returns the substring from the array at the optional position. |
 
-## Return Type
-`string`
-
-## Return Value
-`stringsplit()` returns the substring at the position, from the resulting array of substrings.
-## Remarks
-None
 ## Examples
-A. Split strings and return second substring
+
+### Split strings then return second substring
 
 ```sql
 create table segments
@@ -52,18 +49,19 @@ select _id, stringsplit(segment,',',1) as segment from segments;
 +-----+----------+
 ```
 
-B. Split with a column as seperator.
+## Split strings using a column as separator
+
 ```sql
 create table segments
-    (_id id, segment string, seperator);
+    (_id id, segment string, separator);
 
-insert into segments(_id, segment, seperator)
+insert into segments(_id, segment, separator)
     values (1,'red,blue', ',')
 
-insert into segments(_id, segment, seperator)
+insert into segments(_id, segment, separator)
     values (2,'green:yellow', ':')
 
-select _id, stringsplit(segment, seperator, 0) as segment from segments;
+select _id, stringsplit(segment, separator, 0) as segment from segments;
 +-----+----------+
 | _id | segment  |
 +-----+----------+

@@ -18,17 +18,20 @@ upper(expr)
 
 ## Arguments
 
-The argument `expr` is any expression of type string
+| Argument | Description |
+|---|---|
+| `expr` | Any `string` expression |
 
-## Return Type
-`string`
+## Returns
 
-## Return Value
-`upper()` returns the input string converted to upper case
-## Remarks
-None
+| Data type | Value |
+|---|---|
+| `string` | `expr` string converted to upper-case. |
+
+
 ## Examples
-Converting strings to Upper case in a column
+
+### Convert strings in a column to upper-case
 
 ```sql
 create table segments

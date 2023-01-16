@@ -18,21 +18,19 @@ ascii(str_expr)
 
 ## Arguments
 
-_str_expr_
-A string expression of length 1.
+| Argument | Description | Length |
+|---|---|---|---|
+| `str_expr` | A string expression | 1 |
 
+## Returns
 
-## Return Type
-`int`
-
-## Return Value
-`ascii()` returns the ASCII code value of the string expression `str_expr`.
-
-## Remarks
-None
+| Data type | Value |
+|---|---|
+| `int` | ASCII code value of `str_expr` |
 
 ## Examples
-A. ASCII function on a column.
+
+### ASCII function on a column
 
 ```sql
 create table segments
