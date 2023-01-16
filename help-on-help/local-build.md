@@ -20,6 +20,7 @@ WARNING: We **do not** recommend local installation of system files because of v
 
 * Install [Docker Desktop](https://www.docker.com/get-started/)
 * [Learn about Docker build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"}
+* Open Docker Desktop to start the daemon
 
 ### Load Docker container from Dockerfile
 
