@@ -3,7 +3,7 @@ title: Tutorial - Ingest NDJSON with BULK INSERT
 ---
 
 ## Before you begin
-{% include /sql-preview/before_ingest.md %}
+{% include /docs/sql-guide/before_ingest.md %}
 
 [Learn about the age dataset](https://www.gharchive.org/)
 
@@ -100,4 +100,4 @@ SELECT TOP(10) * FROM github-stats;
 
 ## Further information
 
-* [Bulk Insert](/sql-preview/sql-bulk-insert)
+* [Bulk Insert](/docs/sql-guide/sql-bulk-insert)

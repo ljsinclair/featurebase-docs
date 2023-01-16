@@ -3,7 +3,7 @@ title: Tutorial - Ingest a CSV with BULK INSERT
 ---
 
 ## Before you begin
-{% include /sql-preview/before_ingest.md %}
+{% include /docs/sql-guide/before_ingest.md %}
 
 [Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download)
 
@@ -60,4 +60,4 @@ SELECT TOP(10) * FROM age;
 
 ## Further information
 
-* [Bulk Insert](/sql-preview/sql-bulk-insert)
+* [Bulk Insert](/docs/sql-guide/sql-bulk-insert)
