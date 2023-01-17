@@ -9,7 +9,7 @@ nav_order: 2
 # CSV ingest tool reference
 {: .no_toc}
 
-Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-ingest-csv` ingester.
+Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-consumer-csv` ingester.
 
 {% include page-toc.md %}
 
