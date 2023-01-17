@@ -1,4 +1,6 @@
-## Not used flags
+## Serverless flags
+
+These flags are used by the FeatureBase serverless cloud product and not available to FeatureBase Community users.
 
 | Flag | Description |
 |---|---|
