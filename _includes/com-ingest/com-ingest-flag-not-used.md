@@ -2,12 +2,13 @@
 
 These flags are used by the FeatureBase serverless cloud product and not available to FeatureBase Community users.
 
-| Flag | Description |
-|---|---|
+| Flag | Data type | Description | Default | Required |
+|---|---|---|---|---|
+| `--assume-empty-featurebase` |  | Assume FeatureBase database has no data. |  |  |
 | `--cache-length` | int | Number of batches of ID mappings to cache. IDs used in multiple batches are stored once. | 64 |  |
-| `--future.rename` | | Interact with FeatureBase instead of Pilosa. |
+| `--future.rename` | | Interact with FeatureBase instead of Pilosa. |  |  |
 | `--just-do-it` |  | Any header field not in the appropriate format is converted to lower-case and processed as a `Stringset` field |  |  |
 | `--key-translate-batch-size` | int | Maximum number of keys to translate at a time. |  |  |
-| `--lookup-batch-size` | int | Number of records to batch before writing them to Lookup database. |  |
-| `--lookup-db-dsn` | string | Connection string for connecting to Lookup database. |  |
+| `--lookup-batch-size` | int | Number of records to batch before writing them to Lookup database. |  |  |
+| `--lookup-db-dsn` | string | Connection string for connecting to Lookup database. |  |  |
 | `--pack-bools` | string | If non-empty, boolean fields will be packed into two set fields—one with this name, and one with <name>-exists. (default "bools")
