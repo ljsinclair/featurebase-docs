@@ -13,8 +13,9 @@ On the other hand, single word anchor text is sub-optimal, especially if you use
 
 ## Other issues with single-word hyperlinks
 
-* No-one searches on a single word unless it's a recognised keyword (which itself can be > 1 word), therefore things like `click [here](#)` are useless
+* No-one searches on a single word unless it's a recognised keyword (which itself can be > 1 word), therefore things like `click [here](#)` are useless.
 * Single words won't be indexed in search so that again makes information harder to find.
+* They're not accessible for screen readers or people with sight impairment.
 
 ## Further information
 
