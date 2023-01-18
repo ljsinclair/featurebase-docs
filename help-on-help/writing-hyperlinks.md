@@ -9,7 +9,7 @@ On the other hand, single word anchor text is sub-optimal, especially if you use
 
 | Example | Problem | Solution |
 |---|---|---|
-| "...click [here](#) for information on Tables..."<br/>"...learn more about the process [here](#)..." | It's harder to see a single hyperlink in a block of text, which means users will miss them. | [Learn about tables](#) |
+| "...once you've created a database you should create your tables and you can learn how to do that [here](#). Once you've done that you can begin ingesting data..." | It's harder to see a single hyperlink in a block of text, which means users will miss them. | "Once you've created a database you should create your tables.</br>* [Learn how to manage and create tables](#)<br/> When that task is complete, you can..." |
 
 ## Other issues with single-word hyperlinks
 
