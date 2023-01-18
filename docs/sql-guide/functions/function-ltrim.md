@@ -3,7 +3,7 @@ title: LTRIM()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 2
+nav_order: 4
 ---
 
 # LTRIM() string function

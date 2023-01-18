@@ -3,7 +3,7 @@ title: SUBSTRING()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 10
+
 ---
 
 # SUBSTRING() string function

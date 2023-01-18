@@ -3,7 +3,7 @@ title: SETCONTAINS()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 6
+nav_order: 8
 ---
 
 # SETCONTAINS() function

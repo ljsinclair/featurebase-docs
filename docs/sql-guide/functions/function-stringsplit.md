@@ -3,7 +3,7 @@ title: STRINGSPLIT()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 9
+
 ---
 
 # STRINGSPLIT() string function

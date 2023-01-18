@@ -3,7 +3,7 @@ title: REPLACEALL()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 3
+nav_order: 5
 ---
 
 # REPLACEALL() string function
