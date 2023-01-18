@@ -15,3 +15,9 @@ On the other hand, single word anchor text is sub-optimal, especially if you use
 
 * No-one searches on a single word unless it's a recognised keyword (which itself can be > 1 word), therefore things like `click [here](#)` are useless
 * Single words won't be indexed in search so that again makes information harder to find.
+
+## Further information
+
+* [W3Schools page on accessible anchor text](https://www.w3schools.com/accessibility/accessibility_link_text.php)
+* [W3Schools page on regional accessibility laws](https://www.w3.org/WAI/policies/united-states/)
+* [CSUN best practices for accessible links with a video](https://www.csun.edu/universal-design-center/best-practices-accessible-links)
