@@ -3,7 +3,6 @@ title: ASCII()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 1
 ---
 
 # ASCII String function

@@ -3,7 +3,6 @@ title: LEN()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-nav_order: 3
 ---
 
 # LEN() function

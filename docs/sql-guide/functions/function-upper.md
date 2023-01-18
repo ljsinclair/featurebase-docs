@@ -3,7 +3,6 @@ title: UPPER()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-
 ---
 
 # UPPER() string function

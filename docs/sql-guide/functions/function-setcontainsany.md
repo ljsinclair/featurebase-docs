@@ -3,7 +3,6 @@ title: SETCONTAINSANY()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-
 ---
 
 # SETCONTAINSANY() function

@@ -3,7 +3,6 @@ title: TRIM()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-
 ---
 
 # TRIM() string function

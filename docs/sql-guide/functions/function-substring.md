@@ -3,7 +3,6 @@ title: SUBSTRING()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
-
 ---
 
 # SUBSTRING() string function
