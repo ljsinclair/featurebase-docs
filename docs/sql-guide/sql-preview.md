@@ -1,12 +1,4 @@
----
-title: SQL (Preview)
----
 
-| | |
-|-|-|
-| **ℹ️NOTE** | This page contains information that only applies to SQL Preview functionality. Additionally, this page represents a work in progress that is subject to frequent changes. |
-
----
 
 ## SQL is a Preview Feature
 
