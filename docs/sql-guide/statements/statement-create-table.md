@@ -73,3 +73,7 @@ create table allcoltypes (
 	idsetcolq idset timequantum 'YMD' ttl '24h'
 ) comment 'table description';
 ```
+
+## Further information
+
+* [ALTER TABLE](/docs/sql-guide/statements/sql-alter-table)
