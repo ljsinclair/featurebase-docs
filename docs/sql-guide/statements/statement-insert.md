@@ -18,7 +18,7 @@ Here is an example of an insert statement:
 insert into test_table (_id, column1, column2) values (1, 10, 'data10'), (2, 10, 'data10');
 ```
 
-## Syntax
+## DDL Syntax
 
 ![expr](/img/sql/insert_stmt.svg)
 

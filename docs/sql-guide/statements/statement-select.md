@@ -10,7 +10,7 @@ nav_order: 1
 
 Selects data from a FeatureBase table.
 
-## Syntax
+## DDL Syntax
 
 ![expr](/img/sql/select_stmt.svg)
 

@@ -10,7 +10,7 @@ nav_order: 1
 
 Shows the list of FeatureBase tables that exist on the server.
 
-### Syntax
+### DDL Syntax
 
 ```sql
 SHOW TABLES;

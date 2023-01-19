@@ -26,7 +26,7 @@ with
     input 'FILE';
 ```
 
-## Syntax
+## DDL Syntax
 
 ![expr](/img/sql/bulk_insert_stmt.svg)
 

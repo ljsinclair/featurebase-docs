@@ -10,7 +10,7 @@ nav_order: 5
 
 
 
-## Syntax
+## DDL Syntax
 
 ![expr](/assets/images/sql-guide/add_column.svg)
 

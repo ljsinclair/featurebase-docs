@@ -8,6 +8,6 @@ nav_order: 6
 
 # DROP COLUMN statement
 
-## Syntax
+## DDL Syntax
 
 ![expr](/assets/images/sql-guide/drop_column.svg)

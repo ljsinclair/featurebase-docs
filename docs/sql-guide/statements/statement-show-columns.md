@@ -10,7 +10,7 @@ nav_order: 6
 
 ![expr](/assets/images/sql-guide/show_columns.svg)
 
-## Syntax
+## DDL Syntax
 
 ```sql
 SHOW COLUMNS FROM table_name;

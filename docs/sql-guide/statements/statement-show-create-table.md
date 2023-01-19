@@ -10,7 +10,7 @@ nav_order: 3
 
 Shows the data definition language (DDL) statement for a FeatureBase table.
 
-### Syntax
+### DDL Syntax
 
 ```sql
 SHOW CREATE TABLE table_name;

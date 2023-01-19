@@ -10,7 +10,7 @@ nav_order: 4
 
 Alters a FeatureBase table.
 
-### Syntax
+### DDL Syntax
 
 ![expr](/img/sql/alter_table_stmt.svg)
 
