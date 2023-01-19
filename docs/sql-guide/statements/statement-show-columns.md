@@ -8,7 +8,7 @@ nav_order: 6
 
 # SHOW COLUMNS statement
 
-![expr](/img/sql/show_columns.svg)
+![expr](/assets/images/sql-guide/show_columns.svg)
 
 ## Syntax
 
