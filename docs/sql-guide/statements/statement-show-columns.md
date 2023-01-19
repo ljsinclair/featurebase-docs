@@ -40,3 +40,22 @@ SHOW COLUMNS FROM table_name;
 | `epoch` | int | Epoch for `TIMESTAMP()` column | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `time_quantum` | string | Applies to `IDSET()` and `STRINGSET()` columns | [IDSET() data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET() data type](/docs/sql-guide/data-types/data-type-stringset) |
 | `ttl` | string | Applies to `IDSET()` and `STRINGSET()` columns | [IDSET() data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET() data type](/docs/sql-guide/data-types/data-type-stringset) |
+
+## Examples
+
+### SHOW COLUMNS on sample database `skills` table
+
+```
+SHOW COLUMNS FROM skills;
+```
+
+Returns
+
+|_id | name | type | internal_type | created_at | keys | cache_type | cache_size | scale | min | max | timeunit | epoch | timequantum | ttl |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| _id | _id | string | string | 2023-01-05T05:53:06Z | true |  | 0 | 0 | 0 | 0 |  | 0 |  | 0s |
+| bools | bools | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| bools-exists | bools-exists | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| id | id | int | int | 2023-01-05T05:53:06Z | false |  | 0 | 0 | -9223372036854776000 | 9223372036854776000 |  | 0 |  | 0s |
+| skills | skills | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| titles | titles | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
