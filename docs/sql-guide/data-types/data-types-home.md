@@ -27,7 +27,7 @@ Data types and constraints are used to define table columns when creating tables
 
 Data types used to define the type of data that a table column can contain. They are modified by Constraints.
 
-![expr](/img/sql/type_name.svg)
+![expr](/assets/images/sql-guide/type_name.svg)
 
 ### Mapping data types
 
@@ -64,11 +64,9 @@ Data types used to define the type of data that a table column can contain. They
 
 ## Constraints
 
-![expr](/img/sql/column_constraint.svg)
+![expr](/assets/images/sql-guide/column_constraint.svg)
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
-
-
 
 ## Further information
 

@@ -14,11 +14,11 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 
 ## BNF Syntax diagrams
 
-![expr](/img/sql/create_table_stmt.svg)
-![expr](/img/sql/column_def.svg)
-![expr](/img/sql/type_name.svg)
-![expr](/img/sql/column_constraint.svg)
-![expr](/img/sql/table_options.svg)
+![expr](/assets/images/sql-guide/create_table_stmt.svg)
+![expr](/assets/images/sql-guide/column_def.svg)
+![expr](/assets/images/sql-guide/type_name.svg)
+![expr](/assets/images/sql-guide/column_constraint.svg)
+![expr](/assets/images/sql-guide/table_options.svg)
 
 ## Syntax
 
@@ -34,24 +34,25 @@ CREATE TABLE table_name
 
 | Argument | Description | Required? | Further information |
 |---|---|---|
-| table_name | Valid table name | Yes |
-| IF NOT EXISTS |   |  |  |
-| _id | Table index | Yes | [_id column] |
-| id | Constraint for non-keyed table | Yes for non-keyed table |  |
-| string | Constraint for a keyed table | Yes for keyed table |  |
-| column_name | Valid column name |  |  |
-| type_name | FeatureBase data type | Yes | [Data Types](/docs/sql-guide/data-types/data-types-home) |
-| column_constraint | Data type constraint | For certain data types | [Data Types](/docs/sql-guide/data-types/data-types-home#constraints) |
-| comment | Optional string literal that describes the table | No |  |
+| `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
+| `IF NOT EXISTS` |   |  |  |
+| `_id` | Table index | Yes | [_id column](/#_id-column) |
+| `id` | Constraint for non-keyed table | Yes for non-keyed table |  |
+| `string` | Constraint for a keyed table | Yes for keyed table |  |
+| `column_name` | Valid column name |  |  |
+| `type_name` | FeatureBase data type | Yes | [Data Types](/docs/sql-guide/data-types/data-types-home) |
+| `column_constraint` | Data type constraint | For certain data types | [Data Types](/docs/sql-guide/data-types/data-types-home#constraints) |
+| `comment` | Optional string literal that describes the table | No |  |
 
 ## Additional information
 
-## Naming standards
+### Naming standards
 
+{% include /concepts/standard-naming-obj.md %}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
-## `_id` column
+### `_id` column
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 

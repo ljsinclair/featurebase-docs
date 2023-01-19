@@ -8,6 +8,18 @@ nav_order: 1
 
 # ADD COLUMN statement
 
+
+
 ## Syntax
 
 ![expr](/assets/images/sql-guide/add_column.svg)
+
+```
+
+
+```
+
+## Arguments
+
+
+## Additional information
