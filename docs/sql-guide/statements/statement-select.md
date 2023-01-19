@@ -10,37 +10,71 @@ nav_order: 1
 
 Selects data from a FeatureBase table.
 
-## DDL Syntax
+## BNF diagrams
 
 ![expr](/assets/images/sql-guide/select_stmt.svg)
-
-### DISTINCT
-
-The DISTINCT keyword specifies that only unique rows exist in the output.
-
-### top_clause
-
 ![expr](/assets/images/sql-guide/top_clause.svg)
-
-The TOP clause specifies that a limit is applied to the number of rows returned in the output. the _expr_ used in the TOP clause must be an integer literal.
-
-### select_list
-
 ![expr](/assets/images/sql-guide/select_list.svg)
 ![expr](/assets/images/sql-guide/select_item.svg)
-
-The _select_list_ contains the items selected to form the output result set. The select list is a series of expressions seperated by commas.
-
-These items can be:
-
-- `*` short hand for all columns in a table; similarly, `qualifier.*` limits this expression to all columns for the table _qualifier_ specified
-- _expr_ can be any constant, function or combination thereof joined by operators, or a subquery
-
-Items in the _select_list_ can be aliased with a _column_alias_.
-
-### from_clause
-
 ![expr](/assets/images/sql-guide/from_clause.svg)
+
+
+## DDL Syntax
+
+```
+SELECT
+  [DISTINCT]
+  [TOP | TOPN](expr)
+  [
+    [select_item [ * | qualifier.* ],...
+    [expr [as [column_alias]]]
+  ]
+  FROM
+    [identifier | table_valued_function
+      [[AS] | [table_alias | Shards (integer_literal,...)]]
+    ] |
+    [(select_stmt)
+      [[AS] [table_alias]]
+    ]
+  [WHERE expr]
+  [GROUP BY column expr,...]
+  [HAVING expr]
+  [ORDER BY order_by_expr[asc | desc],...]
+  ]
+```
+
+## Arguments
+
+| Argument | Description | Required |
+|---|---|---|
+| `DISTINCT` | Optional keyword that specifies only unique rows exist in the output |  |
+| `top(expr)` | Specify the number of records to return.  |  |
+| `topn(expr)` |  |  |
+| `expr` | String literal expression used in TOP clause |  |
+| `select_item` | named item to select
+| `*` | Wildcard that represents all columns in a table |  |
+| `qualifier.*` | limits wildcard to columns for the specified qualifier |  |
+| `expr` | Any constant, function or combination thereof joined by operators, or a subquery |  |
+| FROM | Specifies which relations to select data from |
+| identifier |  |  |
+| table_valued_function |  |  |
+| table_alias |  |  |
+| shards (integer_literal) |  |  |
+| select_stmnt | nested select statement |  |
+| table_alias |  |  |
+| WHERE expr |  |  |
+| GROUP BY col_expr |  |  |
+| HAVING expr |  |  |
+| ORDER BY expr |  |  |
+
+## Additional information
+
+## select_list
+
+* You can use a column_alias for items in the select list
+
+
+
 
 The FROM clause specifies which relations to select data from. It is a list of _table_or_subquery_ expressions.
 
