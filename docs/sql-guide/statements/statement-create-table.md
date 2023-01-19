@@ -78,8 +78,8 @@ create table allcoltypes (
 ## Further information
 
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-show-create-table)
-* [SHOW TABLES](/docs/sql-guide/statements/statement-show-tables)
-* [ALTER TABLE](/docs/sql-guide/statements/statement-alter-table)
+* [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
+* [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
 * [ADD COLUMN](/docs/sql-guide/statements/statement-add-column)
-* [SHOW COLUMNS](/docs/sql-guide/statements/statement-show-columns)
-* [DROP COLUMN](/docs/sql-guide/statements/statement-drop-column)
+* [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
+* [DROP COLUMN](/docs/sql-guide/statements/statement-column-drop)
