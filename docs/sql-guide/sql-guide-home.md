@@ -9,6 +9,8 @@ has_toc: false
 # FeatureBase SQL guide
 {: .no_toc }
 
+FeatureBase supports different types of queries that are discussed further in the following reference pages.
+
 {% include page-toc.md %}
 
 ## Statements
