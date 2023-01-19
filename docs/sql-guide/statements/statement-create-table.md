@@ -3,14 +3,15 @@ title: CREATE TABLE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 1
+nav_order: 2
 ---
 
 ## CREATE TABLE statement
 
 
 
-Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful. The identifier for the table must conform to the rules of FeatureBase identifiers.
+
+Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful.
 
 ## BNF Syntax diagrams
 
@@ -27,7 +28,7 @@ CREATE TABLE table_name
   [IF NOT EXISTS]
   ({_id {id | string}},
   column_name type_name [column_constraint],...)
-  [comment 'comment']
+  [comment 'comment'];
 ```
 
 ### Arguments
@@ -35,11 +36,11 @@ CREATE TABLE table_name
 | Argument | Description | Required? | Further information |
 |---|---|---|
 | `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
-| `IF NOT EXISTS` |   |  |  |
+| `IF NOT EXISTS` | Optional argument that stops statement execution if a table of the same name already exists | No |  |
 | `_id` | Table index | Yes | [_id column](/#_id-column) |
 | `id` | Constraint for non-keyed table | Yes for non-keyed table |  |
 | `string` | Constraint for a keyed table | Yes for keyed table |  |
-| `column_name` | Valid column name |  |  |
+| `column_name` | Valid column name | Yes |  |
 | `type_name` | FeatureBase data type | Yes | [Data Types](/docs/sql-guide/data-types/data-types-home) |
 | `column_constraint` | Data type constraint | For certain data types | [Data Types](/docs/sql-guide/data-types/data-types-home#constraints) |
 | `comment` | Optional string literal that describes the table | No |  |
@@ -82,4 +83,3 @@ create table allcoltypes (
 * [ADD COLUMN](/docs/sql-guide/statements/statement-add-column)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-show-columns)
 * [DROP COLUMN](/docs/sql-guide/statements/statement-drop-column)
-* []

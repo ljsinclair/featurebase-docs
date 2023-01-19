@@ -3,7 +3,7 @@ title: ALTER TABLE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 2
+nav_order: 4
 ---
 
 # ALTER TABLE statement

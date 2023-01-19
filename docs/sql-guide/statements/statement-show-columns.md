@@ -3,18 +3,18 @@ title: SHOW COLUMNS
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 1
+nav_order: 6
 ---
 
 # SHOW COLUMNS statement
+
+![expr](/img/sql/show_columns.svg)
 
 ## Syntax
 
 ```sql
 SHOW COLUMNS FROM table;
 ```
-
-![expr](/img/sql/show_columns.svg)
 
 ## Returns
 
