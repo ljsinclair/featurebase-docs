@@ -28,17 +28,17 @@ with
 
 ## DDL Syntax
 
-![expr](/img/sql/bulk_insert_stmt.svg)
+![expr](/assets/images/sql-guide/bulk_insert_stmt.svg)
 
 ### column_list
 
-![expr](/img/sql/column_list.svg)
+![expr](/assets/images/sql-guide/column_list.svg)
 
 _column_list_ is the target list of columns to be inserted into. They must be valid columns for the specified table _table_name_, and one of the columns must be the `_id` column. If no _column_list_ is specified, a column list consisting of all columns in the table is assumed.
 
 ### MAP clause
 
-![expr](/img/sql/map_list.svg)
+![expr](/assets/images/sql-guide/map_list.svg)
 
 The MAP clause defines how the source data is read and what the expected data types are.
 
@@ -63,7 +63,7 @@ If NDJSON is specified as the source, the map expression should be a string [Jso
 
 ### TRANSFORM clause
 
-![expr](/img/sql/value_list.svg)
+![expr](/assets/images/sql-guide/value_list.svg)
 
 The TRANSFORM clause allows specification of transforms before the rows are inserted. It is a list of expressions that are evaluated during execution for each row. Any valid SQL expression can be used in the transform clause. The values from the map can be referenced using variables named for the ordinal position they are specified in the map clause. For example, given a MAP clause as follows:
 
@@ -143,8 +143,8 @@ Correct inline STREAM example:
 
 ### WITH clause
 
-![expr](/img/sql/bulk_insert_options.svg)
-![expr](/img/sql/bulk_insert_option.svg)
+![expr](/assets/images/sql-guide/bulk_insert_options.svg)
+![expr](/assets/images/sql-guide/bulk_insert_option.svg)
 
 The WITH clause allows you to pass statement level options
 

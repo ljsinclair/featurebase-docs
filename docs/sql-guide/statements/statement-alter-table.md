@@ -12,14 +12,14 @@ Alters a FeatureBase table.
 
 ### DDL Syntax
 
-![expr](/img/sql/alter_table_stmt.svg)
+![expr](/assets/images/sql-guide/alter_table_stmt.svg)
 
 #### add_column
 
-![expr](/img/sql/add_column.svg)
+![expr](/assets/images/sql-guide/add_column.svg)
 
 See [`CREATE TABLE`](/docs/sql-guide/sql-create-table) for column_def
 
 #### drop_column
 
-![expr](/img/sql/drop_column.svg)
+![expr](/assets/images/sql-guide/drop_column.svg)

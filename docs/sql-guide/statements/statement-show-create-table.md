@@ -16,7 +16,7 @@ Shows the data definition language (DDL) statement for a FeatureBase table.
 SHOW CREATE TABLE table_name;
 ```
 
-![expr](/img/sql/show_create_table.svg)
+![expr](/assets/images/sql-guide/show_create_table.svg)
 
 ### Returns
 

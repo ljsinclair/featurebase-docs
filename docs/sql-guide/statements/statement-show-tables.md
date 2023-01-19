@@ -16,7 +16,7 @@ Shows the list of FeatureBase tables that exist on the server.
 SHOW TABLES;
 ```
 
-![expr](/img/sql/show_tables.svg)
+![expr](/assets/images/sql-guide/show_tables.svg)
 
 ### Returns
 

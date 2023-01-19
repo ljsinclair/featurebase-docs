@@ -8,11 +8,11 @@ nav_order: 5
 
 # ADD COLUMN statement
 
-
+![expr](/assets/images/sql-guide/add_column.svg)
 
 ## DDL Syntax
 
-![expr](/assets/images/sql-guide/add_column.svg)
+
 
 ```
 
