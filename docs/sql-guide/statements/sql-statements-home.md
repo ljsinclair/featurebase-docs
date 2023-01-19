@@ -1,5 +1,5 @@
 ---
-title: SQL Statements
+title: Statements
 layout: default
 parent: SQL guide
 has_children: true

@@ -8,58 +8,54 @@ nav_order: 1
 
 ## CREATE TABLE statement
 
+
+
 Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful. The identifier for the table must conform to the rules of FeatureBase identifiers.
 
-### Syntax
+## BNF Syntax diagrams
 
 ![expr](/img/sql/create_table_stmt.svg)
-
-#### column_def
-
 ![expr](/img/sql/column_def.svg)
-
-You must specify an `_id` column for `CREATE TABLE` to be successful. The type for the `_id` column can be `id` for a non-keyed table or `string` for a keyed table. No column constraints are permitted for the `_id` column.
-The identifier for each column must conform to the rules of FeatureBase identifiers. Valid type names are specified in [Data Types](/docs/sql-guide/data-types/data-types-home). `decimal` types require a scale to be specified.
-
-
-
-#### type_name
-
 ![expr](/img/sql/type_name.svg)
-
-See also [Data Types](/docs/sql-guide/data-types/data-types-home).
-
-#### column_constraint
-Column constraints are optional for columns.
-
 ![expr](/img/sql/column_constraint.svg)
-
-| **Constraint Type**                                    | **Applies to**               | **Comment**                                                                                                                                                                                                                                                          |
-|--------------------------------------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TIMEQUANTUM<br>optional: TTL                               | IDSET, STRINGSET             | Input:<br>timequantum:<br>YMD ,YM,Y<br>ttl:<br>&lt;integer&gt;+ h, m, s, ms, us, ns<br>Defaults:<br>timequantum:<br>Not set by default<br>ttl:<br>0s                                                                                                                                                     |
-| MIN, MAX                                               | INT                          | Input:<br>Integer values only<br>Defaults:<br>Min Defaults to -2^63<br>Max Defaults to 2^63 - 1                                                                                                                                                                                      |
-| TIMEUNIT                                               | TIMESTAMP                    | Input:<br>"s", "ms", "us", "ns" (basically go Duration)<br>Defaults:<br> "s"                                                                                                                                                                                                     |
-| EPOCH                                                  | TIMESTAMP                    | Input:<br>RFC339 time stamp string<br>The epoch which timestamps should be relative to. The value may specify a timezone, for example 1980-11-30T14:20:28.000+07:00, or use zulu time (i.e. +00:00) 1980-11-30T14:20:28.000Z.<br>Defaults:<br>The Unix epoch (1970-01-01T00:00:00Z) |
-
-<!--
-removed from functionality but keeping in a comment if later available:
-| CACHETYPE (type and size)                              | IDSET, STRINGSET, ID, STRING | Input:<br>type:ranked, none<br>size:<br>Integer? boundary?<br>Defaults:<br>type:ranked<br>size:50000                                        -->
-
-#### table_options
-
 ![expr](/img/sql/table_options.svg)
 
-| **Table Option** | **Comment**                                                           |
-|------------------|-----------------------------------------------------------------------|
-| COMMENT          | string literal;  description of the table                             |
+## Syntax
 
-<!--
-removed from functionality but keeping in a comment if later available:
-| KEYPARTITIONS    | integer literal; between 1-10000                                      |
-| SHARDWIDTH       | integer literal; must be a power of two greater than or equal to 2^16 |
--->
+```
+CREATE TABLE table_name
+  [IF NOT EXISTS]
+  ({_id {id | string}},
+  column_name type_name [column_constraint],...)
+  [comment 'comment']
+```
 
-#### Example
+### Arguments
+
+| Argument | Description | Required? | Further information |
+|---|---|---|
+| table_name | Valid table name | Yes |
+| IF NOT EXISTS |   |  |  |
+| _id | Table index | Yes | [_id column] |
+| id | Constraint for non-keyed table | Yes for non-keyed table |  |
+| string | Constraint for a keyed table | Yes for keyed table |  |
+| column_name | Valid column name |  |  |
+| type_name | FeatureBase data type | Yes | [Data Types](/docs/sql-guide/data-types/data-types-home) |
+| column_constraint | Data type constraint | For certain data types | [Data Types](/docs/sql-guide/data-types/data-types-home#constraints) |
+| comment | Optional string literal that describes the table | No |  |
+
+## Additional information
+
+## Naming standards
+
+{% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /cloud-table/cloud-standard-naming-col.md %}
+
+## `_id` column
+
+{% include /cloud-table/cloud-summary-table-pk.md %}
+
+## Examples
 
 ```sql
 create table allcoltypes (

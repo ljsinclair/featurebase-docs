@@ -11,9 +11,6 @@ has_toc: false
 
 Data types and constraints are used to define table columns when creating tables via SQL.
 
-{: .note}
-For ease of use, Constraint information is included with the relevant Data type reference.
-
 {% include page-toc.md %}
 
 ## Before you begin
@@ -29,6 +26,8 @@ For ease of use, Constraint information is included with the relevant Data type 
 ## Data types
 
 Data types used to define the type of data that a table column can contain. They are modified by Constraints.
+
+![expr](/img/sql/type_name.svg)
 
 ### Mapping data types
 
@@ -65,7 +64,11 @@ Data types used to define the type of data that a table column can contain. They
 
 ## Constraints
 
+![expr](/img/sql/column_constraint.svg)
+
 {% include /sql-guide/summary-constraints-datatypes.md %}
+
+
 
 ## Further information
 
