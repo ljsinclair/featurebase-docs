@@ -14,7 +14,7 @@ Site build URL: https://featurebasedb.github.io/featurebase-docs/
 
 ## Change CNAME records
 
-Point featurebase.com to point to new site
+Point featurebase.com to new featurebase-docs GitHub pages site
 
 * featurebase-docs > Settings > Pages > Custom Domain
 * add `docs.featurebase.com`
