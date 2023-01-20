@@ -13,6 +13,14 @@ Guidance on writing content in the `/featurebase-docs` repository
 * [local build with docker](/local-build-with-docker.md)
 * [local build with VM](/local-build-with-vm.md)
 
+## Where files go
+
+Files are organized in subfolders under the following parents:
+
+* Content -- `/docs`
+* Images -- `/assets/images`
+* Common include files -- `/_includes`
+
 ## Writing and planning content
 
 * [planning content](/writing-planning-content.md)
