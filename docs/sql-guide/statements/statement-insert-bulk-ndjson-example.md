@@ -55,7 +55,7 @@ This BULK INSERT SQL statement:
 * Performs a pre-insertion TRANSFORM on MAPped data
 * Designates a source URL
 * Adds WHERE clauses to
-  * indicate ingest batch size,
+  * indicate ingest batch size
   * state NDJSON format and URL source
   * override batch ingest error
 
