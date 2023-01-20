@@ -5,7 +5,7 @@ Guidance on writing content in the `/featurebase-docs` repository
 ## just-the-docs theme information and customizations
 
 * [theme information](/theme.md)
-* [just the docs homepage](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
+* [just the docs homepage](https://just-the-docs.github.io/just-the-docs/)
 
 ## Local builds
 
