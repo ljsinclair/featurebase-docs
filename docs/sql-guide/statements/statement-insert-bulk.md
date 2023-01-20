@@ -8,6 +8,8 @@ nav_order: 1
 
 # BULK INSERT statement
 
+Insert data from CSV, NDJSON, URL or streaming sources to a FeatureBase table.
+
 ## BNF diagrams
 
 ![expr](/assets/images/sql-guide/bulk_insert_stmt.svg)
