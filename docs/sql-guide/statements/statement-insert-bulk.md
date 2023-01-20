@@ -8,7 +8,7 @@ nav_order: 1
 
 # BULK INSERT statement
 
-Insert data from CSV, NDJSON, URL or streaming sources to a FeatureBase table.
+BULK INSERT data from CSV, NDJSON, URL or streaming sources to a FeatureBase table.
 
 ## BNF diagrams
 
@@ -159,3 +159,8 @@ with
     format 'CSV'
     input 'FILE';
 ```
+
+## Further information
+
+* [BULK INSERT using CSV data source](/docs/sql-guide/statement-insert-bulk-csv-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statement-bulk-insert-ndjson)
