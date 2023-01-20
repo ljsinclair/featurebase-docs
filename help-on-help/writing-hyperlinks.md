@@ -1,11 +1,28 @@
 # Writing hyperlinks
 
-In short, writing meaningful anchor text for a hyperlink:
+## Hyperlink styles
+
+Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
+
+## Internal or external hyperlinks
+
+| Type of link | Structure | Example |
+|---|---|---|
+| Internal | `[meaningful-anchor-text](/docs/folder/filename)` | `[Learn how to create tables in FeatureBase cloud](/docs/cloud/cloud-tables/cloud-table-create)` |
+| External | `[meaningful-anchor-text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com){:target="_blank"} |
+
+## Why write meaningful anchor text?
+
+Writing meaningful anchor text for a hyperlink:
 * helps give context to what's on the other end of the link
 * makes hyperlinks more visible and clearer in text
 * are more likely to be indexed because they'll invariably feature a keyword
 
-On the other hand, single word anchor text is sub-optimal, especially if you use the same word over and over again.
+## What's wrong with a single word?
+
+>AKA if it was good enough for the web in 1998, it's good enough in the 2020s...
+
+Single word anchor text is sub-optimal, especially if you use the same word over and over again.
 
 | Example | Problem | Solution |
 |---|---|---|

@@ -1,36 +1,40 @@
-# SITE BUILD DISABLED as of 2022-12-06
+# SITE BUILD
 
-This site will replace current docs found in:
+[![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
-* Repo: /molecula/documentation
-* URL: docs.featurebase.com
+## Site GitHub pages settings
 
-This site is IN DEVELOPMENT and not ready for public consumption.
+* [Theme setup and GH pages build settings](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#publishing-your-site-on-github-pages)
 
-* Repo is set to **private** which prevents build occurring
-* Build scripts are **disabled** to avoid being bombarded with build messages
+## Deploy using Github actions
 
-## Deployment setup
+featurebase-docs > Actions > Deploy Jekyll site to Pages > Re-run all jobs
 
-* Set repo to public: https://github.com/FeatureBaseDB/featurebase-docs/settings > scroll down and click **Change Visibility** > Public
-* Restart scripts: https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml
-* Change CName records on featurebase.com to point to new site
+Site build URL: https://featurebasedb.github.io/featurebase-docs/
+
+## Change CNAME records
+
+Point featurebase.com to point to new site
+
+* featurebase-docs > Settings > Pages > Custom Domain
+* add `docs.featurebase.com`
+* change CNAME records in domain cpanel to point to
 
 ## Site documentation
 
-Rather than turn the readme into an endless scroll I've created separate help-on-help files.
+Site documentation found under `/help-on-help` folder in the `/featurebase-docs` root. This includes:
 
-These are found in the `/help-on-help` folder which is **excluded** from the build in the `/_config.yml` file
-
-Help on help content covers the following subjects:
-
-* Theme setup
-* Where to find files
-* Building the system locally
+* two ways to build the site locally
+* two ways to check for broken links
+* writing rules of engagement (TODO)
+* writing guidance -- how to plan and design docs, write them clearly, etc
+* writing using common include files rather than duplications
+* Style guide for highlighted callout boxes, hyperlink anchor text, etc
+* Guidance on use of material icons to represent GUI elements in FB Cloud
 * File naming standards
-* How the sidebar navigation works
-* How common content `include` files work
-* Writing guidance
-* How to add hyperlinks (hint: one-word anchor text is BAD.)
-* How to highlight important information with colored callout boxes
-* How to check for broken links
+* Setting up navigation order and structure
+...and much more.
+
+NOTE: The folder is explicitly excluded from the build in the `/_config.yml` file
+
+* [Help-on-help](https://github.com/FeatureBaseDB/featurebase-docs/tree/main/help-on-help)
