@@ -21,6 +21,8 @@ Files are organized in subfolders under the following parents:
 * Images -- `/assets/images`
 * Common include files -- `/_includes`
 
+There's also a **[file naming standard](/help-on-help/file-naming.md)** that keeps things neat and tidy.
+
 ## Writing and planning content
 
 * [planning content](/help-on-help/writing-planning-content.md)
@@ -30,7 +32,6 @@ Files are organized in subfolders under the following parents:
 * [inserting material icons for cloud UI icons](/help-on-help/material-icons.md)
 * [avoid duplication with common "include" files](/help-on-help/common-include.md)
 * [sparingly highlight important information with callout boxes](/help-on-help/content-callouts.md)
-* [file naming standards](/help-on-help/file-naming.md)
 * [setup nested nodes in site navigation](/help-on-help/content-nav-nesting-folder.md)
 * [set the page order in site navigation](/help-on-help/content-nav-page-order.md)
 
