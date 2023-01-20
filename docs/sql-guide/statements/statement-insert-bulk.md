@@ -163,4 +163,4 @@ with
 ## Further information
 
 * [BULK INSERT using CSV data source](/docs/sql-guide/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statement-bulk-insert-ndjson)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statement-insert-bulk--ndjson-example)
