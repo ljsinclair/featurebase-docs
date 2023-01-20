@@ -18,6 +18,7 @@ This example demonstrates how to:
 
 * [Learn about the age dataset](https://www.gharchive.org/)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+
 Cloud users:
 {% include /cloud-db/cloud-db-dependencies.md %}
 Community users:
