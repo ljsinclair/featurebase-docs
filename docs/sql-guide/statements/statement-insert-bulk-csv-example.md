@@ -1,5 +1,5 @@
 ---
-title: BULK INSERT CSV ingest
+title: BULK INSERT CSV example
 layout: default
 parent: Statements
 grand_parent: SQL guide
