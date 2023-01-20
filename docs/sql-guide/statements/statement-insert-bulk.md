@@ -6,33 +6,38 @@ grand_parent: SQL guide
 nav_order: 1
 ---
 
-## BULK INSERT statement
+# BULK INSERT statement
 
-Bulk inserts data into a FeatureBase table. Using bulk insert you can insert multiple rows of data from a file, URL or an inline blob, using CSV or NDJSON formats. Additionally bulk insert allows for lightweight data transformation all within one request.
+BULK INSERT performs a lightweight data transformation within a single request.
+
+
+Using BULK INSERT you can use CSV or NDJSON formats to insert multiple rows of data to a FeatureBase index from:
+* a file
+* a URL
+* an inline blob
+
+## BNF diagrams
+
+![expr](/assets/images/sql-guide/bulk_insert_stmt.svg)
+![expr](/assets/images/sql-guide/column_list.svg)
+
+## DDL syntax
+
+```
+
+
+```
+
+## Arguments
+
+| Argument | Description |
+|---|---|
+|
+
 
 FeatureBase bulk insert uses an update/insert semantic. If the row exists, the values in each column will be updated to the new values.
 
-Here is an example of a bulk insert statement that reads from a CSV file and does some lightweight transformations:
 
-```sql
-bulk replace
-    into insert_test (_id, int1, string1, timestamp1)
-    map (0 id, 1 int, 2 string)
-    transform (@0, @1, @2, current_timestamp)
-from
-    '/dev/queries/insert_test.csv'
-with
-    format 'CSV'
-    input 'FILE';
-```
-
-## DDL Syntax
-
-![expr](/assets/images/sql-guide/bulk_insert_stmt.svg)
-
-### column_list
-
-![expr](/assets/images/sql-guide/column_list.svg)
 
 _column_list_ is the target list of columns to be inserted into. They must be valid columns for the specified table _table_name_, and one of the columns must be the `_id` column. If no _column_list_ is specified, a column list consisting of all columns in the table is assumed.
 
@@ -179,3 +184,19 @@ The following options are only valid when `FORMAT` is `'CSV'`
 ##### HEADER_ROW
 
 If `HEADER_ROW` is specified, the first row in the CSV is skipped.
+
+## Example
+
+Here is an example of a bulk insert statement that reads from a CSV file and does some lightweight transformations:
+
+```sql
+bulk replace
+    into insert_test (_id, int1, string1, timestamp1)
+    map (0 id, 1 int, 2 string)
+    transform (@0, @1, @2, current_timestamp)
+from
+    '/dev/queries/insert_test.csv'
+with
+    format 'CSV'
+    input 'FILE';
+```

@@ -31,7 +31,7 @@ SHOW COLUMNS FROM table_name;
 | `internal_type` | string | column data type |  |
 | `created_at` | timestamp | timestamp | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `keys` | bool | Keys on the column |  |
-| `cache_type` | string | The number of field values stored in the cache used for the TopN query | [SELECT statement](/docs/sql-guide/statements/statement-select) |
+| `cache_type` | string |  |  |
 | `cache_size` | int |  |  |
 | `scale` | int | Scale value for `DECIMAL()` column | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal) |
 | `min` | int | Minimum value for `INT()` column | [INT() data type](/docs/sql-guide/data-types/data-type-int) |

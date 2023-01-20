@@ -17,30 +17,24 @@ Selects data from a FeatureBase table.
 ![expr](/assets/images/sql-guide/select_list.svg)
 ![expr](/assets/images/sql-guide/select_item.svg)
 ![expr](/assets/images/sql-guide/from_clause.svg)
-
+![expr](/assets/images/sql-guide/table_or_subquery.svg)
+![expr](/assets/images/sql-guide/table_option.svg)
+![expr](/assets/images/sql-guide/where_clause.svg)
+![expr](/assets/images/sql-guide/group_by_clause.svg)
+![expr](/assets/images/sql-guide/having_clause.svg)
+![expr](/assets/images/sql-guide/order_by_clause.svg)
+![expr](/assets/images/sql-guide/order_by_expression.svg)
 
 ## DDL Syntax
 
 ```
 SELECT
-  [DISTINCT]
-  [TOP | TOPN](expr)
-  [
-    [select_item [ * | qualifier.* ],...
-    [expr [as [column_alias]]]
-  ]
-  FROM
-    [identifier | table_valued_function
-      [[AS] | [table_alias | Shards (integer_literal,...)]]
-    ] |
-    [(select_stmt)
-      [[AS] [table_alias]]
-    ]
-  [WHERE expr]
-  [GROUP BY column expr,...]
-  [HAVING expr]
-  [ORDER BY order_by_expr[asc | desc],...]
-  ]
+  DISTINCT
+  TOP-clause
+  SELECT-list
+  SELECT-item
+  FROM-clause
+  [TABLE-clause | SUBQUERY-clause]
 ```
 
 ## Arguments
@@ -48,9 +42,7 @@ SELECT
 | Argument | Description | Required |
 |---|---|---|
 | `DISTINCT` | Optional keyword that specifies only unique rows exist in the output |  |
-| `top(expr)` | Specify the number of records to return.  |  |
-| `topn(expr)` |  |  |
-| `expr` | String literal expression used in TOP clause |  |
+
 | `select_item` | named item to select
 | `*` | Wildcard that represents all columns in a table |  |
 | `qualifier.*` | limits wildcard to columns for the specified qualifier |  |
@@ -67,20 +59,65 @@ SELECT
 | HAVING expr |  |  |
 | ORDER BY expr |  |  |
 
-## Additional information
+## TOP-clause
+![expr](/assets/images/sql-guide/top_clause.svg)
 
-## select_list
+```
 
-* You can use a column_alias for items in the select list
+```
+
+| Argument | Description | Required |
+|---|---|---|
+| `top(expr)` | Specify the number of records to return.  |  |
+| `topn(expr)` |  |  |
+| `expr` | String literal expression used in TOP clause |  |
+
+## SELECT-list
+
+![expr](/assets/images/sql-guide/select_list.svg)
+
+```
+
+```
+
+| Argument | Description | Required |
+|---|---|---|
+
+## SELECT-item
+
+![expr](/assets/images/sql-guide/select_item.svg)
+
+```
+
+```
 
 
+| Argument | Description | Required |
+|---|---|---|
 
 
-The FROM clause specifies which relations to select data from. It is a list of _table_or_subquery_ expressions.
+## FROM-clause
 
-### table_or_subquery
+![expr](/assets/images/sql-guide/from_clause.svg)
+
+```
+
+```
+
+| Argument | Description | Required |
+|---|---|---|
+
+
+## TABLE or SUBQUERY
 
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
+
+```
+
+```
+
+| Argument | Description | Required |
+|---|---|---|
 
 The _table_or_subquery_ expression can be:
 
@@ -89,13 +126,15 @@ The _table_or_subquery_ expression can be:
 
 both of these expressions can be aliased with a _table_alias_
 
-### table_option
+## TABLE OPTION
+
 
 ![expr](/assets/images/sql-guide/table_option.svg)
 
 The SHARDS option allows you to specify against with shards the query will run.
 
-### where_clause
+
+## where_clause
 
 ![expr](/assets/images/sql-guide/where_clause.svg)
 
