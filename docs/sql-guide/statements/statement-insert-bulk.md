@@ -57,10 +57,10 @@ BULK [INSERT | REPLACE]
 | `position` | ordinal position of value in source. |  |
 | `type_name` | data type of the value in source. |  |
 | `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM clause](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM clause quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-clause-quotation-examples) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM clause quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-quotation-examples) |
 | `'path/file_name'` | Valid path and file name for data source. Not available for FeatureBase Cloud. |  |
 | `'URL'` | Valid URL for data source. |  |
-| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM clause](/docs/sql-guide/statements/statement-insert-bulk/#from-clause) |
+| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM clause inline stream example](/docs/sql-guide/statements/statement-insert-bulk/#from-inline-stream) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |
@@ -114,7 +114,7 @@ TRANSFORM (
 )
 ```
 
-### FROM clause quotation examples
+### FROM quotation examples
 
 FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
 
