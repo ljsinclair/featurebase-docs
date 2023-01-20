@@ -18,8 +18,8 @@ NOTE: You **can** install locally if desired, however this is **not** recommende
 
 ## Local build using Docker
 
-* [Local build using Docker]
+* [local build with docker](/help-on-help/local-build-with-docker.md)
 
 ## Local build using a Virtual Machine
 
-* [Local build using a Virtual Machine]
+* [local build with VM](/help-on-help/local-build-with-vm.md)
