@@ -1,5 +1,5 @@
 ---
-title: BULK INSERT JSON ingest
+title: BULK INSERT JSON example
 layout: default
 parent: Statements
 grand_parent: SQL guide
