@@ -8,75 +8,99 @@ nav_order: 1
 
 # BULK INSERT statement
 
-BULK INSERT performs a lightweight data transformation within a single request.
-
-
-Using BULK INSERT you can use CSV or NDJSON formats to insert multiple rows of data to a FeatureBase index from:
-* a file
-* a URL
-* an inline blob
-
 ## BNF diagrams
 
 ![expr](/assets/images/sql-guide/bulk_insert_stmt.svg)
+
+### Column list
 ![expr](/assets/images/sql-guide/column_list.svg)
+
+### Map list
+![expr](/assets/images/sql-guide/map_list.svg)
+
+### Transform clause
+![expr](/assets/images/sql-guide/map_list.svg)
+
+### With clause
+![expr](/assets/images/sql-guide/bulk_insert_options.svg)
+![expr](/assets/images/sql-guide/bulk_insert_option.svg)
 
 ## DDL syntax
 
 ```
-
-
+BULK [INSERT | REPLACE]
+  INTO
+    table_name [(column_name,...)]
+  MAP (position type_name,...)
+  [TRANSFORM (expr,...)]
+  FROM
+    ['path/file_name' | 'URL' | 'stream' ]
+  WITH
+    [
+      [BATCHSIZE integer_literal]
+      [ROWSLIMIT integer_literal]
+      [INPUT ['FILE' | 'URL' | 'STREAM']]
+      [FORMAT ['csv' [HEADER_ROW]] | ['ndjson' [ALLOW_MISSING_VALUES]]]
+      ...
+    ]
 ```
 
 ## Arguments
 
-| Argument | Description |
+| Argument | Description | Further information |
+|---|---|---|
+| `INSERT` | Update values in an existing row. |  |
+| `REPLACE` | Replace values in an existing row. |  |
+| `table_name` | name of target table |  |
+| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. |  |
+| `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-bulk/#map-examples)
+| `position` | ordinal position of value in source. |  |
+| `type_name` | data type of the value in source. |  |
+| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM clause](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM clause quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-clause-quotation-examples) |
+| `'path/file_name'` | Valid path and file name for data source. Not available for FeatureBase Cloud. |  |
+| `'URL'` | Valid URL for data source. |  |
+| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM clause](/docs/sql-guide/statements/statement-insert-bulk/#from-clause) |
+| `WITH` | Pass one or more statement level options. |  |
+| `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
+| `ROWSLIMIT` | Limit the number of rows processed in a batch. |
+| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. |  |
+| `FORMAT` | Set the format of the source data to `'csv'` or `'ndjson'`. |  |
+| `HEADER_ROW` | Optional CSV argument that will ignore the header in the source CSV file. |  |
+| `ALLOW_MISSING_VALUES` | Optional argument that overrides a `NULL` error message that will stop processing when valid JsonPath expressions in the MAP clause have missing data. |  |
+
+## Errors
+
+| Error | Override |
 |---|---|
-|
+| Data in source column cannot be converted to specified data type | None |
+| Mismatch between expressions in the column list and TRANSFORM clause | None |
+| NULL error when valid JsonPath expression in MAP clause have missing data | ALLOW_MISSING_VALUES |
 
+## TRANSFORM clause
 
-FeatureBase bulk insert uses an update/insert semantic. If the row exists, the values in each column will be updated to the new values.
+* a list of valid SQL expressions that are used to specify data transformation before values are inserted.
+* uses variables named for the ordinal position values are specified in the MAP clause.
 
+{: .important}
+The number of expressions in the column list and TRANSFORM clause must match.
 
+* [TRANSFORM example](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
 
-_column_list_ is the target list of columns to be inserted into. They must be valid columns for the specified table _table_name_, and one of the columns must be the `_id` column. If no _column_list_ is specified, a column list consisting of all columns in the table is assumed.
+## Examples
 
-### MAP clause
+### MAP examples
 
-![expr](/assets/images/sql-guide/map_list.svg)
+| Input type | MAP expression for value in source column | Example |
+|---|---|---|
+| CSV | Integer offset |  |
+| NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDSON value | `MAP ('$.idpath' id, '$.int.path.' int, '$.path.to.string' string)` |
 
-The MAP clause defines how the source data is read and what the expected data types are.
+### TRANSFORM examples
 
-_map_list_ is a list of expressions and data types that specify how to get the source data from the source. If a TRANSFORM clause is specified, the values from the map can be referenced using variables named for the ordinal position they are specified in the map clause. For example, given a MAP clause as follows:
-
-`MAP (0 id, 1 int, 4 string)`
-
-the values can be referred to using the variables `@0`, `@1` and `@2` respectively. If there is no TRANSFORM clause specified, the values from the map clause are placed directly into the columns specified in the _column_list_.
-
-
-#### MAP clause for CSV data
-
-If CSV is specified as the source, the map expression should be an integer offset for the desired column in the CSV data. The data in that column is read and an attempt is made to convert it to the specified data type. An error occurs if the data cannot be converted to the type specified.
-
-#### MAP clause for NDJSON data
-
-If NDJSON is specified as the source, the map expression should be a string [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the desired value in the NDJSON data:
-
-`MAP ('$.idpath' id, '$.int.path.' int, '$.path.to.string' string)`
-
- The expression is evaluated on the data and an attempt is made to convert it to the specified data type. An error occurs if the data cannot be converted to the type specified.
-
-### TRANSFORM clause
-
-![expr](/assets/images/sql-guide/value_list.svg)
-
-The TRANSFORM clause allows specification of transforms before the rows are inserted. It is a list of expressions that are evaluated during execution for each row. Any valid SQL expression can be used in the transform clause. The values from the map can be referenced using variables named for the ordinal position they are specified in the map clause. For example, given a MAP clause as follows:
-
-`MAP (0 id, 1 int, 4 string)`
-
-the values can be referred to using the variables `@0`, `@1` and `@2` respectively.
-
-The number of expressions in the TRANSFORM clause must match the number of expressions in the column list. Transforms can be any valid expression e.g. (given the `MAP` clause above):
+| Map clause | TRANSFORM clause |
+|---|---|
+| `MAP (0 id, 1 int, 4 string)` | Variables: `@0`, `@1` and `@2` |
 
 ```sql
 TRANSFORM (
@@ -90,28 +114,26 @@ TRANSFORM (
 )
 ```
 
+### FROM clause quotation examples
 
-### FROM clause
+FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
 
-The FROM clause specifies the source of the data. It can be a single line string literal or a multi-line string literal. The way this literal is interpreted depends on the value of the INPUT option (ses below).
+| Incorrect | Correct |
+|---|---|
+| `FeatureBase's speed` | `FeatureBase''s speed` |
+| `""Time is money." – Benjamin Franklin."` | `"""Time is money."" – Benjamin Franklin."` |
 
-#### FROM clause for files
+### FROM inline stream
 
-For files, the FROM clause should be a valid file name. In FeatureBase Cloud this will fail with an error because there is no local access to the file system.
+The contents of an inline stream string literal are treated as a file and read line-by-line.
 
-#### FROM clause for urls
+Single line:
 
-For urls, the FROM clause should be a valid url.
-
-#### FROM clause for inline stream
-
-For an inline stream, the contents of the literal a read as though they were in a file. A stream can be specified using the single-line string literal syntax:
-
-```sql
+```
 'this is a single-line string literal'
 ```
 
-Or using the multi-line string literal syntax (prepend an `x`):
+Multi line (prepend with `x`)
 
 ```sql
 x'this
@@ -122,72 +144,7 @@ string
 literal'
 ```
 
-FeatureBase will treat the contents of this string literal as though it was a file and read from it line by line.
-
-#### FROM clause for STREAM data with single quotes (`'`) and double quotes(`"`)
-
-Data in the FROM clause that contain single quotes (`'`) must be escaped with an additional single quote (even if CSV values are quoted).
-
-Incorrect inline STREAM example:
-
-`FeatureBase's speed`
-
-Correct inline STREAM example:
-
-`FeatureBase''s speed`
-
-If data in the FROM clause is quoted, the double quotes (`"`) in the data must be escaped with an additional double quote.
-
-Incorrect inline STREAM example:
-
-`""Time is money." – Benjamin Franklin."`
-
-Correct inline STREAM example:
-
-`"""Time is money."" – Benjamin Franklin."`
-
-### WITH clause
-
-![expr](/assets/images/sql-guide/bulk_insert_options.svg)
-![expr](/assets/images/sql-guide/bulk_insert_option.svg)
-
-The WITH clause allows you to pass statement level options
-
-#### BATCHSIZE
-
-Bulk insert commits row in batches. Use the `BATCHSIZE` option to specfify the batch size. The default is 1000.
-
-#### ROWSLIMIT
-
-Bulk insert allows you you limit the number of rows processed. Setting the `ROWSLIMIT` option to 100, for example, will limit the number of rows processed to 100.
-
-#### INPUT
-
-The `INPUT` option sets the type of input. Valid values are `'FILE'`, `'URL'` or `'STREAM'`
-
-#### FORMAT
-
-The `FORMAT` option sets the format of the source data. Valid values are `'CSV'` and `'NDJSON'`
-
-#### NDJSON Options
-
-The following options are only valid when `FORMAT` is `'NDJSON'`
-
-##### ALLOW_MISSING_VALUES
-
-If `ALLOW_MISSING_VALUES` is specified, any JsonPath expressions in the MAP clause that are valid but can't find a value in the data will return a `NULL`. This is useful if you expect some missing data and want to continue inserting. If `ALLOW_MISSING_VALUES` is not specified, an error will return on the first record of missing data.
-
-#### CSV Options
-
-The following options are only valid when `FORMAT` is `'CSV'`
-
-##### HEADER_ROW
-
-If `HEADER_ROW` is specified, the first row in the CSV is skipped.
-
-## Example
-
-Here is an example of a bulk insert statement that reads from a CSV file and does some lightweight transformations:
+### BULK REPLACE from CSV file with TRANSFORM
 
 ```sql
 bulk replace
