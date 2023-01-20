@@ -2,7 +2,7 @@ title: Featurebase help
 description: FeatureBase enables data engineers to process and operate on massive, continuously changing datasets in real time.
 theme: just-the-docs
 
-remote_theme: "pmarsceill/just-the-docs"
+url: https://github.com/FeatureBaseDB/featurebase-docs
 
 # url: https://just-the-docs.github.io
 
