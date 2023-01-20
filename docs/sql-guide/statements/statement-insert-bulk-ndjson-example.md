@@ -6,14 +6,24 @@ grand_parent: SQL guide
 nav_order: 1
 ---
 
-# Ingest JSON with BULK INSERT
+# BULK INSERT example using NDJSON file
+
+This example demonstrates how to:
+
+* Create a FeatureBase table with a required structure
+* Copy and transform data from an NDJSON source
+* Insert data into the FeatureBase table
 
 ## Before you begin
-{% include /sql-guide/before_ingest.md %}
 
-[Learn about the age dataset](https://www.gharchive.org/)
+* [Learn about the age dataset](https://www.gharchive.org/)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+Cloud users:
+{% include /cloud-db/cloud-db-dependencies.md %}
+Community users:
+* [Learn how to create tables](/docs/sql-preview/sql-create-table)
 
-## Step 1: create table
+## Step 1: create `github-stats` table
 
 ```sql
 CREATE TABLE github-stats (
@@ -35,7 +45,18 @@ created_at TIMESTAMP
 );
 ```
 
-## Step 2: ingest data
+## Step 2: BULK INSERT data to `github-stats` table
+
+This BULK INSERT SQL statement:
+
+* Designates a target table
+* MAPS source data
+* Performs a pre-insertion TRANSFORM on MAPped data
+* Designates a source URL
+* Adds WHERE clauses to
+  * indicate ingest batch size,
+  * state NDJSON format and URL source
+  * override batch ingest error
 
 ```sql
 BULK INSERT INTO github-stats (
@@ -106,4 +127,4 @@ SELECT TOP(10) * FROM github-stats;
 
 ## Further information
 
-* [Bulk Insert](/docs/sql-guide/sql-bulk-insert)
+* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-bulk-csv-example)

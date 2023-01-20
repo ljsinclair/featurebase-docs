@@ -10,9 +10,13 @@ nav_order: 1
 
 
 ## Before you begin
-{% include /sql-guide/before_ingest.md %}
 
-[Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download)
+* [Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+Cloud users:
+{% include /cloud-db/cloud-db-dependencies.md %}
+Community users:
+* [Learn how to create tables](/docs/sql-preview/sql-create-table)
 
 ## Step 1: create table
 
@@ -67,4 +71,4 @@ SELECT TOP(10) * FROM age;
 
 ## Further information
 
-* [Bulk Insert](/docs/sql-guide/sql-bulk-insert)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
