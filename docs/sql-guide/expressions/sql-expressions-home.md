@@ -10,10 +10,10 @@ has_toc: false
 # SQL Expressions
 
 ### identifier
-![expr](/img/sql/identifier.svg)
+![expr](/assets/images/sql-guide/identifier.svg)
 
 ### expr
-![expr](/img/sql/expr.svg)
+![expr](/assets/images/sql-guide/expr.svg)
 
 ### integer_literal
 
@@ -25,26 +25,26 @@ has_toc: false
 
 
 ### set_literal
-![expr](/img/sql/set_literal.svg)
+![expr](/assets/images/sql-guide/set_literal.svg)
 
 ### tuple_literal
-![expr](/img/sql/tuple_literal.svg)
+![expr](/assets/images/sql-guide/tuple_literal.svg)
 
 ### date_literal
 
 ### function_call
-![expr](/img/sql/function_call.svg)
+![expr](/assets/images/sql-guide/function_call.svg)
 
 ### paren_select_stmt
-![expr](/img/sql/paren_select_stmt.svg)
+![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
 ### case_expr
-![expr](/img/sql/case_expr.svg)
+![expr](/assets/images/sql-guide/case_expr.svg)
 
 ## Operators
 
 ### unary_op
-![expr](/img/sql/unary_op.svg)
+![expr](/assets/images/sql-guide/unary_op.svg)
 
 ### binary_op
-![expr](/img/sql/binary_op.svg)
+![expr](/assets/images/sql-guide/binary_op.svg)
