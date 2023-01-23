@@ -15,13 +15,9 @@ Data types and constraints are used to define table columns when creating tables
 
 ## Before you begin
 
-* Create a database in two ways:
-  1. [Create a Cloud database using the UI](/docs/cloud/cloud-databases/cloud-db-create)
-  2. [Create a Cloud database using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
-* Create a table in three ways:
-  1. [Create table using the UI](/docs/cloud/cloud-tables/cloud-table-create)
-  2. [Create table using SQL](/docs/sql-guide/statements/statement-table-create)
-  3. [Create table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
 
 ## Data types
 

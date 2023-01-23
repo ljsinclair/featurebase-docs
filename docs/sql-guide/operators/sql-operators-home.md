@@ -1,5 +1,5 @@
 ---
-title: SQL Operators
+title: Operators
 layout: default
 parent: operators
 grand_parent: SQL guide
@@ -7,6 +7,10 @@ nav_order: 1
 ---
 
 # SQL Operators
+
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
 
 ## identifier
 ![expr](/assets/images/sql-guide/identifier.svg)

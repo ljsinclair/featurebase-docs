@@ -9,6 +9,10 @@ has_toc: false
 # FeatureBase SQL guide
 {: .no_toc }
 
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
+
 ## Statements
 
 * [SQL statements](/docs/sql-guide/statements/statements-home)

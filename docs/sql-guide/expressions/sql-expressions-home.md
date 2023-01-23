@@ -1,5 +1,5 @@
 ---
-title: SQL Expressions
+title: Expressions
 layout: default
 parent: SQL guide
 has_children: true
@@ -8,6 +8,10 @@ has_toc: false
 ---
 
 # SQL Expressions
+
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
 
 ### identifier
 ![expr](/assets/images/sql-guide/identifier.svg)

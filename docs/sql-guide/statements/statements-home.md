@@ -11,6 +11,12 @@ has_toc: false
 
 SQL statements can be executed in the Query editor.
 
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
+
+## SELECT statement
+
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 
 ## SHOW statements
@@ -21,7 +27,7 @@ View the result of a query.
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-show-create-table)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
 
-## Table statements
+## TABLE statements
 
 * [CREATE TABLE](/docs/sql-guide/statements/statement-create-table)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
