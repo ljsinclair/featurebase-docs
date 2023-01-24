@@ -7,10 +7,12 @@ grand_parent: Community
 
 # How do I setup a query audit log?
 
-The query audit log records all queries run from an authenticated FeatureBase user.
+The FeatureBase audit log begins recording information when the server is started. It records:
+
+* permissions information from `permissions.yaml`
+* user ID, user name, query string and IP for every request
 
 ## Before you begin
-
 
 * [Add authentication](/docs/community/com-config/com-config-authentication)
 * [Add group permissions](/docs/community/com-config/com-config-group-permissions)

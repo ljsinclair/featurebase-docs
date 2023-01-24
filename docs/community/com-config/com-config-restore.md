@@ -7,7 +7,7 @@ grand_parent: Community
 
 # How do I restore from a backup?
 
-You can use the `featurebase-restore` command to restore a backup to any size cluster.
+The `featurebase-restore` command is used to restore a backup to a new FeatureBase cluster of any size.
 
 {: .warning}
 `featurebase-restore` should **only** be executed against an empty cluster. Data loss and/or instability **will** occur if this is attempted on a live cluster with data.
@@ -22,45 +22,37 @@ You can use the `featurebase-restore` command to restore a backup to any size cl
 
 ```
 featurebase restore
+  [--concurrency <int_val>]
   --host [https://]featurebase:10101
   -source /directory/path/
   [--auth-token <token>]
+  [<TLS_flags>]
 ```
 
 ## Arguments
 
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
-{% include /com-config/com-config-flags-common.md %}
+{% include /com-config/com-config-flags-backup-restore-common.md %}
 | -source | Source directory and backup file. Can be abbreviated to `-s` | Yes |  |
 | /directory/path/ | Path to backups | Yes |  |
-{% include /com-config/com-config-backup-restore-flags-auth.md %}
+{% include /com-config/com-config-flags-backup-restore-auth.md %}
 
-## Restoration process
+## TLS authentication flags
 
-The ideal restoration process involves the following tasks:
+| Argument | Data type Description | Required? | Further information |
+|---|---|---|---|---|
+{% include /com-config/com-config-tls-auth.md %}
 
-### Stop running processes
+## Examples
 
-* Stop running processes such as ingest tasks
+## Increase restore speed
 
-### Create a new cluster and restore
+Use the `concurrency` flag to restore files at a higher speed
 
-* Start a new cluster
-* Restore from the backup
+```
+featurebase restore --host newfeaturebase:10101 -s /path/to/backup/ --concurrency 4
+```
 
-### Testing
-
-* Test queries return expected results
-
-### Redirect query traffic and restart processes
-
-* Redirect query traffic from original cluster to new cluster
-* Start processes including ingest
-
-### Cleanup
-
-* Backup the original cluster if it still exists
-* Tear down the original cluster
 
 ## Further information

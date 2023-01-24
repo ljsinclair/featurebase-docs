@@ -1,5 +1,5 @@
 ---
-title: Obtain auth token
+title: Obtain auth tokens
 layout: default
 parent: Community configuration
 grand_parent: Community

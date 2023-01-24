@@ -3,7 +3,7 @@
 
 # Enable TLS authentication
 
-TLS authentication is a requirement when setting up FeatureBase authentication
+
 
 ## Before you begin
 
