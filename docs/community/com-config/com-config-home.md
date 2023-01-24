@@ -36,20 +36,36 @@ Azure Active Directory is supported via SAML 2.0
 * [Setup FeatureBase authentication](/docs/community/com-config/com-config-authentication)
 * [Setup FeatureBase group permissions](/docs/community/com-config/com-config-group-permissions)
 
-## How do I backup FeatureBase?
+## How do I backup a FeatureBase cluster?
 
 * [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup)
 
-## How do I restore a FeatureBase backup?
+## How do I restore a FeatureBase cluster?
+
+* [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
+
+## Verify backups
+
+Use the following checklist to verify backups function correctly.
+
+| Task | Description |
+|---|---|
+| Backup source | [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup) |
+| Setup test environment | Backup testing can be performed using a single local node provided the system has sufficient memory and disk space. |
+| Restore source backup | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
+| Test target | Run queries and verify results are as expected |
+
+## End-to-end backup and restore process
 
 Use the following checklist to successfully restore a cluster from backups.
 
 | Task | Description |
 |---|---|
-| Stop running processes | Stop running processes such as ingest tasks |
-| Create a new cluster | [Create a cluster](/docs/community/com-config/com-config-cluster) |
-| Restore backups | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
-| Testing | Run test queries and verify results are as expected |
-| Redirect traffic | Redirect query traffic from original cluster to new cluster |
-| Start all processes | Start processes including ingest |
-| Cleanup | Backup the original cluster then tear it down |
+| Stop running processes on source | [Stop running ingest processes on CLI](/community/com-ingest/com-ingest-stop.md) |
+| Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-config/com-config-backup)
+| Create target | [Create a cluster](/docs/community/com-config/com-config-cluster) |
+| Restore backups to target | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
+| Test target | Run test queries and verify results are as expected |
+| Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
+| Start all processes on target | Start processes including ingest |
+| Cleanup source | Backup the original cluster then tear it down |

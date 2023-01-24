@@ -22,11 +22,12 @@ The `featurebase-restore` command is used to restore a backup to a new FeatureBa
 
 ```
 featurebase restore
+  {--host
+    [ {https://hostname:port --auth-token <token> <tls_flags>}
+      | hostname:port
+    ]
   [--concurrency <int_val>]
-  --host [https://]featurebase:10101
-  -source /directory/path/
-  [--auth-token <token>]
-  [<TLS_flags>]
+  {-[s|source]/directory/path/}
 ```
 
 ## Arguments
@@ -34,25 +35,52 @@ featurebase restore
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
 {% include /com-config/com-config-flags-backup-restore-common.md %}
-| -source | Source directory and backup file. Can be abbreviated to `-s` | Yes |  |
-| /directory/path/ | Path to backups | Yes |  |
-{% include /com-config/com-config-flags-backup-restore-auth.md %}
+| `-s` or `-source` | Source directory and backup file. | Yes |  |
+| `/directory/path/` | Path to backups | Yes |  |
 
 ## TLS authentication flags
 
-| Argument | Data type Description | Required? | Further information |
-|---|---|---|---|---|
-{% include /com-config/com-config-tls-auth.md %}
+{% include /com-config/com-config-flags-backup-restore-tls.md %}
+
+## Additional information
+
+### Obtain primary host values
+
+{% include /com-config/com-config-primary-host-extra.md }
+
+### Concurrency
+
+The exact number of optimal restore operations varies depending on network/disk speeds, and should be determined experimentally when doing a test-restore.
+
+{: .warning}
+High `concurrency` values may exhaust system resources and impact applications using the cluster.
+
+| Use case | Set concurrency |
+|---|---|
+| N destination nodes | `concurrency = N` | <!--In most scenarios, one per node is a reasonable conservative selection.-->
+| Production cluster | Low or default of 1 |
+| New cluster with no data | Not applicable |
 
 ## Examples
 
-## Increase restore speed
-
-Use the `concurrency` flag to restore files at a higher speed
+### Use concurrency to increase restoration speed
 
 ```
-featurebase restore --host newfeaturebase:10101 -s /path/to/backup/ --concurrency 4
+featurebase restore
+  --concurrency 8
+  --host featurebase:10101
+  -s /path/to/backup/
 ```
 
+### Restore with TLS flags
+
+```
+featurebase restore
+  --host featurebase:10101
+  -s /path/to/backup/
+  --tls.ca-certificate ca.crt
+  --tls.certificate client.crt
+  --tls.key client.key
+```
 
 ## Further information

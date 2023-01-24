@@ -14,15 +14,16 @@ A `featurebase backup` includes:
 * schema
 * key translation data
 * indexes
-* ID allocation state
+* Allocated IDs
 * Unaltered records
 
 {: .important}
-It's important to stop any jobs that create, alter or delete records before running a backup. Only existing unaltered records are guaranteed to be backed-up.
+Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
 ## Not included in backups
 
 * External lookup database (backup separately)
+* IDs committed by the auto ID feature before the backup starts
 * Node configurations
 * Other FeatureBase components
 
@@ -36,12 +37,13 @@ It's important to stop any jobs that create, alter or delete records before runn
 
 ```sh
 featurebase backup
-  [-- concurrency <int_val>]
-  --host [https://]hostname:port
-  -output /directory/path/
-  [--auth-token <token>]
-  [ --no-sync]
-  <TLS_flags>
+  {--host
+    [ {https://hostname:port --auth-token <token> <tls_flags>}
+      | hostname:port
+    ]
+  [--concurrency <int_val>]
+  [--no-sync]
+  {[-o|-output] /directory/path/}
 ```
 
 ## Arguments
@@ -49,16 +51,23 @@ featurebase backup
 | Argument | Data type | Description | Required? | Further information |
 |---|---|---|---|
 {% include /com-config/com-config-flags-backup-restore-common.md %}
-| -output |  | Specify the output directory for the backup file. Can be abbreviated to `-o` | Yes |
+| `-no-sync` |  | Backup runs without the operating system moving data to persistent storage. | Optional | [Override storage synchronization](/com-conf-backup#override-storage-synchronization) |
+| `-o` or `-output` |  | Backup output directory | Yes |
 | /directory/path/ | String | Empty destination directory. It will be created if it does not exist. If not empty, the process will fail with an error. | Yes |
-{% include /com-config/com-config-flags-backup-restore-auth.md %}
-| `-no-sync` |  | Backup runs without the operating system moving data to persistent storage. | Optional | Use of `no-sync` risks loss of backup date should the backup system lose power. |
 
 ## TLS authentication flags
 
-| Argument | Data type Description | Required? | Further information |
-|---|---|---|---|---|
-{% include /com-config/com-config-tls-auth.md %}
+{% include /com-config/com-config-flags-backup-restore-tls.md %}
+
+## Additional information
+
+## Override storage synchronization
+
+* By default, `featurebase backup` will wait for all backup files to be committed to persistent storage before terminating.
+* `no-sync` overrides this setting
+
+{: .warning}
+Use of `no-sync` risks loss of backup date should the backup system lose power.
 
 ## Obtain primary host values
 
@@ -71,18 +80,47 @@ featurebase backup
 Increase backup speed by setting the concurrency value and turning off sync.
 
 ```
-featurebase backup --concurrency 2 --host featurebase:10101 -o /path/to/backup/ --no-sync
+featurebase backup
+  --concurrency 2
+  --host featurebase:10101
+  -o /path/to/backup/
+  --no-sync
 ```
 
 ### Host backup
 
 ```
-featurebase backup --host featurebase:10101 -output /backups/featurebase-backups
+featurebase backup
+  --host featurebase:10101
+  -output /backups/featurebase-backups
 ```
 
 
 ### Authenticated backup
 
 ```
-featurebase backup --host https://featurebase:10101 -o /backups/featurebase-backups --auth-token <token>
+featurebase backup
+  --host https://featurebase:10101
+  -o /backups/featurebase-backups
+  --auth-token <token>
+```
+
+### Backup with TLS
+
+```
+featurebase backup
+  --host featurebase:10101
+  -o /path/to/backup/
+  --tls.ca-certificate ca.crt
+  --tls.certificate client.crt
+  --tls.key client.key
+```
+
+### No sync backup with manual backup to remote folder
+
+```
+featurebase backup --host featurebase:10101 -o /path/to/backup/ --no-sync #
+tar -cvf backup.tar.xz /path/to/backup
+sync backup.tar.xz
+rm -r /path/to/backup
 ```

@@ -19,7 +19,12 @@ USE CASES?
 
 ```
 
-
+SOME COMMAND HERE
+  [--client-address | etcd-listen-client-address] hostname:port
+  --etcd.listen.peer-address <network-address>
+  --etcd.initial-cluster <network-address>
+  --cluster.replicas <int-val>
+  <tls-flags>
 ```
 
 ## Arguments
@@ -29,13 +34,17 @@ USE CASES?
 | `client-address` / etcd-listen-client-address | Set to the node's new network address | Yes |  |
 | `etcd.listen-peer-address` |  | The node's new network address. | Yes |
 | `etcd.initial-cluster` |  | Set to the new network addresses and add additional nodes as required | Yes |  |
-| `cluster.replicas` | Update replication factor if required | Optional |  |
+| `cluster.replicas` | Define number of replicas in the cluster | Optional |  |
 
+## TLS authentication flags
+
+{% include /com-config/com-config-flags-backup-restore-tls.md %}
 
 ## Additional information
 
-
 ## Examples
+
+
 
 ## Further information
 
