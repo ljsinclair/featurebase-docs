@@ -58,16 +58,16 @@ SELECT
 |---|---|---|---|
 | `DISTINCT` | Optional keyword that specifies only unique rows exist in the output |  |
 | top_clause | specifies that a limit is applied to the number of rows returned in the output. the expr used in the TOP clause must be an integer literal. | No |  |
-| select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select_list) |
-| from_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | Yes | [from_clause](#from-clause) |
+| select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select-list-information) |
+| from_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | Yes | [from_clause](#from-clause-information) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. Can be any constant, function or combination joined by operators or a subquery. | Yes |  |
-| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group-by-clause) |
+| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group-by-clause-information) |
 | having_clause |  |  |  |
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information
 
-### select_list
+### select_list information
 
 ![expr](/assets/images/sql-guide/select_list.svg)
 ![expr](/assets/images/sql-guide/select_item.svg)
@@ -78,7 +78,7 @@ SELECT
 * Items in the select_list can be aliased with a column_alias
 * Any column referenced in a non-aggregated expression in the select_list must also appear in the group_by list
 
-### from_clause
+### from_clause information
 
 ![expr](/assets/images/sql-guide/from_clause.svg)
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
@@ -92,7 +92,7 @@ Both expressions can be aliased with a table_alias
 
 The SHARDS option allows you to specify against with shards the query will run.
 
-### group_by_clause
+### group_by_clause information
 
 ![expr](/assets/images/sql-guide/group_by_clause.svg)
 
