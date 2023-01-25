@@ -5,20 +5,12 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-You can enable TLS authentication for FeatureBase Community via command-line instructions.
-
-To enable authentication and authorization in FeatureBase, add the following lines to your `featurebase.conf`
-
-Enable TLS authentication to FeatureBase by adding authentication flags to the `featurebase.conf` file.
+You can enable TLS authentication for FeatureBase Community by adding values to `/<featurebase-install-directory/featurebase.conf`.
 
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
 * [Generate an authentication key](/docs/community/com-config/com-config-auth-key)
-
-## Where are settings added?
-
-`/featurebase-install-directory/featurebase.conf`
 
 ## Authentication settings
 

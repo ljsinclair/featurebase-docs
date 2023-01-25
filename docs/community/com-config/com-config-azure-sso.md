@@ -13,26 +13,27 @@ Configure Azure Active Directory as an authentication IdP.
 
 * Obtain administrator privileges to your Azure AD account
 * {% include /com-install/com-install-before-begin.md %}
+* [Add authentication to `featurebase.conf`](/docs/community/com-config/com-config-authentication)
 
 ## Step one: Register FeatureBase as an Azure application
 
-Use these values as you complete the registration process:
+[Register FeatureBase as an application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
+
+* Use these values in the registration process:
 
 | Step | Required value | What to add | Example |
 |---|---|---|---|
 | 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://YOUR-DOMAIN-HERE:10101/redirect` |
 | 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |  |
 
-* [Register FeatureBase as an application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
-
 ## Step 2 - create an application secret key
 
-* [Create a new application secret key](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret)
+* [Create an application secret key for FeatureBase](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret)
 
 ## Step 3 - Add the secret key to `featurebase.conf`
 
-* Edit `featurebase.conf`
-* Add the application secret as the `client-secret` value
+* Edit `</featurebase_install_directory>/featurebase.conf` in a text editor.
+* Add the application secret as the `client-secret` value.
 
 ## Step 4 - Create Azure groups
 
