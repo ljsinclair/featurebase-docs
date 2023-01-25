@@ -3,16 +3,14 @@ title: Data types & constraints
 layout: default
 parent: SQL guide
 has_children: true
-nav_order: 3
+nav_order: 2
 has_toc: false
 ---
 
 # Data types and constraints
+{: .no_toc }
 
 Data types and constraints are used to define table columns when creating tables via SQL.
-
-{: .note}
-For ease of use, Constraint information is included with the relevant Data type reference.
 
 {% include page-toc.md %}
 

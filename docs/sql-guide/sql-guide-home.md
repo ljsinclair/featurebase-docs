@@ -9,12 +9,9 @@ has_toc: false
 # FeatureBase SQL guide
 {: .no_toc }
 
-## Naming standard
+FeatureBase supports different types of queries that are discussed further in the following reference pages.
 
-
-{% include /cloud-table/cloud-standard-naming-table.md %}
-{% include /cloud-table/cloud-standard-naming-col.md %}
-{% include /cloud-table/cloud-summary-table-pk.md %}
+{% include page-toc.md %}
 
 ## Statements
 
@@ -30,42 +27,8 @@ has_toc: false
 
 ## Operators
 
-### unary_op
-![expr](/assets/images/sql-guide/unary_op.svg)
-
-### binary_op
-![expr](/assets/images/sql-guide/binary_op.svg)
+* [SQL operators](/docs/sql-guide/operators/operators-home)
 
 ## Expressions
 
-### identifier
-![expr](/assets/images/sql-guide/identifier.svg)
-
-### expr
-![expr](/assets/images/sql-guide/expr.svg)
-
-### integer_literal
-
-
-### string_literal
-
-
-### decimal_literal
-
-
-### set_literal
-![expr](/assets/images/sql-guide/set_literal.svg)
-
-### tuple_literal
-![expr](/assets/images/sql-guide/tuple_literal.svg)
-
-### date_literal
-
-### function_call
-![expr](/assets/images/sql-guide/function_call.svg)
-
-### paren_select_stmt
-![expr](/assets/images/sql-guide/paren_select_stmt.svg)
-
-### case_expr
-![expr](/assets/images/sql-guide/case_expr.svg)
+* [SQL expressions](/docs/sql-guide/expressions/expressions-home)
