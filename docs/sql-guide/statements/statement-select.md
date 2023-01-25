@@ -76,7 +76,7 @@ SELECT
 * `<qualifier>.*` limits the results to all columns based on the specified qualifier
 * `expr` can be any constant, function or combination thereof joined by operators, or a subquery
 * Items in the select_list can be aliased with a column_alias
-* If a column is referenced in a non-aggregated expression in the select_list it must also appear in the group_by list
+* Any column referenced in a non-aggregated expression in the select_list must also appear in the group_by list
 
 ### from_clause
 
