@@ -31,16 +31,14 @@ SOME COMMAND HERE
 
 | Key | Description | Required | Further information |
 |---|---|---|---|
-| `client-address` / etcd-listen-client-address | Set to the node's new network address | Yes |  |
-| `etcd.listen-peer-address` |  | The node's new network address. | Yes |
-| `etcd.initial-cluster` |  | Set to the new network addresses and add additional nodes as required | Yes |  |
+| `client-address` / etcd-listen-client-address | New node network address | Yes |  |
+| `etcd.listen-peer-address` | New node network address | Yes |  |
+| `etcd.initial-cluster` | New node network address with additional nodes as requred | Yes |  |
 | `cluster.replicas` | Define number of replicas in the cluster | Optional |  |
 
 ## TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
-
-## Additional information
 
 ## Examples
 
