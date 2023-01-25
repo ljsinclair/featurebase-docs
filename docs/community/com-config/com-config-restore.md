@@ -46,7 +46,7 @@ featurebase restore
 
 ### Obtain primary host values
 
-{% include /com-config/com-config-primary-host-extra.md }
+{% include /com-config/com-config-primary-host-extra.md %}
 
 ### Concurrency
 

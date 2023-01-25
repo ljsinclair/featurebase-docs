@@ -71,7 +71,7 @@ Use of `no-sync` risks loss of backup date should the backup system lose power.
 
 ## Obtain primary host values
 
-{% include /com-config/com-config-primary-host-extra.md }
+{% include /com-config/com-config-primary-host-extra.md %}
 
 ## Examples
 
