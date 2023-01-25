@@ -33,8 +33,8 @@ grand_parent: SQL guide
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
 | table_name | Target table name | Yes |  |
-| column_list | Optional list of columns which must include the `_id` column | Optional | FeatureBase assumes values to be inserted into existing columns if omitted |
-| value_list | The list of expressions or values to be inserted. | Yes | The length of the value_list must match the length of the column_list. |
+| column_list | List of columns which must include the `_id` column | Optional | FeatureBase assumes values to be inserted into existing columns if omitted |
+| value_list | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | The length of the value_list must match the length of the column_list. |
 
 ## Examples
 
