@@ -21,8 +21,6 @@ SQL statements can be executed in the Query editor.
 
 ## SHOW statements
 
-View the result of a query.
-
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
@@ -31,11 +29,10 @@ View the result of a query.
 
 * [CREATE TABLE](/docs/sql-guide/statements/statement-table-create)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
+* [DROP TABLE](https://www.w3schools.com/sql/sql_drop_table.asp){:target="_blank"}
+* [INSERT](/docs/sql-guide/statements/statement-insert)
+* [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
 
-## COLUMN statements
-
-* [ADD COLUMN](/docs/sql-guide/statements/statement-add-column)
-* [DROP COLUMN](/docs/sql-guide/statements/statement-column-drop)
 
 ## Table INSERT statements
 

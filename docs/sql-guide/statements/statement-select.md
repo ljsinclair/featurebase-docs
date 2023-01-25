@@ -104,10 +104,71 @@ A column must appear in the group_by_clause if it is referenced in a non-aggrega
 
 ## Examples
 
+### SELECT COUNT
 ```sql
 SELECT COUNT(*) FROM github-stats;
 ```
 
+### SELECT TOP
 ```sql
 SELECT TOP(10) * FROM github-stats;
+```
+
+### point select
+
+```sql
+select * from tbl where _id = 1
+select fld1, fld2 from tbl where _id = 1
+select _id, fld from tbl where _id = 1
+```
+
+### select distinct
+
+```sql
+select distinct fld from tbl
+```
+
+
+### select count
+
+```sql
+select count(*) from tbl
+select count(*) from tbl where fld = 1
+select count(*) from tbl where fld1 = 1 and fld2 = 2
+select count(distinct fld) from tbl
+```
+
+### select ids from segment
+```sql
+select _id from tbl where fld = 1
+select _id from tbl where fld in (1, 2)
+select _id from tbl where fld1 = 1 limit 1
+select _id from tbl where fld1 = 1 and fld2 = 2
+```
+
+### select int function
+
+```sql
+select min(fld) from tbl
+select max(fld) from tbl
+select sum(fld) from tbl
+select avg(fld) from tbl
+select min(fld) from tbl where fld = 1
+select max(fld) from tbl where fld = 1
+select sum(fld) from tbl where fld = 1
+select avg(fld) from tbl where fld = 1
+```
+
+### group by
+
+```sql
+select fld, count(*) from tbl group by fld
+select fld1, fld2, count(*) from tbl group by fld1, fld2
+select fld1, fld2, count(*) from tbl group by fld1, fld2 limit 1
+select fld1, fld2, count(*) from tbl where fld1 = 1 group by fld1, fld2
+select fld1, count(*) from tbl group by fld1 having count > 1
+select fld1, fld2, sum(fld3) from tbl where fld1 = 1 group by fld1, fld2
+select fld1, fld2, sum(fld3) from tbl where fld1 = 1 group by fld1, fld2 having count > 1
+select fld, count(fld) from tbl group by fld
+select fld1, count(fld1) from tbl where fld2=1 group by fld1
 ```
