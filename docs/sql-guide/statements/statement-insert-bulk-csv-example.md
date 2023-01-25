@@ -65,4 +65,4 @@ SELECT TOP(10) * FROM age;
 
 ## Further information
 
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-replace-bulk-ndjson-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-nsert-bulk-ndjson-example)

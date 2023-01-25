@@ -40,4 +40,4 @@ View the result of a query.
 ## Table INSERT statements
 
 * [INSERT](/docs/sql-guide/statements/statement-insert-replace)
-* [BULK INSERT](/docs/sql-guide/statements/statement-insert-replace-bulk)
+* [BULK INSERT](/docs/sql-guide/statements/statement-nsert-bulk)

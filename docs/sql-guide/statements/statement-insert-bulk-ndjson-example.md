@@ -121,4 +121,4 @@ SELECT TOP(10) * FROM github-stats;
 
 ## Further information
 
-* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-replace-bulk-csv-example)
+* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-nsert-bulk-csv-example)
