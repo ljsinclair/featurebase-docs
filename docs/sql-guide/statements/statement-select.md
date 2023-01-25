@@ -58,10 +58,10 @@ SELECT
 |---|---|---|---|
 | `DISTINCT` | Optional keyword that specifies only unique rows exist in the output |  |
 | top_clause | specifies that a limit is applied to the number of rows returned in the output. the expr used in the TOP clause must be an integer literal. | No |  |
-| select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [SELECT_list](/statement-select#select_list) |
-| from_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | [FROM clause](/statement-select#from-clause) |
+| select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select_list) |
+| from_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | Yes | [from_clause](#from-clause) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. Can be any constant, function or combination joined by operators or a subquery. | Yes |  |
-| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP_BY clause](/statement-select#group-by-clause) |
+| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group-by-clause) |
 | having_clause |  |  |  |
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Results can be ordered `ASC`ending or `DESC`ending. |
 
