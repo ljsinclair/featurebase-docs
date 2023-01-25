@@ -15,13 +15,7 @@ This example demonstrates how to:
 
 ## Before you begin
 
-* [Learn about the age dataset](https://www.gharchive.org/)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-
-Cloud users:
-{% include /cloud-db/cloud-db-dependencies.md %}
-Community users:
-* [Learn how to create tables](/docs/sql-preview/sql-create-table)
+{% include /sql-guide/bulk-insert-eg-before-begin.md%}
 
 ## Step 1: create `github-stats` table
 
