@@ -20,10 +20,13 @@ Internal `etcd` cluster communication does not currently support TLS.
 
 ## Before you begin
 
+* {% include /com-install/com-install-before-begin.md %}
+* [Learn how to enable authentication](/docs/community/com-config/com-config/authentication)
+
 ## Create a testing certificate
 
 {: .important}
-CERTSTRAP can be used for testing purposes but is NOT recommended for production environments
+CERTSTRAP can be used for testing purposes but is **NOT** recommended for production environments.
 
 ### Step 1 - Create a root CA
 
