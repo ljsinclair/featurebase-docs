@@ -25,10 +25,7 @@ grand_parent: SQL guide
 [INSERT | REPLACE] INTO
   table_name [column_list]
   VALUES
-      ({id-value}, value,...)
-    [
-      ({id_value}, value,...)
-    ];
+      {(value_list),...};
 ```
 
 ## Arguments
@@ -37,8 +34,7 @@ grand_parent: SQL guide
 |---|---|---|---|
 | table_name | Target table name |  |  |
 | column_list | Optional list of columns which must include the `_id` column |  | If omitted the system assumes values are inserted into existing columns |  |
-| `id_value` | Required ID value | Yes |  |
-| `value` | Value to insert into the column |  |  |
+| value_list | The list of expressions or values to be inserted. | Yes | The length of the value_list must match the length of the column_list. |
 
 ## Examples
 
