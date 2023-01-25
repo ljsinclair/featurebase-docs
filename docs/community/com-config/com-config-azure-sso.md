@@ -21,10 +21,10 @@ Configure Azure Active Directory as an authentication IdP.
 
 * Use these values in the registration process:
 
-| Step | Required value | What to add | Example |
-|---|---|---|---|
+| Step | What to add | Example |
+|---|---|---|
 | 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://YOUR-DOMAIN-HERE:10101/redirect` |
-| 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |  |
+| 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |
 
 ## Step 2 - create an application secret key
 
@@ -37,15 +37,11 @@ Configure Azure Active Directory as an authentication IdP.
 
 ## Step 4 - Create Azure groups
 
-Complete steps 1 to 10.
-
-* [Create groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+* [Complete steps 1-10 of Create groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 ## Step 5 - Add users to Azure groups
 
-Complete steps 11 and 12.
-
-* [Add users to groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+* [Complete steps 11-12 of Add users to groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 ## Step 6 - Set application authentication
 
@@ -55,7 +51,7 @@ Perform these steps in your Azure application settings.
 * Click the Authentication tab > Advanced Settings
 * Toggle **Allow public client flows** to **yes**
 
-!["Image of AzureAD app configuration page with Allow public client flows toggled to yes."](/img/public_client_flows.png)
+!["Image of AzureAD app configuration page with Allow public client flows toggled to yes."](/assets/images/com-config/public_client_flows.png)
 
 ## Next step
 
