@@ -9,6 +9,10 @@ has_toc: false
 
 # SQL Expressions
 
+FeatureBase supports the following SQL expressions:
+* Identifier
+* Expression
+
 ## Before you begin
 
 {% include /cloud/cloud-db-create-before-begin.md %}
