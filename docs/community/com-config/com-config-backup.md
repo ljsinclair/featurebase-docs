@@ -66,7 +66,7 @@ featurebase backup
 
 ## Additional information
 
-## Override storage synchronization
+### Override storage synchronization
 
 * By default, `featurebase backup` will wait for all backup files to be committed to persistent storage before terminating.
 * `no-sync` overrides this setting
@@ -74,7 +74,7 @@ featurebase backup
 {: .warning}
 Use of `no-sync` risks loss of backup date should the backup system lose power.
 
-## Obtain primary host values
+### Obtain primary host values
 
 {% include /com-config/com-config-primary-host-extra.md %}
 
