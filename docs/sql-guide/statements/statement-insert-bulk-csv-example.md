@@ -16,7 +16,7 @@ grand_parent: SQL guide
 Cloud users:
 {% include /cloud-db/cloud-db-dependencies.md %}
 Community users:
-* [Learn how to create tables](/docs/sql-preview/sql-create-table)
+* [Learn how to create tables](/docs/sql-preview/statements/statement-table-create)
 
 ## Step 1: create table
 
