@@ -60,7 +60,7 @@ featurebase backup
 | `-o` or `-output` | Backup output directory | Yes |  |
 | `/backup-directory/path/` | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
 
-## TLS authentication flags
+### TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
 
@@ -73,8 +73,6 @@ featurebase backup
 
 {: .warning}
 Use of `no-sync` risks loss of backup date should the backup system lose power.
-
-### Obtain primary host values
 
 {% include /com-config/com-config-primary-host-extra.md %}
 

@@ -38,18 +38,16 @@ featurebase restore
 
 ### Restore flags
 
-| Argument | Description | Required? | Further information |
-|---|---|---|---|
-| `-s` or `-source` | Source directory and backup file. | Yes |  |
-| `/backup-directory/path/` | Directory containing backups | Yes |  |
+| Argument | Description | Required? |
+|---|---|---|
+| `-s` or `-source` | Source directory and backup file. | Yes |
+| `/backup-directory/path/` | Directory containing backups | Yes |
 
-## TLS authentication flags
+### TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
 
 ## Additional information
-
-### Obtain primary host values
 
 {% include /com-config/com-config-primary-host-extra.md %}
 
