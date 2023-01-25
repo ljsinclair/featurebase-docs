@@ -10,7 +10,7 @@ grand_parent: SQL guide
 
 ## Before you begin
 
-* [Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download){:target+"_blank"}
+* [Learn about the age dataset](https://www.kaggle.com/datasets/imoore/age-dataset?resource=download){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
 Cloud users:
