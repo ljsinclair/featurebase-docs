@@ -90,10 +90,8 @@ create table allcoltypes
 
 ## Further information
 
-* [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-show-create-table)
+* [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
-* [ADD COLUMN](/docs/sql-guide/statements/statement-add-column)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
-* [DROP COLUMN](/docs/sql-guide/statements/statement-column-drop)
 * [Data types](/docs/sql-guide/data-types/data-types-home)
