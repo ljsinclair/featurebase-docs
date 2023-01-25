@@ -21,8 +21,8 @@ SQL statements can be executed in the Query editor.
 
 ## SHOW statements
 
-* [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
+* [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
 
 ## TABLE statements
@@ -30,11 +30,10 @@ SQL statements can be executed in the Query editor.
 * [CREATE TABLE](/docs/sql-guide/statements/statement-table-create)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
 * [DROP TABLE](https://www.w3schools.com/sql/sql_drop_table.asp){:target="_blank"}
-* [INSERT](/docs/sql-guide/statements/statement-insert)
+* [INSERT/REPLACE](/docs/sql-guide/statements/statement-insert-replace)
 * [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
 
+## Further information
 
-## Table INSERT statements
-
-* [INSERT](/docs/sql-guide/statements/statement-insert-replace)
-* [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
+* [BULK INSERT using CSV file](/docs/sql-guide/statement-insert-bulk-csv-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statement-insert-bulk-ndjson-example)
