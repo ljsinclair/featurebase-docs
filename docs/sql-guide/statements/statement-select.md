@@ -49,7 +49,7 @@ SELECT
   where_clause
   group_by_clause
   having_clause
-  order_by_clause
+  order_by_clause;
 ```
 
 ## Arguments
@@ -67,7 +67,7 @@ SELECT
 
 ## Additional information
 
-### SELECT_list
+### select_list
 
 ![expr](/assets/images/sql-guide/select_list.svg)
 ![expr](/assets/images/sql-guide/select_item.svg)
@@ -76,8 +76,9 @@ SELECT
 * `<qualifier>.*` limits the results to all columns based on the specified qualifier
 * `expr` can be any constant, function or combination thereof joined by operators, or a subquery
 * Items in the `select_list` can be aliased with a column_alias
+* If a column is referenced in a non-aggregated expression in the select_list it must also appear in the group_by list
 
-### FROM_clause
+### from_clause
 
 ![expr](/assets/images/sql-guide/from_clause.svg)
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
@@ -91,7 +92,7 @@ Both expressions can be aliased with a table_alias
 
 The SHARDS option allows you to specify against with shards the query will run.
 
-### GROUP_BY clause
+### group_by_clause
 
 ![expr](/assets/images/sql-guide/group_by_clause.svg)
 
