@@ -40,7 +40,7 @@ CREATE TABLE table_name
 |---|---|---|
 | `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
 | `IF NOT EXISTS` | Optional argument that stops statement execution if a table of the same name already exists | No |  |
-| COLUMN_LIST | List of column names, data types and optional constraints. The list must include the `_id` column | Yes | [_id column](/statement-table-create/#_id-column)<br/>[Naming standards](/statement-table-create/#naming-standards)<br/>[Data types](/docs/sql-guide/data-types/data-types-home) |
+| COLUMN_LIST | List of column names, data types and optional constraints. The list must include the `_id` column | Yes | * [_id column](#_id-column)<br/>* [Naming standards](#naming-standards)<br/>* [Data types](/docs/sql-guide/data-types/data-types-home) |
 | `comment` | Optional string literal that describes the table | No |  |
 
 ## Additional information
