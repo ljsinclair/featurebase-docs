@@ -14,6 +14,7 @@ The FeatureBase audit log begins recording information when the server is starte
 
 ## Before you begin
 
+* {% include /com-install/com-install-before-begin.md %}
 * [Add authentication](/docs/community/com-config/com-config-authentication)
 * [Add group permissions](/docs/community/com-config/com-config-group-permissions)
 
