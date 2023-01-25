@@ -49,6 +49,6 @@ featurebase auth-token
 <!--
 * [Use tokens to authenticate HTTPS API commands]
 * [Use tokens to authenticate gRPC API commands]-->
-* [Use tokens to Backup an authenticated FeatureBase cluster](/docs/community/com-config-backup)
+* [Use tokens to Backup an authenticated FeatureBase cluster](/docs/community/com-config/com-config-backup)
 * [Use an `auth-token` to restore from an authenticated backup](/docs/community/com-config/com-config-restore)
 <!--* [Use tokens to authenticate the Grafana connector]-->
