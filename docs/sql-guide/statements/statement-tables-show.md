@@ -20,19 +20,31 @@ SHOW TABLES;
 ```
 ## Returns
 
-| Column Name | Data type | Description |
-|---|---|---|
-| `_id` | id or string  | Table ID |
-| name | string | Name of the table |
-| owner |   | Owner of table (omitted for system-created sample data) |
-| updated_by |  | Last user to update table |
-| created_at | timestamp | Table time-date created |
-| updated_at | timestamp | Table time-date last updated |
-| keys | bool |  |
-| space_used |  |  |
-| description |  |
-| track_existence | bool |  |
-| shard_width  | int  |  |
+| Column Name | Data type | Description | Further information |
+|---|---|---|---|
+| `_id` | id or string  | Table ID | [`_id` column](#id_column) |
+| name | string | Name of the table | [naming standards](#naming_standards)
+| owner |   | Owner of table (omitted for system-created sample data) |  |
+| updated_by |  | Last user to update table |  |
+| created_at | timestamp | Table time-date created | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| updated_at | timestamp | Table time-date last updated | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| keys | bool |  |  |
+| space_used |  |  |  |
+| description | string |  |  |
+| track_existence | bool |  |  |
+| shard_width  | int  |  |  |
+
+## Additional information
+
+### `_id` column
+
+{% include /cloud-table/cloud-summary-table-pk.md %}
+
+### Naming standards
+
+{% include /concepts/standard-naming-obj.md %}
+{% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /cloud-table/cloud-standard-naming-col.md %}
 
 ## Examples
 
