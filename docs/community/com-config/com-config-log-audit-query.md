@@ -20,13 +20,15 @@ The FeatureBase audit log begins recording information when the server is starte
 ## Step 1 - create a log file
 
 Create a log file:
-    ```
-    sudo mkdir -p /var/log/molecula/ && touch /var/log/molecula/query.log
-    ```
 
-## Step 2 - add audit log path to `featurebse.conf`
+```
+sudo mkdir -p /var/log/molecula/ && touch /var/log/molecula/query.log
+```
 
-* Edit `featurebase.conf` and add the path under the `[auth]` key:
+## Step 2 - add audit log path to `featurebase.conf`
+
+* Edit `/<featurebase-install-directory>/featurebase.conf`.
+* Add the new path under the `[auth]` key:
 
 ```
 [auth]
@@ -34,4 +36,4 @@ Create a log file:
 query-log-path = "/log/path/directory"
 ```
 
-* Save your changes
+* Save your changes.
