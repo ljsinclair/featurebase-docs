@@ -69,8 +69,8 @@ SELECT
 
 ### SELECT_list
 
-![expr](/img/sql/select_list.svg)
-![expr](/img/sql/select_item.svg)
+![expr](/assets/images/sql-guide/select_list.svg)
+![expr](/assets/images/sql-guide/select_item.svg)
 
 * `*` wildcard represents all columns
 * `<qualifier>.*` limits the results to all columns based on the specified qualifier
@@ -79,21 +79,21 @@ SELECT
 
 ### FROM_clause
 
-![expr](/img/sql/from_clause.svg)
-![expr](/img/sql/table_or_subquery.svg)
+![expr](/assets/images/sql-guide/from_clause.svg)
+![expr](/assets/images/sql-guide/table_or_subquery.svg)
 
 The table_or_subquery expression can be:
 * a table_name or table_valued_function
 * a parenthesized `SELECT` statement
 Both expressions can be aliased with a table_alias
 
-![expr](/img/sql/table_option.svg)
+![expr](/assets/images/sql-guide/table_option.svg)
 
 The SHARDS option allows you to specify against with shards the query will run.
 
 ### GROUP_BY clause
 
-![expr](/img/sql/group_by_clause.svg)
+![expr](/assets/images/sql-guide/group_by_clause.svg)
 
 `column_expr` specifies a column or non-aggregate calculation on a column which:
 * must exist in the SELECT...FROM clause
