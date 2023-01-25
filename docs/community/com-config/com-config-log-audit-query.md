@@ -19,10 +19,16 @@ The FeatureBase audit log begins recording information when the server is starte
 
 ## Step 1 - create a log file
 
-Create a log file:
+* Open a terminal then `cd` to your FeatureBase installation directory.
+* Create a log directory:
 
 ```
-sudo mkdir -p /var/log/molecula/ && touch /var/log/molecula/query.log
+sudo mkdir -p /var/log/molecula/
+```
+* Create a destination log file:
+
+```
+touch /var/log/molecula/query.log
 ```
 
 ## Step 2 - add audit log path to `featurebase.conf`
