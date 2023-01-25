@@ -12,7 +12,11 @@ grand_parent: SQL guide
 ## BNF diagrams
 
 ![expr](/assets/images/sql-guide/insert_stmt.svg)
+
+### column_list
 ![expr](/assets/images/sql-guide/column_list.svg)
+
+### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 
 ## DDL syntax
@@ -29,14 +33,12 @@ grand_parent: SQL guide
 
 ## Arguments
 
-| Argument | Description | Further information |
-|---|---|---|
-| table_name | Target table name |  |
-| column_list | Optional list of columns which must include the `_id` column | If omitted the system assumes values are inserted into existing columns |
-| `_id` | Table ID column |  |
-| `column_name` | Target column name repeated for each subsequent column |  |
-| `id_value` | Required ID value |
-| `value` | Value to insert into the column |
+| Argument | Description | Required? | Further information |
+|---|---|---|---|
+| table_name | Target table name |  |  |
+| column_list | Optional list of columns which must include the `_id` column |  | If omitted the system assumes values are inserted into existing columns |  |
+| `id_value` | Required ID value | Yes |  |
+| `value` | Value to insert into the column |  |  |
 
 ## Examples
 
