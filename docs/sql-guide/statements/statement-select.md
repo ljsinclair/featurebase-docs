@@ -29,131 +29,70 @@ Selects data from a FeatureBase table.
 ```
 SELECT
   DISTINCT
-  TOP-clause
-  SELECT-list
-  SELECT-item
-  FROM-clause
-  [TABLE-clause | SUBQUERY-clause]
+  TOP_clause
+  SELECT_list
+  FROM_clause
+  WHERE_clause
+  GROUP_BY_clause
+  HAVING_clause
+  ORDER_BY_clause
 ```
 
 ## Arguments
 
-| Argument | Description | Required |
-|---|---|---|
+| Argument | Description | Required | Further information |
+|---|---|---|---|
 | `DISTINCT` | Optional keyword that specifies only unique rows exist in the output |  |
+| TOP_clause | specifies that a limit is applied to the number of rows returned in the output. the expr used in the TOP clause must be an integer literal. | No |  |
+| SELECT_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [SELECT_list](/statement-select#select_list) |
+| FROM_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | [FROM clause](/statement-select#from-clause) |
+| WHERE_clause | An expression that defines a filter condition for the rows returned by the query. Can be any constant, function or combination joined by operators or a subquery. | Yes |  |
+| GROUP_BY_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP_BY clause](/statement-select#group-by-clause) |
+| HAVING_clause |
+| ORDER_BY_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Results can be ordered `ASC`ending or `DESC`ending. |
 
-| `select_item` | named item to select
-| `*` | Wildcard that represents all columns in a table |  |
-| `qualifier.*` | limits wildcard to columns for the specified qualifier |  |
-| `expr` | Any constant, function or combination thereof joined by operators, or a subquery |  |
-| FROM | Specifies which relations to select data from |
-| identifier |  |  |
-| table_valued_function |  |  |
-| table_alias |  |  |
-| shards (integer_literal) |  |  |
-| select_stmnt | nested select statement |  |
-| table_alias |  |  |
-| WHERE expr |  |  |
-| GROUP BY col_expr |  |  |
-| HAVING expr |  |  |
-| ORDER BY expr |  |  |
+## Additional information
 
-## TOP-clause
-![expr](/assets/images/sql-guide/top_clause.svg)
+### SELECT_list
 
-```
+![expr](/img/sql/select_list.svg)
+![expr](/img/sql/select_item.svg)
 
-```
+* `*` wildcard represents all columns
+* `<qualifier>.*` limits the results to all columns based on the specified qualifier
+* `expr` can be any constant, function or combination thereof joined by operators, or a subquery
+* Items in the `select_list` can be aliased with a column_alias
 
-| Argument | Description | Required |
-|---|---|---|
-| `top(expr)` | Specify the number of records to return.  |  |
-| `topn(expr)` |  |  |
-| `expr` | String literal expression used in TOP clause |  |
+### FROM_clause
 
-## SELECT-list
+![expr](/img/sql/from_clause.svg)
+![expr](/img/sql/table_or_subquery.svg)
 
-![expr](/assets/images/sql-guide/select_list.svg)
+The table_or_subquery expression can be:
+* a table_name or table_valued_function
+* a parenthesized `SELECT` statement
+Both expressions can be aliased with a table_alias
 
-```
-
-```
-
-| Argument | Description | Required |
-|---|---|---|
-
-## SELECT-item
-
-![expr](/assets/images/sql-guide/select_item.svg)
-
-```
-
-```
-
-
-| Argument | Description | Required |
-|---|---|---|
-
-
-## FROM-clause
-
-![expr](/assets/images/sql-guide/from_clause.svg)
-
-```
-
-```
-
-| Argument | Description | Required |
-|---|---|---|
-
-
-## TABLE or SUBQUERY
-
-![expr](/assets/images/sql-guide/table_or_subquery.svg)
-
-```
-
-```
-
-| Argument | Description | Required |
-|---|---|---|
-
-The _table_or_subquery_ expression can be:
-
-- a _table_name_ or _table_valued_function_
-- a parenthesized _select_statement_
-
-both of these expressions can be aliased with a _table_alias_
-
-## TABLE OPTION
-
-
-![expr](/assets/images/sql-guide/table_option.svg)
+![expr](/img/sql/table_option.svg)
 
 The SHARDS option allows you to specify against with shards the query will run.
 
+### GROUP_BY clause
 
-## where_clause
+![expr](/img/sql/group_by_clause.svg)
 
-![expr](/assets/images/sql-guide/where_clause.svg)
+`column_expr` specifies a column or non-aggregate calculation on a column which:
+* must exist in the SELECT...FROM clause
+* is not required to appear in the SELECT list
 
-The WHERE clause specifies a filter condition for the rows returned by the query. The _expr_ defines the condition to be met for a row to be returned. It can be any constant, function or combination thereof joined by operators, or a subquery
+A column must appear in the GROUP_BY list if it is referenced in a non-aggregated expression in the SELECT list
 
-### group_by_clause
+## Examples
 
-![expr](/assets/images/sql-guide/group_by_clause.svg)
+```sql
+SELECT COUNT(*) FROM github-stats;
+```
 
-The GROUP BY clause seperates the query result into groups of rows allowing aggregates to be performed on each group.
-
-_column_expr_ specifies a column or a non-aggregate calculation on a column. The column must exist in the FROM clause of the SELECT statement, but is not required to appear in the SELECT list.  If a column is referenced in a non-aggregated expression in the SELECT list, it must appear in the GROUP BY list.
-
-### having_clause
-
-![expr](/assets/images/sql-guide/having_clause.svg)
-
-### order_by_clause
-
-![expr](/assets/images/sql-guide/order_by_clause.svg)
-![expr](/assets/images/sql-guide/order_by_expression.svg)
-
-The ORDER BY clause allows specification of the order that data is returned. It is a list of _order_by_expression_ that specify a column name or column alias or a column position in the SELECT list and whether the order is ASC or DESC.
+```sql
+SELECT TOP(10) * FROM github-stats;
+```
