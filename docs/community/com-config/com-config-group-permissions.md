@@ -1,6 +1,9 @@
-
-
-
+---
+title: Authentication groups
+layout: default
+parent: Community configuration
+grand_parent: Community
+---
 
 # How do I setup authentication groups?
 
@@ -8,20 +11,20 @@
 
 ## Before you begin
 
-* [Perform part 1 - ](/docs/community/com-config/com-config-authentication)
+* [Configure authentication](/docs/community/com-config/com-config-authentication)
 
 ## Step one:
 
 {: .important}
 The `admin` group can access all FeatureBase indexes.
 
-* Create a permissions file in the featurebase installation folder.
+* Create a permissions file in the featureBase installation folder.
 
 ```
 touch permissions.yaml
 ```
 
-* Add the following to the file
+* Edit the file and add the following settings:\
 
 ```
 user-groups:
