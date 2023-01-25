@@ -48,11 +48,11 @@ featurebase backup
 
 ## Arguments
 <!--this is a workaround because the table won't merge into one with a leading include-->
-### Common Backup/Restore flags
+### Common Backup/Restore
 
 {% include /com-config/com-config-flags-backup-restore-common.md %}
 
-### Backup flags
+### Backup
 
 | Argument | Data type | Description | Required? | Further information |
 |---|---|---|---|

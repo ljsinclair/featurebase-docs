@@ -31,10 +31,15 @@ featurebase restore
 ```
 
 ## Arguments
+<!--this is a workaround because the table won't merge into one with a leading include-->
+### Common Backup/Restore
+
+{% include /com-config/com-config-flags-backup-restore-common.md %}
+
+### Restore
 
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
-{% include /com-config/com-config-flags-backup-restore-common.md %}
 | `-s` or `-source` | Source directory and backup file. | Yes |  |
 | `/directory/path/` | Path to backups | Yes |  |
 

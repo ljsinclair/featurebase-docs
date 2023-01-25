@@ -5,6 +5,8 @@ parent: Community configuration
 grand_parent: Community
 ---
 
+# How do I setup TLS authentication for FeatureBase Community?
+
 You can enable TLS authentication for FeatureBase Community by adding values to `/<featurebase-install-directory/featurebase.conf`.
 
 ## Before you begin
