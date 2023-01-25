@@ -44,11 +44,3 @@ has_toc: false
 
 ### case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
-
-## Operators
-
-### unary_op
-![expr](/assets/images/sql-guide/unary_op.svg)
-
-### binary_op
-![expr](/assets/images/sql-guide/binary_op.svg)
