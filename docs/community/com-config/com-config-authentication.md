@@ -50,10 +50,6 @@ You can enable TLS authentication for FeatureBase Community by adding values to 
 | `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config/com-config-group-permissions) |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list. Domain names and `0.0.0.0/0` are not allowed. If not included or not set, no IPs are allow-listed. | Optional |  |
 
-## Additional information
-
-
-
 ## Examples
 
 ### Azure Active Directory configuration
