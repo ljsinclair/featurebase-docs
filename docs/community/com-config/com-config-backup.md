@@ -82,7 +82,7 @@ Increase backup speed by setting the concurrency value and turning off sync.
 ```
 featurebase backup
   --concurrency 2
-  --host featurebase:10101
+  --host featurebase-hostname-or-ip:10101
   -o /path/to/backup/
   --no-sync
 ```
@@ -91,7 +91,7 @@ featurebase backup
 
 ```
 featurebase backup
-  --host featurebase:10101
+  --host featurebase-hostname-or-ip:10101
   -output /backups/featurebase-backups
 ```
 
@@ -100,7 +100,7 @@ featurebase backup
 
 ```
 featurebase backup
-  --host https://featurebase:10101
+  --host https://featurebase-hostname-or-ip:10101
   -o /backups/featurebase-backups
   --auth-token <token>
 ```
@@ -109,7 +109,7 @@ featurebase backup
 
 ```
 featurebase backup
-  --host featurebase:10101
+  --host featurebase-hostname-or-ip:10101
   -o /path/to/backup/
   --tls.ca-certificate ca.crt
   --tls.certificate client.crt
@@ -119,7 +119,7 @@ featurebase backup
 ### No sync backup with manual backup to remote folder
 
 ```
-featurebase backup --host featurebase:10101 -o /path/to/backup/ --no-sync #
+featurebase backup --host featurebase-hostname-or-ip:10101 -o /path/to/backup/ --no-sync #
 tar -cvf backup.tar.xz /path/to/backup
 sync backup.tar.xz
 rm -r /path/to/backup

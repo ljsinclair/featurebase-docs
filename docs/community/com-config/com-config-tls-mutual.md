@@ -65,8 +65,8 @@ Update the FeatureBase bind configuration to use the `https` scheme.
 
 
 ```toml
-bind = "https://hostname:10101"
-bind-grpc = "https://hostname:20101"
+bind = "featurebase-hostname-or-ip:10101"
+bind-grpc = "featurebase-hostname-or-ip:10101"
 ```
 
 ## Update FeatureBase configuration

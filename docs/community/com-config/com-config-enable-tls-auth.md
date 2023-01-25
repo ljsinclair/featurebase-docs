@@ -29,4 +29,4 @@ KEY PLEASE!
 
 
 
-For example, `bind = "localhost:10101"` must be `bind = "https://localhost:10101"`.
+For example, `bind = "featurebase-hostname-or-ip:10101"` must be `bind = "https://featurebase-hostname-or-ip:10101"`.

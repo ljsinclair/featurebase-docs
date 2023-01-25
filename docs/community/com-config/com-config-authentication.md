@@ -39,7 +39,7 @@ You can enable TLS authentication for FeatureBase Community by adding values to 
 | `client-secret` |  | As for `client-id`.  | Obtain from the IdP | Yes |  |
 | `authorize-url` |  | IdP obtained from Applications Overview > Endpoints. Use `v2` links if there are two versions available. | Yes |  |
 | `token-url` |   | As for `authorize-url` | Yes |  |
-| `redirect-base-url` |  | IdP URL with `/redirect` removed that corresponds to your primary FeatureBase node. Takes form: `https://featurebase-ip:10101` | Yes |  |
+| `redirect-base-url` |  | IdP URL with `/redirect` removed that corresponds to your primary FeatureBase node. Takes form: `https://featurebase-hostname-or-ip:10101` | Yes |  |
 | `group-endpoint-url` |  | SAML IdP API value | Yes | [SAML 2.0 IdP API documentation](https://learn.microsoft.com/en-us/azure/active-directory-b2c/saml-service-provider-options?pivots=b2c-user-flow){:target="_blank"} |
 | `logout-url` |  | SAML IdP API value | Yes | [Single sign-out SAML protocol] documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-out-saml-protocol){:target="_blank"} |
 | `scopes` |  | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |

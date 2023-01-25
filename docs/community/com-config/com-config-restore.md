@@ -68,7 +68,7 @@ High `concurrency` values may exhaust system resources and impact applications u
 ```
 featurebase restore
   --concurrency 8
-  --host featurebase:10101
+  --host featurebase-hostname-or-ip:10101
   -s /path/to/backup/
 ```
 
@@ -76,7 +76,7 @@ featurebase restore
 
 ```
 featurebase restore
-  --host featurebase:10101
+  --host featurebase-hostname-or-ip:10101
   -s /path/to/backup/
   --tls.ca-certificate ca.crt
   --tls.certificate client.crt
