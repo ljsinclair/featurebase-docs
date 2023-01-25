@@ -37,4 +37,4 @@ SQL statements can be executed in the Query editor.
 ## Table INSERT statements
 
 * [INSERT](/docs/sql-guide/statements/statement-insert-replace)
-* [BULK INSERT](/docs/sql-guide/statements/statement-nsert-bulk)
+* [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
