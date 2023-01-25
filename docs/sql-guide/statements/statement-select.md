@@ -100,7 +100,7 @@ The SHARDS option allows you to specify against with shards the query will run.
 * must exist in the from_clause
 * is not required to appear in the select_list
 
-A column must appear in the group_by_list if it is referenced in a non-aggregated expression in the select_list
+A column must appear in the group_by_clause if it is referenced in a non-aggregated expression in the select_list
 
 ## Examples
 
