@@ -33,7 +33,7 @@ grand_parent: SQL guide
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
 | table_name | Target table name |  |  |
-| column_list | Optional list of columns which must include the `_id` column |  | If omitted the system assumes values are inserted into existing columns |  |
+| column_list | Optional list of columns which must include the `_id` column | If omitted the system assumes values are inserted into existing columns |  |
 | value_list | The list of expressions or values to be inserted. | Yes | The length of the value_list must match the length of the column_list. |
 
 ## Examples
