@@ -12,6 +12,11 @@ has_toc: false
 
 {% include page-toc.md %}
 
+<!--copied from sql-operators-home because seems relevant-->
+## Function call operator
+
+![expr](/assets/images/sql-guide/function_call.svg)
+
 ## Table Valued Functions
 
 ![expr](/assets/images/sql-guide/table_valued_function.svg)
