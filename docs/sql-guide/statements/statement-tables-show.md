@@ -22,8 +22,8 @@ SHOW TABLES;
 
 | Column Name | Data type | Description | Further information |
 |---|---|---|---|
-| `_id` | id or string  | Table ID | [`_id` column](#id_column) |
-| name | string | Name of the table | [naming standards](#naming_standards)
+| `_id` | id or string  | Table ID | [`_id` column](#_id-column) |
+| name | string | Name of the table | [naming standards](#naming-standards)
 | owner |   | Owner of table (omitted for system-created sample data) |  |
 | updated_by |  | Last user to update table |  |
 | created_at | timestamp | Table time-date created | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
