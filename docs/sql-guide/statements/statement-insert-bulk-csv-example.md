@@ -3,7 +3,6 @@ title: BULK INSERT CSV example
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 1
 ---
 
 # Ingest a CSV with BULK INSERT

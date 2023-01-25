@@ -3,7 +3,6 @@ title: SHOW COLUMNS
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 6
 ---
 
 # SHOW COLUMNS statement

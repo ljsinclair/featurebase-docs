@@ -48,7 +48,7 @@ SELECT
 | FROM_clause | Specifies which relations to select data from. It is a list of table_or_subquery expressions. | [FROM clause](/statement-select#from-clause) |
 | WHERE_clause | An expression that defines a filter condition for the rows returned by the query. Can be any constant, function or combination joined by operators or a subquery. | Yes |  |
 | GROUP_BY_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP_BY clause](/statement-select#group-by-clause) |
-| HAVING_clause |
+| HAVING_clause |  |  |  |
 | ORDER_BY_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information

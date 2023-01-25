@@ -3,31 +3,32 @@ title: SHOW TABLES
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 1
 ---
 
 # SHOW TABLES statement
 
 Shows the list of FeatureBase tables that exist on the server.
 
-### DDL Syntax
+## BNF diagram
 
 ![expr](/assets/images/sql-guide/show_tables.svg)
+
+## DDL Syntax
 
 ```sql
 SHOW TABLES;
 ```
-### Returns
+## Returns
 
 | Column Name | Data type | Description |
 |---|---|---|
-| _id |   | Table ID |
+| `_id` | id or string  | Table ID |
 | name | string | Name of the table |
 | owner |   | Owner of table (omitted for system-created sample data) |
 | updated_by |  | Last user to update table |
 | created_at | timestamp | Table time-date created |
 | updated_at | timestamp | Table time-date last updated |
-| keys | bool |
+| keys | bool |  |
 | space_used |  |  |
 | description |  |
 | track_existence | bool |  |

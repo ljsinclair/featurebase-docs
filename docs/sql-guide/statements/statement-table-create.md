@@ -3,14 +3,13 @@ title: CREATE TABLE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 2
 ---
 
 ## CREATE TABLE statement
 
 Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful.
 
-## BNF Syntax diagrams
+## BNF diagrams
 
 ![expr](/assets/images/sql-guide/create_table_stmt.svg)
 ![expr](/assets/images/sql-guide/column_def.svg)
@@ -27,7 +26,7 @@ CREATE TABLE table_name
   [comment 'comment'];
 ```
 
-### Arguments
+## Arguments
 
 | Argument | Description | Required? | Further information |
 |---|---|---|
