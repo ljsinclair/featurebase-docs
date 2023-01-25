@@ -27,21 +27,21 @@ featurebase restore
       | hostname:port
     ]
   [--concurrency <int_val>]
-  {-[s|source]/directory/path/}
+  {[-s|-source]/directory/path/}
 ```
 
 ## Arguments
 <!--this is a workaround because the table won't merge into one with a leading include-->
-### Common Backup/Restore
+### Common Backup/Restore flags
 
 {% include /com-config/com-config-flags-backup-restore-common.md %}
 
-### Restore
+### Restore flags
 
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
 | `-s` or `-source` | Source directory and backup file. | Yes |  |
-| `/directory/path/` | Path to backups | Yes |  |
+| `/backup-directory/path/` | Directory containing backups | Yes |  |
 
 ## TLS authentication flags
 
