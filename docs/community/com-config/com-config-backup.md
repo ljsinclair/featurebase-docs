@@ -43,7 +43,7 @@ featurebase backup
     ]
   [--concurrency <int_val>]
   [--no-sync]
-  {[-o|-output] /directory/path/}
+  {[-o|-output] /backup-directory/path/}
 ```
 
 ## Arguments
@@ -58,7 +58,7 @@ featurebase backup
 |---|---|---|---|
 | `-no-sync` |  | Backup runs without the operating system moving data to persistent storage. | Optional | [Override storage synchronization](#override-storage-synchronization) |
 | `-o` or `-output` |  | Backup output directory | Yes |
-| ``/directory/path/`` | String | Empty destination directory. It will be created if it does not exist. If not empty, the process will fail with an error. | Yes |
+| `/backup-directory/path/` | String | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
 
 ## TLS authentication flags
 
