@@ -35,20 +35,20 @@ You can enable TLS authentication for FeatureBase Community by adding values to 
 
 ### Arguments
 
-| Key | Data type | Description | Required | Further information |
-|---|---|---|---|---|
-| `client-id` |   | SAML 2.0 Identity Provider (IdP) obtained from Azure AD Applications Overview | Yes |  |
-| `client-secret` |  | As for `client-id`.  | Obtain from the IdP | Yes |  |
-| `authorize-url` |  | IdP obtained from Applications Overview > Endpoints. Use `v2` links if there are two versions available. | Yes |  |
-| `token-url` |   | As for `authorize-url` | Yes |  |
-| `redirect-base-url` |  | IdP URL with `/redirect` removed that corresponds to your primary FeatureBase node. Takes form: `https://featurebase-hostname-or-ip:10101` | Yes |  |
-| `group-endpoint-url` |  | SAML IdP API value | Yes | [SAML 2.0 IdP API documentation](https://learn.microsoft.com/en-us/azure/active-directory-b2c/saml-service-provider-options?pivots=b2c-user-flow){:target="_blank"} |
-| `logout-url` |  | SAML IdP API value | Yes | [Single sign-out SAML protocol] documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-out-saml-protocol){:target="_blank"} |
-| `scopes` |  | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
-| `secret-key` |  | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate an authentication key](/docs/com-config/con-config-auth-key) |
-| `query-log-path` |  | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config/com-config-log-audit-query) |
-| `permissions` |  | path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config/com-config-group-permissions) |
-| `configured-ips` |   | Admin permissions are granted for any IP or subnet in this list. Domain names and `0.0.0.0/0` are not allowed. If not included or not set, no IPs are allow-listed. | Optional |  |
+| Key | Description | Required | Further information |
+|---|---|---|---|
+| `client-id` |SAML 2.0 Identity Provider (IdP) obtained from Azure AD Applications Overview | Yes |  |
+| `client-secret` | As for `client-id`.  | Yes | Obtain from the IdP |
+| `authorize-url` | IdP obtained from Applications Overview > Endpoints. | Yes | Use `v2` links if there are two versions available. |
+| `token-url` |  As for `authorize-url` | Yes |  |
+| `redirect-base-url` |  IdP URL that corresponds to your primary FeatureBase node. | Yes | Example: `https://featurebase-hostname-or-ip:10101` |
+| `group-endpoint-url` | SAML IdP API value | Yes | [SAML 2.0 IdP API documentation](https://learn.microsoft.com/en-us/azure/active-directory-b2c/saml-service-provider-options?pivots=b2c-user-flow){:target="_blank"} |
+| `logout-url` | SAML IdP API value | Yes | [Single sign-out SAML protocol] documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-out-saml-protocol){:target="_blank"} |
+| `scopes` | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
+| `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate an authentication key](/docs/com-config/con-config-auth-key) |
+| `query-log-path` | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config/com-config-log-audit-query) |
+| `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config/com-config-group-permissions) |
+| `configured-ips` | Admin permissions are granted for any IP or subnet in this list. Domain names and `0.0.0.0/0` are not allowed. If not included or not set, no IPs are allow-listed. | Optional |  |
 
 ## Additional information
 
