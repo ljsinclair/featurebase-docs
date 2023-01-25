@@ -11,6 +11,9 @@ WHAT IS A FB CLUSTER?
 WHY IS IT USEFUL?
 USE CASES?
 
+{: .note}
+FeatureBase clusters cannot be resized. However, they can be scaled by backing-up then restoring to a newer, larger cluster.
+
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
