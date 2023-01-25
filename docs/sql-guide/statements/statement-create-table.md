@@ -8,9 +8,6 @@ nav_order: 2
 
 ## CREATE TABLE statement
 
-
-
-
 Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful.
 
 ## BNF Syntax diagrams
