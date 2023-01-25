@@ -12,9 +12,17 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 ## BNF diagrams
 
 ![expr](/assets/images/sql-guide/create_table_stmt.svg)
+
+### Column_def
 ![expr](/assets/images/sql-guide/column_def.svg)
+
+### Type_name
 ![expr](/assets/images/sql-guide/type_name.svg)
+
+### Column_constraint
 ![expr](/assets/images/sql-guide/column_constraint.svg)
+
+### Table_options
 ![expr](/assets/images/sql-guide/table_options.svg)
 
 ## DDL Syntax
