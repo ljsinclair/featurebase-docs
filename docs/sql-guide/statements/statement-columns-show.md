@@ -8,6 +8,8 @@ nav_order: 6
 
 # SHOW COLUMNS statement
 
+## BNF diagram
+
 ![expr](/assets/images/sql-guide/show_columns.svg)
 
 ## DDL Syntax
