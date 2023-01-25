@@ -16,10 +16,10 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 ### Column_def
 ![expr](/assets/images/sql-guide/column_def.svg)
 
-### Type_name
+#### Type_name
 ![expr](/assets/images/sql-guide/type_name.svg)
 
-### Column_constraint
+#### Column_constraint
 ![expr](/assets/images/sql-guide/column_constraint.svg)
 
 ### Table_options
