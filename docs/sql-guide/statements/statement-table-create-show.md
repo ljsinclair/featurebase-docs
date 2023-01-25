@@ -12,14 +12,14 @@ Shows the data definition language (DDL) statement for a FeatureBase table.
 
 ### DDL Syntax
 
+![expr](/assets/images/sql-guide/show_create_table.svg)
+
 ```sql
 SHOW CREATE TABLE table_name;
 ```
 
-![expr](/assets/images/sql-guide/show_create_table.svg)
-
 ### Returns
 
-| **Column Name** | **Data Type** | **Description**   |
-|-----------------|---------------|-------------------|
-| ddl             | string        | DDL of the table  |
+| Column name | Data type | Description |
+|---|---|---|
+| `ddl` | String | Table DDL |
