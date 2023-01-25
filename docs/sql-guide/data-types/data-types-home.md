@@ -15,8 +15,6 @@ Data types and constraints are used to define table columns when creating tables
 
 ## Before you begin
 
-## Before you begin
-
 {% include /cloud/cloud-db-create-before-begin.md %}
 
 ## Data types
