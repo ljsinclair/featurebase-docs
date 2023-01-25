@@ -54,14 +54,14 @@ BULK [INSERT | REPLACE]
 | `REPLACE` | Replace values in an existing row. |  |
 | `table_name` | Name of target table |  |
 | `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. |  |
-| `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-bulk/#map-examples)
+| `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-replace-bulk/#map-examples)
 | `position` | Ordinal position of value in source. |  |
 | `type_name` | Data type of the value in source. |  |
-| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-quotation-examples) |
+| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-replace-bulk/#transform-clause-1) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM quotation mark examples](/docs/sql-guide/statements/statement-insert-replace-bulk/#from-quotation-examples) |
 | `'path/file_name'` | Valid path and file name for data source. Not available for FeatureBase Cloud. |  |
 | `'URL'` | Valid URL for data source. |  |
-| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM inline stream examples](/docs/sql-guide/statements/statement-insert-bulk/#from-inline-stream) |
+| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM inline stream examples](/docs/sql-guide/statements/statement-insert-replace-bulk/#from-inline-stream) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |
@@ -86,7 +86,7 @@ BULK [INSERT | REPLACE]
 {: .important}
 The number of expressions in the column list and TRANSFORM clause must match.
 
-* [TRANSFORM example](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
+* [TRANSFORM example](/docs/sql-guide/statements/statement-insert-replace-bulk/#transform-examples)
 
 ## Examples
 
@@ -161,5 +161,5 @@ with
 
 ## Further information
 
-* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-replace-bulk-csv-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-replace-bulk-ndjson-example)

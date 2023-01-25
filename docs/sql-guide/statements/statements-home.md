@@ -24,12 +24,12 @@ SQL statements can be executed in the Query editor.
 View the result of a query.
 
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
-* [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-show-create-table)
+* [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
 
 ## TABLE statements
 
-* [CREATE TABLE](/docs/sql-guide/statements/statement-create-table)
+* [CREATE TABLE](/docs/sql-guide/statements/statement-table-create)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
 
 ## COLUMN statements
@@ -39,5 +39,5 @@ View the result of a query.
 
 ## Table INSERT statements
 
-* [INSERT](/docs/sql-guide/statements/statement-insert)
-* [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
+* [INSERT](/docs/sql-guide/statements/statement-insert-replace)
+* [BULK INSERT](/docs/sql-guide/statements/statement-insert-replace-bulk)
