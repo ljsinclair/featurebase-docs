@@ -14,6 +14,7 @@ nav_order: 1
 
 ![expr](/assets/images/sql-guide/insert_stmt.svg)
 ![expr](/assets/images/sql-guide/column_list.svg)
+![expr](/assets/images/sql-guide/value_list.svg)
 
 ## DDL syntax
 
@@ -37,20 +38,6 @@ nav_order: 1
 | `column_name` | Target column name repeated for each subsequent column |  |
 | `id_value` | Required ID value |
 | `value` | Value to insert into the column |
-
-### column_list
-
-
-
-_column_list_ is the target list of columns to be inserted into. They must be valid columns for the specified table _table_name_, and one of the columns must be the `_id` column. If no _column_list_ is specified, a column list consisting of all columns in the table is assumed.
-
-### value_list
-
-![expr](/assets/images/sql-guide/value_list.svg)
-
-_value_list_ is the list of expressions to be inserted. The length of the _value_list_ must match the length of the _column_list_.
-
-
 
 ## Examples
 
