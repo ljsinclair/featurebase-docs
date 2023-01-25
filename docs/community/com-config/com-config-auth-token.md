@@ -28,7 +28,8 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 
 ## Obtain tokens via CLI
 
-* CD to the FeatureBase installation directory and run the following command:
+* Open a Terminal then `cd` to the FeatureBase installation directory.
+* Run the following command:
 
 ```
 featurebase auth-token
