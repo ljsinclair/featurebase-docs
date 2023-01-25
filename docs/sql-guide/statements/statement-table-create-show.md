@@ -41,7 +41,7 @@ The `skills` table is created automatically when a user chooses to create a Data
 ```
 SHOW CREATE TABLE skills;
 ```
-Results in
+Returns:
 ```
 ddl
 "create table skills (_id string, bools stringset, bools-exists stringset, id int, skills stringset, titles stringset, doctest int);"
