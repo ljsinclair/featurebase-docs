@@ -85,5 +85,3 @@ featurebase restore
   --tls.certificate client.crt
   --tls.key client.key
 ```
-
-## Further information
