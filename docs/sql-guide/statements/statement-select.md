@@ -75,7 +75,7 @@ SELECT
 * `*` wildcard represents all columns
 * `<qualifier>.*` limits the results to all columns based on the specified qualifier
 * `expr` can be any constant, function or combination thereof joined by operators, or a subquery
-* Items in the `select_list` can be aliased with a column_alias
+* Items in the select_list can be aliased with a column_alias
 * If a column is referenced in a non-aggregated expression in the select_list it must also appear in the group_by list
 
 ### from_clause
@@ -97,10 +97,10 @@ The SHARDS option allows you to specify against with shards the query will run.
 ![expr](/assets/images/sql-guide/group_by_clause.svg)
 
 `column_expr` specifies a column or non-aggregate calculation on a column which:
-* must exist in the SELECT...FROM clause
-* is not required to appear in the SELECT list
+* must exist in the from_clause
+* is not required to appear in the select_list
 
-A column must appear in the GROUP_BY list if it is referenced in a non-aggregated expression in the SELECT list
+A column must appear in the group_by_list if it is referenced in a non-aggregated expression in the select_list
 
 ## Examples
 
