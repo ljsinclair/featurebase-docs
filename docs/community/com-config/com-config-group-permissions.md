@@ -24,7 +24,7 @@ The `admin` group can access all FeatureBase indexes.
 touch permissions.yaml
 ```
 
-* Edit the file and add the following settings:\
+* Edit the file and add the following settings:
 
 ```
 user-groups:
@@ -35,7 +35,3 @@ user-groups:
     "<index1>": "<read>"
 admin: "<groupd-id3>
 ```
-
-## Flags
-
-{% include /com-config/com-config-flags-auth.md %}
