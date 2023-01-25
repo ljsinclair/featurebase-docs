@@ -12,7 +12,7 @@ Configure Azure Active Directory as an authentication IdP.
 ## Before you begin
 
 * Obtain administrator privileges to your Azure AD account
-{% include /com-install/com-install-before-begin.md %}
+* {% include /com-install/com-install-before-begin.md %}
 
 ## Step one: Register FeatureBase as an Azure application
 
