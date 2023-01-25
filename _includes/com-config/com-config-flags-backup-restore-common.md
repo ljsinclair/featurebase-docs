@@ -1,3 +1,5 @@
+| Argument | Data type | Description | Required? | Further information |
+|---|---|---|---|
 | `--host` |  | Specify a FeatureBase node | Yes |  |
 | `https://featurebase-hostname-or-ip:port` | string | `https` is required for authenticated FeatureBase clusters. Requires `auth-token` | For authenticated clusters | [FeatureBase authentication](/docs/community/com-config/com-config-authentication) |
 | `featurebase-hostname-or-ip:port` | string | Primary hostname of the FeatureBase cluster to be backed up. | Yes | [How to obtain primary host settings](/) |
