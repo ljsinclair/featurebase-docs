@@ -13,7 +13,7 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 
 ![expr](/assets/images/sql-guide/create_table_stmt.svg)
 
-### Column_def
+### COLUMN_LIST
 ![expr](/assets/images/sql-guide/column_def.svg)
 
 #### Type_name
@@ -30,7 +30,7 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 ```
 CREATE TABLE table_name
   [IF NOT EXISTS]
-  (column_list)
+  (COLUMN_LIST)
   [comment 'comment'];
 ```
 
@@ -40,7 +40,7 @@ CREATE TABLE table_name
 |---|---|---|
 | `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
 | `IF NOT EXISTS` | Optional argument that stops statement execution if a table of the same name already exists | No |  |
-| column_list | Optional list of columns which must include the `_id` column | Yes | [Data types](/docs/sql-guide/data-types/data-types-home) |
+| COLUMN_LIST | List of column names, data types and optional constraints. The list must include the `_id` column | Yes | [_id column](/statement-table-create/#_id-column)<br/>[Naming standards](/statement-table-create/#naming-standards)<br/>[Data types](/docs/sql-guide/data-types/data-types-home) |
 | `comment` | Optional string literal that describes the table | No |  |
 
 ## Additional information
