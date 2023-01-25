@@ -8,18 +8,41 @@ nav_order: 3
 
 # SHOW CREATE TABLE statement
 
-Shows the data definition language (DDL) statement for a FeatureBase table.
+Output the data definition language (DDL) CREATE TABLE statement for a specified FeatureBase table.
 
-### DDL Syntax
+## BNF diagram
 
 ![expr](/assets/images/sql-guide/show_create_table.svg)
+
+## DDL Syntax
 
 ```sql
 SHOW CREATE TABLE table_name;
 ```
 
-### Returns
+## Arguments
+
+| Argument | Data type | Description |
+|---|---|---|
+| `table_name` | String | Name of existing FeatureBase table |
+
+## Returns
 
 | Column name | Data type | Description |
 |---|---|---|
-| `ddl` | String | Table DDL |
+| `ddl` | String | DDL for CREATE TABLE statement |
+
+## Examples
+
+### Show DDL for sample data `skills` table
+
+The `skills` table is created automatically when a user chooses to create a Database with pre-loaded sample data.
+
+```
+SHOW CREATE TABLE skills;
+```
+Results in
+```
+ddl
+"create table skills (_id string, bools stringset, bools-exists stringset, id int, skills stringset, titles stringset, doctest int);"
+```
