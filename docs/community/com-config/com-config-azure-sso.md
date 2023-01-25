@@ -23,7 +23,7 @@ Configure Azure Active Directory as an authentication IdP.
 
 | Step | What to add | Example |
 |---|---|---|
-| 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://YOUR-DOMAIN-HERE:10101/redirect` |
+| 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://featurebase-hostname-or-ip:10101/redirect` |
 | 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |
 
 ## Step 2 - create an application secret key
