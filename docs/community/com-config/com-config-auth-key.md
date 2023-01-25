@@ -15,7 +15,7 @@ grand_parent: Community
 
 ## Generate a secret key
 
-* CD to the FeatureBase installation directory.
+* Open a terminal then `CD` to the FeatureBase installation directory.
 * Run the following command:
 
 ```
