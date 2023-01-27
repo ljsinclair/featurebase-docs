@@ -3,23 +3,15 @@ title: Issue running SQL
 layout: default
 parent: Troubleshooting
 grand_parent: Community
-has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
-# Issue - SQL won't execute properly
+# Issue - SQL won't on FeatureBase Community
 
-Statements using SQL found in [SQL-guide](/docs/sql-guide/sql-guide-home) do not execute when run in FeatureBase community.
+Statements using SQL found in [SQL-guide](/docs/sql-guide/sql-guide-home) do not execute when run:
+* from the FeatureBase Community command-line
+* via HTTP requests
 
 ## Solution
 
-Configure FeatureBase with the `sql.endpoint-enabled` option.
-
-Command line
-
-
-
-```toml
-    [sql]
-      endpoint-enabled = true
-```
+* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
