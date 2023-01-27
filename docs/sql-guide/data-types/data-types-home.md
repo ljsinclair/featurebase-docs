@@ -8,6 +8,7 @@ has_toc: false
 ---
 
 # Data types and constraints
+{: .no_toc }
 
 Data types and constraints are used to define table columns when creating tables via SQL.
 
