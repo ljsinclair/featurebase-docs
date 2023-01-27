@@ -8,7 +8,7 @@ nav_order: 1
 
 # SQL Operators
 
-
+SQL Operators are used in SELECT statements to perform mathematical and logical operations on operands.
 
 ## Before you begin
 
@@ -18,149 +18,53 @@ nav_order: 1
 ## unary_op
 ![expr](/assets/images/sql-guide/unary_op.svg)
 
-### ! → Bit-wise NOT
-
-This operator inverts all the bits of the operand passed
-
-```sql
-SELECT !5;
-```
-
-### +, - → plus and minus, change the sign of the operand
-
-```sql
-SELECT -1;
-```
-
-```sql
-SELECT +1;
-```
+| Operator | Description | Examples | Binary | Result |
+|---|---|---|---|---|
+| `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
+| `+` and `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
 
 ## binary_op
 ![expr](/assets/images/sql-guide/binary_op.svg)
 
 ### Logical
 
-#### AND → logical AND displays a result if both conditions are TRUE
-
-```sql
-SELECT 1 WHERE 1=1 AND 0=0;
-```
-
-#### OR → logical OR displays a result if either conditions are TRUE
-
-```sql
-SELECT 1 WHERE 1=1 OR 0=1;
-```
-
-### Equality
-#### = → Equal tests for equality and returns TRUE when equal
-
-```sql
-SELECT 1 WHERE 1=1;
-```
-
-#### != → Not Equal tests for inequality and returns TRUE when not equal
-
-```sql
-SELECT 1 WHERE 1!=0;
-```
+| Operator | SELECT query returns **true** when... | Examples |
+|---|---|---|
+| `AND` | **Both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
+| `OR` | **Either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
+| `=` | **Both** sides of the equation are equal. | `SELECT 1 WHERE 1=1` |
+| `!=` | **Both** sides of the equation are **not** equal. | `SELECT 1 WHERE 1!=0;` |
 
 ### Comparison
-#### < → Less Than tests and returns TRUE when the operand on the left is less than the operand on the right
 
-```sql
-SELECT 1 WHERE 10 < 100;
-```
-
-#### > → Greater Than tests and returns TRUE when the operand on the left is greater than the operand on the right
-
-
-```sql
-SELECT 1 WHERE 10 > 1;
-```
-
-#### <= → Less Than or Equal To tests and returns TRUE when the operand on the left is less than  or equal to the operand on the right
-
-
-```sql
-SELECT 1 WHERE 10 >= 10;
-```
-
-#### >= → Greater Than or Equal To tests and returns TRUE when the operand on the left is greater than or equal to the operand on the right
-
-
-```sql
-SELECT 1 WHERE 10 <= 11;
-```
+| Operator | Select statement returns **True** when... | Examples |
+|---|---|---|
+| `<` | the operand on the left is **less than** the operand on the right. | `SELECT 1 WHERE 10 < 100;` |
+| `>` | the operand on the left is **greater than** the operand on the right. | `SELECT 1 WHERE 10 > 1;` |
+| ``<=` | the operand on the left is **less than  or equal to** the operand on the right. | `SELECT 1 WHERE 10 >= 10;` |
+| `>=` | the operand on the left is **greater than or equal to** the operand on the right. | `SELECT 1 WHERE 10 <= 11;` |
 
 ### Arithmetic
-#### + → Add two operands
 
-```sql
-SELECT 1+1;
-```
-
-#### - → Subtract two operands
-
-```sql
-SELECT 1-1;
-```
-
-#### * → Multiply two operands
-
-```sql
-SELECT 12*11;
-```
-
-#### / → Divide two operands
-
-```sql
-SELECT 120/12;
-```
-
-#### % → Modulo of two operands
-
-```sql
-SELECT 5%3;
-```
+| Operator | Description | Examples |
+|---|---|---|
+| `+` | Add two operands. | `SELECT 1+1;` |
+| `-` | Subtract two operands. | `SELECT 1-1` |
+| `*` | Multiply two operands. | `SELECT 12*11` |
+| `/` | Divide two operands. | `SELECT 120/12;` |
+| `%` | Modulo divides two operands then returns the remainder or signed remainder. | `SELECT 5%3;` |
 
 ### Bitwise
-#### & → And sets each bit to 1 if both bits are 1
 
-`0101 & 0001` ->  `0001`
-
-```sql
-SELECT 5 & 1;
-```
-
-#### | → Or sets each bit to 1 if one of two bits is 1
-
-```sql
-SELECT 5 | 1;
-```
-
-`0101 | 0001` -> `0101`
-
-#### << → Shift Left shifts bits left by pushing n zeros in from the right based on the second operand
-
-```sql
-SELECT 5 << 1;
-```
-
-`0101 << 1` ->  `1010`
-
-#### >> → Shift Right shfits bits right by pushing copies of the leftmost bit in from the left by n places based on the second operand
-
-```sql
-SELECT 5 >> 1;
-```
-
-`0101 >> 1` -> `0010`
+| Operator | Description | Example | Binary | Result |
+|---|---|---|---|---|
+| `&` | **And** sets each bit to 1 where both bits are 1 | `SELECT 5 & 1` | `0101 & 0001` | `0001` |
+| `|` | **Or** sets each bit to 1 if one of two bits = 1 | `SELECT 5 | 1` | `0101 | 0001` | `0101` |
+| `<<` | The second operand determines the number of zeroes to **insert** to the right which then **shifts left** the value of the first operand. | `SELECT 5 << 1;` | `0101 << 1` | `1010` |
+| `>>` | The second operand determines the number of zeroes to **remove** from the right which then **shifts right** the value of the first operand. | `SELECT 5 >> 1;` | `0101 >> 1` | `0010` |
 
 ### String
-#### || → (string) concatenation
 
-```sql 
-SELECT 'CON' || 'CAT';
-```
+| Operator | Description | Example | Result |
+|---|---|---|---|
+| `||` | Concatenate two strings into a single string. | `SELECT 'CON' || 'CAT';` | `CONCAT` |
