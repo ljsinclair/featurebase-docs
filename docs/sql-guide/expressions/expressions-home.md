@@ -8,6 +8,9 @@ has_toc: false
 ---
 
 # SQL Expressions
+{: .no_toc }
+
+{% include page-toc.md %}
 
 ## Before you begin
 
@@ -43,6 +46,8 @@ Literals are explicitly specified fixed values that conform to a specific data t
 
 ### [table_name].column_name
 
+
+
 ### [unary_op] expr
 
 * [Unary operators](/docs/sql-guide/operators/operators-home#)
@@ -58,8 +63,6 @@ Literals are explicitly specified fixed values that conform to a specific data t
 * [SQL Functions](/docs/sql-guide/functions/functions-home)
 
 ### CAST expr AS type_name
-
-DIAGRAM
 
 | Syntax | Example | Result |
 |---|---|---|
