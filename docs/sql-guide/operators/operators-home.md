@@ -17,7 +17,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ![expr](/assets/images/sql-guide/unary_op.svg)
 
 | Operator | Description | Examples | Binary | Result |
-|---|---|---|---|---|
+|:---:|---|---|---|---|
 | `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
 | `+` or `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
 
@@ -27,7 +27,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ### Logical
 
 | Operator | `WHERE` condition returns **true** when... | Examples |
-|---|---|---|
+|:---:|---|---|
 | `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
 | `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
 | `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1` |
@@ -36,16 +36,16 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ### Comparison
 
 | Operator | `WHERE` condition returns **True** when... | Examples |
-|---|---|---|
+|:---:|---|---|
 | `<` | the operand on the left is **less than** the operand on the right. | `SELECT 1 WHERE 10 < 100;` |
 | `>` | the operand on the left is **greater than** the operand on the right. | `SELECT 1 WHERE 10 > 1;` |
-| ``<=` | the operand on the left is **less than  or equal to** the operand on the right. | `SELECT 1 WHERE 10 >= 10;` |
+| `<=` | the operand on the left is **less than  or equal to** the operand on the right. | `SELECT 1 WHERE 10 >= 10;` |
 | `>=` | the operand on the left is **greater than or equal to** the operand on the right. | `SELECT 1 WHERE 10 <= 11;` |
 
 ### Arithmetic
 
 | Operator | Description | Examples |
-|---|---|---|
+|:---:|---|---|
 | `+` | Add two operands. | `SELECT 1+1;` |
 | `-` | Subtract two operands. | `SELECT 1-1` |
 | `*` | Multiply two operands. | `SELECT 12*11` |
@@ -55,7 +55,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ### Bitwise
 
 | Operator | Description | Example | Binary | Result |
-|---|---|---|---|---|
+|:---:|---|---|---|---|
 | `&` | **And** sets each bit to 1 where both bits are 1 | `SELECT 5 & 1` | `0101 & 0001` | `0001` |
 | `|` | **Or** sets each bit to 1 if one of two bits = 1 | `SELECT 5 | 1` | `0101 | 0001` | `0101` |
 | `<<` | The second operand determines the number of zeroes to **insert** to the right which then **shifts left** the value of the first operand. | `SELECT 5 << 1;` | `0101 << 1` | `1010` |
@@ -64,5 +64,5 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ### String
 
 | Operator | Description | Example | Result |
-|---|---|---|---|
+|:---:|---|---|---|
 | `||` | Concatenate two strings into a single string. | `SELECT 'CON' || 'CAT';` | `CONCAT` |
