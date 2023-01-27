@@ -18,25 +18,57 @@ has_toc: false
 
 {% include /concepts/standard-naming-obj.md %}
 
-### expr
+## expr
+
 ![expr](/assets/images/sql-guide/expr.svg)
 
-### string_literal
+| Syntax | Example |
+|---|---|
+| `expr [NOT] LIKE expr` | `SELECT * from Products where Product_name LIKE pen` |
+| `expr IS [NOT] null` | `SELECT * from Products where Price is null` |
+| `expr [NOT] between expr AND expr` | `SELECT * from Products WHERE Price BETWEEN 10 AND 20;` |
+| expr [NOT] IN ([SELECT_stmnt | expr,...]) | `Select * from Products where product_ID NOT IN (SELECT * from Sales)`<br/>`SELECT * from Products where Teacup IN (Sales, Inventory)` |
 
+### Literals
 
-### decimal_literal
+Literals are explicitly specified fixed values that conform to a specific data type:
 
+| String literal | BNF diagram | Further information |
+|---|---|---|
+| date |  | [DATE() data type](/docs/sql-guide/data-types/data-type-date)
+| decimal |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
+| set | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| string |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+| tuple | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
 
-### set_literal
-![expr](/assets/images/sql-guide/set_literal.svg)
+### [table_name].column_name
 
-### tuple_literal
-![expr](/assets/images/sql-guide/tuple_literal.svg)
+### [unary_op] expr
 
-### date_literal
+* [Unary operators](/docs/sql-guide/operators/operators-home#)
+
+### expr binary_op expr
+
+* [Binary operators](/docs/sql-guide/operators/operators-home#)
 
 ### function_call
+
 ![expr](/assets/images/sql-guide/function_call.svg)
+
+* [SQL Functions](/docs/sql-guide/functions/functions-home)
+
+### CAST expr AS type_name
+
+DIAGRAM
+
+| Syntax | Example | Result |
+|---|---|---|
+| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 
+
+Alter the data type for the stated expr value
+
+
+
 
 ### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
