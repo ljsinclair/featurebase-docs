@@ -21,23 +21,23 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 | Operator | Description | Examples | Binary | Result |
 |---|---|---|---|---|
 | `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
-| `+` and `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
+| `+` or `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
 
 ## binary_op
 ![expr](/assets/images/sql-guide/binary_op.svg)
 
 ### Logical
 
-| Operator | SELECT query returns **true** when... | Examples |
+| Operator | `WHERE` condition returns **true** when... | Examples |
 |---|---|---|
-| `AND` | **Both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
-| `OR` | **Either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
-| `=` | **Both** sides of the equation are equal. | `SELECT 1 WHERE 1=1` |
-| `!=` | **Both** sides of the equation are **not** equal. | `SELECT 1 WHERE 1!=0;` |
+| `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
+| `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
+| `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1` |
+| `!=` | **both** operands are **not** equal. | `SELECT 1 WHERE 1!=0;` |
 
 ### Comparison
 
-| Operator | Select statement returns **True** when... | Examples |
+| Operator | `WHERE` condition returns **True** when... | Examples |
 |---|---|---|
 | `<` | the operand on the left is **less than** the operand on the right. | `SELECT 1 WHERE 10 < 100;` |
 | `>` | the operand on the left is **greater than** the operand on the right. | `SELECT 1 WHERE 10 > 1;` |
