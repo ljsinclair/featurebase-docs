@@ -63,15 +63,16 @@ DIAGRAM
 
 | Syntax | Example | Result |
 |---|---|---|
-| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 
+| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 25 |
 
-Alter the data type for the stated expr value
-
-
-
+* [CAST function]()
 
 ### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
+A SQL Statement nested within another SQL statement.
+
 ### case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
+
+* [SQL CASE expression](https://www.w3schools.com/sql/sql_case.asp){:target="_blank"}
