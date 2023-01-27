@@ -16,7 +16,7 @@ has_toc: false
 ### identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
 
-NAMING STANDARDS HERE
+{% include /concepts/standard-naming-obj.md %}
 
 ### expr
 ![expr](/assets/images/sql-guide/expr.svg)
