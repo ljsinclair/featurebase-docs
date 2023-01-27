@@ -31,4 +31,4 @@ featurebase cli --help
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Run SQL over an HTTP endpoint]()
+* [Run SQL over an HTTP endpoint](/docs/community/com-api/com-api-sql-endpoint)

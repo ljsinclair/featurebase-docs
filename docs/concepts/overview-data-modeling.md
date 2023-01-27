@@ -15,4 +15,4 @@ nav_order: 1
 
 ## Before you begin
 
-{% include /community/com-before-begin-source.md %}
+{% include /com-install/com-install-before-begin.md %}
