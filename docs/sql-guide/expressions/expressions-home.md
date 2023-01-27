@@ -65,12 +65,14 @@ DIAGRAM
 |---|---|---|
 | `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 25 |
 
-* [CAST function]()
+* [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"}
 
 ### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
 A SQL Statement nested within another SQL statement.
+
+* [SELECT Statement](/docs/sql-guide/statements/statement-select)
 
 ### case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
