@@ -22,12 +22,11 @@ nav_order: 4
 
 | Status | Description | Further information |
 |---|---|---|
-| CREATING |  Provisioning hardware, installing software, and other tasks to create the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
-| RUNNING |  Post-creation state of the database which indicates it is ready for use. |  |
-| UPDATING |  Updates may occur due to hardware changes or software patches. |  |
-| DEPROVISIONING |  Occurs when a database is deleted and hardware is being spun down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
-| DELETED |  Post deletion state that indicates successful deletion. |
-| FAILED |  {% include contact-support.md %} to help with this issue. |
+| PROVISIONING |  Provisioning hardware, installing software, and other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
+| RUNNING |  Created or updated database is ready for use. |  |
+| UPDATING |  Hardware changes or software patches are in progress. |  |
+| DEPROVISIONING |  A user has chosen to delete the database so the system is de-provisioning services and spinning the database down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
+| FAILED | Database action has failed to complete successfully. {% include contact-support.md %} to help with this issue. |
 
 ## Further information
 
