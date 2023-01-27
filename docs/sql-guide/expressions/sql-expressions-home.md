@@ -9,10 +9,6 @@ has_toc: false
 
 # SQL Expressions
 
-FeatureBase supports the following SQL expressions:
-* Identifier
-* Expression
-
 ## Before you begin
 
 {% include /cloud/cloud-db-create-before-begin.md %}
@@ -20,11 +16,10 @@ FeatureBase supports the following SQL expressions:
 ### identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
 
+NAMING STANDARDS HERE
+
 ### expr
 ![expr](/assets/images/sql-guide/expr.svg)
-
-### integer_literal
-
 
 ### string_literal
 
