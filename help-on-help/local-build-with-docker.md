@@ -30,7 +30,11 @@ NOTE: This process can take some time if starting from scratch or after executin
 
 NOTE: Changes to configuration files such as `/_config.yml` are not loaded while the site is up.
 
-* Run the `docker compose up serve` command on the CLI in the `/featurebsae-docs` directory.
+* Run the the following in the `/featurebase-docs` directory:
+
+```
+docker compose up serve
+```
 
 ## View local site
 
