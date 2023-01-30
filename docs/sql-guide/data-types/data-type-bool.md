@@ -8,7 +8,7 @@ nav_order: 1
 
 # BOOL data type
 
-## DDL syntax
+## DDL Syntax
 
 ```
 BOOL
