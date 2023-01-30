@@ -49,10 +49,6 @@ featurebase backup
 ```
 
 ## Arguments
-<!--this is a workaround because the table won't merge into one with a leading include-->
-### Common Backup/Restore flags
-
-{% include /com-config/com-config-flags-backup-restore-common.md %}
 
 ### Backup flags
 
@@ -61,6 +57,10 @@ featurebase backup
 | `-no-sync` | Backup runs without the operating system moving data to persistent storage. | Optional | [Override storage synchronization](#override-storage-synchronization) |
 | `-o` or `-output` | Backup output directory | Yes |  |
 | `/backup-directory/path/` | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
+
+### Common Backup/Restore flags
+
+{% include /com-config/com-config-flags-backup-restore-common.md %}
 
 ### TLS authentication flags
 
