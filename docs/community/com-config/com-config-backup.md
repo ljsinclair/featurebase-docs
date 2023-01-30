@@ -10,6 +10,8 @@ grand_parent: Community
 
 You can create FeatureBase backups on the CLI using the `featurebase-backup` command and suitable flags.
 
+## What's included in the backup?
+
 A `featurebase backup` includes:
 * schema
 * key translation data
@@ -20,7 +22,9 @@ A `featurebase backup` includes:
 {: .important}
 Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
-## Not included in backups
+## What's excluded from the backup?
+
+The following are not included in a FeatureBase backup:
 
 * External lookup database (backup separately)
 * IDs committed by the auto ID feature before the backup starts
@@ -46,13 +50,11 @@ featurebase backup
   {[-o|-output] /backup-directory/path/}
 ```
 
-## Arguments
-<!--this is a workaround because the table won't merge into one with a leading include-->
-### Common Backup/Restore flags
+## Common Backup/Restore flags
 
 {% include /com-config/com-config-flags-backup-restore-common.md %}
 
-### Backup flags
+## Backup flags
 
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
@@ -60,7 +62,7 @@ featurebase backup
 | `-o` or `-output` | Backup output directory | Yes |  |
 | `/backup-directory/path/` | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
 
-### TLS authentication flags
+## TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
 
@@ -97,7 +99,6 @@ featurebase backup
   --host featurebase-hostname-or-ip:10101
   -output /backups/featurebase-backups
 ```
-
 
 ### Authenticated backup
 
