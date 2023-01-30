@@ -60,8 +60,6 @@ List all the flags by entering `idk/molecula-consumer-csv` from the `/featurebas
 
 {% include /com-ingest/com-ingest-csv-header-datafile.md %}
 
-{% include /com-ingest/com-ingest-csv-header-flag.md %}
-
 {% include /com-ingest/com-ingest-csv-header-flag-tls.md %}
 
 ## Further information
