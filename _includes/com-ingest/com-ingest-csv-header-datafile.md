@@ -6,7 +6,7 @@ The required header is defined in the source file
 ```shell
 molecula-consumer-csv \
     --batch-size=10000 \
-    --auto-generate \
-    --index=csv-ingest-header-define-file \
-    --files=header-defined.csv \
+    --primary-key-fields=username \
+    --index=users \
+    --files=header-defined.csv
 ```

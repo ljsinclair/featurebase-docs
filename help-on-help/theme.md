@@ -54,4 +54,4 @@ Refer to /help-on-help/material-icons for more information
 
 ## Theme help
 
-[Just the docs theme help site](https://just-the-docs.github.io)
+[Just the docs theme](https://just-the-docs.github.io)

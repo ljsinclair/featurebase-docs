@@ -8,7 +8,7 @@ nav_order: 6
 
 # STRING data type
 
-## DDL syntax
+## DDL Syntax
 
 ```
 STRING

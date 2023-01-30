@@ -1,9 +1,14 @@
-### Using pre-set environment variables
+### Using environment variables to set flags
 
-* Prefix any flag with `--consumer_` to load pre-set environment variables.
-* Convert periods/full-stops and hyphens to underscores.
-* Examples:
+All command line flags can be set via environment variables by:
 
-| Original flag | Flag to use environment variable |
+* removing leading dashes
+* adding `CONSUMER_` as prefix
+* writing the flag in UPPER CASE
+* converting dashes or dots to underscores
+
+For example:
+
+| Original flag | Equivalent for use with environment variables |
 |---|---|
-| `--tls.ca-certificate` | `--CONSUMER_TLS_CA_CERTIFICATE` |
+| `--tls.ca-certificate` | `CONSUMER_TLS_CA_CERTIFICATE` |
