@@ -53,8 +53,6 @@ Edits to these files are loaded automatically by the system.
 
 NOTE: Changes to configuration files such as `/_config.yml` or GIT PULL require the server to be restarted
 
-
-
 ## Restart the container to make changes
 
 You will need to stop the container:
