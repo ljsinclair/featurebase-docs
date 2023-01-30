@@ -30,20 +30,18 @@ featurebase restore
   {[-s|-source]/directory/path/}
 ```
 
-## Arguments
-<!--this is a workaround because the table won't merge into one with a leading include-->
-### Common Backup/Restore flags
-
-{% include /com-config/com-config-flags-backup-restore-common.md %}
-
-### Restore flags
+## Restore flags
 
 | Argument | Description | Required? |
 |---|---|---|
 | `-s` or `-source` | Source directory and backup file. | Yes |
 | `/backup-directory/path/` | Directory containing backups | Yes |
 
-### TLS authentication flags
+## Common Backup/Restore flags
+
+{% include /com-config/com-config-flags-backup-restore-common.md %}
+
+## TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
 
