@@ -19,17 +19,15 @@ A `featurebase backup` includes:
 * Allocated IDs
 * Unaltered records
 
-{: .important}
-Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
-
-## What's excluded from the backup?
-
-The following are not included in a FeatureBase backup:
+## What's excluded from the backups
 
 * External lookup database (backup separately)
 * IDs committed by the auto ID feature before the backup starts
 * Node configurations
 * Other FeatureBase components
+
+{: .important}
+Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
 ## Before you begin
 
@@ -50,11 +48,13 @@ featurebase backup
   {[-o|-output] /backup-directory/path/}
 ```
 
-## Common Backup/Restore flags
+## Arguments
+<!--this is a workaround because the table won't merge into one with a leading include-->
+### Common Backup/Restore flags
 
 {% include /com-config/com-config-flags-backup-restore-common.md %}
 
-## Backup flags
+### Backup flags
 
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
@@ -62,7 +62,7 @@ featurebase backup
 | `-o` or `-output` | Backup output directory | Yes |  |
 | `/backup-directory/path/` | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
 
-## TLS authentication flags
+### TLS authentication flags
 
 {% include /com-config/com-config-flags-backup-restore-tls.md %}
 
@@ -99,6 +99,7 @@ featurebase backup
   --host featurebase-hostname-or-ip:10101
   -output /backups/featurebase-backups
 ```
+
 
 ### Authenticated backup
 
