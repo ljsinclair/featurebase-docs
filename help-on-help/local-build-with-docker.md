@@ -45,11 +45,15 @@ http://<local-ip>:4000
 
 ## Editing content
 
+**IMPORTANT** Read the Writing content guidance under this folder.
+
 Content is found in the `/docs` and `/_includes` directories.
 
 Edits to these files are loaded automatically by the system.
 
 NOTE: Changes to configuration files such as `/_config.yml` or GIT PULL require the server to be restarted
+
+
 
 ## Restart the container to make changes
 
@@ -65,3 +69,7 @@ You will need to stop the container:
 Containers and images can be deleted from Docker Desktop if required or via the command line.
 
 * [Remove docker images, containers, volumes and networks](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
+
+## Further information
+
+* [Check for broken links](https://github.com/FeatureBaseDB/featurebase-docs/blob/main/help-on-help/broken-link-check.md)
