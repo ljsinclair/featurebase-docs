@@ -15,7 +15,7 @@ FeatureBase features can be enabled or disabled via
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-
+<!--
 ## How do I setup a FeatureBase cluster?
 
 * [Setup a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
@@ -35,6 +35,8 @@ Azure Active Directory is supported via SAML 2.0
 * [Setup FeatureBase authentication](/docs/community/com-config/com-config-authentication)
 * [Setup FeatureBase group permissions](/docs/community/com-config/com-config-group-permissions)
 
+-->
+
 ## How do I backup a FeatureBase cluster?
 
 * [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup)
@@ -43,6 +45,7 @@ Azure Active Directory is supported via SAML 2.0
 
 * [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
 
+<!--
 ## Verify backups
 
 Use the following checklist to verify backups function correctly.
@@ -60,7 +63,7 @@ Use the following checklist to successfully restore a cluster from backups.
 
 | Task | Description |
 |---|---|
-| Stop running processes on source | <!--[Stop running ingest processes on CLI](/community/com-ingest/com-ingest-stop.md--> |
+| Stop all running processes | Stop any processes such as ingest |
 | Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-config/com-config-backup)
 | Create target | [Create a cluster](/docs/community/com-config/com-config-cluster) |
 | Restore backups to target | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
@@ -68,3 +71,5 @@ Use the following checklist to successfully restore a cluster from backups.
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
 | Start all processes on target | Start processes including ingest |
 | Cleanup source | Backup the original cluster then tear it down |
+
+-->
