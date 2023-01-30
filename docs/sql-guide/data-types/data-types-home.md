@@ -67,4 +67,4 @@ Data types used to define the type of data that a table column can contain. They
 
 * [Create a Cloud table](/docs/cloud/cloud-tables/cloud-table-create)
 * [Create a Cloud table with SQL](/docs/sql-guide/statements/statement-table-create)
-* [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTable)
+* [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)

@@ -30,4 +30,4 @@ nav_order: 4
 
 ## Further information
 
-* [Query the database state via the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/getDatabase)
+* [Query the database state via the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getDatabase)

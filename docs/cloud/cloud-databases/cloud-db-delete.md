@@ -39,4 +39,4 @@ Click <span class="material-icons md-18">more_vert</span> on the database to del
 
 ## Further information
 
-* [Delete database API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/deleteDatabase)
+* [Delete database API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deleteDatabase)
