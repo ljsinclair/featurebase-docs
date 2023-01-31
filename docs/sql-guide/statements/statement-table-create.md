@@ -57,6 +57,15 @@ CREATE TABLE table_name
 
 ## Examples
 
+### CREATE TABLE `products` and `services` with 2 columns and constraint
+
+```sql
+create table products
+  (_id id, prodlist string, price decimal(2));
+create table services
+  (_id id, servicelist string, price decimal(2));
+```
+
 ### CREATE TABLE with integer constraints
 
 ```sql
