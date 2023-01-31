@@ -50,7 +50,7 @@ BULK INSERT
 
 | Argument | Description | Further information |
 |---|---|---|
-| `INSERT` | Update values in an existing row. |  |
+| `INSERT` | Update values in specified, existing rows. |  |
 | `table_name` | Name of target table |  |
 | `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. |  |
 | `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-bulk/#map-examples) |
@@ -58,25 +58,17 @@ BULK INSERT
 | `type_name` | Data type of the value in source. |  |
 | `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-quotation-examples) |
-| `'path/file_name'` | Valid path and file name for data source. Not available for FeatureBase Cloud. |  |
+| `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. |  |
 | `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM inline stream examples](/docs/sql-guide/statements/statement-insert-bulk/#from-inline-stream) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
 | `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. |  |
-| `FORMAT` | Set the format of the source data to `'CSV' or `'NDJSON'`. |  |
-| `HEADER_ROW` | Optional CSV argument that will ignore the header in the source CSV file. |  |
-| `ALLOW_MISSING_VALUES` | Optional argument that overrides a `NULL` error message that will stop processing when valid JsonPath expressions in the MAP clause have missing data. |  |
-<!--
-## Errors
+| `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. |  |
+| `HEADER_ROW` | Optional `CSV` argument that will ignore the header in the source CSV file. |  |
+| `ALLOW_MISSING_VALUES` | Optional `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. |  |
 
-| Error | Override |
-|---|---|
-| Data in source column cannot be converted to specified data type | None |
-| Mismatch between expressions in the column list and TRANSFORM clause | None |
-| NULL error when valid JsonPath expression in MAP clause have missing data | ALLOW_MISSING_VALUES |
--->
 ## TRANSFORM clause
 
 * a list of valid SQL expressions that are used to specify data transformation before values are inserted.
