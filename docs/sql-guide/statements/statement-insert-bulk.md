@@ -115,17 +115,15 @@ FROM clause quotation marks must be escaped before the BULK statement is run, ev
 | `FeatureBase's speed` | `FeatureBase''s speed` |
 | `""Time is money." – Benjamin Franklin."` | `"""Time is money."" – Benjamin Franklin."` |
 
-#### Single line stream string literal
-
 The contents of an inline stream string literal are treated as a file and read line-by-line.
 
-Single line:
+Single line stream string literal
 
 ```
 'this is a single-line string literal'
 ```
 
-#### Multi-line stream string literal
+Multi-line stream string literal
 
 Multi line (prepend with `x`)
 
