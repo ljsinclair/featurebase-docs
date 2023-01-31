@@ -35,13 +35,13 @@ BULK INSERT
   MAP (position type_name,...)
   [TRANSFORM (expr,...)]
   FROM
-    ['path/file_name' | 'URL' ]
+    ['path/file_name' | 'URL' | x'records']
   WITH
     [
       [BATCHSIZE integer_literal]
       [ROWSLIMIT integer_literal]
       [INPUT ['path/file_name' | 'URL' | 'STREAM']]
-      [FORMAT ['csv' [HEADER_ROW]] | ['ndjson' [ALLOW_MISSING_VALUES]]]
+      [FORMAT ['CSV' [HEADER_ROW]] | ['NDJSON' [ALLOW_MISSING_VALUES]]]
       ...
     ]
 ```
@@ -50,7 +50,7 @@ BULK INSERT
 
 | Argument | Description | Further information |
 |---|---|---|
-| `INSERT` | Update values in specified, existing rows. |  |
+| `INSERT` | Insert new records if the _id does not exist else update the record with the values passed. if a column is missing, its values are not updated | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table |  |
 | `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. |  |
 | `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-bulk/#map-examples) |
@@ -60,6 +60,7 @@ BULK INSERT
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. |  |
 | `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. |  |
+| `'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option |  |
 | `'STREAM'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#stream-quotation-marks) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
@@ -86,7 +87,7 @@ The number of expressions in the column list and TRANSFORM clause must match.
 | Input type | MAP expression for value in source column | Example |
 |---|---|---|
 | CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |
-| NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDSON value | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) |
+| NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) |
 
 ### TRANSFORM examples
 
@@ -105,16 +106,8 @@ TRANSFORM (
     end
 )
 ```
-
-### STREAM quotation marks
-
-FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
-
-| Incorrect | Correct |
-|---|---|
-| `FeatureBase's speed` | `FeatureBase''s speed` |
-| `""Time is money." – Benjamin Franklin."` | `"""Time is money."" – Benjamin Franklin."` |
-
+### FROM examples
+#### Using STREAM argument
 The contents of an inline stream string literal are treated as a file and read line-by-line.
 
 Single line stream string literal
@@ -135,7 +128,18 @@ multi-line
 string
 literal'
 ```
-<!-- COMMENTED OUT BECAUSE AS OF 2023-01-31 this does not yet exist
+
+#### Using STREAM with quotation marks
+
+FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
+
+| Incorrect | Correct |
+|---|---|
+| `FeatureBase's speed` | `FeatureBase''s speed` |
+| `""Time is money." – Benjamin Franklin."` | `"""Time is money."" – Benjamin Franklin."` |
+
+
+<!-- COMMENTED OUT BECAUSE AS OF 2023-01-31 this is the same as INSERT
 
 ### BULK REPLACE from CSV file with TRANSFORM
 
