@@ -40,7 +40,7 @@ BULK INSERT
     [
       [BATCHSIZE integer_literal]
       [ROWSLIMIT integer_literal]
-      [INPUT ['FILE' | 'URL' | 'STREAM']]
+      [INPUT ['path/file_name' | 'URL' | 'STREAM']]
       [FORMAT ['csv' [HEADER_ROW]] | ['ndjson' [ALLOW_MISSING_VALUES]]]
       ...
     ]
@@ -57,10 +57,10 @@ BULK INSERT
 | `position` | Ordinal position of value in source. |  |
 | `type_name` | Data type of the value in source. |  |
 | `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [STREAM quotation marks](#stream-quotation-marks) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. |  |
 | `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. |  |
-| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#stream-quotation-marks) |
+| `'STREAM'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#stream-quotation-marks) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
@@ -135,6 +135,7 @@ multi-line
 string
 literal'
 ```
+<!-- COMMENTED OUT BECAUSE AS OF 2023-01-31 this does not yet exist
 
 ### BULK REPLACE from CSV file with TRANSFORM
 
@@ -149,6 +150,7 @@ with
     format 'CSV'
     input 'FILE';
 ```
+-->
 
 ## Further information
 
