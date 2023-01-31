@@ -102,7 +102,19 @@ The SHARDS option allows you to specify against with shards the query will run.
 
 A column must appear in the group_by_clause if it is referenced in a non-aggregated expression in the select_list
 
+### Wildcards
+
+Wildcards are used with the `LIKE` clause.
+
+* [SQL statement wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){:target="_blank"}
+
 ## Examples
+
+### SELECT statement with wildcard
+
+```sql
+SELECT * from services WHERE servicelist LIKE '%free%';
+```
 
 ### SELECT COUNT
 ```sql

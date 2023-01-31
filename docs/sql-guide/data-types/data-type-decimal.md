@@ -36,3 +36,7 @@ DECIMAL[({SCALE value})]
 ### CREATE TABLE with all data types
 
 {% include /sql-guide/table_create_eg_all_datatypes.md %}
+
+### CREATE TABLE with decimal data type
+
+{% include /sql-guide/table_create_products_decimal.md %}

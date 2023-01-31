@@ -28,10 +28,13 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 | Operator | `WHERE` condition returns **true** when... | Examples |
 |:---:|---|---|
-| `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
-| `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
 | `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1;` |
 | `!=` | **both** operands are **not** equal. | `SELECT 1 WHERE 1!=0;` |
+| `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
+| `BETWEEN` | the operand is within the range of the two values | `SELECT * FROM products WHERE price BETWEEN 0 AND 50;` |
+| `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
+
+<!-- Add missing from https://www.w3schools.com/sql/sql_operators.asp once supported -->
 
 ### Comparison
 
@@ -66,3 +69,10 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 | Operator | Description | Example | Result |
 |:---:|---|---|---|
 | `||` | Concatenate two strings into a single string. | `SELECT 'CON' || 'CAT';` | `CONCAT` |
+
+## Further information
+
+FeatureBase also supports standard operators:
+
+* [SQL IN operator](https://www.w3schools.com/Sql/sql_in.asp){:target="_blank"}
+*

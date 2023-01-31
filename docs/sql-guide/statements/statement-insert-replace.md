@@ -38,11 +38,13 @@ grand_parent: SQL guide
 
 ## Examples
 
+## Insert two rows into `test_table`
+
 ```sql
 INSERT INTO test_table (_id, column1, column2) VALUES (1, 10, 'data10'), (2, 10, 'data10');
 ```
 
-### INSERT multiple records INTO products and services table
+### INSERT multiple records INTO `products` and `services` tables
 
 ```sql
 INSERT INTO products
@@ -62,9 +64,18 @@ INSERT INTO products
     (4, 'local courier (same day to metro)', 25.00);
 ```
 
+### REPLACE value in services table
+
 ```sql
 REPLACE INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
+```
 
+### INSERT values into single column identified by `_id`
 
-
+```sql
+INSERT into products (_id, stock) VALUES
+  (1,233),
+  (2,3289),
+  (3, 44),
+  (4, 1);
 ```

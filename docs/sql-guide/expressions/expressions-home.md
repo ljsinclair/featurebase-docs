@@ -22,12 +22,17 @@ parent: SQL guide
 
 ![expr](/assets/images/sql-guide/expr.svg)
 
+{: .note}
+View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statement-table-create/#create-table-products-and-services-with-2-columns-and-constraint) and [INSERT INTO tables and products](/docs/sql-guide/statements/statement-insert-replace/#insert-multiple-records-into-products-and-services-table)
+
 | Syntax | Example | Result |
 |---|---|---|
-| `expr [NOT] LIKE expr` | `SELECT * from Products where product_name LIKE pen` | `ballpen`, `pencil`, `playpen` |
-| `expr IS [NOT] null` | `SELECT * from Services where Price is null` | `free delivery on orders over $50` |
+| `expr [NOT] LIKE expr` | `SELECT * FROM products WHERE prodlist LIKE 'pen';` | `ballpen`, `pencil`, `playpen` |
+| `expr IS [NOT] null` | `SELECT * FROM services WHERE price IS null;` | `free delivery on orders over $50` |
 | `expr [NOT] between expr AND expr` | `SELECT * from Products WHERE Price BETWEEN 10 AND 20;` | `fountain pen`, `notepad`, `rubber ball` |
 | `expr [NOT] IN ([SELECT_stmnt | expr,...])` | `Select * from Products where product_ID NOT IN (SELECT product_ID from Sales where product_name LIKE ear)` | `gold-plated earplugs` |
+
+
 
 ### Literals
 
