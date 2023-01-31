@@ -31,3 +31,9 @@ The STRING data type:
 If data has high cardinality:
 * performance can decrease
 * storage will increase
+
+## Examples
+
+### CREATE TABLE with all data types
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}

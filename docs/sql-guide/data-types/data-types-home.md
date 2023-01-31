@@ -61,6 +61,12 @@ Data types used to define the type of data that a table column can contain. They
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
+## CREATE TABLE with all data types
+
+This example SQL demonstrates all data types and selected constraints.
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}
+
 ## Further information
 
 * [Create a Cloud table](/docs/cloud/cloud-tables/cloud-table-create)

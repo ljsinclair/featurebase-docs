@@ -16,7 +16,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 ## unary_op
 ![expr](/assets/images/sql-guide/unary_op.svg)
 
-| Operator | Description | Examples | Binary | Result |
+| Operator | Description | Examples | Binary representation | Binary Result |
 |:---:|---|---|---|---|
 | `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
 | `+` or `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
@@ -30,7 +30,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 |:---:|---|---|
 | `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
 | `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
-| `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1` |
+| `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1;` |
 | `!=` | **both** operands are **not** equal. | `SELECT 1 WHERE 1!=0;` |
 
 ### Comparison
@@ -47,14 +47,14 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 | Operator | Description | Examples |
 |:---:|---|---|
 | `+` | Add two operands. | `SELECT 1+1;` |
-| `-` | Subtract two operands. | `SELECT 1-1` |
-| `*` | Multiply two operands. | `SELECT 12*11` |
+| `-` | Subtract two operands. | `SELECT 1-1;` |
+| `*` | Multiply two operands. | `SELECT 12*11;` |
 | `/` | Divide two operands. | `SELECT 120/12;` |
 | `%` | Modulo divides two operands then returns the remainder or signed remainder. | `SELECT 5%3;` |
 
 ### Bitwise
 
-| Operator | Description | Example | Binary | Result |
+| Operator | Description | Example | Binary representation | Binary Result |
 |:---:|---|---|---|---|
 | `&` | **And** sets each bit to 1 where both bits are 1 | `SELECT 5 & 1` | `0101 & 0001` | `0001` |
 | `|` | **Or** sets each bit to 1 if one of two bits = 1 | `SELECT 5 | 1` | `0101 | 0001` | `0101` |

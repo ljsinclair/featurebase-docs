@@ -27,7 +27,7 @@ parent: SQL guide
 | `expr [NOT] LIKE expr` | `SELECT * from Products where product_name LIKE pen` | `ballpen`, `pencil`, `playpen` |
 | `expr IS [NOT] null` | `SELECT * from Services where Price is null` | `free delivery on orders over $50` |
 | `expr [NOT] between expr AND expr` | `SELECT * from Products WHERE Price BETWEEN 10 AND 20;` | `fountain pen`, `notepad`, `rubber ball` |
-| `expr [NOT] IN ([SELECT_stmnt | expr,...])` | `Select * from Products where product_ID NOT IN (SELECT * from Sales where product_name LIKE ear)` | `gold-plated earplugs` |
+| `expr [NOT] IN ([SELECT_stmnt | expr,...])` | `Select * from Products where product_ID NOT IN (SELECT product_ID from Sales where product_name LIKE ear)` | `gold-plated earplugs` |
 
 ### Literals
 
