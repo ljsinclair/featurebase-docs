@@ -64,7 +64,7 @@ BULK INSERT
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
-| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. |  |
+| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | [FROM quotation mark examples for STREAM](#stream-quotation-examples-in-from) |
 | `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. |  |
 | `HEADER_ROW` | Optional `CSV` argument that will ignore the header in the source CSV file. |  |
 | `ALLOW_MISSING_VALUES` | Optional `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. |  |
