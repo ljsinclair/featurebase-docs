@@ -57,10 +57,10 @@ BULK INSERT
 | `position` | Ordinal position of value in source. |  |
 | `type_name` | Data type of the value in source. |  |
 | `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [FROM quotation mark examples](/docs/sql-guide/statements/statement-insert-bulk/#from-quotation-examples) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. Quoted string literals must be properly escaped. | [STREAM quotation marks](#stream-quotation-marks) |
 | `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. |  |
-| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [FROM inline stream examples](/docs/sql-guide/statements/statement-insert-bulk/#from-inline-stream) |
+| `'Inline_stream'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#stream-quotation-marks) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
@@ -106,7 +106,7 @@ TRANSFORM (
 )
 ```
 
-### STREAM quotation examples in FROM
+### STREAM quotation marks
 
 FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
 
@@ -115,7 +115,7 @@ FROM clause quotation marks must be escaped before the BULK statement is run, ev
 | `FeatureBase's speed` | `FeatureBase''s speed` |
 | `""Time is money." – Benjamin Franklin."` | `"""Time is money."" – Benjamin Franklin."` |
 
-### FROM inline stream
+#### Single line stream string literal
 
 The contents of an inline stream string literal are treated as a file and read line-by-line.
 
@@ -124,6 +124,8 @@ Single line:
 ```
 'this is a single-line string literal'
 ```
+
+#### Multi-line stream string literal
 
 Multi line (prepend with `x`)
 
