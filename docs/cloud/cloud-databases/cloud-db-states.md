@@ -24,7 +24,7 @@ nav_order: 4
 |---|---|---|
 | CREATING | System has commenced creating the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
 | PROVISIONING | Following creation, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
-| RUNNING |  Created or updated database has been spun up and is ready for use. |  |
+| RUNNING |  Created or updated database has been spun up and is ready for use. | [Learn about database shapes and their running costs](/docs/cloud/cloud-databases/cloud-db-shape) |
 | UPDATING |  Hardware changes or software patches are in progress. |  |
 | DEPROVISIONING |  A user has chosen to delete the database so the system is de-provisioning services and spinning the database down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
 | FAILED | Database action has failed to complete successfully. {% include contact-support.md %} to help with this issue. |
