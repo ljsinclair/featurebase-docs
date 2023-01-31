@@ -50,8 +50,6 @@ SHOW COLUMNS FROM table_name;
 SHOW COLUMNS FROM skills;
 ```
 
-Returns
-
 |_id | name | type | internal_type | created_at | keys | cache_type | cache_size | scale | min | max | timeunit | epoch | timequantum | ttl |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | _id | _id | string | string | 2023-01-05T05:53:06Z | true |  | 0 | 0 | 0 | 0 |  | 0 |  | 0s |
