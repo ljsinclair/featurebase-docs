@@ -59,15 +59,22 @@ INSERT INTO products
     (_id, servicelist, price)
     VALUES
     (1, 'free delivery on orders over $50', NULL),
-    (2, 'local postage per kilo', 8.20),
+    (2, 'local postage per item', 2.20),
     (3, 'international postage per kilo', 15.99),
-    (4, 'local courier (same day to metro)', 25.00);
+    (4, 'local courier (same day to metro)', 25.00)
+    (5, 'local delivery > 10 items', 2.00);
 ```
 
 ### REPLACE value in services table
 
 ```sql
 REPLACE INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
+```
+
+### Overwrite existing value with new values
+
+```sql
+INSERT INTO services (_id, servicelist, price) VALUES (2, 'local postage per item', 2.20);
 ```
 
 ### INSERT values into single column identified by `_id`

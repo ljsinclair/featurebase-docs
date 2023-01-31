@@ -28,11 +28,12 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 | Operator | `WHERE` condition returns **true** when... | Examples |
 |:---:|---|---|
-| `=` | **both** operands are equal. | `SELECT 1 WHERE 1=1;` |
-| `!=` | **both** operands are **not** equal. | `SELECT 1 WHERE 1!=0;` |
-| `AND` | **both** conditions match the operand. | `SELECT 1 WHERE 1=1 AND 0=0;` |
-| `BETWEEN` | the operand is within the range of the two values | `SELECT * FROM products WHERE price BETWEEN 0 AND 50;` |
-| `OR` | **either** condition matches the operand |  `SELECT 1 WHERE 1=1 OR 0=1;` |
+| `=` | **both** operands are equal. | `select _id from products WHERE price = 52.50;` |
+| `!=` | **both** operands are **not** equal. | `select stock from products WHERE price != 0.50;` |
+| `AND` | **both** conditions match the operand. | `select * from products WHERE stock > 20 AND price < 10;` |
+| `BETWEEN` | the operand is within the range of two integer values | `select * from products WHERE stock BETWEEN 0 AND 100;` |
+| `LIKE` | the operand matches the specified pattern. | `select * from products WHERE prodlist LIKE '%play%';` |
+| `OR` | **either** condition matches the operand |  `select * from products WHERE prodlist LIKE '%pla%' OR stock < 20;` |
 
 <!-- Add missing from https://www.w3schools.com/sql/sql_operators.asp once supported -->
 

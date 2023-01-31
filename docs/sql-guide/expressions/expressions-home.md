@@ -32,8 +32,6 @@ View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statem
 | `expr [NOT] between expr AND expr` | `SELECT * from Products WHERE Price BETWEEN 10 AND 20;` | `fountain pen`, `notepad`, `rubber ball` |
 | `expr [NOT] IN ([SELECT_stmnt | expr,...])` | `Select * from Products where product_ID NOT IN (SELECT product_ID from Sales where product_name LIKE ear)` | `gold-plated earplugs` |
 
-
-
 ### Literals
 
 Literals are explicitly specified fixed values that conform to a specific data type:
