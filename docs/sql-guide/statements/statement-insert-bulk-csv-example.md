@@ -11,7 +11,6 @@ grand_parent: SQL guide
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
-
 ## Step 1: create table
 
 ```sql
