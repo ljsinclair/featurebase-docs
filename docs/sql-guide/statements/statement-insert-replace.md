@@ -39,7 +39,7 @@ grand_parent: SQL guide
 ## Examples
 
 ```sql
-insert into test_table (_id, column1, column2) values (1, 10, 'data10'), (2, 10, 'data10');
+INSERT INTO test_table (_id, column1, column2) VALUES (1, 10, 'data10'), (2, 10, 'data10');
 ```
 
 ### INSERT multiple records INTO products and services table
@@ -53,11 +53,18 @@ INSERT INTO products
   (3, 'playpen', 52.50),
   (4, 'gold-plated earplugs', 122.50);
 
-INSERT INTO services
-  (_id, servicelist, price)
-  VALUES
-  (1, 'free delivery on orders over $50', 0.00),
-  (2, 'local postage per kilo', 8.20),
-  (3, 'international postage per kilo', 15.99),
-  (4, 'local courier (same day to metro)', 25.00);
+  INSERT INTO services
+    (_id, servicelist, price)
+    VALUES
+    (1, 'free delivery on orders over $50', NULL),
+    (2, 'local postage per kilo', 8.20),
+    (3, 'international postage per kilo', 15.99),
+    (4, 'local courier (same day to metro)', 25.00);
+```
+
+```sql
+REPLACE INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
+
+
+
 ```
