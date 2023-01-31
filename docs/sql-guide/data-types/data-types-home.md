@@ -59,8 +59,6 @@ Data types used to define the type of data that a table column can contain. They
 
 ## Constraints
 
-![expr](/assets/images/sql-guide/column_constraint.svg)
-
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
 ## Further information
