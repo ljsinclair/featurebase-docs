@@ -39,4 +39,4 @@ DECIMAL[({SCALE value})]
 
 ### CREATE TABLE with decimal data type
 
-{% include /sql-guide/table_create_products_decimal.md %}
+{% include /sql-guide/table_create_products_sales.md %}
