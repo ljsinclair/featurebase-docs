@@ -22,12 +22,16 @@ nav_order: 4
 
 | Status | Description | Further information |
 |---|---|---|
-| CREATING | System has commenced creating the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
-| PROVISIONING | Following creation, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
+| CREATING | FeatureBase Cloud has received the signal to start provisioning a database | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
+| PROVISIONING | Following CREATING, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
+| RESTORING | The state of restoring data from a backup | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
 | RUNNING |  Created or updated database has been spun up and is ready for use. | [Learn about database shapes and their running costs](/docs/cloud/cloud-databases/cloud-db-shape) |
-| UPDATING |  Hardware changes or software patches are in progress. |  |
+| BACKUP |  Creating a backup of the database. |  |
+| FROZEN | There was a problem with backup and no new operations can be done on the database |
 | DEPROVISIONING |  A user has chosen to delete the database so the system is de-provisioning services and spinning the database down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
-| FAILED | Database action has failed to complete successfully. {% include contact-support.md %} to help with this issue. |
+| DELETED |  The state after deprovisioning completed successfully | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
+| FAILED | Database action has failed to complete successfully. Unrecoverable. Data is lost or Database failed to be provisioned. {% include contact-support.md %} to help with this issue. |
+
 
 ## Further information
 
