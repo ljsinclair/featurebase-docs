@@ -1,12 +1,12 @@
 ---
-title: INSERT/REPLACE
+title: INSERT
 layout: default
 parent: Statements
 grand_parent: SQL guide
 nav_order: 3
 ---
 
-# INSERT/REPLACE statement
+# INSERT statement
 
 `INSERT` or `REPLACE` multiple rows of data into existing columns in a FeatureBase table.
 
@@ -20,11 +20,11 @@ nav_order: 3
 ### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 
-## DDL syntax
+## DML syntax
 
 ```
-[INSERT | REPLACE] INTO
-  table_name [column_list]
+INSERT INTO
+  table_name [(column_list)]
   VALUES
       {(value_list),...};
 ```
@@ -66,13 +66,13 @@ INSERT INTO products
     (5, 'local delivery > 10 items', 2.00);
 ```
 
-### REPLACE value in services table
+### INSERT value in services table
 
 ```sql
-REPLACE INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
+INSERT INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
 ```
 
-### Overwrite existing value with new values
+### Overwrite existing value
 
 ```sql
 INSERT INTO services (_id, servicelist, price) VALUES (2, 'local postage per item', 2.20);
