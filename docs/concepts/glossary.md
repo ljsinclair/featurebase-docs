@@ -13,6 +13,11 @@ nav_order: 10
 
 ## 0-9
 
+| Term | Context | Further information |
+|---|---|---|---|
+| 1,048,576 | FeatureBase Community CSV ingest flag | [CSV ingest flags](/docs/community/com-ingest/com-ref-ingest-csv) |
+| 
+
 ## A
 
 | Term | Context | Further information |
@@ -25,9 +30,8 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
-| Batch ingest | import data in bulk | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-| Bitmap | FeatureBase database |  |
-| Bit Sliced Indexing (BSI) |  |  |
+| Batch (ingest) | import data in bulk | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+| Bitmap<br/>Bitmap Index (BMI)<br/>Bit Sliced Indexing (BSI) | FeatureBase database table rows | [Roaring Bitmap](https://roaringbitmap.org/){:target="_blank"} |
 
 ## C
 
@@ -40,6 +44,7 @@ nav_order: 10
 | Term | Context | Further information |
 |---|---|---|
 | Database | FeatureBase database | [Manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)<br/> COMMUNITY DB TO COME |
+| Data types | Table columns | [Data types](/docs/sql-guide/data-types/data-types-home) |
 
 XX RESEARCH
 | Data source | A data source is the source of data imported (ingested) into FeatureBase via different methods including CSV, HTTP and Kafka. |
@@ -66,8 +71,7 @@ XX RESEARCH
 
 | Term | Context | Further information |
 |---|---|---|
-| Index (Bitmap) | FeatureBase |  |
-| Ingest | Importing data to FeatureBase |   |
+| Ingest | Importing data to FeatureBase | [Manage community ingest](/docs/community/com-ingest/com-ingest-home) |
 
 ## J
 
@@ -88,7 +92,9 @@ XX RESEARCH
 
 | Term | Context | Further information |
 |---|---|---|
-| Mutex | String Data types | [String data types](/docs/sql-guide/data-types/data-types-home) |
+| Min<br/>Max | `int` constraints | [INT data type](/docs/sql-guide/data-types/data-type-int) |
+| molecula-consumer-[csv | sql | kafka] | Community ingest | [Manage community ingest](/docs/community/com-ingest/com-ingest-home) |
+| Mutex | String Data type | [String data types](/docs/sql-guide/data-types/data-types-home) |
 
 CHECK IF STILL EXISTS
 | MaxShard | See [Shard MaxShard reference](/fb-db-ref/shard-maxshard-ref.md) |
@@ -121,10 +127,9 @@ DOES THIS STILL EXIST?
 
 | Term | Context | Further information |
 |---|---|---|
-| Record |  |  |
+| Record<br/>Row | Database table row | [Manage cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)<br/>[Manage community tables]() |
+| Replica | FeatureBase Community `cluster.replicas` | [FeatureBase Cluster]() |
 | Roaring Bitmap | FeatureBase database | [roaringbitmap.org](https://roaringbitmap.org/){:target="_blank"} |
-| Row |  |  |
-|
 
 
 | Record | FeatureBase uses "Record" to represent the traditional concept of a database row. |
