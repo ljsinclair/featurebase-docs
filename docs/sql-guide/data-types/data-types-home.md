@@ -30,16 +30,7 @@ Data types used to define the type of data that a table column can contain. They
 
 ### Mapping data types
 
-| SQL Data Type | FeatureBase Data Type |
-|---|---|
-| int | int |
-| bool | bool |
-| timestamp | timestamp |
-| decimal | decimal |
-| string | keyed mutex |
-| stringset | keyed set |
-| id | mutex |
-| idset | set |
+{% include /sql-guide/datatype-mapping.md %}
 
 ### Numeric data types
 
