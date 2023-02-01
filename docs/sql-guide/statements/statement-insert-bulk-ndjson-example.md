@@ -12,7 +12,7 @@ This example demonstrates how to:
 
 * Create a FeatureBase table with a required structure
 * Copy and transform data from an NDJSON source
-* Insert data into the FeatureBase table
+* Use the `BULK INSERT` statement to copy data from the source to the target table.
 
 ## Before you begin
 
@@ -41,17 +41,6 @@ created_at TIMESTAMP
 ```
 
 ## Step 2: BULK INSERT data to `github-stats` table
-
-This BULK INSERT SQL statement:
-
-* Designates a target table
-* MAPS source data
-* Performs a pre-insertion TRANSFORM on MAPped data
-* Designates a source URL
-* Adds WHERE clauses to
-  * indicate ingest batch size
-  * state NDJSON format and URL source
-  * override batch ingest error
 
 ```sql
 BULK INSERT INTO github-stats (
