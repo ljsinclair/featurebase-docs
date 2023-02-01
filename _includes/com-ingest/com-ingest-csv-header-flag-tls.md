@@ -1,11 +1,8 @@
 ### Connect securely over TLS and define header flags
 
 Use this method to:
-<<<<<<< HEAD
-* ignore CSV headers and define theme at the command line
-=======
+
 * ignore CSV headers and define them at the command line
->>>>>>> main
 * define FeatureBase server `tls` certificates to securely connect to a remote server.
 
 ```shell
