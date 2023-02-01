@@ -39,18 +39,18 @@ Selects data from a FeatureBase table.
 ![expr](/assets/images/sql-guide/order_by_clause.svg)
 ![expr](/assets/images/sql-guide/order_by_expression.svg)
 
-## DDL Syntax
+## Syntax
 
 ```
 SELECT
-  DISTINCT
-  top_clause
-  select_list
-  from_clause
-  where_clause
-  group_by_clause
-  having_clause
-  order_by_clause;
+  [DISTINCT]
+  <top_clause>
+  <select_list>
+  <from_clause>
+  <where_clause>
+  <group_by_clause>
+  <having_clause>
+  <order_by_clause>;
 ```
 
 ## Arguments
