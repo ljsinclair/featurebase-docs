@@ -3,6 +3,7 @@ title: SHOW CREATE TABLE
 layout: default
 parent: Statements
 grand_parent: SQL guide
+nav_order: 8
 ---
 
 # SHOW CREATE TABLE statement

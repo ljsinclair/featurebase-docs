@@ -3,6 +3,7 @@ title: SHOW TABLES
 layout: default
 parent: Statements
 grand_parent: SQL guide
+nav_order: 9
 ---
 
 # SHOW TABLES statement

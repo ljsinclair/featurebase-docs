@@ -3,6 +3,7 @@ title: INSERT/REPLACE
 layout: default
 parent: Statements
 grand_parent: SQL guide
+nav_order: 3
 ---
 
 # INSERT/REPLACE statement
