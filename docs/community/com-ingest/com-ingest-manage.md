@@ -31,19 +31,17 @@ This overview explains the process of importing data to FeatureBase using three 
 
 Refer to these reference files for information on how to setup and import data using a CSV file.
 
-* [CSV format reference](/docs/community/com-ingest/com-ref-source-csv)
-* [CSV ingester reference](/docs/community/com-ingest/com-ref-ingest-csv)
+* [CSV source format reference](/docs/community/com-ingest/com-ingest-source-csv)
+* [CSV flag reference](/docs/community/com-ingest/com-ingest-flags-csv)
 * [CSV file and ingest examples](/docs/community/com-ingest/com-ingest-example-csv)
 
-<!-- Coming in next PR
 ## SQL import method
 
--->
+* [SQL format reference](/docs/community/com-ingest/com-ingest-source-sql)
+* [SQL ingester reference](/docs/community/com-ingest/com-ingest-flags-sql)
+* [SQL ingest examples](/docs/community/com-ingest/com-ingest-example-sql)
 
-<!-- Coming after SQL PR
 ## Kafka import method
-
--->
 
 <!-- Coming in future PR where I document these
 ## Next step
