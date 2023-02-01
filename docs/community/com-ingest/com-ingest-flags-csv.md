@@ -1,12 +1,12 @@
 ---
-title: CSV ingester reference
+title: CSV ingester flags
 layout: default
 parent: Import data
 grand_parent: Community
 nav_order: 2
 ---
 
-# CSV ingest tool reference
+# CSV ingest flags reference
 {: .no_toc}
 
 Once your CSV file(s) are constructed, they can be ingested by FeatureBase using the `molecula-consumer-csv` ingester.
@@ -16,7 +16,7 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 ## Before you begin
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
-* [Prepare the CSV file](/docs/community/com-ingest/com-ref-source-csv)
+* [Prepare the CSV file](/docs/community/com-ingest/com-ingest-source-csv)
 
 ## Syntax
 
