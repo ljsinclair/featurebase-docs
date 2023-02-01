@@ -8,10 +8,16 @@ nav_order: 5
 
 # Ingest a CSV with BULK INSERT
 
+This example demonstrates how to:
+
+* Create a FeatureBase table with a required structure
+* Copy and transform data from an CSV source
+* Use the `BULK INSERT` statement to copy data from the source to the target table.
 
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+
 ## Step 1: create table
 
 ```sql
@@ -26,7 +32,7 @@ CREATE TABLE age (
     death_year INT min -32767 max 32767,
     death_manner STRING,
     birth_age INT min -32767 max 32767
-) keypartitions 12 shardwidth 65536;
+);
 ```
 
 ## Step 2: ingest data
@@ -52,6 +58,7 @@ WITH
     FORMAT 'CSV'
     INPUT 'URL'
     HEADER_ROW;
+
 ```
 
 ## Step 3: query the data
@@ -65,4 +72,5 @@ SELECT TOP(10) * FROM age;
 
 ## Further information
 
+* [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
