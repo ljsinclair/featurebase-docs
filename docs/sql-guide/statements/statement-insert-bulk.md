@@ -49,27 +49,27 @@ BULK INSERT
 
 ## Arguments
 
-| Argument | Description | Further information |
-|---|---|---|
-| `INSERT` | Insert new records if the _id does not exist else update the record with the values passed. if a column is missing, its values are not updated | `REPLACE` can be used but is the same functionality |
-| `table_name` | Name of target table |  |
-| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. |  |
-| `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. | [Map examples](/docs/sql-guide/statements/statement-insert-bulk/#map-examples) |
-| `position` | Ordinal position of value in source. |  |
-| `type_name` | Data type of the value in source. |  |
-| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. |  |
-| `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
-| `'URL'` | Valid URL for data source. |  |
-| `'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option |  |
-| `'STREAM'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#using-stream-with-quotation-marks) |
-| `WITH` | Pass one or more statement level options. |  |
-| `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
-| `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
-| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | |
-| `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. |  |
-| `HEADER_ROW` | Optional `CSV` argument that will ignore the header in the source CSV file. |  |
-| `ALLOW_MISSING_VALUES` | Optional `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. |  |
+| Argument | Description | Required? |Further information |
+|---|---|---|---|
+| `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
+| `table_name` | Name of target table | Yes |  |
+| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. | Optional |  |
+| `MAP` | MAP defines how the source data is read and the expected data types. Values from the MAP clause are placed directly into the columns specified in the `column_list`. |  | [Map examples](#map-examples) |
+| `position` | Ordinal position of value in source. |  |  |
+| `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
+| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
+| `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
+| `'URL'` | Valid URL for data source. | Optional |  |
+| `'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option | Required for STREAM |  |
+| `'STREAM'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'` | [STREAM quotation marks](#using-stream-with-quotation-marks) |
+| `WITH` | Pass one or more statement level options. | Optional |  |
+| `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
+| `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
+| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | Optional but **must** match that used in `FROM` clause |  |
+| `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. | Optional |  |
+| `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
+| `ALLOW_MISSING_VALUES` | `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. | Optional |  |
 
 ## TRANSFORM clause
 
@@ -108,7 +108,9 @@ TRANSFORM (
 )
 ```
 ### FROM examples
+
 #### Using STREAM argument
+
 The contents of an inline stream string literal are treated as a file and read line-by-line.
 
 Single line stream string literal

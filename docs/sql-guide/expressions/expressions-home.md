@@ -23,7 +23,7 @@ parent: SQL guide
 ![expr](/assets/images/sql-guide/expr.svg)
 
 {: .note}
-View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statement-table-create/#create-table-products-and-services-with-2-columns-and-constraint) and [INSERT INTO tables and products](/docs/sql-guide/statements/statement-insert/#insert-multiple-records-into-products-and-services-table)
+View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statement-table-create/#create-table-with-decimal-data-type) and [INSERT INTO tables and products](/docs/sql-guide/statements/statement-insert/#insert-multiple-records-into-products-and-services-tables)
 
 | Syntax | Example | Result |
 |---|---|---|
