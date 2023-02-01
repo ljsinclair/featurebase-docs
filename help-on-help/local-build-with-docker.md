@@ -23,14 +23,19 @@ NOTE: This process can take some time if starting from scratch or after executin
 | OS | CLI | Command
 |---|---|
 | Windows | Powershell | `Get-Content Dockerfile | docker build -` |
-| Linux | Bash | `$ docker build - < Dockerfile` |
-| Mac | Terminal | `$ docker build - < Dockerfile` |
+| Linux | Bash | `docker build - < Dockerfile` |
+| Mac | Terminal | `docker build - < Dockerfile` |
 
 ## Serve the container
 
 NOTE: Changes to configuration files such as `/_config.yml` are not loaded while the site is up.
 
-* Run the `docker compose up serve` command on the CLI in the `/featurebsae-docs` directory.
+* Open a terminal and `cd` to your `featurebase-installation` directory
+* Run the following command:
+
+```
+docker compose up serve
+```
 
 ## View local site
 
