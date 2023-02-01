@@ -25,16 +25,13 @@ SHOW TABLES;
 |---|---|---|---|
 | `_id` | id or string  | Table ID | [`_id` column](#_id-column) |
 | name | string | Name of the table | [naming standards](#naming-standards)
-| owner |   | Owner of table (omitted for system-created sample data) |  |
-| updated_by |  | Last user to update table |  |
+| owner | string | Owner of table (omitted for system-created sample data) |  |
+| updated_by | string | Last user to update table |  |
 | created_at | timestamp | Table time-date created | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | updated_at | timestamp | Table time-date last updated | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| keys | bool |  |  |
-| space_used |  |  |  |
-| description | string |  |  |
-| track_existence | bool |  |  |
-| shard_width  | int  |  |  |
-
+| keys | bool | Boolean that is true when keys are used (_id) is a string |  |
+| space_used | int | bytes used by the table. |  |
+| description | string | description COMMENT of the table |  |
 ## Additional information
 
 ### `_id` column
