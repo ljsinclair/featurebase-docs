@@ -30,7 +30,7 @@ SQL statements can be executed in the Query editor.
 * [CREATE TABLE](/docs/sql-guide/statements/statement-table-create)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
 * [DROP TABLE](https://www.w3schools.com/sql/sql_drop_table.asp){:target="_blank"}
-* [INSERT/REPLACE](/docs/sql-guide/statements/statement-insert-replace)
+* [INSERT/REPLACE](/docs/sql-guide/statements/statement-insert)
 * [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
 
 ## Further information
