@@ -27,7 +27,7 @@ BULK INSERT data from CSV, NDJSON, URL or streaming sources to a FeatureBase tab
 ![expr](/assets/images/sql-guide/bulk_insert_options.svg)
 ![expr](/assets/images/sql-guide/bulk_insert_option.svg)
 
-## DDL syntax
+## DML syntax
 
 ```
 BULK INSERT
