@@ -100,10 +100,10 @@ The number of expressions in the column list and TRANSFORM clause must match.
 TRANSFORM (
     @0 + 10, -- offset the new _id value by 10
     @1,      -- pass through unchanged
-    case     -- clean up state names
-        when @2 = 'Texas' then 'TX' end
-        when @2 = 'California' then 'CA' end
-        else @2
+    CASE     -- clean up state names
+        WHEN @2 = 'Texas' then 'TX' end
+        WHEN @2 = 'California' then 'CA' end
+        ELSE @2
     end
 )
 ```
