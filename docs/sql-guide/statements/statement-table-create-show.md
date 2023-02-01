@@ -14,7 +14,7 @@ Output the data definition language (DDL) CREATE TABLE statement for a specified
 
 ![expr](/assets/images/sql-guide/show_create_table.svg)
 
-## DDL Syntax
+## Syntax
 
 ```sql
 SHOW CREATE TABLE table_name;

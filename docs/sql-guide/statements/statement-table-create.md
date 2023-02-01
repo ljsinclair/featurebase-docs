@@ -68,7 +68,7 @@ CREATE TABLE table_name
 create table doctest
   (
     _id id,
-    numbers int min -9007199254740991 max 9007199254740991,
+    numbers int min -991 max 991,
     words string
   );
 ```

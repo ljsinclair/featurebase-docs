@@ -14,7 +14,7 @@ Shows the list of FeatureBase tables that exist on the server.
 
 ![expr](/assets/images/sql-guide/show_tables.svg)
 
-## DDL Syntax
+## Syntax
 
 ```sql
 SHOW TABLES;
