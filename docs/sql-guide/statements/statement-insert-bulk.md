@@ -62,11 +62,11 @@ BULK INSERT
 | `'path/file_name'` | Valid path and file name for data source. | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. |  |
 | `'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option |  |
-| `'STREAM'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#stream-quotation-marks) |
+| `'STREAM'` | The contents of the literal read as though they were in a file.  | [STREAM quotation marks](#using-stream-with-quotation-marks) |
 | `WITH` | Pass one or more statement level options. |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. |  |
-| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | [FROM quotation mark examples for STREAM](#stream-quotation-examples-in-from) |
+| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | |
 | `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. |  |
 | `HEADER_ROW` | Optional `CSV` argument that will ignore the header in the source CSV file. |  |
 | `ALLOW_MISSING_VALUES` | Optional `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. |  |
