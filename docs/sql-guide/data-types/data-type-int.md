@@ -31,3 +31,9 @@ INT is not suitable for queries that
 * include data sets with low cardinality
 
 Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
+
+## Examples
+
+### CREATE TABLE with all data types
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}

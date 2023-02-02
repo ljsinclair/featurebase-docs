@@ -38,7 +38,7 @@ create table segments
     (_id id, segment string);
 
 insert into segments(_id,segment)
-    values (1,'red,blue,green')
+    values (1,'red,blue,green');
 
 select _id, stringsplit(segment,',',1) as segment from segments;
 +-----+----------+

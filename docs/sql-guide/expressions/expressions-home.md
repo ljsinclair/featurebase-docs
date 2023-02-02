@@ -1,42 +1,83 @@
 ---
-title: SQL Expressions
+title: Expressions
 layout: default
 parent: SQL guide
-has_children: true
-nav_order: 5
-has_toc: false
 ---
 
 # SQL Expressions
+{: .no_toc }
+
+{% include page-toc.md %}
+
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
 
 ## identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
 
+{% include /concepts/standard-naming-obj.md %}
+
 ## expr
+
 ![expr](/assets/images/sql-guide/expr.svg)
 
-## integer_literal
+{: .note}
+View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statement-table-create/#create-table-with-decimal-data-type) and [INSERT INTO tables and products](/docs/sql-guide/statements/statement-insert/#insert-multiple-records-into-products-and-services-tables)
+
+| Syntax | Example | Result |
+|---|---|---|
+| `expr [NOT] LIKE expr` | `SELECT * FROM products WHERE prodlist LIKE 'pen';` | `ballpen`, `pencil`, `playpen` |
+| `expr IS [NOT] null` | `SELECT * FROM services WHERE price IS null;` | `free delivery on orders over $50` |
+| `expr [NOT] between expr AND expr` | `SELECT * from Products WHERE Price BETWEEN 10 AND 20;` | `fountain pen`, `notepad`, `rubber ball` |
+| `expr [NOT] IN ([SELECT_stmnt | expr,...])` | `Select * from Products where product_ID NOT IN (SELECT product_ID from Sales where product_name LIKE ear)` | `gold-plated earplugs` |
+
+### Literals
+
+Literals are explicitly specified fixed values that conform to a specific data type:
+
+| String literal | BNF diagram | Further information |
+|---|---|---|
+| `date` |  | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| `decimal` |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
+| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| `string` |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+| `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
+
+### [table_name].column_name
 
 
-## string_literal
 
+### [unary_op] expr
 
-## decimal_literal
+* [Unary operators](/docs/sql-guide/operators/operators-home/#unary_op)
 
+### expr binary_op expr
 
-## set_literal
-![expr](/assets/images/sql-guide/set_literal.svg)
+* [Binary operators](/docs/sql-guide/operators/operators-home/#binary_op)
 
-## tuple_literal
-![expr](/assets/images/sql-guide/tuple_literal.svg)
+### function_call
 
-## date_literal
-
-## function_call
 ![expr](/assets/images/sql-guide/function_call.svg)
 
-## paren_select_stmt
+* [SQL Functions](/docs/sql-guide/functions/functions-home)
+
+### CAST expr AS type_name
+
+| Syntax | Example | Result |
+|---|---|---|
+| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 25 |
+
+* [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"}
+
+### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
-## case_expr
+A SQL Statement nested within another SQL statement.
+
+* [SELECT Statement](/docs/sql-guide/statements/statement-select)
+
+### case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
+
+* [SQL CASE expression](https://www.w3schools.com/sql/sql_case.asp){:target="_blank"}

@@ -46,3 +46,9 @@ The epoch which timestamps should be relative to. The value may specify one of t
 | Unix (default) | 1970-01-01T00:00:00Z | [Unix epoch](https://www.unixtutorial.org/unix-epoch/) |
 | Time zone | 1980-11-30T14:20:28.000+07:00 | [Time zone](https://en.wikipedia.org/wiki/Time_zone) |
 | Zulu (military) time | 1980-11-30T14:20:28.000Z | [Zulu Time Zone](https://www.timeanddate.com/time/zones/z) |
+
+## Examples
+
+### CREATE TABLE with all data types
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}

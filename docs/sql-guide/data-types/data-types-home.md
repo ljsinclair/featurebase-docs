@@ -16,17 +16,13 @@ Data types and constraints are used to define table columns when creating tables
 
 ## Before you begin
 
-* Create a database in two ways:
-  1. [Create a Cloud database using the UI](/docs/cloud/cloud-databases/cloud-db-create)
-  2. [Create a Cloud database using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
-* Create a table in three ways:
-  1. [Create table using the UI](/docs/cloud/cloud-tables/cloud-table-create)
-  2. [Create table using SQL](/docs/sql-guide/statements/statement-table-create)
-  3. [Create table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
+{% include /cloud/cloud-db-create-before-begin.md %}
 
 ## Data types
 
 Data types used to define the type of data that a table column can contain. They are modified by Constraints.
+
+![expr](/assets/images/sql-guide/type_name.svg)
 
 ### Mapping data types
 
@@ -56,8 +52,14 @@ Data types used to define the type of data that a table column can contain. They
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
+## CREATE TABLE with all data types
+
+This example SQL demonstrates all data types and selected constraints.
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}
+
 ## Further information
 
 * [Create a Cloud table](/docs/cloud/cloud-tables/cloud-table-create)
-* [Create a Cloud table with SQL](/docs/sql-guide/statements/statement-create-table)
-* [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTable)
+* [Create a Cloud table with SQL](/docs/sql-guide/statements/statement-table-create)
+* [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)

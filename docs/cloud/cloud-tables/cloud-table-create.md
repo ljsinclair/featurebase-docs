@@ -47,4 +47,4 @@ nav_order: 1
 
 ## Further information
 
-* [Create table API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTable)
+* [Create table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
