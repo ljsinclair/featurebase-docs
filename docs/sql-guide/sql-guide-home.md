@@ -13,6 +13,11 @@ FeatureBase supports different types of queries that are discussed further in th
 
 {% include page-toc.md %}
 
+## Before you begin
+
+{% include /cloud/cloud-db-create-before-begin.md %}
+* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
+
 ## Statements
 
 * [SQL statements](/docs/sql-guide/statements/statements-home)

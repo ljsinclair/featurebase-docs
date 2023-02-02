@@ -55,5 +55,5 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## Further information
 
-* [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
+* [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase)
 * [Learn how to delete a database](/docs/cloud/cloud-databases/cloud-db-delete)

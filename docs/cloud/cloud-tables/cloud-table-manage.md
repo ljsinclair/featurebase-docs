@@ -55,7 +55,7 @@ Perform data modeling **before** creating tables to avoid issues.
 
 ## Managing tables using the Cloud API
 
-* [Table API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#tag/Tables)
+* [Table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Tables)
 
 ## Joining tables
 
