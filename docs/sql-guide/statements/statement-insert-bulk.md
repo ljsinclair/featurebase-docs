@@ -8,7 +8,7 @@ nav_order: 4
 
 # BULK INSERT statement
 
-BULK INSERT data from CSV, NDJSON, URL or streaming sources to a FeatureBase table.
+BULK INSERT data from CSV, NDJSON, URL or streaming sources to a target FeatureBase table.
 
 ## BNF diagrams
 
