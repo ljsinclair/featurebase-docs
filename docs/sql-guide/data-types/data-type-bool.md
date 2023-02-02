@@ -30,3 +30,9 @@ Use this table to determine how integer and string values are represented when a
 | integer > 0 | 1 | 1 |
 | string | empty, `0`, `f`, `false` | 0 |
 | string | other string values | 1 |
+
+## Examples
+
+### CREATE TABLE with all data types
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}

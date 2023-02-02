@@ -40,4 +40,4 @@ You may need to delete a column if:
 
 ## Further information
 
-* [Delete table column API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/deletetableColumn)
+* [Delete table column API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deletetableColumn)

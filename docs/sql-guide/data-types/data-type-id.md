@@ -27,3 +27,9 @@ The ID data type:
 * is used with data sets with low cardinality when:
   * grouping by
   * querying discrete values
+
+## Examples
+
+### CREATE TABLE with all data types
+
+{% include /sql-guide/table_create_eg_all_datatypes.md %}

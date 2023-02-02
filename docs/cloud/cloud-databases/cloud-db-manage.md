@@ -48,7 +48,7 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 ## Managing databases using the FeatureBase API
 
-* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#tag/Databases)
+* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
 
 ## Next step
 

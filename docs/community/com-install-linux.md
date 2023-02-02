@@ -2,7 +2,6 @@
 title: Install on Linux
 layout: default
 parent: Community
-has_children: false
 nav_order: 1
 ---
 
