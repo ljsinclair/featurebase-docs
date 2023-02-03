@@ -25,7 +25,7 @@ Row calls return an object representing a set of column keys, contained in a sin
 ### Boolean operations
 
 * [Difference()](/docs/pql-guide/pql-read-difference) computes the set difference between its first argument and all subsequent arguments (all row calls).
-* [Intersect()](/pql-guide/read/intersect) computes the set intersection across its two or more [row call](#row-calls) arguments.
+* [Intersect()](/docs/pql-guide/pql-read-intersect) computes the set intersection across its two or more [row call](#row-calls) arguments.
 * [Not()](/docs/pql-guide/pql-read-not) computes the complement of the single row call argument, relative to the *universal set* for the index -* i.e. it returns the difference between `All()` and some other [row call](#row-calls).
 * [Union()](/docs/pql-guide/pql-read-union) computes the set union across its one or more [row call](#row-calls) arguments.
 * [UnionRows()](/docs/pql-guide/pql-read-unionrows) computes the set union across many rows. Rather than accepting several row call arguments, `UnionRows()` accepts any number of `Rows` arguments.

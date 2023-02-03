@@ -119,7 +119,7 @@ Returns a backup / file of the dataframe (`float64` and `int64`) data for some i
 
 `POST /index/{index-name}/dataframe/{shard}`
 
-Writes dataframe (`float64` and `int64`) data for some index / shard pair. In general, this endpoint should not be used externally. The best way to get `float64` and `int64` data into featurebase is using the [consumer](/community/community-data-ingestion/dataframe-consumer).
+Writes dataframe (`float64` and `int64`) data for some index / shard pair. In general, this endpoint should not be used externally. The best way to get `float64` and `int64` data into featurebase is using the [consumer](/docs/community/com-ingest/old-ingest-dataframe).
 
 ### Create index
 
@@ -130,7 +130,7 @@ Creates an index with the given name.
 The request payload is in JSON, and may contain the `options` field. The `options` field is a JSON object with the following options:
 
 * `keys` (bool): Enables using column keys instead of column IDs.
-* `trackExistence` (bool): Enables or disables existence tracking on the index. Required for [Not](/pql-guide/pql-introduction#not) queries. It is `true` by default.
+* `trackExistence` (bool): Enables or disables existence tracking on the index. Required for [Not](docs/pql-guide/pql-home#not) queries. It is `true` by default.
 
 ``` request
 curl -XPOST localhost:10101/index/user -d '{"options":{"keys":true}}'
@@ -156,7 +156,7 @@ curl -XDELETE localhost:10101/index/user
 
 `POST /index/{index-name}/query`
 
-Sends a [query](/pql-guide/pql-introduction) to the FeatureBase server with the given index. The request body is UTF-8 encoded text and response body is in JSON by default.
+Sends a [query](docs/pql-guide/pql-home) to the FeatureBase server with the given index. The request body is UTF-8 encoded text and response body is in JSON by default.
 
 ``` request
 curl localhost:10101/index/user/query \
@@ -180,7 +180,7 @@ Prior to Molecula v4.3, the response of a `Row` query would also include an "att
 
 In order to send protobuf binaries in the request and response, set `Content-Type` and `Accept` headers to: `application/x-protobuf`.
 
-The query is executed for all [shards](/concepts/glossary#shard) by default. To use specified shards only, set the `shards` query argument to a comma-separated list of slice indices.
+The query is executed for all [shards](/docs/concepts/old-glossary#shard) by default. To use specified shards only, set the `shards` query argument to a comma-separated list of slice indices.
 
 ``` request
 curl "localhost:10101/index/user/query?shards=0,1" \
