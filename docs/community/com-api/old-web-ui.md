@@ -57,7 +57,7 @@ More information about them can be found [here](/docs/community/com-config/old-m
 
 Here you can check and finish actual transactions.
 Clicking `Force Finish` will close an open transaction.
-More info about them can be found [here](/community/community-monitoring/monitoring#metrics).
+More info about them can be found [here](/docs/community/com-config/old-monitoring#metrics).
 
 ![transaction](/assets/images/ui-transactions.png)
 

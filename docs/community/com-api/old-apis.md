@@ -15,7 +15,7 @@ When authentication is enabled, HTTP and gRPC are supported, but PostgreSQL wire
 
 The gRPC interface is described in detail in [gRPC API](/docs/community/com-api/old-grpc-api).
 
-FeatureBase ships with a Python client and CLI which can be used to interact with FeatureBase via gRPC. See the [client usage](/community/query-data/python-library) for API examples.
+FeatureBase ships with a Python client and CLI which can be used to interact with FeatureBase via gRPC. See the [client usage](/docs/community/query/old-python-library) for API examples.
 
 ## HTTP
 
@@ -241,4 +241,4 @@ transactions, while the transaction manager handles all the logic (at the node l
 
 ## Ingest Interfaces
 
-See [Ingesters](/community/community-data-ingestion/ingesters) for information on data ingestion.
+See [Ingesters](/docs/community/com-ingest/old-ingesters) for information on data ingestion.

@@ -1,6 +1,11 @@
 ---
-title: Sizing Your FeatureBase Database
+title: Sizing database
+layout: default
+parent: Community configuration
+grand_parent: Community
 ---
+
+# Sizing FeatureBase database
 
 ## Before you start
 
