@@ -60,7 +60,7 @@ The external lookup database must be backed up seperately.
 
 The backup data is independent of the size or replication factor of a cluster.
 As such, it is safe to restore a backup to a differently sized cluster.
-This can be used to safely [resize a cluster](/community/community-database/resize-community-database).
+This can be used to safely [resize a cluster](/docs/community/com-config/old-resize-cluster).
 
 ### Restoring in Production
 
@@ -89,8 +89,8 @@ Seperate components are backed up in a specific order, such that:
 
 In order to use TLS, the following options are required (for `backup` & `restore` commands):
 - `--tls.ca-certificate`: the CA certitificate to use for verifying the server certificate (defaults to CA certs installed to system)
-- `--tls.certificate`: the TLS client certificate to use for [mTLS](/community/community-security/enable-mutual-tls) authentication
-- `--tls.key`: the client key corresponding to the client certificate (for [mTLS](/community/community-security/enable-mutual-tls))
+- `--tls.certificate`: the TLS client certificate to use for [mTLS](/docs/community/com-auth/old-enable-mutual-tls) authentication
+- `--tls.key`: the client key corresponding to the client certificate (for [mTLS](/docs/community/com-auth/old-enable-mutual-tls))
 
 For example:
 ```

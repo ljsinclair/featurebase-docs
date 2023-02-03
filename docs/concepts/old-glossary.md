@@ -5,6 +5,8 @@ parent: Concepts
 has_children: false
 ---
 
+# Glossary
+
 ### Anti-entropy
 A periodic process that compares each shard and its replicas across the cluster to repair inconsistencies.
 

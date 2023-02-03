@@ -72,7 +72,7 @@ To enable authentication and authorization in FeatureBase, add the following lin
  configured-ips = []
 ```
 
-Additionally, TLS must be enabled. Refer to [How To Enable TLS](/community/community-security/enable-mutual-tls) for more details.
+Additionally, TLS must be enabled. Refer to [How To Enable TLS](/docs/community/com-auth/old-enable-mutual-tls) for more details.
 
 - Create a permissions file: `permissions.yaml`.
     - Copy the example below and update with group ids, index names and permissions.
@@ -116,7 +116,7 @@ Additionally, TLS must be enabled. Refer to [How To Enable TLS](/community/commu
 - Add the path to the `query-log-path` parameter in `featurebase.conf`.
 
 ## TLS Configuration
-TLS _must_ be enabled when authentication is enabled.  To configure basic TLS, refer to [How To Enable TLS](/community/community-security/enable-mutual-tls).
+TLS _must_ be enabled when authentication is enabled.  To configure basic TLS, refer to [How To Enable TLS](/docs/community/com-auth/old-enable-mutual-tls).
 
 When TLS is enabled, the scheme must be explicitly defined as `https` in `featurebase.conf` and in the command-line.
 
@@ -149,4 +149,4 @@ screen.
 
 
 ### How can I use an auth token?
-To access FeatureBase outside of the UI, an auth token is required. Refer to the [HTTP API](/community/community-api/http-api#http-api-with-authentication), [gRPC API](/docs/community/com-api/old-grpc-api#grpc-api-with-authentication), [backup/restore](/docs/community/com-config/old-backups#backups-with-authentication) or [grafana](/community/query-data/grafana-connector#grafana-with-authentication) documentation for details on how to use an auth token to access FeatureBase.
+To access FeatureBase outside of the UI, an auth token is required. Refer to the [HTTP API](/community/community-api/http-api#http-api-with-authentication), [gRPC API](/docs/community/com-api/old-grpc-api#grpc-api-with-authentication), [backup/restore](/docs/community/com-config/old-backups#backups-with-authentication) or [grafana](/docs/community/com-query/old-grafana-connector#grafana-with-authentication) documentation for details on how to use an auth token to access FeatureBase.

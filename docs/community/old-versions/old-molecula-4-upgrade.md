@@ -38,7 +38,7 @@ FeatureBase v3.x:
 Some operations on the tables page of the UI can be very expensive on large datasets. One of these operations is the disk usage operation, which can be disabled with the `usage-duty-cycle` option (Additional details can be found in the [Configuration](#configuration) section). The tables page of the UI also calculates cardinality across all fields, which can be expensive. For FeatureBase v3.5, there is no configuration to disable calculating cardinality, but it is something to be aware of if using the UI.
 
 ### Backup and Restore Functionality
-FeatureBase v3.x has new backup and restore functionality. For details, refer to the [Backups](/community/backups) page.
+FeatureBase v3.x has new backup and restore functionality. For details, refer to the [Backups](/docs/community/com-config/old-backups) page.
 
 ### Configuration
 
@@ -70,7 +70,7 @@ The entire `gossip` section has been removed as that functionality has been repl
 `--long-query-time`: Used to be nested under cluster, but it is now top level.
 
 ### Data Directory Structure    
-Changes to the data directory structure in FeatureBase were made to account for RBF and etcd changes. For details, refer to the [Data Directory Structure](/community/previous-versions/data-directory-structure). In general, the Molecula team would like to discourage reliance on any particular details of the directory structure.
+Changes to the data directory structure in FeatureBase were made to account for RBF and etcd changes. For details, refer to the [Data Directory Structure](/docs/community/old-versions/old-data-directory-structure). In general, the Molecula team would like to discourage reliance on any particular details of the directory structure.
 
 Pilosa v2.x:
 ```
@@ -107,7 +107,7 @@ The roaring-migrate binary is included in the FeatureBase release. To update Pil
  - ```backup-dir``` represents the directory where data converted to RBF will be stored.
 
 #### 4. Stand-up a New FeatureBase
-Instructions for setting up FeatureBase are in the [How to Install FeatureBase](/community/community-setup/installing-featurebase). Also, refer to the [FeatureBase Configuration](/docs/community/com-config/old-config-flags) for additional details. This stop is not necessarily dependent on the previous 3, and if your environment allows this, you'll probably want to do this first to minimize downtime.
+Instructions for setting up FeatureBase are in the [How to Install FeatureBase](/docs/community/old-setup/old-installing-featurebase). Also, refer to the [FeatureBase Configuration](/docs/community/com-config/old-config-flags) for additional details. This stop is not necessarily dependent on the previous 3, and if your environment allows this, you'll probably want to do this first to minimize downtime.
 
 The new FeatureBase cluster needs to contain an odd number of nodes due to reliance on an embedded `etcd` cluster.
 

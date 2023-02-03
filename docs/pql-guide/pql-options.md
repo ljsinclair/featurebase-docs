@@ -2,7 +2,7 @@
 title: PQL Options
 layout: default
 parent: PQL guide
-has_children: true
+has_children: false
 nav_order: 1
 has_toc: false
 ---

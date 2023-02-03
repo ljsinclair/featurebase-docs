@@ -22,7 +22,7 @@ Arrow(ROW_CALL, header=[LIST_OF_FIELDS])
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the output of any [row call](docs/pql-guide/pql-home#Crow-calls){:target="_blank"} (set of record IDs / keys). Only data from records return by this row call will be returned by `Arrow()`.
+- `ROW_CALL` : the output of any [row call](/docs/pql-guide/pql-read-home#row-calls){:target="_blank"} (set of record IDs / keys). Only data from records return by this row call will be returned by `Arrow()`.
 
 #### Optional Arguments
 - `LIST_OF_FIELDS` : comma seperated list of fields. Data from these fields will be returned by	`Arrow()`. If a header isn't included, data from all fields will be returned.

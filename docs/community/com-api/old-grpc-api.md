@@ -318,7 +318,7 @@ grpcurl -plaintext -d '{"pql": "Row(language=1, limit=1)", "index": "repository"
 Explore sections or subsections of the data.
 
 :::caution Deprecation Notice
-Deprecation Notice! Inspect remains available in Molecula 3.x, but is now deprecated in favor of the [Extract PQL Query](/docs/pql-guide/read-extract).
+Deprecation Notice! Inspect remains available in Molecula 3.x, but is now deprecated in favor of the [Extract PQL Query](/docs/pql-guide/pql-read-extract).
 :::
 
 

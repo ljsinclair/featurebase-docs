@@ -1,22 +1,15 @@
 ---
-title: Data modeling overview
-layout: default
-parent: Concepts
-has_children: false
-nav_order: 1
+title: Data Modeling
 ---
 
-# Data modeling overview
-{: .no_toc }
+{% include /concepts/data-modeling-overview.md %}
 
-{% include /concepts/summary-data-modeling.md %}
-
-{% include page-toc.md %}
+<!--see DOCS-58 for other sources of information that need reviewing-->
 
 ## Before you begin
 
-{% include /com-install/com-install-before-begin.md %}
-
+* [Learn about FeatureBase](/index.html)
+* [Contact FeatureBase support with questions about data modeling](https://www.featurebase.com/contact-us)
 
 ## Concepts
 
