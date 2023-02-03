@@ -75,7 +75,7 @@ What is the set of customers / records who's age is over 35 or who have made a p
 ```
 #### Explanation
 `Row(age > 35)` returns `[5]` and `Row(last_purchase < '2021-01-01T00:00:00Z')` returns `[1]`. `Union()` does a set union on these two sets which is `[1,5]`.
-<hr>
+
 ### Example 2
 What is the set of customers / records who's age is over 30, has purchased from brand1, or has purchased from brand3?
 

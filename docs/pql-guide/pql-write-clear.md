@@ -70,7 +70,7 @@ Index: customer (non keyed index)
  4   | 25  | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   | 40  | []                  | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 
 ### Example 2
 Customer 5 also doesn't want the company to store their `last_purchase` data - remove it with `Clear()`.

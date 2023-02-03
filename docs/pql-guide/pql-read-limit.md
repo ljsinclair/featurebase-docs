@@ -78,7 +78,7 @@ Return the first 3 record IDs
 }
 ```
 
-#### Explaination
+#### Explanation
 The first 3 record IDs are 0, 1, 2. No offset was applied so we start at the beginning.
 
 -----------------------------------------------------------------------

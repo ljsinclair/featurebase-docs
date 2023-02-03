@@ -39,7 +39,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 What is the age of the youngest customer?
 
@@ -70,7 +70,7 @@ What is the age of the youngest customer?
 #### Explanation
 The minimum value in the age field is 19.
 
-<hr>
+
 ### Example 2
 What is the age of the youngest person to purchase from brand 3?
 

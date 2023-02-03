@@ -57,7 +57,7 @@ _id    | int (Int)
 14     | 140       
 15     | 150
 ```
-<hr>
+
 ### Example 1
 Calculate the 20th percentile
 

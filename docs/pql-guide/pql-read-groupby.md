@@ -74,7 +74,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 
 ### Example 1
 Count the number of customers that have purchased from each brand - sort by that count.
@@ -143,7 +143,7 @@ Count the number of customers that have purchased from each brand - sort by that
 #### Explanation
 4 customers purchased from brand 1, 2 customer purchased from brand 3 and 4, and 1 customer purchased from brand 2.
 
-<hr>
+
 
 ### Example 2
 What are the counts and sum of ages for each brand? Sorted by sum.
@@ -216,7 +216,7 @@ What are the counts and sum of ages for each brand? Sorted by sum.
 #### Explanation
 Our groups are the the values in the has_purchased field due to the `Rows(has_purchased)` argument. Then, for each customer, add their age to the sum. The output is above.
 
-<hr>
+
 
 ### Example 3
 Group by has_purchased and age and return groups with counts of more than one.
@@ -259,7 +259,7 @@ Group by has_purchased and age and return groups with counts of more than one.
 ```
 #### Explanation
 There is only one group with a count over 1 - brand1 and age 23.
-<hr>
+
 
 ### Example 4
 For customers younger than 35, what are the counts of customer for each brand those customers have purchased from?

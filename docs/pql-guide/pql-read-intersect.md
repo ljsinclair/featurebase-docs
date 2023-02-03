@@ -74,7 +74,7 @@ What is the set of customers / records who's age is over 26 and who have made a 
 ```
 #### Explanation
 Row(age > 26) returns [1,2,5] and Row(last_purchase > '2021-01-01T00:00:00Z') returns [0,2,3,4,5]. The Intersect call does a set intersect on these two sets which is [2,5].
-<hr>
+
 ### Example 2
 What is the set of customers / records who's age is over 30, has purchased from brand1, and has purchased from brand3?
 

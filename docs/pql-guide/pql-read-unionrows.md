@@ -54,7 +54,7 @@ Index: customer (non keyed index)
  4   | 25        | ["brand_c1","brand_c3"] | 2021-10-01T20:45:00Z
  5   | 40        | ["brand_a3"]            | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 Which users have purchased from any brand?
 
@@ -105,7 +105,7 @@ The equivalent `Union()` query would be:
   Row(has_purchased=brand_c3)
 )
 ```
-<hr>
+
 ### Example 2
 Which users have purchased from any brand that start with brand_a?
 
@@ -149,7 +149,7 @@ The equivalent `Union()` query would be:
   Row(has_purchased=brand_a3)
 )
 ```
-<hr>
+
 ### Example 3
 Which users have purchased from any brand that start with brand_a ?
 

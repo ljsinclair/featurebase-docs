@@ -41,7 +41,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 What customers have not purchased from brand 1?
 

@@ -64,7 +64,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 Extract all the data from the customer index (i.e. the PQL equivalent to SQL SELECT * FROM customer)?
 
@@ -173,7 +173,7 @@ Extract all the data from the customer index (i.e. the PQL equivalent to SQL SEL
 #### Explanation
 Similar to `SELECT * FROM customer`, we get all the data in the index.
 
-<hr>
+
 ### Example 2
 Output the list of brands each customer has purchased from for customers younder than 26.
 

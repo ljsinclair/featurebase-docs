@@ -108,7 +108,7 @@ Index: customer_time (non-keyed index)
 
 In both indexes above, a customer table was create with a customer ID as the record ID. Some information about the customer (e.g. age) was included. In the first index (`customer_set`), a Set field is used to store purchase history. Here we're tacking the brands each customer has purchased from but there is no time associated with the relationship. In the second index (`customer_time`), a Time field is used to store purchase history. This means there is at least one time associated with each relationship that can be used for range queries.
 
-<hr>
+
 ### Example 1
 What customers have purchased from brand1?
 
@@ -143,7 +143,7 @@ What customers have purchased from brand1?
 #### Explanation
 Customers 0, 1, 2, and 4 are the only customer that had a purchase event with brand1.
 
-<hr>
+
 ### Example 2
 Which customers have purchased from brand3 during 2021?
 
@@ -173,7 +173,7 @@ Which customers have purchased from brand3 during 2021?
 #### Explanation
 Note the primary index is `customer_time`. In that index, the `has_purchased` field is a Time field. This allows us to use the from / to arguments to search for relationship made during a given time window. This is not possible in the `customer_set` index which uses a Set field for the `has_purchased` field. Looking at the raw events data, only customer 2 purchased from brand 3 during 2021.
 
-<hr>
+
 
 ### Example 3
 What customer are between the age of 20 and 30?
@@ -208,7 +208,7 @@ What customer are between the age of 20 and 30?
 #### Explanation
 Customer 0, 2, and 4 are between the ages of 20 and 30.
 
-<hr>
+
 ### Example 4
 What customers made their last purchase in after the start 2022?
 

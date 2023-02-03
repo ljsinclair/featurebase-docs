@@ -66,7 +66,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"] | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 What are the top brands that have been purchased from?
 
@@ -115,7 +115,7 @@ What are the top brands that have been purchased from?
 #### Explanation
 4 customers have purchased from brand1, 2 customers have purchased from brand3 and brand4, and 1 customer has purchased from brand2.
 
-<hr>
+
 ### Example 2
 What is the top brand that have been purchased from?
 
@@ -147,7 +147,7 @@ What is the top brand that have been purchased from?
 #### Explanation
 4 customers have purchased from brand1 making it the top brand. The `k` arguments limits the return set to the most common brand.
 
-<hr>
+
 
 ### Example 3
 What are the top 2 brand from customers over 25?

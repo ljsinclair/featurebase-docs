@@ -46,7 +46,7 @@ Index: customer (non keyed index)
  5   |    40     | ["brand4"]          | 2022-01-13T11:00:00Z
 ```
 
-<hr>
+
 ### Example 1
 Extract all the data from the customer index sorted by age
 
@@ -156,7 +156,7 @@ Extract all the data from the customer index sorted by age
 #### Explanation
 The records are fetched in the non-decreasing order of age.
 
-<hr>
+
 ### Example 2
 Extract 2 latest records from the customer index with age > 23.
 

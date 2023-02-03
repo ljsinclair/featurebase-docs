@@ -50,7 +50,7 @@ Index: customer (non keyed index)
  4   |    25     | ["brand1","brand4"]          | 2021-10-01T20:45:00Z
  5   |    40     | ["brand4"]                   | 2022-01-13T11:00:00Z
 ```
-<hr>
+
 ### Example 1
 Which users have purchased from brand1 or brand4 but not both?
 
@@ -89,7 +89,7 @@ Which users have purchased from brand1 or brand4 but not both?
 #### Explanation
 `Row(has_purchased = brand1)` returns `[0,1,2,4]` and `Row(has_purchased = brand4)` returns `[4,5]`. [0,1,2,5] are the records that can be found but aren't in both sets.
 
-<hr>
+
 ### Example 1
 Which users have purchased from brand1 or brand4 but not both?
 

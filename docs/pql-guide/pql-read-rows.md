@@ -64,7 +64,7 @@ Index: customer (non keyed index)
  5   | 40  | ["brand_a3"]            | 2022-01-13T11:00:00Z
 ```
 
-<hr>
+
 ### Example 1
 What are the brands that have been purchased from (i.e. what are the values in the `has_purchased` field)?
 
@@ -104,7 +104,7 @@ What are the brands that have been purchased from (i.e. what are the values in t
 #### Explanation
 `Rows(has_purchased)` returns the list of values in the has_purchased field.
 
-<hr>
+
 ### Example 2
 What are the brands that have been purchased from (i.e. what are the values in the has_purchased field) that start with "brand_a"?
 
