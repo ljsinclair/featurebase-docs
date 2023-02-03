@@ -1,8 +1,11 @@
 ---
-id: hostsystem
-title: Host System
-sidebar_label: Host System
+title: Host system
+layout: default
+parent: Community setup
+grand_parent: Community
 ---
+
+# Host System
 
 ## Operating System Configuration
 
@@ -159,7 +162,7 @@ of FeatureBase. `noatime` should be used on the mount point for the FeatureBase 
 
 On SSDs, enable trim to reclaim the blocks of data are no longer considered to be 'in use'.
 On APFS, Trim is enabled by default and macOS automatically performs a TRIM operation on the
-free disk space on boot. Use `#trimforce enable` to ensure that the TRIM is enabled. 
+free disk space on boot. Use `#trimforce enable` to ensure that the TRIM is enabled.
 
 ### FeatureBase Trial Version
 If you are using a trial version of FeatureBase ensure that the host (and by extension FeatureBase)

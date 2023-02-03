@@ -7,7 +7,7 @@ grand_parent: Community
 
 # Architecture
 
-![FeatureBase Network Architecture Diagram](/img/community/community-setup/featurebase-architecture-diagram.png "FeatureBase Network Architecture Diagram")
+![FeatureBase Network Architecture Diagram](/assets/images/community/featurebase-architecture-diagram.png "FeatureBase Network Architecture Diagram")
 
 
 ## Components

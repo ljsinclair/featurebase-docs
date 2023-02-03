@@ -1,8 +1,11 @@
 ---
-id: getting-started
-title: Getting Started With FeatureBase
-sidebar_label: Getting Started With FeatureBase
+title: Community Getting started
+layout: default
+parent: Community setup
+grand_parent: Community
 ---
+
+# Getting Started With FeatureBase
 
 FeatureBase supports multiple interfaces for querying and [ingestion](/community/community-data-ingestion/ingesters). For this tutorial, we shall use the `csv-ingester` to insert data and both the web-UI and Postgres interface (via psql) to get familiar with querying FeatureBase. Ultimately you'll probably want to interact with FeatureBase through a [client library](/community/query-data/python-library).
 
@@ -137,7 +140,7 @@ molecula-consumer-csv \
 
 There are a couple of things to note about the above command, particularly the flags and arguments used:
 * `--index`: set the index that shall be used. If this index does not exist, it shall be created automatically.
-* `--header`: set the header to be used if the original csv file does not have a header. Each column name also specifies the type that FeatureBase shall use to represent the data (after the two underscores). For more details on all FeatureBase data-types see [Field Types](/community/community-data-ingestion/ingester-configuration) section later on. For now, it suffices to say that the `ID` type is a simple integer representation of a particular property that an object has. For example, if an object has `project_id` set to 10 and `language` set to 6, 8 and 18, it means that the object was assigned the project ID 10 and uses Go, C and Python. 
+* `--header`: set the header to be used if the original csv file does not have a header. Each column name also specifies the type that FeatureBase shall use to represent the data (after the two underscores). For more details on all FeatureBase data-types see [Field Types](/community/community-data-ingestion/ingester-configuration) section later on. For now, it suffices to say that the `ID` type is a simple integer representation of a particular property that an object has. For example, if an object has `project_id` set to 10 and `language` set to 6, 8 and 18, it means that the object was assigned the project ID 10 and uses Go, C and Python.
 * `--id-field`: specify which column contains the primary key for the object.
 * `--batch-size`: by default `molecula-consumer-csv` ingests rows one at a time which is quite slow. To speed up ingestion, set the batch size to a higher number such as 1000. The exact batch-size to be used though depends on the domain, setting and tradeoffs.
 * `--files`: provide the path to the file to ingest data from.

@@ -446,7 +446,7 @@ sort="count desc",
 having=CONDITION(count > 200000000)
 );
 ```
-![Figure 11. GROUP BY Query](/img/quick-start-guide/enterprise/ent_cseg_groupby_having.png)
+![Figure 11. GROUP BY Query](/assets/images/quick-start-guide/enterprise/ent_cseg_groupby_having.png)
 
 
 Another useful facet of ```GROUP BY``` is the ability to add an aggregate argument and utilize the low-latency aggregation in another capacity. We'll execute this query in SQL.
