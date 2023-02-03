@@ -62,13 +62,15 @@ The LRU cache maintains the most recently accessed Rows.
 
 Setting a time quantum on a field creates extra views which allow ranged Row queries down to the time interval specified.
 
-* [Learn about Time quantums](/concepts/time-quantums)
+* [Learn about IDSet and Time quantums](/docs/sql-guide/data-types/data-type-idset)
+* [Learn about STRINGSET and Time quantums](/docs/sql-guide/data-types/data-type-stringset)
 
 ### TTL (Time To Live)
 
 TTL is an option for fields with the type of time. Time quantum is required for TTL to function.
 
-* [Learn about Time To Live](/concepts/time-to-live)
+* [Learn about IDSet and TTL](/docs/sql-guide/data-types/data-type-idset)
+* [Learn about STRINGSET and TTL](/docs/sql-guide/data-types/data-type-stringset)
 
 ### Numeric Types
 
