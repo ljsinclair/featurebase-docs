@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Client
 
-A basic usage example of the Python client is shown below. Details about PQL query syntax can be found on the [PQL Introduction](/pql-guide/pql-introduction) page.
+A basic usage example of the Python client is shown below. Details about PQL query syntax can be found on the [PQL Introduction](/docs/pql-guide/pql-home) page.
 
 
 ```python

@@ -9,11 +9,11 @@ grand_parent: Community
 
 ## Before you start
 
-* [Learn how to install FeatureBase Community](/community/community-setup/community-install-config)
+* [Learn how to install FeatureBase Community](/docs/community/com-home)
 
 ## Determining Hardware Requirements
 
-Ingesters in FeatureBase are stateless and can be deployed in containers and easily scaled up and down. FeatureBase is stateful and has widely varying hardware requirements depending on the size of the data and query workload. FeatureBase can also be scaled up and down, but there's enough overhead in this process that you wouldn't want to be resizing it constantly in response to shifting demand. You may also need to adjust some operating system configuration features to take full advantage of larger systems; see [host system requirements](/community/community-setup/hostsystem).
+Ingesters in FeatureBase are stateless and can be deployed in containers and easily scaled up and down. FeatureBase is stateful and has widely varying hardware requirements depending on the size of the data and query workload. FeatureBase can also be scaled up and down, but there's enough overhead in this process that you wouldn't want to be resizing it constantly in response to shifting demand. You may also need to adjust some operating system configuration features to take full advantage of larger systems; see [host system requirements](/docs/community/old-setup/old-hostsystem).
 
 ## Memory
 
@@ -29,7 +29,7 @@ The rough formula for calculating total cluster data storage (across all hosts) 
 (num_records/shard_width)*size_per_shard*2
 ```
 
-For more detailed information on data size, see the [Data Modeling](/concepts/data-modeling-overview) section.
+For more detailed information on data size, see the [Data Modeling](/docs/concepts/overview-data-modeling) section.
 
 | Field Type              | Cardinality | Size (per shard) |
 | -                       |           - | -                |

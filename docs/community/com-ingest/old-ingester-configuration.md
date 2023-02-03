@@ -12,9 +12,9 @@ When authentication is enabled, only users with admin permissions or whitelisted
 There are 2 methods for authentication for ingest:
 
 ### 1. Whitelisted IPs
-A valid IP must be included in `configured-ips`. Whitelisted IPs will be granted admin permissions. To configure this option, follow these [instructions](/community/community-security/enable-auth#configuring-featurebase).
+A valid IP must be included in `configured-ips`. Whitelisted IPs will be granted admin permissions. To configure this option, follow these [instructions](/docs/community/com-auth-old/old-auth-enable#configuring-featurebase).
 ### 2. auth-token flag
-A valid JWT must be passed to the `auth-token` flag for any ingester. The user must have admin permissions. The token may be obtained by following these [instructions](/community/community-security/enable-auth#how-to-get-auth-token).
+A valid JWT must be passed to the `auth-token` flag for any ingester. The user must have admin permissions. The token may be obtained by following these [instructions](/docs/community/com-auth-old/old-auth-enable#how-to-get-auth-token).
 
 ## General Ingestion Rules
 
@@ -51,7 +51,7 @@ Note: In order for TLS to be used, the various TLS options need to be set, but e
 | tls.key                        | string  | Path to TLS key file. |
 | tls.skip-verify                | bool    | Skip verification of server certs. |
 | verbose                        | bool    | Enable verbose logging. |
-| auth-token                     | string  | JWT authentication token obtained by following these [instructions](/community/community-security/enable-auth#how-to-get-auth-token) |
+| auth-token                     | string  | JWT authentication token obtained by following these [instructions](/docs/community/com-auth-old/old-auth-enable#how-to-get-auth-token) |
 
 
 ## Kafka Delete Ingester
@@ -317,7 +317,7 @@ String is for arbitrary string data. The data will be stored in a 'set', 'mutex'
 
 Argument 1 — Mutex: Either 'T' or 'F'. Specifies whether a "mutex" type field should be used  in FeatureBase. If 'T', a "mutex" field is used, and any particular record may only have a single value. If 'F', a "set" field is used, and a particular record may have multiple values for this field.
 
-Argument 2 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set" or "mutex". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/concepts/data-modeling-overview) for more information about time fields.
+Argument 2 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set" or "mutex". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/docs/concepts/overview-data-modeling) for more information about time fields.
 
 ### ID
 Example:
@@ -408,7 +408,7 @@ Example:
 
 StringArray is similar to the `String` type, but expects multiple values in a single record. Each value will be set in the corresponding row of the FeatureBase 'set' or 'time' field. To retrieve Array values from a CSV file, the data within the CSV column should be a comma separated list of array values enclosed in double quotes, e.g. `"Georgia,Texas,Oregon"`.
 
-Argument 1 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/concepts/data-modeling-overview) for more information about time fields.
+Argument 1 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/docs/concepts/overview-data-modeling) for more information about time fields.
 
 ### IDArray
 Example:
@@ -416,7 +416,7 @@ Example:
 
 IDArray is similar to the `ID` type, but expects multiple values in a single record. Each value will be set in the corresponding row of the FeatureBase 'set' or 'time'  field. To retrieve Array values from a CSV file, the data within the CSV column should be a comma separated list of values enclosed in double quotes, e.g. `"10,23,18"`.
 
-Argument 1 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/concepts/data-modeling-overview) for more information about time fields.
+Argument 1 — Time Quantum: If this argument is provided, the field will be a "time" field rather than "set". "time" fields work similarly to "set" fields but each value can have a coarse grained timestamp associated with it. The granularity is controlled by this argument and can be anything from yearly down to hourly. See the [FeatureBase Data Model docs](/docs/concepts/overview-data-modeling) for more information about time fields.
 
 ### Ignore
 Example:
