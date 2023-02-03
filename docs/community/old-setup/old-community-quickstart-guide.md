@@ -71,7 +71,7 @@ chmod ugo+x /usr/local/bin/featurebase
 Ensure this folder is in your path variable by, running ```echo $PATH``` in the command line and confirming ```/usr/local/bin/``` is there.
 If it's not, run ```export PATH=$PATH:/usr/local/bin``` to append it to your path variable.
 
-Next, configure the FeatureBase server by creating and running the configuration file. Go to [FeatureBase Configuration](/community/community-setup/featurebase-configuration) for more on configuring FeatureBase.
+Next, configure the FeatureBase server by creating and running the configuration file. Go to [FeatureBase Configuration](/docs/community/com-config/old-config-flags) for more on configuring FeatureBase.
 
 <!---
 we now include this file in a release, so we might want to consider making these align and conform in the future.
@@ -284,7 +284,7 @@ Do we want to mention that this data can be used in 15 minutes with the cloud pr
 >**Please note that this file is large (~14GB) and contains over 1B records. Make sure that you have sufficient local storage. On average, it takes about 30 minutes to download, but actual download time may depend on your connection speed.**
 
 
->**To use your own data** - check out our documentation for creating new sources [here](/community/community-data-ingestion/ingester-configuration)
+>**To use your own data** - check out our documentation for creating new sources [here](/docs/community/com-ingest/old-ingester-configuration)
 
 Next, in a new terminal window, make a directory for the data:
 ```

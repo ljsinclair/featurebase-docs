@@ -43,7 +43,7 @@ Attempting to restore to a live cluster populated with data may result in data l
 
 
 **NOTE:**
-This process is only compatible with the RBF [storage backend](/community/community-setup/featurebase-configuration#storage-backend).
+This process is only compatible with the RBF [storage backend](/docs/community/com-config/old-config-flags#storage-backend).
 
 ### What is included in a backup?
 

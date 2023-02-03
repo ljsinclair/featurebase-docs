@@ -24,7 +24,7 @@ Include the following text in featurebase.conf:
     poll-interval = "0m15s"
 ```
 
-Note that FeatureBase metrics will be re-written every 15 seconds based on the configuration above. For more on configuring FeatureBase, visit [Featurebase Configuration](/community/community-setup/featurebase-configuration){:target="\_blank"}.
+Note that FeatureBase metrics will be re-written every 15 seconds based on the configuration above. For more on configuring FeatureBase, visit [Featurebase Configuration](/docs/community/com-config/old-config-flags){:target="\_blank"}.
 
 To verify FeatureBase is writing prometheus metrics, run `curl localhost:10101/metrics` on the FeatureBase host and confirm there are FeatureBase metrics being written. Again, for more on FeatureBase metrics, visit [FeatureBase Monitoring](/docs/community/com-monitoring/old-monitoring){:target="\_blank"}.
 

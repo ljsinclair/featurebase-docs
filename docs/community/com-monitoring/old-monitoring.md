@@ -130,7 +130,7 @@ where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` co
 
 Reporting metrics to Prometheus is enabled by default for Ingesters (at :9093/metrics); `host:port` can be specified with the `--stats` flag.
 
-For FeatureBase, reporting must be enabled, as detailed on the [Configuration page](/community/community-setup/featurebase-configuration#metric-service). E.g.
+For FeatureBase, reporting must be enabled, as detailed on the [Configuration page](/docs/community/com-config/old-config-flags#metric-service). E.g.
 
 ```toml
 [metric]
@@ -198,4 +198,4 @@ While FeatureBase is in the RESIZING state, it denies any request which accesses
 
 ### Ingester
 
-Generally, scaling is handled by starting or stopping Ingester instances. Other options may be available for specific Ingesters; see [ingest tuning](/community/community-data-ingestion/ingesters#ingest-tuning)
+Generally, scaling is handled by starting or stopping Ingester instances. Other options may be available for specific Ingesters; see [ingest tuning](/docs/community/com-ingest/old-ingesters#ingest-tuning)

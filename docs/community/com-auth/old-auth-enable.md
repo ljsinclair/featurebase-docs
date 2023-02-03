@@ -111,7 +111,7 @@ Additionally, TLS must be enabled. Refer to [How To Enable TLS](/community/commu
     ```
     sudo mkdir -p /var/log/molecula/ && touch /var/log/molecula/query.log
     ```
-    If this looks unfamiliar, or this directory has not been set up, refer to [How To Install FeatureBase](/community/community-setup/installing-featurebase).
+    If this looks unfamiliar, or this directory has not been set up, refer to [How To Install FeatureBase](/docs/community/old-setup/old-installing-featurebase).
 
 - Add the path to the `query-log-path` parameter in `featurebase.conf`.
 
