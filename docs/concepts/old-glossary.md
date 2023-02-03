@@ -1,7 +1,8 @@
 ---
-id: glossary
 title: Glossary
-sidebar_label: Glossary
+layout: default
+parent: Concepts
+has_children: false
 ---
 
 
