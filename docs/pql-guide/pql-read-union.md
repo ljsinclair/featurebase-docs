@@ -8,9 +8,9 @@ nav_order: 10
 
 # PQL UNION()
 
-`Union()` takes one or more arguments -- each a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- and unions them. You can think of `Union()` as **OR** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys OR is in the second set of record IDs / keys OR so on and so forth.
+`Union()` takes one or more arguments -- each a [row call](/docs/pql-guide/pql-read-home#row-calls) -- and unions them. You can think of `Union()` as **OR** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys OR is in the second set of record IDs / keys OR so on and so forth.
 
-`Union()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+`Union()` is a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
 ## Call Definition
 
@@ -19,10 +19,10 @@ Union(ROW_CALL, ... )
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} (set of record IDs / keys)
+- `ROW_CALL` : the output of any [row call](/docs/pql-guide/pql-read-home#row-calls) (set of record IDs / keys)
 
 #### Optional Arguments
-- `...` : Any number of additional [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} seperated by commas
+- `...` : Any number of additional [row call](/docs/pql-guide/pql-read-home#row-calls) seperated by commas
 
 #### Returns
 - list of record IDs or record keys

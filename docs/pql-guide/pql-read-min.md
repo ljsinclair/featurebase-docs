@@ -8,7 +8,7 @@ nav_order: 10
 
 # PQL MIN()
 
-The `Min()` query finds the minimum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
+The `Min()` query finds the minimum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/docs/pql-guide/pql-read-home#row-calls)).
 
 ## Call Definition
 ```
@@ -19,7 +19,7 @@ Min(ROW_CALL, field=FIELD)
  - `field` / `FIELD` : the name of the field to get the minimum value in. This should be an Int, Decimal, or Timestamp field.
 
 #### Optional Arguments
- - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to filter records to get the min over.
+ - `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) used to filter records to get the min over.
 
 #### Returns
 - the min value in a field and the count of records that have that value

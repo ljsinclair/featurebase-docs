@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL CONSTROW()
 
-The `ConstRow()` query returns a set of record IDs / keys defined explicitly by the columns argument (list of record IDs / keys). This can be useful if you have a predetermined set of records you want to use as the argument of another call -- see the last example below. `ConstRow()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+The `ConstRow()` query returns a set of record IDs / keys defined explicitly by the columns argument (list of record IDs / keys). This can be useful if you have a predetermined set of records you want to use as the argument of another call -- see the last example below. `ConstRow()` is a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
 ## Call Definition:
 
@@ -174,4 +174,4 @@ Select / extract the age and has_purchased events for the record with ID 0 or 1
 ```
 
 #### Explanation:
-The first argument of `Extract()` is a row call - this tells `Extract()` what records you want values for. Here we use `ConstRow()` (as opposed to another [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}) to tell `Extract()` the specific records to use. `Rows(age)` and `Rows(has_purchased)` tell `Extract()` we like to return the data in the `age` and `has_purchased` field. View [Extract()](/docs/pql-guide/pql-read-extract) for more on `Extract()`.
+The first argument of `Extract()` is a row call - this tells `Extract()` what records you want values for. Here we use `ConstRow()` (as opposed to another [row call](/docs/pql-guide/pql-read-home#row-calls)) to tell `Extract()` the specific records to use. `Rows(age)` and `Rows(has_purchased)` tell `Extract()` we like to return the data in the `age` and `has_purchased` field. View [Extract()](/docs/pql-guide/pql-read-extract) for more on `Extract()`.

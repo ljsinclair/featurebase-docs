@@ -1,8 +1,11 @@
 ---
-title: Enable SQL endpoint
+title: SQL Endpoint
 layout: default
-parent: Community
+parent: Community configuration
+grand_parent: Community
 ---
+
+# SQL Endpoint
 
 The SQL endpoint allows you to execute SQL statements:
 * on the command-line
@@ -10,14 +13,14 @@ The SQL endpoint allows you to execute SQL statements:
 
 ## Before you begin
 
-* Open a terminal and `cd` to the Featurebase installation directory.
+* CD to the `/featurebase/opt` directory
 
 ## Enable SQL endpoint on the command line
 
 * Run the following command:
 
 ```
-featurebase cli
+./featurebase cli
 ```
 
 ## View FeatureBase SQL CLI commands
@@ -25,7 +28,7 @@ featurebase cli
 * Run the following command:
 
 ```
-featurebase cli --help
+./featurebase cli --help
 ```
 
 ## Further information

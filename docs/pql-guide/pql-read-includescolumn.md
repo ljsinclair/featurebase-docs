@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL INCLUDESCOLUMN()
 
-`IncludesColumn()` returns true if some record ID / record key is in a specified set of record IDs / record keys - i.e. if the specified record was returned by a specified [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} or not.
+`IncludesColumn()` returns true if some record ID / record key is in a specified set of record IDs / record keys - i.e. if the specified record was returned by a specified [row call](/docs/pql-guide/pql-read-home#row-calls) or not.
 
 ## Call Definition
 
@@ -15,7 +15,7 @@ grand_parent: PQL guide
 IncludesColumn(ROW_CALL, column=UINT_OR_STRING)
 ```
 #### Mandatory Arguments
- - `ROW_CALL`: the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to compare against
+ - `ROW_CALL`: the [row call](/docs/pql-guide/pql-read-home#row-calls) to compare against
  - `column`: the record ID or record key we want to check is in or not in the result of `ROW_CALL`
    - `UINT_OR_STRING`: unsigned integer for non keyed records or a string for keyed records
 

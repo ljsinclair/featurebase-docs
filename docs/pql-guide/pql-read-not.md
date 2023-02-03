@@ -8,9 +8,9 @@ nav_order: 10
 
 # PQL NOT()
 
-The `Not()` query returns the record IDs/keys that are contained in `All()` but not some [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- i.e the set difference between `All()` and a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+The `Not()` query returns the record IDs/keys that are contained in `All()` but not some [row call](/docs/pql-guide/pql-read-home#row-calls) -- i.e the set difference between `All()` and a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
-`Not()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+`Not()` is a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
 ## Call Definition
 
@@ -19,7 +19,7 @@ Not(ROW_CALL)
 ```
 
 #### Mandatory Arguments
- - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to difference with `All()`
+ - `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) to difference with `All()`
 
 #### Optional Arguments
 

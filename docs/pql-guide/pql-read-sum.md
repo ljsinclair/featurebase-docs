@@ -8,7 +8,7 @@ nav_order: 10
 
 # PQL SUM()
 
-`Sum()` computes the sum of values in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
+`Sum()` computes the sum of values in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/docs/pql-guide/pql-read-home#row-calls)).
 
 ## Call Definition
 ```
@@ -19,7 +19,7 @@ Sum(ROW_CALL, field=FIELD)
  - `field` / `FIELD`: the name of the field to get summed. This must be an Int, Decimal, or Timestamp field.
 
 #### Optional Arguments
- - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to filter records to get the summation over.
+ - `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) used to filter records to get the summation over.
 
 #### Returns
 - the sum of values in a field and the count of records that where included in that sum (i.e. the records returned by the row call and the records that didn't have null values in FIELD)

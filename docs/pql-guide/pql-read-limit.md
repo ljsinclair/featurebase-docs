@@ -8,9 +8,9 @@ nav_order: 10
 
 # PQL
 
-The `Limit()` query returns some subset of record IDs / keys from a given [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} based on the limit and offset arguments provided.
+The `Limit()` query returns some subset of record IDs / keys from a given [row call](/docs/pql-guide/pql-read-home#row-calls) based on the limit and offset arguments provided.
 
-`Limit()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+`Limit()` is a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
 ## Call Definition
 
@@ -19,7 +19,7 @@ Limit(ROW_CALL, limit=UINT, offset=UINT)
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to be limited
+- `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) to be limited
 
 #### Optional Arguments
 - `limit` : the number of records you'd like to limit the query to. For example, limit=0 returns nothing and limit=100 returns 100 records. This is an optional argument. If it's not supplied there will be no limit on the number of records returned.

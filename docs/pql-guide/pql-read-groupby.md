@@ -9,7 +9,7 @@ grand_parent: PQL guide
 
 `GroupBy()` can be used similar to `SELECT-FROM-WHERE-GROUP BY`... in `SQL`. See below for the current functionality.
 
-`GroupBy()` can be a very memory intensive opperation in FeatureBase. Ensure you have adequate memory to run large `GroupBy()` queries or use the [max-query-memory](/community/community-setup/featurebase-configuration#max-query-memory) FeatureBase configuration option to prevent out of memory issues.
+`GroupBy()` can be a very memory intensive opperation in FeatureBase. Ensure you have adequate memory to run large `GroupBy()` queries or use the [max-query-memory](/docs/community/com-config/com-config-flags#max-query-memory) FeatureBase configuration option to prevent out of memory issues.
 
 ## Call Definition
 
@@ -33,7 +33,7 @@ GroupBy(
 
 #### Optional Arguments
 - `...` : Any number of additional [rows calls](/pql-guide/pql-introduction#rows-calls){:target="_blank"} used for grouping records by -- see `ROWS_CALL` above.
-- `filter` : `ROW_CALL` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to filter records before grouping -- analagous to the `WHERE` clause in SQL.
+- `filter` : `ROW_CALL` is a [row call](/docs/pql-guide/pql-read-home#row-calls) used to filter records before grouping -- analagous to the `WHERE` clause in SQL.
 - `having` : a condition that can be used to filter groups returned by `GroupBy()` based on the value of their aggragate statistics
   - `CONDITION` : the value of the `having` argument. This value should be structured in one of two ways:
     - count condition : this means we keeps groups with counts that meet a certain condition

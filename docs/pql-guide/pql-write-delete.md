@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL DELETE()
 
-The `Delete()` call removes entire records. A [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} is used to determine which records will be deleted.
+The `Delete()` call removes entire records. A [row call](/docs/pql-guide/pql-read-home#row-calls) is used to determine which records will be deleted.
 
 It is potentially a very heavy operation. It iterates over all fields and views in a set of records, removing the records. It also removes  all data from fields, existence bits, and key translation for the provided columns for all replicas in the cluster.
 
@@ -21,7 +21,7 @@ Delete(ROW_CALL)
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to determine which records to delete -- i.e. records returned by `ROW_CALL` will be deleted.
+- `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) used to determine which records to delete -- i.e. records returned by `ROW_CALL` will be deleted.
 
 #### Optional Arguments
 

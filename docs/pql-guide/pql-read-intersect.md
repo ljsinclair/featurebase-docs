@@ -7,9 +7,9 @@ grand_parent: PQL guide
 
 # PQL INTERSECT()
 
-The `Intersect()` query takes one or more arguments -- each a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- and intersects them. You can think of `Intersect()` as **AND** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys AND is in the second set of record IDs / keys AND so on and so forth.
+The `Intersect()` query takes one or more arguments -- each a [row call](/docs/pql-guide/pql-read-home#row-calls) -- and intersects them. You can think of `Intersect()` as **AND** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys AND is in the second set of record IDs / keys AND so on and so forth.
 
-`Intersect()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+`Intersect()` is a [row call](/docs/pql-guide/pql-read-home#row-calls).
 
 ## Call Definition
 
@@ -18,10 +18,10 @@ Intersect(ROW_CALL, ... )
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} (set of record IDs / keys)
+- `ROW_CALL` : the output of any [row call](/docs/pql-guide/pql-read-home#row-calls) (set of record IDs / keys)
 
 #### Optional Arguments
-- `...` : Any number of additional [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} seperated by commas
+- `...` : Any number of additional [row call](/docs/pql-guide/pql-read-home#row-calls) seperated by commas
 
 #### Returns
 - list of record IDs or record keys

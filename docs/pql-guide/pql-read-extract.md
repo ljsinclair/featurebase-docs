@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL EXTRACT()
 
-The `Extract()` query allows the user to extract the values of specified fields for specified records. The `Extract()` query is similar the `SELECT` argument in SQL -- see example 1 below for the PQL equivalment to `SELECT * FROM table` in SQL.
+The `Extract()` query allows the user to extract the values of specified fields for specified records. The `Extract()` query is similar the `SELECT` argument in SQL -- see example 1 below for the PQL equivalent to `SELECT * FROM table` in SQL.
 
 The task of retrieving all data for a record is generally more expensive in FeatureBase as compared to relational databases because of the way data is stored. For that reason, using the `Extract()` query for many fields and records is not advisable.
 
@@ -22,11 +22,11 @@ Extract(ROW_CALL, ROWS_CALL, ... )
 ```
 
 #### Mandatory Arguments
- - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to filter records
+ - `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) used to filter records
  - `ROWS_CALL` : any [rows call](/pql-guide/pql-introduction#rows-calls){:target="_blank"} (set of record IDs / keys). Again, contrary to the standard definition of [Rows()](/docs/pql-guide/pql-read-rows), any field type can be used as the argument to `Rows()` when `Rows()` is used as an argument to `Extract()`.
 
 #### Optional Arguments
-- `...` : Any number of additional [rows calls](/pql-guide/pql-introduction#rows-calls){:target="_blank"} seperated by commas. contrary to the standard definition of [Rows()](/docs/pql-guide/pql-read-rows), any field type can be used as the argument to `Rows()` when `Rows()` is used as an argument to `Extract()`.
+- `...` : Any number of additional rows calls separated by commas. contrary to the standard definition of [Rows()](/docs/pql-guide/pql-read-rows), any field type can be used as the argument to `Rows()` when `Rows()` is used as an argument to `Extract()`.
 
 #### Returns
 An object with:

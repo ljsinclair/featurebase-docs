@@ -7,9 +7,9 @@ grand_parent: PQL guide
 
 # PQL DIFFERENCE()
 
-The `Difference()` query performs a set difference on the [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} passed as arguments. It returns the set of record IDs / keys in the first [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} and not in any of the subsequent [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+The `Difference()` query performs a set difference on the [row call](/docs/pql-guide/pql-read-home#row-calls) passed as arguments. It returns the set of record IDs / keys in the first Row call and not in any of the subsequent Row calls
 
-`Difference()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+`Difference()` is a Row call
 
 ## Call Definition
 
@@ -18,10 +18,10 @@ Difference(ROW_CALL, ...)
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to difference
+- `ROW_CALL` : a row call to difference
 
 #### Optional Arguments
-- `...` : Any number of additional [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} seperated by commas
+- `...` : Any number of additional row calls separated by commas
 
 #### Returns
 - list of record IDs or record keys

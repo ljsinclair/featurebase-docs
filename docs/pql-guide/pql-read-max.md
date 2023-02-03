@@ -8,7 +8,7 @@ nav_order: 10
 
 # PQL MAX()
 
-The `Max()` query finds the maximum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
+The `Max()` query finds the maximum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/docs/pql-guide/pql-read-home#row-calls)).
 
 ## Call Definition
 ```
@@ -19,7 +19,7 @@ Max(ROW_CALL, field=FIELD)
  - `field` / `FIELD`: the name of the field to get the maximum value in. This should be an Int, Decimal, or Timestamp field.
 
 #### Optional Arguments
- - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} used to filter records to get the max over.
+ - `ROW_CALL` : the [row call](/docs/pql-guide/pql-read-home#row-calls) used to filter records to get the max over.
 
 #### Returns
 - the max value in a field and the count of records with that value
