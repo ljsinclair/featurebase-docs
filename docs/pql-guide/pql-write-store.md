@@ -1,8 +1,12 @@
 ---
-id: Store
-title: Store()
-sidebar_label: Store()
+title: PQL STORE()
+layout: default
+parent: PQL Write
+grand_parent: PQL guide
+
 ---
+
+# PQL STORE()
 
 The `Store()` call can be used populate values in a Set field based on the results of a [row call](/docs/pql-guide/pql-read-home#row-calls). This can be seen as a way of caching [row call](/docs/pql-guide/pql-read-home#row-calls).
 

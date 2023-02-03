@@ -3,7 +3,7 @@ title: PQL SET()
 layout: default
 parent: PQL Write
 grand_parent: PQL guide
-nav_order: 10
+
 ---
 
 # PQL SET()

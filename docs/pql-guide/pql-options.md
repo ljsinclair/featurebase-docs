@@ -1,7 +1,10 @@
 ---
-title: PQL OPTIONS()
+title: PQL Options
 layout: default
-parent: PQL Guide
+parent: PQL guide
+has_children: true
+nav_order: 1
+has_toc: false
 ---
 
 # PQL OPTIONS()

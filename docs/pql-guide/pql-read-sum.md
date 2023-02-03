@@ -3,7 +3,6 @@ title: PQL SUM()
 layout: default
 parent: PQL Read
 grand_parent: PQL guide
-nav_order: 10
 ---
 
 # PQL SUM()
