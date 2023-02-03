@@ -34,4 +34,4 @@ The SQL endpoint allows you to execute SQL statements:
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Run SQL over an HTTP endpoint](/docs/community/com-api/com-api-sql-endpoint)
+* [Run SQL over an HTTP endpoint](/docs/community/com-api/old-sql-endpoint)

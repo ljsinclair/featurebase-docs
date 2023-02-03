@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL ROWS()
 
-`Rows()` returns a list of field values (row IDs / keys) in a field. Most of the time, `Rows()` will be used as the argument of another call (e.g. [Extract()](/docs/pql-guide/pql-read-extract) or [GroupBy()](/docs/pql-guide/pql-read-groupby)) and only the FIELD argument will be supplied. In some cases (i.e. [GroupBy()](/docs/pql-guide/pql-read-groupby))) it makes sense to use additional arguments as filters to group by a subset of field values. See [GroupBy()](/docs/pql-guide/pql-read-groupby) for examples.
+`Rows()` returns a list of field values (row IDs / keys) in a field. Most of the time, `Rows()` will be used as the argument of another call (e.g. [Extract()](/docs/pql-guide/pql-read-extract) or [GroupBy()](/docs/pql-guide/pql-read-groupby) and only the FIELD argument will be supplied. In some cases (i.e. [GroupBy()](/docs/pql-guide/pql-read-groupby)) it makes sense to use additional arguments as filters to group by a subset of field values. See [GroupBy()](/docs/pql-guide/pql-read-groupby) for examples.
 
 
 ## Call Definition
@@ -25,7 +25,7 @@ Rows(
 ```
 
 #### Mandatory Arguments
-- `FIELD` : The field argument is the field you would like to return field values from. Note that Set, Mutex, and Time fields are the only supported fields for this arguement.
+- `FIELD` : The field argument is the field you would like to return field values from. Note that Set, Mutex, and Time fields are the only supported fields for this argument.
 
 #### Optional Arguments
 - `like` : The like argument is used to filter field values that returned for keyed fields. Only field values that match this filter will be returned. `_` represents any single character. `%` is used to match any number of characters - including 0. Every other character is matched exactly

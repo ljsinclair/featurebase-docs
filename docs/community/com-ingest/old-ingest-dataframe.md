@@ -67,4 +67,4 @@ Using the consumer as part of the `featurebase` binary, we can run:
 featurebase dataframe-csv-loader -csv weather.csv -index weather -featurebase-host localhost:10101
 ```
 
-You can confirm the schema using the [HTTP API](/docs/community/com-api/com-api-http-endpoint#dataframe-endpoints). You can confirm / return the data using the [Arrow()](/docs/pql-guide/pql-read-arrow) PQL query. You can run analytical queries against the data using the [Apply()](/docs/pql-guide/pql-read-apply) PQL query.
+You can confirm the schema using the [HTTP API](/docs/community/com-api/old-http-endpoint#dataframe-endpoints). You can confirm / return the data using the [Arrow()](/docs/pql-guide/pql-read-arrow) PQL query. You can run analytical queries against the data using the [Apply()](/docs/pql-guide/pql-read-apply) PQL query.
