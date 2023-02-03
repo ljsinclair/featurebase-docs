@@ -19,15 +19,15 @@ Like SQL, PQL is a declarative, set-based language. Unlike SQL, PQL expressions 
 
 ## PQL calls
 
-Many PQL calls return or accept objects representing rows ([row calls](#row-calls){:target="_blank"}) or columns ([rows calls](#rows-calls){:target="_blank"}), and understanding these types is key to composing the various types of PQL call to build a query.
+Many PQL calls return or accept objects representing rows ([row calls](/docs/pql-guide/pql-read-home#row-calls{:target="_blank"}) or columns ([rows calls](#rows-calls){:target="_blank"}), and understanding these types is key to composing the various types of PQL call to build a query.
 
-For example, the [row call](#row-calls){:target="_blank"} is the basic query type for reading bitmaps and performing boolean operations on them. The input type signatures of row calls vary, but they always return an object representing a set contained in a single row (i.e. a *computed row*, not necessarily a *stored row*), which can be passed as an argument to other queries.
+For example, the [row call](/docs/pql-guide/pql-read-home#row-calls) is the basic query type for reading bitmaps and performing boolean operations on them. The input type signatures of row calls vary, but they always return an object representing a set contained in a single row (i.e. a *computed row*, not necessarily a *stored row*), which can be passed as an argument to other queries.
 
 For a simple example, consider this diagram:
 
-![PQL diagram](/img/pql-diagram.png)
+![PQL diagram](/assets/images/pql-guide/pql-diagram.png)
 
-This is a PQL query on a table of users which includes fields for gender, age, location, and interests. It asks a question involving a moderately complex boolean combination of these fields. Note that each annotated component within the `Count` is a separate [row call](#row-calls){:target="_blank"}, representing a set of users; each of these could be a standalone query, or passed to a `Count` call, for example. `Count` accepts a single row call, regardless of its structure, and returns a scalar value.
+This is a PQL query on a table of users which includes fields for gender, age, location, and interests. It asks a question involving a moderately complex boolean combination of these fields. Note that each annotated component within the `Count` is a separate [row call](/docs/pql-guide/pql-read-home#row-calls), representing a set of users; each of these could be a standalone query, or passed to a `Count` call, for example. `Count` accepts a single row call, regardless of its structure, and returns a scalar value.
 
 While other calls may accept different types, this composition of function calls is an important concept for PQL usage.
 
