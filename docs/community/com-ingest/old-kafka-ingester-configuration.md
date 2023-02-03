@@ -112,7 +112,7 @@ When all config options are left as default, the `"Config"` field may be omitted
 * `"CustomUnit"`: a 'duration' value which specifies a custom time unit; accepts values like "6h" for 6 hours, "1m30s" for 1 minute and 30 seconds; valid units can be described using "ns", "us", "ms", "s", "m", or "h"
 * `"Granularity"`: the resolution at which the incoming values will be stored. Allowed values are `s`, `ms`, `us`, `ns`. Defaults to `"s"`.
 
-The `"CacheConfig"` option specifies the size and type of a [`TopN`](/pql-guide/read/topn) cache for a set or mutex field.
+The `"CacheConfig"` option specifies the size and type of a [`TopN`](/docs/pql-guide/read-topn) cache for a set or mutex field.
 This "cache" is used for the `TopN` approximation.
 The default setting is:
 ```json
@@ -127,7 +127,7 @@ Assuming that the cache is full (the field has more than `"CacheSize"` rows with
 
 This cache can also be disabled by setting the type to `"none"`.
 Disabling the `TopN` cache will prevent `TopN` from working.
-When operating on a field without a cache, a slower [`TopK`](/pql-guide/read/topk) or sorted [`GroupBy`](/pql-guide/read/groupby) query may be used instead.
+When operating on a field without a cache, a slower [`TopK`](/docs/pql-guide/read-topk) or sorted [`GroupBy`](/docs/pql-guide/read-groupby) query may be used instead.
 
 ### Time Quantum
 
@@ -281,7 +281,7 @@ postgres:	https://godoc.org/github.com/lib/pq
 
 ## Header Descriptions
 
-The [CSV](/community/community-data-ingestion/csv-sql-ingester/csv-ingester-configuration) and [SQL](/community/community-data-ingestion/csv-sql-ingester/sql-ingester-configuration) ingesters use the same syntax for describing how you want the fields in your source data to be ingested into FeatureBase. The basic structure is
+The [CSV](/docs/community/com-ingest/com-ingest-flags-csv) and [SQL](/docs/community/com-ingest/com-ingest-flags-sql) ingesters use the same syntax for describing how you want the fields in your source data to be ingested into FeatureBase. The basic structure is
 
 `field_name__FieldType_Arg1_Arg2`
 
