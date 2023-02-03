@@ -1,19 +1,22 @@
 ---
-id: distinct
-title: Distinct()
-sidebar_label: Distinct()
+title: PQL DISTINCT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL DISTINCT()
 
 The `Distinct()` query returns the distinct values in a field for a set of records.
 
-`Distinct()` can always be used as a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. This, in conjunction with the index argument, gives users the ability to query accross indexes. Use caution to ensure you get the expected behavior. The examples below outline some considerations. 
+`Distinct()` can always be used as a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. This, in conjunction with the index argument, gives users the ability to query accross indexes. Use caution to ensure you get the expected behavior. The examples below outline some considerations.
 
 <!--
 However, to learn more about querying across different indexes using `Distinct()`, go [here](/reference/joining).
 -->
 
 ## Call Definitioin
-    
+
 ```pql
 Distinct(ROW_CALL, field=FIELD, index=INDEX)
 ```
@@ -24,7 +27,7 @@ Distinct(ROW_CALL, field=FIELD, index=INDEX)
 
 #### Optional Arguments
 - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} use to filter records. Only the values of records returned by this [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} will be used in the computation of `Distinct()`. Note this [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} is run against the primary index (i.e. the index in square brackets) when there is not an `index` argument supplied. It is run against `INDEX` when the `index` argument is supplied.
-- `index` : INDEX is the name of the index that FIELD exists in. When this argument is supplied, it is the index ROW_CALL is executed against. When it isn't supplied, FIELD should exist in the primary index and `ROW_CALL` will be executed on the primary index (i.e. the index in square brakets) 
+- `index` : INDEX is the name of the index that FIELD exists in. When this argument is supplied, it is the index ROW_CALL is executed against. When it isn't supplied, FIELD should exist in the primary index and `ROW_CALL` will be executed on the primary index (i.e. the index in square brakets)
 
 #### Returns
 - if FIELD is an unkeyed Set, Mutex, or Time field:
@@ -49,7 +52,7 @@ Index: users (non-keyed index)
  2   | 30        | 11111
  3   | 35        | 22222
  4   | 22        | 33333
- 
+
 Index: transactions (non-keyed index)
 
  _id | amount (Decimal) | category (Keyed Set) | userid (Non-keyed Set)
@@ -65,7 +68,7 @@ Index: transactions (non-keyed index)
 
 ```
 
-Note: In this case, the `userid` field in `transactions` was ingested as an ID field (non-keyed mutex in this case). 
+Note: In this case, the `userid` field in `transactions` was ingested as an ID field (non-keyed mutex in this case).
 
 <!--
 If you're looking to join accross tables but are not using unsigned integers (i.e. you have keyed set/mutex fields), go [here](/reference/joining) to ensure you configure the index and fields correctly.
@@ -114,7 +117,7 @@ What are the distinct ages in the users index?
 ```
 
 #### Explanation
-`Distinct()` returns the unique values in the `age` field of the `users` index. Note these distinct values are separated into negative and positive becuase `age` is an `Int` field. 
+`Distinct()` returns the unique values in the `age` field of the `users` index. Note these distinct values are separated into negative and positive becuase `age` is an `Int` field.
 
 --------------------------------------------------------
 ### Example 2
@@ -232,13 +235,13 @@ How many distinct field value are there in the category field in the transaction
 }
 ```
 
-#### Explanation 
+#### Explanation
 `Count(Distinct())` can be used to count the number of unique field values in a field. In this case, there are 5.
 
 --------------------------------------------------------
 ### Example 5
 Which users have bought tools and is older than 25?
-#### Query 
+#### Query
 ```
 [users]Intersect(
            Row(age > 25),
@@ -265,9 +268,8 @@ Which users have bought tools and is older than 25?
 ```
 
 #### Explanation
-`Row(age > 25)` return the users that are older than 25 - `[1, 2, 3]`. `Distinct()` is returning unique `userid`s from the `transactions` index where the transaction also had `category=Tools` -- `[0, 1]`. The two sets are intersected which gives `[1]`. This is an example of a query that spans multiple indexes. It works because the `userid` field in the `transactions` index have a soft reference to the records IDs in the `users` index. "Soft reference" here means there is not an actual contraint ensuring all the `userid` values in the `transactions` are actually record IDs in the `users` index. That would be enforced outside of FeatureBase in this example. 
+`Row(age > 25)` return the users that are older than 25 - `[1, 2, 3]`. `Distinct()` is returning unique `userid`s from the `transactions` index where the transaction also had `category=Tools` -- `[0, 1]`. The two sets are intersected which gives `[1]`. This is an example of a query that spans multiple indexes. It works because the `userid` field in the `transactions` index have a soft reference to the records IDs in the `users` index. "Soft reference" here means there is not an actual contraint ensuring all the `userid` values in the `transactions` are actually record IDs in the `users` index. That would be enforced outside of FeatureBase in this example.
 
 <!--
 For more on "joining" indexes in FeatureBase using `Distinct()`, go [here](/reference/joining).
 -->
-

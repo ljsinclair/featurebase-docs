@@ -1,8 +1,11 @@
 ---
-id: cosntrow
-title: ConstRow()
-sidebar_label: ConstRow()
+title: PQL CONSTROW()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL CONSTROW()
 
 The `ConstRow()` query returns a set of record IDs / keys defined explicitly by the columns argument (list of record IDs / keys). This can be useful if you have a predetermined set of records you want to use as the argument of another call -- see the last example below. `ConstRow()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
@@ -17,7 +20,7 @@ The `ConstRow()` query returns a set of record IDs / keys defined explicitly by 
 #### Optional Arguments
 #### Returns
 - list of record IDs / keys
-    
+
 ## Examples
 
 ### Data:
@@ -73,7 +76,7 @@ Return record IDs 0 and 1 -- non-keyed index.
   ]
 }
 ```
-#### Explanation: 
+#### Explanation:
 Result with the record IDs asked for -- 0 and 1.
 
 -----------------------------------------------------------------------

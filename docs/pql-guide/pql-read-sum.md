@@ -1,8 +1,13 @@
 ---
-id: sum
-title: Sum()
-sidebar_label: Sum()
+title: PQL SUM()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL SUM()
+
 `Sum()` computes the sum of values in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
 
 ## Call Definition

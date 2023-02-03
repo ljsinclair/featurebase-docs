@@ -1,10 +1,14 @@
 ---
-id: xor
-title: Xor()
-sidebar_label: Xor()
+title: PQL XOR()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-The `Xor()` query performs a set xor on the row calls passed as arguments. This is equivalent to a [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)  over two or more sets. 
+# PQL XOR()
+
+The `Xor()` query performs a set xor on the row calls passed as arguments. This is equivalent to a [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)  over two or more sets.
 
 `Xor()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
@@ -53,7 +57,7 @@ Which users have purchased from brand1 or brand4 but not both?
 #### Query
 ```
 [customer]Xor(
-  Row(has_purchased = brand1), 
+  Row(has_purchased = brand1),
   Row(has_purchased = brand4)
 )
 ```
@@ -93,7 +97,7 @@ Which users have purchased from brand1 or brand4 but not both?
 ```
 [customer]Xor(
   Row(has_purchased = brand1),
-  Row(has_purchased = brand3), 
+  Row(has_purchased = brand3),
   Row(has_purchased = brand4)
 )
 ```

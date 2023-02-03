@@ -1,10 +1,14 @@
 ---
-id: not
-title: Not()
-sidebar_label: Not()
+title: PQL NOT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-The `Not()` query returns the record IDs/keys that are contained in `All()` but not some [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- i.e the set difference between `All()` and a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. 
+# PQL NOT()
+
+The `Not()` query returns the record IDs/keys that are contained in `All()` but not some [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- i.e the set difference between `All()` and a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
 `Not()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
@@ -18,7 +22,7 @@ Not(ROW_CALL)
  - `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to difference with `All()`
 
 #### Optional Arguments
- 
+
 #### Returns
 - list of record IDs or record keys
 
@@ -67,4 +71,3 @@ What customers have not purchased from brand 1?
 ```
 #### Explanation
 The Row() call returns [0,1,2,4]. All() would return [0,1,2,3,4,5]. [3,5] are the records that are in All() but not in Row(has_purchased=brand1)
-

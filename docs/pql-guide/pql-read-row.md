@@ -1,8 +1,11 @@
 ---
-id: row
-title: Row()
-sidebar_label: Row()
+title: PQL ROW()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL ROW()
 
 The `Row()` query returns a set of record IDs / keys for records that have been filtered in some way. You can think of `Row()` as serving a similar function to the `WHERE` clause in SQL.
 
@@ -17,7 +20,7 @@ In order to better understand the `Row()` query, it's helpful to understand the 
 ```
 Row(FIELD = FIELD_VALUE, from = TIMESTAMP, to = TIMESTAMP)
 ```
-Note: Time fields are similar to Set fields except there is one or more date and time associated with each relationship between a record and field value. For that reason, you can only use the *from* and *to* arguments on Time fields. 
+Note: Time fields are similar to Set fields except there is one or more date and time associated with each relationship between a record and field value. For that reason, you can only use the *from* and *to* arguments on Time fields.
 
 #### Mandatory Arguments
 - `FIELD` : the name of a field in the index being queried
@@ -73,7 +76,7 @@ _id | age
  3  | 19
  4  | 25
  5  | 40
-``` 
+```
 
 The raw data above can be ingested to FeatureBase in at least three ways.
 - An *events index* and a seperate *users index*. In this case, the two indexes would look like raw data looks above. One index would be built around purchase events (i.e. each record is a different purchase event) and one index would be built around users (i.e. each record is a different user).
@@ -82,7 +85,7 @@ The raw data above can be ingested to FeatureBase in at least three ways.
 
 #### FeatureBase Data
 ```
-Index: customer_set (non-keyed index) 
+Index: customer_set (non-keyed index)
  _id | age (Int) | has_purchased (Set) | last_purchase (Timestamp)
 -----+-----------+---------------------+---------------------------
  0   |    23     | ["brand1","brand2"] | 2021-01-05T08:30:00Z

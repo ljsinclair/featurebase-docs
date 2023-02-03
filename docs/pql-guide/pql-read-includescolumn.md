@@ -1,8 +1,11 @@
 ---
-id: includescolumn
-title: IncludesColumn()
-sidebar_label: IncludesColumn()
+title: PQL INCLUDESCOLUMN()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL INCLUDESCOLUMN()
 
 `IncludesColumn()` returns true if some record ID / record key is in a specified set of record IDs / record keys - i.e. if the specified record was returned by a specified [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} or not.
 

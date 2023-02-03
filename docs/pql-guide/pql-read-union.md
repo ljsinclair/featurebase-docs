@@ -1,8 +1,12 @@
 ---
-id: union
-title: Union()
-sidebar_label: Union()
+title: PQL UNION()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL UNION()
 
 `Union()` takes one or more arguments -- each a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- and unions them. You can think of `Union()` as **OR** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys OR is in the second set of record IDs / keys OR so on and so forth.
 
@@ -45,7 +49,7 @@ What is the set of customers / records who's age is over 35 or who have made a p
 #### Query
 ```
 [customer]Union(
-  Row(age > 35), 
+  Row(age > 35),
   Row(last_purchase < '2021-01-01T00:00:00Z')
 )
 ```
@@ -77,7 +81,7 @@ What is the set of customers / records who's age is over 30, has purchased from 
 
 ```
 [customer]Union(
-  Row(has_purchased = brand1), 
+  Row(has_purchased = brand1),
   Row(has_purchased = brand2),
   Row(has_purchased = brand3)
 )
@@ -107,5 +111,4 @@ What is the set of customers / records who's age is over 30, has purchased from 
 ```
 
 #### Explanation
-`Row(has_purchased = brand1)` returns `[0,1,2,5]`, `Row(has_purchased = brand2)` returns `[0]`, and `Row(has_purchased = brand3)` returns `[1,2]`.  `Union()` does a set union of these three sets which is `[0,1,2,5]`. 
-
+`Row(has_purchased = brand1)` returns `[0,1,2,5]`, `Row(has_purchased = brand2)` returns `[0]`, and `Row(has_purchased = brand3)` returns `[1,2]`.  `Union()` does a set union of these three sets which is `[0,1,2,5]`.

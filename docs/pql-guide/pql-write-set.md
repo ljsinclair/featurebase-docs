@@ -1,8 +1,12 @@
 ---
-id: set
-title: Set()
-sidebar_label: Set()
+title: PQL SET()
+layout: default
+parent: PQL Write
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL SET()
 
 The `Set()` call associates or assigns a value to a record in a specified field. If the value we are assigning is in a Mutex, Int, Decimal, or Timestamp field, the current value is overwritten. If the value we are assigning is in a Set or Time field, all previous values will remain.
 
@@ -35,11 +39,11 @@ Customer 3 bought from brand5 - update the index accordinly.
 ```
 Index: customer (non keyed index)
 
- _id | age (Int) | has_purchased (Set) 
+ _id | age (Int) | has_purchased (Set)
 -----+-----------+---------------------
- 0   |    23     | ["brand1","brand2"] 
- 1   |    31     | ["brand1","brand3"] 
- 2   |    28     | ["brand1","brand3"] 
+ 0   |    23     | ["brand1","brand2"]
+ 1   |    31     | ["brand1","brand3"]
+ 2   |    28     | ["brand1","brand3"]
  3   |    19     | []  
  4   |    25     | ["brand1","brand4"]
  5   |    40     | ["brand4"]
@@ -57,13 +61,13 @@ Index: customer (non keyed index)
 ```
 #### Data Post-Query
 ```
- _id | age (Int) | has_purchased (Set) 
+ _id | age (Int) | has_purchased (Set)
 -----+-----------+---------------------
- 0   |    23     | ["brand1","brand2"] 
- 1   |    31     | ["brand1","brand3"] 
- 2   |    28     | ["brand1","brand3"] 
+ 0   |    23     | ["brand1","brand2"]
+ 1   |    31     | ["brand1","brand3"]
+ 2   |    28     | ["brand1","brand3"]
  3   |    19     | ["brand5"]
- 4   |    25     | ["brand1","brand4"] 
+ 4   |    25     | ["brand1","brand4"]
  5   |    40     | ["brand4"]          
 ```
 

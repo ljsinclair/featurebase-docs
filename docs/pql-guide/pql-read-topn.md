@@ -1,15 +1,19 @@
 ---
-id: topN
-title: TopN()
-sidebar_label: TopN()
+title: PQL TOPN()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL TOPN()
 
 `TopN()` returns the count of records associated with field values in a given field. The top N most common (i.e. highest count) values are returned. It is equivalent to:
 
 ```
 GroupBy(
-  Rows(FIELD), 
-  filter=ROW_CALL, 
+  Rows(FIELD),
+  filter=ROW_CALL,
   limit=UINT,
   sort="count desc"
 )

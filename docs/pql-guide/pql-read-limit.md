@@ -1,15 +1,19 @@
 ---
-id: limit
-title: Limit()
-sidebar_label: Limit()
+title: PQL LIMIT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-The `Limit()` query returns some subset of record IDs / keys from a given [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} based on the limit and offset arguments provided. 
+# PQL
+
+The `Limit()` query returns some subset of record IDs / keys from a given [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} based on the limit and offset arguments provided.
 
 `Limit()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
 ## Call Definition
-    
+
 ```pql
 Limit(ROW_CALL, limit=UINT, offset=UINT)
 ```
@@ -49,7 +53,7 @@ Return the first 3 record IDs
 #### Query
 ```
 [customer]Limit(All(), limit=3)
-``` 
+```
 
 #### Tabular Response
 ```
@@ -113,7 +117,7 @@ Offset of one means we start at the second record. Then we get a limit of 3 reco
 
 -------------------------------------------------------------------------
 ### Example 3
-Return the third record ID 
+Return the third record ID
 
 #### Query
 ```

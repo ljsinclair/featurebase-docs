@@ -1,8 +1,12 @@
 ---
-id: max
-title: Max()
-sidebar_label: Max()
+title: PQL MAX()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL MAX()
 
 The `Max()` query finds the maximum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
 

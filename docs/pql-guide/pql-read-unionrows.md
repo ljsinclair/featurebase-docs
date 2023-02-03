@@ -1,8 +1,11 @@
 ---
-id: unionrows
-title: UnionRows()
-sidebar_label: UnionRows()
+title: PQL UNIONROWS()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL UNIONROWS()
 
 `UnionRows()` is supplied, as arguments, any number of [Rows()](/pql-guide/read/rows) calls. Conceptually, `UnionRows()` does the following:
 - unions all the field values in all the `Rows()` calls

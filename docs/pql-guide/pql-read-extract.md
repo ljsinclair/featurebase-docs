@@ -1,8 +1,12 @@
 ---
-id: extract
-title: Extract()
-sidebar_label: Extract()
+title: PQL EXTRACT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL EXTRACT()
+
 The `Extract()` query allows the user to extract the values of specified fields for specified records. The `Extract()` query is similar the `SELECT` argument in SQL -- see example 1 below for the PQL equivalment to `SELECT * FROM table` in SQL.
 
 The task of retrieving all data for a record is generally more expensive in FeatureBase as compared to relational databases because of the way data is stored. For that reason, using the `Extract()` query for many fields and records is not advisable.
@@ -29,7 +33,7 @@ An object with:
 - a list of the selected fields under the "fields" key
 - a list of "column" / "rows" pair under the "columns" key
   - "column" contains the record ID / key
-  - "rows" contains the field values associated with the record in "column" 
+  - "rows" contains the field values associated with the record in "column"
 
 Field values are typed as such:
 

@@ -1,10 +1,13 @@
 ---
-id: intersect
-title: Intersect()
-sidebar_label: Intersect()
+title: PQL INTERSECT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
 
-The `Intersect()` query takes one or more arguments -- each a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- and intersects them. You can think of `Intersect()` as **AND** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys AND is in the second set of record IDs / keys AND so on and so forth. 
+# PQL INTERSECT()
+
+The `Intersect()` query takes one or more arguments -- each a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} -- and intersects them. You can think of `Intersect()` as **AND** in set theory. It returns the set of record IDs / keys that is in the first set of record IDs / keys AND is in the second set of record IDs / keys AND so on and so forth.
 
 `Intersect()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
@@ -45,7 +48,7 @@ What is the set of customers / records who's age is over 26 and who have made a 
 #### Query
 ```
 [customer]Intersect(
-  Row(age > 26), 
+  Row(age > 26),
   Row(last_purchase > '2021-01-01T00:00:00Z')
 )
 ```
@@ -77,7 +80,7 @@ What is the set of customers / records who's age is over 30, has purchased from 
 
 ```
 [customer]Intersect(
-  Row(age > 30), 
+  Row(age > 30),
   Row(has_purchased = brand1)
   Row(has_purchased = brand3)
 )
@@ -101,5 +104,4 @@ What is the set of customers / records who's age is over 30, has purchased from 
 ```
 
 #### Explanation
-Row(age > 30) returns [1,5], Row(has_purchased = brand1) returns [0,1,2,4], and Row(has_purchased = brand3) returns [1,2]. The Intersect call does a set intersection of these three sets which is [1]. 
-
+Row(age > 30) returns [1,5], Row(has_purchased = brand1) returns [0,1,2,4], and Row(has_purchased = brand3) returns [1,2]. The Intersect call does a set intersection of these three sets which is [1].

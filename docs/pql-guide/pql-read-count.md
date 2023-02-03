@@ -1,8 +1,11 @@
 ---
-id: count
-title: Count()
-sidebar_label: Count()
+title: PQL COUNT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL COUNT()
 
 The `Count()` query returns the number of record IDs / keys returned by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. Note that this includes the [Distinct()](/pql-guide/read/distinct) call -- see the example below.
 
@@ -13,7 +16,7 @@ Count(ROW_CALL)
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to be counted 
+- `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} to be counted
 
 #### Optional Arguments
 #### Returns

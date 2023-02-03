@@ -1,8 +1,11 @@
 ---
-id: groupby
-title: GroupBy()
-sidebar_label: GroupBy()
+title: PQL GROUPBY()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
+
+# PQL GROUPBY()
 
 `GroupBy()` can be used similar to `SELECT-FROM-WHERE-GROUP BY`... in `SQL`. See below for the current functionality.
 
@@ -12,13 +15,13 @@ sidebar_label: GroupBy()
 
 ```
 GroupBy(
-  ROWS_CALL, 
-  ... , 
-  filter=ROW_CALL, 
-  having=CONDITION, 
-  aggregate=AGG_CALL, 
-  sort=SORT_DIR, 
-  limit=UINT, 
+  ROWS_CALL,
+  ... ,
+  filter=ROW_CALL,
+  having=CONDITION,
+  aggregate=AGG_CALL,
+  sort=SORT_DIR,
+  limit=UINT,
   offset=UINT
 )
 ```
@@ -221,8 +224,8 @@ Group by has_purchased and age and return groups with counts of more than one.
 #### Query
 ```
 [customer]GroupBy(
-  Rows(has_purchased), 
-  Rows(age), 
+  Rows(has_purchased),
+  Rows(age),
   having=Condition(count > 1)
 )
 ```
@@ -264,7 +267,7 @@ For customers younger than 35, what are the counts of customer for each brand th
 #### Query
 ```
 [customer]GroupBy(
-  Rows(has_purchased), 
+  Rows(has_purchased),
   filter=Row(age < 35)
 )
 ```

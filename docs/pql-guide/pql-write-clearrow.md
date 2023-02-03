@@ -1,8 +1,11 @@
 ---
-id: clearrow
-title: ClearRow()
-sidebar_label: ClearRow()
+title: PQL CLEARROW()
+layout: default
+parent: PQL Write
+grand_parent: PQL guide
 ---
+
+# PQL CLEARROW()
 
 The `ClearRow()` call disassociates or unassigns a value from all record in a specified field -- i.e. any record with the value `FIELD_VALUE` in `FIELD` will not have it after running `ClearRow(FIELD=FIELD_VALUE)`.
 

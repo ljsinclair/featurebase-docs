@@ -1,8 +1,10 @@
 ---
-id: options
-title: Options()
-sidebar_label: Options()
+title: PQL OPTIONS()
+layout: default
+parent: PQL Guide
 ---
+
+# PQL OPTIONS()
 
 `Options()` can be used to modify any call / query.
 

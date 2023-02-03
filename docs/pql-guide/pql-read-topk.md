@@ -1,14 +1,19 @@
 ---
-id: topk
-title: TopK()
-sidebar_label: TopK()
+title: PQL TOPK()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL TOPK()
+
 `TopK()` returns the count of records associated with field values in a given field. The top K most common (i.e. highest count) values are returned. It is equivalent to:
 
 ```
 GroupBy(
-  Rows(FIELD), 
-  filter=ROW_CALL, 
+  Rows(FIELD),
+  filter=ROW_CALL,
   limit=UINT,
   sort="count desc"
 )

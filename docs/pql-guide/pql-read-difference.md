@@ -1,10 +1,13 @@
 ---
-id: difference
-title: Difference()
-sidebar_label: Difference()
+title: PQL DIFFERENCE()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
 
-The `Difference()` query performs a set difference on the [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} passed as arguments. It returns the set of record IDs / keys in the first [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} and not in any of the subsequent [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"}. 
+# PQL DIFFERENCE()
+
+The `Difference()` query performs a set difference on the [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"} passed as arguments. It returns the set of record IDs / keys in the first [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} and not in any of the subsequent [row calls](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
 `Difference()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
 
@@ -43,7 +46,7 @@ Which users have purchased from brand1 and not brand3?
 #### Query
 ```
 [customer]Difference(
-  Row(has_purchased = brand1), 
+  Row(has_purchased = brand1),
   Row(has_purchased = brand3)
 )
 ```

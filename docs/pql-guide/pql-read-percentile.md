@@ -1,8 +1,12 @@
 ---
-id: percentile
-title: Percentile()
-sidebar_label: Percentile()
+title: PQL PERCENTILE()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL PERCENTILE()
 
 `Percentile()` returns the value at or below which some percent of values fall in the frequency distribution of a field's values.
 
@@ -24,7 +28,7 @@ Percentile(field=FIELD, nth=NTH_VALUE, filter=ROW_CALL)
 
 #### Optional Arguments
  - `filter` / `ROW_CALL` : the [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}  used to filter records if desired.
- 
+
 #### Returns
 - the computed percentile and a count set to 1
 
@@ -34,7 +38,7 @@ Percentile(field=FIELD, nth=NTH_VALUE, filter=ROW_CALL)
 ```
 Index: percentile
 
-_id    | int (Int) 
+_id    | int (Int)
 -------+-----------
 0      | 0           
 1      | 10         

@@ -1,11 +1,15 @@
 ---
-id: sort
-title: Sort()
-sidebar_label: Sort()
+title: PQL SORT()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-The `Sort()` call is used to get the IDs ordered by a specified field. This is used in combination with 
-`Extract()` call to extract the values of specified fields ordered by the sort field. 
+# PQL SORT()
+
+The `Sort()` call is used to get the IDs ordered by a specified field. This is used in combination with
+`Extract()` call to extract the values of specified fields ordered by the sort field.
 
 ## Call Definition
 
@@ -24,7 +28,7 @@ Sort(ROW_CALL, field = FIELD, limit = UINT, offset = UINT, sort-desc=BOOL)
  If nothing is supplied, the results are sorted in ascending order(sort-desc=false).
 
 #### Returns
-- list of record IDs or record keys, in the order of the value of the field. 
+- list of record IDs or record keys, in the order of the value of the field.
 
 ## Examples
 
@@ -150,7 +154,7 @@ Extract all the data from the customer index sorted by age
 }
 ```
 #### Explanation
-The records are fetched in the non-decreasing order of age. 
+The records are fetched in the non-decreasing order of age.
 
 <hr>
 ### Example 2
@@ -217,5 +221,5 @@ Extract 2 latest records from the customer index with age > 23.
 ```
 
 #### Explanation
-`Row(age > 23)` sorted by `last_purchase` in descending order, returns `[5 , 4 , 3 , 2 , 0 , 1]` which is then limited to `[5 , 4]` and the `Extract` pulls the 
-records for these IDs. 
+`Row(age > 23)` sorted by `last_purchase` in descending order, returns `[5 , 4 , 3 , 2 , 0 , 1]` which is then limited to `[5 , 4]` and the `Extract` pulls the
+records for these IDs.

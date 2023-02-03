@@ -1,8 +1,11 @@
 ---
-id: delete
-title: Delete()
-sidebar_label: Delete()
+title: PQL DELETE()
+layout: default
+parent: PQL Write
+grand_parent: PQL guide
 ---
+
+# PQL DELETE()
 
 The `Delete()` call removes entire records. A [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"} is used to determine which records will be deleted.
 

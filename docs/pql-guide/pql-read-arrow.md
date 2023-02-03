@@ -1,13 +1,17 @@
 ---
-id: arrow
-title: Arrow()
-sidebar_label: Arrow()
+title: PQL ARROW()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
 ---
 
-#### NOTE:
-  - This page contians information that only applies to preview functionality involving `float64` and `int64` data types. This page represents a work in progress that is subject to frequent changes. To enable this functionality, you must use the `--dataframe.enable` flag when running FeatureBase.
-  - `Arrow()` is a query against the `float64` and `int64` field types. For more information on using these data types in FeatureBase, visit the [ingest documentation](/community/community-data-ingestion/dataframe-consumer) and the [HTTP API](/community/community-api/http-api#dataframe-endpoints) endpoints for them.
-  - `Arrow()` is currently limited to use with the community version. `Arrow()` and the `float64`/`int64` field types are not applicable to cloud at this time.
+# PQL ARROW()
+
+
+This page contains information that only applies to preview functionality involving `float64` and `int64` data types. This page represents a work in progress that is subject to frequent changes. To enable this functionality, you must use the `--dataframe.enable` flag when running FeatureBase.
+
+- `Arrow()` is a query against the `float64` and `int64` field types. For more information on using these data types in FeatureBase, visit the [ingest documentation](/community/community-data-ingestion/dataframe-consumer) and the [HTTP API](/community/community-api/http-api#dataframe-endpoints) endpoints for them.
+- `Arrow()` is currently limited to use with the community version. `Arrow()` and the `float64`/`int64` field types are not applicable to cloud at this time.
 
 `Arrow()` can be used to extract data when it's stored using the `float64` or `int64` data types. This is equivalent to `Extract()` for other data types or `SELECT <columns> FROM <tbl> WHERE <condition>` in SQL.
 
@@ -18,14 +22,14 @@ Arrow(ROW_CALL, header=[LIST_OF_FIELDS])
 ```
 
 #### Mandatory Arguments
-- `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#Crow-calls){:target="_blank"} (set of record IDs / keys). Only data from records return by this row call will be returned by `Arrow()`. 
+- `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#Crow-calls){:target="_blank"} (set of record IDs / keys). Only data from records return by this row call will be returned by `Arrow()`.
 
 #### Optional Arguments
 - `LIST_OF_FIELDS` : comma seperated list of fields. Data from these fields will be returned by	`Arrow()`. If a header isn't included, data from all fields will be returned.
 
 #### Returns
 - Key-value / map structure mapping field names to lists of values for that field.
-    
+
 ## Examples
 
 ### Data:
@@ -92,4 +96,3 @@ Return `min_temp` and `max_temp` for records that had a `cloudy` `event`.
 ```
 #### Explanation:
 Here `_ID` is the raw key used for records in FeatureBase. Eventually, it will be possible to return the string key for records as opposed to the raw id. Otherwise, only three records are returned -- the records where there was a `cloudy` event. Only `min_temp` and `max_temp` are returned.
-

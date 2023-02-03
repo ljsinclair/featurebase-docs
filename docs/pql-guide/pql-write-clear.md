@@ -1,10 +1,13 @@
 ---
-id: clear
-title: Clear()
-sidebar_label: Clear()
+title: PQL CLEAR()
+layout: default
+parent: PQL Write
+grand_parent: PQL guide
 ---
 
-The `Clear()` call disassociates or unassigns a value from a record in a specified field. 
+# PQL CLEAR()
+
+The `Clear()` write call disassociates or unassigns a value from a record in a specified field.
 
 For Set, Mutex, and Time fields, you can disassociate one value from one record at a time.
 
@@ -96,7 +99,7 @@ Customer 5 also doesn't want the company to store their `last_purchase` data - r
  true
 ```
 
-#### Data Post-Query 
+#### Data Post-Query
 ```
  _id | age |    has_purchased    |    last_purchase
 -----+-----+---------------------+----------------------

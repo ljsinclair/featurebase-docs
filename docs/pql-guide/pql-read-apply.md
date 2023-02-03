@@ -1,10 +1,14 @@
 ---
-id: apply
-title: Apply()
-sidebar_label: Apply()
+title: PQL APPLY()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-#### NOTE: 
+# PQL APPLY()
+
+#### NOTE:
   - This page contians information that only applies to preview functionality involving `float64` and `int64` data types. This page represents a work in progress that is subject to frequent changes. To enable this functionality, you must use the `--dataframe.enable` flag when running FeatureBase.
   - `Apply()` is a query against the `float64` and `int64` field types. For more information on using these data types in FeatureBase, visit the [ingest documentation](/community/community-data-ingestion/dataframe-consumer) and the [HTTP API](/community/community-api/http-api#dataframe-endpoints) endpoints for them.
   - `Apply()` is currently limited to use with the community version. `Apply()` and the `float64`/`int64` field types are not applicable to cloud at this time.
@@ -22,13 +26,13 @@ Apply(ROW_CALL, MAP_FUNCTION, REDUCE_FUNCTION)
 #### Mandatory Arguments
 - `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#Crow-calls){:target="_blank"} (set of record IDs / keys). Only data for records returned here will make it to the `MAP_FUNCTION`. Filter records as much as possible here to improve performance. Note that this row call is run against non `float64` and `int64` data.
 - `MAP_FUNCTION` : Ivy function to be performed at the shard level for records returned by `ROW_CALL`. Here you can access lists of column values within the shard by using column names as an identifier. See examples below. In most cases, it's best to perform as much work at this phase as possible. The output from each shard is passed to the reduce phase.
-- `REDUCE_FUNCTION` : Ivy query to be performed on the aggregation or concatenation of the output of the `MAP_FUNCTION`. You can reference this aggregate data using the `_` (underscore) identifier. This is the only data accessible at this phase. See examples below. You're not guarenteed to get shard data back in any particular order. For example, if you have data in two shards, the first time you run the query you could get shard 0 first and shard 1 second. The second time you run the query you could get shard 1 first and shard 0 second. 
+- `REDUCE_FUNCTION` : Ivy query to be performed on the aggregation or concatenation of the output of the `MAP_FUNCTION`. You can reference this aggregate data using the `_` (underscore) identifier. This is the only data accessible at this phase. See examples below. You're not guarenteed to get shard data back in any particular order. For example, if you have data in two shards, the first time you run the query you could get shard 0 first and shard 1 second. The second time you run the query you could get shard 1 first and shard 0 second.
 
 
 #### Optional Arguments
 #### Returns
 - A list of `float64` or `int64` values
-    
+
 ## Examples
 
 ### Data:
@@ -169,7 +173,7 @@ Return all the data ingested using the `float64` or `int64` data types. This tim
 #### Explanation:
 Again, `All()` returns every record in the index. Here the map phase is turning lists of columns to list of records. For example, the first three values correspond to the `rainfall`, `max_temp`, and `min_temp` for record `3`. The second three values are the `rainfall`, `max_temp`, and `min_temp` for record 0. And so on.
 
-As mentionded above, we cannot make assumptions on the order of these 3-tuples. Meaning, record `0` could be the first tuple but it might not be. However, we can assume that the first element in each tuple is associated with `rainfall`, the second is associated with `max_temp`, and so on. 
+As mentionded above, we cannot make assumptions on the order of these 3-tuples. Meaning, record `0` could be the first tuple but it might not be. However, we can assume that the first element in each tuple is associated with `rainfall`, the second is associated with `max_temp`, and so on.
 
 ---
 
@@ -199,4 +203,3 @@ Apply(
 
 #### Explanation
 The filter here limits the records to `0` and `1`. Similar to the example above, the map phase turns list of field values to a list of records. The reduce phase reshapes the data and the computes the euclidean distance between the two vectors in Ivy!
-

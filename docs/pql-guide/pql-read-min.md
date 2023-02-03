@@ -1,8 +1,12 @@
 ---
-id: min
-title: Min()
-sidebar_label: Min()
+title: PQL MIN()
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
+
+# PQL MIN()
 
 The `Min()` query finds the minimum value in an Int, Decimal, or Timestamp field in some subset of records (defined by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}).
 

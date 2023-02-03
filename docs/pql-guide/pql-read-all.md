@@ -1,12 +1,14 @@
 ---
-id: all
-title: All()
-sidebar_label: All()
+title: PQL ALL
+layout: default
+parent: PQL Read
+grand_parent: PQL guide
+nav_order: 10
 ---
 
-The `All()` query returns the set of all the record IDs / keys in an index.
+# PQL ALL()
 
-`All()` is a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}.
+The `All()` query is a PQL Row call that returns the *universal set* for the index, which comprises all record IDs / keys in an index.
 
 ## Call Definition
 
@@ -18,7 +20,7 @@ All()
 #### Optional Arguments
 #### Returns
 - list of record IDs or record keys
-    
+
 ## Examples
 
 ### Data:
@@ -48,7 +50,7 @@ Index: customer_keyed (keyed index)
 ```
 -----------------------------------------------------------------------
 ### Example 1
-Return all the record IDs in the `customer` index 
+Return all the record IDs in the `customer` index
 
 #### Query
 ```
