@@ -20,7 +20,7 @@ Starting with the 4.4 release the binary will be named `featurebase` rather than
 
 Some configuration parameters previously included the word "pilosa". For 5.0 releases, these previous parameters will continue to work, as aliases for the new names, replacing "pilosa" with "featurebase". Starting with version 6.0, the "pilosa" aliases will no longer be available.
 
-For future 4.x releases, FeatureBase [metrics](/community/community-monitoring/monitoring#metrics) will continue to use the "pilosa" namespace. Optionally, the "featurebase" namespace can be used, by using the `--future.rename` configuration parameter. Starting with version 5.0, the "featurebase" namespace will be used by default.
+For future 4.x releases, FeatureBase [metrics](/docs/community/com-monitoring/old-monitoring#metrics) will continue to use the "pilosa" namespace. Optionally, the "featurebase" namespace can be used, by using the `--future.rename` configuration parameter. Starting with version 5.0, the "featurebase" namespace will be used by default.
 
 The default data directory will switch from `~/.pilosa` to `/opt/molecula/featurebase`, and the default node name will switch from `pilosa0` to `featurebase0`.
 
@@ -29,7 +29,7 @@ The default data directory will switch from `~/.pilosa` to `/opt/molecula/featur
 
 In Molecula version 4.4 (Pilosa version 3.4) and later, until the next major release (FeatureBase 5.0), the optional boolean configuration parameter `--future.rename` is available. It has the following effects:
 
-- Switches the prefix that is used by [environment variables](/community/community-setup/featurebase-configuration) for configuring FeatureBase from `PILOSA` to `FEATUREBASE`. For example, `PILOSA_DATA_DIR` becomes `FEATUREBASE_DATA_DIR`. Note that the `--future.rename` flag can be specified as an environment variable with `PILOSA_FUTURE_RENAME`, but not `FEATUREBASE_FUTURE_RENAME`.
+- Switches the prefix that is used by [environment variables](/docs/community/com-config/old-config-flags) for configuring FeatureBase from `PILOSA` to `FEATUREBASE`. For example, `PILOSA_DATA_DIR` becomes `FEATUREBASE_DATA_DIR`. Note that the `--future.rename` flag can be specified as an environment variable with `PILOSA_FUTURE_RENAME`, but not `FEATUREBASE_FUTURE_RENAME`.
 - Switches the metrics namespace (the prefix of the metric names reported by Prometheus or other metrics services) from "pilosa" to "featurebase". For example, the Prometheus metric `pilosa_maximum_shard` becomes `featurebase_maximum_shard`.
 - Changes some log output to use the FeatureBase name instead of the Pilosa name.
 - Changes the default data directory from `~/.pilosa` to `/opt/molecula/featurebase`
