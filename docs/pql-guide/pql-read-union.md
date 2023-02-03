@@ -22,7 +22,7 @@ Union(ROW_CALL, ... )
 - `ROW_CALL` : the output of any [row call](/docs/pql-guide/pql-read-home#row-calls) (set of record IDs / keys)
 
 #### Optional Arguments
-- `...` : Any number of additional [row call](/docs/pql-guide/pql-read-home#row-calls) seperated by commas
+- `...` : Any number of additional [row call](/docs/pql-guide/pql-read-home#row-calls) separated by commas
 
 #### Returns
 - list of record IDs or record keys
