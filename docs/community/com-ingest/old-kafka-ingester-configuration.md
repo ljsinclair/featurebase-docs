@@ -1,6 +1,11 @@
 ---
-title: Kafka Ingester Configuration
+title: Kafka ingest
+layout: default
+parent: Import data
+grand_parent: Community
 ---
+
+# Kafka Ingester Configuration
 
 Also see the [consumer examples](/docs/community/com-ingest/old-consumer-examples) page for usage examples with corresponding data and configuration files <!-- TODO and queries -->.
 

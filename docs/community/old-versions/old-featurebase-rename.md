@@ -1,9 +1,11 @@
 ---
-id: featurebase-rename
-title: FeatureBase Rename
-sidebar_label: FeatureBase Rename
+title: Featurebase rename
+layout: default
+parent: old-versions
+grand_parent: Community
 ---
 
+# FeatureBase Rename
 
 As of Molecula 5.0, the core product formerly known as Pilosa will be renamed to FeatureBase. This change extends to several interfaces, so a few additional steps are required when upgrading from pre-5.0 to post-5.0. The 4.4 release includes an option to switch to the FeatureBase name early.
 

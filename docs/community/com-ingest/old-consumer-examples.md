@@ -1,9 +1,11 @@
 ---
-id: consumer-usage-examples
-title: Consumer Usage Examples
-sidebar_label: Consumer Usage Examples
+title: Consumer ingest examples
+layout: default
+parent: Import data
+grand_parent: Community
 ---
 
+# Consumer Usage Examples
 
 Also refer to the [ingester configuration reference](/docs/community/com-ingest/old-ingester-configuration) page for details on configuration flags for all consumers.
 
