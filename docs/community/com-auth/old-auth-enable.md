@@ -46,7 +46,7 @@ To configure Azure Active Directory as an IdP:
 - [Add users to groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members) by following steps 11 through 12.
 - Finally, on the App configuration page, on the "Authentication" tab, scroll to
   "Advanced Settings" and toggle "Allow public client flows" to "yes".
-!["Image of AzureAD app configuration page with Allow public client flows toggled to yes."](/img/public_client_flows.png)
+!["Image of AzureAD app configuration page with Allow public client flows toggled to yes."](/assets/images/public_client_flows.png)
 
 ## Configuring FeatureBase
 
@@ -140,12 +140,12 @@ screen.
 
 2. The second works if you're already logged in to the lattice UI:
 - Right click on the browser, and click on Inspect
-!["Inspect"](/img/auth_inspect.png)
+!["Inspect"](/assets/images/auth_inspect.png)
 - Click on Application
-!["Cookie"](/img/auth_inspect_result.png)
+!["Cookie"](/assets/images/auth_inspect_result.png)
 - Click on Cookies on the left-side tabs, then click on `molecula-chip`. Copy the Cookie Value, this is the auth token.
 - While on the cookies tab, click on `refresh-molecula-chip`. Copy the Cookie Value, this is the refresh token.
-!["Molecula-Token"](/img/auth_token.png)
+!["Molecula-Token"](/assets/images/auth_token.png)
 
 
 ### How can I use an auth token?

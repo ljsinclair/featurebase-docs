@@ -1,9 +1,9 @@
 ---
-id: ingesters
 title: Ingesters
-sidebar_label: Ingesters
+layout: default
+parent: Import data
+grand_parent: Community
 ---
-
 
 ## What is an ingester?
 
@@ -22,7 +22,7 @@ The entirety of a single batch is copied into FeatureBase at the same time.
 Large batches mean that the per-batch overhead is less significant.
 A batch is created once a specified number of records have been pulled.
 
-**NOTE:** 
+**NOTE:**
 When using the Kafka ingester, a smaller batch will be created if Kafka stops supplying records for at least a second.
 
 In Molecula `v2.2` and newer, the ingester has a `--track-progress` CLI option which periodically logs the number of records which have been pulled from a source, as well as the lifetime average record sourcing rate.
@@ -91,12 +91,11 @@ Finally, setting `external-generate` in addition to `auto-generate` uses Feature
 
 The Kafka ingester reads Avro-encoded records from a Kafka topic, uses the Confluent schema registry to decode them, and ingests the data into FeatureBase.
 
-[Full configuration reference](/community/community-data-ingestion/ingester-configuration#kafka-ingester)
-
+[Full configuration reference](/docs/community/com-ingest/old-ingester-configuration#kafka-ingester)
 
 ### Schema Registry Behavior
 
-How the Ingester indexes data in FeatureBase can be controlled to some extent via the schema registry. Avro schemas allow arbitrary properties to be associated with any item to implement features like [logical types](https://avro.apache.org/docs/current/spec.html#Logical+Types). 
+How the Ingester indexes data in FeatureBase can be controlled to some extent via the schema registry. Avro schemas allow arbitrary properties to be associated with any item to implement features like [logical types](https://avro.apache.org/docs/current/spec.html#Logical+Types).
 
 A "float" or "double" type field in an Avro schema will be ingested into FeatureBase as a decimal field. If the property "scale" is provided, and is an integer, the value will be multiplied by 10^scale before being ingested. FeatureBase also stores the scale internally, so decimal fields will scale their query parameters appropriately, and floating point numbers are accepted as query parameters. A type which uses the logical type "decimal" will also be ingested as a decimal provided that it is 8 bytes or less (64 bit).
 
@@ -161,25 +160,25 @@ The Kafka delete ingester configuration is the same as the Kafka ingester with t
 
 The Kafka Static ingester reads JSON-encoded records from a Kafka topic, uses a statically defined schema (with the ingester JSON header format) to decode them, and ingests the data into FeatureBase.
 
-[Full configuration reference](/community/community-data-ingestion/ingester-configuration#kafka-static-ingester)
+[Full configuration reference](/docs/community/com-ingest/old-ingester-configuration#kafka-static-ingester)
 
 
 ## CSV Ingester
 
 The CSV ingester can read CSV files (optionally gzipped) and ingest them to FeatureBase. It uses a naming convention in the header of the CSV file to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested. The header can either be included in the file or passed in separately if editing the file is not desirable. If passed in separately one should use the `--ignore-header` option if the CSV file has a header so that it is not interpreted as data.
 
-[Full CSV Ingester Configuration Reference](/community/community-data-ingestion/ingester-configuration#csv-ingester)
+[Full CSV Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#csv-ingester)
 
 
 ## SQL Ingester
 
 The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data from a sql endpoint, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
 
-[Full SQL Ingester Configuration Reference](/community/community-data-ingestion/ingester-configuration#sql-ingester)
+[Full SQL Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#sql-ingester)
 
 ## Field types
 
-Many Molecula ingesters use the same syntax for describing how you want the fields in your source data to be ingested into FeatureBase. The basic structure is 
+Many Molecula ingesters use the same syntax for describing how you want the fields in your source data to be ingested into FeatureBase. The basic structure is
 
 `field_name__FieldType_Arg1_Arg2`
 
@@ -189,7 +188,7 @@ That is, you name each field, and then you specify the field's type (separated b
 
 declares that field is named 'age', is expected to be an integer, and be between 0 and 120. In general, all arguments are optional, but they are also positional, so if you want to specify a maximum value for the int field, you must first specify a minimum value.
 
-[Here](/community/community-data-ingestion/ingester-configuration#header-descriptions) is the full list of field types along with their arguments.
+[Here](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) is the full list of field types along with their arguments.
 
 ## Ingest Tuning
 
@@ -234,11 +233,11 @@ Where:
 
 The graph below shows the cache miss rate over different cache lengths assuming a key with an average frequency of 1 per 10000 records and a batch size of 5000. The default of 64 gives a miss rate of approximately 4% for this frequency. Beyond this, there are substantial declining returns.
 
-[![Cache Miss Rate vs Cache Length](/img/cache-miss-rate-vs-length.png "Cache Miss Rate vs Cache Length")](https://www.desmos.com/calculator/bjcjris94d)
+[![Cache Miss Rate vs Cache Length](/assets/images/cache-miss-rate-vs-length.png "Cache Miss Rate vs Cache Length")](https://www.desmos.com/calculator/bjcjris94d)
 
 The graph below shows the cache miss rate over different key frequencies with a batch size of 5000 and a variety of cache lengths. For the default length of 64, the miss rate is negligible for keys more frequent than 1 per 10000, and extremely high for keys less frequent than 1 per million. If the cache length is doubled to 128, it spikes at a frequency a bit lower, at the expense of double the memory:
 
-[![Cache Miss Rate vs Key Frequency](/img/cache-miss-rate-vs-freq.png "Cache Miss Rate vs Key Frequency")](https://www.desmos.com/calculator/hdhzehaeeg)
+[![Cache Miss Rate vs Key Frequency](/assets/images/cache-miss-rate-vs-freq.png "Cache Miss Rate vs Key Frequency")](https://www.desmos.com/calculator/hdhzehaeeg)
 
 
 #### 3. Number of ingesters
@@ -263,7 +262,7 @@ When operating with many unique mutex values, this results in `O(n^2)` ingest co
 
 ## Field Type Mappings
 
-More details are available in [Header Descriptions](/community/community-data-ingestion/ingester-configuration#header-descriptions).
+More details are available in [Header Descriptions](/docs/community/com-ingest/old-ingester-configuration#header-descriptions).
 
 ### Avro.SchemaField.Type to IDK.Field
 
