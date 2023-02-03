@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL UNIONROWS()
 
-`UnionRows()` is supplied, as arguments, any number of [Rows()](/pql-guide/read/rows) calls. Conceptually, `UnionRows()` does the following:
+`UnionRows()` is supplied, as arguments, any number of [Rows()](/docs/pql-guide/pql-read-rows) calls. Conceptually, `UnionRows()` does the following:
 - unions all the field values in all the `Rows()` calls
 - then, returns record IDs / keys for records that have at least one of field values in that list of field values.
 

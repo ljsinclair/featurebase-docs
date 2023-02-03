@@ -3,10 +3,9 @@ title: PQL ALL
 layout: default
 parent: PQL Read
 grand_parent: PQL guide
-nav_order: 10
 ---
 
-# PQL ALL()
+# PQL ALL() row call
 
 The `All()` query is a PQL Row call that returns the *universal set* for the index, which comprises all record IDs / keys in an index.
 
@@ -16,8 +15,6 @@ The `All()` query is a PQL Row call that returns the *universal set* for the ind
 All()
 ```
 
-#### Mandatory Arguments
-#### Optional Arguments
 #### Returns
 - list of record IDs or record keys
 

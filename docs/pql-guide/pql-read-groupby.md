@@ -27,8 +27,8 @@ GroupBy(
 ```
 
 #### Mandatory Arguments
-- `ROWS_CALL` : This argument tells `GroupBy()` which fields / field values to group by. Note that [Rows()](/pql-guide/read/rows) usually only accepts Set, Mutex, and Time fields as arguments. When passed as an argument to `GroupBy()`, `Rows()` also accept Int and Timestamp fields.
-  - Paging through results is supported by passing the `previous` argument to each of the [Rows()](/pql-guide/read/rows) calls in the `GroupBy()`. Take the last result from your previous `GroupBy()` query, and pass each row ID in that result as the previous argument to each of the respective [Rows()](/pql-guide/read/rows) queries in your next `GroupBy()` query.
+- `ROWS_CALL` : This argument tells `GroupBy()` which fields / field values to group by. Note that [Rows()](/docs/pql-guide/pql-read-rows) usually only accepts Set, Mutex, and Time fields as arguments. When passed as an argument to `GroupBy()`, `Rows()` also accept Int and Timestamp fields.
+  - Paging through results is supported by passing the `previous` argument to each of the [Rows()](/docs/pql-guide/pql-read-rows) calls in the `GroupBy()`. Take the last result from your previous `GroupBy()` query, and pass each row ID in that result as the previous argument to each of the respective [Rows()](/docs/pql-guide/pql-read-rows) queries in your next `GroupBy()` query.
 
 
 #### Optional Arguments
@@ -46,7 +46,7 @@ GroupBy(
       - the example above only outputs groups where the value summed is between 100 and 200
 - `aggregate` : an aggregate statistic applied over groups -- similar functionality to `SUM()` in the `SELECT` clause of a SQL `GROUP BY` query.
   - `AGG_CALL` : one of the following:
-    - [Sum()](/pql-guide/read/sum): will return the sum and count of each group -- note the count here does not include the count of records with null values in the field being summed.
+    - [Sum()](/docs/pql-guide/pql-read-sum): will return the sum and count of each group -- note the count here does not include the count of records with null values in the field being summed.
     - a `Count(Distinct())` query
 - `sort` : this argument can be used to sort the output.
   - `SORT_DIR` : the value of the sort argument. Below are the available sort directives for the sort argument.    

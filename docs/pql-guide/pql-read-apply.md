@@ -3,19 +3,37 @@ title: PQL APPLY()
 layout: default
 parent: PQL Read
 grand_parent: PQL guide
-nav_order: 10
 ---
 
 # PQL APPLY()
 
-#### NOTE:
-  - This page contians information that only applies to preview functionality involving `float64` and `int64` data types. This page represents a work in progress that is subject to frequent changes. To enable this functionality, you must use the `--dataframe.enable` flag when running FeatureBase.
-  - `Apply()` is a query against the `float64` and `int64` field types. For more information on using these data types in FeatureBase, visit the [ingest documentation](/community/community-data-ingestion/dataframe-consumer) and the [HTTP API](/community/community-api/http-api#dataframe-endpoints) endpoints for them.
-  - `Apply()` is currently limited to use with the community version. `Apply()` and the `float64`/`int64` field types are not applicable to cloud at this time.
+{: .note}
+>APPLY() is exclusive to FeatureBase Community and applies to preview functionality involving `float64` and `int64` data types.
 
-The `Apply()` query uses the map reduce framework to compute on `float64` and `int64` field types. In FeatureBase, data is sharded by records. Meaning a single table is split into multiple shards. A single shard contains the data for some subset of records in that index. The first two arguments to `Apply()` (`ROW_CALL` and `MAP_FUNCTION`) are the map phase. `ROW_CALL` filters records and `MAP_FUNCTION` is Ivy code that runs against each shard. The third argument is the reduce phase. It is also written in Ivy and runs against the amalgamation of data return from the `MAP_FUNCTION`.
+The `Apply()` query uses the map reduce framework to compute on `float64` and `int64` field types.
 
-Ivy is an APL-like language. The source code for Ivy can be found [here](https://github.com/robpike/ivy). If you haven't seen Ivy before, [this demo](https://github.com/robpike/ivy/blob/master/demo/demo.ivy) is a good place to start to get familiar with it. Read the mandatory arguments section below for more on the map and reduce phases.
+In FeatureBase, data is sharded by records. Meaning a single table is split into multiple shards.
+
+A single shard contains the data for some subset of records in that index.
+
+The first two arguments to `Apply()` (`ROW_CALL` and `MAP_FUNCTION`) are the map phase.
+
+* `ROW_CALL` filters records
+* `MAP_FUNCTION` is Ivy code that runs against each shard.
+* The third argument is the reduce phase. It is also written in Ivy and runs against the amalgamation of data return from the `MAP_FUNCTION`.
+
+Read the mandatory arguments section below for more on the map and reduce phases.
+
+## Before you begin
+
+Learn about float64 and int64 data types in:
+* [dataframe consumer](/docs/community/com-ingest/com-ingest-dataframe)
+* [HTTP API](/docs/community/com-api/com-api-http-endpoint)
+Learn about IVY
+* [Learn about IVY APL-like language](https://github.com/robpike/ivy){:target="_blank"}
+* [Watch the IVY demo](https://github.com/robpike/ivy/blob/master/demo/demo.ivy){:target="_blank"}
+
+* Enable `APPLY()` when you start the featurebase server from the /opt director: `./featurebase server --dataframe.enable`
 
 ## Call Definition
 
@@ -23,14 +41,28 @@ Ivy is an APL-like language. The source code for Ivy can be found [here](https:/
 Apply(ROW_CALL, MAP_FUNCTION, REDUCE_FUNCTION)
 ```
 
-#### Mandatory Arguments
-- `ROW_CALL` : the output of any [row call](/pql-guide/pql-introduction#Crow-calls){:target="_blank"} (set of record IDs / keys). Only data for records returned here will make it to the `MAP_FUNCTION`. Filter records as much as possible here to improve performance. Note that this row call is run against non `float64` and `int64` data.
-- `MAP_FUNCTION` : Ivy function to be performed at the shard level for records returned by `ROW_CALL`. Here you can access lists of column values within the shard by using column names as an identifier. See examples below. In most cases, it's best to perform as much work at this phase as possible. The output from each shard is passed to the reduce phase.
-- `REDUCE_FUNCTION` : Ivy query to be performed on the aggregation or concatenation of the output of the `MAP_FUNCTION`. You can reference this aggregate data using the `_` (underscore) identifier. This is the only data accessible at this phase. See examples below. You're not guarenteed to get shard data back in any particular order. For example, if you have data in two shards, the first time you run the query you could get shard 0 first and shard 1 second. The second time you run the query you could get shard 1 first and shard 0 second.
+## Mandatory Arguments
 
+`ROW_CALL`
+* the output of any [PQL Row Call set of record IDs/keys](/docs/pql-guide/pql-read-home#row-calls)
+* Only data for records returned here will make it to the `MAP_FUNCTION`.
+* Filter records as much as possible here to improve performance.
+* Note that this row call is run against non `float64` and `int64` data.
 
-#### Optional Arguments
-#### Returns
+`MAP_FUNCTION`
+* Ivy function to be performed at the shard level for records returned by `ROW_CALL`.
+* Here you can access lists of column values within the shard by using column names as an identifier. See examples below.
+* In most cases, it's best to perform as much work at this phase as possible. The output from each shard is passed to the reduce phase.
+
+`REDUCE_FUNCTION`
+* Ivy query to be performed on the aggregation or concatenation of the output of the `MAP_FUNCTION`.
+*You can reference this aggregate data using the `_` (underscore) identifier.
+* This is the only data accessible at this phase. See examples below.
+* You're not guaranteed to get shard data back in any particular order.
+* For example, if you have data in two shards, the first time you run the query you could get shard 0 first and shard 1 second. The second time you run the query you could get shard 1 first and shard 0 second.
+
+## Returns
+
 - A list of `float64` or `int64` values
 
 ## Examples

@@ -7,7 +7,7 @@ grand_parent: PQL guide
 
 # PQL COUNT()
 
-The `Count()` query returns the number of record IDs / keys returned by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. Note that this includes the [Distinct()](/pql-guide/read/distinct) call -- see the example below.
+The `Count()` query returns the number of record IDs / keys returned by a [row call](/pql-guide/pql-introduction#row-calls){:target="_blank"}. Note that this includes the [Distinct()](/docs/pql-guide/pql-read-distinct) call -- see the example below.
 
 ## Call Definition
 
@@ -62,7 +62,7 @@ How many records (customers) do we have in the index?
 }
 ```
 #### Explanation
-[All()](/pql-guide/read/all) returns a list of all the record IDs in the index. There are six records so `Count()` returns 6.
+[All()](/docs/pql-guide/pql-read-all) returns a list of all the record IDs in the index. There are six records so `Count()` returns 6.
 
 -----------------------------------------------------------------------
 ### Example 2
