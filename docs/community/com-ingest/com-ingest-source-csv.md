@@ -55,4 +55,4 @@ This reference page provides information on how to structure a CSV file with dat
 
 ## Next step
 
-Refer to the [CSV ingest tool reference](/docs/community/com-ingest/com-ref-ingest-csv) for instructions on importing the CSV file to FeatureBase Community.
+Refer to the [CSV ingest tool reference](/docs/community/com-ingest/com-ingest-flags-csv) for instructions on importing the CSV file to FeatureBase Community.
