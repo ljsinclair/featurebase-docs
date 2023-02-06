@@ -21,7 +21,10 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|---|
+| ALL | PQL query | [PQL ALL read query](/docs/pql-guide/pql-read-all) |
 | Anti-entropy | FeatureBase Community cluster | A periodic process that compares each shard and its replicas across the cluster to repair inconsistencies. |
+| APPLY | PQL query | [PQL APPLY read query](/docs/pql-guide/pql-read-apply) |
+| ARROW | PQL query | [PQL ARROW read query](/docs/pql-guide/pql-read-arrow) |
 | Authentication | FeatureBase Cloud | [Manage cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
 | Authentication | FeatureBase Community | [Community authentication](/docs/community/com-config-auth/com-config-auth-home) |
 
@@ -37,7 +40,11 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
+| CLEAR | PQL query | [PQL CLEAR write query](/docs/pql-guide/pql-write-clear) |
+| CLEARROW | PQL query | [PQL CLEARROW write query](/docs/pql-guide/pql-write-clearrow) |
 | Cluster | FeatureBase Community | A Cluster configuration of [FeatureBase nodes](#n) where data is evenly distributed and any node can respond to queries. Also defines how data is replicated and inter-node communication. |
+| CONSTROW | PQL query | [PQL CONSTROW read query](/docs/pql-guide/pql-read-constrow) |
+| COUNT | PQL query | [PQL COUNT read query](/docs/pql-guide/pql-read-count) |
 
 ## D
 
@@ -46,6 +53,15 @@ nav_order: 10
 | Database | FeatureBase database | Dedicated resources which contain tables and data. [Manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage) |
 | Data source | Source of data imported to FeatureBase | FeatureBase imports data from external data sources via HTTPS, Kafka, SQL or CSV ingest processing |
 | Data types | Table columns | [Data types and constraints](/docs/sql-guide/data-types/data-types-home) |
+| DELETE | PQL query | [PQL DELETE write query](/docs/pql-guide/pql-write-delete) |
+| DIFFERENCE | PQL query | [PQL DIFFERENCE read query](/docs/pql-guide/pql-read-difference) |
+| DISTINCT | PQL query | [PQL DISTINCT read query](/docs/pql-guide/pql-read-distinct) |
+
+## E
+
+| Term | Context | Further information |
+|---|---|---|
+| EXTRACT | PQL query | [PQL EXTRACT read query](/docs/pql-guide/pql-read-extract) |
 
 ## F
 
@@ -65,11 +81,14 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
+|  |  |  |
 
 ## I
 
 | Term | Context | Further information |
 |---|---|---|
+| INCLUDESCOLUMN | PQL query | [PQL INCLUDESCOLUMN read query](/docs/pql-guide/pql-read-includescolumn) |
+| INTERSECT | PQL query | [PQL INTERSECT read query](/docs/pql-guide/pql-read-intersect) |
 | Index | FeatureBase tables | Denormalized top-level container roughly the same as an RDBMS table. |
 | Ingest | Importing data to FeatureBase | [Manage community ingest](/docs/community/com-ingest/com-ingest-home) |
 
@@ -77,16 +96,19 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
+|  |  |  |
 
 ## K
 
 | Term | Context | Further information |
 |---|---|---|
+|  |  |  |
 
 ## L
 
 | Term | Context | Further information |
 |---|---|---|
+| LIMIT | PQL query | [PQL LIMIT read query](/docs/pql-guide/pql-read-limit) |
 
 ## M
 
@@ -105,20 +127,30 @@ nav_order: 10
 | Term | Context | Further information |
 |---|---|---|
 | Node | FeatureBase Community Cluster | An individual running instance of FeatureBase server which belongs to a cluster. |
+| NOT | PQL query | [PQL NOT read query](/docs/pql-guide/pql-read-not) |
 
 ## O
 
 | Term | Context | Further information |
 |---|---|---|
+| Options | PQL Options query | [PQL OPTIONS](/docs/pql-guide/pql-options) |
 | Organization | FeatureBase Cloud | [FeatureBase Organization](/docs/cloud/cloud-org/cloud-org-manage) |
 
 ## P
 
 | Term | Context | Further information |
 |---|---|---|
+| PERCENTILE | PQL query | [PQL PERCENTILE read query](/docs/pql-guide/pql-read-percentile) |
 | Pilosa | Former name of FeatureBase | [Pilosa + Molecula = FeatureBase blog post](https://www.featurebase.com/blog/pilosa-molecula-featurebase-a-story-of-evolution) |
 | Pilosa Query Language (PQL) | Database queries | [PQL-Guide](/docs/pql-guide/pql-home) |
 | Protobuf |  | Binary serialization format used for internal messages which can be used by clients as an alternative to JSON.  [Protobuf](https://developers.google.com/protocol-buffers/) |
+
+## Q
+
+| Term | Context | Further information |
+|---|---|---|
+| Query (PQL) | Pilosa Query Language | [PQL Guide](/docs/pql-guide/pql-home) |
+| Query (SQL) | Structured Query Language | [SQL Guide](/docs/sql-guide/sql-guide-home) |
 
 ## R
 
@@ -129,18 +161,20 @@ nav_order: 10
 | Roaring Bitmap | FeatureBase database | [roaringbitmap.org](https://roaringbitmap.org/){:target="_blank"} |
 | Row |  | Rows are the fundamental vertical data axis within FeatureBase. Rows are namespaced by field so the same row ID in a different field refers to a different row. |
 | Row `_id` |  |  |
-| Row (Ranged) | PQL ROW (Ranged) query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
-| Row (Timestamp) | PQL Row (Timestamp) query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
-| Rows | PQL ROWS query | [PQL Rows read query](/docs/pql-guide/pql-read-rows) |
+| Row (Ranged) | PQL query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
+| Row (Timestamp) | PQL query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
+| Rows | PQL query | [PQL Rows read query](/docs/pql-guide/pql-read-rows) |
 
 ## S
 
 | Term | Context | Further information |
 |---|---|---|
+| SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
 | Shard | FeatureBase Community Cluster | Records are sharded on a preset width. Shards are operated on in parallel and are evenly distributed across the cluster via a consistent hash. |
 | ShardWidth<br/>`cluster.shardwidth` parameter | FeatureBase Community Cluster | This is the number of records in a shard. ShardWidth defaults to 2^20 or about one million. It can be modified, but only at compile time, and before ingesting any data. |
-| STORE | PQL STORE query | [PQL STORE write query](/docs/pql-guide/pql-write-store) |
-| SUM | PQL SUM query | [PQL SUM read query](/docs/pql-guide/pql-read-sum) |
+| SORT | PQL query | [PQL SORT read query](/docs/pql-guide/pql-read-sort) |
+| STORE | PQL query | [PQL STORE write query](/docs/pql-guide/pql-write-store) |
+| SUM | PQL query | [PQL SUM read query](/docs/pql-guide/pql-read-sum) |
 
 ## T
 
@@ -150,13 +184,15 @@ nav_order: 10
 | Timestamp | Data type | [Timestamp data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | TTL (Time To Live) |  IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
 | TOML | FeatureBase Community configuration files | [Tom's Obvious Minimal Language (TOML)](https://github.com/toml-lang/toml) |
-| TopN | PQL TopN query | [PQL TOPN read query](/docs/pql-guide/pql-read-topn) |
+| TopK | PQL query | [PQL TOPK read query](/docs/pql-guide/pql-read-topk) |
+| TopN | PQL query | [PQL TOPN read query](/docs/pql-guide/pql-read-topn) |
 
 ## U
 
 | Term | Context | Further information |
 |---|---|---|
-
+| UNION | PQL query | [PQL UNION read query](/docs/pql-guide/pql-read-union) |
+| UNIONROWS | PQL query | [PQL UNIONROWS read query](/docs/pql-guide/pql-read-unionrows) |
 
 ## V
 
@@ -170,3 +206,4 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
+| XOR | PQL query | [PQL XOR read query](/docs/pql-guide/pql-read-xor) |
