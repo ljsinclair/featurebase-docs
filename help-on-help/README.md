@@ -6,6 +6,7 @@ Guidance on writing content in the `/featurebase-docs` repository
 
 * [theme information](/help-on-help/theme.md)
 * [just the docs homepage](https://just-the-docs.github.io/just-the-docs/)
+* [Just the docs GitHub Pages setup information](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
 
 ## Local builds
 
