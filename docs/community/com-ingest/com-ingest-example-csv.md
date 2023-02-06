@@ -17,7 +17,7 @@ This page provides examples of CSV files and CSV ingest tool flags that you can 
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
 * [CSV source format reference](/docs/community/com-ingest/com-ingest-source-csv)
-* [CSV ingester flag reference](/docs/community/com-ingest/com-ingest-flag-csv)
+* [CSV ingester flag reference](/docs/community/com-ingest/com-ingest-flags-csv)
 
 ## CSV source files
 
