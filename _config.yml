@@ -3,7 +3,7 @@ description: FeatureBase enables data engineers to process and operate on massiv
 theme: just-the-docs
 
 url: https://github.com/FeatureBaseDB/featurebase-docs
-remote_theme: "pmarsceill/just-the-docs"
+# remote_theme: "pmarsceill/just-the-docs"
 # url: https://just-the-docs.github.io
 
 # External navigation links appear in the sidebar navigation right at the bottom

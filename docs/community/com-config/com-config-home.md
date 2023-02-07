@@ -15,7 +15,9 @@ FeatureBase features can be enabled or disabled via
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-<!--
+
+<!-- waiting on content from com-config-auth branch in PR now
+
 ## How do I setup a FeatureBase cluster?
 
 * [Setup a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
@@ -45,7 +47,8 @@ Azure Active Directory is supported via SAML 2.0
 
 * [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
 
-<!--
+<!-- As with earlier, waiting on contact from com-config-auth branch
+
 ## Verify backups
 
 Use the following checklist to verify backups function correctly.
