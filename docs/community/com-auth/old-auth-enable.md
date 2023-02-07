@@ -149,4 +149,4 @@ screen.
 
 
 ### How can I use an auth token?
-To access FeatureBase outside of the UI, an auth token is required. Refer to the [HTTP API](/docs/community/com-api/old-http-endpoint), [gRPC API](/docs/community/com-api/old-grpc-api#grpc-api-with-authentication), [backup/restore](/docs/community/com-config/old-backups#backups-with-authentication) or [grafana](/docs/community/com-query/old-grafana-connector#grafana-with-authentication) documentation for details on how to use an auth token to access FeatureBase.
+To access FeatureBase outside of the UI, an auth token is required. Refer to the [HTTP API](/docs/community/com-api/old-http-endpoint), [gRPC API](/docs/community/com-api/old-grpc-api#grpc-api-with-authentication), [backup/restore](/docs/community/com-config/com-config-backup#backups-with-authentication) or [grafana](/docs/community/com-query/old-grafana-connector#grafana-with-authentication) documentation for details on how to use an auth token to access FeatureBase.
