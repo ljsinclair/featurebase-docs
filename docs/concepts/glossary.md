@@ -15,7 +15,7 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|---|
-| 1,048,576 | FeatureBase Community `batch-size` ingest flag | [CSV ingest flags](/docs/community/com-ingest/com-ref-ingest-csv) |
+| 1,048,576 | FeatureBase Community `batch-size` ingest flag | [CSV ingest flags](/docs/community/com-ingest/com-ingest-flags-csv) |
 
 ## A
 
@@ -26,7 +26,7 @@ nav_order: 10
 | APPLY | PQL query | [PQL APPLY read query](/docs/pql-guide/pql-read-apply) |
 | ARROW | PQL query | [PQL ARROW read query](/docs/pql-guide/pql-read-arrow) |
 | Authentication | FeatureBase Cloud | [Manage cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
-| Authentication | FeatureBase Community | [Community authentication](/docs/community/com-config-auth/com-config-auth-home) |
+| Authentication | FeatureBase Community | [Community authentication](/docs/community/com-auth/com-auth-home) |
 
 ## B
 
@@ -34,7 +34,7 @@ nav_order: 10
 |---|---|---|
 | Batch (ingest) | Data import to FeatureBase | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
 | Bitmap<br/>Bitmap Index (BMI)<br/>Roaring B-Tree format (RBT) | FeatureBase database table rows | FeatureBase uses the [Roaring Bitmap](https://roaringbitmap.org/){:target="_blank"} format to store data. |
-| Bit Sliced Indexing (BSI) | Multi-bit integer and timestamp data types used for Range, Min, Max and Sum queries | * [INT data type](/data/sql-guide/data-types/data-type-int)<br/>* [TIMESTAMP data type](/data/sql-guide/data-types/data-type-timestamp)<br/>* [MIN query](/docs/pql-guide/pql-read-min)<br/>* [MAX query](/docs/pql-guide/pql-read-max)<br/>* [SUM query](/docs/pql-guide/pql-read-sum) |
+| Bit Sliced Indexing (BSI) | Multi-bit integer and timestamp data types used for Range, Min, Max and Sum queries | * [INT data type](/docs/sql-guide/data-types/data-type-int)<br/>* [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp)<br/>* [MIN query](/docs/pql-guide/pql-read-min)<br/>* [MAX query](/docs/pql-guide/pql-read-max)<br/>* [SUM query](/docs/pql-guide/pql-read-sum) |
 
 ## C
 
@@ -90,7 +90,7 @@ nav_order: 10
 | INCLUDESCOLUMN | PQL query | [PQL INCLUDESCOLUMN read query](/docs/pql-guide/pql-read-includescolumn) |
 | INTERSECT | PQL query | [PQL INTERSECT read query](/docs/pql-guide/pql-read-intersect) |
 | Index | FeatureBase tables | Denormalized top-level container roughly the same as an RDBMS table. |
-| Ingest | Importing data to FeatureBase | [Manage community ingest](/docs/community/com-ingest/com-ingest-home) |
+| Ingest | Importing data to FeatureBase | [Manage community ingest](/docs/community/com-ingest/com-ingest-manage) |
 
 ## J
 
@@ -119,7 +119,7 @@ nav_order: 10
 | MAXSHARD<br/>`cluster.maxshard` parameter | FeatureBase Community Cluster flag | Zero-indexed shard allocation for current records, where `maxshard = 0` indicates 1 shard is allocated. |
 | MIN | PQL Read query | [PQL MIN Read query](/docs/pql-guide/pql-read-min) |
 | Min | SQL `int` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
-| molecula-consumer-[csv | sql | kafka] | Community ingest | [Manage community ingest](/docs/community/com-ingest/com-ingest-home) |
+| molecula-consumer-[csv | sql | kafka] | Community ingest | [Manage community ingest](/docs/community/com-ingest/com-ingest-manage) |
 | Mutex | String Data type | A FeatureBase field type similar to the Set type, in which only a single value can be set at any time. Conceptually similar to an enum type, but implemented on top of Set fields, with a performance cost from the single-value constraint. Not to be confused with the mutex synchronization primitive. |
 
 ## N
@@ -169,7 +169,7 @@ nav_order: 10
 
 | Term | Context | Further information |
 |---|---|---|
-| SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
+| SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-se=) |
 | Shard | FeatureBase Community Cluster | Records are sharded on a preset width. Shards are operated on in parallel and are evenly distributed across the cluster via a consistent hash. |
 | ShardWidth<br/>`cluster.shardwidth` parameter | FeatureBase Community Cluster | This is the number of records in a shard. ShardWidth defaults to 2^20 or about one million. It can be modified, but only at compile time, and before ingesting any data. |
 | SORT | PQL query | [PQL SORT read query](/docs/pql-guide/pql-read-sort) |
