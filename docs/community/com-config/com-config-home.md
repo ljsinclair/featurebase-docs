@@ -43,12 +43,6 @@ Azure Active Directory is supported via SAML 2.0
 
 * [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup)
 
-## How do I restore a FeatureBase cluster?
-
-* [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
-
-<!-- As with earlier, waiting on contact from com-config-auth branch
-
 ## Verify backups
 
 Use the following checklist to verify backups function correctly.
@@ -60,6 +54,12 @@ Use the following checklist to verify backups function correctly.
 | Restore source backup | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
 | Test target | Run queries and verify results are as expected |
 
+## How do I restore a FeatureBase cluster?
+
+* [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
+
+<!-- requires content in com-config-auth branch and PR
+
 ## End-to-end backup and restore process
 
 Use the following checklist to successfully restore a cluster from backups.
@@ -67,12 +67,12 @@ Use the following checklist to successfully restore a cluster from backups.
 | Task | Description |
 |---|---|
 | Stop all running processes | Stop any processes such as ingest |
-| Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-config/com-config-backup)
+| Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-config/com-config-backup) |
 | Create target | [Create a cluster](/docs/community/com-config/com-config-cluster) |
 | Restore backups to target | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
 | Test target | Run test queries and verify results are as expected |
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
 | Start all processes on target | Start processes including ingest |
-| Cleanup source | Backup the original cluster then tear it down |
+| Clean up source | Backup the original cluster then tear it down |
 
 -->
