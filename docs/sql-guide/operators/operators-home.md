@@ -76,4 +76,3 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 FeatureBase also supports standard operators:
 
 * [SQL IN operator](https://www.w3schools.com/Sql/sql_in.asp){:target="_blank"}
-*

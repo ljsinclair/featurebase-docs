@@ -21,6 +21,7 @@ aux_links_new_tab: true
   # Anchor text and hyperlinks that appear in top of page nav
 aux_links:
   Featurebase home: https://featurebase.com
+  Glossary: /docs/concepts/glossary
   API docs: https://api-docs-featurebase-cloud.redoc.ly/
   Contact us: https://www.featurebase.com/contact-us
 
