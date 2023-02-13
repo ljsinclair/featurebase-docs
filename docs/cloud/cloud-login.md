@@ -3,7 +3,7 @@ title: Login to cloud
 layout: default
 parent: Cloud
 has_children: false
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I login to FeatureBase Cloud?
@@ -16,7 +16,7 @@ This page explains where you can login to FeatureBase cloud.
 ## Before you begin
 
 * [Learn more about FeatureBase cloud](/docs/cloud/cloud-home)
-* [Learn about the 21 day trial period](/docs/cloud/cloud-troubleshooting/cloud-trial-account)
+* [Learn about the trial](/docs/cloud/cloud-troubleshooting/cloud-trial-account)
 * [Read the terms of service](https://www.featurebase.com/cloud-terms)
 * [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-signup)
 

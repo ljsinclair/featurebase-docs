@@ -1,15 +1,15 @@
 ---
-title: Copy table query endpoint
+title: Copy query endpoint
 layout: default
 parent: Manage tables
 grand_parent: Cloud
 nav_order: 4
 ---
 
-# Where do I find the table Query Endpoint in FeatureBase Cloud?
+# Where do I find the Query Endpoint in FeatureBase Cloud?
 {: .no_toc }
 
-The table query endpoint is used when running remote table queries via the API.
+The query endpoint is used to query a FeatureBase Cloud database.
 
 {% include page-toc.md %}
 

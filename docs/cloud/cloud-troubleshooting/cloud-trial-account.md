@@ -12,7 +12,7 @@ nav_order: 1
 
 ## How long does the trial last?
 
-You can test FeatureBase cloud free for 21 days. After this time your account will be limited to login only.
+Trial accounts are given $300, which is consumed based on usage in the product. Once this credit is exhausted, users will no longer be able to create new resources and existing resources will be spun down. After this time your account will be limited to login only.
 
 * {% include contact-support.md %} to extend your trial or purchase a license.
 
@@ -26,3 +26,5 @@ You can test FeatureBase cloud free for 21 days. After this time your account wi
 * [Sign up for FeatureBase Cloud](/docs/cloud/cloud-signup)
 * [Login to FeatureBase Cloud](/docs/cloud/cloud-login)
 * [Evaluate the system by creating a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
+
+

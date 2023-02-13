@@ -1,4 +1,3 @@
 Trial accounts are limited to:
-* One database
-* Multiple tables
-* One data source
+* $300 to be consumed however you see fit
+* Multiple tables & databases
