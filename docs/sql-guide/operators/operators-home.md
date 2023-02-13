@@ -13,16 +13,21 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 {% include /cloud/cloud-db-create-before-begin.md %}
 
 
-## unary_op
-![expr](/assets/images/sql-guide/unary_op.svg)
+## Unary Operators
 
-| Operator | Description | Examples | Binary representation | Binary Result |
+### Sign
+
+| Operator | Description | Example | Result |
+|:---:|---|---|---|
+| `+` or `-` | apply a sign to a numeric data type | `SELECT -1` | -1 |
+
+### Bitwise
+
+| Operator | Description | Example | Binary representation | Binary Result |
 |:---:|---|---|---|---|
-| `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
-| `+` or `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
+| `!` | **Not** inverts all the bits of the operand using [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) | `SELECT !5;` | `0101` | `1010` --> `(-8)+(0)+(2)+(0) = -6`|
 
-## binary_op
-![expr](/assets/images/sql-guide/binary_op.svg)
+## Binary Operators
 
 ### Logical
 
