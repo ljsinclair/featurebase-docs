@@ -120,3 +120,24 @@ tbody tr td {
 /* Material icons standard size */
 
 .material-icons.md-18 { font-size: 18px; }
+
+
+/* Code */
+code {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+}
+
+.highlight .k {
+  color: #00a351;
+} // keyword //
+.highlight .n {
+  color: #2b2b2b;
+} // name //
+.highlight .p {
+  color: #3b3b3b;
+} // punctuation //
+.highlight .nb {
+  color: #7500a3;
+} // name.builtin //

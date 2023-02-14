@@ -58,6 +58,9 @@ search.preview_words_after: 10
 # Supports true or false (default)
 search.button: true
 
+# For copy button on code
+enable_copy_code_button: true
+
 # Text highlighting callouts
 
   # Colours found in /_sass/color_schemes for red, green, purple. other colors are theme defaults
