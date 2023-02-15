@@ -16,8 +16,6 @@ FeatureBase features can be enabled or disabled via
 
 * {% include /com-install/com-install-before-begin.md %}
 
-<!-- waiting on content from com-config-auth branch in PR now
-
 ## How do I setup a FeatureBase cluster?
 
 * [Setup a FeatureBase cluster](/docs/community/com-config/com-config-cluster)

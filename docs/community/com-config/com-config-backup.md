@@ -80,6 +80,9 @@ Use of `no-sync` risks loss of backup date should the backup system lose power.
 
 ## Examples
 
+{: .warning}
+`featurebase backup` overwrites any files in the destination folder. To retain earlier backups, `tar` the backup folder then move the file to a new location.
+
 ### Increased backup speed
 
 Increase backup speed by setting the concurrency value and turning off sync.
@@ -99,7 +102,6 @@ featurebase backup
   --host featurebase-hostname-or-ip:10101
   -output /backups/featurebase-backups
 ```
-
 
 ### Authenticated backup
 
@@ -123,9 +125,6 @@ featurebase backup
 
 ### No sync backup with manual backup to remote folder
 
-```
-featurebase backup --host featurebase-hostname-or-ip:10101 -o /path/to/backup/ --no-sync #
-tar -cvf backup.tar.xz /path/to/backup
-sync backup.tar.xz
-rm -r /path/to/backup
+```sh
+featurebase backup --host featurebase-hostname-or-ip:10101 -o /path/to/backup/ --no-sync
 ```
