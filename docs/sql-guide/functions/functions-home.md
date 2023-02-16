@@ -44,3 +44,4 @@ has_toc: false
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [RTRIM()](/docs/sql-guide/functions/function-rtrim)
 * [LTRIM()](/docs/sql-guide/functions/function-ltrim)
+* [STR()](/docs/sql-guide/functions/function-str)
