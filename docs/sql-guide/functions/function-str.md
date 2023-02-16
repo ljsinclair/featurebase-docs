@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # STR() function
 
-`STR()` function returns the given number formatted to a String of a certain length, with given precision.
+The `STR()` string funtion returns the given numerical value as a String, with the option to specify precision rounding and return string length.
 
 ## Syntax
 
@@ -18,24 +18,25 @@ STR(num_expr, lenofstr, precision)
 ## Arguments
 
 
-| Argument | Description | Data type | Return value |
-|---|---|---|---|
-| `num_expr` | Required `int` or `float` value to format as a `string`. |
-| `lenofstr` | Optional `int` value for the length of the output string. Defaults to 10. |
-| `precision` | Optional `int` value for the precision to round `num_expr` to. Defaults to 0. |
+| Argument | Description | Data type |
+|---|---|---|
+| `value` | Required numerical value to format as a `string`. | `int` or `decimal(3)` |
+| `string_length` | Optional `int` value for the length of the output string. Defaults to 10. | `int` |
+| `precision` | Optional `int` value for the precision to round `value` to. Defaults to 0. | `int` |
 
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `string` | Returns a string representation of `num_expr` rounded to the `precision` and space-padded to the `length`. |
+| `string` | Returns a string representation of `value` rounded to the `precision` and left-padded with spaces to the `string_length`. |
 
 ## Remarks
-If the number cannot be shown within the allocated length, it will be replaced by asterisks.
+If the `string_length` is less than the characters needed to display the `value` after rounding to the `precision`, the function will return a string of asterisks with a length of `string_length`.
 
 ## Examples
-A. Str function on a column.
+
+### Str of a decimal in a column
 
 ```sql
 create table segments
@@ -52,7 +53,7 @@ select _id, str(segment) as text from segments;
 +-----+------------+
 ```
 
-B. Str function with precision on a column.
+### Str of a decilam with precision on a column.
 
 ```sql
 create table segments
@@ -69,7 +70,8 @@ select _id, str(segment, 10, 2) as text from segments;
 +-----+------------+
 ```
 
-C. Str function with a long number
+### Str with a number longer than length
+Example showing the output when given a `value` and `precision` that cannot be displayed within the given `string_length`.
 
 ```sql
 create table segments
