@@ -35,8 +35,6 @@ Azure Active Directory is supported via SAML 2.0
 * [Setup FeatureBase authentication](/docs/community/com-config/com-config-authentication)
 * [Setup FeatureBase group permissions](/docs/community/com-config/com-config-group-permissions)
 
--->
-
 ## How do I backup a FeatureBase cluster?
 
 * [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup)
