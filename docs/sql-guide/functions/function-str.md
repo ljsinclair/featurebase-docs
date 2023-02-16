@@ -12,7 +12,7 @@ The `STR()` string funtion returns the given numerical value as a String, with t
 ## Syntax
 
 ```
-STR(num_expr, lenofstr, precision)
+STR(value, string_length, precision)
 ```
 
 ## Arguments
