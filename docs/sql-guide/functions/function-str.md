@@ -53,7 +53,7 @@ select _id, str(segment) as text from segments;
 +-----+------------+
 ```
 
-### Str of a decilam with precision on a column.
+### Str of a decimal with precision on a column.
 
 ```sql
 create table segments
