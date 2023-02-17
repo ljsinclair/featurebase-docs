@@ -7,4 +7,6 @@ nav_order: 8
 has_toc: true
 ---
 
-FeatureBase users are invited to join by an Administrator. They can accept the invitation and update their personal details.
+# How do I manage my cloud user?
+
+Learn how to activate your account, change your password and update your personal details.

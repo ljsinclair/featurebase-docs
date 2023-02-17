@@ -10,8 +10,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
-
+{% include /sql-guide/sql-guide-before-begin.md %}
 
 ## Unary Operators
 
@@ -31,7 +30,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ### Logical
 
-| Operator | `WHERE` condition returns **true** when... | Examples |
+| Operator | WHERE condition returns **true** when... | Examples |
 |:---:|---|---|
 | `=` | **both** operands are equal. | `select _id from products WHERE price = 52.50;` |
 | `!=` | **both** operands are **not** equal. | `select stock from products WHERE price != 0.50;` |
@@ -44,7 +43,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ### Comparison
 
-| Operator | `WHERE` condition returns **True** when... | Examples |
+| Operator | WHERE condition returns **True** when... | Examples |
 |:---:|---|---|
 | `<` | the operand on the left is **less than** the operand on the right. | `SELECT 1 WHERE 10 < 100;` |
 | `>` | the operand on the left is **greater than** the operand on the right. | `SELECT 1 WHERE 10 > 1;` |

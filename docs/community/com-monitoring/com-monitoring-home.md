@@ -3,8 +3,9 @@ title: Community monitoring
 layout: default
 parent: Community
 has_children: true
-
-has_toc: false
+has_toc: true
 ---
 
-# Community configuration
+# Community monitoring
+
+Setup external monitoring for FeatureBase

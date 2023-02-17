@@ -11,7 +11,8 @@ parent: SQL guide
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /sql-guide/sql-guide-before-begin.md %}
+
 
 ## identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
@@ -21,9 +22,6 @@ parent: SQL guide
 ## expr
 
 ![expr](/assets/images/sql-guide/expr.svg)
-
-{: .note}
-View SQL for [CREATE TABLE products and sales](/docs/sql-guide/statements/statement-table-create/#create-table-with-decimal-data-type) and [INSERT INTO tables and products](/docs/sql-guide/statements/statement-insert/#insert-multiple-records-into-products-and-services-tables)
 
 | Syntax | Example | Result |
 |---|---|---|
@@ -44,9 +42,10 @@ Literals are explicitly specified fixed values that conform to a specific data t
 | `string` |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
 
+<!-- commented out because there's no destination
 ### [table_name].column_name
 
-
+-->
 
 ### [unary_op] expr
 

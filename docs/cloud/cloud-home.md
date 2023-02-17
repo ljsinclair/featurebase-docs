@@ -23,11 +23,13 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 ## Cloud trial
 
-* [Learn about FeatureBase Cloud trial accounts](/docs/cloud/cloud-troubleshooting/cloud-trial-account)
+{% include /cloud/trial-account-limits.md %}
 
 ## Terms and conditions
 
-{% include /cloud/cloud-terms-conditions.md %}
+Cloud users must agree to the FeatureBase terms of service to complete sign-up.
+
+* [Learn about the Cloud terms of service](https://www.featurebase.com/cloud-terms){:target="_blank"}
 
 ## Troubleshooting
 

@@ -12,6 +12,10 @@ has_toc: false
 
 {% include page-toc.md %}
 
+## Before you begin
+
+{% include /sql-guide/sql-guide-before-begin.md %}
+
 <!--copied from sql-operators-home because seems relevant-->
 ## Function call operator
 

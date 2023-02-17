@@ -13,7 +13,7 @@ SQL statements can be executed in the Query editor.
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /sql-guide/sql-guide-before-begin.md %}
 
 ## SELECT statement
 

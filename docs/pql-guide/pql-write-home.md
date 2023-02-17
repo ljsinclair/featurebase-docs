@@ -7,7 +7,7 @@ nav_order: 2
 has_toc: false
 ---
 
-# Write Operations
+# PQL Write Operations
 
 - [Clear](/docs/pql-guide/pql-write-clear){:target="_blank"} sets a single specified bit to zero -- said another way, it removes a value from a field for a specified record.
 - [ClearRow](/docs/pql-guide/pql-write-clearrow){:target="_blank"} sets all bits to zero in the specified row -- said another way, it removes a value from a field for all records in an index.

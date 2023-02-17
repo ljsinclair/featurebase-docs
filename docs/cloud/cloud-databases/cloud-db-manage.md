@@ -14,11 +14,11 @@ This page provides an overview of FeatureBase databases and links to guide you t
 
 FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
 
-{% include page-toc.md %}
-
 ## Before you begin
-
+{: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
+
+{% include page-toc.md %}
 
 ## Trial accounts
 
@@ -44,6 +44,7 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 ## Managing databases in FeatureBase Cloud
 
 * [Create database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create database with test data to evaluate the system](/docs/cloud/cloud-databases/cloud-db-create-sample)
 * [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Managing databases using the FeatureBase API
