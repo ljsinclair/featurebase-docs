@@ -20,6 +20,7 @@ If you run into any roadblocks or have questions throughout the demonstration, p
 
 ## Sign-Up Overview
 
+If you have already signed up skip to [Configuring your environment](#configuring-your-environment)
 
 First, sign up for your [Free Trial](https://www.featurebase.com/cloud). Click the ```Start Cloud Trial``` button to navigate to the FeatureBase Cloud application and set up your account. You will be asked to enter your First Name, Last Name, Email address, and password. You will also be asked to read and agree to the [FeatureBase Terms of Service](https://www.featurebase.com/cloud-terms/).  
 
@@ -65,16 +66,14 @@ While the database is spinning up, you will see updates to "Status" on the ```Da
 ![Figure 7. New Database: Running](/assets/images/quick-start-guide/cloud/db_running.png)
 
 
-After about 10 minutes, the database status will progress to ```RUNNING```, and you can click on the database name and check the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. In the next section, we will perform a variety of common analytical queries on both datasets.
+After about 10 minutes, the database status will progress to ```RUNNING```, and you can click on the database name and check the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. Additionally, you will some system tables that contain information about your database. In the next section, we will perform a variety of common analytical queries on both datasets.
 
 ![Figure 8. Demo Data restored into tables from backup](/assets/images/quick-start-guide/cloud/tables_page_with_cseg.png)
 
 
 ### Data Exploration of Customer Segmentation Feature Table
 
-It’s always a good idea to understand what the dataset you’re working with contains before you get started. To do this, click on the ```Databases``` section in the application, click the database you just created, and click the ```Tables``` tab  to display the names of the tables in your database.
-
-Click on a table to show its contents. FeatureBase can ingest and represent a wide range of data types. Two that may not be familiar are the ```IDSET``` and ```STRINGSET``` types. ```SET``` types are multi-valued and allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
+It’s always a good idea to understand what the dataset you’re working with contains before you get started. Click on a table to show its contents. FeatureBase can ingest and represent a wide range of [data types](/docs/sql-guide/data-types/data-types-home). Two that may not be familiar are the [```IDSET```](/docs/sql-guide/data-types/data-type-idset/) and [```STRINGSET```](/docs/sql-guide/data-types/data-type-stringset/) types. ```SET``` types are multi-valued and allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
 
 ![Figure 9. Customer Segmentation (cseg) table details](/assets/images/quick-start-guide/cloud/cseg_cols.png)
 
@@ -86,6 +85,8 @@ Let’s start by running a simple SQL statement to extract 10 records to explore
 ```sql
 SELECT TOP(10) * FROM cseg;
 ```
+
+>Note that we support a subset of SQL but are working toward expanding our SQL coverage.
 
 Viewing this tabular output we can see each record contains several columns (attributes) and data types. Scroll left and right in the application to explore the full list of columns. For example, ```names``` and ```cities``` are captured in ```STRINGSET``` columns. ```income``` is captured in an ```INT``` column that will allow for range queries. You can also see that ```education``` is a ```STRINGSET``` column with multiple values in a single column.
 
@@ -135,8 +136,6 @@ Additionally, aggregations may include the ```AVERAGE``` argument.
 SELECT AVG(income) FROM cseg;
 ```
 
->Note that we don’t currently support full SQL, but are working toward expanding SQL functionality.
-
 ![Figure 14. AVERAGE Query](/assets/images/quick-start-guide/cloud/query_avg_income.png)
 
 
@@ -145,9 +144,9 @@ SELECT AVG(income) FROM cseg;
 <!--
 This needs to be updated back to INNER JOIN and SQL once SQL3 JOIN functionality is stable
 -->
-FeatureBase can merge at ingest and eliminate preprocessing in cases where performant **INNER JOIN**s are required. Data from two separate tables or sources can be merged into a single normalized table by matching on a unique key in each dataset. Since FeatureBase can execute queries very quickly, workflows requiring ```INNER JOIN```s can be simplified with FeatureBase by merging disparate datasets at ingest. In the following example, we are combining many of the queries in this guide and adding the ```INNER JOIN``` functionality using the `DISTINCT` function in FeatureBase's native language called [PQL](/docs/pql-guide/pql-home).
+FeatureBase supports **INNER JOIN** functionality, but it should be noted it's preferable to merge data from multiple separate tables or sources into a single normalized table. FeatureBase makes this possible and easy by defaulting to ingest process to use `UPSERT` behavior. Workflows requiring ```INNER JOIN```s in traditional databases can be simplified with FeatureBase by merging disparate datasets at ingest into a single table. 
 
-The ```INNER JOIN``` is facilitating a ```COUNT``` of records, or people, that are ```available for hire``` as indicated by having a ```STRING``` column true for ```available_for_hire``` located in the skills table, and having a ```STRING``` column true for ```Teaching```. In other words, we would like to ```COUNT``` the number of people who are teachers and also available for hire. The latency on this type of ```INNER JOIN``` at the billion records scale is still sub-second allowing for several interesting data models.
+If this cannot be avoided, FeatureBase does support **INNER JOIN**  between two tables. In the following example, we are combining many of the queries in this guide and adding the ```INNER JOIN``` functionality using the `DISTINCT` function in FeatureBase's native language called [PQL](/docs/pql-guide/pql-home). The ```INNER JOIN``` is facilitating a ```COUNT``` of records, or people, that are ```available for hire``` as indicated by having a ```STRING``` column true for ```available_for_hire``` located in the skills table, and having a ```STRING``` column true for ```Teaching```. In other words, we would like to ```COUNT``` the number of people who are teachers and also available for hire. The latency on this type of ```INNER JOIN``` at the billion records scale is still sub-second allowing for several interesting data models.
 
 ```sql
 [cseg]Count(Intersect(
@@ -216,6 +215,8 @@ If you have issues with your queries, please contact your FeatureBase representa
 We hope that this hands-on experience has further demonstrated the power of FeatureBase to power real-time analytics workflows at scale. While this example focused on a customer segmentation use case, the same type of workflows are often used in anomaly detection or business process optimization use cases and continues to perform as workloads grow to trillions of records. Additionally, FeatureBase excels at combining streaming and historical data in real-time, allowing you to analyze data as soon at is available in FeatureBase with no need for time-consuming preprocessing or preaggregation. From here, partner with your FeatureBase representative to better understand how FeatureBase will work for your organization’s specific needs. If you'd like to continue exploring, you can start learning how to:
 
 * [INGEST DATA OVERVIEW](/docs/cloud/cloud-ingest/cloud-ingest-manage)
+* [BULK INSERT CSV Example](/docs/sql-guide/statements/statement-insert-bulk-csv-example/)
+* [Learn about BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk/)
 
 ## Queries
 
