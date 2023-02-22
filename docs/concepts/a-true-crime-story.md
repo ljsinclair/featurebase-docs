@@ -6,6 +6,8 @@ has_children: false
 nav_order: 4
 ---
 
+# A True Crime Story...Well, A Story About Modeling True Crime Data
+
 Ok, not a crime story, but a data modeling story with true crime… Data! This doc describes the flow of how you, an individual in the data community, might think about modeling data in FeatureBase versus a traditional RDBMS. Many of the differences derive from the fact that FeatureBase is built entirely on bitmaps, which can be read about [here](https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real). The data referenced in this post is real crime data from Boston and can be referenced [here](https://www.kaggle.com/datasets/AnalyzeBoston/crimes-in-boston) to follow along.
 
 As a data professional, you are tasked with helping the city of Boston reduce crime by finding insights in past and current data. You have just gotten your hands on a flat file with a couple of years of intriguing crime data, so now what? You realize this data is way too big to analyze on your local/virtual workspace (not really… but let’s say it is), so the first thing is getting it into a database in order to analyze and query the data much more easily.. You’ve decided you want to try FeatureBase because of all the great things you’ve heard. The first thing you’ll likely do is `head` the file and look at the provided schema to get a sense of the columns and, most importantly, what the grain of the data is. This ideally leads you to a unique identifier to operate as the primary key (or equivalent) for your table. FeatureBase requires a primary key, which is usually denoted as `_id` in the data model.
@@ -18,6 +20,27 @@ I182070943,01402,Vandalism,VANDALISM,C11,347,,2018-08-21 00:00:00,2018,8,Tuesday
 
 Quickly looking at the file, you identify “INCIDENT_NUMBER” as the perfect candidate for your key. After jotting down the other columns and their potential types, you also decide “Location” seems unnecessary given “Lat” and “Long” already exist. Now you are off to ingest the data! For most databases, including FeatureBase, this means [creating a table](/docs/sql-guide/statements/statement-table-create) and modeling the columns based on what you see in the file. You’ve come up with the following for FeatureBase:
 
+```sql
+CREATE TABLE IF NOT EXISTS crime (
+_id STRING,
+offense_code INT MAX 10000,
+offense_code_group STRING,
+offense_description STRING,
+district STRING,
+reporting_area STRING,
+shooting STRING,
+occurred_on_date TIMESTAMP,
+year INT MIN -1 MAX 10000,
+month INT MIN -1 MAX 12,
+day_of_week STRING,
+hour INT MIN -1 MAX 24, 
+ucr_part STRING, 
+street STRING, 
+lat DECIMAL(8), 
+long DECIMAL(8)
+) COMMENT 'table containing Boston crime data';
+```
+<!--- can bring back if needed but keeping until broken up
 |Data Type| Description |
 | ------- | ------------ |
 | OFFENSE_CODE  | INT |
@@ -35,26 +58,110 @@ Quickly looking at the file, you identify “INCIDENT_NUMBER” as the perfect c
 | STREET  | STRING |
 | Lat  | DECIMAL |
 | Long  | DECIMAL |
+-->
 
-FeatureBase’s use of bitmaps and bit slice indexing means you don’t have to worry about manually creating indexes on this table to improve city analysts' query performance. All that’s needed is the schema. This is followed by sending the data to be ingested. For some databases this is a drag and drop GUI, and in others, like FeatureBase, it’s through [SQL statements](/docs/sql-guide/statements/statement-insert-bulk).
+FeatureBase’s use of bitmaps and bit slice indexing means you don’t have to worry about manually creating indexes on this table to improve city analysts' query performance. All that’s needed is the schema. This is followed by sending the data to be ingested. For some databases this is a drag and drop GUI, and in others, like FeatureBase, it’s through [SQL statements](/docs/sql-guide/statements/statement-insert-bulk). After you learn about `BULK INSERT` and some expected back and forth  troubleshooting with syntax and the date, you've come up with the following SQL statement:
 
-After some expected back and forth and troubleshooting, you now have a FeatureBase table with 282,517 records! Job well done! Nothing could’ve gone wrong, but because it’s not your first rodeo, you do some simple record count validation to make sure no data was lost. Lo and behold you notice the file had 319,074 records! What is this madness? Well, it’s one of the differences between FeatureBase and other databases. It appears you made a mistake thinking “INCIDENT_NUMBER” was unique. Some databases may have thrown errors here because they would have seen duplicate values attempting to be loaded. Others may have ingested all 319,074 records because the backend implementation doesn’t require (or generates) unique keys. FeatureBase maintains unique keys and treats all ingest operations as UPSERTs. So every time a repeat incident number was loaded, all of the values in your table were updated for that incident’s record. The update behavior of UPSERTs depends on the data type that is being updated:
+```sql
+BULK INSERT INTO crime (
+_id,
+offense_code,
+offense_code_group,
+offense_description,
+district,
+reporting_area,
+shooting,
+occurred_on_date,
+year,
+month,
+day_of_week,
+hour, 
+ucr_part, 
+street, 
+lat, 
+long)
+MAP (
+0 STRING,
+1 INT,
+2 STRING,
+3 STRING,
+4 STRING,
+5 STRING,
+6 STRING,
+7 TIMESTAMP,
+8 INT,
+9 INT,
+10 STRING,
+11 INT,
+12 STRING,
+13 STRING,
+14 DECIMAL(8),
+15 DECIMAL(8)
+)
+FROM
+'https://featurebase-public-data.s3.us-east-2.amazonaws.com/crime.csv'
+WITH
+    BATCHSIZE 100000
+    FORMAT 'CSV'
+    INPUT 'URL'
+    HEADER_ROW;
+```
+
+After running the above, you now have a FeatureBase table with 282,517 records! Job well done! Nothing could’ve gone wrong, but because it’s not your first rodeo, you do some simple record count validation to make sure no data was lost. Lo and behold you notice the file had 319,074 records! What is this madness? Well, it’s one of the differences between FeatureBase and other databases. It appears you made a mistake thinking “INCIDENT_NUMBER” was unique. Some databases may have thrown errors here because they would have seen duplicate values attempting to be loaded. Others may have ingested all 319,074 records because the backend implementation doesn’t require (or generates) unique keys. FeatureBase maintains unique keys and treats all ingest operations as UPSERTs. So every time a repeat incident number was loaded, all of the values in your table were updated for that incident’s record. The update behavior of UPSERTs depends on the data type that is being updated:
 
 |Datatype Being Updated| Behavior| Example |
 | ------- | ------------ | ------------ |
 | STRING, ID, INT, DECIMAL, TIMESTAMP  | Replace existing value | Existing FeatureBase Value: <br> app_status (STRING): Pending <br>New Value Sent:<br>Approved<br> New FeatureBase Value:<br> app_status (STRING): Approve
 | IDSET, STRINGSET  | Add (not delete) new values | Existing FeatureBase Value: <br> app_status (STRINGSET): Pending <br>New Value Sent:<br>Approved<br> New FeatureBase Value:<br> app_status (STRINGSET): Pending, Approve
 
-Well now you are conflicted. On the one hand, you know this is the actual number of unique incidents, so counts on this table will reflect actuals (versus needing a count distinct with 319,074 records). This is nice because you know the city’s analysts won’t make mistakes and count the same crime multiple times. However, you have lost some of the definition of your data like offense codes and groups that have multiple values for a single incident. You could create a new unique key for this data, but you find a FeatureBase superpowers, [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset). These datatypes give individual records the ability to store multiple values for a single column.
+Well now you are conflicted. On the one hand, you know this is the actual number of unique incidents, so counts on this table will reflect actuals (versus needing a count distinct with 319,074 records). This is nice because you know the city’s analysts won’t make mistakes and count the same crime multiple times. However, you have lost some of the definition of your data like offense codes and groups that have multiple values for a single incident. You can verify this by using a `grep I162097077 <file>.csv` on the file for incident "I162097077", which will return 3 records:
 
-First, you look into `IDSET` but find you don’t know what the `ID` type is. After going through the docs, you find the `ID` type is for unsigned integers that are more meaningful to represent as discrete values. Looking at your data model, you’ve made a mistake assigning some columns like “OFFENSE_CODE'' as integers. These codes are discrete values that should be treated categorically, as they will be used in `GROUP BY` and `WHERE` queries and not aggregated on or used in range queries. Others, like “YEAR”, are appropriate because you might use range queries in addition to `GROUP BY` statements. Now understanding `ID`, you see `IDSET` can be used to store multiple `ID` values for a single column. This is exactly what columns like “OFFENSE_CODE'' need. Next, you see `STRINGSET` operates similarly and can be used to store multiple `STRING` values for a single column, such as “OFFENSE_CODE_GROUP”. This type would be appropriate for others like “STREET” if different values were populated with the data, which they are not today. You revisit your data model (updated types below) and now consider if this is a good move:
+```csv
+I162097077,3125,Warrant Arrests,WARRANT ARREST,C11,367,NULL,2016-11-28T12:00:00Z,2016,11,Monday,12,Part Three,GIBSON ST,42.29755533,-71.0597091
+I162097077,735,Auto Theft Recovery,RECOVERED - MV RECOVERED IN BOSTON (STOLEN OUTSIDE BOSTON),C11,367,NULL,2016-11-28T12:00:00Z,2016,11,Monday,12,Other,GIBSON ST,42.29755533,-71.0597091
+I162097077,1300,Recovered Stolen Property,STOLEN PROPERTY - BUYING / RECEIVING / POSSESSING,C11,367,NULL,2016-11-28T12:00:00Z,2016,11,Monday,12,Part Two,GIBSON ST,42.29755533,-71.0597091
+```
 
+And running the following query on your new table, which will have 1 record with partial data (i.e. the value for offense_code_group is "Recovered Stolen Property" and "Warrant Arrests" and "Auto Theft Recovery" are missing):
+
+```sql
+select * from crime where _id = 'I162097077'
+```
+
+
+You now consider creating a new unique key for each record so there is no data loss, but you find a FeatureBase superpower, [IDSET data type](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset). These datatypes give individual records the ability to store multiple values for a single column.
+
+First, you look into `IDSET` but find you don’t know what the `ID` type is. After looking into the [ID data type](/docs/sql-guide/data-types/data-type-id), you find it is for unsigned integers that are more meaningful to represent as discrete values. Looking at your data model, you’ve made a mistake assigning some columns like “OFFENSE_CODE'' as integers. These codes are discrete values that should be treated categorically, as they will be used in `GROUP BY` and `WHERE` queries and not aggregated on or used in range queries. Others, like “YEAR”, are appropriate because you might use range queries in addition to `GROUP BY` statements. Now understanding `ID`, you see `IDSET` can be used to store multiple `ID` values for a single column. This is exactly what columns like “OFFENSE_CODE'' need. Next, you see `STRINGSET` operates similarly and can be used to store multiple `STRING` values for a single column, such as “OFFENSE_CODE_GROUP”. This type would be appropriate for others like “STREET” if different values were populated with the data, which they are not today. You revisit your data model (updated types below) and now consider if this is a good move:
+
+```sql
+CREATE TABLE IF NOT EXISTS crime (
+_id STRING,
+offense_code IDSET,
+offense_code_group STRINGSET,
+offense_description STRINGSET,
+district STRING,
+reporting_area STRING,
+shooting STRING,
+occurred_on_date TIMESTAMP,
+year INT MIN -1 MAX 10000,
+month INT MIN -1 MAX 12,
+day_of_week STRING,
+hour INT MIN -1 MAX 24, 
+ucr_part STRINGSET, 
+street STRING, 
+lat DECIMAL(8), 
+long DECIMAL(8)
+) COMMENT 'table containing Boston crime data using SETs';
+```
+
+<!--- can bring back if needed but keeping until broken up
 |Data Type| Description |
 | ------- | ------------ |
 | OFFENSE_CODE  | IDSET |
 | OFFENSE_CODE_GROUP  | STRINGSET |
 | offense_description  | STRINGSET |
 | UCR_PART  | STRINGSET |
+-->
 
 With this model, you won’t lose any of your data’s definition and will still maintain the true count of 282,517 unique incidents. What’s more, you see the space savings compared to both implementing a new unique key in FeatureBase and using a traditional database. A new unique key would have meant storing 36,557 additional records, and while these would be stored as efficient bitmaps, they would further grow your data footprint and potentially have an impact over time. You’d also be storing the same “INCIDENT_NUMBER”  multiple times in addition to the new keys for every record. A traditional database would have meant writing many records with duplicate values for all the columns that don’t change (all date/time columns ( i.e "OCCURRED_ON_DATE"), “REPORTING_AREA”, lat/long, et al):
 
@@ -65,7 +172,54 @@ With this model, you won’t lose any of your data’s definition and will still
 | 3 | *I162097077* | 03125 | Warrant Arrests | *2016-11-28T12:00:00Z* |
 
 
-Your new data model is much more efficient and only needs an additional bit tracked for each additional value in the `IDSET` and `STRINGSET` type columns, so you feel good about this call! In fact it’d be a crime not to do this… Ok sorry for that.
+Your new data model is much more efficient and only needs an additional bit tracked for each additional value in the `IDSET` and `STRINGSET` type columns, so you feel good about this call! In fact it’d be a crime not to do this… Ok sorry for that. You drop your old table (`DROP TABLE crime;`), run the new DDL above, and reload it with an altered `BULK INSERT`:
+
+```sql
+BULK INSERT INTO crime (
+_id,
+offense_code,
+offense_code_group,
+offense_description,
+district,
+reporting_area,
+shooting,
+occurred_on_date,
+year,
+month,
+day_of_week,
+hour, 
+ucr_part, 
+street, 
+lat, 
+long)
+MAP (
+0 STRING,
+1 IDSET,
+2 STRINGSET,
+3 STRINGSET,
+4 STRING,
+5 STRING,
+6 STRING,
+7 TIMESTAMP,
+8 INT,
+9 INT,
+10 STRING,
+11 INT,
+12 STRINGSET,
+13 STRING,
+14 DECIMAL(8),
+15 DECIMAL(8)
+)
+FROM
+'https://featurebase-public-data.s3.us-east-2.amazonaws.com/crime.csv'
+WITH
+    BATCHSIZE 100000
+    FORMAT 'CSV'
+    INPUT 'URL'
+    HEADER_ROW;
+```
+
+Now you can run the same query as before (`select * from crime where _id = 'I162097077'`) to validate all of the data is present and stored efficiently within a single record:
 
 |INCIDENT_NUMBER (_id)| OFFENSE_CODE| OFFENSE_CODE_GROUP | OCCURRED_ON_DATE |
 | ------- | ------------ | ------------ | ------------ |
