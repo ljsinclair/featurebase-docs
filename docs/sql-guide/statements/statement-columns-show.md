@@ -30,9 +30,8 @@ SHOW COLUMNS FROM table_name;
 |---|---|---|
 | `name` | string | column name |  |
 | `type` | string | column data type | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `internal_type` | string | column data type |  |
 | `created_at` | timestamp | timestamp | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| `keys` | bool | Keys on the column |  |
+| `keys` | bool | Indicates true if key translation is performed for a column. This is only for `STRING` and `STRINGSET` types |  |
 | `cache_type` | string |  |  |
 | `cache_size` | int |  |  |
 | `scale` | int | Scale value for `DECIMAL()` column | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal) |
@@ -51,11 +50,11 @@ SHOW COLUMNS FROM table_name;
 SHOW COLUMNS FROM skills;
 ```
 
-|_id | name | type | internal_type | created_at | keys | cache_type | cache_size | scale | min | max | timeunit | epoch | timequantum | ttl |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|_id | name | type | created_at | keys | cache_type | cache_size | scale | min | max | timeunit | epoch | timequantum | ttl |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | _id | _id | string | string | 2023-01-05T05:53:06Z | true |  | 0 | 0 | 0 | 0 |  | 0 |  | 0s |
-| bools | bools | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
-| bools-exists | bools-exists | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| bools | bools | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| bools-exists | bools-exists | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
 | id | id | int | int | 2023-01-05T05:53:06Z | false |  | 0 | 0 | -9223372036854776000 | 9223372036854776000 |  | 0 |  | 0s |
-| skills | skills | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
-| titles | titles | stringset | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| skills | skills | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |
+| titles | titles | stringset | 2023-01-05T05:53:06Z | true | ranked | 50000 | 0 | 0 | 0 |  | 0 |  | 0s |

@@ -9,29 +9,55 @@ has_toc: false
 # FeatureBase Community
 {: .no_toc }
 
-FeatureBase Community is open source and available to install:
-* natively on Linux or Mac environments
-* Windows via the Linux Virtual Machine
+FeatureBase Community can be deployed on multiple environments and regionally and includes the following features:
+* a web-based GUI with query builder and monitoring
+* command-line import from CSV, SQL or Kafka data sources
+* command-line backup and restore
+
+Organizations can setup remote monitoring with DataDog or Prometheus metrics
 
 {% include page-toc.md %}
 
-## Summary of features
+## Architecture diagram
 
-FeatureBase Community has the following benefits
-* can be deployed on multiple environments and regionally
-* import data using CSV, SQL or Kafka
-* built-in SQL query UI
-* command-line backup and restore
-* Monitoring UI
-* Prometheus metrics
+![FeatureBase Network Architecture Diagram](/assets/images/community/featurebase-architecture-diagram.png "FeatureBase Network Architecture Diagram")
 
-## License
+## Importing data using Ingesters
 
-FeatureBase Community can be used under the Apache 2.0 license
+* [Learn about importing data to FeatureBase Community](/docs/community/com-ingest/com-ingest-manage)
 
-* [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
+## Observability
 
-## System requirements
+FeatureBase community supports:
+
+* [Datadog monitoring](/docs/community/com-monitoring/old-datadog)
+* Prometheus
+
+## FeatureBase nodes
+
+FeatureBase Community is a masterless multi-node system with a single node type.
+
+Like other common distributed data stores, it supports:
+* high availability (via shard replication)
+* cluster resizing
+* distributed query processing
+
+## Default Ports
+
+By default, FeatureBase uses the following ports:
+
+| Port | Used for | Required? | Further information |
+|---|---|---|
+| 10101 | FeatureBase UI, HTTP(S) queries, SQL queries | Yes | [HTTPS endpoint](/docs/community/com-api/old-http-endpoint) |
+| 10301 | Cluster membership | For clustering | [embedded etcd](https://pkg.go.dev/github.com/coreos/etcd/embed) |
+| 10401 | Cluster schema | For clustering | [embedded etcd](https://pkg.go.dev/github.com/coreos/etcd/embed) |
+| 20101 | gRPC, Python library | Yes | [gRPC API](/docs/community/com-api/old-grpc-api) |
+
+{: .note}
+>Default ports can be changed in the `featurebase.conf` file.
+>[Learn more about FeatureBase Configuration](/docs/community/com-config/com-config-home)
+
+## Installation requirements
 
 The FeatureBase Community application requires:
 
@@ -39,11 +65,18 @@ The FeatureBase Community application requires:
 * nMB RAM
 * 175MB Disk (not including data)
 
+[Learn more about FeatureBase system requirements](/docs/community/com-config/old-size-featurebase-database)
+
 ## Install FeatureBase Community
 
-* [Install on Linux](/docs/community/com-install-linux)
-* [Install on Mac](/docs/community/com-install-mac)
-* [Install on Windows](/docs/community/com-install-windows)
+FeatureBase Community can be used under the [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
+
+| Supported operating system | Further information |
+|---|---|
+| Linux | [Install on Linux](/docs/community/com-install-linux) |
+| Apple Macintosh | [Install on Mac](/docs/community/com-install-mac) |
+| Windows Subsystem for Linux | [Install on Windows](/docs/community/com-install-windows) |
+| All | [FeatureBase Docker setup](https://www.featurebase.com/blog/featurebase-with-a-simple-docker-deployment){:target="_blank"} |
 
 ## Troubleshooting
 

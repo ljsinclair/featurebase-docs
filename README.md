@@ -1,28 +1,35 @@
-# SITE BUILD
+# FeatureBase Docs
+This repository is hosted with GitHub pages with the live site found at: https://docs.featurebase.com.
+
+## SITE BUILD
 
 [![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
-## Site GitHub pages settings
+### Site GitHub pages settings
+
+This repository uses the [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme and builds using the `gh-pages` branch
 
 * [Theme setup and GH pages build settings](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#publishing-your-site-on-github-pages)
 
-## Deploy using Github actions
+### Deploy using Github actions
 
 featurebase-docs > Actions > Deploy Jekyll site to Pages > Re-run all jobs
 
 Site build URL: https://featurebasedb.github.io/featurebase-docs/
 
-## Change CNAME records
+### Change CNAME records
 
 Point featurebase.com to new featurebase-docs GitHub pages site
 
 * featurebase-docs > Settings > Pages > Custom Domain
 * add `docs.featurebase.com`
-* change CNAME records in domain cpanel to point to
+* change CNAME file in repository to `docs.featurebase.com`
 
-## Site documentation
+## Docs documentation
 
-Site documentation found under `/help-on-help` folder in the `/featurebase-docs` root. This includes:
+> I don't like how meta this is getting, Rick...
+
+Documentation, help, and guides for using FeatureBase docs can be found under `/help-on-help` folder in the `/featurebase-docs` root. This includes:
 
 * two ways to build the site locally
 * two ways to check for broken links

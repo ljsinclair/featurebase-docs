@@ -10,23 +10,27 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /sql-guide/sql-guide-before-begin.md %}
 
+## Unary Operators
 
-## unary_op
-![expr](/assets/images/sql-guide/unary_op.svg)
+### Sign
 
-| Operator | Description | Examples | Binary representation | Binary Result |
+| Operator | Description | Example | Result |
+|:---:|---|---|---|
+| `+` or `-` | apply a sign to a numeric data type | `SELECT -1` | -1 |
+
+### Bitwise
+
+| Operator | Description | Example | Binary representation | Binary Result |
 |:---:|---|---|---|---|
-| `!` | **Not** inverts all the bits of the operand. | `SELECT !5;` | `101` | `010` |
-| `+` or `-` | Change the leading **sign** bit for the operand. | `SELECT -1` | `10001` | `00001` |
+| `!` | **Not** inverts all the bits of the operand using [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) | `SELECT !5;` | `0101` | `1010` --> `(-8)+(0)+(2)+(0) = -6`|
 
-## binary_op
-![expr](/assets/images/sql-guide/binary_op.svg)
+## Binary Operators
 
 ### Logical
 
-| Operator | `WHERE` condition returns **true** when... | Examples |
+| Operator | WHERE condition returns **true** when... | Examples |
 |:---:|---|---|
 | `=` | **both** operands are equal. | `select _id from products WHERE price = 52.50;` |
 | `!=` | **both** operands are **not** equal. | `select stock from products WHERE price != 0.50;` |
@@ -39,7 +43,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ### Comparison
 
-| Operator | `WHERE` condition returns **True** when... | Examples |
+| Operator | WHERE condition returns **True** when... | Examples |
 |:---:|---|---|
 | `<` | the operand on the left is **less than** the operand on the right. | `SELECT 1 WHERE 10 < 100;` |
 | `>` | the operand on the left is **greater than** the operand on the right. | `SELECT 1 WHERE 10 > 1;` |
@@ -76,4 +80,3 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 FeatureBase also supports standard operators:
 
 * [SQL IN operator](https://www.w3schools.com/Sql/sql_in.asp){:target="_blank"}
-*

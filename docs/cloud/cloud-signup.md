@@ -3,7 +3,7 @@ title: Signup to cloud
 layout: default
 parent: Cloud
 has_children: false
-nav_order: 1
+nav_order: 2
 ---
 
 # How do I signup to FeatureBase Cloud?
@@ -16,13 +16,11 @@ Sign up to FeatureBase cloud using these instructions.
 ## Before you begin
 
 * [Learn more about FeatureBase cloud](/docs/cloud/cloud-home)
-* [Learn about the 21 day trial period](/docs/cloud/cloud-home#cloud-trial)
+* [Learn about the trial](/docs/cloud/cloud-home#cloud-trial)
 * [Read the terms of service](https://www.featurebase.com/cloud-terms)
 * Have contact details and a password ready
 
 ## Signing up for Featurebase cloud
-
-This is a 21 day trial period
 
 1. Click [Sign up for cloud trial](https://cloud.featurebase.com/signup){:target="_blank"}
 2. Complete the form then click **Next**

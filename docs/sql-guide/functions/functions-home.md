@@ -12,6 +12,10 @@ has_toc: false
 
 {% include page-toc.md %}
 
+## Before you begin
+
+{% include /sql-guide/sql-guide-before-begin.md %}
+
 <!--copied from sql-operators-home because seems relevant-->
 ## Function call operator
 
@@ -44,3 +48,4 @@ has_toc: false
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [RTRIM()](/docs/sql-guide/functions/function-rtrim)
 * [LTRIM()](/docs/sql-guide/functions/function-ltrim)
+* [STR()](/docs/sql-guide/functions/function-str)

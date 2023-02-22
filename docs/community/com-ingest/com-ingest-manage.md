@@ -21,6 +21,13 @@ This overview explains the process of importing data to FeatureBase using three 
 
 {% include /community/com-before-begin-source.md %}
 
+## What are ingesters?
+
+Ingesters are used to:
+* retrieve data from a specified upstream data source
+* transform the data to the FeatureBase bit-columnar format
+* write that data to target database tables.
+
 ## Perform data modeling
 
 {% include /concepts/summary-data-modeling.md %}
@@ -43,6 +50,13 @@ Refer to these reference files for information on how to setup and import data u
 
 ## Kafka import method
 
+The Kafka Ingester reads messages from a Kafka topic and can interact with a Confluent Schema Registry to determine:
+* the message schema
+* inform specific field types used in FeatureBase tables
+
+<!-- content taken from old-architecture
+For the Kafka ingester, those options include the address of the Kafka service as well as any authentication parameters, the topic from which to read, and the address of the schema registry.
+-->
 <!-- Coming in future PR where I document these
 ## Next step
 * [Query data using SQL]

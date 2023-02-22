@@ -6,18 +6,18 @@ grand_parent: Cloud
 nav_order: 2
 ---
 
-# Issue - Limit reached when creating databases and ingesting data
+# Issue - Limit reached when creating databases
 
-This error may occur when running FeatureBase Cloud on a trial account.
+This error will occur when trying to create more than 5 databases
 
 ## Cause
 
-{% include /cloud/trial-account-limits.md %}
+The FeatureBase team has implemented this limit to protect your account from charges from accidental provisioning of databases.
 
 ## Solution
 
-You can delete an existing database/data-source, or upgrade to a paid account.
+You can delete an existing database or contact us about increasing this limit
 
 ## Further information
 
-{% include contact-support.md %} to discuss upgrading your account.
+* {% include contact-support.md %} to discuss upgrading your account.

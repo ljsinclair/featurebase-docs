@@ -2,7 +2,7 @@
 title: Query data
 layout: default
 parent: Cloud
-has_children: true
+has_children: false
 nav_order: 6
 has_toc: false
 ---
@@ -10,8 +10,35 @@ has_toc: false
 # How do I query data in FeatureBase Cloud?
 {: .no_toc }
 
-Introduction here
-
 {% include page-toc.md %}
 
 ## Before you begin
+
+{% include /cloud-db/cloud-db-dependencies.md %}
+* [Learn how to import data to FeatureBase](/docs/cloud/cloud-ingest/cloud-ingest-manage)
+* [Learn about PQL](/docs/pql-guide/pql-home)
+* [Learn about supported SQL](/docs/sql-guide/sql-guide-home)
+
+## About the query endpoint
+
+The current query endpoint is a synchronous call that waits for your data to return. There are current limitations to the amount of data that can be returned and the amount of time the query can run. Those limits are shown below:
+
+|Category (Exclusive) | Limit  |
+| --- | ----------- |
+|Execution Time Limit        | 4000 sec|
+
+You will receive an error ("Network Error") if a limit is exceeded.
+
+## Executing A Query
+
+In the User interface, clicking the “Query” section on the left hand navigation bar will take you to a page where you can explore data using PQL & SQL statements. The text editor allows for multiple queries to exist in the same pane. Individual queries are separated by newlines with only whitespace. You should first pick a database to query against in the top right corner. This will default to the oldest database created. You can redirect any query to a particular database by aliasing/prepending it with `“{<database name>}”`. Queries can be run by either clicking the run button or with a key combination of `“Ctrl + Enter"` or `Cmd + Enter"`.
+
+Queries in the user interface have an automatic limit of 100 records applied but can be adjusted up to a 10k maximum. This limit is to protect users from accidentally running taxing queries against their databases and impacting production performance. After running a query, you will see data populated in a tabular format below the text editor. You are free to explore your data and sort it by the columns returned. If you’d like to hide some of the returned columns, you can click “Columns” directly above the tabular results. You can also export this data to your local machine by clicking “Export” and either downloading a CSV or printing the results.
+
+The query browser also allows users to browse their tables and schemas for easy reference to the tables and columns they can query. Click on `Schema Browser` at the top of the text editor to see a searchable list of all of your tables. Click on a table to have a searchable list of all the columns in that table populate. This feature allows you to easily pull up the tables and columns that you can query. Please note, this is populated based on the database you selected in the top right corner of the screen. You may also click `CREATE SELECT STATEMENT` here to have a SELECT statement with all columns pasted into the text editor.
+
+Additionally, you can see, search for, and re-run your historical queries. Click `History` at the top of the text editor to see a searchable list of all of your past queries with the most recent shown at the top. This will display the query, the execution time, the rows returned, and when it was run. The color next to each query signifies if the query execution was successful (green), unsuccessful (red), or still running (blue). Clicking on a query will give you two options. You can “replay” a query by clicking on the play button. This will create a new query entry at the top of your history. You can also copy the full query to your clipboard by clicking the copy button. Note that your query history is private to you and can be lost if you clear your browser cache.
+
+## Further information
+* [SQL API Reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/querySqlDatabase)
+* [SQL PQL Reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/queryPqlDatabase)
