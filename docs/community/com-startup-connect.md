@@ -25,13 +25,23 @@ FeatureBase does not currently run on Mac Safari
 
 ## How do I start the FeatureBase Community server?
 
-1. Login to the system
-2. Open a terminal window and cd to the folder
-2. Execute these commands in a terminal window:
+* Open a terminal
+* CD to the `~/featurebase/opt` directory
+* Run the following command:
 
 ```
-CD /featurebase/opt
 ./featurebase server
+```
+
+## Confirm FeatureBase server is running
+
+{: .note}
+localhost:10101 is the default port for the FeatureBase Community GUI. This can be changed in configuration settings.
+
+Run this command from any directory FeatureBase has been installed.
+
+```
+curl localhost:10101
 ```
 
 ## How do I connect to FeatureBase community?

@@ -41,3 +41,7 @@ Run this command:
 ```
 bundle exec jekyll serve
 ```
+
+## Further information
+
+* [Check for broken links](https://github.com/FeatureBaseDB/featurebase-docs/blob/main/help-on-help/broken-link-check.md)
