@@ -7,8 +7,21 @@ nav_order: 4
 ---
 
 # BULK INSERT statement
+{: .no_toc }
 
-BULK INSERT data from CSV, NDJSON, URL or streaming sources to a target FeatureBase table.
+BULK INSERT is allows for lightweight data transformation from source to target in one request.
+
+Sources can include:
+* file
+* URL
+* inline blob
+
+Supported formats include:
+* CSV
+* PARQUET
+* NDJSON
+
+{% include page-toc.md %}
 
 ## BNF diagrams
 
@@ -42,7 +55,11 @@ BULK INSERT
       [BATCHSIZE integer_literal]
       [ROWSLIMIT integer_literal]
       [INPUT ['path/file_name' | 'URL' | 'STREAM']]
-      [FORMAT ['CSV' [HEADER_ROW]] | ['NDJSON' [ALLOW_MISSING_VALUES]]]
+      [FORMAT
+        ['CSV' [HEADER_ROW]] |
+        ['NDJSON' [ALLOW_MISSING_VALUES]] |
+        ['PARQUET']
+      ]
       ...
     ]
 ```
@@ -61,13 +78,13 @@ BULK INSERT
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
-| `'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option | Required for STREAM |  |
-| `'STREAM'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'` | [STREAM quotation marks](#using-stream-with-quotation-marks) |
+| `x'records'` | CSV or NDJSON records as a string literal. | Required for STREAM | Not supported for `FORMAT 'PARQUET'` |
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
-| `INPUT` | Set the type of input to `'FILE'`, `'URL'` or `'STREAM'`. | Optional but **must** match that used in `FROM` clause |  |
-| `FORMAT` | Set the format of the source data to `'CSV'` or `'NDJSON'`. | Optional |  |
+| `INPUT` | Input values must match those used in the `FROM` clause |  |  |
+| `'STREAM'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [STREAM quotation marks](#using-stream-with-quotation-marks) |
+| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (STREAM)` |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. | Optional |  |
 
@@ -89,6 +106,7 @@ The number of expressions in the column list and TRANSFORM clause must match.
 |---|---|---|
 | CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |
 | NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) |
+| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | `MAP ('id' id, 'intval' int, 'decval' decimal(4), 'stringval' string)`` |
 
 ### TRANSFORM examples
 
@@ -158,6 +176,20 @@ with
     input 'FILE';
 ```
 -->
+
+### Bulk insert statement that reads from a CSV file
+
+```sql
+bulk replace
+    into insert_test (_id, int1, string1, timestamp1)
+    map (0 id, 1 int, 2 string)
+    transform (@0, @1, @2, current_timestamp)
+from
+    '/dev/queries/insert_test.csv'
+with
+    format 'CSV'
+    input 'FILE';
+```
 
 ## Further information
 

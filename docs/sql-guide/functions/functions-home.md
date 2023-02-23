@@ -16,7 +16,6 @@ has_toc: false
 
 {% include /sql-guide/sql-guide-before-begin.md %}
 
-<!--copied from sql-operators-home because seems relevant-->
 ## Function call operator
 
 ![expr](/assets/images/sql-guide/function_call.svg)
@@ -40,12 +39,17 @@ has_toc: false
 ## String scalar functions
 
 * [ASCII()](/docs/sql-guide/functions/function-ascii)
-* [REVERSE()](/docs/sql-guide/functions/function-reverse)
-* [SUBSTRING()](/docs/sql-guide/functions/function-substring)
-* [UPPER()](/docs/sql-guide/functions/function-upper)
-* [STRINGSPLIT()](/docs/sql-guide/functions/function-stringsplit)
-* [REPLACEALL()](/docs/sql-guide/functions/function-replaceall)
-* [TRIM()](/docs/sql-guide/functions/function-trim)
-* [RTRIM()](/docs/sql-guide/functions/function-rtrim)
+* [CHAR()](/docs/sql-guide/functions/function-char)
+* [CHARINDEX()](/docs/sql-guide/functions/function-charindex)
+* [FORMAT()](/docs/sql-guide/functions/function-format)
+* [LEN()](/docs/sql-guide/functions/function-len)
 * [LTRIM()](/docs/sql-guide/functions/function-ltrim)
+* [REPLACEALL()](/docs/sql-guide/functions/function-replaceall)
+* [REVERSE()](/docs/sql-guide/functions/function-reverse)
+* [RTRIM()](/docs/sql-guide/functions/function-rtrim)
 * [STR()](/docs/sql-guide/functions/function-str)
+* [STRINGSPLIT()](/docs/sql-guide/functions/function-stringsplit)
+* [SUBSTRING()](/docs/sql-guide/functions/function-substring)
+* [TRIM()](/docs/sql-guide/functions/function-trim)
+* [UPPER()](/docs/sql-guide/functions/function-upper)
+

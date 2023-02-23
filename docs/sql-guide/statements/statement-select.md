@@ -176,9 +176,9 @@ SELECT fld, count(*) FROM tbl GROUP BY fld
 SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2
 SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2 LIMIT 1
 SELECT fld1, fld2, count(*) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
-SELECT fld1, count(*) FROM tbl GROUP BY fld1 having count > 1
+SELECT fld1, count(*) FROM tbl GROUP BY fld1 having count(*) > 1
 SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
-SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 having count > 1
+SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 having count(*) > 1
 SELECT fld, count(fld) FROM tbl GROUP BY fld
 SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 ```
