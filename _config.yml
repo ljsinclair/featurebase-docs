@@ -17,7 +17,9 @@ url: https://github.com/FeatureBaseDB/featurebase-docs
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 
 # Exclude folders from build
-exclude: [/help-on-help]
+exclude:
+  - help-on-help
+  - node_modules
 
 # Top of page nav
   # Makes Aux links open in a new tab. Default is false
@@ -27,6 +29,7 @@ aux_links:
   Featurebase home: https://featurebase.com
   Glossary: /docs/concepts/glossary
   API docs: https://api-docs-featurebase-cloud.redoc.ly/
+  Docs on GitHub: https://github.com/FeatureBaseDB/featurebase-docs
   Contact us: https://www.featurebase.com/contact-us
 
 # permalink info found on https://jekyllrb.com/docs/permalinks/

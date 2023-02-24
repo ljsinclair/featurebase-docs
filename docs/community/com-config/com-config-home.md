@@ -4,17 +4,25 @@ layout: default
 parent: Community
 has_children: true
 nav_order: 8
-has_toc: false
+has_toc: true
 ---
+
+## Configure FeatureBase Community
+{: .no_toc }
 
 FeatureBase features can be enabled or disabled via
 
 * Command-line flags
 * TOML files
 
+<!-- commented out because waiting for PR to be approved and merged
+
+{% include page-toc.md %}
+
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
+
 
 ## How do I setup a FeatureBase cluster?
 
@@ -53,8 +61,6 @@ Use the following checklist to verify backups function correctly.
 ## How do I restore a FeatureBase cluster?
 
 * [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore)
-
-<!-- requires content in com-config-auth branch and PR
 
 ## End-to-end backup and restore process
 

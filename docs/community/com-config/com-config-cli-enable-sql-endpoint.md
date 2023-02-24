@@ -1,11 +1,11 @@
 ---
-title: SQL Endpoint
+title: FeatureBase SQL CLI
 layout: default
 parent: Community configuration
 grand_parent: Community
 ---
 
-# SQL Endpoint
+# FeatureBase SQL Command Line Interface (CLI)
 
 The SQL endpoint allows you to execute SQL statements:
 * on the command-line
@@ -13,23 +13,26 @@ The SQL endpoint allows you to execute SQL statements:
 
 ## Before you begin
 
+* [Start the FeatureBase Community server](/docs/community/com-startup-connect) with the `--sql.endpoint-enabled` flag
 * CD to the `/featurebase/opt` directory
 
-## Enable SQL endpoint on the command line
+## Start the FeatureBase SQL CLI
 
-* Run the following command:
-
-```
-./featurebase cli
-```
-
-## View FeatureBase SQL CLI commands
-
-* Run the following command:
+{: .note}
+The `--help` flag gives a full list of flags
 
 ```
-./featurebase cli --help
+./featurebase cli [--help]
 ```
+
+## FeatureBase SQL CLI flags
+
+These flags can be used within the CLI.
+
+| Flag | Description |
+|---|---|
+| `\?` | Get help |
+| `\q` | Quit the CLI and return to the terminal |
 
 ## Further information
 

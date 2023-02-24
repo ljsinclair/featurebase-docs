@@ -30,7 +30,7 @@ FeatureBase does not currently run on Mac Safari
 * Run the following command:
 
 ```
-./featurebase server
+./featurebase server --sql.endpoint-enabled
 ```
 
 ## Confirm FeatureBase server is running

@@ -62,7 +62,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community |
 |---|---|---|
-| Backup and Restore | No | [Community backup and restore](/docs/community/com-config/old-backups) |
+| Backup and Restore | No | [Community backup and restore](/docs/community/com-config/com-config-backup) |
 | Data Replication | Yes | Yes |
 | Metrics & Monitoring | No | [Community metrics & monitoring](/docs/community/com-monitoring/com-monitoring-home) |
 | Editable FeatureBase Config File | No | Yes |
@@ -78,9 +78,14 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
 | Audit Logging | Yes | Yes |   |
 
-## Next Step
+## How do I setup FeatureBase Cloud?
 
-You can choose to setup a cloud account, or install FeatureBase on a local server.
+Follow these instructions which will guide you through the setup process:
 
 * [Setup your FeatureBase cloud account](/docs/cloud/cloud-home)
+
+## How do I install FeatureBase Community?
+
+Follow these instructions to learn about system requirements and how to install FeatureBase on your operating system.
+
 * [Install FeatureBase Community locally](/docs/community/com-home)
