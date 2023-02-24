@@ -6,9 +6,9 @@ has_children: false
 nav_order: 2
 ---
 
-# How do I install FeatureBase Community on MacOS?
+# How do I install FeatureBase Community on macOS?
 
-Follow these instructions to install FeatureBase on a MacOS environment.
+Follow these instructions to install FeatureBase on a macOS environment.
 
 {% include /page-toc.md %}
 
@@ -16,11 +16,11 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
 
-## Install FeatureBase
+## Install FeatureBase on macOS
 
 {% include /com-install/com-install-linux-source.md %}
 
-## Authorize FeatureBase with MacOS Gatekeeper system
+## Authorize FeatureBase with macOS Gatekeeper system
 
 {% include /com-install/com-issue-mac-gatekeeper-source.md %}
 

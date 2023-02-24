@@ -18,12 +18,12 @@ In this demonstration you will:
 3. Restore two large-scale datasets into FeatureBase
 4. Run a set of analytics queries
 
->If you run into any roadblocks or have questions throughout the demonstration, please reach out to your FeatureBase representative or email se@featurebase.com.
+>If you run into any roadblocks or have questions, please join our [Discord](https://discord.gg/featurefirstai).
 
 ## Download FeatureBase Binary
 To download releases of FeatureBase, you must have a github account.
 
-You can see the latest FeatureBase release [here](https://github.com/FeatureBaseDB/featurebase/releases/latest)
+You can see the latest FeatureBase release [here](https://github.com/FeatureBaseDB/featurebase/releases/latest).
 
 >Please note that by downloading FeatureBase you agree to the [License](https://github.com/FeatureBaseDB/featurebase/blob/master/LICENSE-2.0.txt) and to receive occasional marketing emails from the FeatureBase team. You also understand that we will process your personal information in accordance with our [Privacy Policy](https://www.featurebase.com/privacy-policy/).
 
@@ -38,7 +38,7 @@ if there is a way to get this generic, please update! Seems like github as of 9/
 **Example for linux arm64:**
 
 ```
-wget https://github.com/FeatureBaseDB/featurebase/releases/latest/download/featurebase-community-v1.0.0-linux-arm64.tar.gz
+wget https://github.com/FeatureBaseDB/featurebase/releases/latest/download/featurebase-v3.32.0-linux-arm64.tar.gz
 ```
 
 
@@ -57,14 +57,14 @@ Next, extract the ```.tar.gz file``` , copy the FeatureBase binary located in th
 
 For the MacOS AMD64 Version:
 ```
-tar -zxvf featurebase-community-v1.0.0-darwin-amd64.tar.gz
-sudo cp ~/Downloads/featurebase-v3.20.0-darwin-amd64/featurebase /usr/local/bin/
+tar -zxvf featurebase-v3.32.0-darwin-amd64.tar.gz
+sudo cp ~/Downloads/featurebase-v3.32.0-darwin-amd64/featurebase /usr/local/bin/
 chmod ugo+x /usr/local/bin/featurebase
 ```
 For the MacOS ARM64 Version:
 ```
-tar -zxvf featurebase-community-v1.0.0-darwin-arm64.tar.gz
-sudo cp ~/Downloads/featurebase-v3.20.0-darwin-arm64/featurebase /usr/local/bin/
+tar -zxvf featurebase-v3.32.0-darwin-arm64.tar.gz
+sudo cp ~/Downloads/featurebase-v3.32.0-darwin-arm64/featurebase /usr/local/bin/
 chmod ugo+x /usr/local/bin/featurebase
 ```
 >**Note:** The copy or cp command above moves the FeatureBase binary to ```/usr/local/bin/```.
@@ -140,9 +140,9 @@ First, download the appropriate binary for your system [here](https://github.com
 Next, extract the ```.tar.gz file``` , copy the featurebase binary located in the ```featurebase=<version_architecture>/``` directory in the extract to your ```/usr/local/bin folder```, and make it executable.
 
 ```
-tar -zxvf featurebase-community-v1.0.0-linux-arm64.tar.gz
-chmod +x featurebase-v3.20.0-linux-arm64/featurebase
-sudo cp featurebase-v3.20.0-linux-arm64/featurebase /usr/local/bin
+tar -zxvf featurebase-v3.32.0-linux-arm64.tar.gz
+chmod +x featurebase-v3.32.0-linux-arm64/featurebase
+sudo cp featurebase-v3.32.0-linux-arm64/featurebase /usr/local/bin
 ```
 
 >**Note:** The copy or ```cp``` command above moves the ```featurebase``` binary to /usr/local/bin/. Ensure this folder is in your path variable by, running ```echo $PATH``` in the command line and confirming ```/usr/local/bin/``` is there. If it's not, run ```export PATH=$PATH:/usr/local/bin``` to append it to your path variable.
