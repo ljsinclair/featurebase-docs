@@ -40,7 +40,7 @@ Note: In order for TLS to be used, the various TLS options need to be set, but e
 | tls.key                        | string  | Path to TLS key file. |
 | tls.skip-verify                | bool    | Skip verification of server certs. |
 | verbose                        | bool    | Enable verbose logging. |
-| auth-token					 | string  | JWT authentication token obtained by following these [instructions](/docs/community/com-auth/old-auth-enable#how-to-get-auth-token) |
+| auth-token					 | string  | JWT authentication token obtained by following these [instructions](/docs/community/com-config-auth/com-config-auth-token) |
 
 
 ## Kafka Delete Ingester
