@@ -47,7 +47,7 @@ You can enable TLS authentication for FeatureBase Community by adding values to 
 | `scopes` | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
 | `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate an authentication key](/docs/community/com-config-auth/com-config-auth-key) |
 | `query-log-path` | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config/com-config-log-audit-query) |
-| `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config/com-config-group-permissions) |
+| `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions) |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list. Domain names and `0.0.0.0/0` are not allowed. If not included or not set, no IPs are allow-listed. | Optional |  |
 
 ## Examples
@@ -62,4 +62,4 @@ scopes = ["https://graph.microsoft.com/.default", "offline_access"]
 
 ## Next step
 
-* [Add group permissions](/docs/community/com-config/com-config-group-permissions)
+* [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions)
