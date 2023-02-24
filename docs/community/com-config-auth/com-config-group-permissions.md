@@ -1,0 +1,51 @@
+---
+title: Authentication groups
+layout: default
+parent: Community authentication
+grand_parent: Community
+---
+
+# How do I setup authentication groups?
+
+A permissions file must be created when authentication is configured for FeatureBase Community.
+
+The permissions file:
+* maps the identity provider (IdP) group IDs to read/write permissions to specified FeatureBase indexes
+* has one group ID for cluster-level administration access.
+
+Users cannot authenticate with FeatureBase if they do not belong to a group, or the group has no permissions granted to FeatureBase indexes.
+
+## Before you begin
+
+* {% include /com-install/com-install-before-begin.md %}
+* [Configure TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* Create `permissions.yaml` in `/<featurebase-install-directory/opt/`
+
+## Permissions syntax
+```
+user-groups:
+"<group-id1>":
+    "<index1>": "<write>"
+    "<index2>": "<read>"
+"<group-id2>":
+    "<index1>": "<read>"
+admin: "<groupd-id3>
+```
+
+## Parameters
+
+| Parameter | Description |
+|---|---|
+| `<group-id1>` | name of equivalent group in IdP. |
+| `<index-n>` | FeatureBase index to grant as read/write to the group. |
+| `admin` | Designated administrator group. |
+
+## Additional information
+
+* Restart FeatureBase Community if you make alterations to the permissions file
+
+{% include /com-config-auth/com-config-group-tls-additional.md %}
+
+## Next step
+
+* [Update Featurebase configuration](/docs/community/com-config-auth/com-config-tls-auth)

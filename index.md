@@ -75,7 +75,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 |---|---|---|---|
 | Encryption In Flight | Yes | Yes |  |
 | Encryption at Rest | Yes | Yes |   |
-| Authentication + Authorization (OAuth) | Yes | [Community authentication](/docs/community/com-auth/com-auth-home) |  |
+| Authentication + Authorization (OAuth) | Yes | [Community authentication](/docs/community/com-config-auth/com-config-auth-home) |  |
 | Role-Based Access Control (Basic) | [Cloud user roles](/docs/cloud/cloud-users/cloud-ref-user-roles) | Yes |   |
 | User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
 | Audit Logging | Yes | Yes |   |
