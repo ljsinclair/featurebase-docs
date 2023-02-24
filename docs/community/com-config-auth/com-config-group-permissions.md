@@ -42,7 +42,7 @@ admin: "<groupd-id3>
 
 ## Additional information
 
-* Restart FeatureBase Community if you make alterations to the permissions file
+* Restart the FeatureBase Community server if you make alterations to the permissions file
 
 {% include /com-config-auth/com-config-group-tls-additional.md %}
 
