@@ -17,7 +17,7 @@ Follow these instructions to install FeatureBase on a Linux environment.
 
 ## Install FeatureBase on Linux
 
-{% include /community/com-install-linux-source.md %}
+{% include /com-install/com-install-linux-source.md %}
 
 ## Next step
 

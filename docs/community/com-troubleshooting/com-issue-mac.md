@@ -23,4 +23,4 @@ This may be caused by the MacOS Gatekeeper system
 
 ## Solution
 
-{% include /community/com-issue-mac-gatekeeper-source.md %}
+{% include /com-install/com-issue-mac-gatekeeper-source.md %}

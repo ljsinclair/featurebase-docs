@@ -7,24 +7,33 @@ nav_order: 3
 ---
 
 # How do I install FeatureBase Community on Windows?
+{: .no_toc }
 
-Follow these instructions to setup your Windows environment to install FeatureBase Community.
+Install FeatureBase Community in a Windows environment by setting up:
+* a Linux Virtual Machine, or
+* Windows Subsystem for Linux
 
 {% include /page-toc.md %}
-
-FeatureBase is a Linux application which does not run natively on Windows operating systems. Therefore you must install a hypervisor on the target system before installing FeatureBase.
 
 ## Before you begin
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
-* [Setup Windows Hyper-V and install Ubuntu Linux](https://wiki.ubuntu.com/Hyper-V) OR
+
+## Setup a Virtual Machine
+
+Setup Windows Hyper-V or VirtualBox with a Linux operating system.
+
+* [Setup Windows Hyper-V and install Ubuntu Linux](https://wiki.ubuntu.com/Hyper-V)
 * [Install Ubuntu on VirtualBox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview)
 
+## Setup Windows Subsystem for Linux
 
-## Install FeatureBase community on the virtual environment
+Alternatively you can setup WSL and install Linux.
 
-{% include /community/com-install-linux-source.md %}
+* [Install Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install){:target="_blank"}
+* [Learn how to setup the Windows Subsystem for Ubuntu Linux](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview){:target="_blank"}
+* [Install Windows terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-ca&gl=ca){:target="_blank"} to access multiple WSL terminals and execute CLI commands on a running server.
 
 ## Next step
 
-* [Startup and connect to FeatureBase](/docs/community/com-startup-connect)
+* [Install FeatureBase on Linux](/docs/community/com-install-linux)

@@ -16,16 +16,14 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
 
-## Install FeatureBase on Linux
+## Install FeatureBase
 
-{% include /community/com-install-linux-source.md %}
+{% include /com-install/com-install-linux-source.md %}
 
 ## Authorize FeatureBase with MacOS Gatekeeper system
 
-{% include /community/com-issue-mac-gatekeeper-source.md %}
+{% include /com-install/com-issue-mac-gatekeeper-source.md %}
 
 ## Next step
 
 * [Startup and connect to FeatureBase](/docs/community/com-startup-connect)
-
-## Further information

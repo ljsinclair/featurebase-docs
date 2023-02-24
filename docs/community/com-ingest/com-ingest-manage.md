@@ -19,7 +19,7 @@ This overview explains the process of importing data to FeatureBase using three 
 
 ## Before you begin
 
-{% include /community/com-before-begin-source.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 ## What are ingesters?
 
