@@ -30,7 +30,12 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 ## Syntax
 
 ```
-featurebase auth-token --[<flags>]
+featurebase auth-token
+  [
+    [--h | --help]
+    [--host string `hostname`]
+    [<tls-authentication-flags>]
+  ]
 ```
 
 ## Flags
@@ -38,7 +43,8 @@ featurebase auth-token --[<flags>]
 | Flag | Data type | Description | Default | Required | Further information |
 | `h` or `help` |  | Auth token help |  | Optional |  |
 | `host string` |  | HTTPS host string `featurebase-host:port` |  | Yes | Default: `https://localhost:10101` |
-{% include /com-ingest/flag-common-tls.md%}
+
+{% include /community/com-flag-common-tls.md%}
 
 ## Obtain tokens from the lattice UI
 

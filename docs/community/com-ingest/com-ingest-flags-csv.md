@@ -21,14 +21,15 @@ Once your CSV file(s) are constructed, they can be ingested by FeatureBase using
 ## Syntax
 
 ```
-molecula-consumer-csv \
-  <common-flags>      \
-  <csv-flags>         \
-  <id-flags>          \
-  <error-flags>       \
-  <log-stat-flags>    \
-  <testing-flags>     \
-  <auth-flags>        \
+molecula-consumer-csv         \
+  <common-flags>              \
+  <csv-flags>                 \
+  <id-flags>                  \
+  <error-flags>               \
+  <log-stat-flags>            \
+  <testing-flags>             \
+  <auth-token-flags>          \
+  <tls-authentication-flags>  \
 ```
 
 {% include /com-ingest/com-ingest-flag-common.md %}
@@ -43,7 +44,9 @@ molecula-consumer-csv \
 
 {% include /com-ingest/com-ingest-flag-common-testing.md %}
 
-{% include /com-ingest/com-ingest-flag-csv-sql-auth.md %}
+{% include /com-ingest/com-ingest-flag-auth-token.md %}
+
+{% include /community/com-flag-common-tls.md %}
 
 {% include /com-ingest/com-ingest-flag-extra-auth.md %}
 
