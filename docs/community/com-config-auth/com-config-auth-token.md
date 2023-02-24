@@ -6,6 +6,7 @@ grand_parent: Community
 ---
 
 # How do I obtain authorization tokens?
+{: .no_toc }
 
 An `auth-token` and `refresh-token` is a valid JSON Web Token provided by FeatureBase after the user is authenticated.
 
@@ -19,6 +20,8 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 
 {: .warning}
 **NEVER** share your `auth-token` or `refresh-token`. These identify and authenticate you with FeatureBase and can be misused.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
@@ -61,11 +64,12 @@ featurebase auth-token
 
 -->
 ## Further information
-<!--
-* [Use tokens to authenticate HTTPS API commands]
-* [Use tokens to authenticate gRPC API commands]-->
+
 * [Use tokens to Backup an authenticated FeatureBase cluster](/docs/community/com-config/com-config-backup)
 * [Use an `auth-token` to restore from an authenticated backup](/docs/community/com-config/com-config-restore)
+
 <!--
+* [Use tokens to authenticate HTTPS API commands]
+* [Use tokens to authenticate gRPC API commands]
 * [Use tokens to authenticate the Grafana connector]
 -->

@@ -6,6 +6,7 @@ grand_parent: Community
 ---
 
 # How do I setup mutual TLS authentication?
+{: .no_toc }
 
 FeatureBase is configured with a PEM-encoded TLS keypair and supports Mutual TLS so client server nodes can:
 * cryptographically verify each other
@@ -17,6 +18,8 @@ Enable AES-256 encryption on your FeatureBase cluster by configuring a 32-bit sh
 
 {: .note}
 Internal `etcd` cluster communication does not currently support TLS.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

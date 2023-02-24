@@ -23,7 +23,7 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Learn how to enable authentication](/docs/community/com-config-auth/com-config-authentication)
+* [Learn how to enable authentication](/docs/community/com-config-auth/com-config-tls-auth)
 * Setup a password manager or other safe storage for your tokens
 
 ## Obtain tokens via CLI

@@ -19,7 +19,7 @@ FeatureBase ships with a Python client and CLI which can be used to interact wit
 
 ## HTTP
 
-The HTTP interface is described in some detail in [HTTP API](/community/com-api/old-http-endpoint). Generally, most HTTP endpoints are not needed for normal operations, with the exception of the transaction interface which is used to pause ingestion to take backups. This is documented below.
+The HTTP interface is described in some detail in [HTTP API](/docs/community/com-api/old-http-endpoint). Generally, most HTTP endpoints are not needed for normal operations, with the exception of the transaction interface which is used to pause ingestion to take backups. This is documented below.
 
 ### Transactions
 As of v2.0.0-alpha.17, FeatureBase supports simple transactions.

@@ -6,8 +6,11 @@ grand_parent: Community
 ---
 
 # How do I setup TLS authentication for FeatureBase Community?
+{: .no_toc }
 
+Secure your FeatureBase server with TLS authentication.
 
+{% include page-toc.md %}
 
 ## Before you begin
 

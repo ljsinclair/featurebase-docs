@@ -32,7 +32,7 @@ Stop any jobs that create, alter or delete records before running a backup. Only
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Learn how to setup authentication for FeatureBase Community](/docs/community/com-config-auth/com-config-authentication)
+* [Learn how to setup authentication for FeatureBase Community](/docs/community/com-config-auth/com-config-tls-auth)
 * Obtain Administrator permissions to the FeatureBase cluster
 
 ## Syntax

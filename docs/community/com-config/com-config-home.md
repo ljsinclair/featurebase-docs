@@ -40,8 +40,8 @@ FeatureBase supports authentication and authorization with OAuth2.0 via a config
 
 Azure Active Directory is supported via SAML 2.0
 
-* [Setup Azure AD single sign-on](/docs/community/com-config/com-config-azure-sso)
-* [Setup FeatureBase authentication](/docs/community/com-config-auth/com-config-authentication)
+* [Setup Azure AD single sign-on](/docs/community/com-config-auth/com-config-azure-sso)
+* [Setup FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
 * [Setup FeatureBase group permissions](/docs/community/com-config-auth/com-config-group-permissions)
 
 ## How do I backup a FeatureBase cluster?

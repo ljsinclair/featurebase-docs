@@ -6,6 +6,7 @@ grand_parent: Community
 ---
 
 # How do I setup authentication groups?
+{: .no_toc }
 
 A permissions file must be created when authentication is configured for FeatureBase Community.
 
@@ -14,6 +15,8 @@ The permissions file:
 * has one group ID for cluster-level administration access.
 
 Users cannot authenticate with FeatureBase if they do not belong to a group, or the group has no permissions granted to FeatureBase indexes.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

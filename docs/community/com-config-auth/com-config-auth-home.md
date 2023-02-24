@@ -8,8 +8,11 @@ has_toc: false
 ---
 
 # How do I secure FeatureBase Community?
+{: .no_toc }
 
 FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP). Azure Active Directory is supported.
+
+{% include page-toc.md %}
 
 ## How does the authentication process work?
 

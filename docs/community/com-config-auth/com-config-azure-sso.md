@@ -6,8 +6,11 @@ grand_parent: Community
 ---
 
 # How do I configure FeatureBase as an Azure Active Directory IDP?
+{: .no_toc }
 
 Configure FeatureBase as an Azure Active Directory application Identity Provider (IdP)
+
+{% include page-toc.md %}
 
 ## Before you begin
 
