@@ -7,7 +7,7 @@ grand_parent: Community
 
 # How do I setup TLS authentication for FeatureBase Community?
 
-INTRO TEXT HERE
+
 
 ## Before you begin
 
