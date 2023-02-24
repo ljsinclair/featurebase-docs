@@ -12,7 +12,7 @@ There are two ways to download the release:
 
 | Method | Instructions | Destination |
 |---|---|---|
-| Browser | Download a [releases on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}. | Default downloads directory |
+| Browser | Download a [release on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}. | Default downloads directory |
 | Terminal | Substitute the version, kernel and processor in the following command:<br/>`curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<kernel>-<processor>64.tar.gz -o featurebase.tgz` | featurebase.tgz |
 
 ### Step 2: Untar release files
