@@ -14,7 +14,7 @@ grand_parent: Community
 * [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
 * {% include /com-install/com-install-before-begin.md %}
 * [Generate a `secret-key`](/docs/community/com-config-auth/com-config-auth-key)
-* [Add FeatureBase as an Azure AD application](/docs/community/com-config-aut/com-config-azure-sso)
+* [Add FeatureBase as an Azure AD application](/docs/community/com-config-auth/com-config-azure-sso)
 * [Setup FeatureBase Group permissions](/docs/community/com-config-auth/com-config-group-permissions)
 
 ## FeatureBase configuration file location

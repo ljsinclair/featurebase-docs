@@ -24,13 +24,14 @@ FeatureBase features can be enabled or disabled via
 {% include /com-install/com-install-before-begin.md %}
 
 
+<!--
 ## How do I setup a FeatureBase cluster?
 
 * [Setup a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
-
+-->
 ## How do I generate FeatureBase keys?
 
-* [Generate Featurebase SSH key](/docs/community/com-config/com-config-auth-key)
+* [Generate Featurebase SSH key](/docs/community/com-config-auth/com-config-auth-key)
 * [Generate FeatureBase login auth and refresh tokens](/docs/community/com-config/com-config-auth-token)
 
 ## How do I setup authentication?
@@ -40,7 +41,7 @@ FeatureBase supports authentication and authorization with OAuth2.0 via a config
 Azure Active Directory is supported via SAML 2.0
 
 * [Setup Azure AD single sign-on](/docs/community/com-config/com-config-azure-sso)
-* [Setup FeatureBase authentication](/docs/community/com-config/com-config-authentication)
+* [Setup FeatureBase authentication](/docs/community/com-config-auth/com-config-authentication)
 * [Setup FeatureBase group permissions](/docs/community/com-config/com-config-group-permissions)
 
 ## How do I backup a FeatureBase cluster?
