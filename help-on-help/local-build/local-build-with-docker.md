@@ -5,18 +5,17 @@
 * Install [Docker Desktop](https://www.docker.com/get-started/)
 * [Learn about Docker build](https://docs.docker.com/engine/reference/commandline/build/){:target="_blank"}
 * Open Docker Desktop to start the daemon
+* Verify the following files are in the `/featurebase-docs` root:
+  * Dockerfile
+  * docker-compose.yml
 
 NOTE: There are undoubtedly other methods of setting up Docker, however this way definitely works.
 
 ## Load Docker container from Dockerfile
 
-Perform this action once for each container.
-
-`Dockerfile` and `docker-compose.yml` can be found in the root directory.
-
 NOTE: This process can take some time if starting from scratch or after executing `docker system prune -a`
 
-1. Open a CLI then the `/featurebase-docs` directory
+1. Open a CLI then CD to the `/featurebase-docs` directory
 
 2. Load the container
 
@@ -40,27 +39,18 @@ docker compose up serve
 
 To view the local site on port `4000` head to:
 
-http://localhost:4000/ or
-http://<local-ip>:4000
+* http://localhost:4000/ or
+* http://<local-ip>:4000
 
 ## Editing content
 
-**IMPORTANT** Read the Writing content guidance under this folder.
+Updated content is reloaded automatically on save with the exception of:
+* `/_config.yml`
+* `git pull`
 
-Content is found in the `/docs` and `/_includes` directories.
-
-Edits to these files are loaded automatically by the system.
-
-NOTE: Changes to configuration files such as `/_config.yml` or GIT PULL require the server to be restarted
-
-## Restart the container to make changes
-
-You will need to stop the container:
-* to pull changes from remote
-* when changes are made to configuration files such as `/_config.yml`
-
-* Stop the server with `CTRL+C` on the CLI
-* Serve the container with `docker compose up serve` when you are ready.
+To stop the server
+* Open the CLI where the server is running
+* Press CTRL+C
 
 ## Deleting containers and images
 

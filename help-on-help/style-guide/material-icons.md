@@ -2,11 +2,7 @@
 title: Material Icons
 ---
 
-The Cloud product uses Material Icons. Find the code here:
-
-## Icons
-
-https://mui.com/material-ui/material-icons/
+The Cloud product uses Material Icons.
 
 ## Theme modifications
 
@@ -19,13 +15,19 @@ https://mui.com/material-ui/material-icons/
 * added material icons stylesheet ref to `/_includes/head_custom.html`
 * added material icons stylesheet style to
 
+## Icon source
+
+https://fonts.google.com/icons
+
+**IMPORTANT** Do not use icons from [mui.com](https://mui.com/material-ui/material-icons/) because the codes are **incorrect** and will not render properly.
+
 ## Usage
 
 ```
 <span class="material-icons md-18">icon_name</span>
 ```
 
-## Icons in use
+## Icons used in Cloud and Community GUI
 
 Icon source = [Material icons filled](https://fonts.google.com/icons?icon.style=Filled&icon.set=Material+Icons)
 
@@ -43,3 +45,13 @@ Icon source = [Material icons filled](https://fonts.google.com/icons?icon.style=
 | Grid 3 vertical dot submenu | `<span class="material-icons md-18">more_vert</span>` | <span class="material-icons md-18">more_vert</span> |
 | Query > Run query | `<span class="material-icons md-18">play_circle_filled</span>` | <span class="material-icons md-18">play_circle_filled</span> |
 | Query > History > Folder icon | `<span class="material-icons md-18">folder_open</span>` | <span class="material-icons md-18">folder_open</span> |
+
+## Icons exclusively used in help
+
+These icons appear in the page footer `/_includes/footer_custom`
+
+| Purpose | Icon source |
+|---|---|
+| Support link | <span class="material-icons md-18">support_agent</span> |
+| Help issue | <span class="material-icons md-18">bug_report</span> |
+| Contact FeatureBase | <span class="material-icons md-18">outgoing_mail</span> |

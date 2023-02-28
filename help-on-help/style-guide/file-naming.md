@@ -17,4 +17,4 @@ NOTE: API docs are found in [https://api-docs-featurebase-cloud.redoc.ly/](https
 
 Include files contain common, reusable content and behave a little like `Github gist` files.
 
-See [README-common-include.md](/help-on-help/common-include.md)
+See [README-common-include.md](/help-on-help/writing-help/writing-common-include.md)

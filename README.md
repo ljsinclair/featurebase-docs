@@ -1,47 +1,70 @@
 # FeatureBase Docs
-This repository is hosted with GitHub pages with the live site found at: https://docs.featurebase.com.
-
-## SITE BUILD
 
 [![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
-### Site GitHub pages settings
+## Help on Help
 
-This repository uses the [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme and builds using the `gh-pages` branch
+Full documentation on writing, building and testing help, the style guide and standards is found in the Help-on-help directory:
 
-* [Theme setup and GH pages build settings](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#publishing-your-site-on-github-pages)
+* [Help on Help](/help-on-help/README.md)
 
-### Deploy using Github actions
+## Introduction
 
-featurebase-docs > Actions > Deploy Jekyll site to Pages > Re-run all jobs
+FeatureBase-docs is a Jekyll site deployed to GitHub Pages.
 
-Site build URL: https://featurebasedb.github.io/featurebase-docs/
+The site uses the *Just the Docs* gemfile theme which was setup based on the following instructions:
 
-### Change CNAME records
+* [Just the docs gemfile theme](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
 
-Point featurebase.com to new featurebase-docs GitHub pages site
+A gemfile theme:
+* Automatically pulls the latest version of the theme when the site is built locally, deployed to staging or production
+* Can be modified with local files (e.g., stylesheets, etc)
 
-* featurebase-docs > Settings > Pages > Custom Domain
-* add `docs.featurebase.com`
-* change CNAME file in repository to `docs.featurebase.com`
+## Important site folders and files
 
-## Docs documentation
+An overview of folder structure and files
 
-> I don't like how meta this is getting, Rick...
+### Important folders
 
-Documentation, help, and guides for using FeatureBase docs can be found under `/help-on-help` folder in the `/featurebase-docs` root. This includes:
+| Folder | Description | Status |
+|---|---|---|
+| `/assets/images` | Site image files found in logically named subfolders | As of 2023-02-21 contains images from /molecula/documentation which will be removed in future PRs |
+| `/docs` | All content pages found in this folder. |  |
+| `/docs/cloud` | All FeatureBase Cloud help pages | `old` prefix folders and files are originals to be rewritten |
+| `/docs/community` | All FeatureBase Community help pages |  |
+| `/docs/concepts` | High level conceptual information regarding FeatureBase applications | Updates in progress |
+| `/docs/pql-guide` | All FeatureBase PQL-Guide help pages | Files largely unchanged from `/molecula/documentation` |
+| `/docs/sql-guide` | All FeatureBase SQL-Guide help pages | Was `/sql-preview` |
+| `/help-on-help` | Internal only help on FeatureBase Docs | Folder excluded from production build in `/_config.yml` |
+| `/_includes` | Repository of reusable content saved in logically named subfolders |
+| `/_sass` | Styleguides | Modifications made to align site with FeatureBase style guide |
 
-* two ways to build the site locally
-* two ways to check for broken links
-* writing rules of engagement (TODO)
-* writing guidance -- how to plan and design docs, write them clearly, etc
-* writing using common include files rather than duplications
-* Style guide for highlighted callout boxes, hyperlink anchor text, etc
-* Guidance on use of material icons to represent GUI elements in FB Cloud
-* File naming standards
-* Setting up navigation order and structure
-...and much more.
+### Important files
 
-NOTE: The folder is explicitly excluded from the build in the `/_config.yml` file
+**IMPORTANT** Create a [Git Issue](https://github.com/FeatureBaseDB/featurebase-docs/issues) if you need to make any changes to the following settings.
 
-* [Help-on-help](https://github.com/FeatureBaseDB/featurebase-docs/tree/main/help-on-help)
+| Filename | Purpose |
+|---|---|
+| `/_config.yml` | Site configuration, permalinks, search, callout highlighting, etc |
+| `CNAME` | Used for domain `docs.featurebase.com` |
+| `docker-compose.yml` | 1 of 2 files to build site locally using docker |
+| `Dockerfile` | 2 of 2 files to build site locally using docker |
+| `Gemfile` and `Gemfile.lock` | Gemfile dependencies for site build locally or in production |
+| `index.html` | Site homepage |
+| `sitemap.xml` | Sitemap helps search engines index the site |
+| `/_includes/contact-support.md` | Standard text for contacting support that can be inserted into any page. Ideally this will point to Jira support |
+| `/_includes/head_custom.html` | Load Google material icons stylesheet |
+| `/_includes/footer_custom.html` | FeatureBase links for support |
+| `/_includes/nav_footer_custom.html` | Blank page used to remove theme advertising link |
+| `/_includes/page-toc` | Insertable shortcode to build a table of contents on a content page |
+| `search_placeholder_custom.html` | Standard text for the search field |
+| `/_sass/color_schemes/featurebase.scss` | Custom stylesheet to add FeatureBase specific colors |
+| `/_sass/custom/custom.scss` | Custom stylesheet to add FeatureBase specific fonts and other stylesheet modifications |
+
+## Further information
+
+* [Just-The-Docs Theme help](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
+
+## Need support?
+
+* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

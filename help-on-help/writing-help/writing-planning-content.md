@@ -1,11 +1,17 @@
-# Planning then writing content
+# Planning content
 
 In general terms you can make two assumptions of your users:
 
 1. They want to use the product
-2. They probably have an understanding of the concepts in the product
+2. They **probably** have an understanding of some of the concepts
 
-You **must not** assume they know anything about your product, your code and the systems you're explaining.
+They **do not** understand:
+
+* How your product works
+* What they need to do to get the product to work for them
+* Internal product terminology, use-cases, and related information
+
+## Explaining content
 
 To explain **anything** to **anyone** you need to answer five questions:
 
@@ -56,8 +62,14 @@ Only after you’ve answered these questions, can you explain:
 
 IMPORTANT: You can ONLY answer this question once the previous ones are answered.
 
+These questions are basically covered in process and procedure documentation.
+
 * How does the user perform the task
 * How should the system be setup before commencing the task?
 * How does the system work once they’ve performed said task?
 * How many changes of context are there in the sequence of steps (e.g., A set of UI pages, API vs UI, Source database vs CLI vs FeatureBase database)
 * How are tasks performed in a logical order?
+
+## Next step
+
+* [Writing modular content NOT endless scroll](/help-on-help/writing-modular-content)

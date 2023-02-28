@@ -10,7 +10,7 @@ Include files work a little like GitHub gist files in that they are inserted int
 
 `/_includes/<foldername>`
 
-I've setup folders to keep the include files in a logical order.
+Folders are setup to keep the files in a logical order
 
 ## File naming
 

@@ -1,10 +1,16 @@
-# Write content in small chunks NOT endless scroll
+# Write modular content
 
 Endless scroll articles seem a good way to present information to users but **only** from the point of view of someone who **already knows how to use the system**.
 
 For everyone else, they're a nightmare.
 
-## Issue: A user may not complete a process in one go
+## Before you begin
+
+* [Learn about planning content](/help-on-help/planning content.md)
+
+## The issues with endless scroll
+
+### Issue: A user may not complete a process in one go
 
 It is impossible to guarantee a user will have time to complete a long process in one go.
 
@@ -18,7 +24,7 @@ If this happens, they need to:
 * hope they're right about where they left off, OR
 * start the whole thing again in the hope the system will forgive them for repeating steps.
 
-## Issue: A user may be searching for specific information
+### Issue: A user may be searching for specific information
 
 On the whole, website search indexes everything in a site, so when the user enters a keyword, it'll be displayed.
 
@@ -34,7 +40,7 @@ If search **does** take the user to a specific instance of a keyword in a long p
 
 ## Solution: How we avoid these problems
 
-Very simply, we don't write endless scroll content.
+Very simply, we write modular documentation.
 
 Or put another way:
 
@@ -50,15 +56,6 @@ For example:
 | Code reference systems to refer to when writing code | Code reference files to help end users understand syntax, arguments and usage of API and other systems. These are then be hyperlinked from procedural help rather than duplicating the content. |
 | Spaghetti code is difficult to debug and regression test. | Rambling content that jumps from one idea to the next in no logical order is difficult to follow for the user, and makes it easier to make mistakes |
 | Raise a Pull Request so code changes can be reviewed and tested before being merged and deployed. | Raise a Pull Request so help content changes can be reviewed and tested before being merged and deployed. |
-
-### Plan your content
-
-* [Learn about planning content](/help-on-help/planning content.md)
-
-Don't just dive in and start writing then create a PR and think "job done".
-
-* Determine the information the user needs to know by reviewing what's already in help
-* Look at the structure of the system being documented and see if there are changes of context (e.g., Adding a column can only be done once you've created a table)
 
 ### If there's a change of context or a new task, give it a new page
 
