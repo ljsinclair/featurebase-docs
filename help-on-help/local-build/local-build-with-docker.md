@@ -19,8 +19,8 @@ NOTE: This process can take some time if starting from scratch or after executin
 
 2. Load the container
 
-| OS | CLI | Command
-|---|---|
+| OS | CLI | Command |
+|---|---|---|
 | Windows | Powershell | `Get-Content Dockerfile | docker build -` |
 | Linux | Bash | `docker build - < Dockerfile` |
 | Mac | Terminal | `docker build - < Dockerfile` |
