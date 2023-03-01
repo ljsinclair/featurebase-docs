@@ -67,7 +67,7 @@ Create table and insert data.
 
 ```sql
 CREATE TABLE segments
-    (_id id, time timestamp timeunit 'ms' epoch '2022-01-01T00:00:00Z', ids idset, strings stringset);
+    (_id id, time timestamp timeunit 'ms', ids idset, strings stringset);
 INSERT INTO segments(_id, time, ids, strings)
     VALUES (1, '2023-01-01', [6 , 1, 9], ['red', 'blue', 'green']);
 ```

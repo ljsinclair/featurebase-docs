@@ -5,7 +5,7 @@ create table allcoltypes
     _id id,
     intcol int min 0 max 10000,
     boolcol bool,
-    timestampcol timestamp timeunit 'ms' epoch '2022-01-01T00:00:00Z',
+    timestampcol timestamp timeunit 'ms',
     decimalcol decimal(2),
     stringcol string,
     stringsetcol stringset,

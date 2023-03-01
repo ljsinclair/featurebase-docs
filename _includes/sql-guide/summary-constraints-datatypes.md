@@ -6,7 +6,6 @@ Constraints are applied:
 
 | Constraint | Data type |
 |---|---|
-| EPOCH | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
 | MIN, MAX | [INT](/docs/sql-guide/data-types/data-type-int) |
 | SCALE | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
 | TIMEQUANTUM, TTL | [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |
