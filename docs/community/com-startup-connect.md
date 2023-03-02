@@ -31,7 +31,7 @@ FeatureBase Community's UI does not currently support Apple Safari. Install Mozi
 * Run the following command:
 
 ```
-./featurebase server --sql.endpoint-enabled
+./featurebase server
 ```
 
 ## Confirm FeatureBase server is running
