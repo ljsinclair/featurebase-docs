@@ -15,7 +15,7 @@ FeatureBase features can be enabled or disabled via
 * Command-line flags
 * TOML files
 
-<!-- commented out because waiting for PR to be approved and merged
+<!-- commented out because waiting for com-config-auth PR to be approved and merged
 
 {% include page-toc.md %}
 
@@ -77,5 +77,3 @@ Use the following checklist to successfully restore a cluster from backups.
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
 | Start all processes on target | Start processes including ingest |
 | Clean up source | Backup the original cluster then tear it down |
-
--->

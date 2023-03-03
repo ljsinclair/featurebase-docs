@@ -16,9 +16,19 @@ Follow these instructions to install FeatureBase on a macOS environment.
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
 
-## Install FeatureBase on macOS
+## Step 1 - Establish the correct release to install
 
-{% include /com-install/com-install-linux-source.md %}
+* Open [FeatureBase releases on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
+* Make note of the:
+  * version (e.g., 3.32.0)
+  * kernel = `darwin`
+  * processor (arm or amd)
+
+{% include /com-install/com-install-release-download.md%}
+
+{% include /com-install/com-install-release-untar-download.md%}
+
+{% include /com-install/com-install-setup-install-dir.md %}
 
 ## Authorize FeatureBase with macOS Gatekeeper system
 
