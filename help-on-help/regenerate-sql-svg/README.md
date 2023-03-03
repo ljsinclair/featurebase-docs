@@ -1,37 +1,72 @@
 # Regenerating SQL SVGs
 
-The scripts in this folder are used to regenerate the images found in the /img/sql/ folder.
+Backus-Naur form (BNF) images are used to explain syntax for reference pages found in `/sql-guide`.
 
-## makebnf.sh
+These instructions explain how to generate `.svg` BNF images, then move them to the required images folder found in `/assets/images/sql-guide`
 
-Start by running the makebnf.sh script. This will generate the sql3.html file that is required for the next step. First install any dependencies (likely ebnf2railroad)
+The following files perform specific functions:
 
-`npm install -g ebnf2railroad`
+| Filename | Description |
+|---|---|
+| `sql3.ebnf` | BNF design source file where changes can be made |
+| `makebnf.sh` | Shell script that generates sql3.html from sql3.ebnf |
+| `extract.css` | CSS stylesheet used by `extract.py` to generate `.svg` files |
+| `extract.py` | Python file that generates `.svg` files based on `extract.css` and `sql3.html` and saves to parent folder `/help-on-help` |
+| `move-svg-to-images.sh` | Shell script that moves generated `.svg` files from `/help-on-help` to required destination `/assets/images/sql-guide` |
 
-Next, run the script:
+## Before you begin
 
-`./makebnf.sh`
+* Install python3
+* Install `npn` if not already installed
+* Install `pip` or `conda` if not already installed
+* Clone `/featurebase-docs` and create an appropriate branch.
 
-You may see some warnings about `Missing reference...`, which should be followed by:
+## Step 1 - install dependencies if required
 
-`📜 Document created at ./sql3.html`
+Use `pip` or `conda` to install dependencies if these are not already installed.
 
-## extract.py
+* CD to the `/usr` directory.
+* Run the following commands:
 
-Next, run the extract.py script, which extract all of the images in the sql3.html file and places them in /img/sql. This is intended to be run in python3 and will likely have a couple of dependencies:
+| Dependency | Directory | Command |
+|---|---|
+| `ebnf2railroad` | `sudo npm install -g ebnf2railroad` |
+| `bs4` | `[pip|conda] install bs4` |
+| `lxml` | `[pip|conda] install lxml` |
 
-Conda:
-`conda install bs4`
-`conda install lxml`
+## Step 2 - Make changes to source file
 
-Pip:
-`pip install bs4`
-`pip install lxml`
+Make required alterations to the `sql3.ebnf` file
 
-Run the script:
+## Step 3 - generate the sql3.html file
 
-`python extract.py`
-or
-`python3 extract.py`
+Run the `makebnf` script:
 
-All done! Go validate the images have been properly updated in the /img/sql folder.
+```
+bash ./makebnf.sh
+```
+
+NOTE: The build script may report `missing reference...` before reporting success: `📜 Document created at ./sql3.html`
+
+## Step 3 - Extract the images from the sql3.html file
+
+NOTE: You can also run `python extract.py` if required.
+
+Run the extract script:
+
+```
+python3 extract.py`
+```
+
+## Step 4 - confirm the images are updated
+
+* CD to `/help-on-help` and confirm the images have been updated.
+
+## Step 5 - Move the svg files
+
+* CD to `/help-on-help/regenerate-sql-svg`
+* Run the move script:
+
+```
+bash ./move-svg-to-images.sh
+```
