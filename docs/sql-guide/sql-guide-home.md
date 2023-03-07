@@ -17,8 +17,9 @@ FeatureBase supports different types of queries that are discussed further in th
 
 {% include /cloud/cloud-db-create-before-begin.md %}
 
-{: .note}
-FeatureBase Community can run SQL through the FeatureBase CLI by [Enabling the SQL endpoint at startup](/docs/community/com-startup-connect)
+* [Learn how to query FeatureBase databases using terminal commands](/docs/tools/tool-fbsql)
+* [Learn how to query FeatureBase databsaes using the SQL Command Line Interface](/docs/community/com-config/com-config-sql-cli-enable)
+* Login to FeatureBase Community to run queries using the Query editor or Query builder
 
 ## Statements
 
