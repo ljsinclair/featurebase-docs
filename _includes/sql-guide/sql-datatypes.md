@@ -1,0 +1,8 @@
+* [bool](/docs/sql-guide/data-types/data-type-bool)
+* [int](/docs/sql-guide/data-types/data-type-int) 
+* [decimal](/docs/sql-guide/data-types/data-type-decimal)
+* [id](/docs/sql-guide/data-types/data-type-id)
+* [idset](/docs/sql-guide/data-types/data-type-idset)
+* [string](/docs/sql-guide/data-types/data-type-string)
+* [stringset](/docs/sql-guide/data-types/data-type-stringset)
+* [timestamp](/docs/sql-guide/data-types/data-type-timestamp)
