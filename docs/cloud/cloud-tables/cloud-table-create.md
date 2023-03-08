@@ -9,7 +9,7 @@ nav_order: 1
 # How do I create a table in FeatureBase Cloud?
 {: .no_toc }
 
-{% include /concepts/create-table-summary.md %}
+{% include /concepts/summary-table-create.md %}
 
 {% include page-toc.md %}
 
@@ -21,12 +21,12 @@ nav_order: 1
 
 ## Naming standards
 
-{% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-table-naming-standard.md %}
+{% include /concepts/standard-naming-obj.md%}
+{% include /cloud-table/cloud-standard-naming-table.md %}
 
 ## Step 1: view tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: create table
 
@@ -36,7 +36,7 @@ nav_order: 1
 
 ## Step 3: choose the primary key
 
-{% include /cloud/cloud-pk-table.md %}
+{% include /cloud-table/cloud-summary-table-pk.md %}
 
 1. Select the ID type.
 2. Click **Create**.
@@ -47,4 +47,4 @@ nav_order: 1
 
 ## Further information
 
-* [Create table API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTable)
+* [Create table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)

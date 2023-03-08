@@ -3,7 +3,7 @@ title: Manage databases
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 3
+nav_order: 4
 has_toc: false
 ---
 
@@ -14,11 +14,11 @@ This page provides an overview of FeatureBase databases and links to guide you t
 
 FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
 
-{% include page-toc.md %}
-
 ## Before you begin
-
+{: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
+
+{% include page-toc.md %}
 
 ## Trial accounts
 
@@ -26,29 +26,36 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 ## Cloud database shapes
 
-{% include /cloud/cloud-db-shape-summary.md %}
+{% include /cloud-db/cloud-summary-db-shape.md %}
 
 * [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
+## Cloud database versions
+
+{% include /cloud-db/cloud-summary-db-version.md %}
+
+* [Learn more about your database version](/docs/cloud/cloud-databases/cloud-db-versions)
+
 ## Naming standards
 
-{% include /concepts/object-naming-standard.md %}
-{% include /cloud/cloud-db-naming-standard.md %}
+{% include /concepts/standard-naming-obj.md %}
+{% include /cloud-db/cloud-standard-naming-db.md %}
 
 ## Database states
 
-{% include /concepts/db-states-summary.md %}
+{% include /concepts/summary-db-states.md %}
 
 * [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
 
 ## Managing databases in FeatureBase Cloud
 
 * [Create database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create database with test data to evaluate the system](/docs/cloud/cloud-databases/cloud-db-create-sample)
 * [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Managing databases using the FeatureBase API
 
-* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#tag/Databases)
+* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
 
 ## Next step
 

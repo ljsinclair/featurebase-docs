@@ -1,0 +1,17 @@
+---
+title: Issue running SQL
+layout: default
+parent: Troubleshooting
+grand_parent: Community
+nav_order: 2
+---
+
+# Issue - SQL won't on FeatureBase Community
+
+Statements using SQL found in [SQL-guide](/docs/sql-guide/sql-guide-home) do not execute when run:
+* from the FeatureBase Community command-line
+* via HTTP requests
+
+## Solution
+
+* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)

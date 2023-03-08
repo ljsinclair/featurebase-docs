@@ -1,12 +1,12 @@
 ---
 title: Bitmap data overview
 layout: default
-parent: Concepts-home
+parent: Concepts
 has_children: false
 nav_order: 1
 ---
 
-# Bitmap data overview
+# What are bitmap indexes
 {: .no_toc }
 
 

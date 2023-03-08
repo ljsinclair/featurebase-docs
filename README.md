@@ -1,311 +1,70 @@
-# SITE BUILD DISABLED as of 2022-12-06
+# FeatureBase Docs
 
-This site is IN DEVELOPMENT and not ready for public consumption.
+[![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
-* Repo is set to **private** which prevents build occurring
-* Build scripts are **disabled** to avoid being bombarded with build messages
+## Help on Help
 
-Doc updates are publicly available in /molecula/documentation > outputs to > docs.featurebase.com
+Full documentation on writing, building and testing help, the style guide and standards is found in the Help-on-help directory:
 
-## Deployment setup
+* [Help on Help](/help-on-help/README.md)
 
-* Set repo to public: https://github.com/FeatureBaseDB/featurebase-docs/settings > scroll down and click **Change Visibility** > Public
-* Restart scripts: https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml
-* Change CName records on featurebase.com to point to new site
+## Introduction
 
-# FeatureBase site README
+FeatureBase-docs is a Jekyll site deployed to GitHub Pages.
 
-Site uses a *gemfile* approach to the theme, which means:
-* uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-* uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+The site uses the *Just the Docs* gemfile theme which was set up based on the following instructions:
 
-This approach means:
-* this repository contains **only** FeatureBase content and customizations
-* it's simpler to determine what's ours and what's theme-based
+* [Just the docs gemfile theme](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
 
-## Theme help
+A gemfile theme:
+* Automatically pulls the latest version of the theme when the site is built locally, deployed to staging or production
+* Can be modified with local files (e.g., stylesheets, etc)
 
-[Just the docs theme help site](https://just-the-docs.github.io)
+## Important site folders and files
 
-FeatureBase specific information is below.
+An overview of folder structure and files
 
-## Local build
+### Important folders
 
-### Gemfile dependencies
-
-Check `Gemfile` and `Gemfile.lock` for Ruby, Jekyll and Bundler dependencies.
-
-### First time use
-
-For first time use:
-* Clone the repo then cd to the folder `featurebase-docs`
-* Download theme dependencies:
-```
-bundle
-```
-
-## Serve site
-```
-bundle exec jekyll serve
-```
-
-## Broken link checker
-
-* html-proofer has been added to `Gemfile`
-* load for the first time on a repository by running `bundle` at the command line.
-
-Then run the broken link checker using the batch file:
-
-```
-bash check-links.sh
-```
-
-NOTE: It's important to fix internal links. External links will be reported as broken, but these need to be tested manually.
-
-* html-proofer added to `Gemfile`
-
-# Site settings in `/_config.yml`
-
-| Settings | Found under... |
-|---|---|
-| site name | `title: FeatureBase help` |
-| hyperlinks at top of page | `# top of page nav` |
-| Featurebase logo | `logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"` |
-| Top of page navigation | `# Top of page nav` |
-| Stylesheet design | `color_scheme: featurebase` |
-| Search | `search_enabled: true` plus additional settings below |
-| Callout text highlighting | # Text highlighting callouts |
-
-NOTE: It's also possible to add Google analytics and other stuff to the site. [Learn about site settings](https://just-the-docs.github.io/just-the-docs/docs/configuration/) |
-
-## FeatureBase logo & favicon
-
-Logo is found at top left and based on the approved logo
-
-Logo file found in: `/assets/images/FeatureBase-Logo-Gradient-Wide.png`
-
-favicon.ico is found in the root.
-
-## Top of site nav
-
-Current setup:
-* 3x links that open in new window
-* new window means users can retain their place in FeatureBase help and refer to other sites in new tabs
-
-**To Do** Add a glossary link once that's been written
-
-## Stylesheet design
-
-| Implemented | Found under |
-|---|---|
-| FeatureBase colors, red, blue, purple | `/_sass/color_schemes/featurebase.scss` |
-| Featurebase css styles | `/_sass/custom/custom.scss` |
-
-## Search
-
-* [Learn about just-the-docs search](https://just-the-docs.github.io/just-the-docs/docs/search/)
-
-## Callout text highlighting
-
-Callout boxes are styled to FeatureBase standard colors.
-
-### Note
-
-```
-<p class="note">This is a note callout</p>
-
-# Or use
-
-{: .note }
-This is a note callout
-
-```
-
-### Warning
-
-```
-<p class="warning">This is a warning callout</p>
-
-# Or use
-
-{: .warning }
-This is a warning callout
-
-```
-
-### Success
-
-```
-<p class="success">Q'PLA! This is a success callout with a joke because it's that time of the day.</p>
-
-Or use
-
-{: .success }
-Q'PLA! This is a success callout with a joke because it's that time of the day.
-
-```
-
-### Important
-
-```
-<p class="important">AWOOGAH! This is something important!</p>
-
-# or use
-
-{: .important}
-AWOOGAH! This is something important!
-
-```
-
-## Body Footer
-
-Footer is an include file found in `/_includes/footer_custom.html`
-
-# Writing content and sidebar navigation
-
-All page content is saved to the `/docs` folder.
-
-## Navigation
-
-Navigation ignores the folder structure, instead it will automatically insert any page with YAML `title` into the tree.
-
-You need to add some more YAML to make the page appear in the correct place.
-
-### Three levels of navigation
-
-Theme supports 3 levels:
-
-```
-                             # Required YAML for each page:
-├── level 1                  # title: level 1
-├── level 1 parent           # level 1 parent, has_children: true
-│   ├── level 2 child        # parent: level 1 parent
-│   ├── level 2 child        # parent: level 1 parent
-│   ├── level 2 parent       # parent: level 1 parent, has_children: true
-│   │   ├── level 3 child    # parent: level 2 parent, grandparent: level 1 parent
-│   │   ├── level 3 child    # parent: level 2 parent, grandparent: level 1 parent
-```
-
-Pages with children are represented as an expandable/collapsible node in the tree.
-
-### Level 1 page YAML (required on all pages)
-
-```
-title: Navbar title
-layout: default
-nav_order: 1
-```
-
-Where:
-* title - page title that appears in the navigation
-* layout - page design, default is the simplest so don't change
-* nav_order - integer representing the position of the page in descending order 1...n
-
-### Level 2 page YAML
-
-```
-# required YAML plus...
-parent: parent title
-has_children: [true|false]
-```
-
-Where:
-* parent - title of the node above the page in the tree
-* has_children - `true` means the nav appears as an expandable node
-
-### Level 3 page YAML
-
-```
-# required YAML plus...
-parent: parent_title
-grandparent: grandparent_title
-```
-
-Where:
-* parent -- title of node above the page in the tree
-* grandparent -- title of first level node
-
-## Standard content for pages
-
-It's **really** important to include this information and shortcode on each page.
-
-| Standard content | Description | Source/example |
+| Folder | Description | Status |
 |---|---|---|
-| Page heading | Heading 1 as a question | `# How do I create cloud tables` |
-| Exclude a heading from TOC | Add under the page heading to stop it appearing in the TOC | Add `{: .no_toc }` after the heading |
-| page description | Give a basic description of the page. Ideally this isn't a retread of the heading, but it's ok if it is. | Learn what's involved with creating a table in FeatureBase cloud. |
-| page table of contents | All pages save for troubleshooting issues need a page table of contents | Add shortcode **after** the description: `{% include page-toc.md %}` |
-| Warnings | Any warnings relevant to the process or procedure | * Data cannot be recovered after deleting database tables |
-| Before you begin | prerequisites and requirements required **before** reading or performing the content on the page | * [Create a cloud database](#) |
+| `/assets/images` | Site image files found in logically named subfolders | As of 2023-02-21 contains images from /molecula/documentation which will be removed in future PRs |
+| `/docs` | All content pages found in this folder. |  |
+| `/docs/cloud` | All FeatureBase Cloud help pages | `old` prefix folders and files are originals to be rewritten |
+| `/docs/community` | All FeatureBase Community help pages |  |
+| `/docs/concepts` | High level conceptual information regarding FeatureBase applications | Updates in progress |
+| `/docs/pql-guide` | All FeatureBase PQL-Guide help pages | Files largely unchanged from `/molecula/documentation` |
+| `/docs/sql-guide` | All FeatureBase SQL-Guide help pages | Was `/sql-preview` |
+| `/help-on-help` | Internal only help on FeatureBase Docs | Folder excluded from production build in `/_config.yml` |
+| `/_includes` | Repository of reusable content saved in logically named subfolders |
+| `/_sass` | Styleguides | Modifications made to align site with FeatureBase style guide |
 
-### File naming
+### Important files
 
-#### UI file naming
+**IMPORTANT** Create a [Git Issue](https://github.com/FeatureBaseDB/featurebase-docs/issues) if you need to make any changes to the following settings.
 
-```
-<product>-<feature>-<task>
-```
-
-| Item | Description |
+| Filename | Purpose |
 |---|---|
-| product | cloud or com (community) |
-| feature | features include install, database, table, etc |
-| task | a task to perform in the feature |
+| `/_config.yml` | Site configuration, permalinks, search, callout highlighting, etc |
+| `CNAME` | Used for domain `docs.featurebase.com` |
+| `docker-compose.yml` | 1 of 2 files to build site locally using docker |
+| `Dockerfile` | 2 of 2 files to build site locally using docker |
+| `Gemfile` and `Gemfile.lock` | Gemfile dependencies for site build locally or in production |
+| `index.html` | Site homepage |
+| `sitemap.xml` | Sitemap helps search engines index the site |
+| `/_includes/contact-support.md` | Standard text for contacting support that can be inserted into any page. Ideally this will point to Jira support |
+| `/_includes/head_custom.html` | Load Google material icons stylesheet |
+| `/_includes/footer_custom.html` | FeatureBase links for support |
+| `/_includes/nav_footer_custom.html` | Blank page used to remove theme advertising link |
+| `/_includes/page-toc` | Insertable shortcode to build a table of contents on a content page |
+| `search_placeholder_custom.html` | Standard text for the search field |
+| `/_sass/color_schemes/featurebase.scss` | Custom stylesheet to add FeatureBase specific colors |
+| `/_sass/custom/custom.scss` | Custom stylesheet to add FeatureBase specific fonts and other stylesheet modifications |
 
-For example:
-* cloud-database-create - creates a database in the cloud product
-* com-install-linux - install FeatureBase community on Linux
+## Further information
 
-NOTE: you may think this will mean more pages, and you'd be right. However, more pages with a single focus are easier to follow than endless scroll pages that have everything in the one place.
+* [Just-The-Docs Theme help](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
 
-#### Reference file naming
+## Need support?
 
-NOTE: At time of writing (2022-12-08) this naming standard is NOT IMPLEMENTED. Changes will come in the very near future.
-
-Reference files are named to this standard:
-
-```
-<language><feature><task>
-```
-
-| Item | Description |
-|---|---|
-| language | PQL or SQL (sql-preview) |
-| feature | The same as above, where there's something you can CRUD |
-| task | what you can do to the feature |
-
-Examples:
-* pql-all
-* sql-table-create
-
-
-### Hyperlinks
-
-Hyperlink colours (including those in navigation bars) are governed by the `$link-color` setting in `featurebase.scss`.
-
-WARNING: Use meaningful multi-word anchor text. Single word (e.g., "here") is now BANNED. **YOU HAVE BEEN WARNED!**
-
-| Type of link | Structure | Example |
-|---|---|---|
-| Internal | `[meaningful anchor text](/docs/folder/filename)` | `[Learn how to create tables in FeatureBase cloud](/docs/cloud/cloud-tables/cloud-table-create)` |
-| External | `[meaningful anchor text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com){:target="_blank"} |
-
-### Common/reusable content
-
-Common/reusable content is stored in the `/_includes` folder:
-* /cloud - cloud specific content
-* /community - community specific content
-* /concepts - descriptions and definitions of conceptual information which can include stuff that's common to cloud and community (e.g., database descriptions)
-* /sql-preview - shared content used in SQL preview pages (e.g., timeQuantum and ttl which are included in IDSET and STRINGSET )
-
-Files are markdown unless absolutely necessary to use something like html.
-
-Add an include file as follows:
-
-```
-{% include /folder/filename.md %}
-```
-
-NOTE: if there is a filename conflict with a content file, add the suffix `source` to the end of the filename. e.g., c`om-install-linux.md` is the content page, while `com-install-linux-source.md` is the include file.
-
-WARNING: Missing include files **will** break the build.
+* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

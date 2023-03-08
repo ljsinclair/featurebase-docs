@@ -2,6 +2,12 @@ title: Featurebase help
 description: FeatureBase enables data engineers to process and operate on massive, continuously changing datasets in real time.
 theme: just-the-docs
 
+# WARNING: Do not change these settings without good reason to avoid breaking things
+# config.yml is heavily customized and will NOT update with changes from the source Just-the-docs repo
+# This means we need to check updates to the repo from time to time (so we can get things like copy button on code blocks, etc)
+
+url: https://github.com/FeatureBaseDB/featurebase-docs
+# remote_theme: "pmarsceill/just-the-docs"
 # url: https://just-the-docs.github.io
 
 # External navigation links appear in the sidebar navigation right at the bottom
@@ -10,26 +16,30 @@ theme: just-the-docs
 #    url: https://github.com/just-the-docs/just-the-docs
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 
-# Top of page nav
+# Exclude folders from build
+exclude:
+  - help-on-help
+  - node_modules
 
+# Top of page nav
   # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
-
   # Anchor text and hyperlinks that appear in top of page nav
 aux_links:
   Featurebase home: https://featurebase.com
+  Glossary: /docs/concepts/glossary
   API docs: https://api-docs-featurebase-cloud.redoc.ly/
+  Docs on GitHub: https://github.com/FeatureBaseDB/featurebase-docs
   Contact us: https://www.featurebase.com/contact-us
 
 # permalink info found on https://jekyllrb.com/docs/permalinks/
-
+# WARNING: SITE LINKS WILL BREAK IF THIS IS CHANGED FROM `pretty`
 permalink: pretty
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/FeatureBase-Logo-Gradient-Wide.png"
 
-color_scheme: featurebase
-
+color_scheme: featurebase # file URL: /_sass/color_schemes/featurebase.css
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
@@ -53,6 +63,14 @@ search.preview_words_after: 10
 # Enable or disable the search button that appears in the bottom right corner of every page
 # Supports true or false (default)
 search.button: true
+
+# Set the search token separator
+# Default: /[\s\-/]+/
+# Example: enable support for hyphenated search words
+tokenizer_separator: /[\s/]+/
+
+# For copy button on code
+enable_copy_code_button: true
 
 # Text highlighting callouts
 

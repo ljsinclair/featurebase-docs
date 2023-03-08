@@ -1,0 +1,1 @@
+A database version represents the FeatureBase version the database runs on.

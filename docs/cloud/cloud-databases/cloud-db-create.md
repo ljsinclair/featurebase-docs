@@ -27,27 +27,27 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## Cloud database shapes
 
-{% include /concepts/database-shape-summary.md %}
+{% include /cloud-db/cloud-summary-db-shape.md %}
 
 * [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
 
-{% include /concepts/object-naming-standard.md %}
-{% include /cloud/cloud-db-naming-standard.md %}
+{% include /concepts/standard-naming-obj.md %}
+{% include /cloud-db/cloud-standard-naming-db.md %}
 
 ## Create Database
 
-{% include /cloud/cloud-db-new-name.md %}
+{% include /cloud-db/cloud-db-new-name.md %}
 
 * Choose from development shapes intended for testing:
 
-{% include /cloud/cloud-db-shape-dev.md %}
+{% include /cloud-db/cloud-db-shape-dev.md %}
 
 * Or choose a production shape instead:
 
-{% include /cloud/cloud-db-shape-prod.md %}
-{% include /cloud/cloud-db-click-create.md %}
+{% include /cloud-db/cloud-db-shape-prod.md %}
+{% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
 
@@ -55,5 +55,5 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## Further information
 
-* [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createDatabase)
+* [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase)
 * [Learn how to delete a database](/docs/cloud/cloud-databases/cloud-db-delete)

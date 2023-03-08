@@ -23,12 +23,12 @@ nav_order: 2
 
 ## Naming standard
 
-{% include /cloud/object-naming-standard.md%}
-{% include /cloud/cloud-column-naming-standard.md %}
+{% include /concepts/standard-naming-obj.md%}
+{% include /cloud-table/cloud-standard-naming-col.md %}
 
 ## Step 1: View all tables
 
-{% include /cloud/cloud-view-table-list.md %}
+{% include /cloud-table/cloud-table-view-list.md %}
 
 ## Step 2: Add a column to a table
 
@@ -43,5 +43,5 @@ Table columns cannot be edited once created.
 
 ## Further information
 
-* [Create table column API reference](https://api-docs-featurebase-cloud.redoc.ly/v2#operation/createTableColumn)
+* [Create table column API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTableColumn)
 * [Learn how to delete a table column](/docs/cloud/cloud-tables/cloud-table-delete-column)
