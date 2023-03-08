@@ -8,4 +8,4 @@ has_toc: true
 
 # Community monitoring
 
-Setup external monitoring for FeatureBase
+Set up external monitoring for FeatureBase

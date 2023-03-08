@@ -36,7 +36,7 @@ Ingesters are used to:
 
 ## CSV import method
 
-Refer to these reference files for information on how to setup and import data using a CSV file.
+Refer to these reference files for information on how to set up and import data using a CSV file.
 
 * [CSV source format reference](/docs/community/com-ingest/com-ingest-source-csv)
 * [CSV flag reference](/docs/community/com-ingest/com-ingest-flags-csv)

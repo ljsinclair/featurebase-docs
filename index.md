@@ -80,11 +80,11 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
 | Audit Logging | Yes | Yes |   |
 
-## How do I setup FeatureBase Cloud?
+## How do I set up FeatureBase Cloud?
 
 Follow these instructions which will guide you through the setup process:
 
-* [Setup your FeatureBase cloud account](/docs/cloud/cloud-home)
+* [Set up your FeatureBase cloud account](/docs/cloud/cloud-home)
 
 ## How do I install FeatureBase Community?
 

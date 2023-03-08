@@ -17,7 +17,7 @@ nav_order: 2
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
-* [Setup organization name and address](/docs/cloud/cloud-org/cloud-org-address)
+* [Set up organization name and address](/docs/cloud/cloud-org/cloud-org-address)
 
 ## Update billing address
 

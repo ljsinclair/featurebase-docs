@@ -1,4 +1,4 @@
-## Step 4: Setup featurebase installation directory
+## Step 4: Set up featurebase installation directory
 
 * Move ingester files to the `/opt` directory
 

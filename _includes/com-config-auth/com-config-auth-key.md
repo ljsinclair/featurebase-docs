@@ -12,7 +12,7 @@ grand_parent: Community
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Setup TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 
 ## Generate a secret key
 

@@ -39,4 +39,4 @@ Refer to troubleshooting pages if you experience issues:
 
 ## Next step
 
-* [Learn how to setup your FeatureBase Cloud account](/docs/cloud/cloud-signup)
+* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-signup)

@@ -14,7 +14,7 @@ FeatureBase Community can be deployed on multiple environments and regionally an
 * command-line import from CSV, SQL or Kafka data sources
 * command-line backup and restore
 
-Organizations can setup remote monitoring with DataDog or Prometheus metrics
+Organizations can set up remote monitoring with DataDog or Prometheus metrics
 
 {% include page-toc.md %}
 

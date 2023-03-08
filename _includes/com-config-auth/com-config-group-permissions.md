@@ -5,7 +5,7 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-# How do I setup authentication groups?
+# How do I set up authentication groups?
 
 
 

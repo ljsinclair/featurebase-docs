@@ -1,4 +1,4 @@
-# Setup sidebar navigation page order
+# Set up sidebar navigation page order
 
 The order and positioning of pages in the left sidebar navigation tree is governed by YAML headers in each `/doc` markdown file.
 

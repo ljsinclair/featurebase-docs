@@ -5,7 +5,7 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-# How do I setup mutual TLS authentication?
+# How do I set up mutual TLS authentication?
 
 Mutual TLS allows a client and server to cryptographically verify each other and establish an encrypted connection.
 

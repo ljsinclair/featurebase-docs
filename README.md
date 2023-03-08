@@ -12,7 +12,7 @@ Full documentation on writing, building and testing help, the style guide and st
 
 FeatureBase-docs is a Jekyll site deployed to GitHub Pages.
 
-The site uses the *Just the Docs* gemfile theme which was setup based on the following instructions:
+The site uses the *Just the Docs* gemfile theme which was set up based on the following instructions:
 
 * [Just the docs gemfile theme](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
 

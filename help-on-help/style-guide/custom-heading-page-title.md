@@ -19,7 +19,7 @@ Page titles are added **after** page YAML and as the first heading in the body. 
 |---|---|---|---|
 | Overview | [question] [generic-term] | A [question] will be "how do I" or "what is", while the [generic-term] is a term that will be understood to anyone who **has not used featurebase before**. | How do I import data to FeatureBase? |
 | Process and Procedure| How do I [action] [task] | An action could be Create, delete, perform or something like that. A task is something the user wants to do | How do I create a table? |
-| Procedure series | A procedure series can be titled [Part N] - [Action] [Task]| Part 1 - Setup Windows Subsystem for Linux<br/>Part 2 - install FeatureBase in Windows Subsystem for Linux |
+| Procedure series | A procedure series can be titled [Part N] - [Action] [Task]| Part 1 - Set up Windows Subsystem for Linux<br/>Part 2 - install FeatureBase in Windows Subsystem for Linux |
 | FAQ | FAQ - [Context] | The Context for the FAQ is important and the page should **always** be confined to a specific context, not a large area of functionality or an entire application | FAQ - Community ingestion |
 | Issue | Issue - [summary of issue ] | The summary should be written based on what the user experiences, no more. | Issue - FeatureBase Community won't startup on Mac |
 | Reference | [Context] [Specifics] | The [Context] tells the user what the page is referring to. The [Specifics] gives a brief name for what's going on | SQL SELECT statement</br>SQL Ingest tool |

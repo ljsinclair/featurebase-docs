@@ -58,4 +58,4 @@ Perform these steps in your Azure application settings.
 
 ## Next step
 
-* [Setup FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)

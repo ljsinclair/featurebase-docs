@@ -25,24 +25,24 @@ FeatureBase features can be enabled or disabled via
 
 
 <!--
-## How do I setup a FeatureBase cluster?
+## How do I set up a FeatureBase cluster?
 
-* [Setup a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
+* [Set up a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
 -->
 ## How do I generate FeatureBase keys?
 
 * [Generate Featurebase SSH key](/docs/community/com-config-auth/com-config-auth-key)
 * [Generate FeatureBase login auth and refresh tokens](/docs/community/com-config-auth/com-config-auth-token)
 
-## How do I setup authentication?
+## How do I set up authentication?
 
 FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP).
 
 Azure Active Directory is supported via SAML 2.0
 
-* [Setup Azure AD single sign-on](/docs/community/com-config-auth/com-config-azure-sso)
-* [Setup FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
-* [Setup FeatureBase group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+* [Set up Azure AD single sign-on](/docs/community/com-config-auth/com-config-azure-sso)
+* [Set up FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up FeatureBase group permissions](/docs/community/com-config-auth/com-config-group-permissions)
 
 ## How do I backup a FeatureBase cluster?
 
@@ -55,7 +55,7 @@ Use the following checklist to verify backups function correctly.
 | Task | Description |
 |---|---|
 | Backup source | [Backup a Featurebase cluster](/docs/community/com-config/com-config-backup) |
-| Setup test environment | Backup testing can be performed using a single local node provided the system has sufficient memory and disk space. |
+| Set up test environment | Backup testing can be performed using a single local node provided the system has sufficient memory and disk space. |
 | Restore source backup | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
 | Test target | Run queries and verify results are as expected |
 

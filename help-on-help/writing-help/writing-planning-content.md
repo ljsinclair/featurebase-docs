@@ -65,7 +65,7 @@ IMPORTANT: You can ONLY answer this question once the previous ones are answered
 These questions are basically covered in process and procedure documentation.
 
 * How does the user perform the task
-* How should the system be setup before commencing the task?
+* How should the system be set up before commencing the task?
 * How does the system work once they’ve performed said task?
 * How many changes of context are there in the sequence of steps (e.g., A set of UI pages, API vs UI, Source database vs CLI vs FeatureBase database)
 * How are tasks performed in a logical order?

@@ -36,4 +36,4 @@ Generate a `secret-key` used when setting up TLS authentication
 
 ## Next step
 
-* [Setup TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)

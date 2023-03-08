@@ -1,11 +1,11 @@
 ---
-title: Setup TLS authentication
+title: Set up TLS authentication
 layout: default
 parent: Community configuration
 grand_parent: Community
 ---
 
-# How do I setup TLS authentication for FeatureBase Community?
+# How do I set up TLS authentication for FeatureBase Community?
 
 You can enable TLS authentication for FeatureBase Community by adding values to `/<featurebase-install-directory/featurebase.conf`.
 
@@ -46,7 +46,7 @@ You can enable TLS authentication for FeatureBase Community by adding values to 
 | `logout-url` | SAML IdP API value | Yes | [Single sign-out SAML protocol] documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-out-saml-protocol){:target="_blank"} |
 | `scopes` | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
 | `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate an authentication key](/docs/community/com-config-auth/com-config-auth-key) |
-| `query-log-path` | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config/com-config-log-audit-query) |
+| `query-log-path` | Set path for query audit log | Optional | [Set up the query audit log](/docs/community/com-config/com-config-log-audit-query) |
 | `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions) |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list. Domain names and `0.0.0.0/0` are not allowed. If not included or not set, no IPs are allow-listed. | Optional |  |
 

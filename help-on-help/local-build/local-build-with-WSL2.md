@@ -4,9 +4,9 @@ IMPORTANT: WSL2 will consume resources as it requires. There is no way to limit 
 
 ## Before you begin
 
-* Install and setup on Windows host machine and Git:
-  * Setup Git
-  * Setup SSH keys
+* Install and set up on Windows host machine and Git:
+  * Set up Git
+  * Set up SSH keys
   * Clone featurebase-docs
 * [Install Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)
 * [Install WSL2]https://learn.microsoft.com/en-us/windows/wsl/install

@@ -5,7 +5,7 @@ parent: Community authentication
 grand_parent: Community
 ---
 
-# How do I setup mutual TLS authentication?
+# How do I set up mutual TLS authentication?
 {: .no_toc }
 
 FeatureBase is configured with a PEM-encoded TLS keypair and supports Mutual TLS so client server nodes can:

@@ -19,4 +19,4 @@ nav_order: 3
 
 ## Next step
 
-* [Learn how to setup a FeatureBase Database](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to set up a FeatureBase Database](/docs/cloud/cloud-databases/cloud-db-manage)

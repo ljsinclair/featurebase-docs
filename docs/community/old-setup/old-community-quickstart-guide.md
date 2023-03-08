@@ -108,7 +108,7 @@ In the code above, ```bind``` tells FeatureBase to listen for HTTP request on al
 You'll notice there is a generic featurebase.conf within the release that can be referenced and used outside of this guide.
 
 
-### Setup Log and Data Folders
+### Set up Log and Data Folders
 ```featurebase.conf``` defined the ```data-dir``` and the ```log-path```. Here we'll want to create those folders and set the ```molecula``` user as the owner. The data directory is where FeatureBase puts the startup log file and the actual data that comprises the FeatureBase indexes.
 
 Create a log and data folder and change the owner:
@@ -204,7 +204,7 @@ Copy and paste the contents below. Then save and exit.
 ```
 >The service file above tells ```systemd``` we want to run ```/usr/local/bin/featurebase server -c /etc/featurebase.conf``` as the ```molecula``` user. This starts a FeatureBase server and configures it based on ```/etc/featurebase.conf```. Additionally, in the event that process fails, it tells ```systemd``` to try and restart that process 30 seconds.
 
-## Setup Log and Data Folders
+## Set up Log and Data Folders
 ```featurebase.conf``` defined the ```data-dir``` and the ```log-path```. Here we'll want to create those folders and set the ```molecula``` user as the owner. The data directory is where FeatureBase puts the startup log file and the actual data that comprises the FeatureBase indexes.
 
 Create the molecula user:

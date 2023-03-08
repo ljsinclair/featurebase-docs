@@ -5,7 +5,7 @@ parent: Community authentication
 grand_parent: Community
 ---
 
-# How do I setup authentication groups?
+# How do I set up authentication groups?
 {: .no_toc }
 
 A permissions file must be created when authentication is configured for FeatureBase Community.
