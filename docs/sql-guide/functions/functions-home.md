@@ -53,3 +53,8 @@ has_toc: false
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [UPPER()](/docs/sql-guide/functions/function-upper)
 
+## DateTime functions
+
+* [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
+* [DATETIMEADD()](/docs/sql-guide/functions/function-datetimeadd)
+
