@@ -69,12 +69,32 @@ The Kafka ingester reads Avro-encoded records from a Kafka topic, uses the Confl
 
 ### Kafka delete ingester
 
-The Kafka Delete Ingester is configured the same as the Kafka ingester, with the following differences:
+Insert the following keys to the JSON file for Kafka delete:
 
-* A specific format is required to specify what should be deleted
-* one other field called "fields" which is an array of strings and contains the names of the fields which should have their values deleted for the record at the given key.
+| Flag | Description |
+|---|---|
+| `fields` | Values in the fields defined in the array will be deleted at the specified key |
+| `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
+
+### Packed `bool` data type for Kafka delete
+
+JSON syntax string for deleting values from boolean fields:
+
+```
+  `bools|is-alive`
+```
+
+| Key | Description |
+|---|---|
+| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
+| `is-alive` | Name of individual boolean field. |
 
 ### Kafka static ingester
+
+The Kafka Static ingester:
+* reads JSON-encoded records from a Kafka topic,
+* uses a statically defined schema (with the ingester JSON header format) to decode them,
+* then ingests the data into FeatureBase.
 
 Change the following flags for the Kafka static ingester:
 
@@ -89,8 +109,13 @@ Change the following flags for the Kafka static ingester:
 * Specify the schema with a JSON document rather than the header specification
 * The schema must be specified explicitly using the `static` value in the consumer name
 
+{% include /com-ingest/com-ingest-map-avro-idk.md}
 
+### Value Path Selection
 
+The path option is an array of JSON object keys which are applied in order.
+For example, `["a","b","c"]` would select `1` within `{"a":{"b":{"c":1}}}`.
+This path must only consist of strings - array indexing is not supported. If a value is missing, the ingester will return an error. To override this behavior for non-primary key fields, use `allow-missing-fields`.
 
 ## Examples
 
@@ -100,10 +125,7 @@ Change the following flags for the Kafka static ingester:
 
 {% include /community/com-ingest-csv-header-flag-tls.md %}
 
-
-
-
-### Kafka delete ingest JSON file
+### JSON configuration for Kafka delete
 
 ```json
 {
@@ -138,7 +160,7 @@ Change the following flags for the Kafka static ingester:
 }
 ```
 
-### Kafka static ingester header
+### JSON header configuration for static ingest
 
 ```json
 [

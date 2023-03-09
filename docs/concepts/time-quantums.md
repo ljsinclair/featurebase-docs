@@ -40,6 +40,40 @@ You can associate multiple times with each value, so a value only has to exist i
 
 Whenever a record with time quantums is ingested, a view is created for each level of granularity specified. This is essentially a copy of the column over a specific time range. If `YMDH` is specified and the time `2018-08-31T22:30:00Z` is ingested, a time view will exist for `2018`, `2018-08`, `2018-08-31`, and `2018-08-31T22`. This means data which has times for every hour for two days (say May 2nd and 3rd) in a column with `YMDH` time quantums configured will have 48+2+1+1+1 views (53) in total. 48 hours, 2 days, 1 month, 1 year, and the standard view.
 
+<!--
+
+### Time Quantum
+
+Setting a time quantums involves creating two fields. A field that contains the data that will be set with a time, and a field that holds the actual time. Note that the time field won't be a field in the target table and can be named anything. It is only is used as the time associated with all time quantums for the ingester. An example of the this might be "stores_visited_id" that holds all store ids someone has visited and at what time they visited that store last:
+
+```json
+[
+    {
+        "name": "stores_visited_id",
+        "path": ["Path to stores_visited_id"],
+        "type": "id",
+        "config": {
+            "Mutex": false
+        }
+    }
+]
+```
+
+```json
+[
+    {
+        "name": "Any name you want",
+        "path": ["location to the timestamp/epoch"],
+        "type": "recordTime"
+    }
+]
+```
+
+For `"recordTime"` fields, there are essentially two modes. If `"Epoch"` or `"Unit"` are set, then the incoming data is interpreted as a number. Otherwise it's assumed that the incoming data is interpreted as a date/timestamp and the `"Layout"` is used to parse that value.
+
+-->
+
+
 ## Further information
 
 * [Learn about Time To Live](/docs/concepts/time-to-live)
