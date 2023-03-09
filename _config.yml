@@ -20,6 +20,7 @@ url: https://github.com/FeatureBaseDB/featurebase-docs
 exclude:
   - help-on-help
   - node_modules
+  - old-backup
 
 # Top of page nav
   # Makes Aux links open in a new tab. Default is false

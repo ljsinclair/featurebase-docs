@@ -19,11 +19,8 @@ nav_order: 7
 
 LIST DEPENDENCY> STACKOVERFLOW QUESTION: https://stackoverflowteams.com/c/molecula/questions/232
 
-* [Learn about Apache Kafka](https://kafka.apache.org/)
 * [Install Apache Kafka on your system](https://kafka.apache.org/downloads)
-* [Learn about Apache Zookeeper](https://zookeeper.apache.org/doc/current/index.html)
 * [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html)
-* [Learn about Avro serialization format](https://avro.apache.org/docs/){:target="_blank"} required by the kafka-ingest tool
 * [Install Avro on your system](https://avro.apache.org/project/download/)
 * [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html) which is an optional schema management system.
 * [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic)

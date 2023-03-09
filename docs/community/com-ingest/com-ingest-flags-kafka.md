@@ -42,6 +42,8 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 
 ## Kafka ingest tool
 
+
+
 | Tool | Description |
 |---|---|
 | `molecula-ingest-kafka` | General purpose ingest tool used for Kafka systems using Confluent Schema Registry |
