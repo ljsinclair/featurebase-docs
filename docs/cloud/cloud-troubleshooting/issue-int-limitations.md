@@ -12,7 +12,7 @@ Specifying the MIN and MAX constraint for `int` is limited to `-2^53` and `2^53 
 
 ## Cause
 
-This error can be caused when specifying integers for the MIN and MAX constraints that are outside of the range between `-2^53` and `2^53 -1`  Precision loss due to Jacascript and Go integer limitations at scale.
+This error can be caused when specifying integers for the MIN and MAX constraints that are outside of the range between `-2^53` and `2^53 -1`  Precision loss due to JavaScript and Go integer limitations at scale.
 
 ## Solution
 
