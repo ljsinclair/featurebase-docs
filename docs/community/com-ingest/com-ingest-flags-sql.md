@@ -36,7 +36,7 @@ molecula-consumer-sql        \
   <tls-authentication-flags> \
 ```
 
-{% include /com-ingest/com-ingest-flag-common.md %}
+{% include /com-ingest/com-ingest-flag-source-target.md %}
 
 {% include /com-ingest/com-ingest-flag-sql.md %}
 

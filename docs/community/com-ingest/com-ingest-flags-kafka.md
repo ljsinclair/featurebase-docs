@@ -30,27 +30,17 @@ The following ingest methods are available:
 
 ```
 molecula-consumer-{kafka | kafka-delete | kafka-static} \
-  --source-and-target-flags                             \
-  --kafka-flags                                         \
-  --id-flags                                            \
-  --batch-flags                                         \
-  --error-flags                                         \
-  --log-stat-flags                                      \
-  --testing-flags                                       \
-  --kafka-auth-flags                                    \
+  <source-and-target-flags>  \
+  <kafka-flags>              \
+  <id-flags>                 \
+  <batch-flags>              \
+  <error-flags>              \
+  <log-stat-flags>           \
+  <testing-flags>            \
+  <kafka-auth-flags>         \
 ```
 
-## Kafka ingest tool
-
-
-
-| Tool | Description |
-|---|---|
-| `molecula-ingest-kafka` | General purpose ingest tool used for Kafka systems using Confluent Schema Registry |
-| `-kafka-delete`| Delete specified data from target FeatureBase index. |
-| `-kafka-static` | Used for Kafka systems with static schemas, those not managed by Confluent Schema Registry. In this case, the schema must be explicitly defined. WHERE?!|
-
-{% include community/com-ingest-flag-common.md %}
+{% include community/com-ingest-flag-source-target.md %}
 
 {% include community/com-ingest-flag-kafka.md %}
 
@@ -71,20 +61,84 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 {: note}
 List all the flags by entering `idk/molecula-consumer-kafka` from the `/featurebase` directory.
 
-ADD IN OTHER INCLUDE -extra- files here!
-
 {% include /community/com-ingest-missing-value-processing.md %}
 
-## Confluent Schema Registry
+### Kafka ingester
 
-Schema
+The Kafka ingester reads Avro-encoded records from a Kafka topic, uses the Confluent schema registry to decode them, and ingests the data into FeatureBase.
 
-in scenarios where Kafka is used without Confluent Schema Registry. In this case, the schema must be provided explicitly; the "static" in the consumer name refers to this "static schema". For compatibility with complex JSON message formats, the schema is specified with a JSON document rather than the "header spec" used in other consumers.
+### Kafka delete ingester
+
+The Kafka Delete Ingester is configured the same as the Kafka ingester, with the following differences:
+
+* A specific format is required to specify what should be deleted
+* one other field called "fields" which is an array of strings and contains the names of the fields which should have their values deleted for the record at the given key.
+
+### Kafka static ingester
+
+Change the following flags for the Kafka static ingester:
+
+| Flag | Action | Description |
+|---|---|---|
+| `registry-url` | Remove |  |
+| `header` | Insert | Path to a schema definition or "header" file in JSON format |
+| `allow-missing-fields` | Insert |  |
+
+### Kafka ingest without Confluent Schema registry
+
+* Specify the schema with a JSON document rather than the header specification
+* The schema must be specified explicitly using the `static` value in the consumer name
 
 
 
 
-The header file is formatted as an array of objects, each of which describes one ingester field:
+## Examples
+
+{% include /community/com-ingest-csv-header-datafile.md %}
+
+{% include /community/com-ingest-csv-header-flag.md %}
+
+{% include /community/com-ingest-csv-header-flag-tls.md %}
+
+
+
+
+### Kafka delete ingest JSON file
+
+```json
+{
+	"namespace": "org.test",
+	"type": "record",
+	"name": "deletes",
+	"doc": "",
+	"fields": [
+    	{
+        	"name": "abc",
+        	"doc": "The ABC",
+        	"type": "string"
+    	},
+    	{
+        	"name": "db",
+        	"doc": "TE DB Number",
+        	"type": "string"
+    	},
+    	{
+        	"name": "user_id",
+        	"doc": "User ID",
+        	"type": "int"
+    	},
+    	{
+        	"name": "fields",
+        	"type": {
+                	"type": "array",
+                	"items": "string"
+            	}
+    	}
+	]
+}
+```
+
+### Kafka static ingester header
 
 ```json
 [
@@ -98,15 +152,6 @@ The header file is formatted as an array of objects, each of which describes one
 	}
 ]
 ```
-
-
-## Examples
-
-{% include /community/com-ingest-csv-header-datafile.md %}
-
-{% include /community/com-ingest-csv-header-flag.md %}
-
-{% include /community/com-ingest-csv-header-flag-tls.md %}
 
 ## Further information
 
