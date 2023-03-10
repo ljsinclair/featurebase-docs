@@ -1,7 +1,8 @@
 FeatureBase Cloud has the concept of "shapes" which define:
 * How much memory is available
 * how much disk space is available
-* how many Virtual Central Processing Units (vCPUs) are available to perform ingestion and queries
+* how many vCPUs) are available
 
-{: .note }
-Production shapes are not available on trial accounts.
+Shapes in general have:
+* overprovisioned disk space and memory to ensure best performance
+* data replication should a node go down.
