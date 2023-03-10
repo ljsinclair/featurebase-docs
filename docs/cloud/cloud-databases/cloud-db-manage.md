@@ -53,6 +53,10 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 * [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
 
+## Cloud database backups
+
+{% include /cloud-db/cloud-db-backup.md %}
+
 ## Managing databases in FeatureBase Cloud
 
 * [Create database](/docs/cloud/cloud-databases/cloud-db-create)

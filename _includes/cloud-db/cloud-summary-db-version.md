@@ -1,1 +1,1 @@
-A database version represents the FeatureBase version the database runs on.
+A database version represents the FeatureBase version the database runs on. It is denoted as a "release number"-"commit hash" that corresponds to a commit to the [open source repository](https://github.com/FeatureBaseDB/featurebase). When you create a new database in FeatureBase Cloud, it will use the latest version. 
