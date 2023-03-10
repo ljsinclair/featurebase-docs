@@ -9,7 +9,7 @@ nav_order: 8
 # Kafka ingest tool reference
 {: .no_toc}
 
-{% include /community/com-ingest-kafka-summary.md %}
+{% include /com-ingest/com-ingest-kafka-summary.md %}
 
 The following ingest methods are available:
 * Kafka
@@ -22,9 +22,11 @@ The following ingest methods are available:
 
 * [Learn how to manage ingestion](/docs/community/com-ingest/com-ingest-manage)
 * [Prepare the Kafka file](/docs/community/com-ingest/com-datafile-ref-kafka)
-* [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
-* [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
-* [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
+
+Install the following systems as required:
+
+* [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html)
+* [Install Avro on your system](https://avro.apache.org/project/download/)
 
 ## Syntax
 
@@ -117,13 +119,31 @@ The path option is an array of JSON object keys which are applied in order.
 For example, `["a","b","c"]` would select `1` within `{"a":{"b":{"c":1}}}`.
 This path must only consist of strings - array indexing is not supported. If a value is missing, the ingester will return an error. To override this behavior for non-primary key fields, use `allow-missing-fields`.
 
+
+## JSON message syntax
+
+JSON message is required to [DO SOMETHING SPECIFIC]
+
+```
+{
+    "int-kafka-path": 12345,
+    "string-kafka-path": "arbitraryString"
+}
+```
+
+
 ## Examples
 
-{% include /community/com-ingest-csv-header-datafile.md %}
+### Kafka example 1
+<!--rename once established what's going on in it-->
 
-{% include /community/com-ingest-csv-header-flag.md %}
+{% include /com-ingest/com-ingest-kafka-consumer-example.md%}
 
-{% include /community/com-ingest-csv-header-flag-tls.md %}
+### Kafka example 2
+
+<!--rename once established what's going on in it-->
+
+{% include /com-ingest/com-ingest-kafka-consumer-example2.md%}
 
 ### JSON configuration for Kafka delete
 

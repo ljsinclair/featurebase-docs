@@ -9,42 +9,35 @@ nav_order: 7
 # Kafka datafile reference
 {: .no_toc}
 
-{% include /community/com-ingest-kafka-summary.md %}
+{% include /com-ingest/com-ingest-kafka-summary.md %}
+
+{: .note}
+>Confluent makes it really easy to get schema registry, Apache Kafka, and Apache Zookeeper running in a local environment:
+>* [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html) which is an optional schema management system.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
+* [Learn how to setup Confluent and Kafka topics to store your data](https://docs.confluent.io/platform/current/platform-quickstart.html#step-2-create-ak-topics-for-storing-your-data){:target="_blank"}
 
-LIST DEPENDENCY> STACKOVERFLOW QUESTION: https://stackoverflowteams.com/c/molecula/questions/232
+OR
 
-* [Install Apache Kafka on your system](https://kafka.apache.org/downloads)
-* [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html)
-* [Install Avro on your system](https://avro.apache.org/project/download/)
-* [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html) which is an optional schema management system.
-* [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic)
-* [Write data to the Kafka topic]URL here
+* [Install Apache Kafka on your system](https://kafka.apache.org/downloads){:target="_blank"}
+* [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html){:target="_blank"}
+* [Install Apache Avro](https://avro.apache.org/){:target="_blank"}
+* [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
+* [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic){:target="_blank"}
 
 {: .important}
 The syntax below indicates minimum viable settings and can be modified to meet your requirements.
 
-## JSON data file syntax
 
-```
 
-```
+### Arguments
 
-## JSON message syntax
-
-JSON message is required to [DO SOMETHING SPECIFIC]
-
-```
-{
-    "int-kafka-path": 12345,
-    "string-kafka-path": "arbitraryString"
-}
-```
+| Argument | Description | Required | Further information |
 
 ## JSON header file syntax
 
@@ -61,11 +54,6 @@ JSON header files are required when using `molecula-consumer-kafka-static` for a
     },
 ]
 ```
-
-
-
-
-
 
 ## Header syntax
 
@@ -86,12 +74,12 @@ The header file is formatted as an array of objects, each describing a single fi
 
 ## Header arguments
 
-| Argument | Description | Required |
-|---|---|---|
-| name | Name of target field in FeatureBase index | Yes |
-| path | Location of value within JSON blob | Yes |
-| type | data type | Yes |
-| config | optional constraints and parameters for the data type |
+| Argument | Description | Required | Further information |
+|---|---|---|---|
+| `name` | Name of target field in FeatureBase index | Yes |
+| `path` | Location of value within JSON blob | Yes |
+| `type` | data type | Yes |
+| `config` | optional constraints and parameters for the data type |
 
 ## Additional information
 
@@ -102,10 +90,11 @@ The header file is formatted as an array of objects, each describing a single fi
 
 ## Examples
 
-{% include /community/com-datafile-csv-header-defined.md %}
-
-{% include /community/com-datafile-csv-header-undefined.md %}
 
 ## Next step
 
-* [CSV ingest tool reference](/docs/community/com-ingest/com-ingest-ref-csv)
+## Further information
+
+* [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+* [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
+* [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
