@@ -36,7 +36,7 @@ DATETIMEFROMPARTS(year, month, date, hour, minute, seconds, milliseconds)
 ## Additional information
 
 The `DATETIMEFROMPARTS` function combines date and time arguments to return a fully initialized `timestamp` value. 
-- Returns `null` is any of the arguments is null.
+- Returns `null` if any of the arguments are null.
 - Returns error if the arguments are out of range or if the arguments do not form a valid datetime. 
 
 ## Examples
