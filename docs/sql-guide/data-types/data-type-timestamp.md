@@ -3,7 +3,7 @@ title: TIMESTAMP
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 8
+nav_order: 10
 ---
 ## Before you begin
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}

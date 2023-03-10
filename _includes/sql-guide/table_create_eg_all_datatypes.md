@@ -9,10 +9,10 @@ create table allcoltypes
     decimalcol decimal(2),
     stringcol string,
     stringsetcol stringset,
-    stringsetcolq stringset timequantum 'YMD' ttl '24h',
+    stringsetcolq stringsetq timequantum 'YMD' ttl '24h',
     idcol id,
     idsetcol idset,
-    idsetcolq idset timequantum 'YMD' ttl '24h'
+    idsetcolq idsetq timequantum 'YMD' ttl '24h'
   )
   comment 'table containing all column types';
 ```

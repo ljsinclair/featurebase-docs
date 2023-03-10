@@ -3,7 +3,7 @@ title: STRING
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 6
+nav_order: 7
 ---
 
 # STRING data type
