@@ -1,96 +1,55 @@
 ---
-title: Kafka static ingest reference
+title: Ingest Kafka static schema
 layout: default
 parent: Import data
 grand_parent: Community
 nav_order: 8
 ---
 
-# Kafka static ingest reference
+# How do I ingest data from a Kafka static schema?
 
-The `molecula-consumer-kafka-static` command and arguments are used for Kafka systems:
-* with static schemas
-* not managed by Confluent Schema Management
+Ingesting data from a Kafka static schema involves the use of:
+
+* JSON message blob which defines the source data
+* JSON document that defines the source data as an array that matches the destination table structure
+* Specifying the JSON document using the `static` CLI flag when running `molecula-consumer-kafka-static`
 
 ## Before you begin
 
-* Refer to the [Kafka ingest flags reference](/docs/community/com-ingest/com-ingest-flags-kafka)
+* [Learn about Kafka static schema settings](https://kafka.apache.org/20/javadoc/org/apache/kafka/connect/data/Schema.html){:target="_blank"}
+* Define your data in a Kafka message/blob
 
-## Kafka ingest without Confluent Schema registry
-
-* Explicitly define the schema using the `static` value in the consumer name field
-* Specify the schema with a JSON document rather than the header specification
-
-To ingest data from a Kafka static schema you will need a JSON header file that includes the following flags:
-
-| Flag | Action | Description |
-|---|---|---|
-| `registry-url` | Remove |  |
-| `header` | Insert | Path to a schema definition or "header" file in JSON format |
-| `allow-missing-fields` | Insert |  |
-
-## JSON header file for Kafka Static ingestion
-
-The JSON header file is formatted as an array of objects, each of which describes one ingester field:
+## Kafka static JSON document definition
 
 ```json
 [
 	{
 		"name": "the name of the destination field in FeatureBase",
 		"path": ["the location within the JSON blob to locate the value of this field"],
-		"type": "string",
+		"type": "applicable data type",
 		"config": {
-			"example": "An optional parameter for a field type."
+			"parameters": "An optional parameter for a field type."
 		}
 	}
 ]
 ```
 
-| Argument | Description | Required | Further information |
+## Kafka static JSON parameters
+
+| Parameter | Description | Required | Further information |
 |---|---|---|---|
-| `name` |  |  |  |
-| `path` |  |  |  |
-| `type` |  |  |  |
-| `config` |  |  |  |
-| `example` |  |  |  |
+| `name` | Destination field in FeatureBase. |  |  |
+| `path` | Location within the JSON blob to locate the value of the field. |  |  |
+| `type` | the field data type |  |  |
+| `config` | optional constraints and parameters for the data type | No |  |
+| `parameters` | optional constraints and parameters for the data type | No |  |
 
+## Additional information
 
-
+* The `name`, `path`, and `type` parameters are repeated for each record to import to FeatureBase.
+* Run the `molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
 
 {% include /com-ingest/com-ingest-map-avro-idk.md}
-
-## Arguments
-
-
-
-
-### JSON header file
-
-The JSON header file is formatted as an array of objects, each describing a single field to be converted to FeatureBase
-
-JSON header files are required for Kafka systems:
-* with static schemas
-* not managed by Confluent Schema Management
-
-```
-[
-    {
-        "name": "int-featurebase-name",
-        "path": [
-            "<int-kafka-path"
-        ],
-        "type": "<data-type>"
-    },
-]
-```
-
-
-| Argument | Description | Required | Further information |
-|---|---|---|---|
-| `name` | Name of target field in FeatureBase index | Yes |
-| `path` | Location of value within JSON blob | Yes |
-| `type` | data type | Yes |
-| `config` | optional constraints and parameters for the data type |
 
 ## Examples
 
@@ -105,12 +64,7 @@ The Kafka message file contains data referenced in the `kafka-static-header-1.js
 }
 ```
 
-The `kafka-static-header-1.json` file reads data from the Kafka message file as follows:
-
-| JSON Header value | Data type | Populated from JSON message value |
-|---|---|---|
-| `int-featurebase-name` | Int | `int-kafka-path` |
-| `string-featurebase-name` | String | `string-kafka-path` |
+The JSON document defines the structure the data will be passed to FeatureBase.
 
 ```json
 [
@@ -131,9 +85,7 @@ The `kafka-static-header-1.json` file reads data from the Kafka message file as 
 ]
 ```
 
-The data from the JSON message and `kafka-static-header-1.json` file are ingested by FeatureBase as follows:
-
-Run the `kafka-static` ingest command from `/featurebase/idk`
+The following ingest command and flags will read the structure and data from the JSON document, run a conversion to Roaring Bitmap format then insert the values to the destination table.
 
 ```shell
 molecula-consumer-kafka-static \
@@ -235,13 +187,6 @@ Kafka message:
 ]
 ```
 
-<!-- Need help to work out what the hell the JSON header file is actually reading data from because there **seem** to be duplications and repetition but I honestly can't tell from here and it's driving me NUTS
-
-| JSON header file value | Data type | JSON message value |
-|---|---|---|
-
--->
-
 ```shell
 molecula-consumer-kafka-static \
     --kafka-hosts "localhost:9092" \
@@ -252,3 +197,9 @@ molecula-consumer-kafka-static \
     --allow-missing-fields \
     --header kafka-static-header-2.json
 ```
+
+## Next step
+
+## Next step
+
+Refer to the [Kafka ingest tool reference](/docs/community/com-ingest/com-ingest-flags-kafka) for instructions on importing Kafka data to FeatureBase tables.

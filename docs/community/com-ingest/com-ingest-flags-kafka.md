@@ -33,6 +33,10 @@ Perform additional prerequisites:
 * [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic){:target="_blank"}
 * Use Apache Avro to encode records in one or more Kafka topics
 
+
+* [Kafka static ingest](/docs/community/com-ingest-kafka-static)
+
+
 ## Kafka CLI Syntax
 
 ```
@@ -91,7 +95,15 @@ The `molecula-ingest-kafka` ingest tool:
 
 ### Kafka Static ingest
 
-* [Kafka static ingest](/docs/community/com-ingest-kafka-static)
+The following ingest flags are used for Kafka static schemas
+
+| Flag | Action | Description |
+|---|---|---|
+| `registry-url` | Remove |  |
+| `header` | Insert | Path to a schema definition or "header" file in JSON format |
+| `allow-missing-fields` | Insert |  |
+
+
 
 ### Kafka delete ingest
 
