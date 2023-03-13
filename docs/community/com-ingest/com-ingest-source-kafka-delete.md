@@ -73,3 +73,7 @@ Kafka requires the following keys to be added to the JSON header file:
 	]
 }
 ```
+
+## Next step
+
+{% include /com-ingest/com-ingest-kafka-next.md %}

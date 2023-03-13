@@ -11,10 +11,6 @@ nav_order: 8
 
 {% include /com-ingest/com-ingest-kafka-summary.md %}
 
-{: .note}
->Confluent makes it really easy to get schema registry, Apache Kafka, and Apache Zookeeper running in a local environment:
->* [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html) which is an optional schema management system.
-
 {% include page-toc.md %}
 
 ## Before you begin
