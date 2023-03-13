@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# ASCII String function
+# ASCII() function
 
 `Ascii()` returns the ASCII value of the specified string.
 

@@ -29,8 +29,9 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 ## DDL Syntax
 
 ```
-CREATE TABLE table_name
+CREATE TABLE
   [IF NOT EXISTS]
+  table_name
   (COLUMN_LIST)
   [comment 'comment'];
 ```

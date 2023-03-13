@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# UPPER() string function
+# UPPER() function
 
 `UPPER()` function converts the specified string to upper-case in the column.
 

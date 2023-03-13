@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# REPLACEALL() string function
+# REPLACEALL() function
 
 `ReplaceAll()` evaluates column values and replaces all specified strings with a new value.
 

@@ -14,6 +14,7 @@ statement = show_tables
       | show_create_table
       | drop_table
       | create_table_stmt
+      | create_view_stmt      
       | alter_table_stmt
       | select_stmt
       | insert_stmt
@@ -70,6 +71,15 @@ column_def = identifier, type_name, { column_constraint } ;
 
 (*
 
+  CREATE VIEW
+  ----------------
+  Creates a FeatureBase view.
+
+*)
+create_view_stmt = "CREATE", "VIEW", [ "IF", "NOT", "EXISTS" ], identifier, "AS", select_statement ;
+
+(*
+
   Column Constraint
   ----------------
   Constraints for a column:
@@ -84,7 +94,7 @@ column_def = identifier, type_name, { column_constraint } ;
 column_constraint =  
         "MIN", integer_literal
       | "MAX", integer_literal
-      | "TIMEUNIT", string_literal, [ "EPOCH", date_literal ]
+      | "TIMEUNIT", string_literal
       | "TIMEQUANTUM", string_literal, [ "TTL", string_literal ];
 
 table_options = "COMMENT", string_literal ;

@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# STRINGSPLIT() string function
+# STRINGSPLIT() function
 
 `Stringsplit()` function splits a string into multiple substrings based on a specified separator.
 

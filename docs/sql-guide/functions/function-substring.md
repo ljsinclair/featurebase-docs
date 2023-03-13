@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# SUBSTRING() string function
+# SUBSTRING() function
 
 `Substring()` extracts a substring value from a specified string based on a designated start index and optional length.
 

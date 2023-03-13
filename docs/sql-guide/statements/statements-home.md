@@ -24,6 +24,8 @@ SQL statements can be executed in the Query editor.
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
+* [SHOW DATABASES](/docs/sql-guide/statements/statement-database-show)
+* [DROP DATABASE](/docs/sql-guide/statements/statement-database-drop)
 
 ## TABLE statements
 
@@ -37,3 +39,4 @@ SQL statements can be executed in the Query editor.
 
 * [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using Parquet data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
