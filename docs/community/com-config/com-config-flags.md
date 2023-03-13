@@ -9,8 +9,11 @@ grand_parent: Community
 
 FeatureBase can be configured through command line flags, environment variables, and/or a TOML configuration file; configured options take precedence in that order.
 
-| CLI Flag                       | Environment Variable (with ['--future.rename'](#future-rename) flag) | Type  | Note                   |
-|--------------------------------|---------------------------------------------------|-------|------------------------|
+{: .warning}
+Environment variables require passing `--future.rename` flag to use.
+
+| CLI Flag                       | Environment Variable | Type  | Description  |
+|--------------------------------|----------------------|-------|-------|
 | [advertise](#advertise)        | FEATUREBASE_ADVERTISE  | str   | Address to advertise externally.   |
 | [advertise-grpc](#advertise-grpc) | FEATUREBASE_ADVERTISE_GRPC | str   | Address to advertise externally for gRPC. |
 | [bind](#bind) | FEATUREBASE_BIND | str   | Default URI on which FeatureBase should listen.   |
@@ -64,7 +67,6 @@ FeatureBase can be configured through command line flags, environment variables,
 | [auth.permissions](#auth-authenticationauthorization-configuration)               | FEATUREBASE_AUTH_PERMISSIONS                      | str   | Permissions' file with group authorization.     |
 | [auth.query-log-path](#auth-authenticationauthorization-configuration)            | FEATUREBASE_AUTH_QUERY_LOG_PATH                   | str   | Path to log user queries     |
 | [auth.configured-ips](#auth-authenticationauthorization-configuration)            | FEATUREBASE_AUTH_CONFIGURED_IPS                   | str   | List of configured IPs allowed for ingest     |
-| [future.rename](#future-rename)            |   | str   | Enables use of Featurebase_ environment variables for flags.     |
 
 
 Options are listed in the table by their CLI and Environment names. Further details are given below with the TOML configuration file variables. Note that there is a direct correlation between the CLI name and the TOML name. For example, the CLI flag `etcd.initial-cluster` is identified in TOML as:
