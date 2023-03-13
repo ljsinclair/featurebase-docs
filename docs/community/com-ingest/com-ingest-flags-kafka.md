@@ -98,15 +98,32 @@ The following ingest flags are used for Kafka static schemas
 | `header` | Insert | Path to a schema definition or "header" file in JSON format |
 | `allow-missing-fields` | Insert |  |
 
-
-
 ### Kafka delete ingest
 
-* [Kafka delete ingest](/docs/community/com-ingest-kafka-delete)
+
+Kafka requires the following keys to be added to the JSON header file:
+
+| Flag | Description |
+|---|---|
+| `fields` | Values in the fields defined in the array will be deleted at the specified key |
+| `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
+
+## Kafka delete packed `bool` data type requirements
+
+```
+  `bools|is-alive`
+```
+
+| Key | Description |
+|---|---|
+| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
+| `is-alive` | Name of individual boolean field. |
 
 ## Examples
 
-
+* [Kafka consumer ingest examples]()
+* [Kafka static ingest examples]()
+* [Kafka delete ingest examples]()
 
 ## Further information
 
