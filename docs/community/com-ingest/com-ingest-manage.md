@@ -54,11 +54,8 @@ The Kafka Ingester reads messages from a Kafka topic and can interact with a Con
 * the message schema
 * inform specific field types used in FeatureBase tables
 
-<!-- content taken from old-architecture
-For the Kafka ingester, those options include the address of the Kafka service as well as any authentication parameters, the topic from which to read, and the address of the schema registry.
--->
-<!-- Coming in future PR where I document these
-## Next step
-* [Query data using SQL]
-* [Query data using the Query builder]
--->
+There are three Kafka ingest methods:
+
+* [Kafka consumer with Confluent schema management]()
+* [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
+* [Kafka delete]()
