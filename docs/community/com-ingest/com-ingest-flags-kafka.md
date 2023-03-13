@@ -19,23 +19,11 @@ nav_order: 8
 
 ## Before you begin
 
-Choose your Apache Kafka configuration
-
-| Confluent Schema Management | Manual schema management |
-|---|---|
-| [Learn how to setup Confluent and Kafka topics to store your data](https://docs.confluent.io/platform/current/platform-quickstart.html#step-2-create-ak-topics-for-storing-your-data){:target="_blank"} | * [Install Apache Kafka on your system](https://kafka.apache.org/downloads){:target="_blank"} |
-|  | * [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html){:target="_blank"} |
-|  | * [Install Apache Avro on your system](https://avro.apache.org/project/download/) |
-
-Perform additional prerequisites:
-
+* Choose a Kafka ingest method:
+  * [Kafka consumer with Confluent Schema Management](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
+  * [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
+  * [Kafka delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
-* [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic){:target="_blank"}
-* Use Apache Avro to encode records in one or more Kafka topics
-
-
-* [Kafka static ingest](/docs/community/com-ingest-kafka-static)
-
 
 ## Kafka CLI Syntax
 
@@ -73,6 +61,10 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 
 {% include /community/com-ingest-missing-value-processing.md %}
 
+### Field configuration
+
+
+
 ### Quoting values
 
 Use double quotes `"..."` to enclose fields containing:
@@ -88,10 +80,17 @@ This path must only consist of strings - array indexing is not supported. If a v
 
 ### Kafka consumer ingest
 
-The `molecula-ingest-kafka` ingest tool:
-* streams and reads Avro-encoded records from an Apache Kafka topic over HTTPS
-* decodes the records using the Confluent Schema Registry
-* copies the data into the target FeatureBase index
+To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you will require:
+* A list of Kafka hosts
+* A FeatureBase index name (`--index <indexname>`),
+* One primary key method:
+  * `--primary-key-field <fieldnames>`, or
+  * `--id-field <fieldname>`, or
+  * `--auto-generate`
+
+### Kafka consumer environment variables
+
+* Prefix flags with `CONSUMER_` and convert dots `.` and dashes `-` to underscores to use them as Kafka Consumer environment variables.
 
 ### Kafka Static ingest
 

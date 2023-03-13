@@ -16,6 +16,9 @@ Ingesting data from a Kafka static schema involves the use of:
 
 ## Before you begin
 
+* [Install Apache Kafka on your system](https://kafka.apache.org/downloads){:target="_blank"}
+* [Install Apache Zookeeper on your system](https://zookeeper.apache.org/releases.html){:target="_blank"}
+* [Install Apache Avro on your system](https://avro.apache.org/project/download/){:target="_blank"}
 * [Learn about Kafka static schema settings](https://kafka.apache.org/20/javadoc/org/apache/kafka/connect/data/Schema.html){:target="_blank"}
 * Define your data in a Kafka message/blob
 
