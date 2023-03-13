@@ -46,6 +46,7 @@ Ingesting data from a Kafka static schema involves the use of:
 
 ## Additional information
 
+* The Schema is specified with a JSON document to ensure compatibility with complex JSON message formats
 * The `name`, `path`, and `type` parameters are repeated for each record to import to FeatureBase.
 * Run the `molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
 
