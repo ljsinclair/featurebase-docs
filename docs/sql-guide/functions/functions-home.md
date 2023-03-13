@@ -63,4 +63,4 @@ has_toc: false
 * [DATETIMEPART()](/docs/sql-guide/functions/function-datetimepart)
 * [DATE_TRUNC()](/docs/sql-guide/functions/function-date_trunc)
 * [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
-
+* [DATETIMEDIFF()](/docs/sql-guide/functions/function-datetimediff)
