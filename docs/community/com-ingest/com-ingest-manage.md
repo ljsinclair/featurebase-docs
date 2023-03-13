@@ -50,12 +50,8 @@ Refer to these reference files for information on how to set up and import data 
 
 ## Kafka import method
 
-The Kafka Ingester reads messages from a Kafka topic and can interact with a Confluent Schema Registry to determine:
-* the message schema
-* inform specific field types used in FeatureBase tables
-
 There are three Kafka ingest methods:
 
-* [Kafka consumer with Confluent schema management]()
+* [Kafka consumer with Confluent schema management](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
 * [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
-* [Kafka delete]()
+* [Kafka delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)

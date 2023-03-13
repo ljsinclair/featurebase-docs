@@ -121,13 +121,6 @@ Kafka requires the following keys to be added to the JSON header file:
 
 ## Examples
 
-* [Kafka consumer ingest examples]()
-* [Kafka static ingest examples]()
-* [Kafka delete ingest examples]()
-
-## Further information
-
-* [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
-* [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
-* [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
-* [Learn about Kafka ingester command-line flags](/docs/community/com-ingest/com-ingest-flags-kafka)
+* [Kafka consumer ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-consumer)
+* [Kafka static ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-static)
+* [Kafka delete ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-delete)

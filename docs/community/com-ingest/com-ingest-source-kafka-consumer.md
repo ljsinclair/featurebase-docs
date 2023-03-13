@@ -16,7 +16,7 @@ Confluent Schema Management makes it easier to setup Kafka dependencies in a loc
 
 The `molecula-ingest-kafka` tool:
 * reads Avro-encoded records from a Kafka topic
-* uses Confluent Schema Management to decode them
+* uses Confluent Schema Management to determine the message schema and FeatureBase field data types
 * Ingests the records into a specified FeatureBase table
 
 ## Before you begin
@@ -42,7 +42,9 @@ syntax goes here
 
 ## Additional information
 
+### Data types
 
+{% include /sql-guide/datatype-mapping.md %}
 
 
 ## Examples
@@ -57,3 +59,9 @@ syntax goes here
 ## Next step
 
 {% include /com-ingest/com-ingest-kafka-next.md %}
+
+## Further information
+
+* [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+* [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
+* [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)

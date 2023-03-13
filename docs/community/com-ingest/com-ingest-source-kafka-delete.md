@@ -8,34 +8,49 @@ nav_order: 8
 
 # Kafka delete ingest reference
 
-The `molecula-consumer-kafka-delete` command and arguments are used for:
-
-* purpose 1
-* purpose 2
+The `molecula-consumer-kafka-delete` command and arguments are used to delete records from a FeatureBase table.
 
 ## Before you begin
 
-* Refer to the [Kafka ingest flags reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
-## Kafka delete required keys
 
-Kafka requires the following keys to be added to the JSON header file:
+## Kafka delete JSON syntax
 
-| Flag | Description |
-|---|---|
-| `fields` | Values in the fields defined in the array will be deleted at the specified key |
-| `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
-
-## Kafka delete packed `bool` data type requirements
-
+```json
+  "namespace": "org.test",
+  "type": "record",
+  "name": "deletes",
+  "doc": "",
+  "fields": [
+    {
+        "name": "abc",
+        "doc": "The ABC",
+        "type": "string"
+    }
+  ]
+}
 ```
-  `bools|is-alive`
-```
 
-| Key | Description |
-|---|---|
-| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
-| `is-alive` | Name of individual boolean field. |
+## Kafka delete JSON parameters
+
+| Parameter | Description | Required | Further information |
+|---|---|---|---|
+| `namespace` |  |  |  |
+| `type` | Valid values are `record`, `VALUE`, `VALUE` |  |  |
+| `name` |  |  |  |
+| `doc` |  |  |  |
+| `fields` |  |  |  |
+| `name` |  |  |  |
+| `doc` |  |  |  |
+| `type` | Data type |  |  |
+
+## Additional information
+
+* `fields` values repeat as an array for each record to be deleted from the FeatureBase table.
+
+### Data types
+
+{% include /sql-guide/datatype-mapping.md %}
 
 ## Examples
 
