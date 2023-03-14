@@ -46,15 +46,8 @@ syntax goes here
 
 {% include /sql-guide/datatype-mapping.md %}
 
-
 ## Examples
 
-### Example 1: minimal
-
-
-```json
-
-```
 
 ## Next step
 

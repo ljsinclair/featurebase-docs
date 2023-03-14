@@ -1,5 +1,5 @@
 ---
-title: Kafka ingest examples
+title: Kafka static ingest examples
 layout: default
 parent: Import data
 grand_parent: Community
@@ -9,30 +9,44 @@ nav_order: 9
 # Kafka example files and ingest tool flags
 {: .no_toc}
 
-
-
---- CSV EXAMPLES BELOW DELETE WHEN READY ---
-
-This page provides examples of CSV files and CSV ingest tool flags that you can use to test the system.
+This page provides examples of Kafka static ingest files and flags you can use to test the system
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
-* [Apache Kafka format reference](/docs/community/com-ingest/com-datafile-ref-kafka)
+* [Learn about Kafka Static schema source files](/docs/community/com-ingest/com-ingest-source-kafka-static)
 * [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-ref-kafka)
 
-## Kafka source files
+## Example 1 - Ingest two values from a Kafka message
 
-{% include /community/com-datafile-csv-header-defined.md %}
+### Kafka message file
 
-{% include /community/com-datafile-csv-header-undefined.md %}
+{% include /com-ingest/com-ingest-eg-kafka-con-msg-2-val.md %}
 
-## CSV ingest tool setup
+### Kafka JSON file
 
-{% include /community/com-ingest-csv-header-datafile.md %}
+{% include /com-ingest/com-ingest-eg-kafka-con-json-2-val.md %}
 
-{% include/community/com-ingest-csv-header-flag.md %}
+### Kafka static ingest CLI flags
 
-{% include /community/com-ingest-csv-header-flag-tls.md %}
+{% include /community/com-config-cli-run.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-con-flags-2-val.md %}
+
+## Example 2 - Ingest an array of values from a Kafka message
+
+### Kafka message file with array of values
+
+{% include /com-ingest/com-ingest-eg-kafka-con-msg-array.md %}
+
+### Kafka JSON file
+
+{% include /com-ingest/com-ingest-eg-kafka-con-json-array.md %}
+
+### Kafka static ingest CLI flags
+
+{% include /community/com-config-cli-run.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-con-flags-array.md %}

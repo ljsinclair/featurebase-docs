@@ -61,152 +61,25 @@ Ingesting data from a Kafka static schema involves the use of:
 
 ## Examples
 
-### Simple ingest setup
+### Ingest two values from a Kafka message
 
-The Kafka message file contains data referenced in the `kafka-static-header-1.json` file.
+{% include /com-ingest/com-ingest-eg-kafka-con-msg-2-val.md %}
 
-```json
-{
-    "int-kafka-path": 12345,
-    "string-kafka-path": "arbitraryString"
-}
-```
+{% include /com-ingest/com-ingest-eg-kafka-con-json-2-val.md %}
 
-The JSON document defines the structure the data will be passed to FeatureBase.
+{% include /community/com-config-cli-run.md %}
 
-```json
-[
-    {
-        "name": "int-featurebase-name",
-        "path": [
-            "int-kafka-path"
-        ],
-        "type": "int"
-    },
-    {
-        "name": "string-featurebase-name",
-        "path": [
-            "string-kafka-path"
-        ],
-        "type": "string"
-    }
-]
-```
+{% include /com-ingest/com-ingest-eg-kafka-con-flags-2-val.md %}
 
-The following ingest command and flags will read the structure and data from the JSON document, run a conversion to Roaring Bitmap format then insert the values to the destination table.
+### Ingest data from an array of values
 
-```shell
-molecula-consumer-kafka-static \
-    --kafka-hosts "localhost:9092" \
-    --index kafka-test \
-    --batch-size 10000 \
-    --topics test-topic \
-    --max-msgs 10000 \
-    --auto-generate \
-    --external-generate \
-    --header kafka-static-header-1.json
-```
+{% include /com-ingest/com-ingest-eg-kafka-con-msg-array.md %}
 
-### Example 2 -
+{% include /com-ingest/com-ingest-eg-kafka-con-json-array.md %}
 
-Kafka message:
+{% include /community/com-config-cli-run.md %}
 
-```json
-{
-    "from_interface": {
-        "ip": "10.203.33.18",
-        "port": 38935
-    },
-    "to_interface": {
-        "ip": "203.77.221.220",
-        "port": 5872
-    },
-    "event_time": "2021-06-01T16:02:55Z06:00",
-    "protocol": "UDP",
-    "severity": 0,
-    "bytes": 8593
-}
-```
-
-`kafka-static-header-2.json` reads values from the Kafka message as follows:
-
-```json
-[
-    {
-        "name": "from_ip",
-        "path": [
-            "from_interface",
-            "ip"
-        ],
-        "type": "string"
-    },
-    {
-        "name": "from_port",
-        "path": [
-            "from_interface",
-            "port"
-        ],
-        "type": "int"
-    },
-    {
-        "name": "to_ip",
-        "path": [
-            "to_interface",
-            "ip"
-        ],
-        "type": "string"
-    },
-    {
-        "name": "to_port",
-        "path": [
-            "to_interface",
-            "port"
-        ],
-        "type": "int"
-    },
-    {
-        "name": "event_time",
-        "path": [
-            "event_time"
-        ],
-        "type": "timestamp"
-    },
-    {
-        "name": "severity",
-        "path": [
-            "severity"
-        ],
-        "type": "set"
-    },
-    {
-        "name": "bytes",
-        "path": [
-            "bytes"
-        ],
-        "type": "int"
-    },
-    {
-        "name": "protocol",
-        "path": [
-            "protocol"
-        ],
-        "type": "string"
-    }
-]
-```
-
-```shell
-molecula-consumer-kafka-static \
-    --kafka-hosts "localhost:9092" \
-    --index kafka-test \
-    --batch-size=10000 \
-    --topics test-topic \
-    --auto-generate \
-    --allow-missing-fields \
-    --header kafka-static-header-2.json
-```
-
-## Next step
+{% include /com-ingest/com-ingest-eg-kafka-con-flags-array.md %}
 
 ## Next step
 
