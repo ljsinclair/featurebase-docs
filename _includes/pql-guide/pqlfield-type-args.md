@@ -1,11 +1,8 @@
----
-title: Ingester field types and args
-layout: default
-parent: Import data
-grand_parent: Community
----
-
-## Field types and arguments
+<!--VERY LIKELY duplicated information from includes/pql-guide/pql-datatypes.md-->
+<!--but I need to double-check because there's SO MUCH DUPLICATION IT"S DRIVING ME NUTS!!-->
+<!--Some of this relates to ingest but I will look into this in another PR because this one's getting out of hand-->
+<!--As with pql-datatypes include -- this content is NOT TO BE USED UNTIL I'VE GONE THROUGH IT PROPERLY-->
+<!--THIS IS NOT A JOKE!-->
 
 ### String
 Example:

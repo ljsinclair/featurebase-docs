@@ -52,12 +52,15 @@ molecula-consumer-csv         \
 
 ## Additional information
 
-{: .note}
-List all the flags by entering `idk/molecula-consumer-csv` from the `/featurebase` directory.
-
 {% include /com-ingest/com-ingest-flag-extra-env-var.md %}
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
+
+{% include /com-ingest/com-ingest-quoting-values.md%}
+
+{% include /com-ingest/com-ingest-extra-path-selection.md %}
+
+{% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
 ## Examples
 

@@ -56,12 +56,15 @@ molecula-consumer-sql        \
 
 ## Additional information
 
-{: .note}
-List all the flags by entering `idk/molecula-consumer-sql` from the `/featurebase` directory.
-
 {% include /com-ingest/com-ingest-flag-sql-connect-string.md%}
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
+
+{% include /com-ingest/com-ingest-quoting-values.md%}
+
+{% include /com-ingest/com-ingest-extra-path-selection.md %}
+
+{% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
 ## Examples
 

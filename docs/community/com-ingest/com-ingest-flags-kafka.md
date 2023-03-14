@@ -55,20 +55,13 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
 
-{% include /community/com-ingest-missing-value-processing.md %}
+{% include /com-ingest/com-ingest-extra-missing-val.md %}
 
-### Quoting values
+{% include /com-ingest/com-ingest-quoting-values.md%}
 
-Use double quotes `"..."` to enclose fields containing:
-* Line breaks (CRLF)
-* Commas
-* double quotes
+{% include /com-ingest/com-ingest-extra-path-selection.md %}
 
-### Value Path Selection
-
-The path option is an array of JSON object keys which are applied in order.
-For example, `["a","b","c"]` would select `1` within `{"a":{"b":{"c":1}}}`.
-This path must only consist of strings - array indexing is not supported. If a value is missing, the ingester will return an error. To override this behavior for non-primary key fields, use `allow-missing-fields`.
+{% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
 ### Kafka Confluent ingest
 
