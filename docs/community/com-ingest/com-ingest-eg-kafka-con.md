@@ -19,30 +19,14 @@ This page provides examples of Kafka Confluent ingest files and flags you can us
 * [Learn about Kafka Confluent schema source files](/docs/community/com-ingest/com-ingest-source-kafka-confluent)
 * [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-ref-kafka)
 
-## Example 1 -
+## Example 1
 
 ### Kafka JSON file
 
-{% include /com-ingest/com-ingest-eg-kafka-con-json-2-val.md %}
+{% include /com-ingest/com-ingest-eg-kafka-conf-json.md %}
 
 ### Kafka confluent ingest CLI flags
 
 {% include /community/com-config-cli-run.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-con-flags-2-val.md %}
-
-## Example 2 - Ingest an array of values from a Kafka message
-
-### Kafka message file with array of values
-
-{% include /com-ingest/com-ingest-eg-kafka-con-msg-array.md %}
-
-### Kafka JSON file
-
-{% include /com-ingest/com-ingest-eg-kafka-con-json-array.md %}
-
-### Kafka static ingest CLI flags
-
-{% include /community/com-config-cli-run.md %}
-
-{% include /com-ingest/com-ingest-eg-kafka-con-flags-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-conf-cli.md %}

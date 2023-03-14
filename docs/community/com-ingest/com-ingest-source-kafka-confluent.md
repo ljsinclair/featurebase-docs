@@ -42,6 +42,15 @@ The Kafka Confluent ingest process:
 
 ## Examples
 
+### Kafka JSON file
+
+{% include /com-ingest/com-ingest-eg-kafka-conf-json.md %}
+
+### Kafka confluent ingest CLI flags
+
+{% include /community/com-config-cli-run.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-conf-cli.md %}
 
 ## Next step
 
