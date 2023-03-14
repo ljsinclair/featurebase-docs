@@ -6,39 +6,33 @@ grand_parent: Community
 nav_order: 7
 ---
 
-# How do I ingest data from Kafka Consumer with Confluent Schema Management?
+# How do I add or delete data from FeatureBase tables using Kafka?
 {: .no_toc}
 
-Confluent Schema Management makes it easier to setup Kafka dependencies in a local environment:
+These instructions apply to Kafka schemas managed by Confluent Schema Management.
+
+{: .note}
+>FeatureBase recommends using Confluent Schema Management because it makes it easier to setup Kafka dependencies in a local environment:
 * Schema registry
 * Apache Kafka
 * Apache Zookeeper
 
-The `molecula-ingest-kafka` tool:
+The Kafka Confluent ingest process:
 * reads Avro-encoded records from a Kafka topic
 * uses Confluent Schema Management to determine the message schema and FeatureBase field data types
-* Ingests the records into a specified FeatureBase table
+* adds or deletes the records from the specified FeatureBase table
 
 ## Before you begin
 
-* [Learn about the Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
-* [Setup Python in a virtual environment](https://docs.python.org/3/library/venv.html){:target="_blank"}
-* [Install the Confluent Kafka Python Client](https://docs.confluent.io/kafka-clients/python/current/overview.html#ak-python){:target="_blank"}
-* [Learn how to setup Confluent and Kafka topics to store your data](https://docs.confluent.io/platform/current/platform-quickstart.html#step-2-create-ak-topics-for-storing-your-data){:target="_blank"}
-* [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic){:target="_blank"}
-* [Learn how to encode Kafka records using Apache Avro](https://www.confluent.io/blog/avro-kafka-data/)
+{% include /com-ingest/com-ingest-kafka-confluent-before.md %}
 
-## Kafka consumer header definition syntax
+## Kafka confluent JSON syntax
 
-```
-syntax goes here
-```
+{% include /com-ingest/com-ingest-kafka-confluent-syntax.md %}
 
-## Kafka Consumer header parameters
+## Kafka confluent JSON parameters
 
-| Parameter | Description | Required | Further information |
-|---|---|---|---|
-
+{% include /com-ingest/com-ingest-kafka-confluent-params.md %}
 
 ## Additional information
 

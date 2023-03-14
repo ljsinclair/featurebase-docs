@@ -1,5 +1,5 @@
 ---
-title: Ingest Kafka static schema
+title: Ingest from Kafka static schema
 layout: default
 parent: Import data
 grand_parent: Community

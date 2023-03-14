@@ -1,5 +1,5 @@
 ---
-title: Kafka delete ingest reference
+title: Delete Kafka data on ingest
 layout: default
 parent: Import data
 grand_parent: Community
@@ -8,41 +8,19 @@ nav_order: 8
 
 # Kafka delete ingest reference
 
-The `molecula-consumer-kafka-delete` command and arguments are used to delete records from a FeatureBase table.
+Delete records from a FeatureBase Table using a Kafka Confluent source.
 
 ## Before you begin
 
+{% include /com-ingest/com-ingest-kafka-confluent-before.md %}
 
+## Kafka confluent JSON syntax
 
-## Kafka delete JSON syntax
+{% include /com-ingest/com-ingest-kafka-confluent-syntax.md %}
 
-```json
-  "namespace": "org.test",
-  "type": "record",
-  "name": "deletes",
-  "doc": "",
-  "fields": [
-    {
-        "name": "abc",
-        "doc": "The ABC",
-        "type": "string"
-    }
-  ]
-}
-```
+## Kafka confluent JSON parameters
 
-## Kafka delete JSON parameters
-
-| Parameter | Description | Required | Further information |
-|---|---|---|---|
-| `namespace` |  |  |  |
-| `type` | Valid values are `record`, `VALUE`, `VALUE` |  |  |
-| `name` |  |  |  |
-| `doc` |  |  |  |
-| `fields` |  |  |  |
-| `name` |  |  |  |
-| `doc` |  |  |  |
-| `type` | Data type |  |  |
+{% include /com-ingest/com-ingest-kafka-confluent-params.md %}
 
 ## Additional information
 
@@ -56,38 +34,7 @@ The `molecula-consumer-kafka-delete` command and arguments are used to delete re
 
 ### JSON configuration for Kafka delete
 
-```json
-{
-	"namespace": "org.test",
-	"type": "record",
-	"name": "deletes",
-	"doc": "",
-	"fields": [
-    	{
-        	"name": "abc",
-        	"doc": "The ABC",
-        	"type": "string"
-    	},
-    	{
-        	"name": "db",
-        	"doc": "TE DB Number",
-        	"type": "string"
-    	},
-    	{
-        	"name": "user_id",
-        	"doc": "User ID",
-        	"type": "int"
-    	},
-    	{
-        	"name": "fields",
-        	"type": {
-                	"type": "array",
-                	"items": "string"
-            	}
-    	}
-	]
-}
-```
+{% include /com-ingest/com-ingest-eg-kafka-conf-json-array.md %}
 
 ## Next step
 
