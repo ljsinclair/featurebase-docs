@@ -16,9 +16,9 @@ nav_order: 8
 ## Before you begin
 
 * Choose a Kafka ingest method:
-  * [Kafka consumer with Confluent Schema Management](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
+  * [Kafka Confluent Schema Management](/docs/community/com-ingest/com-ingest-source-kafka-confluent)
   * [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
-  * [Kafka delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
+  * [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-confluent-delete)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax
@@ -57,10 +57,6 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 
 {% include /community/com-ingest-missing-value-processing.md %}
 
-### Field configuration
-
-
-
 ### Quoting values
 
 Use double quotes `"..."` to enclose fields containing:
@@ -74,7 +70,7 @@ The path option is an array of JSON object keys which are applied in order.
 For example, `["a","b","c"]` would select `1` within `{"a":{"b":{"c":1}}}`.
 This path must only consist of strings - array indexing is not supported. If a value is missing, the ingester will return an error. To override this behavior for non-primary key fields, use `allow-missing-fields`.
 
-### Kafka consumer ingest
+### Kafka Confluent ingest
 
 To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you will require:
 * A list of Kafka hosts
@@ -84,7 +80,7 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
   * `--id-field <fieldname>`, or
   * `--auto-generate`
 
-### Kafka consumer environment variables
+### Kafka Confluent environment variables
 
 * Prefix flags with `CONSUMER_` and convert dots `.` and dashes `-` to underscores to use them as Kafka Consumer environment variables.
 
@@ -98,8 +94,7 @@ The following ingest flags are used for Kafka static schemas
 | `header` | Insert | Path to a schema definition or "header" file in JSON format |
 | `allow-missing-fields` | Insert |  |
 
-### Kafka delete ingest
-
+### Kafka Confluent delete ingest
 
 Kafka requires the following keys to be added to the JSON header file:
 
@@ -121,6 +116,6 @@ Kafka requires the following keys to be added to the JSON header file:
 
 ## Examples
 
-* [Kafka consumer ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-consumer)
+* [Kafka Confluent ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-confluent)
 * [Kafka static ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-static)
-* [Kafka delete ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-delete)
+* [Kafka Confluent delete ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-confluent-delete)
