@@ -44,7 +44,7 @@ The Kafka Confluent ingest process:
 
 ### Kafka JSON file
 
-{% include /com-ingest/com-ingest-eg-kafka-conf-json.md %}
+{% include /com-ingest/com-ingest-eg-kafka-conf-json-array.md %}
 
 ### Kafka confluent ingest CLI flags
 
