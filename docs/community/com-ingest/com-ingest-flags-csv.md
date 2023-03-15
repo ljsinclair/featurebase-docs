@@ -56,7 +56,7 @@ molecula-consumer-csv         \
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 
-{% include /com-ingest/com-ingest-quoting-values.md%}
+{% include /com-config/com-config-extra-quoting-values.md%}
 
 {% include /com-ingest/com-ingest-extra-path-selection.md %}
 
