@@ -57,7 +57,7 @@ Ingesting data from a Kafka static schema involves the use of:
 
 {% include /sql-guide/datatype-mapping.md %}
 
-{% include /com-ingest/com-ingest-map-avro-idk.md}
+{% include /com-ingest/com-ingest-map-avro-idk.md %}
 
 ## Examples
 
