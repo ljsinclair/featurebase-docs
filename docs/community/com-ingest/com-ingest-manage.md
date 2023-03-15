@@ -54,4 +54,4 @@ There are three Kafka ingest methods:
 
 * [Kafka Confluent schema management](/docs/community/com-ingest/com-ingest-source-kafka-confluent)
 * [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
-* [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-confluent-delete)
+* [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)

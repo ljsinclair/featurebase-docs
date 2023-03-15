@@ -4,3 +4,4 @@
 * [Learn how to setup Confluent and Kafka topics to store your data](https://docs.confluent.io/platform/current/platform-quickstart.html#step-2-create-ak-topics-for-storing-your-data){:target="_blank"}
 * [Create at least one Kafka topic](https://kafka.apache.org/documentation/#basic_ops_add_topic){:target="_blank"}
 * [Encode Kafka records using Apache Avro](https://www.confluent.io/blog/avro-kafka-data/)
+* Confluent Schema Registry running somewhere the Kafka consumer can connect to it over HTTP or HTTPS

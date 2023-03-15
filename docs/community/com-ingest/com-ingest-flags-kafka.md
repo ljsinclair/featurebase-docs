@@ -18,7 +18,7 @@ nav_order: 8
 * Choose a Kafka ingest method:
   * [Kafka Confluent Schema Management](/docs/community/com-ingest/com-ingest-source-kafka-confluent)
   * [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
-  * [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-confluent-delete)
+  * [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax
@@ -87,9 +87,18 @@ The following ingest flags are used for Kafka static schemas
 | `header` | Insert | Path to a schema definition or "header" file in JSON format |
 | `allow-missing-fields` | Insert |  |
 
-### Kafka Confluent delete message
+### Kafka delete consumer required flags
 
-The following syntax is required when `"fields"` is set for:
+The Kafka Avro delete consumer was built to supply delete functionality that doesn't exist in the Kafka Avro consumer.
+
+The `"fields"`values in the Kafka Avro message define the data to be deleted at the `--primary-key-fields` specified on the CLI.
+
+* [Learn how to configure the Kafka message to delete values](/docs/community/com-ingest/com-ingest-source-kafka-delete)
+
+{: .note}
+`molecula-consumer-kafka-delete` processes Kafka messages one at a time.
+
+The following syntax is required when the Kafka Avro message `"fields"` value is set for:
 * the Avro Record Schema
 * the Kafka message `"delete"` property
 
@@ -101,26 +110,11 @@ The following syntax is required when `"fields"` is set for:
   --featurebase-hosts <url-or-ip>:10101 \
   --featurebase-grpc-hosts <url-or-ip>:20101 \
   --index <an_index>
-
 ```
-
-{: .note}
-If no `delete` property is
-
-When the delete property in the Avro Record Schema is set to `"fields"`, the following should be true:
-1. The `--primary-key-fields` configuration option is set (i.e. not `--id-field` or `--auto-generate`/`--external-generate`)
-2. There are fields for each value in the `--primary-keys-fields` configuration option. The consumer will uses these fields to determine the `ID` of the record to delete data from.
-2. There is a field named `fields` wit the following type: `{"type": "array", "items": "string"}`. The value is the list of fields to delete all the data from.
-
-Prior to the introduction of the `delete` property in the Avro schema, this was the only delete option. Thus, if there is no `delete` property in the Avro schema, this is the behavior of the consumer.
-
-### Kafka Confluent delete ingest
-
-Kafka requires the following keys to be added to the JSON header file:
 
 | Flag | Description |
 |---|---|
-| `fields` | Values in the fields defined in the array will be deleted at the specified key |
+| <primary-keys> | Used by the Kafka delete consumer to determine `ID` of the record to delete data from. |
 | `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
 
 ## Kafka delete packed `bool` data type requirements

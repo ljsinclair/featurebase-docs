@@ -156,17 +156,17 @@ molecula-consumer-kafka-delete \
 
 ---
 ### Values
-When the delete property in the Avro Record Schema is set to `"values"`, the Avro fields should contain fields you may or may not want to delete data from. The name of the field in the Avro schema should be the name of the field in FeatureBase. 
+When the delete property in the Avro Record Schema is set to `"values"`, the Avro fields should contain fields you may or may not want to delete data from. The name of the field in the Avro schema should be the name of the field in FeatureBase.
 
 Here is what the `"type"` should be for Avro fields depending on the FeatureBase field type:
 
 | FeatureBase SQL Type | FeatureBase Field Type | Avro Field Type |
-| ---                    | ---                  | ---             | 
+| ---                    | ---                  | ---             |
 | `_id`                  | Record ID / Key | string or int |
 | `STRING`                 | Keyed Mutex | string |
 | `STRINGSET`              | Keyed Set | string or array of strings |
 | `STRINGSETQ`             | Keyed Time | N/A |
-| `ID`                     | Non-Keyed Mutex| int | 
+| `ID`                     | Non-Keyed Mutex| int |
 | `IDSET`                  | Non-Keyed Set | int or array of ints |
 | `IDSETQ`                 | Non-Keyed Time | N/A |
 | `INT`                    | Int | boolean |
@@ -184,7 +184,7 @@ FeatureBase `time` fields (time quantums) don't currently support deletion.
 
 #### Examples
 
-Avro Schema 
+Avro Schema
 ```
 {
     "namespace": "example.test",
