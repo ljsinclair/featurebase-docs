@@ -56,10 +56,22 @@ These steps will be performed by featurebase-docs administrator.
 
 ## Workflow 5 - approval and push to production
 
-These steps will be performed by FeatureBase-docs administrator:
+These steps can only be performed by FeatureBase-docs administrator that can push to the `gh-pages` branch:
 
-* Perform PR approvals process
-* Approve the changes and merge with `gh-pages`
+* checkout `gh-pages` pages locally and merge changes from `main` using the commands below:
+
+```
+git clone https://github.com/molecula/documentation
+cd documentation
+
+git checkout gh-pages
+git pull
+git merge --ff-only origin/main
+git push
+```
+
+* This is performed as such to avoid differing commits between `gh-pages` and `main`. Keeping them with the same commits allows for proper comparison by git
+* if `gh-pages` somehow gets ahead or moves away from `main` a hard reset on `gh-pages` will be necessary by an administrator
 
 ## Workflow 6 - Github action automation
 
