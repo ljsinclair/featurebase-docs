@@ -63,23 +63,23 @@ Ingesting data from a Kafka static schema involves the use of:
 
 ### Ingest two values from a Kafka message
 
-{% include /com-ingest/com-ingest-eg-kafka-con-msg-2-val.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-msg-2-val.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-con-json-2-val.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-json-2-val.md %}
 
 {% include /community/com-config-cli-run.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-con-flags-2-val.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-flags-2-val.md %}
 
 ### Ingest data from an array of values
 
-{% include /com-ingest/com-ingest-eg-kafka-con-msg-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-msg-array.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-con-json-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-json-array.md %}
 
 {% include /community/com-config-cli-run.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-con-flags-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-static-flags-array.md %}
 
 ## Next step
 
