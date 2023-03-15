@@ -35,7 +35,7 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
   <kafka-auth-flags>         \
 ```
 
-{% include community/com-ingest-flag-source-target.md %}
+{% include /com-ingest/com-ingest-flag-source-target.md %}
 
 {% include community/com-ingest-flag-kafka.md %}
 
