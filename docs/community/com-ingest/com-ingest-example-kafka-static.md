@@ -17,7 +17,7 @@ This page provides examples of Kafka static ingest files and flags you can use t
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
 * [Learn about Kafka static](/docs/community/com-ingest/com-ingest-source-kafka-static)
-* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-ref-kafka)
+* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
 ## Example 1 - Ingest two values from a Kafka message
 

@@ -1,3 +1,0 @@
-```
-  molecula-consumer-kafka-delete
-```

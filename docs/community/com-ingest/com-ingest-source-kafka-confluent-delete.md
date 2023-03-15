@@ -14,17 +14,39 @@ Delete records from a FeatureBase Table using a Kafka Confluent source.
 
 {% include /com-ingest/com-ingest-kafka-confluent-before.md %}
 
-## Kafka confluent JSON syntax
+## Kafka delete message syntax
+```
+{
+    "namespace": "<example.test>",
+    "type": "<delete-property>",
+    "name": "<schema_name>",
+    "delete": "<delete-property>",
+    "fields": [ ... ]
+}
+```
 
-{% include /com-ingest/com-ingest-kafka-confluent-syntax.md %}
+## Kafka message delete properties
 
-## Kafka confluent JSON parameters
-
-{% include /com-ingest/com-ingest-kafka-confluent-params.md %}
+| Property | Description | Required | Default | Additional information |
+|---|---|---|---|
+| "namespace" |  |  | Yes |  |
+| "type": "record" | Avro schema type `record` | Yes |  |  |
+| "name" | AVRO schema name | Yes |  |  |
+| "delete": "fields" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like | Yes | `fields` | [Delete property](#delete-property) |
+| "fields" | Field names containing data to be deleted | Yes |  |  |
 
 ## Additional information
 
-* `fields` values repeat as an array for each record to be deleted from the FeatureBase table.
+### Delete property
+
+{: .note}
+The Kafka consumer can read messages containing each of the delete properties and apply to the Kafka topic.
+
+| Delete property | Description | Data types | Required ingest flags | Additional |
+|---|---|---|---|---|---|
+| `"fields"` | Delete all values in a list of fields for a single record without defining the specific data. | `stringset`<br/>`idset` | `--primary-key-fields`<br/>`keys:true` for index | Fails when used with `keys:false` indexes |
+| `"values"` | Delete specific values from a list of fields for a single record. | `BOOL`<br/>`DECIMAL`<br/>`IDSET`<br/>`INT`<br/>`STRINGSET`<br/>`TIMESTAMP` |  | Set `BOOL`<br/>`DECIMAL`<br/>INT`<br/>`TIMESTAMP` fields to null without knowing their values |
+| `"records"` | Delete full records either as a list or using a `PQL` row query | `STRING`<br/>`INT` | index `keys: true` for `STRING values`<br/>index `keys:false` for `INT` values |
 
 ### Data types
 
@@ -32,9 +54,11 @@ Delete records from a FeatureBase Table using a Kafka Confluent source.
 
 ## Examples
 
-### JSON configuration for Kafka delete
+{% include /com-ingest/com-ingest-eg-kafka-delete-schema.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-conf-json-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-delete-msg.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
 
 ## Next step
 

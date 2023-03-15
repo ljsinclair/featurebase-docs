@@ -17,14 +17,12 @@ This page provides examples of Kafka static ingest files and flags you can use t
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
 * [Learn about Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-confluent-delete)
-* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-ref-kafka)
+* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
-## Example 1 -
+## Example
 
-### JSON configuration for Kafka delete
+{% include /com-ingest/com-ingest-eg-kafka-delete-schema.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-conf-del-json-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-delete-msg.md %}
 
-### Kafka Confluent delete ingest CLI flags
-
-{% include /com-ingest/com-ingest-eg-kafka-conf-del-cli-array.md %}
+{% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}

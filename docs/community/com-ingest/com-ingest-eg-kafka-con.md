@@ -17,7 +17,7 @@ This page provides examples of Kafka Confluent ingest files and flags you can us
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
 * [Learn about Kafka Confluent schema source files](/docs/community/com-ingest/com-ingest-source-kafka-confluent)
-* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-ref-kafka)
+* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
 ## Example 1
 
