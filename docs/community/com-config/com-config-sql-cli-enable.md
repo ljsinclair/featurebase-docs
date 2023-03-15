@@ -7,7 +7,7 @@ grand_parent: Community
 
 # FeatureBase SQL Command Line Interface (CLI)
 
-The SQL endpoint allows you to execute SQL statements:
+The SQL CLI allows you to execute SQL statements:
 * on the command-line
 * over an HTTP endpoint
 
@@ -37,4 +37,3 @@ These flags can be used within the CLI.
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Run SQL over an HTTP endpoint](/docs/community/com-api/old-sql-endpoint)

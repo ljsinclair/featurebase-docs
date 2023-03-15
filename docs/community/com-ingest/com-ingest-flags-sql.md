@@ -9,7 +9,7 @@ nav_order: 5
 # SQL ingest tool reference
 {: .no_toc}
 
-The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table  using a SQL endpoint.
+The SQL ingester tool selects data from a MSSQL, MySQL or Postgres database table  using a SQL CLI.
 
 {: .important}
 Source column names are used to specify column names for each record.

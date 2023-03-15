@@ -172,7 +172,7 @@ The CSV ingester can read CSV files (optionally gzipped) and ingest them to Feat
 
 ## SQL Ingester
 
-The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data from a sql endpoint, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
+The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
 
 [Full SQL Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#sql-ingester)
 
@@ -297,7 +297,7 @@ Missing values and empty string values (`""`) are handled identically.
 
 ## SQL Ingester
 
-The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data from a sql endpoint, and ingests the data into FeatureBase. It uses the SQL table column names as [header descriptions to specify how each field](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) should be ingested, similar to the CSV Ingester.
+The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names as [header descriptions to specify how each field](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) should be ingested, similar to the CSV Ingester.
 
 Use `molecula-consumer-sql -h` to list all available flags (or see table below). A few sample configurations are noted below:
 

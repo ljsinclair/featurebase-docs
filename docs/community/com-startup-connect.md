@@ -57,4 +57,4 @@ http://localhost:10101/
 
 ## Further information
 
-* [Learn about the SQL Endpoint](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
+* [Learn about the SQL Endpoint](/docs/community/com-config/com-config-sql-cli-enable)

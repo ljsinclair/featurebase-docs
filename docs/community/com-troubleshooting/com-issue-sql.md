@@ -14,4 +14,4 @@ Statements using SQL found in [SQL-guide](/docs/sql-guide/sql-guide-home) do not
 
 ## Solution
 
-* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
+* [Enable the SQL CLI for FeatureBase Community](/docs/community/com-config/com-config-sql-cli-enable)
