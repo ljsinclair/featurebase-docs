@@ -87,6 +87,33 @@ The following ingest flags are used for Kafka static schemas
 | `header` | Insert | Path to a schema definition or "header" file in JSON format |
 | `allow-missing-fields` | Insert |  |
 
+### Kafka Confluent delete message
+
+The following syntax is required when `"fields"` is set for:
+* the Avro Record Schema
+* the Kafka message `"delete"` property
+
+```
+  --primary-key-fields "<primary-keys>" \
+  --topics delete_topic \
+  --kafka-bootstrap-server <url-or-ip>:9092 \
+  --schema-registry-url <url-or-ip>:8081 \
+  --featurebase-hosts <url-or-ip>:10101 \
+  --featurebase-grpc-hosts <url-or-ip>:20101 \
+  --index <an_index>
+
+```
+
+{: .note}
+If no `delete` property is
+
+When the delete property in the Avro Record Schema is set to `"fields"`, the following should be true:
+1. The `--primary-key-fields` configuration option is set (i.e. not `--id-field` or `--auto-generate`/`--external-generate`)
+2. There are fields for each value in the `--primary-keys-fields` configuration option. The consumer will uses these fields to determine the `ID` of the record to delete data from.
+2. There is a field named `fields` wit the following type: `{"type": "array", "items": "string"}`. The value is the list of fields to delete all the data from.
+
+Prior to the introduction of the `delete` property in the Avro schema, this was the only delete option. Thus, if there is no `delete` property in the Avro schema, this is the behavior of the consumer.
+
 ### Kafka Confluent delete ingest
 
 Kafka requires the following keys to be added to the JSON header file:
@@ -109,6 +136,6 @@ Kafka requires the following keys to be added to the JSON header file:
 
 ## Examples
 
-* [Kafka Confluent ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-confluent)
+* [Kafka Confluent ingest examples](/docs/community/com-ingest/com-ingest-eg-kafka-con)
 * [Kafka static ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-static)
-* [Kafka Confluent delete ingest examples](/docs/community/com-ingest/com-ingest-example-kafka-confluent-delete)
+* [Kafka Confluent delete ingest examples](/docs/community/com-ingest/com-ingest-eg-kafka-con-del)
