@@ -74,3 +74,4 @@ SELECT TOP(10) * FROM age;
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)

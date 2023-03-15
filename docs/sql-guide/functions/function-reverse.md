@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# REVERSE() string function
+# REVERSE() function
 
 `Reverse()` function reverses all instances of a specified string in the selected column.
 

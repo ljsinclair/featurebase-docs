@@ -15,10 +15,12 @@ Folders are set up to keep the files in a logical order
 ## File naming
 
 Points to remember:
+
 * Folders have parallel names (but NEVER identical) to the relevant content folder.
 * Filenames are prefixed by the product
 * The filename should be a general summary of the content
 * Naming include files can be a bit convoluted, so do your best.
+
 
 | Filename | Description | Example |
 |---|---|---|
@@ -27,7 +29,7 @@ Points to remember:
 
 ## Inserting an include file
 
-Add an include file as follows:
+Add an include file with the following shortcode:
 
 ```
 {% include /folder/filename.md %}
@@ -35,6 +37,24 @@ Add an include file as follows:
 
 ## Warnings
 
+
+## Troubleshooting
+
+* **Always** do a search for the include file **Before** editing it because any destination will be affected by your edits
 * Conflicts are likely if include filenames match those under `/docs`
-* **NEVER* nest include files within each other because this makes editing and troubleshooting harder to resolve
-* Missing include files **will* break the build
+* **NEVER** nest include files within each other because this makes editing and troubleshooting harder to resolve
+
+### Build errors
+
+The build will be affected if:
+
+* You name an include file the same as a file under `/docs`
+* You've inserted the include shortcode **but** the include file does not exist
+* Shortcode include file name or path is incorrect
+
+## Page rendering errors
+
+Rendering **may** be affected if:
+
+* You try to insert an /include in the middle of a table
+* A shortcode is added within bullets or numbers

@@ -24,6 +24,12 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 {% include /cloud/trial-account-limits.md %}
 
+## Cloud database disk utilization
+
+{% include /cloud-db/cloud-summary-db-disk-utilization.md %}
+
+- [Learn more about your database disk utilization](/docs/cloud/cloud-databases/cloud-db-disk-utilization)
+
 ## Cloud database shapes
 
 {% include /cloud-db/cloud-summary-db-shape.md %}
@@ -46,6 +52,10 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 {% include /concepts/summary-db-states.md %}
 
 * [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
+
+## Cloud database backups
+
+{% include /cloud-db/cloud-db-backup.md %}
 
 ## Managing databases in FeatureBase Cloud
 

@@ -3,7 +3,7 @@ title: Cloud database versions
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 4
+nav_order: 5
 ---
 
 # Database version information
@@ -29,6 +29,9 @@ If a database's version is "Unknown" then it has failed to respond to a version 
 1. Select databases on the sidebar
 2. Click on your database's name
 3. View your database's version in the summary
+
+## Upgrade your database version
+{% include /cloud-db/cloud-db-upgrade-version.md %}
 
 ## Further information
 * [Learn about database version issues](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown)

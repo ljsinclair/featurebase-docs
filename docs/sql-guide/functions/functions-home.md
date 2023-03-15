@@ -52,4 +52,15 @@ has_toc: false
 * [SUBSTRING()](/docs/sql-guide/functions/function-substring)
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [UPPER()](/docs/sql-guide/functions/function-upper)
+* [LOWER()](/docs/sql-guide/functions/function-lower)
+* [PREFIX()](/docs/sql-guide/functions/function-prefix)
+* [SUFFIX()](/docs/sql-guide/functions/function-suffix)
 
+## Date/Time scalar functions
+
+* [DATETIMEADD()](/docs/sql-guide/functions/function-datetimeadd)
+* [DATETIMENAME()](/docs/sql-guide/functions/function-datetimename)
+* [DATETIMEPART()](/docs/sql-guide/functions/function-datetimepart)
+* [DATE_TRUNC()](/docs/sql-guide/functions/function-date_trunc)
+* [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
+* [DATETIMEDIFF()](/docs/sql-guide/functions/function-datetimediff)

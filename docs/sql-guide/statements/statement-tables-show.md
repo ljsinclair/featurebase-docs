@@ -32,6 +32,7 @@ SHOW TABLES;
 | keys | bool | Boolean that is true when keys are used (_id) is a string |  |
 | space_used | int | bytes used by the table. |  |
 | description | string | description COMMENT of the table |  |
+
 ## Additional information
 
 ### `_id` column

@@ -20,15 +20,6 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
-
-## Trial accounts
-
-{% include /cloud/trial-account-limits.md %}
-
-## Cloud database shapes
-
-{% include /cloud-db/cloud-summary-db-shape.md %}
-
 * [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
 
 ## Naming standards
@@ -40,13 +31,10 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 {% include /cloud-db/cloud-db-new-name.md %}
 
-* Choose from development shapes intended for testing:
+* Choose a database shape
 
-{% include /cloud-db/cloud-db-shape-dev.md %}
+{% include /cloud-db/cloud-db-total-shapes.md %}
 
-* Or choose a production shape instead:
-
-{% include /cloud-db/cloud-db-shape-prod.md %}
 {% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step

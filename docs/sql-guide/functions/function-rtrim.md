@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# RTRIM () string function
+# RTRIM () function
 
 `RTRIM()` function removes the trailing whitespace from a specified string in the selected column.
 

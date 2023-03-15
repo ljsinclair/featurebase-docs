@@ -17,4 +17,4 @@ Tools allow users to interact with FeatureBase in different ways. As we expand t
 
 ## Tools
 
-* [fbsql](/docs/tools/fbsql-home)
+* [fbsql](/docs/tools/fbsql/fbsql-home)

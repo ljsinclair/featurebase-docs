@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# LTRIM() string function
+# LTRIM() function
 
 `LTRIM()` function removes leading whitespace from a specified string in the selected column.
 

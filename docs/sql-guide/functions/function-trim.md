@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# TRIM() string function
+# TRIM() function
 
 `TRIM()` function removes the leading and trailing whitespace from a specified string in the selected column.
 

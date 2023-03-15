@@ -1,5 +1,7 @@
 ## Step 4: Set up featurebase installation directory
 
+CD to the `/featurebase` directory.
+
 * Move ingester files to the `/opt` directory
 
 ```

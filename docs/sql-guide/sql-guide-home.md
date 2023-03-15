@@ -41,3 +41,6 @@ FeatureBase supports different types of queries that are discussed further in th
 
 * [SQL expressions](/docs/sql-guide/expressions/expressions-home)
 
+## System Tables
+
+* [System Tables](/docs/sql-guide/system-tables/system-tables-home)
