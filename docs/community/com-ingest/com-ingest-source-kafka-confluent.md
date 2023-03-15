@@ -50,7 +50,7 @@ The Kafka Confluent ingest process:
 
 {% include /community/com-config-cli-run.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-conf-cli.md %}
+{% include /com-ingest/com-ingest-eg-kafka-conf-cli-array.md %}
 
 ## Next step
 
