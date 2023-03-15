@@ -37,19 +37,19 @@ molecula-consumer-{kafka | kafka-delete | kafka-static} \
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
-{% include community/com-ingest-flag-kafka.md %}
+{% include /com-ingest/com-ingest-flag-kafka.md %}
 
-{% include community/com-ingest-flag-common-id.md %}
+{% include /com-ingest/com-ingest-flag-common-id.md %}
 
-{% include community/com-ingest-flag-common-batch.md %}
+{% include /com-ingest/com-ingest-flag-common-batch.md %}
 
-{% include community/com-ingest-flag-common-error.md %}
+{% include /com-ingest/com-ingest-flag-common-error.md %}
 
-{% include community/com-ingest-flag-common-log-stat.md %}
+{% include /com-ingest/com-ingest-flag-common-log-stat.md %}
 
-{% include community/com-ingest-flag-common-testing.md %}
+{% include /com-ingest/com-ingest-flag-common-testing.md %}
 
-{% include community/com-ingest-flag-kafka-auth.md %}
+{% include /com-ingest/com-ingest-flag-kafka-auth.md %}
 
 ## Additional information
 
