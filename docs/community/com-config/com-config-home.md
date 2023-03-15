@@ -27,7 +27,7 @@ FeatureBase features can be enabled or disabled via
 <!--
 ## How do I set up a FeatureBase cluster?
 
-* [Set up a FeatureBase cluster](/docs/community/com-config/com-config-cluster)
+* [Set up a FeatureBase cluster](/docs/community/com-config/old-resize-cluster)
 -->
 ## How do I generate FeatureBase keys?
 
@@ -71,7 +71,7 @@ Use the following checklist to successfully restore a cluster from backups.
 |---|---|
 | Stop all running processes | Stop any processes such as ingest |
 | Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-config/com-config-backup) |
-| Create target | [Create a cluster](/docs/community/com-config/com-config-cluster) |
+| Create target | [Create a cluster](/docs/community/com-config/old-resize-cluster) |
 | Restore backups to target | [Restore a FeatureBase cluster](/docs/community/com-config/com-config-restore) |
 | Test target | Run test queries and verify results are as expected |
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
