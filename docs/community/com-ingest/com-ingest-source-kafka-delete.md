@@ -125,7 +125,7 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 
 {% include /com-ingest/com-ingest-eg-kafka-del-field-msg.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-field-ingest.md %}
 
 ### Kafka delete values
 

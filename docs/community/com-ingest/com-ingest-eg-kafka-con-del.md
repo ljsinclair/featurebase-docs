@@ -27,7 +27,7 @@ This page provides examples of Kafka static ingest files and flags you can use t
 
 {% include /com-ingest/com-ingest-eg-kafka-del-field-msg.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-field-ingest.md %}
 
 ### Kafka delete values
 
