@@ -39,9 +39,10 @@ molecula-consumer-kafka-static \
 
 ## Kafka static flags
 
-| Flag | Data type | Description | Default | Additional |
-|---|---|---|---|---|
-| --header | string | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI |  | S3 URI requires setting --s3-region or environment variable AWS_REGION |
+| Flag | Data type | Description | Default | Required | Additional |
+|---|---|---|---|---|---|
+| `--header` | `string` | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI |  | S3 URI requires setting `--s3-region` or `AWS_REGION` environment variable |
+| `--s3-region` | `string` | S3 Region, optionally used when header is specified as an S3 URI.  |  | Required for `--header <s3-URI>` |  Alternatively, use `AWS-REGION` environment variable |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
