@@ -26,3 +26,9 @@ This page provides examples of Kafka static ingest files and flags you can use t
 {% include /com-ingest/com-ingest-eg-kafka-delete-msg.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-delete-avro-schema.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-avro-msg.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-avro-ingest.md %}

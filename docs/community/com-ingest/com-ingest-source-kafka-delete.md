@@ -26,24 +26,27 @@ This reference page provides information on structuring an Avro encoded and form
     "delete": "<delete-property>",
     "fields":
       [
-        {
- "type": "array",
- "items": "string"
-        }`
-        ...
+        {"name": "_id", "type": "string"},
+        {"name": "<featurebase-sql-data-type"}, "type": "<featurebase-field-type>"
       ]
 }
 ```
 
 ## Kafka message delete properties
 
-| Property | Description | Required | Default | Additional information |
+| Property | Description | Required | Default | Additional |
 |---|---|---|---|
 | "namespace" |  |  | Yes |  |
 | "type": "record" | Avro schema type `record` | Yes |  |  |
 | "name" | AVRO schema name | Yes |  |  |
-| "delete": "fields" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like | Yes | `fields` | [Delete property](#delete-property) |
-| "fields" | Field names containing data to be deleted | Yes |  |  |
+| "delete": "fields" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like | Yes |
+
+## Kafka `"fields"` properties
+
+| Property | Description | Default | Required | Additional |
+|---|---|---|---|---|
+| `"name": "_id"` | Avro field that identifies the FeatureBase record values to be deleted |  |  | Set "type" to `string` if the FeatureBase index keys are `true`.  |
+| `"type"` | String or int value set according to FeatureBase index keys boolean value. |  |  | `int` when FeatureBase index keys = False. `string` when FeatureBase index keys = true. |
 
 ## Additional information
 
@@ -90,29 +93,24 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 |---|---|---|---|
 | `string`<br/>`int` | Values to delete from FeatureBase field | Retain field values by using the `union` data type to union `null` value with `string` or `int` data types |
 | `boolean` | `true` when FeatureBase field value should be deleted |
-| `_id` |
-
-
-The `_id` field in the Avro message
-* is reserved for the record ID / key.
-This is used to identify the record for which data should be deleted.
-
-If the FeatureBase index has keys set to `true` then the type of the `_id` Avro field should be set to `string`. Otherwise, it should be set to `int`.
-
-
 
 ### Data types
 
 {% include /sql-guide/datatype-mapping.md %}
 
 
-## Examples
+## Example
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-schema.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-msg.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-avro-schema.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-avro-msg.md %}
+
 
 ## Next step
 
