@@ -1,9 +1,8 @@
-FeatureBase has four import methods for Kafka data:
+FeatureBase has three import methods for Kafka data:
 
-* Kafka
 * Kafka consumer
-* Kafka static
-* Kafka delete
+* Kafka static consumer
+* Kafka delete consumer
 
 In all cases, the FeatureBase ingest tool:
 * Streams and reads Avro-encoded records from an Apache Kafka topic over HTTPS

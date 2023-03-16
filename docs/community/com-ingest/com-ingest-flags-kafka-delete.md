@@ -38,7 +38,8 @@ The `"fields"`values in the Kafka Avro message define the data to be deleted at 
 ```
 molecula-consumer-kafka-delete \
   <source-and-target-flags>    \
-  <kafka-flags>                \
+  <kafka-common-flags>         \
+  <kafka-delete-flags>
   <id-flags>                   \
   <batch-flags>                \
   <error-flags>                \
@@ -49,30 +50,19 @@ molecula-consumer-kafka-delete \
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
-{% include /com-ingest/com-ingest-flag-kafka.md %}
+{% include /com-ingest/com-ingest-flag-kafka-common.md %}
 
-IMPORTANT > New kafka flags for each consumer method!!
+## Kafka delete flags
 
-The following syntax is required when the Kafka Avro message `"fields"` value is set for:
+The following flags are required when the Kafka Avro message `"fields"` value is set for:
 * the Avro Record Schema
 * the Kafka message `"delete"` property
 
-```
-  --primary-key-fields "<primary-keys>" \
-  --topics delete_topic \
-  --kafka-bootstrap-server <url-or-ip>:9092 \
-  --schema-registry-url <url-or-ip>:8081 \
-  --featurebase-hosts <url-or-ip>:10101 \
-  --featurebase-grpc-hosts <url-or-ip>:20101 \
-  --index <an_index>
-```
-
-| Flag | Description |
-|---|---|
-| <primary-keys> | Used by the Kafka delete consumer to determine `ID` of the record to delete data from. |
-| `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
-
-
+| Flag | Data type | Description | Default | Additional |
+|---|---|---|---|---|
+| `--featurebase-grpc-hosts` | string | Comma separated list of host:port pairs for FeatureBase's GRPC endpoint. |  |  |
+| `--schema-registry-url` | URL or IP address of Confluent managed schema registry | localhost:9092 | [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html){:target="_blank"} |
+| `--topics` | delete topic JSON config file |  |  |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
@@ -100,16 +90,7 @@ The following syntax is required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
-### Kafka delete packed `bool` data type requirements
-
-```
-  `bools|is-alive`
-```
-
-| Key | Description |
-|---|---|
-| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
-| `is-alive` | Name of individual boolean field. |
+{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md}
 
 ## Examples
 

@@ -23,7 +23,8 @@ nav_order: 8
 ```
 molecula-consumer-kafka-static \
   <source-and-target-flags>    \
-  <kafka-flags>                \
+  <kafka-common-flags>         \
+  <kafka-static-flags>         \
   <id-flags>                   \
   <batch-flags>                \
   <error-flags>                \
@@ -34,16 +35,13 @@ molecula-consumer-kafka-static \
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
-{% include /com-ingest/com-ingest-flag-kafka.md %}
+{% include /com-ingest/com-ingest-flag-kafka-common.md %}
 
-ALTER TO STATIC INCLUDE which contains:
+## Kafka static flags
 
-
-| Flag | Action | Description |
-|---|---|---|
-| `registry-url` | Remove |  |
-| `header` | Insert | Path to a schema definition or "header" file in JSON format |
-| `allow-missing-fields` | Insert |  |
+| Flag | Data type | Description | Default | Additional |
+|---|---|---|---|---|
+| --header | string | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI |  | S3 URI requires setting --s3-region or environment variable AWS_REGION |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
@@ -70,6 +68,8 @@ ALTER TO STATIC INCLUDE which contains:
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
+
+{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md}
 
 ## Examples
 

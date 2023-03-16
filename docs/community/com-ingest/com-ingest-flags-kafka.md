@@ -11,10 +11,9 @@ nav_order: 8
 
 {% include /com-ingest/com-ingest-kafka-summary.md %}
 
-
 To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you will require:
-* A list of Kafka hosts
-* A FeatureBase index name (`--index <indexname>`),
+* A list of `kafka-hosts`
+* A FeatureBase`index <indexname>`),
 * One primary key method:
   * `--primary-key-field <fieldnames>`, or
   * `--id-field <fieldname>`, or
@@ -24,7 +23,7 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
 
 ## Before you begin
 
- [Kafka consumer setup ready for ingestion](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
+ [Setup Confluent managed Kafka ready for ingestion](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax
@@ -32,7 +31,8 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
 ```
 molecula-consumer-kafka      \
   <source-and-target-flags>  \
-  <kafka-flags>              \
+  <kafka-common-flags>       \
+  <kafka-consumer-flags      \
   <id-flags>                 \
   <batch-flags>              \
   <error-flags>              \
@@ -43,43 +43,13 @@ molecula-consumer-kafka      \
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
-{% include /com-ingest/com-ingest-flag-kafka.md %}
+{% include /com-ingest/com-ingest-flag-kafka-common.md %}
 
-NEW KAFKA FLAG INCLUDE STRICTLY FOR KAFKA CONSUMER
+## Kafka consumer flags
 
-
-ADAPT BELOW FOR KAFKA CONSUMER BECAUSE THERE'S BOUND TO BE SIMILARITIES
-
-The following syntax is required when the Kafka Avro message `"fields"` value is set for:
-* the Avro Record Schema
-* the Kafka message `"delete"` property
-
-```
-  --primary-key-fields "<primary-keys>" \
-  --topics delete_topic \
-  --kafka-bootstrap-server <url-or-ip>:9092 \
-  --schema-registry-url <url-or-ip>:8081 \
-  --featurebase-hosts <url-or-ip>:10101 \
-  --featurebase-grpc-hosts <url-or-ip>:20101 \
-  --index <an_index>
-```
-
-| Flag | Description |
-|---|---|
-| <primary-keys> | Used by the Kafka delete consumer to determine `ID` of the record to delete data from. |
-| `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
-
-## Kafka delete packed `bool` data type requirements
-
-```
-  `bools|is-alive`
-```
-
-| Key | Description |
-|---|---|
-| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
-| `is-alive` | Name of individual boolean field. |
-
+| Flag | Data type | Description | Default | Additional |
+|---|---|---|---|---|---|
+| `--schema-registry-url` | `string` | URL or IP address of Confluent managed schema registry | localhost:9092 | [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html){:target="_blank"} |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
@@ -97,6 +67,8 @@ The following syntax is required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
 
+{% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
+
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 
 {% include /com-config/com-config-extra-quoting-values.md%}
@@ -105,7 +77,7 @@ The following syntax is required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
-{% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
+{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md}
 
 ## Examples
 

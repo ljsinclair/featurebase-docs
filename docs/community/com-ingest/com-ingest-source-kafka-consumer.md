@@ -26,11 +26,11 @@ The Kafka Confluent ingest process:
 
 {% include /com-ingest/com-ingest-kafka-confluent-before.md %}
 
-## Kafka confluent JSON syntax
+## Kafka JSON syntax
 
 {% include /com-ingest/com-ingest-kafka-confluent-syntax.md %}
 
-## Kafka confluent JSON parameters
+## Kafka JSON parameters
 
 {% include /com-ingest/com-ingest-kafka-confluent-params.md %}
 
