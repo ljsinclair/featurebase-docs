@@ -72,4 +72,4 @@ The Kafka consumer can read messages containing each of the delete properties an
 
 ## Next step
 
-{% include /com-ingest/com-ingest-kafka-next.md %}
+* [Kafka delete ingest consumer flags reference](/docs/community/com-ingest-flags-kafka-delete)

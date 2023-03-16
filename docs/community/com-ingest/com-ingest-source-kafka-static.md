@@ -83,4 +83,4 @@ Ingesting data from a Kafka static schema involves the use of:
 
 ## Next step
 
-{% include /com-ingest/com-ingest-kafka-next.md %}
+* [Kafka static ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka-static)

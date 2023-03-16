@@ -54,7 +54,7 @@ The Kafka Confluent ingest process:
 
 ## Next step
 
-{% include /com-ingest/com-ingest-kafka-next.md %}
+* [Kafka ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
 ## Further information
 

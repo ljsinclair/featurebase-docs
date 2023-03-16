@@ -1,16 +1,15 @@
 ---
-title: Kafka ingest consumer reference
+title: Kafka delete ingest consumer
 layout: default
 parent: Import data
 grand_parent: Community
 nav_order: 8
 ---
 
-# Kafka ingest consumer reference
+# Kafka delete ingest consumer reference
 {: .no_toc}
 
 {% include /com-ingest/com-ingest-kafka-summary.md %}
-
 
 To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you will require:
 * A list of Kafka hosts
@@ -20,35 +19,39 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
   * `--id-field <fieldname>`, or
   * `--auto-generate`
 
+The Kafka Avro delete consumer was built to supply delete functionality that doesn't exist in the Kafka Avro consumer.
+
+The `"fields"`values in the Kafka Avro message define the data to be deleted at the `--primary-key-fields` specified on the CLI.
+
+{: .note}
+`molecula-consumer-kafka-delete` processes Kafka messages one at a time.
+
 {% include page-toc.md %}
 
 ## Before you begin
 
- [Kafka consumer setup ready for ingestion](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
+* [Learn how to configure the Kafka message to delete values](/docs/community/com-ingest/com-ingest-source-kafka-delete)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax
 
 ```
-molecula-consumer-kafka      \
-  <source-and-target-flags>  \
-  <kafka-flags>              \
-  <id-flags>                 \
-  <batch-flags>              \
-  <error-flags>              \
-  <log-stat-flags>           \
-  <testing-flags>            \
-  <kafka-auth-flags>         \
+molecula-consumer-kafka-delete \
+  <source-and-target-flags>    \
+  <kafka-flags>                \
+  <id-flags>                   \
+  <batch-flags>                \
+  <error-flags>                \
+  <log-stat-flags>             \
+  <testing-flags>              \
+  <kafka-auth-flags>           \
 ```
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
 {% include /com-ingest/com-ingest-flag-kafka.md %}
 
-NEW KAFKA FLAG INCLUDE STRICTLY FOR KAFKA CONSUMER
-
-
-ADAPT BELOW FOR KAFKA CONSUMER BECAUSE THERE'S BOUND TO BE SIMILARITIES
+IMPORTANT > New kafka flags for each consumer method!!
 
 The following syntax is required when the Kafka Avro message `"fields"` value is set for:
 * the Avro Record Schema
@@ -69,16 +72,6 @@ The following syntax is required when the Kafka Avro message `"fields"` value is
 | <primary-keys> | Used by the Kafka delete consumer to determine `ID` of the record to delete data from. |
 | `featurebase-grpc-hosts` | Required so the `inspect` call can determine the values to be deleted |
 
-## Kafka delete packed `bool` data type requirements
-
-```
-  `bools|is-alive`
-```
-
-| Key | Description |
-|---|---|
-| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
-| `is-alive` | Name of individual boolean field. |
 
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
@@ -107,6 +100,17 @@ The following syntax is required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
+### Kafka delete packed `bool` data type requirements
+
+```
+  `bools|is-alive`
+```
+
+| Key | Description |
+|---|---|
+| `bools` | Name of the packed `bools` field that matches `pack-bools` defined in the ingest configuration. Defaults to `bools`. |
+| `is-alive` | Name of individual boolean field. |
+
 ## Examples
 
-* [Kafka ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-con)
+* [Kafka delete ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-con-del)
