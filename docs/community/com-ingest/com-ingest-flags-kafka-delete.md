@@ -90,7 +90,7 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 
-{% include /com-config/com-config-extra-quoting-values.md%}
+{% include /com-config/com-config-extra-quoting-values.md %}
 
 {% include /com-ingest/com-ingest-extra-path-selection.md %}
 
@@ -98,7 +98,7 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
-{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md}
+{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md %}
 
 ## Examples
 
