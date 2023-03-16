@@ -1,4 +1,5 @@
-Delete Value Avro Schema
+### Kafka delete values Avro schema definition
+
 ```
 {
     "namespace": "example.test",

@@ -19,9 +19,9 @@ This page provides examples of Kafka static ingest files and flags you can use t
 * [Learn about Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
 * [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka)
 
-## Example
+## Examples
 
-### Kafka Delete fields
+### Kafka delete fields
 
 {% include /com-ingest/com-ingest-eg-kafka-del-field-schema.md %}
 
@@ -29,10 +29,18 @@ This page provides examples of Kafka static ingest files and flags you can use t
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
 
-### Kafka Delete
+### Kafka delete values
 
-{% include /com-ingest/com-ingest-eg-kafka-delete-avro-schema.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-values-schema.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-del-avro-msg.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-values-msg.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-del-avro-ingest.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-values-ingest.md %}
+
+### Kafka delete records
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-schema.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-msg.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-ingest.md %}

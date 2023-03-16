@@ -97,23 +97,29 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 | `string`<br/>`int` | Values to delete from FeatureBase field | Retain field values by using the `union` data type to union `null` value with `string` or `int` data types |
 | `boolean` | `true` when FeatureBase field value should be deleted |
 
-### `delete records`
+### Delete records properties
 
-### Records
-When the delete property in the Avro Record Schema is set to `"records"`, the Avro fields should be `"ids"`, `"keys"`, `"filter"` or some combination of those three.
+`"delete": "records"` is used to delete a list of records identified by their `_id`:
+* where the index is configured as `keys: false`
+*
 
-An `"ids"` Avro field should be used to delete a list of records based on their `_id` when the index is configured to `keys: false`. The type should be `{"type": "array", "items": "int"}`.
+`"delete": "records"` requires:
+* one or more Avro records of data type `ids`, `keys` and `filter`
+* `{"type": "array", "items": "int"}` message parameters
 
-A `"keys"` Avro field should be used to delete a list of records based on their `_id` when the index is configured to `keys: true`. The type should be `{"type": "array", "items": "string"}`.
 
-A `"filter"` avro field should be used to delete records based on some `PQL` row call. The type should be `{"type": "string"}`.
+
+{: .note}
+> A `"filter"` Avro field should be used to delete records based on a `PQL` row call.
+> `{"type": "string"}` message parameters are required
 
 ### Data types
 
 {% include /sql-guide/datatype-mapping.md %}
 
+## Examples
 
-## Example
+### Kafka delete fields
 
 {% include /com-ingest/com-ingest-eg-kafka-del-field-schema.md %}
 
@@ -121,10 +127,21 @@ A `"filter"` avro field should be used to delete records based on some `PQL` row
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-del-avro-schema.md %}
+### Kafka delete values
 
-{% include /com-ingest/com-ingest-eg-kafka-del-avro-msg.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-values-schema.md %}
 
+{% include /com-ingest/com-ingest-eg-kafka-del-values-msg.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-values-ingest.md %}
+
+### Kafka delete records
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-schema.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-msg.md %}
+
+{% include /com-ingest/com-ingest-eg-kafka-del-records-ingest.md %}
 
 ## Next step
 
