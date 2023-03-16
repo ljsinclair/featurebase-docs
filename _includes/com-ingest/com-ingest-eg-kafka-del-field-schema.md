@@ -1,4 +1,4 @@
-### Example Avro Schema
+### Kafka delete field Avro schema definition
 
 ```
 {

@@ -39,34 +39,37 @@ This reference page provides information on structuring an Avro encoded and form
 | "namespace" |  |  | Yes |  |
 | "type": "record" | Avro schema type `record` | Yes |  |  |
 | "name" | AVRO schema name | Yes |  |  |
-| "delete": "fields" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like | Yes |
-
-## Kafka `"fields"` properties
-
-| Property | Description | Default | Required | Additional |
-|---|---|---|---|---|
-| `"name": "_id"` | Avro field that identifies the FeatureBase record values to be deleted |  |  | Set "type" to `string` if the FeatureBase index keys are `true`.  |
-| `"type"` | String or int value set according to FeatureBase index keys boolean value. |  |  | `int` when FeatureBase index keys = False. `string` when FeatureBase index keys = true. |
+| "delete": "<delete-property>" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like. |  | Yes | * [Delete fields properties](#delete-fields-properties)<br/>* [Delete values properties](#delete-values-properties)<br/>* [Delete records properties](#delete-records-properties) |
+| `"fields"` | Delete all values in a list of fields for a single record without defining the specific data. | [Fields properties](#fields-properties)
 
 ## Additional information
 
-### Delete property
+### Delete Fields properties
 
 {: .note}
-The Kafka consumer can read messages containing each of the delete properties and apply to the Kafka topic.
+If the `"delete"` property is not defined the `molecula-consumer` defaults to `"delete": fields`
 
-| Property | Description | Data types | Required ingest flags | Additional |
-|---|---|---|---|---|---|
-| `"fields"` | Delete all values in a list of fields for a single record without defining the specific data. | `stringset`<br/>`idset` | `--primary-key-fields`<br/>`keys:true` for index | Fails when used with `keys:false` indexes |
+Set `"delete": "fields"` to delete all values:
+* in a list of fields
+* for a single record
+* for `IDSET` or `STRINGSET` fields where you don't know the specific values to delete
 
-| `"values"` | Delete specific values from a list of fields for a single record. | `BOOL`<br/>`DECIMAL`<br/>`IDSET`<br/>`INT`<br/>`STRINGSET`<br/>`TIMESTAMP` |  | Set `BOOL`<br/>`DECIMAL`<br/>INT`<br/>`TIMESTAMP` fields to null without knowing their values |
-| `"records"` | Delete full records either as a list or using a `PQL` row query | `STRING`<br/>`INT` | index `keys: true` for `STRING values`<br/>index `keys:false` for `INT` values |
+`"delete": "fields"` requires:
+* FeatureBase index configured with `keys: true`
+* At least one value for the `--primary-key-fields` key in `molecula-consumer-kafka-delete` to identify the `ID` of the record to delete data
+* Kafka message `"fields"` parameter:
+  * with `{"type": "array", "items": "string"}`
+  * Values
 
-#### `"delete": "values"` property
+#### Delete Values properties
 
-Where the Avro Record Schema `"delete"` property is set to `"values"`:
-* Avro fields must contain fields containing data that can be deleted
-* Name of the field in the Avro Record Schema must match a target field in a FeatureBase table
+Set `"delete": "values"` to:
+* delete specified values from `IDSET` and `STRINGSET` fields
+* specify `null` value for `BOOL`, `DECIMAL`, `INT` and `TIMESTAMP` fields
+
+`"delete": "values"` requires:
+* Avro fields containing data that can be deleted
+* Matching name for Avro Record Schema field and target FeatureBase record
 
 #### Avro data type field mapping
 
@@ -94,6 +97,17 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 | `string`<br/>`int` | Values to delete from FeatureBase field | Retain field values by using the `union` data type to union `null` value with `string` or `int` data types |
 | `boolean` | `true` when FeatureBase field value should be deleted |
 
+### `delete records`
+
+### Records
+When the delete property in the Avro Record Schema is set to `"records"`, the Avro fields should be `"ids"`, `"keys"`, `"filter"` or some combination of those three.
+
+An `"ids"` Avro field should be used to delete a list of records based on their `_id` when the index is configured to `keys: false`. The type should be `{"type": "array", "items": "int"}`.
+
+A `"keys"` Avro field should be used to delete a list of records based on their `_id` when the index is configured to `keys: true`. The type should be `{"type": "array", "items": "string"}`.
+
+A `"filter"` avro field should be used to delete records based on some `PQL` row call. The type should be `{"type": "string"}`.
+
 ### Data types
 
 {% include /sql-guide/datatype-mapping.md %}
@@ -101,9 +115,9 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 
 ## Example
 
-{% include /com-ingest/com-ingest-eg-kafka-delete-schema.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-field-schema.md %}
 
-{% include /com-ingest/com-ingest-eg-kafka-delete-msg.md %}
+{% include /com-ingest/com-ingest-eg-kafka-del-field-msg.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-delete-ingest.md %}
 

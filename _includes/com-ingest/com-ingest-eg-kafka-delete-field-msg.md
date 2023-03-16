@@ -1,4 +1,4 @@
-### Raw Kafka message
+### Kafka delete field raw message
 
 This message:
 * sets `int_fld` to `null`

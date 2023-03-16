@@ -1,4 +1,4 @@
-### Kafka ingester configuration
+### Kafka delete field ingester configuration
 
 ```
 molecula-consumer-kafka-delete \
