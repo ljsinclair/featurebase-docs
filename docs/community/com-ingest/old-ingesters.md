@@ -188,7 +188,7 @@ That is, you name each field, and then you specify the field's type (separated b
 
 declares that field is named 'age', is expected to be an integer, and be between 0 and 120. In general, all arguments are optional, but they are also positional, so if you want to specify a maximum value for the int field, you must first specify a minimum value.
 
-[Here](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) is the full list of field types along with their arguments.
+[Here](/docs/community/com-ingest/com-ingest-manage) is the full list of field types along with their arguments.
 
 ## Ingest Tuning
 
@@ -262,7 +262,7 @@ When operating with many unique mutex values, this results in `O(n^2)` ingest co
 
 ## CSV Ingester
 
-The CSV ingester can read CSV files (optionally gzipped) and ingest them to FeatureBase. It uses a naming convention in the header of the CSV file to [specify how each field](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) should be ingested. The header can either be included in the file or passed in separately if editing the file is not desirable. If passed in separately one should use the `--ignore-header` option if the CSV file has a header so that it is not interpreted as data.
+The CSV ingester can read CSV files (optionally gzipped) and ingest them to FeatureBase. It uses a naming convention in the header of the CSV file to [specify how each field](/docs/community/com-ingest/com-ingest-manage) should be ingested. The header can either be included in the file or passed in separately if editing the file is not desirable. If passed in separately one should use the `--ignore-header` option if the CSV file has a header so that it is not interpreted as data.
 
 The CSV ingester uses the CSV conventions outlined in [RFC-4180](https://datatracker.ietf.org/doc/html/rfc4180#section-2). CSV files following other conventions may result in undefined behavior. Few things to note from the specifications:
 - "Fields containing line breaks (CRLF), double quotes, and commas should be enclosed in double-quotes."
@@ -297,7 +297,7 @@ Missing values and empty string values (`""`) are handled identically.
 
 ## SQL Ingester
 
-The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names as [header descriptions to specify how each field](/docs/community/com-ingest/old-ingester-configuration#header-descriptions) should be ingested, similar to the CSV Ingester.
+The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names as [header descriptions to specify how each field](/docs/community/com-ingest/com-ingest-manage) should be ingested, similar to the CSV Ingester.
 
 Use `molecula-consumer-sql -h` to list all available flags (or see table below). A few sample configurations are noted below:
 

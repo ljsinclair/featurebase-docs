@@ -43,9 +43,11 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | Feature | Cloud | Community |
 |---|---|---|
 | Streaming (HTTPS)  | Yes | No |
-| Kafka (Pull-based) | Client-side kafka consumption & push | [Kafka ingestion](/docs/community/com-ingest/) |
-| Database (Pull-based) | No | [SQL ingestion](/docs/community/com-ingest/com-ingest-source-sql) |
-| CSV/Bulk Ingest  | No | [CSV ingestion](/docs/community/com-ingest/com-ingest-source-csv) |
+| Kafka (Pull-based) | Client-side kafka consumption & push | [Kafka ingestion](/docs/community/com-ingest/com-ingest-manage/#kafka-import-method) |
+| Database (Pull-based) | No | [SQL ingestion](/docs/community/com-ingest/com-ingest-manage/#sql-import-method) |
+| CSV/Bulk Ingest  | No | [CSV ingestion](docs/community/com-ingest/com-ingest-manage/#csv-import-method) |
+
+
 
 ## Data Consumption
 
