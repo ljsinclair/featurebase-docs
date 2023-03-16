@@ -33,7 +33,7 @@ plugins = /path/to/grafana-plugin/molecula/dist
 Uncomment and add the plugin id to `allow_loading_unsigned_plugins`:
 
 ```
-allow_loading_unsigned_plugins = molecula-datasource
+allow_loading_unsigned_plugins = featurebase-datasource
 ```
 
 The port which defaults to `3000` can be modified by setting the `http_port` field if necessary.
