@@ -39,13 +39,14 @@ The `"fields"`values in the Kafka Avro message define the data to be deleted at 
 molecula-consumer-kafka-delete \
   <source-and-target-flags>    \
   <kafka-common-flags>         \
-  <kafka-delete-flags>
+  <kafka-delete-flags>         \
   <id-flags>                   \
   <batch-flags>                \
   <error-flags>                \
   <log-stat-flags>             \
   <testing-flags>              \
   <kafka-auth-flags>           \
+  <kafka-ssl-flags>            \
 ```
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
@@ -76,9 +77,13 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-flag-kafka-auth.md %}
 
+{% include /com-ingest/com-ingest-flag-kafka-ssl.md %}
+
 ## Additional information
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-debug.md %}
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 

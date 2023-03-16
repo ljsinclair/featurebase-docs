@@ -39,6 +39,7 @@ molecula-consumer-kafka      \
   <log-stat-flags>           \
   <testing-flags>            \
   <kafka-auth-flags>         \
+  <kafka-ssl-flags>
 ```
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
@@ -63,9 +64,13 @@ molecula-consumer-kafka      \
 
 {% include /com-ingest/com-ingest-flag-kafka-auth.md %}
 
+{% include /com-ingest/com-ingest-flag-kafka-ssl.md %}
+
 ## Additional information
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-debug.md %}
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
