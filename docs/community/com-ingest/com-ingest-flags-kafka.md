@@ -29,22 +29,25 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
 ## Kafka CLI Syntax
 
 ```
-molecula-consumer-kafka      \
-  <source-and-target-flags>  \
-  <kafka-common-flags>       \
-  <kafka-consumer-flags      \
-  <id-flags>                 \
-  <batch-flags>              \
-  <error-flags>              \
-  <log-stat-flags>           \
-  <testing-flags>            \
-  <kafka-auth-flags>         \
-  <kafka-ssl-flags>
+molecula-consumer-kafka           \
+  <source-and-target-flags>       \
+  <kafka-common-flags>            \
+  <kafka-confluent-schema-flags>  \
+  <kafka-consumer-flags           \
+  <id-flags>                      \
+  <batch-flags>                   \
+  <error-flags>                   \
+  <log-stat-flags>                \
+  <testing-flags>                 \
+  <kafka-auth-flags>              \
+  <kafka-ssl-flags>               \
 ```
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
 {% include /com-ingest/com-ingest-flag-kafka-common.md %}
+
+{% include /com-ingest/com-ingest-flags-kafka-confluent.md %}
 
 ## Kafka consumer flags
 

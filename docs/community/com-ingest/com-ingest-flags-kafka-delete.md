@@ -36,22 +36,25 @@ The `"fields"`values in the Kafka Avro message define the data to be deleted at 
 ## Kafka CLI Syntax
 
 ```
-molecula-consumer-kafka-delete \
-  <source-and-target-flags>    \
-  <kafka-common-flags>         \
-  <kafka-delete-flags>         \
-  <id-flags>                   \
-  <batch-flags>                \
-  <error-flags>                \
-  <log-stat-flags>             \
-  <testing-flags>              \
-  <kafka-auth-flags>           \
-  <kafka-ssl-flags>            \
+molecula-consumer-kafka-delete    \
+  <source-and-target-flags>       \
+  <kafka-common-flags>            \
+  <kafka-confluent-schema-flags>  \
+  <kafka-delete-flags>            \
+  <id-flags>                      \
+  <batch-flags>                   \
+  <error-flags>                   \
+  <log-stat-flags>                \
+  <testing-flags>                 \
+  <kafka-auth-flags>              \
+  <kafka-ssl-flags>               \
 ```
 
 {% include /com-ingest/com-ingest-flag-source-target.md %}
 
 {% include /com-ingest/com-ingest-flag-kafka-common.md %}
+
+{% include /com-ingest/com-ingest-flags-kafka-confluent.md %}
 
 ## Kafka delete flags
 
