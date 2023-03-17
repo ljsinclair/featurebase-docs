@@ -70,7 +70,7 @@ Change the targets of any load balancers, and update configurations for services
 
 ## 6. Restart ingestion against the new FeatureBase cluster.
 
-Once the new system is up and running, the [ingester configurations](/docs/community/com-ingest/old-ingester-configuration) can be updated to point to the new cluster (`pilosa-hosts` and `pilosa-grpc-hosts`, respectively `--featurebase-hosts` and `--featurebase-grpc-hosts` with `--future.rename` flag).
+Once the new system is up and running, the [ingester configurations](/docs/community/com-ingest/com-ingest-manage) can be updated to point to the new cluster (`pilosa-hosts` and `pilosa-grpc-hosts`, respectively `--featurebase-hosts` and `--featurebase-grpc-hosts` with `--future.rename` flag).
 They can then be started back up to import new data.
 
 ## 7. Shutdown the original FeatureBase cluster.
