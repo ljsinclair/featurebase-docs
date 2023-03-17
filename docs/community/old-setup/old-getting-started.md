@@ -10,7 +10,7 @@ grand_parent: Community
 FeatureBase supports multiple interfaces for querying and [ingestion](/docs/community/com-ingest/old-ingesters). For this tutorial, we shall use the `csv-ingester` to insert data and both the web-UI and Postgres interface (via psql) to get familiar with querying FeatureBase. Ultimately you'll probably want to interact with FeatureBase through a [client library](/docs/community/com-query/old-python-library).
 
 **NOTE:**
-Note that FeatureBase server requires a high limit for open files. Check the documentation of your system to see how to increase it in case you hit that limit. As a workaround, you can also cap FeatureBase's [max-file-count](/docs/community/com-config/old-config-flags#max-file-count).
+Note that FeatureBase server requires a high limit for open files. Check the documentation of your system to see how to increase it in case you hit that limit. As a workaround, you can also cap FeatureBase's [max-file-count](/docs/community/com-config/com-config-flags#max-file-count).
 
 ### Starting FeatureBase
 

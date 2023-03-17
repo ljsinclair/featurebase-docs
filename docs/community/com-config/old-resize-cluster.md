@@ -27,11 +27,11 @@ As such, the latency requirements are looser than if FeatureBase were a system o
 First, create a new cluster of the desired size.
 The configuration from the old cluster can be reused by changing:
 
-- [`etcd.listen-client-address`](/docs/community/com-config/old-config-flags#etcd-listen-client-address) to the node's new network address
-- [`etcd.listen-peer-address`](/docs/community/com-config/old-config-flags#etcd-listen-peer-address) to the node's new network address
-- [`etcd.initial-cluster`](/docs/community/com-config/old-config-flags#etcd-initial-cluster) to use the new network addresses and add additional nodes
+- [`etcd.listen-client-address`](/docs/community/com-config/com-config-flags#etcd-listen-client-address) to the node's new network address
+- [`etcd.listen-peer-address`](/docs/community/com-config/com-config-flags#etcd-listen-peer-address) to the node's new network address
+- [`etcd.initial-cluster`](/docs/community/com-config/com-config-flags#etcd-initial-cluster) to use the new network addresses and add additional nodes
 
-Additionally, if the replication factor needs to be changed, the [`cluster.replicas`](/docs/community/com-config/old-config-flags#cluster-replicas) setting should be updated now.
+Additionally, if the replication factor needs to be changed, the [`cluster.replicas`](/docs/community/com-config/com-config-flags#cluster-replicas) setting should be updated now.
 
 ## 2. Stop ingestion via a bulk ingester
 
