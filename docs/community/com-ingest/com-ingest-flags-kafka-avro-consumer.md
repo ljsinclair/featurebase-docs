@@ -85,8 +85,6 @@ molecula-consumer-kafka           \
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
-{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md %}
-
 ## Examples
 
 * [Kafka ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-con)
