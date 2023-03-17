@@ -6,7 +6,7 @@ grand_parent: Community
 nav_order: 7
 ---
 
-# How do I add or delete data from FeatureBase tables using Kafka?
+# How do I add data to FeatureBase tables using Kafka?
 {: .no_toc}
 
 These instructions apply to Kafka schemas managed by Confluent Schema Management.
@@ -18,9 +18,9 @@ These instructions apply to Kafka schemas managed by Confluent Schema Management
 * Apache Zookeeper
 
 The Kafka Confluent ingest process:
-* reads Avro-encoded records from a Kafka topic
-* uses Confluent Schema Management to determine the message schema and FeatureBase field data types
-* adds or deletes the records from the specified FeatureBase table
+* reads Avro-encoded messages from a Kafka topic
+* uses Confluent Schema Management to determine the message schema, destination FeatureBase field data types
+* ingests the data into FeatureBase tables.
 
 ## Before you begin
 
@@ -28,13 +28,21 @@ The Kafka Confluent ingest process:
 
 ## Kafka JSON syntax
 
-{% include /com-ingest/com-ingest-kafka-confluent-syntax.md %}
+{% include /com-ingest/com-ingest-kafka-avro-syntax.md %}
 
 ## Kafka JSON parameters
 
 {% include /com-ingest/com-ingest-kafka-confluent-params.md %}
 
 ## Additional information
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-mapping.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
+
+
 
 ### Data types
 
@@ -53,7 +61,6 @@ The Kafka Confluent ingest process:
 {% include /community/com-config-cli-run.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-avro-ingest.md%}
-
 
 ### Kafka Avro ingest featuring Quantum values
 
@@ -76,3 +83,4 @@ The Kafka Confluent ingest process:
 * [Learn about Kafka Consumer](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
 * [Learn about Kafka Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
 * [Learn about Kafka Consumer API](https://kafka.apache.org/documentation/#consumerapi)
+* [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
