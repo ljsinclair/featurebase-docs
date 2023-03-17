@@ -53,5 +53,5 @@ Refer to these reference files for information on how to set up and import data 
 * [Kafka Avro consumer](/docs/community/com-ingest/com-ingest-kafka-avro)
 * [Kafka Avro delete consumer](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
 <!--
-* [Kafka static schema](/docs/community/com-ingest/com-ingest-flags-kafka-static)
+* [Kafka static schema](/docs/community/com-ingest/com-ingest-kafka-static-schema)
 -->
