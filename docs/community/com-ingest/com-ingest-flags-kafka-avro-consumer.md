@@ -23,7 +23,7 @@ To ingest data to FeatureBase tables from Confluent managed Kafka schemas, you w
 
 ## Before you begin
 
- [Setup Confluent managed Kafka ready for ingestion](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
+ [Setup Confluent managed Kafka ready for ingestion](/docs/community/com-ingest/com-ingest-source-kafka-avro-consumer)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax
