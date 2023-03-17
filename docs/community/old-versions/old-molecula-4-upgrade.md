@@ -42,7 +42,7 @@ FeatureBase v3.x has new backup and restore functionality. For details, refer to
 
 ### Configuration
 
-For additional details on the new configuration, refer to the [FeatureBase Configuration](/docs/community/com-config/old-config-flags)
+For additional details on the new configuration, refer to the [FeatureBase Configuration](/docs/community/com-config/com-config-flags)
 
 #### New Configuration
 `--name`: Set a unique name for this node within the cluster. This is used internally by etcd.
@@ -107,7 +107,7 @@ The roaring-migrate binary is included in the FeatureBase release. To update Pil
  - ```backup-dir``` represents the directory where data converted to RBF will be stored.
 
 #### 4. Stand-up a New FeatureBase
-Instructions for setting up FeatureBase are in the [How to Install FeatureBase](/docs/community/old-setup/old-installing-featurebase). Also, refer to the [FeatureBase Configuration](/docs/community/com-config/old-config-flags) for additional details. This stop is not necessarily dependent on the previous 3, and if your environment allows this, you'll probably want to do this first to minimize downtime.
+Instructions for setting up FeatureBase are in the [How to Install FeatureBase](/docs/community/old-setup/old-installing-featurebase). Also, refer to the [FeatureBase Configuration](/docs/community/com-config/com-config-flags) for additional details. This stop is not necessarily dependent on the previous 3, and if your environment allows this, you'll probably want to do this first to minimize downtime.
 
 The new FeatureBase cluster needs to contain an odd number of nodes due to reliance on an embedded `etcd` cluster.
 

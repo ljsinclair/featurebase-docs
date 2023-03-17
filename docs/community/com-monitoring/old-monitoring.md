@@ -130,7 +130,7 @@ where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` co
 
 Reporting metrics to Prometheus is enabled by default for Ingesters (at :9093/metrics); `host:port` can be specified with the `--stats` flag.
 
-For FeatureBase, reporting must be enabled, as detailed on the [Configuration page](/docs/community/com-config/old-config-flags#metric-service). E.g.
+For FeatureBase, reporting must be enabled, as detailed on the [Configuration page](/docs/community/com-config/com-config-flags#metric-service). E.g.
 
 ```toml
 [metric]

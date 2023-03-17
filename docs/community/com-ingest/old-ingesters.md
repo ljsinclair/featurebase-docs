@@ -91,7 +91,7 @@ Finally, setting `external-generate` in addition to `auto-generate` uses Feature
 
 The Kafka ingester reads Avro-encoded records from a Kafka topic, uses the Confluent schema registry to decode them, and ingests the data into FeatureBase.
 
-[Full configuration reference](/docs/community/com-ingest/old-ingester-configuration#kafka-ingester)
+[Full configuration reference](/docs/community/com-ingest/com-ingest-manage#kafka-ingester)
 
 ### Schema Registry Behavior
 
@@ -160,21 +160,21 @@ The Kafka delete ingester configuration is the same as the Kafka ingester with t
 
 The Kafka Static ingester reads JSON-encoded records from a Kafka topic, uses a statically defined schema (with the ingester JSON header format) to decode them, and ingests the data into FeatureBase.
 
-[Full configuration reference](/docs/community/com-ingest/old-ingester-configuration#kafka-static-ingester)
+[Full configuration reference](/docs/community/com-ingest/com-ingest-manage#kafka-static-ingester)
 
 
 ## CSV Ingester
 
 The CSV ingester can read CSV files (optionally gzipped) and ingest them to FeatureBase. It uses a naming convention in the header of the CSV file to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested. The header can either be included in the file or passed in separately if editing the file is not desirable. If passed in separately one should use the `--ignore-header` option if the CSV file has a header so that it is not interpreted as data.
 
-[Full CSV Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#csv-ingester)
+[Full CSV Ingester Configuration Reference](/docs/community/com-ingest/com-ingest-manage#csv-ingester)
 
 
 ## SQL Ingester
 
 The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
 
-[Full SQL Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#sql-ingester)
+[Full SQL Ingester Configuration Reference](/docs/community/com-ingest/com-ingest-manage#sql-ingester)
 
 ## Field types
 
