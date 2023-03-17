@@ -32,7 +32,7 @@ The Kafka Confluent ingest process:
 
 ## Kafka JSON parameters
 
-{% include /com-ingest/com-ingest-kafka-confluent-params.md %}
+{% include /com-ingest/com-ingest-kafka-avro-params.md %}
 
 ## Additional information
 
