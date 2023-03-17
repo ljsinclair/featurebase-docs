@@ -47,7 +47,7 @@ Map Avro field data types and property key-value pairs to determine the FeatureB
 |---|---|---|
 | `{"name": "string_string", "type": "string", "mutex": true }`| FeatureBase String from Avro String |  |
 | `{"name": "string_bytes", "type": "bytes" , "mutex": true }` | FeatureBase String from Avro Bytes |  |
-| `{"name": "string_enum", "type": "enum"}` | FeatureBase String from Avro Enum | [FeatureBase string data type](/sql-guide/data-types/data-type-string) |
+| `{"name": "string_enum", "type": "enum"}` | FeatureBase String from Avro Enum |  |
 | `{"name": "string_string", "type": ["string", "null"], "mutex": true }` | Optional String | [Ignore missing fields](#ignore-missing-fields) |
 | `{"name": "stringset_stringarray", "type": [{"type": "array", "items": "string"}, "null"]}` | Optional Array of Strings | [Ignore missing fields](#ignore-missing-fields) |
 
