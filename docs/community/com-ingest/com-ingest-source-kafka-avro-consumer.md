@@ -24,7 +24,7 @@ The Kafka Confluent ingest process:
 
 ## Before you begin
 
-{% include /com-ingest/com-ingest-kafka-confluent-before.md %}
+{% include /com-ingest/com-ingest-kafka-avro-before.md %}
 
 ## Kafka JSON syntax
 
