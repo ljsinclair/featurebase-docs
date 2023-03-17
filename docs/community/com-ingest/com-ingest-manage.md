@@ -52,6 +52,6 @@ Refer to these reference files for information on how to set up and import data 
 
 There are three Kafka ingest methods:
 
-* [Kafka Confluent schema management](/docs/community/com-ingest/com-ingest-source-kafka-consumer)
-* [Kafka static schema](/docs/community/com-ingest/com-ingest-source-kafka-static)
-* [Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
+* [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-kafka-avro)
+* [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
+* [Kafka static schema ingest](/docs/community/com-ingest/com-ingest-kafka-static)
