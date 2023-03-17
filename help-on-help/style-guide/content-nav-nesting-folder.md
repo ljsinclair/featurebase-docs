@@ -18,7 +18,7 @@ The theme supports 3 level of pages
 
 | Level | Description | Optional pages you can add | Example |
 |---|---|---|---|
-| Home | HTML homepage | One or more L1 pages | /index.html |
+| Home | HTML homepage | One or more L1 pages | /index.md |
 | L1 | Appears at navigation root. | One or more L2 pages | /docs/cloud/cloud-home.md |
 | L2 | Appears beneath L1 page | One or more L3 pages | /docs/cloud/cloud-databases/cloud-db-manage.md |
 | L3 | Appears beneath L2 page | /docs/cloud/cloud-databases/cloud-db-create.md |
@@ -34,7 +34,7 @@ Nesting requires the following YAML keys to be defined in the page header:
 
 ## Example YAML
 
-### Homepage `/index.html`
+### Homepage `/index.md`
 
 This is a special page with a different layout and can only contain HTML.
 

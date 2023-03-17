@@ -177,6 +177,16 @@ expanded (or x)
 If **value** is specified it must be either on or off, which will enable or disable expanded mode, or auto. If value is omitted the command toggles between the on and off settings. When expanded mode is enabled, query results are displayed in two columns, with the column name on the left and the data on the right. This mode is useful if the data wouldn't fit on the screen in the normal “horizontal” mode.
 
 ```
+format
+```
+
+Sets the output format to one of aligned or csv.
+
+`aligned` format is the standard, human-readable, nicely formatted text output; this is the default.
+
+`csv` format writes column values separated by commas, applying the quoting rules described in RFC 4180. A header line with column names is generated unless the tuples_only parameter is on. Titles and footers are not printed. Each row is terminated by the system-dependent end-of-line character, which is typically a single newline (\n) for Unix-like systems or a carriage return and newline sequence (\r\n) for Microsoft Windows.
+
+```
 tuples_only (or t)
 ```
 
