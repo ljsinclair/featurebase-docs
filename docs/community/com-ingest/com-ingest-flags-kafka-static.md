@@ -79,4 +79,4 @@ molecula-consumer-kafka-static \
 
 ## Examples
 
-* [Kafka static ingest consumer examples](/docs/community/com-ingest/com-ingest-example-kafka-static)
+* [Kafka static ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-static)
