@@ -13,7 +13,7 @@ The Kafka Avro ingester reads Avro-encoded messages from a Kafka topic, uses the
 
 In Avro, every field is mandatory. If you want to make a field optional (i.e. you want to allow missing values), you can union the type with the null type in Avro. This will allow you to pass the value `null` for fields that have missing values. Note that the consumer does nothing with these values (i.e. it does not replace the existing value with `null`).
 
-Use the [Kafka Avro Delete consumer](/docs/community/com-ingest/com-ingest-source-kafka-delete) to delete data.
+Use the [Kafka Avro Delete consumer](/docs/community/com-ingest/com-ingest-kafka-avro-delete) to delete data.
 
 {% include page-toc.md %}
 
@@ -140,7 +140,7 @@ When the consumer reads the Avro schema from Schema Registry, infers the Feature
 
 ### Mapping Examples
 
-Again, the Avro field type and property key-value pairs determine which type you’ll end up with in FeatureBase. Below are Avro fields that map to a given FeatureBase type. 
+Again, the Avro field type and property key-value pairs determine which type you’ll end up with in FeatureBase. Below are Avro fields that map to a given FeatureBase type.
 
 #### STRING
 
@@ -281,7 +281,7 @@ Optional String:
 ```
 {"name": "string_string", "type": ["string", "null"], "mutex": true }
 ```
-       
+
 Optional Array of Strings:
 ```
 {"name": "stringset_stringarray", "type": [{"type": "array", "items": "string"}, "null"]}
@@ -374,5 +374,5 @@ molecula-consumer-kafka \
 ## Next step
 
 
-- If you are looking to delete data using a similar Avro consumer, go [here](/docs/community/com-ingest/com-ingest-source-kafka-delete).
+- If you are looking to delete data using a similar Avro consumer, go [here](/docs/community/com-ingest/com-ingest-kafka-avro-delete).
 - If you want to get data from kafka but don't want to use schema registry and avro to encode your data, check out the [Kafka Static](/docs/community/com-ingest/com-ingest-source-kafka-static) consumer.
