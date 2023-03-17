@@ -76,7 +76,7 @@ The Kafka Confluent ingest process:
 
 ## Next step
 
-* [Kafka ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka)
+* [Kafka Avro ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka-avro-consumer)
 
 ## Further information
 
