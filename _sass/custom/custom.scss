@@ -142,19 +142,24 @@ code {
   color: #7500a3;
 } // name.builtin //
 
-/* Copy copy button */
+/* Copy code button */
 button.code-copy {
   width: 24px;
   height: 24px;
   border: none;
   padding: 0px;
   cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 
-.highlighter-rouge {
-  display: flex;
-  flex-direction: row;
-  .highlight {
-    flex-grow: 1;
+div.highlighter-rouge,
+  div.listingblock > div.content,
+  figure.highlight {
+    position: relative;
   }
+
+div.highlight {
+  overflow-x: hidden;
 }
