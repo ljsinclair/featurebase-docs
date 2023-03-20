@@ -42,14 +42,11 @@ The Kafka Confluent ingest process:
 
 {% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
 
-
-
-### Data types
-
-{% include /sql-guide/datatype-mapping.md %}
-
 ## Examples
 
+* [Example Kafka Avro ingest source](/docs/community/com-ingest/com-ingest-example-kafka-avro)
+
+<!-- commented out to demo how a single example file can reduce number of includes
 ### Simple Kafka Avro ingest
 
 {% include /com-ingest/com-ingest-eg-kafka-avro-summary.md %}
@@ -74,9 +71,11 @@ The Kafka Confluent ingest process:
 
 {% include /com-ingest/com-ingest-eg-kafka-avro-quant-ingest.md%}
 
+-->
+
 ## Next step
 
-* [Kafka Avro ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka-avro-consumer)
+* [Kafka Avro ingest consumer flags reference](/docs/community/com-ingest/com-ingest-flags-kafka-avro)
 
 ## Further information
 

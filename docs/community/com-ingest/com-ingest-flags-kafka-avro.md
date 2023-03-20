@@ -85,6 +85,6 @@ molecula-consumer-kafka           \
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
-## Examples
+## Further information
 
 * [Kafka ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-avro-consumer)
