@@ -141,3 +141,20 @@ code {
 .highlight .nb {
   color: #7500a3;
 } // name.builtin //
+
+/* Copy copy button */
+button.code-copy {
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.highlighter-rouge {
+  display: flex;
+  flex-direction: row;
+  .highlight {
+    flex-grow: 1;
+  }
+}
