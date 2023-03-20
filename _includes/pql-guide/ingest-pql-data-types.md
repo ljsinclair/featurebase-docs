@@ -1,11 +1,9 @@
----
-title: PQL Options
-layout: default
-parent: PQL guide
-has_children: false
-nav_order: 1
-has_toc: false
----
+<--THIS CONTENT WAS PULLED FROM ORIGINAL INGEST DOCS AND NOT CURRENTLY IN A DOCS folder file
+
+Needs a review to confirm the accuracy of the information so it can be converted into an appropriate include file.
+
+The fact we're talking about PQL though means it should also be referenced (at the very least) from the PQL docs. Even if it's from the PQL-home for instance.
+-->
 
 
 The available values for `type` are:
