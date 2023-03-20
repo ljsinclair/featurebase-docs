@@ -98,8 +98,6 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
-{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md %}
-
 ## Examples
 
 * [Kafka delete ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-con-del)
