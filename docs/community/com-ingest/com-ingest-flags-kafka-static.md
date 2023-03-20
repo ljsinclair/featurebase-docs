@@ -75,8 +75,6 @@ molecula-consumer-kafka-static \
 
 {% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
-{% include /com-ingest/com-ingest-extra-datatype-packed-bool.md %}
-
 ## Examples
 
 * [Kafka static ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-static)
