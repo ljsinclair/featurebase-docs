@@ -60,13 +60,4 @@ python3 extract.py`
 
 ## Step 4 - confirm the images are updated
 
-* CD to `/help-on-help` and confirm the images have been updated.
-
-## Step 5 - Move the svg files
-
-* CD to `/help-on-help/regenerate-sql-svg`
-* Run the move script:
-
-```
-bash ./move-svg-to-images.sh
-```
+* Navigate to `/assets/images/sql-guide/` and confirm the intended images have been updated.

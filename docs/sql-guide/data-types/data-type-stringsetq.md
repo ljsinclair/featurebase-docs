@@ -8,7 +8,7 @@ nav_order: 9
 
 # STRINGSETQ data type
 
-STRINGSETQ is a FeatureBase datatype used with `TIMEQUANTUM` and `TTL` (Time To Live) constraints.
+STRINGSETQ is a FeatureBase datatype used to set multiple STRING values and associate times for each value in a single column.
 
 ## DDL Syntax
 
