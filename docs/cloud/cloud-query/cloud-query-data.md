@@ -2,7 +2,7 @@
 title: Query data
 layout: default
 parent: Cloud
-has_children: false
+has_children: true
 nav_order: 6
 has_toc: false
 ---
@@ -30,22 +30,15 @@ All queries in FeatureBase Cloud go through [the query endpoint](https://api-doc
 
 ## Executing queries in the UI
 
-In the User interface, clicking the “Query” section on the left hand navigation bar will take you to a page where you can explore data using PQL & SQL statements. The text editor allows for multiple queries to exist in the same pane. Individual queries are separated by newlines with only whitespace. Queries can be run by either clicking the run button or with a key combination of `“Ctrl + Enter"` or `Cmd + Enter"`.
+* [Execute a query](/docs/cloud/cloud-query/cloud-query-execute/)
 
-### Selecting a database to query
-
-You should first pick a database to query against in the top right corner. This will default to the oldest database created. You can redirect any query to a particular database by aliasing/prepending it with `“{<database name>}”`. 
-
-### UI record limits
-Queries in the user interface have an automatic limit of 100 records applied but can be adjusted up to a 10k maximum. This limit is to protect users from accidentally running taxing queries against their databases and impacting production performance. 
-
-### Manipulating results
+## Manipulating results
 After running a query, you will see data populated in a tabular format below the text editor. You are free to explore your data and sort it by the columns returned. If you’d like to hide some of the returned columns, you can click “Columns” directly above the tabular results. 
 
-### Exporting results
+## Exporting results
 You can also export this data to your local machine by clicking “Export” and either downloading a CSV or printing the results.
 
-### Schema browser
+## Schema browser
 The query browser also allows users to browse their tables and schemas for easy reference to the tables and columns they can query. Click on `Schema Browser` at the top of the text editor to see a searchable list of all of your tables. Click on a table to have a searchable list of all the columns in that table populate. This feature allows you to easily pull up the tables and columns that you can query. Please note, this is populated based on the database you selected in the top right corner of the screen. You may also click `CREATE SELECT STATEMENT` here to have a SELECT statement with all columns pasted into the text editor.
 
 ## Query history
