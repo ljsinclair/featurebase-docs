@@ -28,21 +28,17 @@ All queries in FeatureBase Cloud go through [the query endpoint](https://api-doc
 
 {% include /cloud-query/cloud-query-limits.md %}
 
-## Executing queries in the UI
+## Using the query page in the UI
 
 * [Execute a query](/docs/cloud/cloud-query/cloud-query-execute/)
+* [Use the schema browser](/docs/cloud/cloud-query/cloud-query-schema-browser/)
+* [Use the query history](/docs/cloud/cloud-query/cloud-query-history/)
 
 ## Manipulating results
-After running a query, you will see data populated in a tabular format below the text editor. You are free to explore your data and sort it by the columns returned. If you’d like to hide some of the returned columns, you can click “Columns” directly above the tabular results. 
+After running a query, you will see data populated in a tabular format below the text editor. You are free to explore your data and sort it by the columns returned. If you’d like to hide some of the returned columns, you can click **Columns** directly above the tabular results. 
 
 ## Exporting results
-You can also export this data to your local machine by clicking “Export” and either downloading a CSV or printing the results.
-
-## Schema browser
-The query browser also allows users to browse their tables and schemas for easy reference to the tables and columns they can query. Click on `Schema Browser` at the top of the text editor to see a searchable list of all of your tables. Click on a table to have a searchable list of all the columns in that table populate. This feature allows you to easily pull up the tables and columns that you can query. Please note, this is populated based on the database you selected in the top right corner of the screen. You may also click `CREATE SELECT STATEMENT` here to have a SELECT statement with all columns pasted into the text editor.
-
-## Query history
-You can view, search for, and re-run your historical queries. Click `History` at the top of the text editor to see a searchable list of all of your past queries with the most recent shown at the top. This will display the query, the execution time, the rows returned, and when it was run. The color next to each query signifies if the query execution was successful (green), unsuccessful (red), or still running (blue). Clicking on a query will give you two options. You can “replay” a query by clicking on the play button. This will create a new query entry at the top of your history. You can also copy the full query to your clipboard by clicking the copy button. Note that your query history is private to you and can be lost if you clear your browser cache.
+You can also export this data to your local machine by clicking **Export** and either downloading a CSV or printing the results.
 
 ## Further information
 * [SQL API Reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/querySqlDatabase){:target="_blank"}

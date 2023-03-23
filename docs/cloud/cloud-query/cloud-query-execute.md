@@ -16,10 +16,7 @@ You can also query data programmatically with [the query endpoint](https://api-d
 
 ## Before you begin
 
-{% include /cloud/cloud-before-begin.md %}
-* [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create)
-* [Learn how to create a table](/docs/cloud/cloud-tables/cloud-table-create)
-* [Learn about querying in Cloud](/docs/cloud/cloud-query/cloud-query-data)
+{% include /cloud-query/cloud-before-query.md %}
 
 ## Step 1: Navigate to query editor
 
@@ -39,10 +36,20 @@ Write a query using either the standard [SQL Language](/docs/sql-guide/sql-guide
 
 ### Example
 
-```SQL
+```sql
 SELECT 1;
+
+--second query separated by an empty new line
+SELECT 2;
 ```
 
 ## Step 5: Execute the query
 
 {% include /cloud-query/cloud-query-execute.md %}
+
+## Further information
+* [Use the schema browser](/docs/cloud/cloud-query/cloud-query-schema-browser/)
+* [Use the query history](/docs/cloud/cloud-query/cloud-query-history/)
+* [Query API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Query)
+* [fbsql CLI Reference](/docs/tools/fbsql/fbsql-home/)
+
