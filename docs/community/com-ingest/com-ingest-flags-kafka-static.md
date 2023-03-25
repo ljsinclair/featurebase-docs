@@ -42,7 +42,7 @@ molecula-consumer-kafka-static \
 
 | Flag | Data type | Description | Default | Required | Additional |
 |---|---|---|---|---|---|
-| `--header` | `string` | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI |  | S3 URI requires setting `--s3-region` or `AWS_REGION` environment variable |
+| `--header` | `string` | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI | For `--s3-region` or `AWS_REGION`  | [Kafka Static schema ingest source](/docs/community/com-ingest/com-ingest-source-kafka-static.md) |
 | `--s3-region` | `string` | S3 Region, optionally used when header is specified as an S3 URI.  |  | Required for `--header <s3-URI>` |  Alternatively, use `AWS-REGION` environment variable |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
@@ -61,6 +61,8 @@ molecula-consumer-kafka-static \
 
 ## Additional information
 
+* Run `molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
+
 {% include /com-ingest/com-ingest-help-kafka.md %}
 
 {% include /com-ingest/com-ingest-extra-kafka-debug.md %}
@@ -68,8 +70,6 @@ molecula-consumer-kafka-static \
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 
 {% include /com-config/com-config-extra-quoting-values.md%}
-
-{% include /com-ingest/com-ingest-extra-path-selection.md %}
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
