@@ -30,7 +30,7 @@ The `"fields"`values in the Kafka Avro message define the data to be deleted at 
 
 ## Before you begin
 
-* [Learn how to configure the Kafka message to delete values](/docs/community/com-ingest/com-ingest-source-kafka-delete)
+* [Learn how to configure the Kafka message to delete values](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
 * [Start Apache Kafka services](https://kafka.apache.org/quickstart){:target="_blank"}
 
 ## Kafka CLI Syntax

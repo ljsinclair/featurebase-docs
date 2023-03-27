@@ -16,8 +16,8 @@ This page provides examples of Kafka static ingest files and flags you can use t
 ## Before you begin
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
-* [Learn about Kafka Confluent delete](/docs/community/com-ingest/com-ingest-source-kafka-delete)
-* [Apache Kafka ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka)
+* [Learn about Kafka Avro delete](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
+* [Kafka Avro ingest flag reference](/docs/community/com-ingest/com-ingest-flags-kafka-avro-delete)
 
 ## Examples
 
