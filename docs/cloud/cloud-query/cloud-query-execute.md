@@ -17,33 +17,21 @@ You can also query data programmatically with [the query endpoint](https://api-d
 ## Before you begin
 
 {% include /cloud-query/cloud-before-query.md %}
+* Click **Query** to navigate to query editor
 
-## Step 1: Navigate to query editor
-
-* Click **Query**
-
-## Step 2: Select database to query
+## Step 1: Select database to query
 
 {% include /cloud-query/cloud-query-choose-db.md %}
 
-## Step 3: Choose query limit
+## Step 2: Choose query limit
 
 {% include /cloud-query/cloud-query-choose-rec-limit.md %}
 
-## Step 4: Write query in text editor 
+## Step 3: Write query in text editor 
 
 Write a query using either the standard [SQL Language](/docs/sql-guide/sql-guide-home) or our native [PQL Language](/docs/pql-guide/pql-home) in the text editor. The text editor allows for multiple queries to exist in the same pane. Individual queries are separated by newlines with only whitespace.
 
-### Example
-
-```sql
-SELECT 1;
-
---second query separated by an empty new line
-SELECT 2;
-```
-
-## Step 5: Execute the query
+## Step 4: Execute the query
 
 {% include /cloud-query/cloud-query-execute.md %}
 

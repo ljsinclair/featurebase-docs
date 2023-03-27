@@ -37,8 +37,6 @@ The Query page contains a schema browser that facilitates query building by allo
 
 * Click the **CREATE SELECT STATEMENT** button at the top of the schema browser
 
-Clicking this will create a SQL `SELECT` statement with all columns at the bottom of the text editor.
-
 ### Exit table details
 
 * Click **<** on the schema browser to return to the table list

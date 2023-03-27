@@ -1,6 +1,6 @@
-There are two methods for executing a query in the UI:
+The UI will execute the query that your text cursor is touching. There are two methods for executing a query in the UI:
 
 |Method | Instructions  |
 | --- | ----------- |
-| Click to run | Click the button in the top left labeled **RUN**  |
-| Hot keys | Place your cursor anywhere within the query you'd like to run in the text editor and hit a key combination of `“Ctrl + Enter"` or `Cmd + Enter"` (depending on your OS and preference) |
+| Click to run | Click **RUN** to execute the query |
+| Hot keys | Enter a key combination of `“Ctrl + Enter"` or `Cmd + Enter"` (depending on your OS and preference) |

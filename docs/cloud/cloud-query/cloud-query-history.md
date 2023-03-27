@@ -27,13 +27,13 @@ The Query page contains a searchable history of your personal queries, their exe
 
 ## Copy a query to the clipboard
 
-* Click the query of interest
-* Click on the copy icon that reads **Copy query to clipboard** when hovered over
+1. Click the query of interest
+2. Click on the copy icon that reads **Copy query to clipboard** when hovered over
 
 ## Re-run a query
 
-* Click the query of interest
-* Click on the play button icon that reads **Re-run query** when hovered over
+1. Click the query of interest
+2. Click on the play button icon that reads **Re-run query** when hovered over
 
 This will create a new query entry at the top of your history.
 
