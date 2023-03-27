@@ -16,6 +16,8 @@ The Kafka Confluent ingest process:
 * uses Confluent Schema Management to determine the message schema, destination FeatureBase field data types
 * ingests the data into FeatureBase tables.
 
+{% include page-toc.md %}
+
 ## Before you begin
 
 {% include /com-ingest/com-ingest-kafka-avro-before.md %}
