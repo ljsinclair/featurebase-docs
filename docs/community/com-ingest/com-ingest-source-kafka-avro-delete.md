@@ -88,30 +88,22 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 | `TIMESTAMP` | `Timestamp` | `boolean` |
 | `BOOL` | `Bool` | `boolean` |
 
-
-
 #### Avro data types to Kafka message
 
 | Avro data type | Kafka message | Additional |
-|---|---|---|---|
+|---|---|---|
 | `string`<br/>`int` | Values to delete from FeatureBase field | Retain field values by using the `union` data type to union `null` value with `string` or `int` data types |
 | `boolean` | `true` when FeatureBase field value should be deleted |
 
 ### Delete records properties
 
-`"delete": "records"` is used to delete a list of records identified by their `_id`:
-* where the index is configured as `keys: false`
-*
+The `"delete": "records"` parameter requires one or more Avro field data types:
 
-`"delete": "records"` requires:
-* one or more Avro records of data type `ids`, `keys` and `filter`
-* `{"type": "array", "items": "int"}` message parameters
-
-
-
-{: .note}
-> A `"filter"` Avro field should be used to delete records based on a `PQL` row call.
-> `{"type": "string"}` message parameters are required
+| Avro data type | Description | FeatureBase index | JSON fields parameter |
+|---|---|---|---|
+| `"ids"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: false` | `{"type": "array", "items": "int"}` |
+| `"keys"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: true`| `{"type": "array", "items": "string"}` |
+| `"filter"` | Used to delete records based on `PQL` row calls | n/a |  `{"type": "string"}` |
 
 ### Data types
 
