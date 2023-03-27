@@ -1,12 +1,12 @@
 ---
-title: Kafka Confluent delete examples
+title: Kafka Avro delete examples
 layout: default
 parent: Import data
 grand_parent: Community
 nav_order: 9
 ---
 
-# Kafka Confluent delete ingest examples
+# Kafka Avro delete examples
 {: .no_toc}
 
 This page provides examples of Kafka static ingest files and flags you can use to test the system

@@ -8,13 +8,19 @@ nav_order: 8
 
 # Kafka delete message reference
 
+{% include /com-ingest/com-ingest-kafka-avro-intro.md %}
+
+The Kafka Avro Delete process:
+
+
+
 This reference page provides information on structuring an Avro encoded and formatted Kafka messages that is:
 * referenced by the Kafka delete consumer CLI command
 * used to delete values from a FeatureBase database
 
 ## Before you begin
 
-{% include /com-ingest/com-ingest-kafka-confluent-before.md %}
+{% include /com-ingest/com-ingest-kafka-avro-before.md %}
 
 ## Kafka delete message syntax
 
@@ -145,4 +151,4 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 
 ## Next step
 
-* [Kafka delete ingest consumer flags reference](/docs/community/com-ingest-flags-kafka-delete)
+* [Kafka Avro delete ingest flags](/docs/community/com-ingest-flags-kafka-avro-delete)
