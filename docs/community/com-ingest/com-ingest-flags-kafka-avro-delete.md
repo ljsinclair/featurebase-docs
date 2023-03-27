@@ -64,9 +64,9 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 | Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
-| `--featurebase-grpc-hosts` | string | Comma separated list of host:port pairs for FeatureBase's GRPC endpoint. |  |  |
-| `--schema-registry-url` | URL or IP address of Confluent managed schema registry | localhost:9092 | [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html){:target="_blank"} |
-| `--topics` | delete topic JSON config file |  |  |
+| `--featurebase-grpc-hosts` | `string` | Comma separated list of host:port pairs for FeatureBase's GRPC endpoint. |  |  |
+| `--schema-registry-url` | `string` | URL or IP address of Confluent managed schema registry | localhost:9092 | [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html){:target="_blank"} |
+| `--topics` | `string` | delete topic JSON config file |  |  |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
