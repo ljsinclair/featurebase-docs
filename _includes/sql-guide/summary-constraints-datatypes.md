@@ -8,5 +8,5 @@ Constraints are applied:
 |---|---|
 | MIN, MAX | [INT](/docs/sql-guide/data-types/data-type-int) |
 | SCALE | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
-| TIMEQUANTUM, TTL | [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |
+| TIMEQUANTUM, TTL | [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)<br/> [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |
 | TIMEUNIT | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp) |

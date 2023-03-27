@@ -6,7 +6,7 @@ This table provides mapping between [FeatureBase SQL data types](/docs/sql-guide
 | integer | [int](/docs/sql-guide/data-types/data-type-int) | int |  |
 | decimal | [decimal](/docs/sql-guide/data-types/data-type-decimal) | decimal |  |
 | not applicable | [id](/docs/sql-guide/data-types/data-type-id) | mutex | Table primary key |
-| not applicable | [idset](/docs/sql-guide/data-types/data-type-idset) | set | Used to reduce table rows and make queries more efficient.  |
+| not applicable | [idset](/docs/sql-guide/data-types/data-type-idset),[idsetq](/docs/sql-guide/data-types/data-type-idsetq) | set | Used to reduce table rows and make queries more efficient.  |
 | string | [string](/docs/sql-guide/data-types/data-type-string) | keyed mutex |  |
-| not applicable | [stringset](/docs/sql-guide/data-types/data-type-stringset) | keyed set | Used to reduce table rows and make queries more efficient. |
+| not applicable | [stringset](/docs/sql-guide/data-types/data-type-stringset),[stringsetq](/docs/sql-guide/data-types/data-type-stringsetq) | keyed set | Used to reduce table rows and make queries more efficient. |
 | timestamp | [timestamp](/docs/sql-guide/data-types/data-type-timestamp) | timestamp |  |

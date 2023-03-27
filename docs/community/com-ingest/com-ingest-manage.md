@@ -51,3 +51,5 @@ Refer to these reference files for information on how to set up and import data 
 ## Kafka import method
 
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
+* [Kafka Avro Delete ingest](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
+* [Kafka Static ingest](/docs/community/com-ingest/com-ingest-kafka-static-schema)

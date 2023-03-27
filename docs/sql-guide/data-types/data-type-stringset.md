@@ -8,7 +8,7 @@ nav_order: 8
 
 # STRINGSET data type
 
-STRINGSET is a FeatureBase datatype used for a set of strings.
+STRINGSET is a FeatureBase datatype used to set multiple STRING values for a single column.
 
 ## DDL Syntax
 

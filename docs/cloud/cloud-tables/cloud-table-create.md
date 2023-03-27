@@ -13,6 +13,9 @@ nav_order: 1
 
 {% include page-toc.md %}
 
+{: .note }
+You can also create a table using a [SQL CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) then create tables and add data.
+
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}

@@ -8,7 +8,7 @@ nav_order: 4
 
 # IDSET data type
 
-IDSET is a FeatureBase datatype used with `timeQuantum` and `ttl` constraints.
+IDSET is a FeatureBase datatype used to set multiple ID values for a single column.
 
 ## DDL syntax
 
