@@ -7,7 +7,7 @@ parent: SQL guide
 # System Tables
 {: .no_toc }
 
-System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except fb_views are logical and dynamically created upon looking at them.
+System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except fb_views are logical, in-memory, and dynamically created upon database creation.
 
 {% include page-toc.md %}
 
@@ -15,22 +15,25 @@ System Tables are logical tables to describe the databases configuration, settin
 
 The fb_views table is a system table which provides a catalog of all previously created views.
 
-## fb_cluster_info
+## fb_database_info
 
-The fb_cluster_info table provides a single row which describes the version and state of the cluster.
+The fb_database_info table provides a single row which describes the version and state of the database.
 
-## fb_cluster_nodes
+## fb_database_nodes
 
-The fb_cluster_nodes table provides a listing of all the cluster nodes including their connectivity and state.
+The fb_database_nodes table provides a listing of all the cluster nodes or workers in the database, including their connectivity and state.
 
 ## fb_exec_requests
 
 The fb_exec_requests table provides a query log of requests executed by node.
 
+{: .note }
+This table will only keep the latest 2000 records (queries). Additionally, the `sql` and `plan` columns are limited to 4000 characters each.
+
 ## fb_table_ddl
 
-The fb_table_ddl table provides the corresponding Data Definition Language to create the existing database's tables.
+The fb_table_ddl table provides the corresponding Data Definition Language (DDL) to create the existing database's tables.
 
 ## fb_performance_counters
 
-The fb_performance_counters table provides metrics of the nodes within the cluster.
+The fb_performance_counters table provides metrics about the nodes/workers within the database.

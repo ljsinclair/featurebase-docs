@@ -35,11 +35,14 @@ Querying using time quantums is only supported in (PQL Rows Queries)[/docs/pql-g
 ```
 
 You can associate multiple times with each value, so a value only has to exist in one view to be returned. This will not return the value twice and will only be counted once. You cannot return the underlying timestamps associated with each value.
+<!--
+
+According to Greg this content is related to IDK (Not "I don't know" by the sound of it, possibly "ingest developer kit?"
 
 ## What is happening when you use time quantums?
 
 Whenever a record with time quantums is ingested, a view is created for each level of granularity specified. This is essentially a copy of the column over a specific time range. If `YMDH` is specified and the time `2018-08-31T22:30:00Z` is ingested, a time view will exist for `2018`, `2018-08`, `2018-08-31`, and `2018-08-31T22`. This means data which has times for every hour for two days (say May 2nd and 3rd) in a column with `YMDH` time quantums configured will have 48+2+1+1+1 views (53) in total. 48 hours, 2 days, 1 month, 1 year, and the standard view.
-
+-->
 <!--
 
 ### Time Quantum

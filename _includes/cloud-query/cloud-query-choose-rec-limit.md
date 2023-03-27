@@ -1,0 +1,3 @@
+Queries executed in the UI have an automatic limit of 100 records applied. This limit is applied to protect users from accidentally running taxing queries against their databases and impacting production performance, as well as browser limits. You can change the limit from a minimum of 10 records to a maximum of 10,000 records:
+
+* Click the dropdown in the top right labeled **Limit** and select your limit

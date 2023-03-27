@@ -30,7 +30,7 @@ with open('sql3.html', 'r') as f:
         for a in svg.find_all('a'):
             del a["xlink:href"]
 
-        filename = "./../" + sect.h4.string + '.svg'
+        filename = "./../../assets/images/sql-guide/" + sect.h4.string + '.svg'
 
         text_file = open(filename, "w")
 
