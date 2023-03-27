@@ -3,6 +3,8 @@
 * [decimal](/docs/sql-guide/data-types/data-type-decimal)
 * [id](/docs/sql-guide/data-types/data-type-id)
 * [idset](/docs/sql-guide/data-types/data-type-idset)
+* [idsetq](/docs/sql-guide/data-types/data-type-idsetq)
 * [string](/docs/sql-guide/data-types/data-type-string)
 * [stringset](/docs/sql-guide/data-types/data-type-stringset)
+* [stringsetq](/docs/sql-guide/data-types/data-type-stringsetq)
 * [timestamp](/docs/sql-guide/data-types/data-type-timestamp)

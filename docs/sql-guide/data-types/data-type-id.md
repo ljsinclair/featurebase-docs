@@ -18,7 +18,7 @@ ID
 
 | Argument | Description |
 |---|---|
-| ID | Numeric data type used for unsigned integers that are between `1` and `2^63 -1` |  |
+| ID | Numeric data type used for unsigned integers that are between `1` and `2^63 -1` |
 
 ## Additional information
 
