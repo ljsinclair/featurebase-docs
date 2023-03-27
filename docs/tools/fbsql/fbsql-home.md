@@ -33,6 +33,7 @@ The following flags can be provided when running fbsql. None of the flags are re
 |---|---|---|
 | `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. | |
 | `--config` | Configuration file to read from. | | 
+| `--csv` | Switches to CSV (Comma-Separated Values) output mode. This is equivalent to `\pset format csv`. | |
 | `-d`<br>`--dbname` | Specifies the name of the database to connect to. | |
 | `--email` | Email address for FeatureBase Cloud access. | | 
 | `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. | | 
@@ -42,6 +43,7 @@ The following flags can be provided when running fbsql. None of the flags are re
 | `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
 | `--password` | Password for FeatureBase Cloud access. | |
 | `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. | Attempts to detect `10101` or `8080` (for serverless) | 
+| `-P`<br>`--pset` | Specifies printing options, in the style of `\pset`. Note that here you have to separate name and value with an equal sign instead of a space. For example, to set the output format to CSV, you could write -P format=csv. | |
 
 ## Usage
 
@@ -79,7 +81,7 @@ The following meta-commands are defined:
 \c or \connect [ dbname ]
 ```
 
-Establishes a new connection to a FeatureBase database.
+Establishes a new connection to a FeatureBase database. In order to disconnect from the current database, pass `-` as dbname.
 
 #### change directory
 
@@ -91,10 +93,10 @@ Changes the current working directory to directory. Without argument, changes to
 
 ####  list databases
 ```shell
-\d
+\d [ tablename ]
 ```
 
-Lists all of the objects in the database your are connected to (tables and views).
+Lists all of the objects in the database your are connected to (currently, only tables are listed). For `tablename`, show all columns and their types.
 
 ####  list tables
 
@@ -185,6 +187,12 @@ Sets the output format to one of aligned or csv.
 `aligned` format is the standard, human-readable, nicely formatted text output; this is the default.
 
 `csv` format writes column values separated by commas, applying the quoting rules described in RFC 4180. A header line with column names is generated unless the tuples_only parameter is on. Titles and footers are not printed. Each row is terminated by the system-dependent end-of-line character, which is typically a single newline (\n) for Unix-like systems or a carriage return and newline sequence (\r\n) for Microsoft Windows.
+
+```
+location
+```
+
+Sets the Location to use when displaying timestamps. A Location maps time instants to the zone in use at that time. Typically, the Location represents the collection of time offsets in use in a geographical area. For many Locations the time offset varies depending on whether daylight savings time is in use at the time instant. Typical values are `UTC` and `Local`, or a geographical location such as `America/Chicago`. A list of options can be found in the [Timezone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ```
 tuples_only (or t)

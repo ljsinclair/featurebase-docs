@@ -10,7 +10,7 @@ has_toc: false
 # How do I manage databases in FeatureBase Cloud?
 {: .no_toc }
 
-This page provides an overview of FeatureBase databases and links to guide you through the process of creating databases and tables.
+This page provides an overview of FeatureBase databases and links to guide you through the process of creating databases.
 
 FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
 

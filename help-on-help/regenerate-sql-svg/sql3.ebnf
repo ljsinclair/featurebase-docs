@@ -105,8 +105,10 @@ type_name = "INT"
     | "DECIMAL"
     | "STRING"
     | "STRINGSET"
+    | "STRINGSETQ"
     | "ID"
-    | "IDSET" ;
+    | "IDSET"
+    | "IDSETQ" ;
 
 (*
 

@@ -8,12 +8,12 @@ nav_order: 5
 
 # IDSETQ data type
 
-IDSETQ is a FeatureBase datatype used for a set of unsigned integer values.
+IDSETQ is a FeatureBase datatype used to set multiple ID values and associate times for each value in a single column.
 
 ## DDL syntax
 
 ```
-IDSETQ [TIMEQUANTUM {value} [TTL '{value}}']]
+IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 ```
 
 ## Arguments
