@@ -102,7 +102,7 @@ The `"delete": "records"` parameter requires one or more Avro field data types:
 | Avro data type | Description | FeatureBase index | JSON fields parameter |
 |---|---|---|---|
 | `"ids"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: false` | `{"type": "array", "items": "int"}` |
-| `"keys"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: true`| `{"type": "array", "items": "string"}` |
+| `"keys"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: true` | `{"type": "array", "items": "string"}` |
 | `"filter"` | Used to delete records based on `PQL` row calls | n/a |  `{"type": "string"}` |
 
 ### Data types
