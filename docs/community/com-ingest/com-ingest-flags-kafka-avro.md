@@ -87,4 +87,4 @@ molecula-consumer-kafka           \
 
 ## Further information
 
-* [Kafka ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-avro-consumer)
+* [Kafka Avro ingest consumer examples](/docs/community/com-ingest/com-ingest-example-kafka-avro)
