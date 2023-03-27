@@ -47,7 +47,7 @@ molecula-consumer-kafka           \
 
 {% include /com-ingest/com-ingest-flag-kafka-common.md %}
 
-{% include /com-ingest/com-ingest-flags-kafka-confluent.md %}
+{% include /com-ingest/com-ingest-flag-kafka-avro.md %}
 
 ## Kafka consumer flags
 
