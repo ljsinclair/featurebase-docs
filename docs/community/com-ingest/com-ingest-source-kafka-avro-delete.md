@@ -137,4 +137,4 @@ The `"delete": "records"` parameter requires one or more Avro field data types:
 
 ## Next step
 
-* [Kafka Avro delete ingest flags](/docs/community/com-ingest-flags-kafka-avro-delete)
+* [Kafka Avro delete ingest flags](/docs/community/com-ingest/com-ingest-flags-kafka-avro-delete)
