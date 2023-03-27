@@ -16,8 +16,8 @@ This page provides examples of Kafka consumer ingest files and flags you can use
 ## Before you begin
 
 * [Learn how to manage data import](/docs/community/com-ingest/com-ingest-manage)
-* [Learn about Kafka consumer schema source files](/docs/community/com-ingest/com-ingest-source-kafka-avro)
-* [Kafka confluent ingester reference](/docs/community/com-ingest/com-ingest-flags-kafka-consumer)
+* [Learn about Kafka Avro source files](/docs/community/com-ingest/com-ingest-source-kafka-avro)
+* [Kafka Avro ingest flags reference](/docs/community/com-ingest/com-ingest-flags-kafka-avro)
 
 ## Simple Kafka Avro ingest example
 
