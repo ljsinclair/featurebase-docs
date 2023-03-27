@@ -88,6 +88,8 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-kafka-debug.md %}
 
+{% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
+
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
 
 {% include /com-config/com-config-extra-quoting-values.md %}
@@ -96,8 +98,7 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
-{% include /com-ingest/com-ingest-extra-env-var-consumer.md %}
 
 ## Examples
 
-* [Kafka delete ingest consumer examples](/docs/community/com-ingest/com-ingest-eg-kafka-con-del)
+* [Kafka Avro delete ingest examples](/docs/community/com-ingest/com-ingest-eg-kafka-avro-delete)
