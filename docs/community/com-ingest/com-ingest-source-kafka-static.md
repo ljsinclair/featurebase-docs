@@ -22,7 +22,7 @@ Ingesting data from a Kafka static schema involves the use of:
 * [Learn about Kafka static schema settings](https://kafka.apache.org/20/javadoc/org/apache/kafka/connect/data/Schema.html){:target="_blank"}
 * Define your data in a Kafka message/blob
 
-## JSON Kafka static schema definition
+## Kafka static schema definition
 
 The schema file is formatted as an array of JSON objects, each of which describes one ingester field.
 
@@ -70,47 +70,58 @@ The schema file is formatted as an array of JSON objects, each of which describe
 
 ### Default `config` parameters
 
-### Custom `config` parameters
+<!-- Question for Jacob -- what **are** the default config parameters?? -->
 
-| `"config":` data type | Description | Required | Additional |
-|---|---|---|
-| `"CacheConfig"` | Specify the size and type of a [`TopN`](/docs/pql-guide/pql-read-topn) cache for a `set` or `mutex` field. | `TopN` cache | Does not affect time fields |
-| `"CustomUnit"` | Specify an integer time unit using standard units
+### Custom config parameters
 
+The following information applies to `"config": "parameters"`:
 
-A 'duration' value which specifies a custom time unit; accepts values like "6h" for 6 hours, "1m30s" for 1 minute and 30 seconds; valid units can be described using "ns", "us", "ms", "s", "m", or "h"
+| Value/Data type | Description | Default | Required | Additional |
+|---|---|---|---|---|
+| `"CacheConfig"` | Specify the size and type of a [`TopN`](/docs/pql-guide/pql-read-topn) cache for a `set` or `mutex` field. |  | `TopN` cache | * Does not affect time fields<br/>* [TopN cache example](#topn-cache-example) |
+| `"CustomUnit"` | Specify an integer time unit using standard units "ns", "us", "ms", "s", "m", or "h" |  |  |  |
+| `"Epoch"` |  The incoming number will be interpreted as the number of `Unit` since `Epoch`. |   | Incoming value is numeric | Unix epoch | * Cannot be used for `timestamp` strings<br/>*  | [Time stamp](https://en.wikipedia.org/wiki/Timestamp) |
+| `"ForeignIndex"` | Index of columns in target used to reference table columns |  |  |  |
+| `"Granularity"` | Standard units used to represent incoming data: `s`, `ms`, `us`, `ns` | `"s"` |  |  |
+| `"Layout"` | Format used to parse time strings  | RFC3339 | [Golang RFC339 format definition ](https://golang.org/pkg/time/#pkg-constants){:target="_blank"} |
+| `"Max"` | The maximum possible value for an integer | 2^63 - 1 |  | [Wolfram Alpha representation](https://www.wolframalpha.com/input/?i=2%5E63-1){:target="_blank"} |
+| `"Min"` | Minimum possible value for an integer | -2^63 |  | [Wolfram Alpha representation](https://www.wolframalpha.com/input?i=-2%5E63-1){:target="_blank"} |
+| `"Mutex": "true"` | Data is ingested into a mutex field |  |  |  |
+| `"Mutex": "false"` | Data is ingested into a `set` field |  |  |  |
+| `"Quantum"` | Time quantum constraint used when ingesting data from `recordTime` field to a `time` column.  |  |  | [Time Quantum constraint](Timequantum)[#timequantum] |
+| `"Scale"` | number of digits of precision to store after the decimal point |  |  |  |
+| `"TTL"` |  |  |  | [Time to live](#ttl-time-to-live) |
+| `"Unit"` | Standard units used to store timestamp for  are `"d"`, `"h"`, `"m"`, `"s"`, `"ms"`, `"us"`, `"ns"` or `"c"` for custom (using `"CustomUnit"` for `dateInt`) | `"s"` | * `dateInt` data type<br/>* `recordtime` when incoming data is numeric<br/>* `timestamp` when incoming data is numeric |
 
+### Cache
 
-* `"Mutex"`: if set to `true`, the data will be ingested into a mutex field instead of a set field
-* `"Quantum"`: the time quantum selection (Any Combination of  time granularity `Y`,`M`,`D`,`H` that doesn't skip a grain e.g. `"YM"`/`"MDH"` but not `YD`) to use when ingesting into a time column using the time value from a `"recordTime"`
-* `"TTL"`: Time To Live duration for views specifies when views will deleted. Allowed time units are `h`, `m`, `s`, `ms`, `us`, `ns`. Time quantum is required in order to use TTL.
-* `"Layout"`: the format in which to parse time strings (defaults to RFC3339) - specified in [Go's format](https://golang.org/pkg/time/#pkg-constants)
-* `"Min"`: the minimum possible value for an acceptable integer (defaults to -2^63)
-* `"Max"`: the maximum possible value for an acceptable integer (defaults to 2^63 - 1)
-* `"ForeignIndex"`: the target index to reference columns of
-* `"Scale"`: the number of digits of precision to store after the decimal point
-* `"Epoch"`: Only set `Epoch` if the incoming data is a number (rather than a timestamp string). The incoming number will be interpreted as the number of `Unit` since `Epoch`. The value may specify a timezone, for example `"1980-11-30T14:20:28.000+07:00"`, or use zulu time (i.e. +00:00) `"1980-11-30T14:20:28.000Z"`. Defaults to the Unix epoch if not configured.  E.G. If the `Unit` is 's' and the `Epoch` is January 1, 2000 and the number is 86,400 then the number represents January 2, 2000.
-* `"Unit"`: For a (`dateInt`) type field, `Unit` is the time unit in which to store a timestamp.  For the (`recordTime`, `timestamp`) type fields, only set `Unit` if the incoming data is a number (rather than a timestamp string). The incoming number will be interpreted as the number of `Unit` since `Epoch`. `Unit` Can be `"d"`, `"h"`, `"m"`, `"s"`, `"ms"`, `"us"`, `"ns"`, for day, hour, minute, second, millisecond, microsecond, nanosecond respectively or `"c"` for custom (using `"CustomUnit"` for `dateInt`). Defaults to `"s"`.  E.G. If the `Unit` is 's' and the `Epoch` is January 1, 2000 and the number is 86,400 then the number represents January 2, 2000.
-* `"Granularity"`: the resolution at which the incoming values will be stored. Allowed values are `s`, `ms`, `us`, `ns`. Defaults to `"s"`.
+* Improve precision by increasing the cache size for the `"ranked"` cache type which increases the number of top rows tracked within a shard of data
+* Set the data type to `"none"` to disable the cache.
 
+### recordTime fields
 
-This "cache" is used for the `TopN` approximation.
-The default setting is:
-```json
-{
-	"CacheType": "ranked",
-	"CacheSize": 50000,
-}
-```
+`recordTime` fields have two modes.
 
-When using the `"ranked"` cache type, increasing the "cache" size will increase the number of top rows tracked within a shard of data (theoretically improving precision).
-Assuming that the cache is full (the field has more than `"CacheSize"` rows within each shard), the `TopN` cache's memory usage is jointly proportional to the cache size and number of shards.
+| Mode | Result |
+|---|---|
+| `"Epoch"` or `Unit` set | Incoming data is interpreted as numeric |
+| Other values | Incoming data is interpreted as a date/timestamp and parsed with the `"Layout"` parameter |
 
-This cache can also be disabled by setting the type to `"none"`.
-Disabling the `TopN` cache will prevent `TopN` from working.
-When operating on a field without a cache, a slower [`TopK`](/docs/pql-guide/pql-read-topk) or sorted [`GroupBy`](/docs/pql-guide/pql-read-groupby) query may be used instead.
+### TopN cache
 
+`TopN` cache memory usage is:
+* jointly proportional to cache size and number of shards when the cache is full
+* for example, the field is greater than the `CacheSize` rows within each shard)
 
+Disabling `TopN` cache disables `TopN`
+
+### Querying
+
+Use a [`TopK`](/docs/pql-guide/pql-read-topk) or sorted [`GroupBy`](/docs/pql-guide/pql-read-groupby) when operating a field without a cache.
+
+{% include /sql-guide/timequantum-additional.md %}
+
+{% include /sql-guide/ttl-additional.md %}
 
 ## Examples
 
@@ -120,6 +131,17 @@ Select `1` within `{"a":{"b":{"c":1}}}`
 
 ```
 "path": ["a","b","c"]
+```
+
+### TopN cache example
+
+This "cache" is used for the `TopN` approximation.
+The default setting is:
+```json
+{
+	"CacheType": "ranked",
+	"CacheSize": 50000,
+}
 ```
 
 ### Ingest two values from a Kafka message
@@ -141,6 +163,10 @@ Select `1` within `{"a":{"b":{"c":1}}}`
 {% include /community/com-config-cli-run.md %}
 
 {% include /com-ingest/com-ingest-eg-kafka-static-flags-array.md %}
+
+## Further information
+
+* [RFC339 definition](https://www.rfc-editor.org/rfc/rfc3339){:target="_blank"}
 
 ## Next step
 
