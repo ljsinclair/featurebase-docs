@@ -10,10 +10,6 @@ nav_order: 8
 
 {% include /com-ingest/com-ingest-kafka-avro-intro.md %}
 
-The Kafka Avro Delete process:
-
-
-
 This reference page provides information on structuring an Avro encoded and formatted Kafka messages that is:
 * referenced by the Kafka delete consumer CLI command
 * used to delete values from a FeatureBase database
@@ -50,10 +46,9 @@ This reference page provides information on structuring an Avro encoded and form
 
 ## Additional information
 
-### Delete Fields properties
+### Delete fields properties
 
-{: .note}
-If the `"delete"` property is not defined the `molecula-consumer` defaults to `"delete": fields`
+{% include /com-ingest/com-ingest-kafka-avro-del-fields-default.md %}
 
 Set `"delete": "fields"` to delete all values:
 * in a list of fields

@@ -62,6 +62,8 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 * the Avro Record Schema
 * the Kafka message `"delete"` property
 
+{% include /com-ingest/com-ingest-kafka-avro-del-fields-default.md %}
+
 | Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
 | `--featurebase-grpc-hosts` | `string` | Comma separated list of host:port pairs for FeatureBase's GRPC endpoint. |  |  |
