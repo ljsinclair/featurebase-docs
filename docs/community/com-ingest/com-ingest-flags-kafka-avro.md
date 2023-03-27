@@ -52,7 +52,7 @@ molecula-consumer-kafka           \
 ## Kafka consumer flags
 
 | Flag | Data type | Description | Default | Additional |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | `--schema-registry-url` | `string` | URL or IP address of Confluent managed schema registry | localhost:9092 | [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html){:target="_blank"} |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
