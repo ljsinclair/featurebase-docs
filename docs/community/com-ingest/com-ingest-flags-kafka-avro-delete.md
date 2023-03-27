@@ -73,9 +73,9 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
 {: .important}
->When `"delete": "fields"` is defined in the Kafka message there must be a direct relationship between:
->* each field defined by `"fields"` `{"type": "array", "items": "string"}`, AND
->* a corresponding `ID` defined by `--primary-keys-fields`
+>When `"delete": "fields"` is defined in the Kafka message there must be a direct relationship between the following:
+>* fields to delete defined by `"fields"` `{"type": "array", "items": "string"}`, AND
+>* a corresponding FeatureBase table `ID` defined by `--primary-keys-fields`
 
 {% include /com-ingest/com-ingest-flag-common-batch.md %}
 
