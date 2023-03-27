@@ -9,13 +9,7 @@ nav_order: 7
 # How do I add data to FeatureBase tables using Kafka?
 {: .no_toc}
 
-These instructions apply to Kafka schemas managed by Confluent Schema Management.
-
-{: .note}
->FeatureBase recommends using Confluent Schema Management because it makes it easier to setup Kafka dependencies in a local environment:
-* Schema registry
-* Apache Kafka
-* Apache Zookeeper
+{% include /com-ingest/com-ingest-kafka-avro-intro.md %}
 
 The Kafka Confluent ingest process:
 * reads Avro-encoded messages from a Kafka topic
