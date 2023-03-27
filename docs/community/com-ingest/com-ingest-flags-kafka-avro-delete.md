@@ -72,6 +72,9 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
 
+{: .important}
+You must define at least one record `id` with `--primary-key-fields` when the Kafka message has the `"delete": "fields"` parameter.
+
 {% include /com-ingest/com-ingest-flag-common-batch.md %}
 
 {% include /com-ingest/com-ingest-flag-common-error.md %}

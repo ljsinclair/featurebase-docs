@@ -57,12 +57,9 @@ Set `"delete": "fields"` to delete all values:
 
 `"delete": "fields"` requires:
 * FeatureBase index configured with `keys: true`
-* At least one value for the `--primary-key-fields` key in `molecula-consumer-kafka-delete` to identify the `ID` of the record to delete data
-* Kafka message `"fields"` parameter:
-  * with `{"type": "array", "items": "string"}`
-  * Values
+* `{"type": "array", "items": "string"}` defined under the `"fields"` parameter in the Kafka message
 
-#### Delete Values properties
+#### Delete values properties
 
 Set `"delete": "values"` to:
 * delete specified values from `IDSET` and `STRINGSET` fields
@@ -73,6 +70,9 @@ Set `"delete": "values"` to:
 * Matching name for Avro Record Schema field and target FeatureBase record
 
 #### Avro data type field mapping
+
+{: .note}
+Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data types.
 
 | SQL data type | FeatureBase field data type | Avro field data type |
 |---|---|---|
@@ -88,8 +88,7 @@ Set `"delete": "values"` to:
 | `TIMESTAMP` | `Timestamp` | `boolean` |
 | `BOOL` | `Bool` | `boolean` |
 
-{: .note}
-Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data types.
+
 
 #### Avro data types to Kafka message
 
