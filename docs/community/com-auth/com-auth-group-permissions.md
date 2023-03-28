@@ -47,7 +47,7 @@ admin: "<groupd-id3>
 
 * Restart the FeatureBase Community server if you make alterations to the permissions file
 
-{% include /com-config-auth/com-config-group-tls-additional.md %}
+{% include /com-auth/com-config-group-tls-additional.md %}
 
 ## Next step
 

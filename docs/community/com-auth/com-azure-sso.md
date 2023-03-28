@@ -20,12 +20,14 @@ Configure FeatureBase as an Azure Active Directory application Identity Provider
 
 ## Step one: Register FeatureBase as an Azure application
 
-* Use these values when [registering FeatureBase as an Azure AD application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
+The following values are used when registering FeatureBase as an Azure AD aplication:
 
 | Step | What to add | Example |
 |---|---|---|
 | 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://featurebase-hostname-or-ip:10101/redirect` |
 | 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |
+
+* [Register FeatureBase as an Azure AD application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
 
 ## Step 2 - create an application secret key
 
@@ -34,11 +36,11 @@ Configure FeatureBase as an Azure Active Directory application Identity Provider
 ## Step 3 - Add the secret key to `featurebase.conf`
 
 * Edit `</featurebase_install_directory>/featurebase.conf` in a text editor.
-* Add the Azure AD FeatureBase application secret as the `client-secret` value.
+* Edit `client-secret` value then add the Azure AD FeatureBase application secret.
 
 ## Step 4 - Create Azure groups
 
-* [Complete steps 1-10 of Create groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+* [Complete steps 1-10 of Create Azure AD groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 ## Step 5 - Add users to Azure groups
 
