@@ -43,7 +43,7 @@ featurebase restore
 
 ## TLS authentication flags
 
-{% include /com-config/com-config-flags-backup-restore-tls.md %}
+{% include /com-backup/com-config-flags-backup-restore-tls.md %}
 
 ## Additional information
 
