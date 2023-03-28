@@ -81,7 +81,7 @@ Use of `no-sync` risks loss of backup date should the backup system lose power.
 ## Examples
 
 {: .warning}
-`featurebase backup` overwrites any files in the destination folder. To retain earlier backups, `tar` the backup folder then move the file to a new location.
+`featurebase backup` overwrites any files in the destination folder. `tar` the backup folder then move the file to a new location **before** performing a backup.
 
 ### Increased backup speed
 
