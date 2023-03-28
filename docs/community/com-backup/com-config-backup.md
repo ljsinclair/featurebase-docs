@@ -26,14 +26,14 @@ A `featurebase backup` includes:
 * Node configurations
 * Other FeatureBase components
 
-{: .important}
-Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
-
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
 <!--* [Learn how to set up authentication for FeatureBase Community](/docs/community/com-config/com-config-authentication)-->
 * Obtain Administrator permissions to the FeatureBase cluster
+
+{: .important}
+Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
 ## Syntax
 
