@@ -10,7 +10,9 @@ has_toc: false
 # How do I secure FeatureBase Community?
 {: .no_toc }
 
-FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP). Azure Active Directory is supported.
+FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP).
+
+Azure Active Directory is supported via SAML 2.0
 
 {% include page-toc.md %}
 
@@ -28,8 +30,8 @@ Once setup, FeatureBase Community authentication works as follows:
 
 ## Step 1 - Generate keys and tokens
 
-* [Generate an authentication key](/docs/community/com-config-auth/com-config-auth-key)
-* [Obtain authentication tokens](/docs/community/com-config-auth/com-config-auth-token)
+* [Generate a FeatureBase SSH key](/docs/community/com-config-auth/com-config-auth-key)
+* [Generate FeatureBase login auth and refresh tokens](/docs/community/com-config-auth/com-config-auth-token)
 
 ## Step 2 - Set up Identity Provider (IdP)
 
