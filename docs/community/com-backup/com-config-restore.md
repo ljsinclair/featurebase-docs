@@ -39,7 +39,7 @@ featurebase restore
 
 ## Common Backup/Restore flags
 
-{% include /com-config/com-config-flags-backup-restore-common.md %}
+{% include /com-backup/com-config-flags-backup-restore-common.md %}
 
 ## TLS authentication flags
 
