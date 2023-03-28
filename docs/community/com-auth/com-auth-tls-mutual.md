@@ -91,7 +91,7 @@ The certificate and private keys can be added to FeatureBase configuration using
 
 ### Add certificates using environment variables
 
-EXAMPLE GOES HERE
+<!--EXAMPLE GOES HERE-->
 
 ### Add certificates using a `toml` configuration file
 
@@ -100,9 +100,10 @@ EXAMPLE GOES HERE
       certificate = "/path/to/featurebase.mybusiness.com.crt"
       key = "/path/to/featurebase.mybusiness.com.key"
 ```
-
+<!--
 ### Add certificates using command-line parameters
 
 ```
   EXAMPLE GOES HERE
 ```
+-->
