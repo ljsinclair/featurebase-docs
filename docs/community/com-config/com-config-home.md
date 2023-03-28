@@ -28,7 +28,7 @@ FeatureBase features can be enabled or disabled via
 
 ## How do I set up authentication?
 
-* [Secure FeatureBase Community accounts](/docs/community/com-config-auth/com-config-auth-home)
+* [Secure FeatureBase Community accounts](/docs/community/com-auth/com-auth-manage)
 
 ## How do I backup and restore my FeatureBase database?
 

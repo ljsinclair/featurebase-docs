@@ -21,7 +21,7 @@ Internal `etcd` cluster communication does not currently support TLS.
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Learn how to enable authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Learn how to enable authentication](/docs/community/com-auth/com-auth-tls)
 
 ## Create a testing certificate
 

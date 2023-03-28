@@ -27,7 +27,7 @@ Internal `etcd` cluster communication does not currently support TLS.
 * [Learn about AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard){:target="_blank"}
 * [Learn about the Memberlist go library](https://pkg.go.dev/github.com/hashicorp/memberlist){:target="_blank"}
 {% include /com-install/com-install-before-begin.md %}
-* [Learn how to enable FeatureBase Community authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Learn how to enable FeatureBase Community authentication](/docs/community/com-auth/com-auth-tls)
 
 ## Create a testing certificate
 

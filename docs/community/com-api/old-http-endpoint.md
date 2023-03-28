@@ -11,7 +11,7 @@ When authentication is enabled, all HTTP api endpoints are secured using TLS. Al
 
 ## Before you begin
 
-* [Obtain an auth token](/docs/community/com-config-auth/com-config-auth-token).
+* [Obtain an auth token](/docs/community/com-auth/com-auth-token).
 
 ## Syntax
 

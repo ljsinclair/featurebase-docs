@@ -12,7 +12,7 @@ grand_parent: Community
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Configure authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Configure authentication](/docs/community/com-auth/com-auth-tls)
 
 ## Step one:
 

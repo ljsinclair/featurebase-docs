@@ -13,7 +13,7 @@ Configure Azure Active Directory as an authentication IdP.
 
 * Obtain administrator privileges to your Azure AD account
 * {% include /com-install/com-install-before-begin.md %}
-* [Add authentication to `featurebase.conf`](/docs/community/com-config-auth/com-config-tls-auth)
+* [Add authentication to `featurebase.conf`](/docs/community/com-auth/com-auth-tls)
 
 ## Step one: Register FeatureBase as an Azure application
 
@@ -55,4 +55,4 @@ Perform these steps in your Azure application settings.
 
 ## Next step
 
-* [Set up FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up FeatureBase authentication](/docs/community/com-auth/com-auth-tls)

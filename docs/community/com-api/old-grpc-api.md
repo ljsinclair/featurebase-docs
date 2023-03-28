@@ -14,7 +14,7 @@ By default, the interface is available on port 20101. To change to a different p
 The command-line tool [grpcurl](https://github.com/fullstorydev/grpcurl) is used here to show usage examples.
 
 ## gRPC API with Authentication
-When authentication is enabled, gRPC endpoints can be authenticated by passing a valid JWT token in the `Authorization` header. The token may be obtained by following these [instructions](/docs/community/com-config-auth/com-config-auth-token).
+When authentication is enabled, gRPC endpoints can be authenticated by passing a valid JWT token in the `Authorization` header. The token may be obtained by following these [instructions](/docs/community/com-auth/com-auth-token).
 
 ```
 grpcurl -H 'Authorization: Bearer <token>' localhost:20101 pilosa.Pilosa.GetIndexes

@@ -30,21 +30,21 @@ Once setup, FeatureBase Community authentication works as follows:
 
 ## Step 1 - Generate keys and tokens
 
-* [Generate a FeatureBase SSH key](/docs/community/com-config-auth/com-config-auth-key)
-* [Generate FeatureBase login auth and refresh tokens](/docs/community/com-config-auth/com-config-auth-token)
+* [Generate a FeatureBase SSH key](/docs/community/com-auth/com-auth-key)
+* [Generate FeatureBase login auth and refresh tokens](/docs/community/com-auth/com-auth-token)
 
 ## Step 2 - Set up Identity Provider (IdP)
 
-* [Set up Azure AD for Single-Sign-On with FeatureBase](/docs/community/com-config-auth/com-config-azure-sso)
+* [Set up Azure AD for Single-Sign-On with FeatureBase](/docs/community/com-auth/com-auth-azure-sso)
 
 ## Step 3 - Set up FeatureBase permissions
 
-* [Set up FeatureBase group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+* [Set up FeatureBase group permissions](/docs/community/com-auth/com-auth-group-permissions)
 
 ## Step 4 - Set up TLS authentication
 
-* [Set up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
-* [Set up Mutual TLS](/docs/community/com-config-auth/com-config-tls-mutual)
+* [Set up TLS authentication](/docs/community/com-auth/com-auth-tls)
+* [Set up Mutual TLS](/docs/community/com-auth/com-auth-tls-mutual)
 
 <!--
 ## Step 5 - Set up audit logs
