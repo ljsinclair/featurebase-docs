@@ -39,7 +39,6 @@ BULK INSERT
     'decval' decimal(4) )
  FROM
 	'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
-
  WITH 
     FORMAT 'PARQUET'
     INPUT 'URL';
