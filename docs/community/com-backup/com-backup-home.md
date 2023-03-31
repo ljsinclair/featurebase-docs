@@ -1,5 +1,5 @@
 ---
-title: Community Backup and Restore
+title: Community backup and restore
 layout: default
 parent: Community
 has_children: true

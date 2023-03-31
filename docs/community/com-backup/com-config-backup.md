@@ -1,7 +1,7 @@
 ---
 title: Backup FeatureBase
 layout: default
-parent: Community backup and restore
+parent: Community Backup and Restore
 grand_parent: Community
 
 ---
