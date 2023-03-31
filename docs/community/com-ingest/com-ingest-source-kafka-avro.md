@@ -12,7 +12,7 @@ nav_order: 7
 {% include /com-ingest/com-ingest-kafka-avro-intro.md %}
 
 The Kafka Confluent ingest process:
-* reads Avro-encoded messages from a Kafka topic
+* streams and reads encoded records from a Kafka topic
 * uses Confluent Schema Management to determine the message schema, destination FeatureBase field data types
 * ingests the data into FeatureBase tables.
 
