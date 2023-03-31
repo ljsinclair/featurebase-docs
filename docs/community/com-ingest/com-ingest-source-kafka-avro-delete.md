@@ -45,13 +45,6 @@ This reference page provides information on structuring an Avro encoded and form
 
 ## Additional information
 
-<!--
-{% include /com-ingest/com-ingest-extra-kafka-avro-mapping.md %}
-
-{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
-
-{% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
--->
 ### Delete fields properties
 
 {% include /com-ingest/com-ingest-kafka-avro-del-fields-default.md %}
@@ -76,7 +69,7 @@ Set `"delete": "values"` to:
 * Matching name for Avro Record Schema field and target FeatureBase record
 
 #### Avro data type field mapping
-
+<!--Query for Jbrinlee -- is this the same stuff as in /_includes/com-ingest/com-ingest-extra-kafka-avro-mapping? Should I remove this, or modify the include file?-->
 {: .note}
 Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data types.
 
@@ -95,13 +88,13 @@ Kafka delete is not supported for the FeatureBase `time` or `time-quantum` data 
 | `BOOL` | `Bool` | `boolean` |
 
 #### Avro data types to Kafka message
-
+<!--query for Jacob -- should this be deleted in favour of above, or include file com-ingest-extra-kafka-avro-mapping.md -->
 | Avro data type | Kafka message | Additional |
 |---|---|---|
 | `string`<br/>`int` | Values to delete from FeatureBase field | Retain field values by using the `union` data type to union `null` value with `string` or `int` data types |
 | `boolean` | `true` when FeatureBase field value should be deleted |
 
-### Delete records properties
+### Delete records parameters
 
 The `"delete": "records"` parameter requires one or more Avro field data types:
 
@@ -111,9 +104,13 @@ The `"delete": "records"` parameter requires one or more Avro field data types:
 | `"keys"` | Used to delete a list of records based on their FeatureBase `_id` | `keys: true` | `{"type": "array", "items": "string"}` |
 | `"filter"` | Used to delete records based on `PQL` row calls | n/a |  `{"type": "string"}` |
 
-### Data types
+<!--Note for Jacob -- I've duplicated these include files which are also in /docs/community/com-ingest/com-ingest-source-kafka-avro.md which currently sits in PR https://github.com/FeatureBaseDB/featurebase-docs/pull/88 -- I've copied here because they seem to be relevant here as much as there-->
 
-{% include /sql-guide/datatype-mapping.md %}
+{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-mapping.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
 
 ## Examples
 
