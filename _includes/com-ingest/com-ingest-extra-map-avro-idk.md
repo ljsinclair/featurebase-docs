@@ -1,5 +1,7 @@
 ### Field mapping Avro to IDK
 
+<!--Note to Jacob > I suspect this is a duplication as a result of splitting a massive branch "com-ingest-kafka" into 4x smaller branches and PRs. I suspect it'll be easier to fix the issues post merge with main so they can be observed side-by-side. But let me know if you think this is a bad idea :) -->
+
 #### Arrays
 
 |  | `avro.Array : avro.String` | `idk.StringArrayField` |
