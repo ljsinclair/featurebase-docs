@@ -24,11 +24,24 @@ The Kafka Confluent ingest process:
 
 ## Kafka JSON syntax
 
-{% include /com-ingest/com-ingest-kafka-avro-syntax.md %}
+{
+    "namespace": "<namespace>",
+    "type": "record",
+    "name": "<name-of-schema>",
+    "fields": [
+        <Kafka-Avro-data-types>,
+    ]
+}
+
 
 ## Kafka JSON parameters
 
-{% include /com-ingest/com-ingest-kafka-avro-params.md %}
+| Parameter | Description | Required | Additional information |
+|---|---|---|---|
+| `namespace` |  |  |  |
+| `"type": "record"` | The schema defines records. |  |  |
+| `name` |  |  |  |
+| `fields` |  |  |  |
 
 ## Additional information
 

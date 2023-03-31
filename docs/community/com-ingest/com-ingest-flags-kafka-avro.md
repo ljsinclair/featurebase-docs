@@ -81,8 +81,6 @@ molecula-consumer-kafka           \
 
 {% include /com-config/com-config-extra-quoting-values.md%}
 
-{% include /com-ingest/com-ingest-extra-path-selection.md %}
-
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
 ## Further information
