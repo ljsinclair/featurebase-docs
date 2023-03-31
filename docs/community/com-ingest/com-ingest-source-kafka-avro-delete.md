@@ -28,7 +28,7 @@ This reference page provides information on structuring an Avro encoded and form
     "delete": "<delete-property>",
     "fields":
       [
-        <kafka-avro-data-types>
+        <Kafka-Avro-data-types>,
       ]
 }
 ```
@@ -45,6 +45,13 @@ This reference page provides information on structuring an Avro encoded and form
 
 ## Additional information
 
+<!--
+{% include /com-ingest/com-ingest-extra-kafka-avro-mapping.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
+
+{% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
+-->
 ### Delete fields properties
 
 {% include /com-ingest/com-ingest-kafka-avro-del-fields-default.md %}
