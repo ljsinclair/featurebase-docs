@@ -32,9 +32,6 @@ This means the `molecula-consumer-kafka` CLI command:
   * ignores null fields
   * requires field values for all other fields
 
-
-test
-
 ### Kafka Avro Schema source
 
 ```
@@ -59,7 +56,7 @@ test
 {"a_string": "X9jWC", "a_stringset": {"null": null}, "an_int": 879, "a_decimal": 2.84, "a_timestamp": {"null": null}}
 ```
 
-### Kafka Avro ingest featuring Quantum values
+## Kafka Avro ingest featuring Quantum values
 
 This example features:
 
