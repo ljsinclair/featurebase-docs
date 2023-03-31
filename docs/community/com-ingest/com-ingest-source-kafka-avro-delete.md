@@ -106,8 +106,6 @@ The `"delete": "records"` parameter requires one or more Avro field data types:
 
 <!--Note for Jacob -- I've duplicated these include files which are also in /docs/community/com-ingest/com-ingest-source-kafka-avro.md which currently sits in PR https://github.com/FeatureBaseDB/featurebase-docs/pull/88 -- I've copied here because they seem to be relevant here as much as there-->
 
-{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
-
 {% include /com-ingest/com-ingest-extra-kafka-avro-mapping.md %}
 
 {% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
