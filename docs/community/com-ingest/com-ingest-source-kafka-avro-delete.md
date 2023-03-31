@@ -28,8 +28,7 @@ This reference page provides information on structuring an Avro encoded and form
     "delete": "<delete-property>",
     "fields":
       [
-        {"name": "_id", "type": "string"},
-        {"name": "<featurebase-sql-data-type"}, "type": "<featurebase-field-type>"
+        <kafka-avro-data-types>
       ]
 }
 ```
@@ -38,11 +37,11 @@ This reference page provides information on structuring an Avro encoded and form
 
 | Property | Description | Required | Default | Additional |
 |---|---|---|---|
-| "namespace" |  |  | Yes |  |
-| "type": "record" | Avro schema type `record` | Yes |  |  |
-| "name" | AVRO schema name | Yes |  |  |
-| "delete": "<delete-property>" | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like. |  | Yes | * [Delete fields properties](#delete-fields-properties)<br/>* [Delete values properties](#delete-values-properties)<br/>* [Delete records properties](#delete-records-properties) |
-| `"fields"` | Delete all values in a list of fields for a single record without defining the specific data. | [Fields properties](#fields-properties)
+| `"namespace"` |  |  | Yes |  |
+| `"type"` | Avro schema type `record` | Yes |  |  |
+| `"name"` | AVRO schema name | Yes |  |  |
+| `"<delete-property>"` | `delete` property determines how the Kafka consumer behaves, and what the Avro Schema should look like. |  | Yes | * [Delete fields properties](#delete-fields-properties)<br/>* [Delete values properties](#delete-values-properties)<br/>* [Delete records properties](#delete-records-properties) |
+| `"fields"` | Delete all values in a list of fields for a single record without defining the specific data. | [Fields properties](#fields-properties) |
 
 ## Additional information
 
