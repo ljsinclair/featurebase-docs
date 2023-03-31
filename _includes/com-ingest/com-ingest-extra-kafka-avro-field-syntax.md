@@ -30,10 +30,13 @@ Map Avro field data types and property key-value pairs to determine the FeatureB
 
 #### IDSETQ
 
-| Kafka Avro schema | Kafka Avro fields | Description |
+{: .important}
+`STRINGSETQ` Avro strings require a matching `RecordTime` field in the Avro Schema. Examples are provided below.
+
+| Kafka Avro string | Description | Required in Avro schema |
 |---|---|---|
-| N/A | `{"name": "idsetq_int", "type": "int", "fieldType": "id", "quantum": "YMD"}` | FeatureBase IDSETQ from Avro Int |
-| `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"},` | `{"name": "idsetq_intarray", "type": "array", "items": {"type": "int", "quantum": "YMD"}}`| FeatureBase IDSETQ from Avro Int Array.<br/>`RecordTime` field is also required in the Avro Schema. |
+| `{"name": "idsetq_int", "type": "int", "fieldType": "id", "quantum": "YMD"}` | FeatureBase IDSETQ from Avro Int | `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"}` |
+| `{"name": "idsetq_intarray", "type": "array", "items": {"type": "int", "quantum": "YMD"}}` | FeatureBase IDSETQ from Avro Int Array | `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"}` |
 
 #### INT
 
@@ -61,10 +64,13 @@ Map Avro field data types and property key-value pairs to determine the FeatureB
 
 #### STRINGSETQ
 
-| Kafka Avro Schema | Kafka Avro string | Description | Additional |
+{: .important}
+`STRINGSETQ` Avro strings require a matching `RecordTime` field in the Avro Schema. Examples are provided below.
+
+| Kafka Avro string | Description | Required in Avro schema |
 |---|---|---|
-|  | `{"name": "stringsetq_string", "type": "string", "quantum": "YMD"}` | FeatureBase StringSetQ with Day Granularity from Avro String |
-| `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"},` | `{"name": "stringsetq_stringarray", "type": "array", "items": {"type": "string", "quantum": "YMD"}}` | FeatureBase StringSetQ with Day Granularity from Avro String Array. <br/>`RecordTime` field is also required in the Avro Schema. |
+| {"name": "stringsetq_string", "type": "string", "quantum": "YMD"} | FeatureBase StringSetQ with Day Granularity from Avro String | `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"}` |
+| {"name": "stringsetq_stringarray", "type": "array", "items": {"type": "string", "quantum": "YMD"}} | FeatureBase StringSetQ with Day Granularity from Avro String Array | `{"name": "recordtime_bytes", "type": "bytes", "fieldType": "recordTime", "layout": "2006-01-02 15:04:05", "unit": "s"}`  |
 
 #### TIMESTAMP
 
