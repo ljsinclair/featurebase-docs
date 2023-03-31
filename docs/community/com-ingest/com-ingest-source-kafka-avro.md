@@ -24,6 +24,7 @@ The Kafka Confluent ingest process:
 
 ## Kafka JSON syntax
 
+```
 {
     "namespace": "<namespace>",
     "type": "record",
@@ -32,7 +33,7 @@ The Kafka Confluent ingest process:
         <Kafka-Avro-data-types>,
     ]
 }
-
+```
 
 ## Kafka JSON parameters
 
