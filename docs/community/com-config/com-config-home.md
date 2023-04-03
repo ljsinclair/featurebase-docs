@@ -21,10 +21,13 @@ FeatureBase features can be enabled or disabled via
 
 {% include /com-install/com-install-before-begin.md %}
 
+## How do I manage FeatureBase services?
+
+* [Manage FeatureBase services](/docs/community/com-config/com-config-manage-fb-services)
+
 ## How do I set up a FeatureBase cluster?
 
 * [Set up a FeatureBase cluster](/docs/community/com-config/old-resize-cluster)
-
 
 ## How do I set up authentication?
 
