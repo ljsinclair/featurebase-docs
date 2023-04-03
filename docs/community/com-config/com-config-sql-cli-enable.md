@@ -18,11 +18,10 @@ The SQL CLI allows you to execute SQL statements:
 
 ## Start the FeatureBase SQL CLI
 
-{: .note}
-The `--help` flag gives a full list of flags
+* Run the following command in the `/featurebase/opt` directory:
 
 ```
-./featurebase cli [--help]
+./featurebase cli
 ```
 
 ## FeatureBase SQL CLI flags
