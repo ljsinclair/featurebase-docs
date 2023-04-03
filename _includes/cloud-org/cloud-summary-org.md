@@ -1,8 +1,8 @@
-The **Organization settings** page allows you to enter your organization name and address and define technical and billing email addresses.
+The **Organization settings** page allows you to enter your organization name and address and define technical and billing details.
 
 Your organization name appears on notification messages, including:
-* User invitation
-* Account activation confirmation code
-* Password reset
+* User invitations
+* Account activation confirmation codes
+* Password resets
 
-Technical and Billing contact addresses do not have to be FeatureBase users.
+Technical and Billing contact information does not have to belong to a FeatureBase user.
