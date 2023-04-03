@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # ASCII() function
 
-`Ascii()` returns the ASCII value of the specified string.
+`Ascii()` returns the ASCII value of the specified string, using the UTF-8 ASCII table.
 
 ## Syntax
 
@@ -26,6 +26,10 @@ ascii(expr)
 | Data type | Value |
 |---|---|
 | `int` | ASCII code value of `expr`. |
+
+## Additional information
+
+* ASCII() is limited to character values between 0 and 127
 
 ## Examples
 
