@@ -1,1 +1,1 @@
-[Contact FeatureBase support](https://www.featurebase.com/contact-us){:target="_blank"}
+[Contact FeatureBase Support on Discord](https://discord.gg/featurefirstai){:target=_blank}
