@@ -9,4 +9,48 @@ has_toc: true
 
 # Community monitoring
 
-Set up external monitoring for FeatureBase
+Set up external monitoring for FeatureBase.
+
+FeatureBase metrics are exposed via a Prometheus compatible endpoint.
+
+## Before you begin
+
+* [Learn about Prometheus](https://prometheus.io)
+
+
+## Metric naming conventions
+
+| Convention | Description | Additional information |
+|---|---|---|
+| Colon character `:` | Reserved for Prometheus recording rules | [Learn about Prometheus recording rules](https://prometheus.io/docs/practices/rules/){:target="_blank"} |\
+| Format | `[namespaceprefix]_[metric_description]_[units]` | [Naming format example](#naming-format) |
+| Namespace | FeatureBase uses a different namespace for each component | , for example `featurebase` and something starting with `ingester` for various Ingester binaries. |
+| Text case | `snake_case` is used | |
+| Valid metric names | Regular expressions `[a-zA-Z_:][a-zA-Z0-9_:]*` |
+|
+
+- As a rule of thumb, either the sum() or the avg() over all dimensions of a given metric should be meaningful (though not necessarily useful).
+
+## FeatureBase metrics
+
+* [FeatureBase metrics reference](/docs/community/com-monitoring/com-monitoring-fb-metrics)
+
+## Ingester metrics
+
+* [Ingest metrics](/docs/community/com-monitoring/com-monitoring-ingest-metrics)
+
+
+## Examples
+
+## Naming format
+
+A metric name `ingester_csv_deleter_rows_added_total` is derived from the following information:
+
+* Namespace `ingester_csv`
+* metric name `deleter_rows_added`
+* "unit" `total`, indicating a counter.
+
+## Further information
+
+* [Prometheus best practices on naming conventions](https://prometheus.io/docs/practices/naming/)
+* [Robust Perception blog post on naming conventions](https://www.robustperception.io/on-the-naming-of-things)
