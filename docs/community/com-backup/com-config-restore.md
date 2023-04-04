@@ -1,7 +1,7 @@
 ---
 title: Restore FeatureBase
 layout: default
-parent: Community configuration
+parent: Community backup and restore
 grand_parent: Community
 ---
 
@@ -15,7 +15,7 @@ The `featurebase-restore` command is used to restore a backup to a new FeatureBa
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Backup FeatureBase Community](/docs/community/com-config/com-config-backup)
+* [Backup FeatureBase Community](/docs/community/com-backup/com-config-backup)
 * Obtain Administrator permissions to the destination FeatureBase cluster
 
 ## Syntax
@@ -39,11 +39,11 @@ featurebase restore
 
 ## Common Backup/Restore flags
 
-{% include /com-config/com-config-flags-backup-restore-common.md %}
+{% include /com-backup/com-config-flags-backup-restore-common.md %}
 
 ## TLS authentication flags
 
-{% include /com-config/com-config-flags-backup-restore-tls.md %}
+{% include /com-backup/com-config-flags-backup-restore-tls.md %}
 
 ## Additional information
 

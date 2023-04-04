@@ -3,14 +3,16 @@ title: Community authentication
 layout: default
 parent: Community
 has_children: true
-nav_order: 6
+nav_order: 9
 has_toc: false
 ---
 
 # How do I secure FeatureBase Community?
 {: .no_toc }
 
-FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP). Azure Active Directory is supported.
+FeatureBase supports authentication and authorization with OAuth2.0 via a configurable identity provider (IdP).
+
+Azure Active Directory is supported via SAML 2.0
 
 {% include page-toc.md %}
 
@@ -28,21 +30,21 @@ Once setup, FeatureBase Community authentication works as follows:
 
 ## Step 1 - Generate keys and tokens
 
-* [Generate an authentication key](/docs/community/com-config-auth/com-config-auth-key)
-* [Obtain authentication tokens](/docs/community/com-config-auth/com-config-auth-token)
+* [Generate a FeatureBase SSH key](/docs/community/com-auth/com-auth-key)
+* [Generate FeatureBase login auth and refresh tokens](/docs/community/com-auth/com-auth-token)
 
 ## Step 2 - Set up Identity Provider (IdP)
 
-* [Set up Azure AD for Single-Sign-On with FeatureBase](/docs/community/com-config-auth/com-config-azure-sso)
+* [Set up Azure AD for Single-Sign-On with FeatureBase](/docs/community/com-auth/com-auth-azure-sso)
 
 ## Step 3 - Set up FeatureBase permissions
 
-* [Set up FeatureBase group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+* [Set up FeatureBase group permissions](/docs/community/com-auth/com-auth-group-permissions)
 
 ## Step 4 - Set up TLS authentication
 
-* [Set up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
-* [Set up Mutual TLS](/docs/community/com-config-auth/com-config-tls-mutual)
+* [Set up TLS authentication](/docs/community/com-auth/com-auth-tls)
+* [Set up Mutual TLS](/docs/community/com-auth/com-auth-tls-mutual)
 
 <!--
 ## Step 5 - Set up audit logs

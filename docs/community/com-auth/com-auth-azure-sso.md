@@ -1,30 +1,33 @@
 ---
-title: Azure-AD single sign on
+title: Azure-AD setup
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 
-# How do I configure single sign-on from Azure AD?
+# How do I configure FeatureBase as an Azure Active Directory IDP?
+{: .no_toc }
 
-Configure Azure Active Directory as an authentication IdP.
+Configure FeatureBase as an Azure Active Directory application Identity Provider (IdP)
+
+{% include page-toc.md %}
 
 ## Before you begin
 
 * Obtain administrator privileges to your Azure AD account
 * {% include /com-install/com-install-before-begin.md %}
-* [Add authentication to `featurebase.conf`](/docs/community/com-config-auth/com-config-tls-auth)
+* [Add authentication to `featurebase.conf`](/docs/community/com-auth/com-auth-tls)
 
 ## Step one: Register FeatureBase as an Azure application
 
-[Register FeatureBase as an application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
-
-* Use these values in the registration process:
+The following values are used when registering FeatureBase as an Azure AD aplication:
 
 | Step | What to add | Example |
 |---|---|---|
 | 4 | Redirect URL | The fully qualified domain or public IP address with `/redirect` as a suffix | `https://featurebase-hostname-or-ip:10101/redirect` |
 | 6 | Microsoft Graph permissions | `Microsoft Graph : Delegated : GroupMember.ReadAll.`<br/> `Microsoft Graph : Delegated : User.Read.All.` |
+
+* [Register FeatureBase as an Azure AD application](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory#create-an-application-registration){:target="_blank"}
 
 ## Step 2 - create an application secret key
 
@@ -33,15 +36,17 @@ Configure Azure Active Directory as an authentication IdP.
 ## Step 3 - Add the secret key to `featurebase.conf`
 
 * Edit `</featurebase_install_directory>/featurebase.conf` in a text editor.
-* Add the application secret as the `client-secret` value.
+* Edit `client-secret` value then add the Azure AD FeatureBase application secret.
 
 ## Step 4 - Create Azure groups
 
-* [Complete steps 1-10 of Create groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+* [Complete steps 1-10 of Create Azure AD groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 ## Step 5 - Add users to Azure groups
 
 * [Complete steps 11-12 of Add users to groups](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+
+<!-- Should this be duplicated in the group permissions in FeatureBase?-->
 
 ## Step 6 - Set application authentication
 
@@ -55,4 +60,4 @@ Perform these steps in your Azure application settings.
 
 ## Next step
 
-* [Set up FeatureBase authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up FeatureBase authentication](/docs/community/com-auth/com-auth-tls)

@@ -26,7 +26,7 @@ nav_order: 1
 | APPLY | PQL query | [PQL APPLY read query](/docs/pql-guide/pql-read-apply) |
 | ARROW | PQL query | [PQL ARROW read query](/docs/pql-guide/pql-read-arrow) |
 | Authentication | FeatureBase Cloud | [Manage cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
-| Authentication | FeatureBase Community | [Community authentication](/docs/community/com-config-auth/com-config-auth-home) |
+| Authentication | FeatureBase Community | [Community authentication](/docs/community/com-auth/com-auth-manage) |
 
 ## B
 

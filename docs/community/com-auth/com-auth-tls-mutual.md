@@ -1,32 +1,40 @@
 ---
-title: Mutual TLS authentication
+title: Mutual TLS
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 
 # How do I set up mutual TLS authentication?
+{: .no_toc }
 
-Mutual TLS allows a client and server to cryptographically verify each other and establish an encrypted connection.
+FeatureBase is configured with a PEM-encoded TLS keypair and supports Mutual TLS so client server nodes can:
+* cryptographically verify each other
+* establish an encrypted connection
 
-FeatureBase supports Mutual TLS and is configured with a PEM-encoded TLS keypair.
+FeatureBase clusters communicate using the memberlist go library.
 
-FeatureBase clusters communicate over the Memberlist protocol.
-
-AES-256 symmetric encryption can be enabled on the cluster by configuring a shared 32-bit key on the Memberlist protocol.
+Enable AES-256 encryption on your FeatureBase cluster by configuring a 32-bit shared key using the memberlist protocol.
 
 {: .note}
 Internal `etcd` cluster communication does not currently support TLS.
 
+{% include page-toc.md %}
+
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
-* [Learn how to enable authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
+* [Learn about AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard){:target="_blank"}
+* [Learn about the Memberlist go library](https://pkg.go.dev/github.com/hashicorp/memberlist){:target="_blank"}
+{% include /com-install/com-install-before-begin.md %}
+* [Learn how to enable FeatureBase Community authentication](/docs/community/com-auth/com-auth-tls)
 
 ## Create a testing certificate
 
 {: .important}
 CERTSTRAP can be used for testing purposes but is **NOT** recommended for production environments.
+
+<!--QUERY - What IS recommended for prod environments?? -->
 
 ### Step 1 - Create a root CA
 
@@ -37,6 +45,8 @@ CERTSTRAP can be used for testing purposes but is **NOT** recommended for produc
 ```
 
 ### Step 2 - Create and sign a keypair for FeatureBase:
+
+<!-- QUERY -- is "mybusiness" required or is this a value the users can define?-->
 
 * Run the following command:
 
@@ -55,17 +65,15 @@ Create a 32-bit key to encrypt Memberlist (gossip) communication:
 
 ### Step 4 - verify files have been generated
 
-The following files are generated.
+Verify the following files have been created in the `/dev/random` directory:
 
-```text
-    auth.mybusiness.com.crl
-    auth.mybusiness.com.crt
-    auth.mybusiness.com.key
-    featurebase.mybusiness.com.crt
-    featurebase.mybusiness.com.csr
-    featurebase.mybusiness.com.key
-    gossip.key
-```
+* auth.mybusiness.com.crl
+* auth.mybusiness.com.crt
+* auth.mybusiness.com.key
+* featurebase.mybusiness.com.crt
+* featurebase.mybusiness.com.csr
+* featurebase.mybusiness.com.key
+* gossip.key
 
 ### Step 5 - Update FeatureBase bind configuration
 
@@ -83,7 +91,7 @@ The certificate and private keys can be added to FeatureBase configuration using
 
 ### Add certificates using environment variables
 
-EXAMPLE GOES HERE
+<!--EXAMPLE GOES HERE-->
 
 ### Add certificates using a `toml` configuration file
 
@@ -92,9 +100,10 @@ EXAMPLE GOES HERE
       certificate = "/path/to/featurebase.mybusiness.com.crt"
       key = "/path/to/featurebase.mybusiness.com.key"
 ```
-
+<!--
 ### Add certificates using command-line parameters
 
 ```
   EXAMPLE GOES HERE
 ```
+-->
