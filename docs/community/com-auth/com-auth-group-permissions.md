@@ -21,7 +21,7 @@ Users cannot authenticate with FeatureBase if they do not belong to a group, or 
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Configure TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Configure TLS authentication](/docs/community/com-auth/com-auth-tls)
 * Create `permissions.yaml` in `/<featurebase-install-directory/opt/`
 
 ## Permissions syntax
@@ -47,8 +47,8 @@ admin: "<groupd-id3>
 
 * Restart the FeatureBase Community server if you make alterations to the permissions file
 
-{% include /com-config-auth/com-config-group-tls-additional.md %}
+{% include /com-auth/com-config-group-tls-additional.md %}
 
 ## Next step
 
-* [Update Featurebase configuration](/docs/community/com-config-auth/com-config-tls-auth)
+* [Update Featurebase configuration](/docs/community/com-auth/com-auth-tls)

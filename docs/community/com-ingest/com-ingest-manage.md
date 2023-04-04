@@ -54,4 +54,4 @@ There are three Kafka ingest methods:
 
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-kafka-avro)
 * [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
-* [Kafka static schema ingest](/docs/community/com-ingest/com-ingest-kafka-static)
+* [Kafka static schema ingest](/docs/community/com-ingest/com-ingest-kafka-static-schema-schema)
