@@ -12,6 +12,7 @@ All FeatureBase components log to standard error by default and can be configure
 
 ## Before you begin
 
+* {% include /com-install/com-install-before-begin.md %}
 * [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate)
 * Setup `logrotate` to run daily
 
@@ -93,3 +94,7 @@ sudo systemctl status featurebase
     endscript
 }
 ```
+
+## Further information
+
+* [Learn about linux logrotate](https://linuxconfig.org/logrotate){:target="_blank"}

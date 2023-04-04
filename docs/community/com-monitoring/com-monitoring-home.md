@@ -39,6 +39,18 @@ FeatureBase metrics are exposed via a Prometheus compatible endpoint.
 
 * [Ingest metrics](/docs/community/com-monitoring/com-monitoring-ingest-metrics)
 
+## Runtime metrics
+
+
+
+## T
+
+
+## Tracing
+
+FeatureBase supports the [OpenTracing](https://opentracing.io/) standard.
+
+Any system that supports this standard can be setup to store and visualise trace data.
 
 ## Examples
 
