@@ -1,7 +1,7 @@
 <!--Copied from /com-inges/old-kafka-ingester-config.md -->
 <!--compare with PQL data types already in PQL-guide folder-->
 <!--Rip out ingest-specific stuff to the "extra" include files in com-ingest-->
-<!--Relates to includes/com-ingest/com-ingest-datatype-mapping.md-->
+<!--Relates to includes/com-ingest/com-ingest-kafka-static-type-map.md-->
 <!-- CAPTAIN OBVIOUS -- this include file is a dump and NOT TO BE USED IN ANY LIVE DOCS UNTIL FIXED!! -->
 
 

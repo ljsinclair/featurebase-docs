@@ -16,9 +16,9 @@ Secure your FeatureBase server with TLS authentication.
 
 * [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
 * {% include /com-install/com-install-before-begin.md %}
-* [Generate a `secret-key`](/docs/community/com-config-auth/com-config-auth-key)
-* [Add FeatureBase as an Azure AD application](/docs/community/com-config-auth/com-config-azure-sso)
-* [Set up FeatureBase Group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+* [Generate a `secret-key`](/docs/community/com-auth/com-auth-key)
+* [Add FeatureBase as an Azure AD application](/docs/community/com-auth/com-auth-azure-sso)
+* [Set up FeatureBase Group permissions](/docs/community/com-auth/com-auth-group-permissions)
 
 ## FeatureBase configuration file location
 
@@ -62,14 +62,14 @@ Authentication is added to the `featurebase.conf` file which can be found in dif
 | `redirect-base-url` |  IdP URL that corresponds to your primary FeatureBase node. | Yes | Example: `https://featurebase-hostname-or-ip:10101` |
 | `logout-url` | SAML IdP API value | Yes | [Single sign-out SAML protocol] documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/single-sign-out-saml-protocol){:target="_blank"} |
 | `scopes` | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
-| `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate a secret key](/docs/community/com-config-auth/com-config-auth-key) |
-| `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions) |
-| `query-log-path` | Set path for query audit log | Optional | <!--[Set up the query audit log](/docs/community/com-config-auth/com-config-log-audit-query)--> |
+| `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate a secret key](/docs/community/com-auth/com-auth-key) |
+| `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-auth/com-auth-group-permissions) |
+| `query-log-path` | Set path for query audit log | Optional | <!--[Set up the query audit log](/docs/community/com-auth/com-config-log-audit-query)--> |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list.  If not included or not set, no IPs are allow-listed. | Optional | Domain names and `0.0.0.0/0` are not allowed. |
 
 ## Additional information
 
-{% include /com-config-auth/com-config-group-tls-additional.md %}
+{% include /com-auth/com-config-group-tls-additional.md %}
 
 ## Examples
 

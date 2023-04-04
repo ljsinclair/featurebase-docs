@@ -93,7 +93,7 @@ YAML Header information
 > Optional heading to list anything that's related or useful to know but is NOT a requirement
 
 * [SQL reference examples](/docs/sql-guide/sql-guide-home)
-* [FeatureBase backup reference example](/docs/community/com-config/com-config-backup)
+* [FeatureBase backup reference example](/docs/community/com-backup/com-config-backup)
 * [FeatureBase ingest reference example](/docs/community/com-ingest/com-ingest-flags-csv)
 * [Help on Standard Headings](/help-on-help/style-guide/standard-headings)
 * [Help on page types](/help-on-help/style-guide/page-purpose-layout)

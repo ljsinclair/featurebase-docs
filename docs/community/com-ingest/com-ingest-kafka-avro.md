@@ -373,6 +373,5 @@ molecula-consumer-kafka \
 
 ## Next step
 
-
 - If you are looking to delete data using a similar Avro consumer, go [here](/docs/community/com-ingest/com-ingest-kafka-avro-delete).
 - If you want to get data from kafka but don't want to use schema registry and avro to encode your data, check out the [Kafka Static](/docs/community/com-ingest/com-ingest-kafka-static-schema) consumer.

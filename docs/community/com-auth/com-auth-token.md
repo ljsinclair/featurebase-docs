@@ -26,7 +26,7 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Learn how to enable TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Learn how to enable TLS authentication](/docs/community/com-auth/com-auth-tls)
 * Set up a password manager or other safe storage for your tokens
 * cd to `~/featurebase/opt`
 
@@ -65,8 +65,8 @@ featurebase auth-token
 -->
 ## Further information
 
-* [Use tokens to Backup an authenticated FeatureBase cluster](/docs/community/com-config/com-config-backup)
-* [Use an `auth-token` to restore from an authenticated backup](/docs/community/com-config/com-config-restore)
+* [Use tokens to Backup an authenticated FeatureBase cluster](/docs/community/com-backup/com-config-backup)
+* [Use an `auth-token` to restore from an authenticated backup](/docs/community/com-backup/com-config-restore)
 
 <!--
 * [Use tokens to authenticate HTTPS API commands]

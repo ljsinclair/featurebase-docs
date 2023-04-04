@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # CHARINDEX() function
 
-The `Charindex()` function supplies an integer value that represents the start of a substring within a string value
+The `Charindex()` function supplies an integer value that represents the start of a substring within a string value. 
 
 ## Syntax
 
@@ -29,9 +29,28 @@ charindex(substring,expr,[position])
 |---|---|
 | `int` | Position of `substring` in the `expr` input string. |
 
+## Additional information
+
+* Returns -1 if the substring cannot be found.
+
 ## Examples
 
-### CREATE TABLE and INSERT data statements
+### CHARINDEX statement
+```sql
+create table customers
+    (_id id, segment string);
+
+insert into customers(_id,segment)
+    values (1,'this is great')
+
+select _id, charindex('is',segment) as charindex from customers;
+
+ _id | charindex
+-----+-----------
+   1 |         2
+```
+
+### CHARINDEX with starting from POSITION
 
 ```sql
 create table customers
@@ -39,28 +58,26 @@ create table customers
 
 insert into customers(_id,segment)
     values (1,'this is great')
-```
 
-### CHARINDEX statement
-
-```sql
-select _id, charindex('is',segment) as charindex from customers;
-```
-
-Results:
-
-| _id | charindex |
-|---|---|
-| 1 | 2 |
-
-### CHARINDEX with starting from POSITION
-
-```sql
 select _id, charindex('is',segment,3) as charindex from customers;
+
+ _id | charindex
+-----+-----------
+   1 |         5
 ```
 
-RESULTS
+### CHARINDEX not found
 
-| _id | charindex|
-|---|---|
-| 1 | 5 |
+```sql
+create table customers
+    (_id id, segment string);
+
+insert into customers(_id,segment)
+    values (1,'this is great')
+
+select _id, charindex('foo',segment) as charindex from customers;
+
+ _id | charindex
+-----+-----------
+   1 |        -1
+```

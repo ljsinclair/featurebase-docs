@@ -1,7 +1,7 @@
 ---
 title: Backup FeatureBase
 layout: default
-parent: Community configuration
+parent: Community backup and restore
 grand_parent: Community
 
 ---
@@ -26,14 +26,14 @@ A `featurebase backup` includes:
 * Node configurations
 * Other FeatureBase components
 
-{: .important}
-Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
-
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
 <!--* [Learn how to set up authentication for FeatureBase Community](/docs/community/com-config/com-config-authentication)-->
 * Obtain Administrator permissions to the FeatureBase cluster
+
+{: .important}
+Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
 ## Syntax
 
@@ -60,11 +60,11 @@ featurebase backup
 
 ### Common Backup/Restore flags
 
-{% include /com-config/com-config-flags-backup-restore-common.md %}
+{% include /com-backup/com-config-flags-backup-restore-common.md %}
 
 ### TLS authentication flags
 
-{% include /com-config/com-config-flags-backup-restore-tls.md %}
+{% include /com-backup/com-config-flags-backup-restore-tls.md %}
 
 ## Additional information
 
@@ -81,7 +81,7 @@ Use of `no-sync` risks loss of backup date should the backup system lose power.
 ## Examples
 
 {: .warning}
-`featurebase backup` overwrites any files in the destination folder. To retain earlier backups, `tar` the backup folder then move the file to a new location.
+`featurebase backup` overwrites any files in the destination folder. `tar` the backup folder then move the file to a new location **before** performing a backup.
 
 ### Increased backup speed
 

@@ -9,7 +9,7 @@ grand_parent: Community
 
 Generate a `secret-key` used when setting up TLS authentication
 
-* [Learn more about TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Learn more about TLS authentication](/docs/community/com-auth/com-auth-tls)
 
 ## Before you begin
 
@@ -36,4 +36,4 @@ Generate a `secret-key` used when setting up TLS authentication
 
 ## Next step
 
-* [Set up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Set up TLS authentication](/docs/community/com-auth/com-auth-tls)
