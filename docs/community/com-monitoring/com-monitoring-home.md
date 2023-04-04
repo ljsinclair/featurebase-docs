@@ -43,7 +43,7 @@ FeatureBase metrics are exposed via a Prometheus compatible endpoint.
 
 
 
-## T
+## Transaction metrics
 
 
 ## Tracing
@@ -51,6 +51,9 @@ FeatureBase metrics are exposed via a Prometheus compatible endpoint.
 FeatureBase supports the [OpenTracing](https://opentracing.io/) standard.
 
 Any system that supports this standard can be setup to store and visualise trace data.
+
+
+
 
 ## Examples
 
