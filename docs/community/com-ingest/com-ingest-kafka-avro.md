@@ -6,7 +6,6 @@ grand_parent: Community
 nav_order: 4
 ---
 
-
 # Kafka Avro Ingest Reference
 {: .no_toc}
 
