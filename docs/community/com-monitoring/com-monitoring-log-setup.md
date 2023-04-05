@@ -7,7 +7,6 @@ grand_parent: Community
 
 # How do I setup logging?
 
-
 All FeatureBase components log to standard error by default and can be configured to log to a file. When logging to a file, FeatureBase components will re-open the log file on receipt of the HUP signal.
 
 ## Before you begin
@@ -25,7 +24,7 @@ Check `/etc/cron.daily/logrotate` to make sure.
 * Create a logs directory:
 
 ```sh
-mkdir fb-logs
+mkdir logs
 ```
 
 ## Step 2 - add logs directory to configuration
