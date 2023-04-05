@@ -5,70 +5,33 @@ parent: Community monitoring
 grand_parent: Community
 ---
 
-# How do I setup logging?
+# How do I setup error logs?
 
-All FeatureBase components log to standard error by default and can be configured to log to a file. When logging to a file, FeatureBase components will re-open the log file on receipt of the HUP signal.
+FeatureBase is configured to output error logs to `/var/lib/featurebase/` by default.
+
+FeatureBase components re-open the log file on receipt of the HUP signal.
 
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate){:target="_blank"}
-* [Setup logrotate to run daily](https://manpages.ubuntu.com/manpages/trusty/man8/logrotate.8.html){:target="_blank"}
+* [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate){:target="_blank"} if not already installed
+* Setup CRON to run `logrotate` daily if not already setup
 
-## Step 1 - create log directory
+## Create a FeatureBase logrotate configuration file
 
-* Open a terminal and CD to the `/featurebase` directory
-* Create a logs directory:
+This configuration will clear FeatureBase logs daily.
 
-```sh
-mkdir logs
-```
+You can also create logrotate configuration files using these steps and substituting other FeatureBase log names.
 
-## Step 2 - add logs directory to configuration
-
-* Edit the `featurebase.conf` configuration file.
-* Add or edit the following parameter:
-
-```sh
-log-path = "~/featurebase/logs/featurebase.log"
-```
-
-## Step 3 - restart FeatureBase
-
-{: .warning}
-Restart FeatureBase only AFTER ingestion tasks are complete.
-
-{% include /com-install/com-install-startup-fb.md %}
-
-{% include /com-install/com-install-verify-fb-server.md %}
-
-## Step 4 - Create a logrotate configuration file
 
 * CD to `/etc/logrotate.d`
-* Create a new logrotate file with the following settings:
+* Create a new logrotate script
 
-```sh
-/featurebase/fb-logs/featurebase.log {
-    missingok
-    notifempty
-    rotate 7
-    daily
-    compress
-    postrotate
-        pkill -HUP featurebase
-    endscript
-}
+```
+sudo nano featurebase
 ```
 
-* Save the file as `featurebase`
-
-
-
-
-
-4. Ensure that [logrotate](https://linux.die.net/man/8/logrotate) is installed and configured to run daily with cron. This should be the default after installation on most Linux systems. Check `/etc/cron.daily/logrotate` to make sure.
-
-5. Add a new logrotate configuration file at `/etc/logrotate.d/featurebase` with the following contents:
+* Add the following to the file:
 
 ```text
 /var/log/molecula/featurebase.log {
@@ -79,10 +42,15 @@ Restart FeatureBase only AFTER ingestion tasks are complete.
     compress
     postrotate
         pkill -HUP featurebase
+        # kill -HUP $(cat /path/to/pidfile) if using a PID file.
     endscript
 }
 ```
 
+* Write the file then exit.
+
+
 ## Further information
 
 * [Learn about linux logrotate](https://linuxconfig.org/logrotate){:target="_blank"}
+* [Learn about Linux SIGHUP](https://en.wikipedia.org/wiki/SIGHUP){:target="_blank"}
