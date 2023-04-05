@@ -54,7 +54,7 @@ By default, FeatureBase uses the following ports:
 | 20101 | gRPC, Python library | Yes | [gRPC API](/docs/community/com-api/old-grpc-api) |
 
 {: .note}
->Default ports can be changed in the `featurebase.conf` file.
+>Default ports can be changed in the `/featurebase/opt/featurebase.conf` file.
 >[Learn more about FeatureBase Configuration](/docs/community/com-config/com-config-home)
 
 ## Installation requirements

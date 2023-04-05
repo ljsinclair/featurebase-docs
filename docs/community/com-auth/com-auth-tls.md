@@ -26,7 +26,7 @@ Authentication is added to the `featurebase.conf` file which can be found in dif
 
 | Application | Version | Directory path |
 |---|---|---|
-| FeatureBase | 1.0+ | `/featurebase-install-directory/opt/featurebse.conf` |
+| FeatureBase | 1.0+ | `/featurebase/opt/featurebse.conf` |
 | Molecula | 2.0+ | `/etc/featurebase.conf` |
 | Pilosa | 2.0+ | `/etc/featurebase.conf` |
 
