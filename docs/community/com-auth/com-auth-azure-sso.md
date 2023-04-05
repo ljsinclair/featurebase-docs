@@ -36,7 +36,7 @@ The following values are used when registering FeatureBase as an Azure AD aplica
 ## Step 3 - Add the secret key to `featurebase.conf`
 
 * CD to the `/featurebase/opt` directory.
-* Edit `</featurebase_install_directory>/featurebase.conf` in a text editor.
+* Edit `featurebase.conf` in a text editor.
 * Edit `client-secret` value then add the Azure AD FeatureBase application secret.
 
 ## Step 4 - Create Azure groups
