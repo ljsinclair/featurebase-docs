@@ -5,7 +5,7 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-# How do I manage FeatureBase services?
+# How do I manage the FeatureBase service?
 {: .no_toc }
 
 You can start, stop and check the status of FeatureBase services using `systemctl` commands.
@@ -15,6 +15,7 @@ You can start, stop and check the status of FeatureBase services using `systemct
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
+* [Create a FeatureBase service](/docs/community/com-config/com-config-service-fb)
 * Obtain `sudo` credentials for the system
 
 ## Manage FeatureBase services

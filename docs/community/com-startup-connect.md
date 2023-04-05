@@ -43,13 +43,10 @@ Run this command from any directory FeatureBase has been installed.
 ```
 curl localhost:10101
 ```
+
 ## How do I connect to FeatureBase community?
 
-FeatureBase Community is available by default at:
-
-```
-http://localhost:10101/
-```
+{% include /com-install/com-install-default-fb-ip.md %}
 
 ## Troubleshooting
 
@@ -57,4 +54,4 @@ http://localhost:10101/
 
 ## Further information
 
-* [Learn about the SQL Endpoint](/docs/community/com-config/com-config-sql-cli-enable)
+* [Learn how to setup FeatureBase server as a Linux service](/docs/community/com-config/com-config-service-fb)
