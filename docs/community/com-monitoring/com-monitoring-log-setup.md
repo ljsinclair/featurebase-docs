@@ -12,11 +12,8 @@ All FeatureBase components log to standard error by default and can be configure
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate)
-* Setup `logrotate` to run daily
-
-{: .note}
-Check `/etc/cron.daily/logrotate` to make sure.
+* [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate){:target="_blank"}
+* [Setup logrotate to run daily](https://manpages.ubuntu.com/manpages/trusty/man8/logrotate.8.html){:target="_blank"}
 
 ## Step 1 - create log directory
 
@@ -33,7 +30,7 @@ mkdir logs
 * Add or edit the following parameter:
 
 ```sh
-log-path = "/fb-logs/featurebase.log"
+log-path = "~/featurebase/logs/featurebase.log"
 ```
 
 ## Step 3 - restart FeatureBase
@@ -41,17 +38,7 @@ log-path = "/fb-logs/featurebase.log"
 {: .warning}
 Restart FeatureBase only AFTER ingestion tasks are complete.
 
-* Run the following command:
-
-```sh
-sudo systemctl restart featurebase
-```
-
-* Verify the restart was successful:
-
-```sh
-sudo systemctl status featurebase
-```
+{% include /com-install/com-install-startup-fb.md %}
 
 ## Step 4 - Create a logrotate configuration file
 
