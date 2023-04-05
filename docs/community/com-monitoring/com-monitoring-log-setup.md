@@ -40,6 +40,8 @@ Restart FeatureBase only AFTER ingestion tasks are complete.
 
 {% include /com-install/com-install-startup-fb.md %}
 
+{% include /com-install/com-install-verify-fb-server.md %}
+
 ## Step 4 - Create a logrotate configuration file
 
 * CD to `/etc/logrotate.d`
