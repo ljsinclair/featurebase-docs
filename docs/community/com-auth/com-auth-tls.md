@@ -22,13 +22,9 @@ Secure your FeatureBase server with TLS authentication.
 
 ## FeatureBase configuration file location
 
-Authentication is added to the `featurebase.conf` file which can be found in different locations depending on the application and software version you have installed.
+Add authentication parameters to the `/featurebase/opt/featurebase.conf` TOML file.
 
-| Application | Version | Directory path |
-|---|---|---|
-| FeatureBase | 1.0+ | `/featurebase/opt/featurebse.conf` |
-| Molecula | 2.0+ | `/etc/featurebase.conf` |
-| Pilosa | 2.0+ | `/etc/featurebase.conf` |
+{% include /com-config/com-config-old-fb-conf.md %}
 
 ## Authentication syntax
 

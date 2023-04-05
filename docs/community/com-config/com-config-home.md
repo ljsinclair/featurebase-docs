@@ -10,10 +10,12 @@ has_toc: true
 ## Configure FeatureBase Community
 {: .no_toc }
 
-FeatureBase features can be enabled or disabled via
+FeatureBase features can be enabled or disabled from the `/featurebase/opt` directory in two ways:
 
-* Command-line flags
-* TOML files
+* Temporary changes can be made via CLI flags
+* Changes can be retained after startup by changing `/featurebase.conf`
+
+{% include /com-config/com-config-old-fb-conf.md %}
 
 {% include page-toc.md %}
 
