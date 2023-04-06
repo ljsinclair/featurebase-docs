@@ -1,11 +1,11 @@
 ---
-title: Enable Runtime Metrics
+title: Runtime metrics for tools
 layout: default
 parent: Community monitoring
 grand_parent: Community
 ---
 
-# How do I enable runtime metrics?
+# How do I enable metrics for external monitoring tools?
 
 FeatureBase can be configured to output runtime metrics for the following tools:
 
@@ -49,25 +49,17 @@ Change these parameters by editing the `/featurebase/opt/featurebase.conf` file.
 
 ### Prometheus metrics
 
-Enable
+Add featurebase metrics to the Prometheus configuration file `scrape_configs` section.
 
-Reporting metrics to Prometheus is enabled by default for Ingesters (at :9093/metrics); `host:port` can be specified with the `--stats` flag.
-
-* Add featurebase metrics to the Prometheus configuration file `scrape_configs` section
-* Obtain target ip addresses from `featurebase.conf`:
-  * IP address
-  *
-
+* [Prometheus example](#prometheus-example)
 
 ## Examples
 
 ### Prometheus example
 
-Below is an example configuration excerpt for Prometheus (the `scrape_configs` section), using the default reporting settings for FeatureBase and Ingesters:
-
-Add the following to the `scrape_configs` section of the Prometheus configuration file, where:
-* localhost:10101 = default FeatureBase IP address
-*
+Add the following to the `<scrape_config>` section of the Prometheus configuration file to monitor:
+* FeatureBase metrics
+* Ingester metrics
 
 ```yaml
 - job_name: 'featurebase'
@@ -79,9 +71,14 @@ static_configs:
 - targets: ['localhost:9093']
 ```
 
+Add the following to the `featurebase.conf` file to enable Prometheus monitoring at a 15 second interval.
 
 ```toml
 [metric]
 service = "prometheus"
 poll-interval = "0m15s"
 ```
+
+## Further information
+
+* [Prometheus configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration){:target="_blank"}
