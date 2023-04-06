@@ -19,7 +19,7 @@ You can also write scripts and automate tasks using built-in meta commands and s
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 ## Install fbsql
 

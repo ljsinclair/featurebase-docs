@@ -11,7 +11,7 @@ nav_order: 13
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Manage monitoring](/docs/community/com-monitoring/com-monitoring-home)
 
 ## Transaction Metrics

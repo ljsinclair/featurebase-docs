@@ -16,7 +16,7 @@ has_toc: true
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 ## Naming conventions for metrics
 

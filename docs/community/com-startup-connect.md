@@ -16,7 +16,7 @@ The FeatureBase Community UI does not currently support Apple Safari. Install Mo
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 {% include /com-install/com-install-default-settings.md %}
 

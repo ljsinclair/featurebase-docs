@@ -14,7 +14,7 @@ FeatureBase components re-open the log file on receipt of the HUP signal.
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Install and configure Linux logrotate](https://linux.die.net/man/8/logrotate){:target="_blank"} if not already installed
 * Setup CRON to run `logrotate` daily if not already setup
 

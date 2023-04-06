@@ -18,7 +18,7 @@ FeatureBase metrics are labelled according to a key-value format which are used 
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Manage monitoring](/docs/community/com-monitoring/com-monitoring-home)
 
 ## Cache metrics

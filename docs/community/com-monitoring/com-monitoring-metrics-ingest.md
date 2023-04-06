@@ -15,7 +15,7 @@ Ingester metrics are prefixed with a `[ingester-type]` which is one of the follo
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Manage monitoring](/docs/community/com-monitoring/com-monitoring-home)
 * [Learn about ingestion](/docs/community/com-ingest/com-ingest-manage)
 
