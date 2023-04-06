@@ -3,6 +3,7 @@ title: Setup logging
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 1
 ---
 
 # How do I setup error logs?

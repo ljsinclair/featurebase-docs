@@ -3,6 +3,7 @@ title: Runtime metrics for tools
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 2
 ---
 
 # How do I enable metrics for external monitoring tools?

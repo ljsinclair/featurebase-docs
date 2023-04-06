@@ -3,6 +3,7 @@ title: FeatureBase Metrics
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 10
 ---
 
 # FeatureBase Metrics reference

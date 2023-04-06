@@ -34,7 +34,7 @@ has_toc: true
 | FeatureBase metrics | [FeatureBase metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-fb) |
 | Ingester metrics | [Ingest metrics](/docs/community/com-monitoring/com-monitoring-metrics-ingest) |
 | Runtime metrics | [Runtime metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-runtime) |
-| Transaction metrics | [Transaction metrics reference](/docs/community/com-monitoring/com-monitoring-transaction-metrics) |
+| Transaction metrics | [Transaction metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-transaction) |
 
 ## Tracing
 
