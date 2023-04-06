@@ -88,7 +88,7 @@ The following information applies to `"config": "parameters"`:
 | `"Min"` | Minimum possible value for an integer | -2^63 |  | [Wolfram Alpha representation](https://www.wolframalpha.com/input?i=-2%5E63-1){:target="_blank"} |
 | `"Mutex": "true"` | Data is ingested into a mutex field |  |  |  |
 | `"Mutex": "false"` | Data is ingested into a `set` field |  |  |  |
-| `"Quantum"` | Time quantum constraint used when ingesting data from `recordTime` field to a `time` column.  |  |  | [Time Quantum constraint](Timequantum)[#timequantum] |
+| `"Quantum"` | Time quantum constraint used when ingesting data from `recordTime` field to a `time` column.  |  |  | [Time Quantum constraint](#timequantum) |
 | `"Scale"` | number of digits of precision to store after the decimal point |  |  |  |
 | `"TTL"` |  |  |  | [Time to live](#ttl-time-to-live) |
 | `"Unit"` | Standard units used to store timestamp for  are `"d"`, `"h"`, `"m"`, `"s"`, `"ms"`, `"us"`, `"ns"` or `"c"` for custom (using `"CustomUnit"` for `dateInt`) | `"s"` | * `dateInt` data type<br/>* `recordtime` when incoming data is numeric<br/>* `timestamp` when incoming data is numeric |
