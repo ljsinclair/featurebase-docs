@@ -23,7 +23,6 @@ This configuration will clear FeatureBase logs daily.
 
 You can also create logrotate configuration files using these steps and substituting other FeatureBase log names.
 
-
 * CD to `/etc/logrotate.d`
 * Create a new logrotate script
 
@@ -48,7 +47,6 @@ sudo nano featurebase
 ```
 
 * Write the file then exit.
-
 
 ## Further information
 

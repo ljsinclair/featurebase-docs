@@ -43,8 +43,6 @@ FeatureBase uses a different namespace for each component | , for example `featu
 ## Runtime metrics
 
 * [Runtime metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-runtime)
-* [Enable runtime metrics](/docs/community/com-monitoring/com-monitoring-metrics-runtime-enable)
-
 
 ## Transaction metrics
 
@@ -56,8 +54,15 @@ FeatureBase supports the [OpenTracing](https://opentracing.io/) standard.
 
 Any system that supports this standard can be setup to store and visualise trace data.
 
+## Enable metrics
 
+* [Enable runtime metrics for external monitoring](/docs/community/com-monitoring/com-monitoring-metrics-runtime-enable)
 
+* [Setup Datadog monitoring](/docs/community/com-monitoring/old-datadog)
+
+## Setup error logging
+
+* [Setup error logging](/docs/community/com-monitoring/com-monitoring-log-setup)
 
 ## Examples
 
