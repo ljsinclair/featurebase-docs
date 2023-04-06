@@ -41,3 +41,42 @@ Change these parameters by editing the `/featurebase/opt/featurebase.conf` file.
 | <metric-service> | FeatureBase supports:<br/>* expvar<br/>* statsd<br/>*  prometheus<br/> | No | Comment out or set to "none"` to disable |
 | <statsd-host> | Remote host to send `statsd` metrics | For `statsd` metrics | Comment out to disable |
 | <poll-interval> | An integer and time unit that determines how frequently FeatureBase checks for metrics | For `statsd` metrics and to enable runtime metrics | Comment out or set to zero to disable |
+
+## Additional information
+
+{% include /com-config/com-config-port-defaults.md %}
+
+### Prometheus metrics
+
+* Add featurebase metrics to the Prometheus configuration file `scrape_configs` section
+* Obtain target ip addresses from `featurebase.conf`:
+  * IP address
+  *
+
+
+## Examples
+
+### Prometheus example
+
+Below is an example configuration excerpt for Prometheus (the `scrape_configs` section), using the default reporting settings for FeatureBase and Ingesters:
+
+Add the following to the `scrape_configs` section of the Prometheus configuration file, where:
+* localhost:10101 = default FeatureBase IP address
+*
+
+```yaml
+- job_name: 'featurebase'
+static_configs:
+- targets: ['localhost:10101', 'localhost:10102', 'localhost:10103']
+
+- job_name: 'ingester'
+static_configs:
+- targets: ['localhost:9093']
+```
+
+
+```toml
+[metric]
+service = "prometheus"
+poll-interval = "0m15s"
+```
