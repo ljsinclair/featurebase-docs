@@ -42,7 +42,7 @@ molecula-consumer-kafka-static \
 
 | Flag | Data type | Description | Default | Required | Additional |
 |---|---|---|---|---|---|
-| `--header` | `string` | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI | For `--s3-region` or `AWS_REGION`  | [Kafka Static schema ingest source](/docs/community/com-ingest/com-ingest-source-kafka-static.md) |
+| `--header` | `string` | Path to the static schema definition or "header" file in JSON format which can be located on the local file system or an S3 URI | For `--s3-region` or `AWS_REGION`  | [Kafka Static schema ingest source](/docs/community/com-ingest/com-ingest-source-kafka-static) |
 | `--s3-region` | `string` | S3 Region, optionally used when header is specified as an S3 URI.  |  | Required for `--header <s3-URI>` |  Alternatively, use `AWS-REGION` environment variable |
 
 {% include /com-ingest/com-ingest-flag-common-id.md %}
