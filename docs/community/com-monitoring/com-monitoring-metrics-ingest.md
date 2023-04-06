@@ -16,11 +16,7 @@ Ingester metrics are prefixed with a `[ingester-type]` which is one of the follo
 
 * {% include /com-install/com-install-before-begin.md %}
 * [Manage monitoring](/docs/community/com-monitoring/com-monitoring-home)
-* [Learn about CSV ingest](/docs/community/com-ingest/com-ingest-source-csv)
-* [Learn about SQL ingest](/docs/community/com-ingest/com-ingest-source-sql)
-* [Learn about Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
-* [Learn about Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
-* [Learn about Kafka Static ingest](/docs/community/com-ingest/com-ingest-kafka-static-schema)
+* [Learn about ingestion](/docs/community/com-ingest/com-ingest-manage)
 
 ## Ingester metrics
 
