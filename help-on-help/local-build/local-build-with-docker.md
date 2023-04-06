@@ -35,6 +35,14 @@ NOTE: Changes to configuration files such as `/_config.yml` are not loaded while
 docker compose up serve
 ```
 
+## Troubleshooting
+
+| Error | Cause |
+|---|---|
+| `featurebase-docs-site-container exited with code 1` | Scroll up, there's usually a missing include file or something else interfering with the Jekyll build |
+| `docker network not found` | The network may have been killed due to a `docker prune` command or suchlike | Copy the network ID then recreate using `docker network create <mising-network-id>` |
+
+
 ## View local site
 
 To view the local site on port `4000` head to:
