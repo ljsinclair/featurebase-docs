@@ -128,12 +128,6 @@ The `molecula-consumer-kafka` and `molecula-consumer-kafka-delete` CLI commands:
 | avro.Record |  | NOT SUPPORTED  |
 | avro.Recursive |  | NOT SUPPORTED  |
 
-
-
-
-
-{% include /com-ingest/com-ingest-extra-kafka-avro-fields.md %}
-
 {% include /com-ingest/com-ingest-extra-kafka-avro-field-syntax.md %}
 
 ## Examples

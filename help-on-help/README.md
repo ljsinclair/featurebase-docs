@@ -21,6 +21,4 @@ Also included in the folder are source files and instructions for generating BNF
 
 ## Need support?
 
-## Need support?
-
 * [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)
