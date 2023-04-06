@@ -5,9 +5,17 @@ Right-click the appropriate release on the GitHub releases page, then download t
 Alternatively, you can download using the terminal.
 
 * Open a terminal
-* CD to the `/downloads` directory
-* Use the correct values for `<version>`, `<kernel>` and `<processor>` in the following command:
+* Create the installation directory:
+
+```sh
+mkdir featurebase
+```
+
+* CD to the `/featurebase` directory
+* Run the following command after substituting correct values for:
+  * `<version>`
+  * `<processor>`
 
 ```
-curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<kernel>-<processor>64.tar.gz -o featurebase.tgz
+curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-linux-<processor>64.tar.gz -o featurebase.tar.tgz
 ```
