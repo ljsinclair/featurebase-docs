@@ -28,6 +28,7 @@ FeatureBase can be configured to output runtime metrics for the following tools:
 Change these parameters by editing the `/featurebase/opt/featurebase.conf` file.
 
 ```toml
+
 [metric]
   service= "<metric-service>"
   host="<statsd-host>"
@@ -47,6 +48,10 @@ Change these parameters by editing the `/featurebase/opt/featurebase.conf` file.
 {% include /com-config/com-config-port-defaults.md %}
 
 ### Prometheus metrics
+
+Enable
+
+Reporting metrics to Prometheus is enabled by default for Ingesters (at :9093/metrics); `host:port` can be specified with the `--stats` flag.
 
 * Add featurebase metrics to the Prometheus configuration file `scrape_configs` section
 * Obtain target ip addresses from `featurebase.conf`:
