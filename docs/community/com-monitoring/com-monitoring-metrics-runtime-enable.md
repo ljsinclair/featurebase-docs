@@ -7,11 +7,7 @@ grand_parent: Community
 
 # How do I enable metrics for external monitoring tools?
 
-FeatureBase can be configured to output runtime metrics for the following tools:
-
-* Statsd
-* Expvar
-* Prometheus
+{% include /com-monitoring/com-monitoring-summary.md %}
 
 ## Before you begin
 
