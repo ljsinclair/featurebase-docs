@@ -3,7 +3,7 @@ title: Kafka static ingest examples
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 9
+nav_order: 15
 ---
 
 # Kafka static ingest examples

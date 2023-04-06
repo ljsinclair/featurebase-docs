@@ -3,7 +3,7 @@ title: Kafka static ingest consumer
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 8
+nav_order: 14
 ---
 
 # Kafka static ingest consumer reference

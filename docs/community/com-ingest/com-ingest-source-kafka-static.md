@@ -3,7 +3,7 @@ title: Ingest from Kafka static schema
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 8
+nav_order: 13
 ---
 
 # How do I ingest data from a Kafka static schema?
