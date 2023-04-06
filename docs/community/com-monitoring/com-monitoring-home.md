@@ -20,33 +20,21 @@ has_toc: true
 
 ## Naming conventions for metrics
 
-| Convention | Description | Additional information | Example |
-|---|---|---|---|
-| Colon character `:` | Reserved for Prometheus recording rules | [Learn about Prometheus recording rules](https://prometheus.io/docs/practices/rules/){:target="_blank"} |  |
-| Format | `[namespaceprefix]_[metric_description]_[units]` | [Naming format example](#naming-format) |  |
-| Namespace |
-
-FeatureBase uses a different namespace for each component | , for example `featurebase` and something starting with `ingester` for various Ingester binaries. |
-| Text case | `snake_case` is used | |
+| Convention | Description | Additional information |
+|---|---|---|
+| Colon character `:` | Reserved for Prometheus recording rules | [Learn about Prometheus recording rules](https://prometheus.io/docs/practices/rules/){:target="_blank"} |
+| Format | `[namespaceprefix]_[metric_description]_[units]` | [Naming format example](#naming-format) |
+| Text case | Use `snake_case` |  |
 | Valid metric names | Regular expressions `[a-zA-Z_:][a-zA-Z0-9_:]*` |  |
 
-- As a rule of thumb, either the sum() or the avg() over all dimensions of a given metric should be meaningful (though not necessarily useful).
+## Metrics
 
-## FeatureBase metrics
-
-* [FeatureBase metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-fb)
-
-## Ingester metrics
-
-* [Ingest metrics](/docs/community/com-monitoring/com-monitoring-metrics-ingest)
-
-## Runtime metrics
-
-* [Runtime metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-runtime)
-
-## Transaction metrics
-
-* [Transaction metrics reference](/docs/community/com-monitoring/com-monitoring-transaction-metrics)
+| Metrics | Additional information |
+|---|---|
+| FeatureBase metrics | [FeatureBase metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-fb) |
+| Ingester metrics | [Ingest metrics](/docs/community/com-monitoring/com-monitoring-metrics-ingest) |
+| Runtime metrics | [Runtime metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-runtime) |
+| Transaction metrics | [Transaction metrics reference](/docs/community/com-monitoring/com-monitoring-transaction-metrics) |
 
 ## Tracing
 
@@ -57,7 +45,6 @@ Any system that supports this standard can be setup to store and visualise trace
 ## Enable metrics
 
 * [Enable runtime metrics for external monitoring](/docs/community/com-monitoring/com-monitoring-metrics-runtime-enable)
-
 * [Setup Datadog monitoring](/docs/community/com-monitoring/old-datadog)
 
 ## Setup error logging
