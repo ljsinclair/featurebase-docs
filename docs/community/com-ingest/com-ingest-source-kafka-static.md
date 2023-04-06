@@ -60,8 +60,6 @@ The schema file is formatted as an array of JSON objects, each of which describe
 * Errors are returned if a value is missing from the `path`
 * Missing values can be ignored by adding the `--allow-missing-fields` flag when using `molecula-consumer-kafka-static`
 
-[Learn more about kafka-static ingest flags](/docs/community/com-ingest/com-ingest-flags-kafka-)
-
 ### `type` data types
 
 {% include /sql-guide/datatype-mapping.md %}
