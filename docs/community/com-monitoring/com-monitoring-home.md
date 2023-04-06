@@ -7,16 +7,16 @@ nav_order: 11
 has_toc: true
 ---
 
-# Community monitoring
+# How do I setup metrics and monitoring for FeatureBase Community?
+{: .no_toc }
 
-Set up external monitoring for FeatureBase.
+{% include /com-monitoring/com-monitoring-summary.md %}
 
-FeatureBase metrics are exposed via a Prometheus compatible endpoint.
+{% include page-toc.md %}
 
 ## Before you begin
 
-* [Learn about Prometheus](https://prometheus.io)
-
+* {% include /com-install/com-install-before-begin.md %}
 
 ## Naming conventions for metrics
 

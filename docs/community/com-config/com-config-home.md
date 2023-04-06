@@ -13,7 +13,7 @@ has_toc: true
 FeatureBase features can be enabled or disabled via
 
 * Command-line flags
-* TOML files
+* `/featurebase/opt/featurebase.conf` TOML files
 
 {% include page-toc.md %}
 
