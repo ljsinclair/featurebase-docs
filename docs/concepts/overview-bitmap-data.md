@@ -34,7 +34,6 @@ Range encoding involves setting a bit to correspond to a specific value **n** bu
 Range encoding the example table results in:
 
 
-The drawback of range encoding is that representing all possible values requires **n+1** bitmaps.
 
 
 
