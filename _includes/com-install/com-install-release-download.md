@@ -14,8 +14,9 @@ mkdir featurebase
 * CD to the `/featurebase` directory
 * Run the following command after substituting correct values for:
   * `<version>`
+  * `<os>` -- linux or darwin (MacOS)
   * `<processor>`
 
 ```
-curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-linux-<processor>64.tar.gz -o featurebase.tar.tgz
+curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<os>-<processor>64.tar.gz -o featurebase.tar.tgz
 ```
