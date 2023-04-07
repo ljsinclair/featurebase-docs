@@ -1,6 +1,8 @@
 ### Default FeatureBase ports
 
-These default ports are found in `/featurebase/opt/featurebase.conf` and can be used with CLI commands.
+Default ports can be:
+* used with CLI commands
+* added to the [FeatureBase configuration file](/docs/community/com-config/com-config-home#where-are-configuration-files-found)
 
 | Port | Used for | Example |
 |---|---|---|---|
