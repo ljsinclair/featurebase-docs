@@ -1,4 +1,4 @@
-* Open a terminal and CD to `/featurebase/opt`.
+* Open a terminal and CD to `*/featurebase/opt`.
 * Run the following command:
 
 ```

@@ -20,7 +20,7 @@ You can start, stop and check the status of FeatureBase services using `systemct
 
 ## Manage FeatureBase services
 
-* Open a CLI and the `/featurebase` installation directory.
+* Open a CLI and CD to the `/featurebase` installation directory.
 
 | Description | Command |
 |---|---|

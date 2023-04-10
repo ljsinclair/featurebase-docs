@@ -22,7 +22,7 @@ nav_order: 2
 
 ## Syntax
 
-Change these parameters by editing the `/featurebase/opt/featurebase.conf` file.
+Change these parameters by editing the `*/featurebase/opt/featurebase.conf` file.
 
 ```toml
 
