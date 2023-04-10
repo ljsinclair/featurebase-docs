@@ -16,7 +16,7 @@ You can start, stop and check the status of FeatureBase services using `systemct
 
 {% include /com-install/com-install-before-begin.md %}
 * Obtain `sudo` credentials for the system
-* [Setup FeatureBase as a service](/docs/community/old-setup/old-community-quickstart-guide/set-up-log-and-data-folders)
+* [Setup FeatureBase as a service](/docs/community/old-setup/old-community-quickstart-guide/#set-up-log-and-data-folders)
 
 ## Manage FeatureBase services
 
