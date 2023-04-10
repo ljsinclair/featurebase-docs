@@ -10,11 +10,14 @@ nav_order: 4
 
 Setup FeatureBase Community to run as a `systemd` service.
 
+{: .note}
+You can also [run FeatureBase from the CLI](/docs/community/com-startup-connect)
+
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
 * [Create a user to run the service](https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/){:target="_blank"}
-* Sudo privileges on FeatureBase server environment
+* Obtain `sudo` privileges
 
 {: .important}
 `systemd` services are created in `/etc/systemd/system`

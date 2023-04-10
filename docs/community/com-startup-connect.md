@@ -10,13 +10,16 @@ nav_order: 4
 These instructions explain how to run FeatureBase Community after you’ve installed on the target system.
 
 {: .note}
-The FeatureBase Community UI does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
+You can also [Setup a systemd service for FeatureBase Community](/docs/community/com-config/com-config-service-fb-setup)
 
 {% include /page-toc.md %}
 
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
+
+{: .note}
+The FeatureBase Community UI does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
 
 ## Start the FeatureBase Community server
 
