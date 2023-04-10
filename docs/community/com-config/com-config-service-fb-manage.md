@@ -20,8 +20,6 @@ You can start, stop and check the status of the `featurebase.service` using `sys
 
 ## Manage FeatureBase services
 
-* Open a CLI and CD to the `*/featurebase` installation directory.
-
 | Description | Command |
 |---|---|
 | Verify FeatureBase service status | `sudo systemctl status featurebase` |
