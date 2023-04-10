@@ -4,7 +4,7 @@ layout: default
 parent: Community
 has_children: true
 nav_order: 11
-has_toc: true
+has_toc: false
 ---
 
 # How do I setup metrics and monitoring for FeatureBase Community?
