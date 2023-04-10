@@ -24,6 +24,8 @@ You can also [run FeatureBase from the CLI](/docs/community/com-startup-connect)
 
 ## `systemd` parameters for featurebase.service
 
+Save these settings as `featurebase.service`
+
 ```
 [Unit]
     Description="<human-readable-description>"
