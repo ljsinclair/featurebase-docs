@@ -8,16 +8,15 @@ grand_parent: Community
 # How do I manage the FeatureBase service?
 {: .no_toc }
 
-You can start, stop and check the status of FeatureBase services using `systemctl` commands.
+You can start, stop and check the status of the `featurebase.service` using `systemctl` commands.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Create a FeatureBase service](/docs/community/com-config/com-config-service-fb)
+* [Setup a featurebase `systemd` service](/docs/community/com-config/com-config-service-fb-setup)
 * Obtain `sudo` credentials for the system
-* [Setup FeatureBase as a service](/docs/community/old-setup/old-community-quickstart-guide/#set-up-log-and-data-folders)
 
 ## Manage FeatureBase services
 
@@ -29,3 +28,4 @@ You can start, stop and check the status of FeatureBase services using `systemct
 | Start FeatureBase services | `sudo systemctl start featurebase` |
 | Stop FeatureBase services | `sudo systemctl stop featurebase` |
 | Restart FeatureBase services | `sudo systemctl restart featurebase` |
+| Run featureBase automatically after a reboot | `sudo systemctl enable featurebase.service` |
