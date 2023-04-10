@@ -14,7 +14,7 @@ Generate a `secret-key` used when setting up TLS authentication
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* cd to `~/featurebase/opt`
+* cd to `*/featurebase/opt`
 
 ## Syntax
 

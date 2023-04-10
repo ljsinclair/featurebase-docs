@@ -3,6 +3,7 @@ title: Log rotation
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 21
 ---
 
 # Set Up Log Rotation
@@ -11,7 +12,7 @@ When logging to a file, FeatureBase components will re-open the log file on rece
 
 1. First create a log directory owned by the system user that runs the FeatureBase process; we recommend `/var/log/molecula`.
 
-2. Next, configure FeatureBase to write to a file in that new directory. Edit your featurebase.conf and add `log-path = "/var/log/molecula/featurebase.log"`.
+2. Next, configure FeatureBase to write to a file in that new directory. Edit `/featurebase/opt/featurebase.conf` and add `log-path = "/var/log/molecula/featurebase.log"`.
 
 3. Restart FeatureBase for the new logging configuration to take effect.
 

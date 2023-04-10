@@ -10,16 +10,25 @@ has_toc: true
 ## Configure FeatureBase Community
 {: .no_toc }
 
-FeatureBase features can be enabled or disabled via
+FeatureBase features can be enabled or disabled from the `/featurebase/opt` directory in two ways:
 
 * Command-line flags
-* TOML files
+* the `featurebase.conf` TOML configuration file
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
+
+## Where are configuration files found?
+
+| File and path | Purpose | Additional information |
+|---|---|---|
+| `/opt/featurebase.conf` | TOML configuration file used to save FeatureBase settings. | [Configuration flags](/docs/community/com-config/com-config-flags) |
+| `/opt/featurebase.*.service` |  |  |
+| `/opt/fbsql` | Used to run SQL commands from the CLI. | [/docs/tools/fbsql/fbsql-home] |
+| `/idk/molecula-consumer-*` | Used to import data to FeatureBase tables. | [Manage data ingest](/docs/community/com-ingest/com-ingest-manage) |
 
 ## How do I manage FeatureBase services?
 

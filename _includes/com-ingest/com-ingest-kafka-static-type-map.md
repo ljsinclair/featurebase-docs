@@ -1,4 +1,4 @@
-## Kafka static ingest data type mappings
+## Kafka static ingest data type mapping
 
 | `"type":` | JSON Input Type | FeatureBase Field Type | Config Options |
 |---|---|---|---|

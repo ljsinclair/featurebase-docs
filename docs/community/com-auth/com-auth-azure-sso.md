@@ -15,7 +15,7 @@ Configure FeatureBase as an Azure Active Directory application Identity Provider
 ## Before you begin
 
 * Obtain administrator privileges to your Azure AD account
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Add authentication to `featurebase.conf`](/docs/community/com-auth/com-auth-tls)
 
 ## Step one: Register FeatureBase as an Azure application
@@ -35,7 +35,8 @@ The following values are used when registering FeatureBase as an Azure AD aplica
 
 ## Step 3 - Add the secret key to `featurebase.conf`
 
-* Edit `</featurebase_install_directory>/featurebase.conf` in a text editor.
+* CD to the `/featurebase/opt` directory.
+* Edit `featurebase.conf` in a text editor.
 * Edit `client-secret` value then add the Azure AD FeatureBase application secret.
 
 ## Step 4 - Create Azure groups

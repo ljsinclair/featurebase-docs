@@ -14,7 +14,7 @@ The `featurebase-restore` command is used to restore a backup to a new FeatureBa
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Backup FeatureBase Community](/docs/community/com-backup/com-config-backup)
 * Obtain Administrator permissions to the destination FeatureBase cluster
 

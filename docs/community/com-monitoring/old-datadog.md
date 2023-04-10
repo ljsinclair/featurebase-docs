@@ -3,6 +3,7 @@ title: Datadog monitoring
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 3
 ---
 
 # Monitoring with DataDog
@@ -14,9 +15,10 @@ If you’re running on EC2 and would like CloudWatch metrics, follow the [Gettin
 
 ## Configuration of FeatureBase
 
-First, configure FeatureBase to write metrics that Datadog can scrape. This is done in your `featurebase.conf` file. `featurebase.conf` is likely located at `/etc/featurebase.conf` but you can search for it by running `sudo find / -name featurebase.conf`.
+First, configure FeatureBase to write metrics that Datadog can scrape.
 
-Include the following text in featurebase.conf:
+* CD to `/featurebase/opt`
+* Edit `featurebase.conf` file then add the following parameters:
 
 ```
 [metric]

@@ -22,7 +22,7 @@ nav_order: 1
 | Term | Context | Further information |
 |---|---|---|---|
 | ALL | PQL query | [PQL ALL read query](/docs/pql-guide/pql-read-all) |
-| Anti-entropy | FeatureBase Community cluster | A periodic process that compares each shard and its replicas across the cluster to repair inconsistencies. |
+| Anti-entropy | FeatureBase Community cluster | {% include /concepts/concept-anti-entropy.md %} |
 | APPLY | PQL query | [PQL APPLY read query](/docs/pql-guide/pql-read-apply) |
 | ARROW | PQL query | [PQL ARROW read query](/docs/pql-guide/pql-read-arrow) |
 | Authentication | FeatureBase Cloud | [Manage cloud users](/docs/cloud/cloud-users/cloud-users-manage) |

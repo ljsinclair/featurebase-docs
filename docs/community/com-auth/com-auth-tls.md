@@ -15,20 +15,16 @@ Secure your FeatureBase server with TLS authentication.
 ## Before you begin
 
 * [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Generate a `secret-key`](/docs/community/com-auth/com-auth-key)
 * [Add FeatureBase as an Azure AD application](/docs/community/com-auth/com-auth-azure-sso)
 * [Set up FeatureBase Group permissions](/docs/community/com-auth/com-auth-group-permissions)
 
 ## FeatureBase configuration file location
 
-Authentication is added to the `featurebase.conf` file which can be found in different locations depending on the application and software version you have installed.
+Add authentication parameters to the `/featurebase/opt/featurebase.conf` TOML file.
 
-| Application | Version | Directory path |
-|---|---|---|
-| FeatureBase | 1.0+ | `/featurebase-install-directory/opt/featurebse.conf` |
-| Molecula | 2.0+ | `/etc/featurebase.conf` |
-| Pilosa | 2.0+ | `/etc/featurebase.conf` |
+{% include /com-config/com-config-old-fb-conf.md %}
 
 ## Authentication syntax
 

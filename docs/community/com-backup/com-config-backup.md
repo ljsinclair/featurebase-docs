@@ -28,7 +28,7 @@ A `featurebase backup` includes:
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 <!--* [Learn how to set up authentication for FeatureBase Community](/docs/community/com-config/com-config-authentication)-->
 * Obtain Administrator permissions to the FeatureBase cluster
 
