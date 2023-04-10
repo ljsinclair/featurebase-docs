@@ -88,7 +88,7 @@ query_<statement>_<modifier>
 
 | Metric name | Description | Additional information |
 |---|---|---|
-| `featurebase_http_request_duration_seconds` | Timing histogram of all http requests | [http_request_duration_seconds](#http-request-duration-seconds) |
+| `featurebase_http_request_duration_seconds` | Timing histogram of all http requests | [http_request_duration_seconds](#http_request_duration_seconds) |
 | `[featurebase]_grpc_request_pql_unary_query_duration_seconds` | Timing histogram of the query processing part of unary GRPC requests |
 | `[featurebase]_grpc_request_pql_unary_format_duration_seconds`| Timing histogram of the result formatting part of unary GRPC requests |
 | `[featurebase]_grpc_request_pql_stream_query_duration_seconds`| Timing histogram of the query processing part of streaming GRPC requests |
