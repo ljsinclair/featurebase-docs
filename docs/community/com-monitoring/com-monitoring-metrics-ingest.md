@@ -23,7 +23,7 @@ Ingester metrics are prefixed with a `[ingester-type]` which is one of the follo
 
 | Metric name | Description | Additional information |
 |---|---|---|
-| `stuff ` | another thing | yet another thing |
+| `[ingester-type]_deleter_rows_added_total` | Row count to be deleted | `(labels: type={packed-bool,set,mutex,bool,int,decimal})` |
 
 | Metric name | Description | Additional information |
 |---|---|---|
