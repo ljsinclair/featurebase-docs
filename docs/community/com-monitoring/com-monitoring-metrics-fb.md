@@ -48,26 +48,26 @@ FeatureBase metrics are labelled according to a key-value format which are used 
 
 | Metric name | Description |
 |---|---|
-| `[featurebase]_create_field_total`| count of successful field creations |
-| `[featurebase]_delete_field_total`| count of successful field deletions |
-| `[featurebase]_sync_field_duration_seconds` | timing histogram of the field sync process |
+| `featurebase_create_field_total`| count of successful field creations |
+| `featurebase_delete_field_total`| count of successful field deletions |
+| `featurebase_sync_field_duration_seconds` | timing histogram of the field sync process |
 
 ## Import/Ingest metrics
 
 | Metric name | Description |
 |---|---|
-| `[featurebase]_importing_total` | Count of imported set bits, before importing |
-| `[featurebase]_imported_total`| Count of imported set bits, after successfully importing (number that actually changed) |
-| `[featurebase]_clearing_total`| Count of imported clear bits, before importing |
-| `[featurebase]_cleared_total` | Count of imported clear bits, after successfully importing (number that actually changed) |
+| `featurebase_importing_total` | Count of imported set bits, before importing |
+| `featurebase_imported_total`| Count of imported set bits, after successfully importing (number that actually changed) |
+| `featurebase_clearing_total`| Count of imported clear bits, before importing |
+| `featurebase_cleared_total` | Count of imported clear bits, after successfully importing (number that actually changed) |
 
 ## Index metrics
 
 | Metric Name | Description |
 |---|---|
-| `[featurebase]_create_index_total`| Count of successful index creations |
-| `[featurebase]_delete_index_total`| Count of successful index deletions |
-| `[featurebase]_sync_index_duration_seconds` | Timing histogram of the index sync process |
+| `featurebase_create_index_total`| Count of successful index creations |
+| `featurebase_delete_index_total`| Count of successful index deletions |
+| `featurebase_sync_index_duration_seconds` | Timing histogram of the index sync process |
 
 ## Query metrics
 
@@ -89,24 +89,24 @@ query_<statement>_<modifier>
 | Metric name | Description | Additional information |
 |---|---|---|
 | `featurebase_http_request_duration_seconds` | Timing histogram of all http requests | [http_request_duration_seconds](#http_request_duration_seconds) |
-| `[featurebase]_grpc_request_pql_unary_query_duration_seconds` | Timing histogram of the query processing part of unary GRPC requests |
-| `[featurebase]_grpc_request_pql_unary_format_duration_seconds`| Timing histogram of the result formatting part of unary GRPC requests |
-| `[featurebase]_grpc_request_pql_stream_query_duration_seconds`| Timing histogram of the query processing part of streaming GRPC requests |
-| `[featurebase]_grpc_request_pql_stream_format_duration_seconds` | Timing histogram of the result formatting part of streaming GRPC requests |
+| `featurebase_grpc_request_pql_unary_query_duration_seconds` | Timing histogram of the query processing part of unary GRPC requests |
+| `featurebase_grpc_request_pql_unary_format_duration_seconds`| Timing histogram of the result formatting part of unary GRPC requests |
+| `featurebase_grpc_request_pql_stream_query_duration_seconds`| Timing histogram of the query processing part of streaming GRPC requests |
+| `featurebase_grpc_request_pql_stream_format_duration_seconds` | Timing histogram of the result formatting part of streaming GRPC requests |
 
 ## Shard metrics
 
 | Metric name | Description |
 |---|---|
-| `[featurebase]_delete_available_shard_total`| Count of successful shard deletions |
-| `[featurebase]_maximum_shard` | Gauge of the maximum shard in the index. | Value will be a multiple of 256 for indexes with `keys: true` due to key partitioning in shards. |
+| `featurebase_delete_available_shard_total`| Count of successful shard deletions |
+| `featurebase_maximum_shard` | Gauge of the maximum shard in the index. | Value will be a multiple of 256 for indexes with `keys: true` due to key partitioning in shards. |
 
 ## Other metrics
 
 | Metric name | Description | Additional information |
 |---|---|---|
-| `[featurebase]_snapshot_duration_seconds` | timing histogram of the snapshot process |  |
-| `[featurebase]_block_repair_total`| count | (labels: primary={true,false}) |
+| `featurebase_snapshot_duration_seconds` | timing histogram of the snapshot process |  |
+| `featurebase_block_repair_total`| count | (labels: primary={true,false}) |
 
 ## Additional information
 
@@ -124,4 +124,4 @@ Additional arguments include:
 | `slow` | `true` or `false` indicates a "slow query" based on the `long-query-time` configuration option for FeatureBase |  |
 
 <!-- OLD as future.rename has been depreciated
-where `[featurebase]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
+where `featurebase` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
