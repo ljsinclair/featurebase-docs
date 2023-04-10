@@ -23,6 +23,10 @@ Ingester metrics are prefixed with a `[ingester-type]` which is one of the follo
 
 | Metric name | Description | Additional information |
 |---|---|---|
+| `stuff ` | another thing | yet another thing |
+
+| Metric name | Description | Additional information |
+|---|---|---|
 | `[ingester-type]_deleter_rows_added_total` | Row count to be deleted | (labels: type={packed-bool,set,mutex,bool,int,decimal}) |
 | `[ingester-type]_ingester_schema_changes_total | count of schema changes |  |
 | `[ingester-type]_ingester_rows_added_total`| count of rows ingested |  |
