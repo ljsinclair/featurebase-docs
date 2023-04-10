@@ -3,6 +3,7 @@ title: Log rotation
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 21
 ---
 
 # Set Up Log Rotation

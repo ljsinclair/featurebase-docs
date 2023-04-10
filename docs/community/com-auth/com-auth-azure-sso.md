@@ -15,7 +15,7 @@ Configure FeatureBase as an Azure Active Directory application Identity Provider
 ## Before you begin
 
 * Obtain administrator privileges to your Azure AD account
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Add authentication to `featurebase.conf`](/docs/community/com-auth/com-auth-tls)
 
 ## Step one: Register FeatureBase as an Azure application

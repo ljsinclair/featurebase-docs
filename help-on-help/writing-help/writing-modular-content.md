@@ -6,7 +6,7 @@ For everyone else, they're a nightmare.
 
 ## Before you begin
 
-* [Learn about planning content](/help-on-help/planning content.md)
+* [Learn about planning content](/help-on-help/writing-help/planning content.md)
 
 ## The issues with endless scroll
 
@@ -57,35 +57,7 @@ For example:
 | Spaghetti code is difficult to debug and regression test. | Rambling content that jumps from one idea to the next in no logical order is difficult to follow for the user, and makes it easier to make mistakes |
 | Raise a Pull Request so code changes can be reviewed and tested before being merged and deployed. | Raise a Pull Request so help content changes can be reviewed and tested before being merged and deployed. |
 
-### If there's a change of context or a new task, give it a new page
+## How do I determine how the content should be written?
 
-In the original help, creating a table was one long page that included:
-
-* Creating a table with the UI
-* Creating a table using the API
-* Adding a column with the UI
-* Adding a column with the API
-* Data types for the columns
-* Constraints for the columns
-* Deleting a column with the UI
-* Deleting a column with the API
-* Dropping a table with the UI
-* Dropping a table with the API
-
-Result: a confusing to read, endless scroll page that included:
-* 8 different tasks (the list above)
-* 2 changes of context in the UI (create/drop table and add/delete column)
-* 4 API discussions plus examples
-* Duplicated data type and constraint content found in a standalone page
-
-If the user searched for **any** content that happened to be on that page, the search system dropped them at the top of the page rather than what they were looking for.
-
-#### Solving this problem
-
-Here's how this problem was solved:
-* UI content split into individual task pages under `/docs/cloud/cloud-tables`
-* Before you begin header to direct user to any requirements (e.g., you can't add columns unless you've created a table)
-* API content now found exclusively in the Redoc.ly site
-* Data types and constraints now documented in full under `/SQL-guide/data-types`
-
-Where additional information is necessary to give the user context, it's hyperlinked using **meaningful** anchor text
+* [Plan your content](/writing-help/writing-planning-content)
+* [Content planning checklist with examples](/writing-help/writing-content-checklist)

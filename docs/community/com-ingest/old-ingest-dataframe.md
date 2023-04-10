@@ -3,7 +3,7 @@ title: Dataframe consumer
 layout: default
 parent: Import data
 grand_parent: Community
-nav_order: 10
+nav_order: 21
 ---
 
 # Dataframe consumer

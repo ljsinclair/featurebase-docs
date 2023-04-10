@@ -3,6 +3,7 @@ title: Datadog monitoring
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 3
 ---
 
 # Monitoring with DataDog

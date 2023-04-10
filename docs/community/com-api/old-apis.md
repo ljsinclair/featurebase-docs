@@ -241,4 +241,4 @@ transactions, while the transaction manager handles all the logic (at the node l
 
 ## Ingest Interfaces
 
-See [Ingesters](/docs/community/com-ingest/old-ingesters) for information on data ingestion.
+See [Ingesters](/docs/community/com-ingest/com-ingest-manage) for information on data ingestion.

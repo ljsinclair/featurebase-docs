@@ -1,4 +1,4 @@
-## Kafka Confluent Schema Management flags
+## Kafka Avro Schema Management flags
 
 These flags apply to the `molecula-consumer-kafka` and `molecula-consumer-kafka-delete` CLI commands.
 

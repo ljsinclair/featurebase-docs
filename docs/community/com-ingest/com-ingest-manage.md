@@ -50,6 +50,8 @@ Refer to these reference files for information on how to set up and import data 
 
 ## Kafka import method
 
+There are three Kafka ingest methods:
+
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
-* [Kafka Avro Delete ingest](/docs/community/com-ingest/com-ingest-kafka-avro-delete)
-* [Kafka Static ingest](/docs/community/com-ingest/com-ingest-kafka-static-schema)
+* [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
+* [Kafka static schema ingest](/docs/community/com-ingest/com-ingest-source-kafka-static)

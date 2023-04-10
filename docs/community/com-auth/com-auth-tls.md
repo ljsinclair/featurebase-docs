@@ -15,7 +15,7 @@ Secure your FeatureBase server with TLS authentication.
 ## Before you begin
 
 * [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Generate a `secret-key`](/docs/community/com-auth/com-auth-key)
 * [Add FeatureBase as an Azure AD application](/docs/community/com-auth/com-auth-azure-sso)
 * [Set up FeatureBase Group permissions](/docs/community/com-auth/com-auth-group-permissions)

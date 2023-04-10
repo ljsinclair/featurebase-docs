@@ -3,6 +3,7 @@ title: Monitoring
 layout: default
 parent: Community monitoring
 grand_parent: Community
+nav_order: 20
 ---
 
 ## Metrics
@@ -198,4 +199,4 @@ While FeatureBase is in the RESIZING state, it denies any request which accesses
 
 ### Ingester
 
-Generally, scaling is handled by starting or stopping Ingester instances. Other options may be available for specific Ingesters; see [ingest tuning](/docs/community/com-ingest/old-ingesters#ingest-tuning)
+Generally, scaling is handled by starting or stopping Ingester instances. Other options may be available for specific Ingesters; see [ingest tuning](/docs/community/com-ingest/com-ingest-manage#ingest-tuning)
