@@ -13,6 +13,8 @@ Setup FeatureBase Community to run as a `systemd` service.
 {: .note}
 You can also [startup FeatureBase from the CLI](/docs/community/com-startup-connect)
 
+{% include /page-toc.md %}
+
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
@@ -49,6 +51,7 @@ Save these settings as `featurebase.service`
 | `Restart=onfailure` | FeatureBase will automatically restart on failure |  |
 | `User=<featurebase-user>` | The service will run under this user |  |
 | `Execstart=` | Path to startup files | `/usr/local/bin/featurebase/opt/featurebase server` |
+| `WantedBy=multi-user.target` |   | [multi-user-target description](https://www.baeldung.com/linux/systemd-target-multi-user#the-multi-user-target){:target="_blank"} |
 
 ## Additional information
 

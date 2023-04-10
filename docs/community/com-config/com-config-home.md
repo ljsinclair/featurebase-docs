@@ -10,7 +10,7 @@ has_toc: true
 ## Configure FeatureBase Community
 {: .no_toc }
 
-FeatureBase features can be enabled or disabled from the `/featurebase/opt` directory in two ways:
+FeatureBase features can be enabled or disabled from the `*/featurebase/opt` directory in two ways:
 
 * Command-line flags
 * the `featurebase.conf` TOML configuration file
@@ -30,9 +30,10 @@ FeatureBase features can be enabled or disabled from the `/featurebase/opt` dire
 | `/opt/fbsql` | Used to run SQL commands from the CLI. | [/docs/tools/fbsql/fbsql-home] |
 | `/idk/molecula-consumer-*` | Used to import data to FeatureBase tables. | [Manage data ingest](/docs/community/com-ingest/com-ingest-manage) |
 
-## How do I manage FeatureBase services?
+## How do I setup and manage a FeatureBase `systemd` service?
 
-* [Manage FeatureBase services](/docs/community/com-config/com-config-manage-fb-services)
+* [Setup FeatureBase `systemd` service](/docs/community/com-config/com-config-service-fb-setup)
+* [Manage FeatureBase services](/docs/community/com-config/com-config-service-fb-manage)
 
 ## How do I set up a FeatureBase cluster?
 
