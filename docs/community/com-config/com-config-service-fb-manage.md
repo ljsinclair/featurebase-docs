@@ -10,6 +10,9 @@ grand_parent: Community
 
 You can start, stop and check the status of the `featurebase.service` using `systemctl` commands.
 
+{: .important}
+These instructions do not apply when [starting FeatureBase from the CLI](/docs/community/com-startup-connect)
+
 {% include page-toc.md %}
 
 ## Before you begin
@@ -18,7 +21,7 @@ You can start, stop and check the status of the `featurebase.service` using `sys
 * [Setup a featurebase `systemd` service](/docs/community/com-config/com-config-service-fb-setup)
 * Obtain `sudo` credentials for the system
 
-## Manage FeatureBase services
+## Manage FeatureBase service
 
 | Description | Command |
 |---|---|

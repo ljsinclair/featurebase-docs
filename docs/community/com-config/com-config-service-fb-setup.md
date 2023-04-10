@@ -11,7 +11,7 @@ nav_order: 4
 Setup FeatureBase Community to run as a `systemd` service.
 
 {: .note}
-You can also [run FeatureBase from the CLI](/docs/community/com-startup-connect)
+You can also [startup FeatureBase from the CLI](/docs/community/com-startup-connect)
 
 ## Before you begin
 
