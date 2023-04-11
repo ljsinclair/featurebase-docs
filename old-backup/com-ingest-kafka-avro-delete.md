@@ -21,9 +21,9 @@ If you have the memory avaliable, the [Confluent quickstart guide](https://docs.
 
 ## Usage
 
-The Kafka Avro Delete consumer is part of the `IDK` package. You can find the binary (`molecula-consumer-kafka-delete`) as part of the community releases. This consumer is built on top of [Confluent's go client](https://github.com/confluentinc/confluent-kafka-go). Unlike other consumers, it processes message one at a time.
+The Kafka Avro Delete consumer is part of the `IDK` package. You can find the binary (`./molecula-consumer-kafka-delete`) as part of the community releases. This consumer is built on top of [Confluent's go client](https://github.com/confluentinc/confluent-kafka-go). Unlike other consumers, it processes message one at a time.
 
-Use `molecula-consumer-kafka -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_" and converting any dots or dashes to underscores. For example tls.ca-certificate becomes CONSUMER_TLS_CA_CERTIFICATE.
+Use `./molecula-consumer-kafka -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_" and converting any dots or dashes to underscores. For example tls.ca-certificate becomes CONSUMER_TLS_CA_CERTIFICATE.
 
 Note: In order for TLS to be used, the various TLS options need to be set, but each service URL must also include the appropriate protocol (e.g. FeatureBase hosts should look like "https://featurebase0.local:10101").
 

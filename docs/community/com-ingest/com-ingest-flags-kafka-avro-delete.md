@@ -24,7 +24,7 @@ The Kafka Avro delete consumer was built to supply delete functionality that doe
 The `"fields"`values in the Kafka Avro message define the data to be deleted at the `--primary-key-fields` specified on the CLI.
 
 {: .note}
-`molecula-consumer-kafka-delete` processes Kafka messages one at a time.
+`./molecula-consumer-kafka-delete` processes Kafka messages one at a time.
 
 {% include page-toc.md %}
 

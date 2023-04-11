@@ -12,7 +12,7 @@ Ingesting data from a Kafka static schema involves the use of:
 
 * JSON message blob which defines the source data
 * JSON document that defines the source data as an array that matches the destination table structure
-* Specifying the JSON document using the `static` CLI flag when running `molecula-consumer-kafka-static`
+* Specifying the JSON document using the `static` CLI flag when running `./molecula-consumer-kafka-static`
 
 ## Before you begin
 
@@ -58,7 +58,7 @@ The schema file is formatted as an array of JSON objects, each of which describe
 
 * Array indexing is not supported
 * Errors are returned if a value is missing from the `path`
-* Missing values can be ignored by adding the `--allow-missing-fields` flag when using `molecula-consumer-kafka-static`
+* Missing values can be ignored by adding the `--allow-missing-fields` flag when using `./molecula-consumer-kafka-static`
 
 ### `type` data types
 

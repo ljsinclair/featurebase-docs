@@ -25,9 +25,9 @@ If you have the memory avaliable, the [Confluent quickstart guide](https://docs.
 
 ## Usage
 
-The Kafka Avro consumer is part of the `IDK` package. You can find the binary (`molecula-consumer-kafka`) in the community releases. This consumer is built on top of [Confluent's go client](https://github.com/confluentinc/confluent-kafka-go).
+The Kafka Avro consumer is part of the `IDK` package. You can find the binary (`./molecula-consumer-kafka`) in the community releases. This consumer is built on top of [Confluent's go client](https://github.com/confluentinc/confluent-kafka-go).
 
-Use `molecula-consumer-kafka -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_" and converting any dots or dashes to underscores. For example tls.ca-certificate becomes CONSUMER_TLS_CA_CERTIFICATE.
+Use `./molecula-consumer-kafka -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_" and converting any dots or dashes to underscores. For example tls.ca-certificate becomes CONSUMER_TLS_CA_CERTIFICATE.
 
 Note: In order for TLS to be used, the various TLS options need to be set, but each service URL must also include the appropriate protocol (e.g. FeatureBase hosts should look like "https://featurebase0.local:10101").
 
@@ -41,7 +41,7 @@ Below are the current configuration options:
 |  `-b`, `--batch-size` | int                          |           Number of records to read before indexing all of them at once. Generally, larger means better throughput and more memory usage. 1,048,576 might be a good number. (default 1) |
 |      `--cache-length` | uint                       |         Number of batches of ID mappings to cache. (default 64)|
 |      `--commit-timeout` | duration                 |        Maximum time before canceling commit.|
-|  `-c`, `--concurrency` | int                         |       Number of concurrent sources and indexing routines to launch. Concurrency is not supported for molecula-consumer-sql. Concurrency for molecula-consumer-csv only works when providing multiple files and does not support '--auto-generate' (default 1)|
+|  `-c`, `--concurrency` | int                         |       Number of concurrent sources and indexing routines to launch. Concurrency is not supported for ./molecula-consumer-sql. Concurrency for ./molecula-consumer-csv only works when providing multiple files and does not support '--auto-generate' (default 1)|
 |      `--consumer-close-timeout` | int              |      The amount of time in seconds to wait for the consumer to close properly. (default 30)|
 |      `--delete-index `      |                     |     Delete index specified by --index (if it already exists) before starting ingest - NOTE: this will delete any data already imported into this index, use with caution.|
 |      `--dry-run`           |                      |     Dry run - just flag parsing.|

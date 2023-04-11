@@ -40,7 +40,7 @@ The `--header` flag is used to point at this schema file. The schema file is for
 |  -b, --batch-size| int                         |Number of records to read before indexing all of them at once. Generally, larger means better throughput and more memory usage. 1,048,576 might be a good number. (default 1)|
 |      --cache-length| uint                      |Number of batches of ID mappings to cache. (default 64)|
 |      --commit-timeout| duration                |Maximum time before canceling commit.|
-|  -c, --concurrency| int                        |Number of concurrent sources and indexing routines to launch. Concurrency is not supported for molecula-consumer-sql. Concurrency for molecula-consumer-csv only works when providing multiple files and does not support '--auto-generate' (default 1)|
+|  -c, --concurrency| int                        |Number of concurrent sources and indexing routines to launch. Concurrency is not supported for ./molecula-consumer-sql. Concurrency for ./molecula-consumer-csv only works when providing multiple files and does not support '--auto-generate' (default 1)|
 |      --controller-address| string              |Controller address.|
 |      --database-id| string                     |auto-assigned database ID|
 |      --delete-index|                           |Delete index specified by --index (if it already exists) before starting ingest - NOTE: this will delete any data already imported into this index, use with caution.|

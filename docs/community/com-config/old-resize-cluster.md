@@ -37,7 +37,7 @@ Additionally, if the replication factor needs to be changed, the [`cluster.repli
 
 If data is written during/after a backup, it will not end up on the new cluster.
 In order to ensure that all data are preserved, shut down the writing processes for the remainder of the migration.
-If using an ingest consumer (e.g. `molecula-consumer-kafka`), this should be accomplished by completely shutting down the process.
+If using an ingest consumer (e.g. `./molecula-consumer-kafka`), this should be accomplished by completely shutting down the process.
 Do not attempt to stall the consumer by creating an exclusive transaction.
 
 ## 3. Backup data from the original FeatureBase cluster.

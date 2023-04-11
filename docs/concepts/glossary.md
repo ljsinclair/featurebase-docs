@@ -119,7 +119,7 @@ nav_order: 1
 | MAXSHARD<br/>`cluster.maxshard` parameter | FeatureBase Community Cluster flag | Zero-indexed shard allocation for current records, where `maxshard = 0` indicates 1 shard is allocated. |
 | MIN | PQL Read query | [PQL MIN Read query](/docs/pql-guide/pql-read-min) |
 | Min | SQL `int` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
-| molecula-consumer-[csv | sql | kafka] | Community ingest | [Manage community ingest](/docs/community/com-ingest/com-ingest-manage) |
+| `./molecula-consumer-[csv | sql | kafka]` | Community ingest | [Manage community ingest](/docs/community/com-ingest/com-ingest-manage) |
 | Mutex | String Data type | A FeatureBase field type similar to the Set type, in which only a single value can be set at any time. Conceptually similar to an enum type, but implemented on top of Set fields, with a performance cost from the single-value constraint. Not to be confused with the mutex synchronization primitive. |
 
 ## N

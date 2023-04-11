@@ -22,7 +22,7 @@ Copy binaries to `/usr/local/bin/`, being sure to choose the correct binaries fo
  and CPU architecture, typically linux-amd64 for Linux:
 
 - `featurebase`
-- `molecula-consumer/*`
+- `./molecula-consumer/*`
 
 Copy files, and confirm settings are correct:
 - configuration file `featurebase.conf` to `/etc/`
@@ -196,7 +196,7 @@ Copy binaries to `/usr/local/bin/`, being sure to choose the correct binaries fo
  and CPU architecture, typically darwin-amd64 for MacOS.
 
 - `featurebase`
-- `molecula-consumer/*`
+- `./molecula-consumer/*`
 
 Copy file, and confirm settings are correct:
 

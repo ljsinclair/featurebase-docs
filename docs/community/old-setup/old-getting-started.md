@@ -127,7 +127,7 @@ curl -O https://raw.githubusercontent.com/pilosa/getting-started/master/language
 Note that both the user IDs and the repository IDs were remapped from Github entities to sequential integers in the data files. You can check out [languages.txt](https://github.com/pilosa/getting-started/blob/master/languages.txt) to see the mapping for languages.
 
 ### Ingest Data
-Ingest the language data using the `molecula-consumer-csv` command:
+Ingest the language data using the `./molecula-consumer-csv` command:
 ```shell
 molecula-consumer-csv \
     --index repository \
@@ -142,7 +142,7 @@ There are a couple of things to note about the above command, particularly the f
 * `--index`: set the index that shall be used. If this index does not exist, it shall be created automatically.
 * `--header`: set the header to be used if the original csv file does not have a header. Each column name also specifies the type that FeatureBase shall use to represent the data (after the two underscores). For more details on all FeatureBase data-types see [Field Types](/docs/community/com-ingest/com-ingest-manage) section later on. For now, it suffices to say that the `ID` type is a simple integer representation of a particular property that an object has. For example, if an object has `project_id` set to 10 and `language` set to 6, 8 and 18, it means that the object was assigned the project ID 10 and uses Go, C and Python.
 * `--id-field`: specify which column contains the primary key for the object.
-* `--batch-size`: by default `molecula-consumer-csv` ingests rows one at a time which is quite slow. To speed up ingestion, set the batch size to a higher number such as 1000. The exact batch-size to be used though depends on the domain, setting and tradeoffs.
+* `--batch-size`: by default `./molecula-consumer-csv` ingests rows one at a time which is quite slow. To speed up ingestion, set the batch size to a higher number such as 1000. The exact batch-size to be used though depends on the domain, setting and tradeoffs.
 * `--files`: provide the path to the file to ingest data from.
 
 Next,ingest the stargazers via the following command:

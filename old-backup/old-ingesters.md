@@ -247,7 +247,7 @@ This may improve utilization on multi-core systems, or allow for redundancy.
 
 It is possible to run multiple identical ingesters in the same process with the `--concurrency` CLI flag.
 These ingesters are mostly independent, and roughly behave the same as two independent ingester processes would.
-`--concurrency` CLI flag is not supported for `molecula-consumer-csv` and `molecula-consumer-sql`.
+`--concurrency` CLI flag is not supported for `./molecula-consumer-csv` and `./molecula-consumer-sql`.
 
 Alternatively, it is possible to launch multiple ingester processes, possibly on multiple machines.
 
@@ -268,7 +268,7 @@ The CSV ingester uses the CSV conventions outlined in [RFC-4180](https://datatra
 - "Fields containing line breaks (CRLF), double quotes, and commas should be enclosed in double-quotes."
 - "If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote."
 
-Use `molecula-consumer-csv -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_".
+Use `./molecula-consumer-csv -h` to list all available flags. Each flag is also available as an environment variable by prefixing it with "CONSUMER_".
 
 | Flag            | Type    | Description                                                                                                                   |
 | -               | -       | -                                                                                                                             |
@@ -299,7 +299,7 @@ Missing values and empty string values (`""`) are handled identically.
 
 The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data using the SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names as [header descriptions to specify how each field](/docs/community/com-ingest/com-ingest-manage) should be ingested, similar to the CSV Ingester.
 
-Use `molecula-consumer-sql -h` to list all available flags (or see table below). A few sample configurations are noted below:
+Use `./molecula-consumer-sql -h` to list all available flags (or see table below). A few sample configurations are noted below:
 
 ```shell
 molecula-consumer-sql \

@@ -48,7 +48,7 @@ The Kafka Confluent ingest process:
 
 ### Mapping Avro and FeatureBase data types
 
-The `molecula-consumer-kafka` and `molecula-consumer-kafka-delete` CLI commands:
+The `./molecula-consumer-kafka` and `./molecula-consumer-kafka-delete` CLI commands:
 * Read the Avro schema from the Confluent Schema Registry
 * Infers the FeatureBase data type for each field
 

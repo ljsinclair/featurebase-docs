@@ -2,4 +2,4 @@
 
 | Flag | Data type | Description | Default | Required |
 |---|---|---|---|---|
-| `--auth-token` | string | Authentication Token for FeatureBase |  |  |  |
+| `--auth-token` | string | Authentication Token for FeatureBase |  |

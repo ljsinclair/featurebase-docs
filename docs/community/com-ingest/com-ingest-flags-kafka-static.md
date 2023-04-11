@@ -61,7 +61,7 @@ molecula-consumer-kafka-static \
 
 ## Additional information
 
-* Run `molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
+* Run `./molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
 

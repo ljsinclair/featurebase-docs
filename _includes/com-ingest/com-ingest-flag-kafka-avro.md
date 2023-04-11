@@ -1,6 +1,6 @@
 ## Kafka Avro Schema Management flags
 
-These flags apply to the `molecula-consumer-kafka` and `molecula-consumer-kafka-delete` CLI commands.
+These flags apply to the `./molecula-consumer-kafka` and `./molecula-consumer-kafka-delete` CLI commands.
 
 | Flag | Data type | Description | Default | Required | Additional |
 |---|---|---|---|---|---|
