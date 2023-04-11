@@ -6,7 +6,7 @@ Use this method to:
 * define FeatureBase server `tls` certificates to securely connect to a remote server.
 
 ```shell
-molecula-consumer-csv \
+./molecula-consumer-csv \
     --featurebase-hosts=https://localhost:10101
     --tls.certificate=featurebase.local.crt \
     --tls.key=featurebase.local.key \

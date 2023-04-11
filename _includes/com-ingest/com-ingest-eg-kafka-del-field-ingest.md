@@ -1,7 +1,7 @@
 ### Kafka delete field ingester configuration
 
 ```
-molecula-consumer-kafka-delete \
+./molecula-consumer-kafka-delete \
     --primary-key-fields "pk0,pk1" \
     --topics delete_topic \
     --kafka-bootstrap-server localhost:9092 \

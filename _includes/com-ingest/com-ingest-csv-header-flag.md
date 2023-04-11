@@ -7,7 +7,7 @@ The mismatch is overcome by
 * ignoring the header rows in the data files using `--ignore-header`
 
 ```shell
-molecula-consumer-csv \
+./molecula-consumer-csv \
     --batch-size=10000 \
     --auto-generate \
     --header=asset_tag__String,fan_time__RecordTime_2006-01-02,fan_val__String_F_YMD \

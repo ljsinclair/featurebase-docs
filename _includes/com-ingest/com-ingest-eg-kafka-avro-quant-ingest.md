@@ -1,6 +1,6 @@
 ### Kafka Avro ingest script for `quantum` data
 ```
-molecula-consumer-kafka \
+./molecula-consumer-kafka \
     --index target_index \
     --featurebase-hosts localhost:10101 \
     --kafka-hosts localhost:9092 \

@@ -1,5 +1,5 @@
 ```shell
-molecula-consumer-kafka-static \
+./molecula-consumer-kafka-static \
     --kafka-hosts "localhost:9092" \
     --index kafka-test \
     --batch-size=10000 \

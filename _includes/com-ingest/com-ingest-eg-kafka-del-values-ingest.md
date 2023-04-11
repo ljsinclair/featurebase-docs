@@ -1,6 +1,6 @@
 ## Kafka delete consumer configuration
 ```
-molecula-consumer-kafka-delete \
+./molecula-consumer-kafka-delete \
     --topics delete_topic \
     --kafka-bootstrap-server localhost:9092 \
     --schema-registry-url localhost:8081 \
