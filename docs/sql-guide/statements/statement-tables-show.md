@@ -19,6 +19,14 @@ Shows the list of FeatureBase tables that exist on the server.
 ```sql
 SHOW TABLES [WITH SYSTEM];
 ```
+
+## Arguments
+
+| Argument | Description |
+|---|---|
+| SHOW TABLES | Return all tables owned by the user |
+| WITH SYSTEM | Include FeatureBase system tables in results |
+
 ## Returns
 
 | Column Name | Data type | Description | Further information |
