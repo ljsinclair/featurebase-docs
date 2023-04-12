@@ -25,10 +25,10 @@ statement = show_tables
 
   SHOW TABLES
   ----------------
-  Shows the tables within a FeatureBase instance.
+  Shows the tables within a FeatureBase database, optionally with system tables.
 
 *)
-show_tables = "SHOW", "TABLES" ;
+show_tables = "SHOW", "TABLES", [ "WITH SYSTEM" ] ;
 
 (*
 

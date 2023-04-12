@@ -17,7 +17,7 @@ Shows the list of FeatureBase tables that exist on the server.
 ## Syntax
 
 ```sql
-SHOW TABLES;
+SHOW TABLES [WITH SYSTEM];
 ```
 ## Returns
 
@@ -47,18 +47,33 @@ SHOW TABLES;
 
 ## Examples
 
-Sample data has been loaded to a new FeatureBase database.
+### Show your tables
 ```
 SHOW TABLES;
+
+Results:
+
+ _id                     | name                    | owner | updated_by | created_at                | updated_at                | keys  |  space_used | description
+-------------------------+-------------------------+-------+------------+---------------------------+---------------------------+-------+-------------+------------------------------------
+ skills                  | skills                  |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |    37998707 |
+
 ```
-CSV results
+
+### Show your tables and system tables
+
 ```
-_id,name,owner,updated_by,created_at,updated_at,keys,space_used,description
-fb_views,fb_views,,,2023-01-18T06:05:23Z,2023-01-18T06:05:23Z,true,8642560,system table for views
-skills,skills,,c9e4d4d2-bfee-4dae-8b1e-e172bf17b2d7,2023-01-05T05:53:06Z,2023-01-25T07:15:48Z,true,44331123,
-fb_cluster_info,fb_cluster_info,,,1970-01-01T00:00:00Z,1970-01-01T00:00:00Z,false,0,
-fb_cluster_nodes,fb_cluster_nodes,,,1970-01-01T00:00:00Z,1970-01-01T00:00:00Z,false,0,
-fb_exec_requests,fb_exec_requests,,,1970-01-01T00:00:00Z,1970-01-01T00:00:00Z,false,0,
-fb_table_ddl,fb_table_ddl,,,1970-01-01T00:00:00Z,1970-01-01T00:00:00Z,false,0,
-fb_performance_counters,fb_performance_counters,,,1970-01-01T00:00:00Z,1970-01-01T00:00:00Z,false,0,
+SHOW TABLES WITH SYSTEM;
+
+Results:
+
+ _id                     | name                    | owner | updated_by | created_at                | updated_at                | keys  |  space_used | description
+-------------------------+-------------------------+-------+------------+---------------------------+---------------------------+-------+-------------+------------------------------------
+ fb_database_info        | fb_database_info        |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
+ fb_database_nodes       | fb_database_nodes       |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
+ fb_exec_requests        | fb_exec_requests        |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
+ fb_performance_counters | fb_performance_counters |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
+ fb_table_ddl            | fb_table_ddl            |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
+ fb_views                | fb_views                |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |     8642560 | system table for views
+ skills                  | skills                  |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |    37998707 |
+
 ```
