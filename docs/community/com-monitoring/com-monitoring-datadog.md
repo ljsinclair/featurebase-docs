@@ -10,6 +10,9 @@ nav_order: 1
 
 You can configure FeatureBase Community to output Prometheus metrics which can be read by Datadog.
 
+{: .note}
+[Learn how to setup Datadog to read EC2 Cloudwatch metrics](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation){:target="\_blank"} for FeatureBase systems installed on AWS EC2.
+
 ## Before you begin
 
 * [Learn about FeatureBase monitoring](/docs/community/com-monitoring/com-monitoring-home)
@@ -132,4 +135,3 @@ openmetrics (2.0.0)
 ## Further information
 
 * [Learn which system level metrics will be exposed](https://docs.datadoghq.com/integrations/system/){:target="_blank"}
-* [Learn how to setup Datadog to setup EC2 Cloudwatch metrics](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation){:target="\_blank"} for systems running on AWS EC2.
