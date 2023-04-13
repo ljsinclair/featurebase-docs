@@ -13,17 +13,19 @@ nav_order: 1
 ## Before you begin
 
 * [Learn about FeatureBase monitoring](/docs/community/com-monitoring/com-monitoring-home)
+* [Create a Datadog account](https://www.datadoghq.com/product/){:target="_blank"}
+* [Install Datadog agent](https://docs.datadoghq.com/agent/versions/upgrade_to_agent_v7/?tab=linux){:target="_blank"}
 
 ## Step 1 - enable FeatureBase Prometheus metrics
 
-* Open a CLI then CD to `*/featurebase/opt`
-* Add the following parameters to the `featurebase.conf` TOML configuration file:
+* Open a CLI then CD to `*/featurebase/opt`.
+* Edit `/featurebase.conf` and add the following details:
 
-```
-[metric]
-    service = "prometheus"
-    poll-interval = "<int><time-"
-```
+{% include /com-monitoring/com-monitoring-metrics-prometheus.md %}
+
+## Step 2 - Add prometheus metrics to the agent config files
+
+
 
 
 
