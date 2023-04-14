@@ -2,6 +2,7 @@
 title: Manage Database
 layout: default
 parent: Community
+nav_order: 7
 ---
 
 # How do I manage my FeatureBase Community database?

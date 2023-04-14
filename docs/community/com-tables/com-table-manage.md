@@ -3,8 +3,7 @@ title: Manage tables
 layout: default
 parent: Community
 has_children: true
-nav_order: 6
-has_toc: false
+nav_order: 8
 ---
 
 ## How do I create and manage tables in FeatureBase Community?

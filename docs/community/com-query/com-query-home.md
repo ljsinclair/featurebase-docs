@@ -3,7 +3,7 @@ title: Query databases
 layout: default
 parent: Community
 has_children: true
-nav_order: 7
+nav_order: 9
 has_toc: true
 ---
 
