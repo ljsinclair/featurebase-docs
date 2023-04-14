@@ -36,7 +36,7 @@ You can configure FeatureBase Community to output Prometheus metrics which can b
 
 * CD to `/etc/datadog-agent/`
 * Verify there is a `datadog.yaml.example` file as backup
-* Edit `datadog.yaml` and add the following parameters:
+* Edit `datadog.yaml` then add the following parameters:
 
 ```
 api_key: <datadog-api-key>
@@ -68,7 +68,7 @@ network_config:
 cp conf.yaml.exmple conf.yaml
 ```
 
-* Edit conf.yaml and add the following parameters:
+* Edit `conf.yaml` then add the following parameters:
 
 ```
 init_config:
