@@ -12,9 +12,9 @@ grand_parent: Community
 ### Performance tuning on Linux
 
 * [Performance tuning Linux](/docs/community/com-troubleshooting/com-issue-linux-tuning)
-* [Reclaiming unused SSD space](/docs/community/com-troubleshooting/com-issue-linux-ssd)
+* [Reclaiming unused Linux SSD space](/docs/community/com-troubleshooting/com-issue-linux-ssd)
 
 ### Performance tuning on MacOS
 
 * [Performance tuning MacOS](/docs/community/com-troubleshooting/com-issue-macos-tuning)
-* [Reclaiming unused SSD space](/docs/community/com-troubleshooting/com-issue-macos-ssd)
+* [Reclaiming unused MacOS SSD space](/docs/community/com-troubleshooting/com-issue-macos-ssd)
