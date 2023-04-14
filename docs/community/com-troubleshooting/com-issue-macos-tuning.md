@@ -1,5 +1,5 @@
 ---
-title: Issue - MacOS memory & process limits
+title: MacOS memory & process issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community

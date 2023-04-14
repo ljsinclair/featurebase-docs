@@ -1,5 +1,5 @@
 ---
-title: Issue - linux file & memory limits
+title: Linux memory & process issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community

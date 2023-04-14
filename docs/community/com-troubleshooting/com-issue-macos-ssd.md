@@ -1,5 +1,5 @@
 ---
-title: Issue - MacOS SSD memory
+title: MacOS SSD memory issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community

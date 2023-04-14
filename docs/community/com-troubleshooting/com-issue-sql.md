@@ -1,17 +1,22 @@
 ---
-title: Issue running SQL
+title: Issue running SQL over HTTPS
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
 nav_order: 2
 ---
 
-# Issue - SQL won't on FeatureBase Community
+# Issue - Running SQL over HTTPS fails
 
-Statements using SQL found in [SQL-guide](/docs/sql-guide/sql-guide-home) do not execute when run:
-* from the FeatureBase Community command-line
-* via HTTP requests
+## Cause
+
+FeatureBase CLI is not enabled.
 
 ## Solution
 
 * [Enable the SQL CLI for FeatureBase Community](/docs/community/com-config/com-config-sql-cli-enable)
+
+## Further information
+
+* [SQL guide](/docs/sql-guide/sql-guide-home)
+* [FBSQL CLI tool](/docs/tools/fbsql/fbsql-home)

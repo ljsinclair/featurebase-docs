@@ -1,5 +1,5 @@
 ---
-title: Issues with performance
+title: Performance issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community

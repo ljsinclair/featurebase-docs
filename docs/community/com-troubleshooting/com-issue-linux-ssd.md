@@ -1,5 +1,5 @@
 ---
-title: Issue - Linux SSD memory
+title: Linux SSD memory issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
