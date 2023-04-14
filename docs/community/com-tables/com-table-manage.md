@@ -2,7 +2,6 @@
 title: Manage tables
 layout: default
 parent: Community
-has_children: true
 nav_order: 8
 ---
 
