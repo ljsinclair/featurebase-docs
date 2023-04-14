@@ -1,11 +1,11 @@
 ---
-title: Performance tuning
+title: Issues with performance
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
 ---
 
-# Issue -- memory or process issues running FeatureBase Community
+# Issue -- performance issues with FeatureBase Community
 
 {% include /com-issues/com-issue-memory-process-summary.md %}
 
