@@ -3,7 +3,6 @@ title: Issue running SQL over HTTPS
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
-nav_order: 2
 ---
 
 # Issue - Running SQL over HTTPS fails

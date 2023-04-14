@@ -3,8 +3,6 @@ title: Mac startup issue
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
-has_children: false
-nav_order: 1
 ---
 
 # Issue: FeatureBase Community won't startup on Mac
