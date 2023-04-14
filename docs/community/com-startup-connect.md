@@ -35,7 +35,7 @@ The FeatureBase Community UI does not currently support Apple Safari. Install Mo
 
 ## Troubleshooting
 
-* [Issue: FeatureBase Community won't startup on Mac](/docs/community/com-troubleshooting/com-issue-mac)
+* [Issue: FeatureBase Community won't startup on Mac](/docs/community/com-troubleshooting/com-issue-mac-startup)
 
 ## Further information
 
