@@ -1,5 +1,5 @@
 ---
-title: Performance troubleshooting
+title: Performance tuning
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
@@ -11,8 +11,10 @@ grand_parent: Community
 
 ### Performance tuning on Linux
 
-* [Performance tuning on Linux](/docs/community/com-troubleshooting/old-tuning-linux)
+* [Performance tuning Linux](/docs/community/com-troubleshooting/com-issue-linux-tuning)
+* [Reclaiming unused SSD space](/docs/community/com-troubleshooting/com-issue-linux-ssd)
 
 ### Performance tuning on MacOS
 
-* [Performance tuning on MacOS](/docs/community/com-troubleshooting/old-tuning-macos)
+* [Performance tuning MacOS](/docs/community/com-troubleshooting/com-issue-macos-tuning)
+* [Reclaiming unused SSD space](/docs/community/com-troubleshooting/com-issue-macos-ssd)
