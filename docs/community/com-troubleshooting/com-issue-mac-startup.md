@@ -1,7 +1,7 @@
 ---
 title: Issue with Mac startup
 layout: default
-parent: Troubleshooting
+parent: Community troubleshooting
 grand_parent: Community
 has_children: false
 nav_order: 1

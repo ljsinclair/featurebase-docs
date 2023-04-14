@@ -1,7 +1,7 @@
 ---
 title: Issue running SQL
 layout: default
-parent: Troubleshooting
+parent: Community troubleshooting
 grand_parent: Community
 nav_order: 2
 ---
