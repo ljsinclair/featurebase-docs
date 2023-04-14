@@ -1,2 +1,2 @@
 {: .note }
-This statement only pertains to FeatureBase Cloud.
+This statement is not supported on FeatureBase Community.
