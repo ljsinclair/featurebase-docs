@@ -9,7 +9,9 @@ nav_order: 8
 
 FeatureBase Community provides a UI which displays tables and their structure.
 
-Tables can be managed using SQL queries run via a number of methods.
+Tables can be created:
+* using SQL queries run via a number of methods
+* via data import operations
 
 ## Before you begin
 
@@ -21,3 +23,9 @@ Tables can be managed using SQL queries run via a number of methods.
 Run Table statements and other SQL queries against your database using the following methods:
 
 {% include /community/com-sql-query-run.md %}
+
+## Data import
+
+Tables can be created using CLI ingest consumers which are configured with table structure and data to insert.
+
+* [Learn about FeatureBase ingest](/docs/community/com-ingest/com-ingest-manage)

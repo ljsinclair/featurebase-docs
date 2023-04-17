@@ -36,4 +36,4 @@ These flags can be used within the CLI.
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [SQL CLI HTTPS examples](/docs/community/com-api/old-sql-endpoint)
+* [SQL HTTPS endpoint examples](/docs/community/com-api/old-sql-endpoint)
