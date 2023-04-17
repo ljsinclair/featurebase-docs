@@ -8,7 +8,7 @@ nav_order: 9
 
 # How do I Query my FeatureBase Community database?
 
-FeatureBase community provides several methods to run SQL queries.
+FeatureBase community provides several methods to run queries using FeatureBase PQL, or our implementation of SQL.
 
 ## Before you begin
 
