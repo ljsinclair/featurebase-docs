@@ -9,7 +9,7 @@ grand_parent: Community
 
 ## Cause
 
-FeatureBase CLI is not enabled.
+FeatureBase versions earlier than 3.30 do not enable the CLI by default
 
 ## Solution
 

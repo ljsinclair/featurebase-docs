@@ -11,8 +11,7 @@ grand_parent: Community
 
 ### Troubleshoot "Too many open files" error
 
-* [Learn how to troubleshoot Linux "too many open files" error]
-(https://www.baeldung.com/linux/error-too-many-open-files){:target="_blank"}
+* [Learn how to troubleshoot Linux "too many open files" error](https://www.baeldung.com/linux/error-too-many-open-files){:target="_blank"}
 
 ### Increase the open file limit
 
