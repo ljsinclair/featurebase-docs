@@ -5,7 +5,7 @@ parent: Community
 nav_order: 8
 ---
 
-## How do I create and manage tables in FeatureBase Community?
+# How do I create and manage tables in FeatureBase Community?
 
 FeatureBase Community provides a UI which displays tables and their structure.
 
