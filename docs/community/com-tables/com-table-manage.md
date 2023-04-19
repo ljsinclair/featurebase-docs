@@ -27,12 +27,6 @@ You can create and manage tables by running SQL queries against the database.
 * [Learn how to run queries on the CLI](/docs/com-config/com-config-cli-enable)
 * [Learn how to create and manage tables using the API](/docs/community/com-api/com-api-home)
 
-<!--commented out because dependency with com-dbs-tables branch/PR not yet committed to main
-using the following methods:
-
-{% include /community/com-sql-query-run.md %}
--->
-
 ## Create tables when importing data
 
 * [Create tables when importing data](/docs/community/com-ingest/com-ingest-manage)
