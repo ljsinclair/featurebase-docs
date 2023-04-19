@@ -20,6 +20,11 @@ Data is broken into shards of 2^20 or 1,048,576 records.
 
 * [Learn how to manage FeatureBase community tables](/docs/community/com-tables/com-table-manage)
 -->
+
+## Import data to the database
+
+* [Learn how to import data to FeatureBase Community](/docs/community/com-ingest/com-ingest-manage)
+
 ## Running queries
 
 * [Learn how to run queries against your data](/docs/community/com-query/com-query-home)
