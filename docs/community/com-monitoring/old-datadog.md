@@ -8,7 +8,7 @@ nav_order: 3
 
 # Monitoring with DataDog
 
-This is a tutorial / how-to on setting up FeatureBase and Datadog to monitor FeatureBase and the system it's running on. This will expose FeatureBase application metrics and basic system level metrics to Datadog. Go to [FeatureBase Monitoring](/docs/community/com-monitoring/old-monitoring){:target="\_blank"} to see the application mertics that will be exposed. Go to [Datadog System Checks](https://docs.datadoghq.com/integrations/system/){:target="\_blank"} for the list of system level metrics that will be exposed.
+This is a tutorial / how-to on setting up FeatureBase and Datadog to monitor FeatureBase and the system it's running on. This will expose FeatureBase application metrics and basic system level metrics to Datadog. Go to [FeatureBase Monitoring](/docs/community/com-monitoring/com-monitoring-home){:target="\_blank"} to see the application mertics that will be exposed. Go to [Datadog System Checks](https://docs.datadoghq.com/integrations/system/){:target="\_blank"} for the list of system level metrics that will be exposed.
 
 If you’re running on EC2 and would like CloudWatch metrics, follow the [Getting Started with Datadog](https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#installation){:target="\_blank"} tutorial.
 
@@ -28,7 +28,7 @@ First, configure FeatureBase to write metrics that Datadog can scrape.
 
 Note that FeatureBase metrics will be re-written every 15 seconds based on the configuration above. For more on configuring FeatureBase, visit [Featurebase Configuration](/docs/community/com-config/com-config-flags){:target="\_blank"}.
 
-To verify FeatureBase is writing prometheus metrics, run `curl localhost:10101/metrics` on the FeatureBase host and confirm there are FeatureBase metrics being written. Again, for more on FeatureBase metrics, visit [FeatureBase Monitoring](/docs/community/com-monitoring/old-monitoring){:target="\_blank"}.
+To verify FeatureBase is writing prometheus metrics, run `curl localhost:10101/metrics` on the FeatureBase host and confirm there are FeatureBase metrics being written. Again, for more on FeatureBase metrics, visit [FeatureBase Monitoring](/docs/community/com-monitoring/com-monitoring-home){:target="\_blank"}.
 
 
 ## Installation of Datadog Agent
