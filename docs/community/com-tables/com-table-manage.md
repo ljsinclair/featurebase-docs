@@ -17,6 +17,8 @@ Tables can be created:
 
 {% include /com-install/com-install-before-begin.md %}
 * [SQL statements](/docs/sql-guide/statements/statements-home)
+* [SQL create table](/docs/sql-guide/statements/statement-table-create)
+* [SQL alter table](/docs/sql-guide/statements/statement-table-alter)
 
 ## Create tables by running SQL queries
 
