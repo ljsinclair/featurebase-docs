@@ -22,7 +22,7 @@ Tables can be created:
 
 You can create and manage tables by running SQL queries against the database.
 
-* [Learn about the built-in query editor and query builder](/docs/com-query/com-query-home)
+* [Learn about the built-in query editor and query builder](/docs/community/com-query/com-query-home)
 * [Learn how to use the FBSQL CLI tool](/docs/tools/fbsql/fbsql-home)
 * [Learn how to run queries on the CLI](/docs/com-config/com-config-cli-enable)
 * [Learn how to create and manage tables using the API](/docs/community/com-api/com-api-home)
