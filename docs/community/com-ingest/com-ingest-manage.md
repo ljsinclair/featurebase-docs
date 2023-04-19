@@ -28,6 +28,9 @@ Ingesters are used to:
 * transform the data to the FeatureBase bit-columnar format
 * write that data to target database tables.
 
+{: .note}
+Tables defined by ingest source files are created if they do not already exist.
+
 ## Perform data modeling
 
 {% include /concepts/summary-data-modeling.md %}
@@ -36,7 +39,7 @@ Ingesters are used to:
 
 ## CSV import method
 
-Refer to these reference files for information on how to set up and import data using a CSV file.
+Learn how to create source files containing table structure and data, then to import them on the CLI.
 
 * [CSV source format reference](/docs/community/com-ingest/com-ingest-source-csv)
 * [CSV flag reference](/docs/community/com-ingest/com-ingest-flags-csv)
@@ -44,13 +47,15 @@ Refer to these reference files for information on how to set up and import data 
 
 ## SQL import method
 
+Learn how to define the SQL source structure and data to be ingested.
+
 * [SQL format reference](/docs/community/com-ingest/com-ingest-source-sql)
 * [SQL ingester reference](/docs/community/com-ingest/com-ingest-flags-sql)
 * [SQL ingest examples](/docs/community/com-ingest/com-ingest-example-sql)
 
 ## Kafka import method
 
-There are three Kafka ingest methods:
+Ingest data from Kafka using three methods:
 
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
 * [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
