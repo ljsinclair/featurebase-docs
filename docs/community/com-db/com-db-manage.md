@@ -15,10 +15,11 @@ Data is broken into shards of 2^20 or 1,048,576 records.
 
 {% include /com-install/com-install-before-begin.md %}
 
+<!-- Page and folder moved to another branch
 ## Manage tables
 
 * [Learn how to manage FeatureBase community tables](/docs/community/com-tables/com-table-manage)
-
+-->
 ## Running queries
 
 * [Learn how to run queries against your data](/docs/community/com-query/com-query-home)
