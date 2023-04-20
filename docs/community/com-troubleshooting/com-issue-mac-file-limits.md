@@ -119,7 +119,7 @@ You may also need to adjust the following kernel parameter files:
 * `kern.maxfiles`
 * `kern.maxfilesperproc`
 
-* [Learn how to adjust Kernel Parameters](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/sysctl.3.html){:target="_blank"}
+[Learn how to adjust Kernel Parameters](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/sysctl.3.html){:target="_blank"}
 
 ## Further information
 
