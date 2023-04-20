@@ -1,12 +1,12 @@
 ## Issues
 
-* Limits on simultaneously open files for given process or user
-
-## Causes
-
 Unix systems may limit the number of simultaneously open files for a given process or user
 
-FeatureBase Community may exceed these limits because it splits the database into a potentially large number of files which are open simultaneously.
+## Cause
+
+FeatureBase Community may exceed open file limits because:
+* it splits the database into a potentially large number of files
+* which are open simultaneously.
 
 ## Solution
 

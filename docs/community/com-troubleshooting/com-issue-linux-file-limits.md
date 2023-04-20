@@ -34,11 +34,23 @@ The `ulimit` program only affects the limits of the shell it's run in and child 
 {: .note}
 You may require `sudo` to increase the file limit high enough to make a difference.
 
-* Launch a new shell with the `sudo -s` command.
-* Change the `ulimit` to an appropriate value.
-* Launch a new shell using the `sudo su` command to:
-  * run the shell as your regular user
-  * inherit the higher limits just set
+* Open a CLI then run this command to launch a new shell as `root`
+
+```
+sudo -s
+```
+
+* Run this command with an appropriate value to change the ulimit
+
+```
+ulimit -m <value>
+```
+
+## Step 2 - Launch a new shell to inherit the higher limits
+<!--note for @gthrone -- this doesn't look right to me but I may be wrong-->
+Launch a new shell using the `sudo su` command to:
+* run the shell as your regular user
+* inherit the higher limits just set
 
 ## Set a persistent open file limit value
 
@@ -49,11 +61,15 @@ FeatureBase recommends an open file limit of 256K or more.
 
 * Open a CLI then edit one or all the following files:
 
-| Edit | Change parameter |
+| Edit | Parameter to set |
 |---|---|
 | `/etc/security/limits.conf` | `nofile` |
-| `/etc/security/limits.d/*.conf` | `nofile` |
+| `/etc/security/limits.d/<username>.conf` | `nofile` |
 | `/etc/susctl.conf` | `fs.file-max` and/or `vm.max_map_count` |
 | `/etc/sysctl.d/*.conf` | `fs.file-max` |
 
 * Restart your session for the change to take effect.
+
+## Further information
+
+* [Learn about limits.conf](https://www.geeksforgeeks.org/limits-conf-file-to-limit-users-process-in-linux-with-examples/){:target="_blank"}
