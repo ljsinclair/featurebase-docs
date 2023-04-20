@@ -1,5 +1,5 @@
 ---
-title: Mac startup issue
+title: MacOS startup issue
 layout: default
 parent: Community troubleshooting
 grand_parent: Community

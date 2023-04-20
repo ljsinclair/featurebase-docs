@@ -1,5 +1,5 @@
 ---
-title: Issue running SQL over HTTPS
+title: SQL over HTTPS fails
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
