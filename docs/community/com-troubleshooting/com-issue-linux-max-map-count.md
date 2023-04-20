@@ -15,12 +15,9 @@ Default value of 65530 is insufficient.
 
 ## Before you begin
 
+* [Learn about max_map_count](https://access.redhat.com/solutions/99913){:target="_blank"}
 * Obtain SUDO privileges on the system
 
 ## Increase max_map_count
 
 * [Change max_map_count](https://thetechdarts.com/how-to-change-default-vm-max_map_count-on-linux/){:target="_blank"}
-
-## Further information
-
-* [Red Hat description max_map_count](https://access.redhat.com/solutions/99913){:target="_blank"}
