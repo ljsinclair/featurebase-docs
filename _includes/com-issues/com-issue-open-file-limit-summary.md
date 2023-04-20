@@ -1,5 +1,3 @@
-## Issues
-
 Unix systems may limit the number of simultaneously open files for a given process or user
 
 ## Cause

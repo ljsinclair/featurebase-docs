@@ -18,5 +18,3 @@ MacOS SSDs using APFS file systems automatically perform `trim` operations on re
 ```sh
 trimforce enable
 ```
-
-Use #trimforce enable to ensure that the TRIM is enabled.
