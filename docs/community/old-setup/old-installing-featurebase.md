@@ -302,7 +302,7 @@ for vds in client.get_vds_list():
 
 ## Software Configuration
 
-Refer [Host System](/docs/community/old-setup/old-hostsystem) for commonly encountered issues and operations checklist.
+* [Troubleshoot system configuration](/docs/community/com-troubleshooting/com-troubleshooting-home)
 
 ## Sample Files
 
