@@ -16,8 +16,8 @@ grand_parent: Community
 * Obtain SUDO privileges to the system
 
 {: .important}
->Making changes to the open file limit are affected by the following issues on MacOS:
-* `ulimit` does not behave predictably on MacOS because limits change between releases.
+>Open file limit changes are affected by the following on MacOS:
+* `ulimit` does not behave predictably because limits change between releases.
 * System Integrity Protection (SIP) system resists attempts to change system settings.
 
 ## Temporarily increase open file limit
@@ -80,23 +80,24 @@ New `LaunchDaemon` files can be setup to increase file limits.
 
 ## Step 3 - change ownership and tell system to run the file
 
-* Run the following command to change ownershit of the file:
+* Run the following command to change ownership of the file:
 
 ```
-chown root:wheel limit.maxfiles.plist
+chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
 ```
 
-* Setup `launchd` to launch the file at startup with one of the following commands:
+* Run the following `launchd` command to launch the file at startup:
 
-* `chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist` OR
-* `launchctl load -w /Library/LaunchDaemons/limit.maxfiles.plist`
+```
+launchctl load -w /Library/LaunchDaemons/limit.maxfiles.plist
+```
 
 ## Step 4 - Verify file limit has been changed
 
 * Run the following command:
 
 ```
-ulimit -a
+launchctl limit maxfiles
 ```
 
 ## Step 5 - Turn SIP back on
@@ -110,8 +111,14 @@ csrutil enable
 
 * Restart MacOS
 
-## Further information
+## Adjust kernel parameter files
 
-You may also need to use `sysctl` to adjust `kern.maxfiles` or `kern.maxfilesperproc` kernel parameter files.
+You may also need to adjust the following kernel parameter files:
+* `kern.maxfiles`
+* `kern.maxfilesperproc`
 
 * [Learn how to adjust Kernel Parameters](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/sysctl.3.html){:target="_blank"}
+
+## Further information
+
+* [Adjust file limits MacOS](https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c){:target="_blank"}

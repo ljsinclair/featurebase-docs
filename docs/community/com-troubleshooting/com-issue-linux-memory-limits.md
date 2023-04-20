@@ -9,14 +9,28 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-memory-process-summary.md %}
 
-## Troubleshooting
+## Before you begin
 
-One or more of the following solutions should be pursued:
+* [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
+* Obtain SUDO privileges on the system
 
-* [Distribute the database across systems with a FeatureBase Cluster](/docs/community/com-config/old-resize-cluster)
-* [Learn how change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
-* [Change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
-* [Reclaim space on SSDs](/docs/community/com-troubleshooting/com-issue-linux-ssd)
+{% include /com-issues/open-file-limit-recommend.md %}
+
+## Temporarily increase the memory limit
+
+{% include /com-issues/com-issue-ulimit-summary.md%}
+
+* Open a CLI then run the following command with an appropriate value:
+
+```
+ulimit -n <value>
+```
+
+* Verify the change:
+
+```
+ulimit -n
+```
 
 ## Temporarily increase memory limits
 
@@ -26,3 +40,9 @@ Open a new CLI then run one of the following commands as appropriate to your sys
 * `sysctl -w vm.max_map_count=N`
 
 Where N is the increased memory limit.
+
+
+## Further information
+
+* [Learn how change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
+* [Reclaim space on SSDs](/docs/community/com-troubleshooting/com-issue-linux-ssd)

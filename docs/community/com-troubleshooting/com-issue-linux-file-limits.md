@@ -16,48 +16,22 @@ grand_parent: Community
 * [Learn how to use `prlimit` to change the open file limit](https://www.baeldung.com/linux/prlimit){:target="_blank"}
 * Obtain SUDO privileges on the system
 
-## Verify the open file limit
-
-{: .note}
-`ulimit` affects only the current shell and its child processes.
-
-The `ulimit` program only affects the limits of the shell it's run in and child processes of that shell, so you can't use `sudo ulimit` to change the limit of your current shell
-
-* Open a CLI then enter the following command:
-
-```
-  ulimit -n
-```
+{% include /com-issues/open-file-limit-recommend.md %}
 
 ## Temporarily increase the open file limit
 
 {: .note}
-You may require `sudo` to increase the file limit high enough to make a difference.
+You may need to launch a new shell as `root` to raise the `ulimit` to an appropriate value.
 
-* Open a CLI then run this command to launch a new shell as `root`
-
-```
-sudo -s
-```
-
-* Run this command with an appropriate value to change the ulimit
+* Open a CLI then run this command with an appropriate value:
 
 ```
 ulimit -m <value>
 ```
 
-## Step 2 - Launch a new shell to inherit the higher limits
-<!--note for @gthrone -- this doesn't look right to me but I may be wrong-->
-Launch a new shell using the `sudo su` command to:
-* run the shell as your regular user
-* inherit the higher limits just set
-
 ## Set a persistent open file limit value
 
 There are four ways to change the open file limit so it persists after reboot.
-
-{: .note}
-FeatureBase recommends an open file limit of 256K or more.
 
 * Open a CLI then edit one or all the following files:
 

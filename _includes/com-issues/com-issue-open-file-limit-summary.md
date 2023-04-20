@@ -13,6 +13,3 @@ FeatureBase Community may exceed open file limits because:
 You may decide to:
 * Temporarily change system limits during development and testing
 * Make changes that persist across restarts
-
-{: .note}
-FeatureBase recommends an open file limit of 256k
