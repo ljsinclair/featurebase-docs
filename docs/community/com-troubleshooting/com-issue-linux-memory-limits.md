@@ -32,17 +32,6 @@ ulimit -n <value>
 ulimit -n
 ```
 
-## Temporarily increase memory limits
-
-Open a new CLI then run one of the following commands as appropriate to your system:
-
-* `echo N > /proc/sys/vm/max_map_count`
-* `sysctl -w vm.max_map_count=N`
-
-Where N is the increased memory limit.
-
-
 ## Further information
 
 * [Learn how change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
-* [Reclaim space on SSDs](/docs/community/com-troubleshooting/com-issue-linux-ssd)
