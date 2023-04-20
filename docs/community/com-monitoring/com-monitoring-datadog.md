@@ -16,7 +16,6 @@ You can configure FeatureBase Community to output Prometheus metrics which can b
 ## Before you begin
 
 * [Learn about FeatureBase monitoring](/docs/community/com-monitoring/com-monitoring-home)
-* [Install Python3 if not already installed](https://www.python.org/downloads/){:target="_blank"}
 
 ## Step 1 - Enable FeatureBase Prometheus metrics
 
