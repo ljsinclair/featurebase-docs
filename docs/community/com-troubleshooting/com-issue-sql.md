@@ -14,8 +14,3 @@ FeatureBase versions earlier than 3.30 do not enable the CLI by default
 ## Solution
 
 * [Enable the SQL CLI for FeatureBase Community](/docs/community/com-config/com-config-sql-cli-enable)
-
-## Further information
-
-* [SQL guide](/docs/sql-guide/sql-guide-home)
-* [FBSQL CLI tool](/docs/tools/fbsql/fbsql-home)
