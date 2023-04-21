@@ -12,7 +12,6 @@ grand_parent: Community
 ## Before you begin
 
 {% include page-toc.md %}
-* [Query max_map_count for Linux]()
 
 ## Step 1 - Query memory limits
 
