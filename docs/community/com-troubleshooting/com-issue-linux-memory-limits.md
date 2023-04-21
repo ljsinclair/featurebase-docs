@@ -9,10 +9,6 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-memory-process-summary.md %}
 
-## Before you begin
-
-* [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
-
 ## Solutions
 
 ### Alter the FeatureBase max-map-count
@@ -50,4 +46,5 @@ ulimit -n
 
 ## Further information
 
+* [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
 * [Learn about Linux max_map_count](https://access.redhat.com/solutions/99913){:target="_blank"}
