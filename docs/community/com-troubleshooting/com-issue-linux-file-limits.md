@@ -26,7 +26,7 @@ You may need to launch a new shell as `root` to raise the `ulimit` to an appropr
 * Open a CLI then run this command with an appropriate value:
 
 ```
-ulimit -m <value>
+ulimit -n <value>
 ```
 
 ### Set a persistent open file limit value
