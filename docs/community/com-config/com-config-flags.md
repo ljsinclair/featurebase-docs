@@ -38,6 +38,8 @@ Environment variables require passing `--future.rename` flag to use.
 | [name](#name)| FEATUREBASE_NAME   | str   | Name of the node in the cluster. |
 | [verbose](#verbose)  | FEATUREBASE_VERBOSE| bool  | Enable verbose logging |
 | [anti-entropy.interval](#anti-entropy-interval) | FEATUREBASE_ANTI_ENTROPY_INTERVAL| str   | Interval at which to run anti-entropy routine. |
+
+
 | [cluster.name](#cluster-name) | FEATUREBASE_CLUSTER_NAME| str   | Human-readable name for the cluster. |
 | [cluster.long-query-time](#cluster-long-query-time)| FEATUREBASE_CLUSTER_LONG_QUERY_TIME  | str   | Duration that will trigger log and stat messages for slow queries. |
 | [cluster.replicas](#cluster-replicas)  | FEATUREBASE_CLUSTER_REPLICAS| int   | Number of hosts each piece of data should be stored on. |

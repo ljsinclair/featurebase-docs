@@ -30,7 +30,7 @@ Wait for ingest processes to finish before stopping FeatureBase services.
 |---|---|
 | Stop all running processes | [Manage FeatureBase services](/docs/community/com-config/com-config-service-fb-manage) |
 | Backup the source | [Backup the FeatureBase Cluster](/docs/community/com-backup/com-config-backup) |
-| Create target | [Create a cluster](/docs/community/com-config/old-resize-cluster) |
+| Create target | [Create a cluster](/docs/community/com-cluster/com-cluster-setup) |
 | Restore backups to target | [Restore a FeatureBase cluster](/docs/community/com-backup/com-config-restore) |
 | Test target | Run test queries and verify results are as expected |
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |

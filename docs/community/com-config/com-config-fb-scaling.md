@@ -22,7 +22,7 @@ FeatureBase will deny any request to access index data while it is in the `resiz
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Learn about FeatureBase Clusters](/docs/community/com-config/old-resize-cluster)
+* [Learn about FeatureBase Clusters](/docs/community/com-cluster/com-cluster-setup)
 
 ## How do I scale FeatureBase up?
 

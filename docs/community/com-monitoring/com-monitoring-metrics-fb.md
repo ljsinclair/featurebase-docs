@@ -42,7 +42,7 @@ FeatureBase metrics are labelled according to a key-value format which are used 
 | `featurebase_antientropy_total` | Count of times the anti-entropy process runs | FEATUREBASE_ANTI_ENTROPY_INTERVAL
 | `featurebase_antientropy_duration_seconds`| Histogram of duration of the anti-entropy process |
 
-* [Learn how to setup a FeatureBase Community cluster](/docs/community/com-config/old-resize-cluster)
+* [Learn how to setup a FeatureBase Community cluster](/docs/community/com-cluster/com-cluster-setup)
 
 ## Field metrics
 

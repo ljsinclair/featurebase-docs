@@ -37,7 +37,7 @@ FeatureBase features can be enabled or disabled from the `*/featurebase/opt` dir
 
 ## How do I set up a FeatureBase cluster?
 
-* [Set up a FeatureBase cluster](/docs/community/com-config/old-resize-cluster)
+* [Set up a FeatureBase cluster](/docs/community/com-cluster/com-cluster-setup)
 
 ## How do I set up authentication?
 
