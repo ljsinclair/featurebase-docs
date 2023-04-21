@@ -13,9 +13,10 @@ grand_parent: Community
 
 {% include /com-config/com-config-max-map-count-summary.md %}
 
+## Solution
 
+* [Alter FeatureBase max-map-count parameter](/docs/community/com-config/com-config-max-map-count)
 
 ## Further information
 
 * [Change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
-* [Reclaim space on SSDs](/docs/community/com-troubleshooting/com-issue-linux-ssd)
