@@ -13,16 +13,7 @@ grand_parent: Community
 
 ### Alter the FeatureBase max-map-count
 
-
-#### Step 1 - query Linux max_map_count
-
-Query the Linux `max_map_count` using one of the following commands:
-* `cat /proc/sys/vm/max_map_count` OR
-* `/sbin/sysctl vm.max_map_count`
-
-#### Step 2 - Alter the FeatureBase max-map-count parameter
-
-{% include /com-config/com-config-max-map-count-alter.md %}
+* [Alter max-map-count parameter](/docs/community/com-config/com-config-max-map-count)
 
 ### Alter memory limits for current session
 
