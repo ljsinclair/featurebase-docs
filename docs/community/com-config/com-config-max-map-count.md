@@ -5,13 +5,25 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-## max-map-count reference
+## `max-map-count` reference
+{: .no_toc }
 
-{% include /com-config/com-config-max-map-count-summary.md %}
+Linux systems limit memory maps for processes and users.
+
+The `max-map-count` parameter in the `/featurebase.conf` TOML configuration file allows you to set a maximum limit on active memory maps.
+
+This parameter is disabled by default.
+
+`max-map-count` should be set to a minimum 10% lower than the system default.
+
+{: .note}
+The actual number of active memory maps can be slightly higher than defined.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
-{% include page-toc.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 ## Step 1 - Query memory limits
 

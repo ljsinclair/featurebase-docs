@@ -5,13 +5,20 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-# max-file-count reference
+# `max-file-count` reference
+{: .no_toc }
 
-{% include /com-config/com-config-max-file-count-summary.md %}
+Unix systems limit the number of simultaneously open files for a given process or user
+
+The `max-file-count` parameter in `featurebase.conf` allows you to set a soft limit on files FeatureBase opens during operations.
+
+When past this limit, FeatureBase will only keep files open for as long as required to write updates.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
-
+{% include /com-install/com-install-before-begin.md %}
 
 ## Alter max-file-count parameter
 
