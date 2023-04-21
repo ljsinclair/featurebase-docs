@@ -9,14 +9,13 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-memory-process-summary.md %}
 
-## Cause
-
-{% include /com-config/com-config-max-map-count-summary.md %}
-
 ## Solution
 
-* [Alter FeatureBase max-map-count parameter](/docs/community/com-config/com-config-max-map-count)
+### Alter the FeatureBase max-map-count
 
-## Further information
+* [Alter max-map-count parameter](/docs/community/com-config/com-config-max-map-count)
 
+### Alter memory limits on MacOS
+
+* [Learn how to free-up memory on MacOS](https://www.macworld.com/article/673199/how-to-free-up-memory-ram-on-a-mac.html)
 * [Change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
