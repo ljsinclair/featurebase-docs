@@ -9,7 +9,7 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-memory-process-issue.md %}
 
-## Cause
+## Causes
 
 {% include /com-config/com-config-max-map-count-summary.md %}
 
