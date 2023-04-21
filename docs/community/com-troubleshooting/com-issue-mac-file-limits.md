@@ -9,11 +9,6 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
-## Before you begin
-
-
-* Obtain SUDO privileges to the system
-
 {: .important}
 >Open file limit changes are affected by the following on MacOS:
 * `ulimit` does not behave predictably because limits change between releases.
