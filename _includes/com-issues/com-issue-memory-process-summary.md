@@ -1,3 +1,3 @@
-FeatureBase Community and database may exceed memory limits whilst:
+FeatureBase Community may exceed memory limits whilst:
 * importing and ingesting data
 * running queries

@@ -7,7 +7,7 @@ grand_parent: Community
 
 # Issue - vm.max_map_count is too low
 
-{% include /com-issues/com-issue-memory-process-issue.md %}
+{% include /com-issues/com-issue-memory-process-summary.md %}
 
 ## Causes
 
