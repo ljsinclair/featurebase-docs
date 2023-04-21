@@ -16,7 +16,7 @@ FeatureBase recommends a minimum of 256K for open file limits on Linux systems.
 
 ### Alter the FeatureBase max-file-count limit
 
-* [Alter max-file-count](/docs/community/com-config/com-config-max-file-count-alter)
+* [Alter max-file-count](/docs/community/com-config/com-config-max-file-count)
 
 ### Alter `ulimit` for current session
 

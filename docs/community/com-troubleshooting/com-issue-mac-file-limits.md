@@ -18,7 +18,7 @@ grand_parent: Community
 
 ### Alter FeatureBase max-file-limit
 
-* [Alter max-file-limit](/docs/community/com-config/com-config-max-file-limit)
+* [Alter max-file-limit](/docs/community/com-config/com-config-max-file-count)
 
 ### Increase open file limit for current session
 
