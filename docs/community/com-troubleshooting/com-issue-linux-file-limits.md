@@ -9,12 +9,6 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
-## Possible causes
-
-* FeatureBase max-file-count set too low or not enabled
-* Session `ulimit` set too low
-* Persistent max-file limits set too low
-
 ## Solutions
 
 ### Alter the FeatureBase max-file-count limit

@@ -28,7 +28,7 @@ grand_parent: Community
 
 * [Alter max-file-limit](/docs/community/com-config/com-config-max-file-limit)
 
-### Temporarily increase open file limit
+### Increase open file limit for current session
 
 {: .important}
 These changes do not persist across reboots
