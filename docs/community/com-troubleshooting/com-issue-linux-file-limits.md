@@ -9,7 +9,11 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
-## Cause
+## Possible causes
+
+* FeatureBase max-file-count set too low or not enabled
+* Session `ulimit` set too low
+* Persistent max-file limits set too low
 
 {% include /com-config/com-config-max-file-count-summary.md %}
 
@@ -19,7 +23,7 @@ grand_parent: Community
 
 * [Alter max-file-count](/docs/community/com-config/com-config-max-file-count-alter)
 
-### Temporarily increase the open file limit
+### Alter `ulimit` for current session
 
 {: .note}
 You may need to launch a new shell as `root` to raise the `ulimit` to an appropriate value.
