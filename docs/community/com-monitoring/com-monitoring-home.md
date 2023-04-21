@@ -3,7 +3,7 @@ title: Community monitoring
 layout: default
 parent: Community
 has_children: true
-nav_order: 11
+nav_order: 13
 has_toc: false
 ---
 
@@ -45,7 +45,7 @@ Any system that supports this standard can be setup to store and visualise trace
 ## Enable metrics
 
 * [Enable runtime metrics for external monitoring](/docs/community/com-monitoring/com-monitoring-metrics-runtime-enable)
-* [Setup Datadog monitoring](/docs/community/com-monitoring/old-datadog)
+* [Setup Datadog monitoring](/docs/community/com-monitoring/com-monitoring-datadog)
 
 ## Setup error logging
 

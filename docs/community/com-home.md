@@ -30,7 +30,7 @@ Organizations can set up remote monitoring with DataDog or Prometheus metrics
 
 FeatureBase community supports:
 
-* [Datadog monitoring](/docs/community/com-monitoring/old-datadog)
+* [Datadog monitoring](/docs/community/com-monitoring/com-monitoring-datadog)
 * Prometheus
 
 ## FeatureBase nodes

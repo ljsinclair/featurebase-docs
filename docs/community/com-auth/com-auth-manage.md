@@ -3,7 +3,7 @@ title: Community authentication
 layout: default
 parent: Community
 has_children: true
-nav_order: 9
+nav_order: 10
 has_toc: false
 ---
 
