@@ -9,9 +9,6 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
-{: .important}
-* System Integrity Protection (SIP) system resists attempts to change system settings.
-
 ## Solution - Persistent change to open file limit
 
 Setup your system to run the `launchctl limit...` command on startup.
