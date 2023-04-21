@@ -18,4 +18,4 @@ grand_parent: Community
 ### Alter memory limits on MacOS
 
 * [Learn how to free-up memory on MacOS](https://www.macworld.com/article/673199/how-to-free-up-memory-ram-on-a-mac.html)
-* [Change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
+* [Set maximum limits on processes](https://wilsonmar.github.io/maximum-limits/)
