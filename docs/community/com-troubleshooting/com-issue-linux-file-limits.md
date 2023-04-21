@@ -19,7 +19,7 @@ grand_parent: Community
 
 * [Alter max-file-count](/docs/community/com-config/com-config-max-file-count-alter)
 
-## Temporarily increase the open file limit
+### Temporarily increase the open file limit
 
 {: .note}
 You may need to launch a new shell as `root` to raise the `ulimit` to an appropriate value.
@@ -30,7 +30,7 @@ You may need to launch a new shell as `root` to raise the `ulimit` to an appropr
 ulimit -m <value>
 ```
 
-## Set a persistent open file limit value
+### Set a persistent open file limit value
 
 There are four ways to change the open file limit so it persists after reboot.
 
