@@ -14,8 +14,6 @@ grand_parent: Community
 * `ulimit` does not behave predictably because limits change between releases.
 * System Integrity Protection (SIP) system resists attempts to change system settings.
 
-{% include /com-issues/open-file-limit-recommend.md %}
-
 ## Solutions
 
 ### Alter FeatureBase max-file-limit

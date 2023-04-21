@@ -9,6 +9,9 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
+{: .note}
+FeatureBase recommends a minimum of 256K for open file limits on Linux systems.
+
 ## Solutions
 
 ### Alter the FeatureBase max-file-count limit
