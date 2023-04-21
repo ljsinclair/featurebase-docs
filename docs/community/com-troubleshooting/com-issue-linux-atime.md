@@ -32,3 +32,5 @@ grand_parent: Community
       echo "    mount -o remount,noatime $PARTITION $MOUNT_POINT"
   fi
 ```
+
+* Run the script.

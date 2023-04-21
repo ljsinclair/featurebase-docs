@@ -29,3 +29,5 @@ grand_parent: Community
       echo "    mount -vuwo noatime $MOUNT_POINT"
   fi
 ```
+
+* Run the script.
