@@ -31,7 +31,13 @@ ulimit -m <value>
 ulimit -m
 ```
 
-## Set a persistent memory limit
+### Increase memory-mapped regions for the current session
+
+Refer to the following StackOverflow question to increase max_map_count on different Linux systems:
+
+* [Stackoverflow max_map_count](https://stackoverflow.com/questions/42889241/how-to-increase-vm-max-map-count#50371108){:target="_blank"}
+
+## Set maximum threads per process
 
 * [Learn how change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
 
