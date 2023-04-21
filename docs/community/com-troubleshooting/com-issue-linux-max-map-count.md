@@ -5,38 +5,32 @@ parent: Community troubleshooting
 grand_parent: Community
 ---
 
-# Issue - max virtual memory areas vm.max_map_count is too low
+# Issue - vm.max_map_count is too low
 
-Error occurs for virtual memory used by various systems.
+{% include /com-issues/com-issue-memory-process-issue.md %}
 
 ## Cause
 
-The `max-map-count` parameter in the `/featurebase.conf` TOML configuration file allows you to set a maximum limit on active memory maps.
-
-This parameter is disabled by default.
-
-This should be set to 10% lower than the Linux `vm.max_map_count` value which defaults to 65530.
-
-{: .note}
-The actual number of active memory maps can be slightly higher than defined.
+{% include /com-config/com-config-max-map-count-summary.md %}
 
 ## Before you begin
 
-* [Learn about max_map_count](https://access.redhat.com/solutions/99913){:target="_blank"}
+* [Learn about Linux max_map_count](https://access.redhat.com/solutions/99913){:target="_blank"}
 * Obtain SUDO privileges on the system
-*
 
-## Alter the max-map-count parameter
+## Solution
 
-* Open a CLI then CD to `*/featurebase/opt`
-* Query the Linux `max_map_count` using one of the following commands:
-  * `cat /proc/sys/vm/max_map_count` OR
-  * `/sbin/sysctl vm.max_map_count`
-* Edit `featurebase.conf`.
-* Alter the `max-map-count` parameter to a minimum 10% less than `vm.max_map_count`
-* Save `featurebase.conf`
-* Restart FeatureBase.
+### Step 1 - query Linux max_map_count
+
+Query the Linux `max_map_count` using one of the following commands:
+* `cat /proc/sys/vm/max_map_count` OR
+* `/sbin/sysctl vm.max_map_count`
+
+## Step 2 - Alter the FeatureBase max-map-count parameter
+
+{% include /com-config/com-config-max-map-count-alter.md %}
 
 ## Further information
 
 * [Change max_map_count](https://thetechdarts.com/how-to-change-default-vm-max_map_count-on-linux/){:target="_blank"}
+* [Change memory limits with ulimit](/docs/community/com-troubleshooting/com-issue-linux-memory-limits)

@@ -9,10 +9,13 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-memory-process-summary.md %}
 
-## Troubleshooting
+## Cause
 
-One or more of the following solutions should be pursued:
+{% include /com-config/com-config-max-map-count-summary.md %}
 
-* [Distribute the database across systems with a FeatureBase Cluster](/docs/community/com-config/old-resize-cluster)
+
+
+## Further information
+
 * [Change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
 * [Reclaim space on SSDs](/docs/community/com-troubleshooting/com-issue-linux-ssd)

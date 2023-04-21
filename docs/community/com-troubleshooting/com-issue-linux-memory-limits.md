@@ -11,10 +11,10 @@ grand_parent: Community
 
 ## Before you begin
 
+* [Enable FeatureBase max-map-count](/docs/community/com-troubleshooting/com-issue-linux-max-map-count)
 * [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
-* Obtain SUDO privileges on the system
 
-## Temporarily increase the memory limit
+## Solution
 
 {% include /com-issues/com-issue-ulimit-summary.md%}
 

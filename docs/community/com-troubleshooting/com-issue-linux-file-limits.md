@@ -9,14 +9,15 @@ grand_parent: Community
 
 {% include /com-issues/com-issue-open-file-limit-summary.md %}
 
-## Before you begin
+## Cause
 
-* [Learn how to troubleshoot Linux "too many open files" error](https://www.baeldung.com/linux/error-too-many-open-files){:target="_blank"}
-* [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
-* [Learn how to use `prlimit` to change the open file limit](https://www.baeldung.com/linux/prlimit){:target="_blank"}
-* Obtain SUDO privileges on the system
+{% include /com-config/com-config-max-file-count-summary.md %}
 
-{% include /com-issues/open-file-limit-recommend.md %}
+## Solutions
+
+### Alter the FeatureBase max-file-count limit
+
+* [Alter max-file-count](/docs/community/com-config/com-config-max-file-count-alter)
 
 ## Temporarily increase the open file limit
 
@@ -47,3 +48,6 @@ There are four ways to change the open file limit so it persists after reboot.
 ## Further information
 
 * [Learn about limits.conf](https://www.geeksforgeeks.org/limits-conf-file-to-limit-users-process-in-linux-with-examples/){:target="_blank"}
+* [Learn how to troubleshoot Linux "too many open files" error](https://www.baeldung.com/linux/error-too-many-open-files){:target="_blank"}
+* [Learn how to use `ulimit` to change the open file limit](https://linuxconfig.org/limit-user-environment-with-ulimit-linux-command){:target="_blank"}
+* [Learn how to use `prlimit` to change the open file limit](https://www.baeldung.com/linux/prlimit){:target="_blank"}

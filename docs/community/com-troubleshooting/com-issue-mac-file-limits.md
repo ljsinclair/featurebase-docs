@@ -22,7 +22,13 @@ grand_parent: Community
 
 {% include /com-issues/open-file-limit-recommend.md %}
 
-## Temporarily increase open file limit
+## Solutions
+
+### Alter FeatureBase max-file-limit
+
+* [Alter max-file-limit](/docs/community/com-config/com-config-max-file-limit)
+
+### Temporarily increase open file limit
 
 {: .important}
 These changes do not persist across reboots
