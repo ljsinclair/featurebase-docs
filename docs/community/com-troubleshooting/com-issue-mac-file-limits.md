@@ -11,8 +11,7 @@ grand_parent: Community
 
 ## Before you begin
 
-* [Learn how to troubleshoot MacOS "too many open files" error](https://www.macobserver.com/tips/deep-dive/evade-macos-many-open-files-error-pushing-limits/){:target="_blank"}
-* [Learn how to change file limits on MacOS](https://wilsonmar.github.io/maximum-limits/){:target="_blank"}
+
 * Obtain SUDO privileges to the system
 
 {: .important}
@@ -39,11 +38,11 @@ These changes do not persist across reboots
 launchctl limit maxfiles 262144 262144
 ```
 
-## Persistent change to open file limit
+### Persistent change to open file limit
 
 Setup your system to run the `launchctl limit...` command on startup.
 
-### Step 1 - Disable SIP
+#### Step 1 - Disable SIP
 
 * Enter recovery mode by restarting MacOS while holding down CMD + R
 * Open a CLI then run the following command:
@@ -53,7 +52,7 @@ csrutil disable
 ```
 * Restart MacOS
 
-### Step 2 - Create new `LaunchDaemons` files
+#### Step 2 - Create new `LaunchDaemons` files
 
 New `LaunchDaemon` files can be setup to increase file limits.
 
@@ -86,7 +85,7 @@ New `LaunchDaemon` files can be setup to increase file limits.
 
 * Save the file.
 
-## Step 3 - change ownership and tell system to run the file
+### Step 3 - change ownership and tell system to run the file
 
 * Run the following command to change ownership of the file:
 
@@ -100,7 +99,7 @@ chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
 launchctl load -w /Library/LaunchDaemons/limit.maxfiles.plist
 ```
 
-## Step 4 - Verify file limit has been changed
+### Step 4 - Verify file limit has been changed
 
 * Run the following command:
 
@@ -108,7 +107,7 @@ launchctl load -w /Library/LaunchDaemons/limit.maxfiles.plist
 launchctl limit maxfiles
 ```
 
-## Step 5 - Turn SIP back on
+#### Step 5 - Turn SIP back on
 
 * Open Recovery Mode by restarting MacOS whilst pressing CMD + R
 * Open a CLI and run the following command:
@@ -119,7 +118,7 @@ csrutil enable
 
 * Restart MacOS
 
-## Adjust kernel parameter files
+### Adjust kernel parameter files
 
 You may also need to adjust the following kernel parameter files:
 * `kern.maxfiles`
@@ -130,3 +129,5 @@ You may also need to adjust the following kernel parameter files:
 ## Further information
 
 * [Adjust file limits MacOS](https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c){:target="_blank"}
+* [Learn how to troubleshoot MacOS "too many open files" error](https://www.macobserver.com/tips/deep-dive/evade-macos-many-open-files-error-pushing-limits/){:target="_blank"}
+* [Learn how to change file limits on MacOS](https://wilsonmar.github.io/maximum-limits/){:target="_blank"}
