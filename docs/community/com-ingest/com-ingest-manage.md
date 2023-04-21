@@ -37,25 +37,33 @@ Tables defined by ingest source files are created if they do not already exist.
 
 * [Learn about data modeling](/docs/concepts/overview-data-modeling/)
 
-## CSV import method
+## Import data
 
-Learn how to create source files containing table structure and data, then to import them on the CLI.
+You can import data to FeatureBase running three types of ingester processes:
+
+* CSV ingest
+* SQL ingest
+* Kafka ingest
+
+## CSV ingest
+
+Learn how to build CSV source files and the ingest flags you use to import your data.
 
 * [CSV source format reference](/docs/community/com-ingest/com-ingest-source-csv)
-* [CSV flag reference](/docs/community/com-ingest/com-ingest-flags-csv)
-* [CSV file and ingest examples](/docs/community/com-ingest/com-ingest-example-csv)
+* [CSV ingest flag reference](/docs/community/com-ingest/com-ingest-flags-csv)
+* [Example CSV source and ingest flags](/docs/community/com-ingest/com-ingest-example-csv)
 
 ## SQL import method
 
-Learn how to define the SQL source structure and data to be ingested.
+Learn how to define your SQL source and ingest flags to import the data.
 
 * [SQL format reference](/docs/community/com-ingest/com-ingest-source-sql)
 * [SQL ingester reference](/docs/community/com-ingest/com-ingest-flags-sql)
-* [SQL ingest examples](/docs/community/com-ingest/com-ingest-example-sql)
+* [Example SQL source and ingest flags](/docs/community/com-ingest/com-ingest-example-sql)
 
-## Kafka import method
+## Kafka import methods
 
-Ingest data from Kafka using three methods:
+Learn how to define Avro and Static Schema source files and valid ingest flags to import your data.
 
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
 * [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
