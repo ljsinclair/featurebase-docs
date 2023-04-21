@@ -15,8 +15,6 @@ grand_parent: Community
 * Session `ulimit` set too low
 * Persistent max-file limits set too low
 
-{% include /com-config/com-config-max-file-count-summary.md %}
-
 ## Solutions
 
 ### Alter the FeatureBase max-file-count limit
