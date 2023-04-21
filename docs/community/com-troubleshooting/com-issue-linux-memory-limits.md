@@ -22,13 +22,13 @@ grand_parent: Community
 * Open a CLI then run the following command with an appropriate value:
 
 ```
-ulimit -n <value>
+ulimit -m <value>
 ```
 
 * Verify the change:
 
 ```
-ulimit -n
+ulimit -m
 ```
 
 ## Alter memory limits for persistent sessions

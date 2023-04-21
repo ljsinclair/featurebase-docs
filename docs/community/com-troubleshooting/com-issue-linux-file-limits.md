@@ -20,8 +20,7 @@ FeatureBase recommends a minimum of 256K for open file limits on Linux systems.
 
 ### Alter `ulimit` for current session
 
-{: .note}
-You may need to launch a new shell as `root` to raise the `ulimit` to an appropriate value.
+{% include /com-issues/com-issue-ulimit-summary.md%}
 
 * Open a CLI then run this command with an appropriate value:
 
