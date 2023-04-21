@@ -1,11 +1,11 @@
 ---
-title: MacOS performance issues
+title: MacOS atime issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
 ---
 
-# Issue - FeatureBase performance issue on MacOS
+# Issue - FeatureBase atime issue on MacOS
 
 {% include /com-issues/com-issue-atime-summary.md %}
 

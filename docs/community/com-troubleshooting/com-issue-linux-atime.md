@@ -1,11 +1,11 @@
 ---
-title: Linux performance issues
+title: Linux atime issues
 layout: default
 parent: Community troubleshooting
 grand_parent: Community
 ---
 
-# Issue - FeatureBase performance issue on Linux
+# Issue - FeatureBase atime issue on Linux
 
 {% include /com-issues/com-issue-atime-summary.md %}
 
