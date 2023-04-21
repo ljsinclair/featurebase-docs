@@ -20,9 +20,10 @@ WHY SETUP A CLUSTER?
 
 ## Setup a cluster
 
-
-
+* [Learn how to setup a FeatureBase cluster](/docs/community/com-cluster/com-cluster-setup)
 
 ## Resize cluster
 
-* []
+FeatureBase clusters cannot be resized. However, they can be scaled by backing-up then restoring to a newer, larger cluster.
+
+* [Learn about FeatureBase backup and restore](/docs/community/com-backup/com-backup-home)

@@ -2,7 +2,8 @@
 
 | Flag | Data type |Description | Default | Additional information |
 |---|---|---|---|---|---|
-| `cluster_name` | 
+| `clustername` | 
+| ``
 
 
 | [cluster.name](#cluster-name) | FEATUREBASE_CLUSTER_NAME| str   | Human-readable name for the cluster. |
