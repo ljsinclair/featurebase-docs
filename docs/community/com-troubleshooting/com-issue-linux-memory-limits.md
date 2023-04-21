@@ -31,7 +31,7 @@ ulimit -m <value>
 ulimit -m
 ```
 
-## Alter memory limits for persistent sessions
+## Set a persistent memory limit
 
 * [Learn how change max threads per process](https://www.baeldung.com/linux/max-threads-per-process){:target="_blank"}
 
