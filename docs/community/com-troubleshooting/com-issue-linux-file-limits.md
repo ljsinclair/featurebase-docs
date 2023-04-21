@@ -28,6 +28,12 @@ FeatureBase recommends a minimum of 256K for open file limits on Linux systems.
 ulimit -n <value>
 ```
 
+* Verify the change:
+
+```
+ulimit -n
+```
+
 ### Set a persistent open file limit value
 
 There are four ways to change the open file limit so it persists after reboot.
