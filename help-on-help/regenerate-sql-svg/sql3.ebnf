@@ -227,12 +227,16 @@ qualifier = identifier ;
 from_clause = "FROM", table_or_subquery, { ",", table_or_subquery } ;
 
 table_or_subquery = 
-      ( identifier | table_valued_function ), [ [ "AS" ], table_alias ], [ table_option ]
+      ( identifier | table_valued_function ), [ [ "AS" ], table_alias ], [ table_options ]
       | "(", select_stmt, ")", [ [ "AS" ], table_alias ] ;
 
 table_alias = identifier ;
 
-table_option = "SHARDS", "(", integer_literal, { ",", integer_literal }, ")";
+table_options =  "WITH", "(", table_option, { ",", table_option }, ")";
+
+table_option =  
+      "SHARDS", "(", integer_literal, { ",", integer_literal }, ")"
+      | "FLATTEN", "(", identifier, ")";
 
 where_clause = "WHERE", expr ;
 

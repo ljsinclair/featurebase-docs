@@ -60,7 +60,7 @@ SELECT
 | `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional |  |
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | No | The `expr` used in the TOP clause must be an integer literal. |
 | select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select_list-information) |
-| from_clause | A list of table_or_subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-information) |
+| from_clause | A list of table_or_subquery expressions that specify which relations to select data from. `WITH`is an optional parenthesized list of query hints that can only be used with a table. Query hints tell queries how to access data in a table. | Yes | [from_clause](#from_clause-information) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Yes | Can be any constant, function or combination joined by operators or a subquery. |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-information) |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
@@ -83,11 +83,45 @@ SELECT
 
 ![expr](/assets/images/sql-guide/from_clause.svg)
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
+![expr](/assets/images/sql-guide/table_option.svg)
 
 The table_or_subquery expression can be:
 * a table_name or table_valued_function
 * a parenthesized `SELECT` statement
+
 Both expressions can be aliased with a table_alias
+
+#### WITH
+
+`WITH`is an optional parenthesized list of query hints that can only be used with a table (not a subquery). Query hints tell queries how to access data in a table. Flatten is the only supported hint currently. 
+
+
+#### flatten() hint
+
+The `flatten()` hint is used when a query wants to get distinct or group on individual members of [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns
+
+The `flatten()` function can only be used:
+* in `SELECT...WITH...GROUP BY` queries
+* in `SELECT DISTINCT...` queries
+* with one input argument that matches the sole `DISTINCT`/`GROUP BY` column
+
+#### flatten() syntax
+
+```
+flatten(column)
+```
+
+#### flatten() arguments
+
+| Argument | Data type | Description | Required? | Further information |
+|---|---|---|---|---|
+| `column` | IDSET/STRINGSET | [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns | Yes | This should only be used with `GROUP BY` queries |
+
+#### flatten() returns
+
+| Data type | Value |
+|---|---|
+| `ID`/`STRING` | individual values of passed column |
 
 ### group_by_clause information
 
@@ -182,3 +216,45 @@ SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 having 
 SELECT fld, count(fld) FROM tbl GROUP BY fld
 SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 ```
+
+### GROUP BY with STRINGSET without flatten() that counts combinations of values example
+
+```sql
+create table segments  
+    (_id id, segment stringset);  
+
+insert into segments(_id, segment)  
+    values (1, ['RED', 'BLUE', 'GREEN']), 
+      (2, ['GREEN']),
+      (3, ['RED', 'BLUE', 'GREEN']);
+
+select count(*) as cnt, segment from segments
+group by segment;
+
+ cnt | segment
+-----+--------------------------
+   2 | ['RED', 'BLUE', 'GREEN']
+   1 | ['GREEN']
+```
+
+### GROUP BY with flatten() that counts individual values example
+```sql
+create table segments  
+    (_id id, segment stringset);  
+
+insert into segments(_id, segment)  
+    values (1, ['RED', 'BLUE', 'GREEN']), 
+      (2, ['GREEN']),
+      (3, ['RED', 'BLUE', 'GREEN']);
+
+select count(*) as cnt, segment from segments
+WITH (flatten(segment))
+group by segment;
+
+ cnt | segment
+-----+-----------
+   2 | ['RED']
+   2 | ['BLUE']
+   3 | ['GREEN']
+```
+
