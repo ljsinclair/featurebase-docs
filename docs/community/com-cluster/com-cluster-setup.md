@@ -15,18 +15,23 @@ Install and setup FeatureBase Clusters on the same subnet for best performance.
 ## Before you begin
 
 * [Install FeatureBase on multiple systems](/docs/community/com-home)
-
-## Editing the `featurebase.conf` configuration file
-
-* Open a CLI then CD to `*/featurebase/opt`
-* Edit the `featurebase.conf` file.
+* Cluster parameters can be set in `*/featurebase/opt/featurebase.conf`
 
 ## Cluster parameters
 
-<!-- Need a way to create a standard parameter file for clusters that can be used elsewhere BUT ALSO make it clear which flags need to be different across the board-->
+```toml
+
+<advertise-parameters>
+<cluster-parameters>
+```
+
+{% include /com-config/com-config-param-advertise.md %}
+
+{% include /com-cluster/com-cluster-params.md %}
 
 ## Additional information
 
-PERHAPS HERE IS WHERE THE EXCEPTION GOES FOR UNIQUE FLAGS?
+{% include /com-config/com-config-advertise-extra.md %}
+
 
 ## Examples

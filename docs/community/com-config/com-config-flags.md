@@ -20,53 +20,91 @@ The following configuration flags are used in different contexts within FeatureB
 
 FeatureBase can be configured through command line flags, environment variables, and/or a TOML configuration file; configured options take precedence in that order.
 
-{: .warning}
-Environment variables require passing `--future.rename` flag to use.
+{% include /com-config/com-config-param-advertise.md %}
 
-| CLI Flag | Environment Variable | Type  | Description  |
-|---|---|---|-------|
-| [advertise](#advertise)| FEATUREBASE_ADVERTISE  | str   | Address to advertise externally.   |
-| [advertise-grpc](#advertise-grpc) | FEATUREBASE_ADVERTISE_GRPC | str   | Address to advertise externally for gRPC. |
+## Bind parameters
+
 | [bind](#bind) | FEATUREBASE_BIND | str   | Default URI on which FeatureBase should listen.   |
 | [bind-grpc](#bind-grpc)| FEATUREBASE_BIND_GRPC   | str   | URI on which FeatureBase should listen for gRPC requests. |
+
+## Data and log path parameters
+
 | [data-dir](#data-dir) | FEATUREBASE_DATA_DIR   | str   | Directory to store FeatureBase data files. |
 | [log-path](#log-path) | FEATUREBASE_LOG_PATH   | str   | Path to store FeatureBase logs. |
+
+## Max file and memory map counts
+
 | [max-file-count](#max-file-count) | FEATUREBASE_MAX_FILE_COUNT  | int   | Soft limit on the maximum number of fragment files FeatureBase keeps open simultaneously. |
 | [max-map-count](#max-map-count) | FEATUREBASE_MAX_MAP_COUNT   | int   | Limits the maximum number of active mmaps. FeatureBase will fall back to reading files once this is exhausted. Set below your system's vm.max_map_count. |
 | [max-writes-per-request](#max-writes-per-request)| FEATUREBASE_MAX_WRITES_PER_REQUEST   | int   | Number of write commands per request. |
 | [max-query-memory](#max-query-memory)  | FEATUREBASE_MAX_QUERY_MEMORY| int   | Maximum memory allowed per Extract() or SELECT query. |
+
+## Cluster name
+
 | [name](#name)| FEATUREBASE_NAME   | str   | Name of the node in the cluster. |
+
+## Logging
+
 | [verbose](#verbose)  | FEATUREBASE_VERBOSE| bool  | Enable verbose logging |
+
+## Cluster anti-entropy
+
 | [anti-entropy.interval](#anti-entropy-interval) | FEATUREBASE_ANTI_ENTROPY_INTERVAL| str   | Interval at which to run anti-entropy routine. |
 
+## Cluster configuration
 
 | [cluster.name](#cluster-name) | FEATUREBASE_CLUSTER_NAME| str   | Human-readable name for the cluster. |
 | [cluster.long-query-time](#cluster-long-query-time)| FEATUREBASE_CLUSTER_LONG_QUERY_TIME  | str   | Duration that will trigger log and stat messages for slow queries. |
 | [cluster.replicas](#cluster-replicas)  | FEATUREBASE_CLUSTER_REPLICAS| int   | Number of hosts each piece of data should be stored on. |
 | [cluster.partition-to-node-assignment](#cluster-partition-to-node-assignment) | CLUSTER_PARTITION_TO_NODE_ASSIGNMENT| str   | How to assign partitions to nodes. jmp-hash or modulus |
+
+## ETCD parameters
+
 | [etcd.advertise-client-address](#etcd-advertise-client-address)  | FEATUREBASE_ETCD_ADVERTISE_CLIENT_ADDRESS| str   | Advertise client address. If not provided, uses the listen client address. |
 | [etcd.advertise-peer-address](#etcd-advertise-peer-address)| FEATUREBASE_ETCD_ADVERTISE_PEER_ADDRESS  | str   | Advertise peer address. If not provided, uses the listen peer address. |
+
+## ETCD cluster parameters
+
 | [etcd.cluster-url](#etcd-cluster-url)  | FEATUREBASE_ETCD_CLUSTER_URL| str   | Cluster URL to join. |
 | [etcd.initial-cluster](#etcd-initial-cluster)  | FEATUREBASE_ETCD_INITIAL_CLUSTER| str   | Initial cluster name1=apurl1,name2=apurl2 |
+
+## ETCD Listen parameters
+
 | [etcd.listen-client-address](#etcd-listen-client-address) | FEATUREBASE_ETCD_LISTEN_CLIENT_ADDRESS   | str   | Listen client address. |
 | [etcd.listen-peer-address](#etcd-listen-peer-address)   | FEATUREBASE_ETCD_LISTEN_PEER_ADDRESS | str   | Listen peer address. |
 | [handler.allowed-origins](#handler-allowed-origins)| FEATUREBASE_HANDLER_ALLOWED_ORIGINS  | list  | Comma separated list of allowed origin URIs (for CORS/Web UI). |
-| [metric.diagnostics](#metric-diagnostics)| FEATUREBASE_METRIC_DIAGNOSTICS  | bool  | Enables diagnostics reporting. |
-| [metric.host](#metric-host)  | FEATUREBASE_METRIC_HOST| str   | URI to send metrics when metric.service is statsd. |
-| [metric.poll-interval](#metric-poll-interval)  | FEATUREBASE_METRIC_POLL_INTERVAL| str   | Polling interval for metrics.diagnositcs. |
-| [metric.service](#metric-service)| FEATUREBASE_METRIC_SERVICE  | str   | Where to send stats: can be expvar (in-memory served at /debug/vars), prometheus, statsd or none. |
+
+{% include /com-config/com-config-param-metrics.md %}
+
+## Goroutine blocking profiler parameters
+
 | [profile.block-rate](#profile-block-rate)| FEATUREBASE_PROFILE_BLOCK_RATE  | int   | Sampling rate for goroutine blocking profiler. One sample per rate ns. |
+
+## Mutex sampling parameters
+
 | [profile.mutex-fraction](#profile-mutex-fraction)| FEATUREBASE_PROFILE_MUTEX_FRACTION   | int   | Sampling fraction for mutex contention profiling. Sample 1/rate of events |
+
+## Storage parameters
+
 | [storage.backend](#storage-backend)   | FEATUREBASE_STORAGE_BACKEND | str   | Storage backend to use: 'rbf' is only supported value. |
+
+## TLS Authentication parameters
+
 | [tls.ca-certificate](#tls-ca-certificate)| FEATUREBASE_TLS_CA_CERTIFICATE  | str   | TLS CA certificate path (usually has the .pem extension) |
 | [tls.certificate](#tls-certificate)   | FEATUREBASE_TLS_CERTIFICATE | str   | TLS certificate path (usually has the .crt or .pem extension) |
 | [tls.enable-client-verification](#tls-enable-client-verification) | FEATUREBASE_TLS_ENABLE_CLIENT_VERIFICATION| bool  | Enable TLS certificate client verification for incoming connections |
 | [tls.key](#tls-certificate-key)  | FEATUREBASE_TLS_KEY| str   | TLS certificate key path (usually has the .key extension) |
 | [tls.skip-verify](#tls-skip-verify)   | FEATUREBASE_TLS_SKIP_VERIFY | bool  | Skip TLS certificate server verification (not secure) |
+
+## Tracing parameters
+
 | [tracing.agent-host-port](#tracing-agent-hostport)| FEATUREBASE_TRACING_AGENT_HOST_PORT  | str   | Jaeger agent host:port. |
 | [tracing.sampler-param](#tracing-sampler-parameter) | FEATUREBASE_TRACING_SAMPLER_PARAM| float | Jaeger sampler parameter. |
 | [tracing.sampler-type](#tracing-sampler-type)  | FEATUREBASE_TRACING_SAMPLER_TYPE| str   | Jaeger sampler type (remote, const, probabilistic, ratelimiting) or 'off' to disable tracing completely. |
 | [translation.map-size](#translation-map-size)  | FEATUREBASE_TRANSLATION_MAP_SIZE| int   | Size in bytes of mmap to allocate for key translation. |
+
+## Authentication parameters
+
 | [auth.enable](#auth-authenticationauthorization-configuration)  | FEATUREBASE_AUTH_ENABLE| bool  | Enable AuthN/AuthZ of featurebase, disabled by default. |
 | [auth.client-id](#auth-authenticationauthorization-configuration)| FEATUREBASE_AUTH_CLIENT_ID  | str   | Identity Provider's Application/Client ID. |
 | [auth.client-secret](#auth-authenticationauthorization-configuration)| FEATUREBASE_AUTH_CLIENT_SECRET  | str   | Identity Provider's Client Secret. |
@@ -81,6 +119,7 @@ Environment variables require passing `--future.rename` flag to use.
 | [auth.query-log-path](#auth-authenticationauthorization-configuration)   | FEATUREBASE_AUTH_QUERY_LOG_PATH | str   | Path to log user queries |
 | [auth.configured-ips](#auth-authenticationauthorization-configuration)   | FEATUREBASE_AUTH_CONFIGURED_IPS | str   | List of configured IPs allowed for ingest |
 
+## Additional information
 
 Options are listed in the table by their CLI and Environment names. Further details are given below with the TOML configuration file variables. Note that there is a direct correlation between the CLI name and the TOML name. For example, the CLI flag `etcd.initial-cluster` is identified in TOML as:
 
@@ -89,25 +128,7 @@ Options are listed in the table by their CLI and Environment names. Further deta
   initial-cluster = "featurebase1=http://localhost:10301,featurebase2=http://localhost:10302"
 ```
 
-
-
-### Advertise
-
-Address advertised by the server to other nodes in the cluster and to clients via the `/status` endpoint. Host defaults to the IP address represented by `bind` and port to 10101. If `bind` is set to `0.0.0.0` and `advertise` is not specified, then FeatureBase will try to determine a reasonable, external IP address to use for `advertise`.
-
-
-```toml
-advertise = 192.168.1.100:10101
-```
-
-### Advertise gRPC
-
-Address advertised by the server to other nodes in the cluster and to clients via the `/status` endpoint. Host defaults to the IP address represented by `bind` and port to 20101. If `bind` is set to `0.0.0.0` and `advertise-grpc` is not specified, then FeatureBase will try to determine a reasonable, external IP address to use for `advertise-grpc`.
-
-
-```toml
-advertise-grpc = 192.168.1.100:20101
-```
+{% include /com-config/com-config-advertise-extra.md %}
 
 ### Bind
 

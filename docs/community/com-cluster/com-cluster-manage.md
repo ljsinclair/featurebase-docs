@@ -27,3 +27,9 @@ WHY SETUP A CLUSTER?
 FeatureBase clusters cannot be resized. However, they can be scaled by backing-up then restoring to a newer, larger cluster.
 
 * [Learn about FeatureBase backup and restore](/docs/community/com-backup/com-backup-home)
+
+## Cluster metrics
+
+Cluster metrics are a subset of FeatureBase metrics.
+
+* [Cluster metrics reference](/docs/community/com-monitoring/com-monitoring-metrics-fb#cluster-metrics)
