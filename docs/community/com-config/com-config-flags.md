@@ -115,7 +115,7 @@ Options are listed in the table by their CLI and Environment names. Further deta
   initial-cluster = "featurebase1=http://localhost:10301,featurebase2=http://localhost:10302"
 ```
 
-{% include /com-config/com-config-advertise-extra.md %}
+{% include /com-config/com-config-extra-advertise.md %}
 
 ### Bind
 
