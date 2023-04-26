@@ -51,19 +51,13 @@ data-dir = "/var/lib/featurebase"
 # [handler]
 # allowed-origins = ["https://myapp.com", "https://myapp.org"]
 
-
-
 # Path to the log file
 log-path = "/var/log/molecula/featurebase.log"
-
-
 
 # Verbose - Enable verbose logging. Valid options are true or false.
 # Set to true only when debugging as directed by Molecula engineers.
 #
 # verbose = true
-
-
 
 # Soft limit on max number of files featurebase will keep open simultaneously.
 # When past this limit, featurebase will only keep files open for as long as is
@@ -148,7 +142,8 @@ log-path = "/var/log/molecula/featurebase.log"
 
 
 # for additional assistance, and for help with config issues,
-# see https://etcd.io/docs/v3.5/faq/ cluster-url - URL of existing cluster
+# see https://etcd.io/docs/v3.5/faq/
+# cluster-url - URL of existing cluster
 # that a new node should join when adding nodes to cluster.
 #
 # cluster-url = "http://localhost:10401"

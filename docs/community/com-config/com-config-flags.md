@@ -39,9 +39,9 @@ FeatureBase can be configured through command line flags, environment variables,
 | [max-writes-per-request](#max-writes-per-request)| FEATUREBASE_MAX_WRITES_PER_REQUEST   | int   | Number of write commands per request. |
 | [max-query-memory](#max-query-memory)  | FEATUREBASE_MAX_QUERY_MEMORY| int   | Maximum memory allowed per Extract() or SELECT query. |
 
-## Cluster name
+## Node name
 
-| [name](#name)| FEATUREBASE_NAME   | str   | Name of the node in the cluster. |
+| `name`| FEATUREBASE_NAME   | str   | Name of the node in the cluster. |
 
 ## Logging
 
@@ -53,26 +53,13 @@ FeatureBase can be configured through command line flags, environment variables,
 
 ## Cluster configuration
 
-| [cluster.name](#cluster-name) | FEATUREBASE_CLUSTER_NAME| str   | Human-readable name for the cluster. |
-| [cluster.long-query-time](#cluster-long-query-time)| FEATUREBASE_CLUSTER_LONG_QUERY_TIME  | str   | Duration that will trigger log and stat messages for slow queries. |
-| [cluster.replicas](#cluster-replicas)  | FEATUREBASE_CLUSTER_REPLICAS| int   | Number of hosts each piece of data should be stored on. |
-| [cluster.partition-to-node-assignment](#cluster-partition-to-node-assignment) | CLUSTER_PARTITION_TO_NODE_ASSIGNMENT| str   | How to assign partitions to nodes. jmp-hash or modulus |
+{% include /com-cluster/com-cluster-params.md %}
 
 ## ETCD parameters
 
-| [etcd.advertise-client-address](#etcd-advertise-client-address)  | FEATUREBASE_ETCD_ADVERTISE_CLIENT_ADDRESS| str   | Advertise client address. If not provided, uses the listen client address. |
-| [etcd.advertise-peer-address](#etcd-advertise-peer-address)| FEATUREBASE_ETCD_ADVERTISE_PEER_ADDRESS  | str   | Advertise peer address. If not provided, uses the listen peer address. |
+{% include /com-cluster/com-cluster-param-etcd.md %}
 
-## ETCD cluster parameters
-
-| [etcd.cluster-url](#etcd-cluster-url)  | FEATUREBASE_ETCD_CLUSTER_URL| str   | Cluster URL to join. |
-| [etcd.initial-cluster](#etcd-initial-cluster)  | FEATUREBASE_ETCD_INITIAL_CLUSTER| str   | Initial cluster name1=apurl1,name2=apurl2 |
-
-## ETCD Listen parameters
-
-| [etcd.listen-client-address](#etcd-listen-client-address) | FEATUREBASE_ETCD_LISTEN_CLIENT_ADDRESS   | str   | Listen client address. |
-| [etcd.listen-peer-address](#etcd-listen-peer-address)   | FEATUREBASE_ETCD_LISTEN_PEER_ADDRESS | str   | Listen peer address. |
-| [handler.allowed-origins](#handler-allowed-origins)| FEATUREBASE_HANDLER_ALLOWED_ORIGINS  | list  | Comma separated list of allowed origin URIs (for CORS/Web UI). |
+## Metrics parameters
 
 {% include /com-config/com-config-param-metrics.md %}
 
