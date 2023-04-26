@@ -35,11 +35,11 @@ FeatureBase Clusters are setup using the `featurebase.conf` TOML configuration f
 
 ## Additional information
 
-{% include /com-config/com-config-extra-advertise.md %}
+{% include /com-config/com-config-advertise-extra.md %}
 
 {% include /com-config/com-config-bind-extra.md %}
 
-{% include /com-config/com-config-etcd-extra.md %}
+{% include /com-cluster/com-cluster-etcd-extra.md %}
 
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
