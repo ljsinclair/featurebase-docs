@@ -24,7 +24,7 @@ curl <featurebase-hostname>:10101/<endpoint>
 | Flag | Description |
 |---|---|
 | `index` | Returns the schema of the specified index in JSON |
-| `index/<tablename>` | Returns metadata on the specified <tablename> |
+| `index/<tablename>` | Returns metadata on the specified `<tablename>` |
 | `info` | Returns database shard details and CPU details |
 | `metrics` | Returns metric values as set in `featurebase.conf` |
 | `status` | Returns the status of the cluster |
