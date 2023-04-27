@@ -114,8 +114,6 @@ ETCD runs on each node in a FeatureBase cluster rather than as a separate instan
 
 ### `[etcd]` parameters for all nodes on same subnet
 
-Use these parameters for
-
 ```toml
 listen-peer-address = "local-ip:port"
 advertise-peer-address ="<advertise>"
