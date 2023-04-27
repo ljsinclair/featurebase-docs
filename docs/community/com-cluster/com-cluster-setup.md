@@ -74,7 +74,7 @@ log-path = "<log-directory>"
 | `replicas` | Integer | Number of hosts in the cluster. | 1 | [Replicas additional](#cluster-replicas) |
 | `partition-to-node-assignment` | String | Controls how partitions are assigned to cluster nodes. | `jmp-hash` | [Partition-to-node-assignment additional](#cluster-partition-to-node-assignment) |
 
-### `[ETCD]` parameters
+### `[etcd]` parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
