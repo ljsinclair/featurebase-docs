@@ -40,8 +40,8 @@ log-path = "<log-directory>"
   name = "<cluster-name>"
   replicas = <integer>
   long-query-time = <integer><time-unit>
-  partition-to-node-assignment =
-  anti-entropy-interval =
+  partition-to-node-assignment = <assignment>
+
 #etcd parameters
 [etcd]
   cluster-url =
