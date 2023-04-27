@@ -13,7 +13,7 @@ You can query FeatureBase HTTP endpoints via the CLI.
 
 {% include /com-install/com-install-before-begin.md %}
 
-## Endpoint reference
+## Query syntax
 
 ```sh
 curl <featurebase-hostname>:10101/<endpoint>
