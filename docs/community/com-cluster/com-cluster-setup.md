@@ -65,4 +65,4 @@ initial-cluster = "<local/specific IP>:NNNNN, <IP-nodes-connnect>:NNNNN..."
 
 ## Further information
 
-* [FeatureBase configuration parameters](/docs/community/com-config/com-config-flags.md)
+* [FeatureBase configuration parameters](/docs/community/com-config/com-config-flags)
