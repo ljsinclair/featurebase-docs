@@ -33,4 +33,4 @@ FeatureBase clusters cannot be resized. However, they can be scaled by backing-u
 Cluster metrics are a subset of FeatureBase metrics.
 
 * [Learn about FeatureBase metrics](/docs/community/com-monitoring/com-monitoring-metrics-fb#cluster-metrics)
-* [Learn how to setup FeatureBase metrics](/docs/community/com-monitoring/com-monitoring-runtime-enable)
+* [Learn how to setup FeatureBase metrics](/docs/community/com-monitoring/com-monitoring-metrics-runtime-enable)
