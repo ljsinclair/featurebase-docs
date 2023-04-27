@@ -57,7 +57,7 @@ log-path = "<log-directory>"
 
 | Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
-| <node-name> | String | Unique name for the node | `featurebase1` | Can match `[cluster] name` for parent node. |
+| `<node-name>` | String | Unique name for the node | `featurebase1` | Can match `[cluster] name` for parent node. |
 
 {% include /com-config/com-config-param-bind.md %}
 
