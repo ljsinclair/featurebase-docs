@@ -1,4 +1,4 @@
-### Advertise flags
+### Advertise parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
