@@ -1,4 +1,4 @@
-## Log parameters
+### Log parameters
 
 | Flag | Data type | Description | Default |
 |---|---|---|---|---|

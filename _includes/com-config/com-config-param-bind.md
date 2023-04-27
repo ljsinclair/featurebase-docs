@@ -1,4 +1,4 @@
-## Bind parameters
+### Bind parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|

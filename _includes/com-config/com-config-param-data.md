@@ -1,4 +1,4 @@
-## Data parameters
+### Data parameters
 
 | Flag | Data type | Description | Default |
 |---|---|---|---|---|
