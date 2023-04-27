@@ -9,8 +9,6 @@ grand_parent: Community
 
 FeatureBase Clusters are setup using the `featurebase.conf` TOML configuration file on multiple systems.
 
-{% include /com-cluster/com-cluster-summary.md %}
-
 ## Before you begin
 
 * [Install FeatureBase on multiple systems](/docs/community/com-home)
