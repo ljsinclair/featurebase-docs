@@ -44,11 +44,11 @@ log-path = "<log-directory>"
 
 #etcd parameters
 [etcd]
-  cluster-url =
-  listen-client-address =
-  listen-peer-address =
-  advertise-peer-address = ""
-  initial cluster = "<cluster-name>:<port>,..."
+  cluster-url = "<ip:port>"
+  listen-client-address = "<ip:port>"
+  listen-peer-address = "<ip:port>"
+  advertise-peer-address = "<ip:port>"
+  initial-cluster = "<ip:port>,..."
 ```
 
 {% include /com-config/com-config-param-advertise.md %}
