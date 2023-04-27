@@ -53,7 +53,7 @@ log-path = "<log-directory>"
 
 {% include /com-config/com-config-param-advertise.md %}
 
-## Node parameters
+### Node parameters
 
 | Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ log-path = "<log-directory>"
 
 {% include /com-config/com-config-param-log.md %}
 
-## `[cluster]` parameters
+### `[cluster]` parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
@@ -74,7 +74,7 @@ log-path = "<log-directory>"
 | `replicas` | Integer | Number of hosts in the cluster. | 1 | [Replicas additional](#cluster-replicas) |
 | `partition-to-node-assignment` | String | Controls how partitions are assigned to cluster nodes. | `jmp-hash` | [Partition-to-node-assignment additional](#cluster-partition-to-node-assignment) |
 
-## `[ETCD]` parameters
+### `[ETCD]` parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
