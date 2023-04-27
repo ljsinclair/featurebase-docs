@@ -28,6 +28,10 @@ FeatureBase clusters cannot be resized. However, they can be scaled by backing-u
 
 * [Learn about FeatureBase backup and restore](/docs/community/com-backup/com-backup-home)
 
+## Change cluster `partition-to-node-assignment`
+
+* [Safely change cluster partition-to-node-assignment](/docs/community/com-cluster-change-partition-node)
+
 ## Cluster metrics
 
 Cluster metrics are a subset of FeatureBase metrics.

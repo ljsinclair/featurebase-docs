@@ -10,7 +10,10 @@ has_toc: false
 # Backup and Restore FeatureBase Community Databases
 {: .no_toc }
 
-FeatureBase Community databases can be backed-up and restored using these instructions.
+FeatureBase Community databases can be backed-up and restored for a number of reasons, including the following:
+
+* General backup of data
+* Making changes to your `featurebase.conf` settings, including the cluster `partition-to-node-assignment` parameter.
 
 {% include page-toc.md %}
 
