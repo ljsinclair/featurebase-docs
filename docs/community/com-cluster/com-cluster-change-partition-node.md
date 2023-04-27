@@ -1,11 +1,11 @@
 ---
-title: Change cluster parameters
+title: Safely change parameters
 layout: default
 parent: Community cluster
 grand_parent: Community
 ---
 
-# How do I change cluster parameters?
+# How do I safely change cluster parameters?
 
 {% include /com-cluster/com-cluster-partition-node-extra.md %}
 
@@ -16,7 +16,7 @@ grand_parent: Community
 
 ## Change `partition-to-node-assignment` on a cluster
 
-Follow this process to change the cluster parameter without losing your data.
+Follow this process to safely change the cluster parameter without losing your data.
 
 | Task | Further information |
 |---|---|
