@@ -15,29 +15,36 @@ A FeatureBase Cluster is a distributed system that is maintained by `etcd` which
 
 * [Install FeatureBase on multiple systems](/docs/community/com-home)
 * [Learn about etcd cluster members](https://etcd.io/docs/v3.3/faq/#why-an-odd-number-of-cluster-members){:target="_blank"}
-* Cluster parameters are set in `*/featurebase/opt/featurebase.conf`
+* Edit cluster parameters in `*/featurebase/opt/featurebase.conf`
 
-## Cluster parameters
+## Cluster parameter syntax
 
 ```toml
-
+#advertise parameters
 advertise = <IP Address>:10101
 advertise-grpc = <IP Address>:20101
 
+#node parameters
 name = "<node-name>"
-#bind-parameters
+
+#bind parameters
 bind = "<cluster-ip>:10101"
 bind-grpc = "<cluster-ip>:20101"
 
-data-dir = "<data-directory>/var/lib/molecula"
-log-path = "<log-directory>/var/log/molecula/featurebase.log"
+#data parameters
+data-dir = "<data-directory>"
 
+#log parameters
+log-path = "<log-directory>"
+
+#cluster parameters
 [cluster]
   name = "<cluster-name>"
-  replicas = <int-val>
-  long-query-time = <int><time-unit>
+  replicas = <integer>
+  long-query-time = <integer><time-unit>
   partition-to-node-assignment =
   anti-entropy-interval =
+#etcd parameters
 [etcd]
   cluster-url =
   listen-client-address =
@@ -50,19 +57,21 @@ log-path = "<log-directory>/var/log/molecula/featurebase.log"
 
 ## Node parameters
 
-| Flag | Data type | Description | Default |
+| Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
-| <node-name> | String | Unique name for the node | `featurebase1` |
+| <node-name> | String | Unique name for the node | `featurebase1` | Can match `[cluster] name` for parent node. |
 
 {% include /com-config/com-config-param-bind.md %}
 
-## Cluster parameters
+{% include /com-config/com-config-param-data.md %}
 
-The following flags are found under [Cluster]:
+{% include /com-config/com-config-param-log.md %}
+
+## `[cluster]` parameters
 
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
-| `name` | String | Human readable name for the cluster which must be identical on all nodes | `featurebase1` |  |
+| `name` | String | Human readable name for the cluster which must be identical on all nodes | `featurebase1` | Can match <node-name> for parent node |
 | `long-query-time` | String | Duration before log and stat messages are generated represented by <integer-value><time-unit>, e.g., 10s (10 seconds) |  | [Time units values](#timeunit-values) |
 | `replicas` | Integer | Number of hosts in the cluster. | 1 | [Replicas additional](#cluster-replicas) |
 | `partition-to-node-assignment` | String | Controls how partitions are assigned to cluster nodes. | `jmp-hash` | [Partition-to-node-assignment additional](#cluster-partition-to-node-assignment) |
@@ -72,10 +81,10 @@ The following flags are found under [Cluster]:
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
 | `cluster-url` | String | URL of an existing cluster that new nodes can join | `featurebase1=http://localhost:10401` |  |
-| `listen-client-address` | String | Address and port to bind to for client communication | `http://localhost:10401` | FeatureBase will use `listen-client-address` values if `advertise-client-address` is not defined. |
-| `listen-peer-address` | String | Address and port to bind to for peer communication | `http://localhost:10301` | `listen-peer-address: localhost:10401` will be unreachable by other nodes on the same subnet. |
-| `advertise-peer-address` | String | Address other nodes in cluster use to connect to this node. |  | FeatureBase will use `listen-peer-address` values if `advertise-peer-address` is not defined. |
-| `initial-cluster` | String | Comma-separated list of nodes in the cluster represented by `<cluster.name>=IP:port` pairs | `featurebase1=http://localhost:10301` | [ETCD additional](#etcd-additional) |
+| `listen-client-address` | String | Address and port to bind to for client communication | `http://localhost:10401` | FeatureBase will use `listen-client-address` values if undefined. |
+| `listen-peer-address` | String | Local IP address and port to that nodes in the cluster can connect to communicate | `http://localhost:10301` | `listen-peer-address: localhost:10401` will unreachable by other nodes on the same subnet. |
+| `advertise-peer-address` | String | Node address and port used by nodes in the cluster to connect. |  | FeatureBase will use `listen-peer-address` values if undefined. |
+| `initial-cluster` | String | A comma-separated list of `advertise-peer-address` values for each node in the cluster, beginning with the parent node. | `featurebase1=http://localhost:10301` | This list must be identical on all nodes in the cluster. |
 
 ## Additional information
 
@@ -85,11 +94,11 @@ The following flags are found under [Cluster]:
 
 ### [Cluster] `replicas`
 
-`replicas` values:
-* default of `1` indicates a single FeatureBase installation or node
-* `n-1` replicas are then available for additional nodes
+To meet `etcd` requirements, `replicas` should be set to:
+* a minimum of `3`
+* an odd number
 
-### [Cluster] `partition-to-node-assignment`
+### [cluster] `partition-to-node-assignment`
 
 {% include /com-cluster/com-cluster-partition-node-extra.md %}
 
@@ -105,20 +114,27 @@ ETCD runs on each node in a FeatureBase cluster rather than as a separate instan
 
 ## Examples
 
-#### All nodes on the same subnet
+### `[etcd]` parameters for all nodes on same subnet
+
+Use these parameters for
 
 ```toml
-listen-peer-address = "<advertise-peer-address>"
-advertise-peer-address =""
-initial-cluster = "<listen-peer-address>..."
+listen-peer-address = "local-ip:port"
+advertise-peer-address ="<advertise>"
+initial-cluster = "<parent-node-ip:port>,<advertise-peer-address>,..."
 ```
 
-#### Nodes on different proxy, URL, DNS
+### `[etcd]` parameters for nodes outside subnet
+
+These parameters should be used for nodes that connect via:
+* proxy server
+* different URL
+* DNS settings
 
 ``` toml
-listen-peer-address = "<local/specific IP>:NNNNN"
-advertise-peer-address = "<connection-ip-for-this-node>:NNNNN"
-initial-cluster = "<local/specific IP>:NNNNN, <IP-nodes-connnect>:NNNNN..."
+listen-peer-address = "<local-ip>:port"
+advertise-peer-address = "<connection-ip-for-this-node:port>"
+initial-cluster = "<parent-node-ip:port>, <IP-nodes-connnect:port>,..."
 ```
 
 ## Further information
