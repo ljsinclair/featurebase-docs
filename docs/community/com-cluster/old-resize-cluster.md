@@ -1,7 +1,7 @@
 ---
 title: Resize cluster
 layout: default
-parent: Community configuration
+parent: Community cluster
 grand_parent: Community
 ---
 
