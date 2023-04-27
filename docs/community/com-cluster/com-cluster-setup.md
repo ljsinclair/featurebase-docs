@@ -134,7 +134,7 @@ These parameters should be used for nodes that connect via:
 ``` toml
 listen-peer-address = "<local-ip>:port"
 advertise-peer-address = "<connection-ip-for-this-node:port>"
-initial-cluster = "<parent-node-ip:port>, <IP-nodes-connnect:port>,..."
+initial-cluster = "<parent-node-ip:port>, <advertise-peer-address>,..."
 ```
 
 ## Further information
