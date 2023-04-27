@@ -9,7 +9,7 @@ grand_parent: Community
 
 FeatureBase Clusters are setup using the `featurebase.conf` TOML configuration file on multiple systems.
 
-A FeatureBase Cluster is a distributed system that is maintained by `etcd` which runs on each node. The system requires at least three nodes to maintain data consistency and fault tolerances. <!--from https://stackoverflowteams.com/c/molecula/questions/179-->
+{% include /com-cluster/com-cluster-summary.md %}
 
 ## Before you begin
 
