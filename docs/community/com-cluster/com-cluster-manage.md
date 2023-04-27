@@ -26,7 +26,7 @@ FeatureBase clusters cannot be resized. However, they can be scaled by backing-u
 
 ## How do I safely change the `partition-to-node-assignment` parameter?
 
-* [Safely change cluster partition-to-node-assignment](/docs/community/com-cluster-change-partition-node)
+* [Safely change cluster partition-to-node-assignment](/docs/community/com-cluster/com-cluster-change-partition-node)
 
 ## How do I setup cluster metrics?
 
