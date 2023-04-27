@@ -13,4 +13,4 @@ Check our troubleshooting pages for workarounds and fixes to problems you are en
 
 {: .note}
 >You can query the status of FeatureBase cloud at the following URL:
->`[https://status.featurebase.com](https://status.featurebase.com){:target="_blank"}`
+>[https://status.featurebase.com](https://status.featurebase.com){:target="_blank"}
