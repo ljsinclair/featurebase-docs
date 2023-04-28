@@ -31,6 +31,10 @@ DECIMAL[({SCALE value})]
 * Aggregate and range queries work best with DECIMAL data types.
 * Use STRING data type if you intend to run queries to group by or search for distinct values.
 
+## Update Behavior
+
+{% include /sql-guide/mutex_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

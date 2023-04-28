@@ -29,6 +29,10 @@ TIMESTAMP [TIMEUNIT {value}]
 
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
+## Update Behavior
+
+{% include /sql-guide/mutex_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

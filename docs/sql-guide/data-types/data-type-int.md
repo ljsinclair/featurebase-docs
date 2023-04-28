@@ -32,6 +32,10 @@ INT is not suitable for queries that
 
 Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
 
+## Update Behavior
+
+{% include /sql-guide/mutex_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

@@ -28,6 +28,10 @@ The ID data type:
   * grouping by
   * querying discrete values
 
+## Update Behavior
+
+{% include /sql-guide/mutex_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

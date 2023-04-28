@@ -36,6 +36,10 @@ The STRINGSETQ data type:
 
 {% include /sql-guide/ttl-additional.md %}
 
+## Update Behavior
+
+{% include /sql-guide/timequantum_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

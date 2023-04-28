@@ -30,6 +30,10 @@ The STRINGSET data type:
   * grouping by
   * searching for discrete values
 
+## Update Behavior
+
+{% include /sql-guide/set_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types

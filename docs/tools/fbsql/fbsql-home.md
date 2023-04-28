@@ -31,6 +31,7 @@ The following flags can be provided when running fbsql. None of the flags are re
 
 | Flag | Description | Default |
 |---|---|---|
+| `--api-key` | [Cloud API key](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey) that can be used for authn/authz for cloud as an alternative to `--email` and `--password`.  | |
 | `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. | |
 | `--config` | Configuration file to read from. | | 
 | `--csv` | Switches to CSV (Comma-Separated Values) output mode. This is equivalent to `\pset format csv`. | |
@@ -303,6 +304,10 @@ The **command** is simply passed literally to the shell.
 fbsql --host="https://query.featurebase.com" \
   --email="user@example.com" \
   --password="a1b2c3d4e5f6"
+```
+```
+fbsql --host="https://query.featurebase.com" \
+  --api-key="asdf-f345-sg-hjyjk-345323"
 ```
 
 #### With a configuration file

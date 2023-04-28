@@ -31,6 +31,10 @@ Use this table to determine how integer and string values are represented when a
 | string | empty, `0`, `f`, `false` | 0 |
 | string | other string values | 1 |
 
+## Update Behavior
+
+{% include /sql-guide/mutex_updates.md %}
+
 ## Examples
 
 ### CREATE TABLE with all data types
