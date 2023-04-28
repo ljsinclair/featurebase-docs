@@ -5,10 +5,12 @@ parent: Community cluster
 grand_parent: Community
 nav_order: 1
 ---
-
 # How do I create a FeatureBase cluster?
+{: .no_toc }
 
 FeatureBase Clusters are setup using the `featurebase.conf` TOML configuration file on multiple systems.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

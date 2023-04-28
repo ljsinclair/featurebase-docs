@@ -7,7 +7,7 @@ nav_order: 9
 has_toc: true
 ---
 
-## Configure FeatureBase Community
+# Configure FeatureBase Community
 {: .no_toc }
 
 FeatureBase features can be enabled or disabled from the `*/featurebase/opt` directory in two ways:

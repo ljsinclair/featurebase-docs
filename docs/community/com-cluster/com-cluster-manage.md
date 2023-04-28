@@ -5,12 +5,13 @@ parent: Community
 has_children: true
 nav_order: 12
 ---
-
 # How do I manage a FeatureBase Community cluster?
 
 A FeatureBase Cluster is a distributed system that is maintained by `etcd` which runs on each node.
 
 The system requires at least three nodes to maintain data consistency and fault tolerances. <!--from https://stackoverflowteams.com/c/molecula/questions/179-->
+
+{% include page-toc.md %}
 
 ## Before you begin
 {% include /com-install/com-install-before-begin.md %}

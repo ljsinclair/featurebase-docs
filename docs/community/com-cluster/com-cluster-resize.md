@@ -5,7 +5,6 @@ parent: Community cluster
 grand_parent: Community
 nav_order: 2
 ---
-
 # How do I resize a FeatureBase cluster?
 
 {% include /com-cluster/com-cluster-resize-summary.md %}
