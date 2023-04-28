@@ -71,4 +71,4 @@ Learn how to define Avro and Static Schema source files and valid ingest flags t
 
 ## Troubleshooting
 
-* [Ingesting mutex fields is slow](/docs/community/com-troubleshooting/com-issue-ingest-mutex-fields)
+* [Issue: Ingesting mutex fields is slow](/docs/community/com-troubleshooting/com-issue-ingest-mutex-fields)
