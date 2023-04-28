@@ -50,6 +50,8 @@ log-path = "<log-directory>"
   listen-peer-address = "<ip:port>"
   advertise-peer-address = "<ip:port>"
   initial-cluster = "<ip:port>,..."
+
+#anti-entropy parameters
 [anti-entropy]
   interval = "<integer><time-unit>..."
 ```
