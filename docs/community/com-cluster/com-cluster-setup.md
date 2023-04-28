@@ -3,6 +3,7 @@ title: Create a cluster
 layout: default
 parent: Community cluster
 grand_parent: Community
+nav_order: 1
 ---
 
 # How do I create a FeatureBase cluster?
@@ -49,6 +50,8 @@ log-path = "<log-directory>"
   listen-peer-address = "<ip:port>"
   advertise-peer-address = "<ip:port>"
   initial-cluster = "<ip:port>,..."
+[anti-entropy]
+  interval = "<integer><time-unit>..."
 ```
 
 {% include /com-config/com-config-param-advertise.md %}
@@ -70,7 +73,7 @@ log-path = "<log-directory>"
 | Flag | Data type | Description | Default | Additional information |
 |---|---|---|---|---|---|
 | `name` | String | Human readable name for the cluster which must be identical on all nodes | `featurebase1` | Can match <node-name> for parent node |
-| `long-query-time` | String | Duration before log and stat messages are generated represented by <integer-value><time-unit>, e.g., 10s (10 seconds) |  | [Time units values](#timeunit-value) |
+| `long-query-time` | String | Duration before log and stat messages are generated represented by <integer><time-unit>, e.g., 10s (10 seconds) |  | [Time units](#timeunit-value) |
 | `replicas` | Integer | Number of hosts in the cluster. | 1 | [Replicas additional](#cluster-replicas) |
 | `partition-to-node-assignment` | String | Controls how partitions are assigned to cluster nodes. | `jmp-hash` | [Partition-to-node-assignment additional](#cluster-partition-to-node-assignment) |
 
@@ -83,6 +86,12 @@ log-path = "<log-directory>"
 | `listen-peer-address` | String | Local IP address and port to that nodes in the cluster can connect to communicate | `http://localhost:10301` | `listen-peer-address: localhost:10401` will unreachable by other nodes on the same subnet. |
 | `advertise-peer-address` | String | Node address and port used by nodes in the cluster to connect. |  | FeatureBase will use `listen-peer-address` values if undefined. |
 | `initial-cluster` | String | A comma-separated list of `advertise-peer-address` values for each node in the cluster, beginning with the parent node. | `featurebase1=http://localhost:10301` | This list must be identical on all nodes in the cluster. |
+
+### `[anti-entropy]` parameters
+
+| Flag | Data type | Description | Default | Additional |
+|---|---|---|---|---|
+| `interval` | String | <integer><time-unit> at which the cluster runs the anti-entropy routine to ensure shard replicas are synchronized. |  | [Time units](#timeunit-value) |
 
 ## Additional information
 

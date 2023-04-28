@@ -3,6 +3,7 @@ title: Community cluster
 layout: default
 parent: Community
 has_children: true
+nav_order: 12
 ---
 
 # How do I manage a FeatureBase Community cluster?
@@ -20,9 +21,9 @@ The system requires at least three nodes to maintain data consistency and fault 
 
 ## How do I resize a cluster?
 
-FeatureBase clusters cannot be resized. However, they can be scaled by backing-up then restoring to a newer, larger cluster.
+{% include /com-cluster/com-cluster-resize-summary.md %}
 
-* [Learn about FeatureBase backup and restore](/docs/community/com-backup/com-backup-home)
+* [Learn about the process of resizing a FeatureBase cluster](/docs/community/com-cluster/com-cluster-resize)
 
 ## How do I safely change the `partition-to-node-assignment` parameter?
 

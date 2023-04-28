@@ -3,6 +3,7 @@ title: Safely change parameters
 layout: default
 parent: Community cluster
 grand_parent: Community
+nav_order: 3
 ---
 
 # How do I safely change cluster parameters?
