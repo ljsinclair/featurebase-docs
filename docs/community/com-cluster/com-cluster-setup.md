@@ -93,7 +93,7 @@ log-path = "<log-directory>"
 
 | Flag | Data type | Description | Default | Additional |
 |---|---|---|---|---|
-| `interval` | String | <integer><time-unit> at which the cluster runs the anti-entropy routine to ensure shard replicas are synchronized. |  | [Time units](#timeunit-value) |
+| `interval` | String | `<integer><time-unit>` at which the cluster runs the anti-entropy routine to ensure shard replicas are synchronized. |  | [Time units](#timeunit-value) |
 
 ## Additional information
 
@@ -110,6 +110,8 @@ To meet `etcd` requirements, `replicas` should be set to:
 ### [cluster] `partition-to-node-assignment`
 
 {% include /com-cluster/com-cluster-partition-node-extra.md %}
+
+* [Learn how to change `cluster-partition-node-assignment` safely](/docs/community/com-cluster/com-cluster-change-partition-node)
 
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
