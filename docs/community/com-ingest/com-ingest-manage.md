@@ -45,15 +45,6 @@ You can import data to FeatureBase running three types of ingester processes:
 * SQL ingest
 * Kafka ingest
 
-{: .warning}
->There is a `0(n^2)` ingest complexity when ingesting mutex fields with many values on FeatureBase Clusters.
->A FeatureBase Cluster must determine if pre-existing values need to be cleared when ingesting mutex fields with many values.
-
-{: .warning}
-The ingestion process must detect if existing values should be cleared when ingesting mutex fields with unique values on FeatureBase Clusters.
-
-This introduces an increased complexity of `O(n^2)` because each ingested row must be compared against each row in the field.
-
 ## CSV ingest
 
 Learn how to build CSV source files and the ingest flags you use to import your data.
@@ -77,3 +68,7 @@ Learn how to define Avro and Static Schema source files and valid ingest flags t
 * [Kafka Avro ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro)
 * [Kafka Avro delete ingest](/docs/community/com-ingest/com-ingest-source-kafka-avro-delete)
 * [Kafka static schema ingest](/docs/community/com-ingest/com-ingest-source-kafka-static)
+
+## Troubleshooting
+
+* [Ingesting mutex fields is slow](/docs/community/com-troubleshooting/com-issue-ingest-mutex-fields)
