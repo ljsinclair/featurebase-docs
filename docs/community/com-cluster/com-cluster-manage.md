@@ -1,5 +1,5 @@
 ---
-title: Community cluster
+title: Community cluster configuration
 layout: default
 parent: Community
 has_children: true

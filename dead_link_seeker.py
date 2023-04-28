@@ -109,7 +109,7 @@ verbose = len(sys.argv) > 2 and sys.argv[2] == 'v'
 # enable this as a script, e.g., 'https://docs.featurebase.com/ v'
 LinkParser(sys.argv[1], verbose)
 #Add any false positives to this list to let users know to ignore these errors
-false_positive = ['mailto*','https://roaringbitmap.org/', 'localhost*']
+false_positive = ['mailto*','https://roaringbitmap.org/', 'www.researchgate.net', 'https://us5.datadoghq.com/signup','localhost*', ]
 print("The following sites are flagged but do work: ")
 for site in false_positive:
     print(site)

@@ -4,4 +4,4 @@ Valid settings for `partition-to-node-assignment` are:
 * modulus (for more equal data distribution on larger clusters)
 
 {: .warning}
-`partition-to-node-assignment` should be changed only on new clusters.
+`partition-to-node-assignment` should only be changed by creating a new cluster.

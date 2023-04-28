@@ -1,7 +1,7 @@
 ---
 title: Create a cluster
 layout: default
-parent: Community cluster
+parent: Community cluster configuration
 grand_parent: Community
 nav_order: 1
 ---
