@@ -54,6 +54,8 @@ molecula-consumer-csv         \
 
 {% include /com-ingest/com-ingest-extra-batch-size.md %}
 
+{% include /com-ingest/com-ingest-extra-concurrency.md %}
+
 {% include /com-ingest/com-ingest-flag-extra-env-var.md %}
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
