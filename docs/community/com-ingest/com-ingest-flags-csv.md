@@ -1,5 +1,5 @@
 ---
-title: CSV ingester flags
+title: CSV ingester reference
 layout: default
 parent: Import data
 grand_parent: Community

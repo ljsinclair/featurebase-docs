@@ -1,4 +1,4 @@
-## Quoting values
+### Quoting values
 
 Use double quotes "..." to enclose fields containing:
 * Line breaks (CRLF)
