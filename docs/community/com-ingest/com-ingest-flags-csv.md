@@ -52,6 +52,8 @@ molecula-consumer-csv         \
 
 ## Additional information
 
+{% include /com-ingest/com-ingest-extra-batch-size.md %}
+
 {% include /com-ingest/com-ingest-flag-extra-env-var.md %}
 
 {% include /com-ingest/com-ingest-extra-missing-val.md %}
@@ -62,19 +64,11 @@ molecula-consumer-csv         \
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
-{% include /com-ingest/com-ingest-extra-concurrency.md %}
-
-{% include /com-ingest/com-ingest-extra-batch-size.md %}
-
-{% include /com-ingest/com-ingest-extra-cache-length.md %}
-
 ## Examples
 
 {% include /com-ingest/com-ingest-csv-header-datafile.md %}
 
 {% include /com-ingest/com-ingest-csv-header-flag-tls.md %}
-
-{% include /com-ingest/com-ingest-eg-cache-length.md %}
 
 ## Further information
 

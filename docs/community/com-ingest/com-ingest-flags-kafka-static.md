@@ -59,15 +59,13 @@ molecula-consumer-kafka-static \
 
 {% include /com-ingest/com-ingest-flag-kafka-ssl.md %}
 
-{% include /com-ingest/com-ingest-extra-concurrency.md %}
-
-{% include /com-ingest/com-ingest-extra-batch-size.md %}
-
-{% include /com-ingest/com-ingest-extra-cache-length.md %}
-
 ## Additional information
 
 * Run `./molecula-consumer-kafka-static` from the `/featurebase/idk` directory.
+
+{% include /com-ingest/com-ingest-extra-batch-size.md %}
+
+{% include /com-ingest/com-ingest-extra-concurrency.md %}
 
 {% include /com-ingest/com-ingest-help-kafka.md %}
 
