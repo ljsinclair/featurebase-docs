@@ -51,6 +51,10 @@ Any system that supports this standard can be setup to store and visualise trace
 
 * [Setup error logging](/docs/community/com-monitoring/com-monitoring-log-setup)
 
+## Query HTTP endpoints using `curl`
+
+* [Query FeatureBase instance HTTP endpoints](/docs/community/com-monitoring/com-monitoring-endpoints)
+
 ## Examples
 
 ## Naming format
