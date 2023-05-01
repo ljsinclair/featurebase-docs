@@ -36,7 +36,7 @@ Change these parameters by editing the `*/featurebase/opt/featurebase.conf` file
 
 | Parameter | Description | Required | Additional information |
 |---|---|---|---|
-| `<metric-service>` | FeatureBase supports:<br/>* expvar<br/>* statsd<br/>*  prometheus<br/> | No | Comment out or set to "none"` to disable |
+| `<metric-service>` | FeatureBase supports:<br/>* expvar<br/>* statsd<br/>*  prometheus<br/> | No | Comment out or set to `"none"` to disable |
 | `<statsd-host>` | Remote host to send `statsd` metrics | For `statsd` metrics | Comment out to disable |
 | `<poll-interval>` | An integer and time unit that determines how frequently FeatureBase checks for metrics | For `statsd` metrics and to enable runtime metrics | Comment out or set to zero to disable |
 
