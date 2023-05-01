@@ -83,6 +83,16 @@ molecula-consumer-kafka           \
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
+{% include /com-ingest/com-ingest-extra-concurrency.md %}
+
+{% include /com-ingest/com-ingest-extra-batch-size.md %}
+
+{% include /com-ingest/com-ingest-extra-cache-length.md %}
+
+## Examples
+
+{% include /com-ingest/com-ingest-eg-cache-length.md %}
+
 ## Further information
 
 * [Kafka Avro ingest consumer examples](/docs/community/com-ingest/com-ingest-example-kafka-avro)

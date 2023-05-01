@@ -105,7 +105,14 @@ The following flags are required when the Kafka Avro message `"fields"` value is
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
+{% include /com-ingest/com-ingest-extra-concurrency.md %}
+
+{% include /com-ingest/com-ingest-extra-batch-size.md %}
+
+{% include /com-ingest/com-ingest-extra-cache-length.md %}
 
 ## Examples
+
+{% include /com-ingest/com-ingest-eg-cache-length.md %}
 
 * [Kafka Avro delete ingest examples](/docs/community/com-ingest/com-ingest-eg-kafka-avro-delete)

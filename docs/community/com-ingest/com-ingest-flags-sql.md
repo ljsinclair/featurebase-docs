@@ -66,6 +66,12 @@ molecula-consumer-sql        \
 
 {% include /com-ingest/com-ingest-extra-config-datatype.md %}
 
+{% include /com-ingest/com-ingest-extra-concurrency.md %}
+
+{% include /com-ingest/com-ingest-extra-batch-size.md %}
+
+{% include /com-ingest/com-ingest-extra-cache-length.md %}
+
 ## Examples
 
 {% include /com-ingest/com-ingest-flag-sql-server.md %}
@@ -73,6 +79,8 @@ molecula-consumer-sql        \
 {% include /com-ingest/com-ingest-flags-sql-assets-table.md %}
 
 {% include /com-ingest/com-ingest-flags-sql-join-assets-events.md %}
+
+{% include /com-ingest/com-ingest-eg-cache-length.md %}
 
 ## Further information
 
