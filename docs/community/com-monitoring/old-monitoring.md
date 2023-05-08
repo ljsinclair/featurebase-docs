@@ -6,6 +6,8 @@ grand_parent: Community
 nav_order: 20
 ---
 
+NOTE: All but the scaling has been
+
 ## Metrics
 
 All FeatureBase components expose metrics via a [Prometheus](https://prometheus.io)
@@ -82,8 +84,8 @@ where in the case of Ingesters, `[namespaceprefix]` is one of:
 | `[featurebaseprefix]_maximum_shard` |gauge of the maximum shard in the index. For indexes which use `keys: true`,<br/>expect to see this around a multiple of 256<br/>due to how keys are partitioned around shards. |
 | `[featurebaseprefix]_antientropy_total` | count of times the AntiEntropy process runs |
 | `[featurebaseprefix]_antientropy_duration_seconds`| histogram of duration of AntiEntropy process |
-
-where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.
+<!-- future.rename is depreciated
+where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
 
 In addition, metrics are generated for counts of individual query calls. These are identified by the `query` prefix, for example `query_topn_total`. For PQL calls, these include the following queries: `Sum`, `Min`, `Max`, `MinRow`, `MaxRow`, `Count`, `TopN`, `Rows`, `GroupBy`. Note that the query name is represented as lower-case in the metric name. SQL calls may also affect these metrics, depending on SQL->PQL mapping of the particular query.
 
@@ -101,8 +103,8 @@ These metrics are pulled from the Go language runtime or operating system rather
 | `[featurebaseprefix]_stack_inuse`| gauge |
 | `[featurebaseprefix]_mallocs`| gauge |
 | `[featurebaseprefix]_frees`| gauge |
-
-where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.
+<!--
+where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
 
 ### Transaction Metrics
 
@@ -115,8 +117,8 @@ where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` co
 | `[featurebaseprefix]_transaction_exclusive_active`|count of active exclusive transactions|
 | `[featurebaseprefix]_transaction_exclusive_end` |count of ended exclusive transactions |
 | `[featurebaseprefix]_transaction_exclusive_blocked` |count of blocked exclusive transactions |
-
-where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.
+<!-- future.rename is depreciated
+where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
 
 ### Query Metrics (not implemented)
 
@@ -124,8 +126,8 @@ where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` co
 | - | -|
 | `[featurebaseprefix]_pql_queries_total` | count of PQL queries |
 | `[featurebaseprefix]_sql_queries_total` | count of SQL queries |
-
-where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.
+<!-- future.rename is depreciated
+where `[featurebaseprefix]` is either `featurebase` if the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) is set, or `pilosa`.-->
 
 ### Prometheus Configuration
 
