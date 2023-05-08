@@ -13,7 +13,7 @@ Molecula 4.x includes FeatureBase version 3.x, which is the main change from Mol
 In Molecula version 4.x, we have introduced a product rename from Pilosa to FeatureBase, roaring B-tree format for storage, and etcd for key-value store. These changes were made to improve high availability and consistency.
 
 ### Pilosa Rename
-Pilosa was renamed to FeatureBase. For details, refer to the [FeatureBase Rename](/docs/community/old-versions/old-featurebase-rename) page.
+Pilosa was renamed to FeatureBase. <!-- this is depreciated For details, refer to the [FeatureBase Rename](/docs/community/old-versions/old-featurebase-rename) page.-->
 ### Roaring B-tree Format
 The new roaring B-tree format (RBF) storage backend provides ACID semantics at a shard level. It reduces heap usage for more predictable memory consumption and garbage collection behavior.
 

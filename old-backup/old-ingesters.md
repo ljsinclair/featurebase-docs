@@ -311,7 +311,7 @@ molecula-consumer-sql \
 	--id-field=id \
 	--row-expr 'SELECT tableID as id__ID, zipcode as zipcode__String limit 10'
 ```
-
+<!-- future.rename is depreciated
 Or, equivalently, with the [`--future.rename` configuration flag](/docs/community/old-versions/old-featurebase-rename) configuration flag:
 
 ```shell
@@ -325,6 +325,7 @@ molecula-consumer-sql \
 	--id-field=id \
 	--row-expr 'SELECT tableID as id__ID, zipcode as zipcode__String limit 10'
 ```
+-->
 
 Example connection strings:
 
