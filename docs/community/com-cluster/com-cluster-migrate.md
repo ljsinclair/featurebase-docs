@@ -7,9 +7,7 @@ nav_order: 3
 ---
 # How do I migrate data to a new FeatureBase cluster?
 
-
-
-{% include /com-cluster/com-cluster-resize-summary.md %}
+{% include /com-cluster/com-cluster-migrate-summary.md %}
 
 ## Before you begin
 
