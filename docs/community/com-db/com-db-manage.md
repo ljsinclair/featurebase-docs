@@ -9,11 +9,10 @@ nav_order: 7
 
 FeatureBase Community runs a file-based database which is available when you install the system.
 
-Data is broken into shards of 2^20 or 1,048,576 records.
-
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
+* [Learn how to estimate database resources](/docs/concepts/old-size-featurebse-database)
 
 <!-- Page and folder moved to another branch
 ## Manage tables

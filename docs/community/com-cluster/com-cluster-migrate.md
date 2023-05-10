@@ -13,7 +13,7 @@ nav_order: 3
 
 {% include /com-install/com-install-before-begin.md %}
 * [Learn how to setup a FeatureBase cluster](/docs/community/com-cluster/com-cluster-setup)
-* [Learn how to estimate resources for FeatureBase databases](/docs/concepts/old-size-featurebse-database)
+* [Learn how to estimate database resources](/docs/concepts/old-size-featurebse-database)
 
 ## Warnings
 
