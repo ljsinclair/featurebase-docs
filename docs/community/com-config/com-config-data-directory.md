@@ -82,15 +82,6 @@ These files are found in the `.pilosa` root.
 | `<tablename>/fields` | Metadata and key translation (if present) for each field in the table |  |
 | `<tablename>/backends` | Bitmap data for the table |  |
 
-## Additional information
-
-### Dataframe additional
-
-{: .note}
-Dataframe is **preview** functionality
-
-{% include /com-config/com-config-dataframe-summary.md %}
-
 ## Further information
 
 * [Learn more about FeatureBase Clusters](/docs/community/com-cluster/com-cluster-manage)
