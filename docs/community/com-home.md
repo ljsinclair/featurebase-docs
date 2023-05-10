@@ -65,7 +65,7 @@ The FeatureBase Community application requires:
 * nMB RAM
 * 175MB Disk (not including data)
 
-* [Learn how to estimate database resources](/docs/concepts/old-size-featurebse-database)
+* [Learn how to estimate database resources](/docs/concepts/old-size-featurebase-database)
 
 ## Install FeatureBase Community
 

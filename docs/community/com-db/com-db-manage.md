@@ -12,7 +12,7 @@ FeatureBase Community runs a file-based database which is available when you ins
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Learn how to estimate database resources](/docs/concepts/old-size-featurebse-database)
+* [Learn how to estimate database resources](/docs/concepts/old-size-featurebase-database)
 
 <!-- Page and folder moved to another branch
 ## Manage tables
