@@ -65,7 +65,12 @@ The FeatureBase Community application requires:
 * nMB RAM
 * 175MB Disk (not including data)
 
-[Learn more about FeatureBase system requirements](/docs/community/com-config/old-size-featurebase-database)
+<!-- Edit this down
+Depending on your storage backend, memory usage and disk usage can both vary. In general, you want at least a bit more memory than the on-disk storage of your data, possibly as much as twice as much memory available. This memory may look like it's directly being used by the FeatureBase engine, or may just be kernel disk caches.
+
+-->
+
+[Learn more about FeatureBase database requirements](/docs/community/com-db/com-db-manage)
 
 ## Install FeatureBase Community
 
