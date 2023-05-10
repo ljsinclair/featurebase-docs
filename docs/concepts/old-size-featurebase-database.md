@@ -1,7 +1,7 @@
 ---
 title: Sizing database
 layout: default
-parent: Community configuration
+parent: Concepts
 grand_parent: Community
 ---
 
