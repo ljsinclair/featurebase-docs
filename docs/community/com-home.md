@@ -70,7 +70,7 @@ Depending on your storage backend, memory usage and disk usage can both vary. In
 
 -->
 
-[Learn more about FeatureBase database requirements](/docs/community/com-db/com-db-manage)
+[Learn more about FeatureBase database requirements](/docs/concepts/old-size-featurebase-database)
 
 ## Install FeatureBase Community
 
