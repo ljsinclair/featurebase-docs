@@ -42,8 +42,8 @@ Use the following checklist to verify backups function correctly.
 
 * [Restore a FeatureBase cluster](/docs/community/com-backup/com-config-restore)
 
-## How do I resize a FeatureBase cluster?
+## How do I migrate a FeatureBase cluster?
 
-{% include /com-cluster/com-cluster-resize-summary.md %}
+{% include /com-cluster/com-cluster-migrate-summary.md %}
 
-* [Learn about the process of resizing a FeatureBase cluster](/docs/community/com-cluster/com-cluster-resize)
+* [Learn about the process of migrating a FeatureBase cluster](/docs/community/com-cluster/com-cluster-migrate)

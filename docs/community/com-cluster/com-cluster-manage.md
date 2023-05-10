@@ -63,11 +63,11 @@ When you split a cluster into multiple nodes, each node will have some duplicati
 
 * [Learn how to setup a FeatureBase cluster](/docs/community/com-cluster/com-cluster-setup)
 
-## How do I resize a cluster?
+## How do I migrate a cluster?
 
-{% include /com-cluster/com-cluster-resize-summary.md %}
+{% include /com-cluster/com-cluster-migrate-summary.md %}
 
-* [Learn about the process of resizing a FeatureBase cluster](/docs/community/com-cluster/com-cluster-resize)
+* [Learn about the process of resizing a FeatureBase cluster](/docs/community/com-cluster/com-cluster-migrate)
 
 ## How do I safely change the `partition-to-node-assignment` parameter?
 

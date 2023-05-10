@@ -2,7 +2,6 @@
 title: Sizing database
 layout: default
 parent: Concepts
-grand_parent: Community
 ---
 
 # Sizing FeatureBase database

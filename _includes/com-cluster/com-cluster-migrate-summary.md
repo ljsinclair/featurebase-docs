@@ -3,4 +3,4 @@ When you choose to migrate data from one cluster to another, the destination clu
 * larger than the source cluster
 
 {: .warning}
-Migrating to a cluster with less memory and processor resources is not possible.
+Clusters cannot be migrated to systems with less resources than the source.
