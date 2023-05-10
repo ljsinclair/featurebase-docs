@@ -45,7 +45,7 @@ featurebase backup
     ]
   [--concurrency <int_val>]
   [--no-sync]
-  {[-o|-output] /backup-directory/path/}
+  {--[o|output] /backup-directory/path/}
 ```
 
 ## Arguments
@@ -91,7 +91,7 @@ Increase backup speed by setting the concurrency value and turning off sync.
 featurebase backup
   --concurrency 2
   --host featurebase-hostname-or-ip:10101
-  -o /path/to/backup/
+  --o /path/to/backup/
   --no-sync
 ```
 
@@ -100,7 +100,7 @@ featurebase backup
 ```
 featurebase backup
   --host featurebase-hostname-or-ip:10101
-  -output /backups/featurebase-backups
+  --output /backups/featurebase-backups
 ```
 
 ### Authenticated backup
@@ -108,7 +108,7 @@ featurebase backup
 ```
 featurebase backup
   --host https://featurebase-hostname-or-ip:10101
-  -o /backups/featurebase-backups
+  --o /backups/featurebase-backups
   --auth-token <token>
 ```
 
@@ -117,7 +117,7 @@ featurebase backup
 ```
 featurebase backup
   --host featurebase-hostname-or-ip:10101
-  -o /path/to/backup/
+  --o /path/to/backup/
   --tls.ca-certificate ca.crt
   --tls.certificate client.crt
   --tls.key client.key
@@ -126,5 +126,5 @@ featurebase backup
 ### No sync backup with manual backup to remote folder
 
 ```sh
-featurebase backup --host featurebase-hostname-or-ip:10101 -o /path/to/backup/ --no-sync
+featurebase backup --host featurebase-hostname-or-ip:10101 --o /path/to/backup/ --no-sync
 ```
