@@ -23,7 +23,7 @@ To avoid data loss, shut down:
 {: .warning}
 Do not attempt to stall FeatureBase ingest consumers by creating an exclusive transaction.
 
-## Cluster resize tasks
+## Cluster migration tasks
 
 | Task | Description |
 |---|---|
