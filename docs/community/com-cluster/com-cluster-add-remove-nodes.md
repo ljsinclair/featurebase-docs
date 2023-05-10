@@ -3,6 +3,7 @@ title: Scaling FeatureBase
 layout: default
 parent: Community configuration
 grand_parent: Community
+nav_order: 2
 ---
 
 ## How do I scale FeatureBase Community?

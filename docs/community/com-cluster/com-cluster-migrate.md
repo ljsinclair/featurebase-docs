@@ -1,11 +1,13 @@
 ---
-title: Resize a cluster
+title: Migrate to a new cluster
 layout: default
 parent: Community cluster configuration
 grand_parent: Community
-nav_order: 2
+nav_order: 3
 ---
-# How do I resize a FeatureBase cluster?
+# How do I migrate data to a new FeatureBase cluster?
+
+
 
 {% include /com-cluster/com-cluster-resize-summary.md %}
 
