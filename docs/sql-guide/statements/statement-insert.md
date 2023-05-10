@@ -39,11 +39,9 @@ INSERT INTO
 
 ## Examples
 
-## Insert two rows into `test_table`
+### CREATE products and sales tables and columns with string data types
 
-```sql
-INSERT INTO test_table (_id, column1, column2) VALUES (1, 10, 'data10'), (2, 10, 'data10');
-```
+{% include /sql-guide/table_create_products_sales.md %}
 
 ### INSERT multiple records INTO `products` and `services` tables
 
@@ -69,21 +67,37 @@ INSERT INTO products
 ### INSERT value in services table
 
 ```sql
-INSERT INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on orders over $50', 0.00);
+INSERT INTO services (_id, servicelist, price) 
+VALUES (1, 'free deliveries on orders over $50', 0.00);
 ```
 
 ### Overwrite existing value
 
 ```sql
-INSERT INTO services (_id, servicelist, price) VALUES (2, 'local postage per item', 2.20);
+INSERT INTO services (_id, servicelist, price) 
+VALUES (2, 'local postage per item', 2.20);
 ```
 
-### INSERT values into single column identified by `_id`
+### CREATE table with time quantum data types
 
 ```sql
-INSERT into products (_id, stock) VALUES
-  (1,233),
-  (2,3289),
-  (3, 44),
-  (4, 1);
+CREATE TABLE timeq (
+_id id,
+stringsetcolq stringsetq timequantum 'YMD',
+idsetcolq idsetq timequantum 'YMD'
+);
 ```
+
+### INSERT for time quantum data types
+
+The following statement inserts values with an associated timestamp (using either a unix time or timestamp) into `timeq`,  which has `IDSETQ` and `STRINGSETQ` data types.
+
+```sql
+INSERT INTO timeq(_id, stringsetcolq, idsetcolq) 
+VALUES (1, {'2018-08-31T00:00:00Z', ['A','B']}, {1676649734, [1]});
+```
+
+## Further information
+
+* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
+* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq)
