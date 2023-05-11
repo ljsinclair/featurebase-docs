@@ -9,7 +9,7 @@ has_toc: false
 # Introduction to FeatureBase Cloud
 {: .no_toc }
 
-FeatureBase Cloud is fully managed and intended for users that don't want to have to operate and maintain the underlying hardware for FeatureBase. Our Cloud solution takes what makes FeatureBase amazing and makes it even easier to provision and operate in order to get value from your data faster.
+FeatureBase Cloud is a fully managed version of FeatureBase and is intended for users that don’t want to have to operate and maintain the underlying hardware. Our Cloud solution takes what makes FeatureBase amazing and makes it even easier to provision and operate in order to get value from your data faster.
 
 {% include page-toc.md %}
 
@@ -17,9 +17,13 @@ FeatureBase Cloud is fully managed and intended for users that don't want to hav
 
 * Fully-managed database offering with simple “click to deploy” that avoids the pain of infrastructure procurement and maintenance.
 * Low-latency Database designed for queries across billions of records without impact from large ingest streams that are both inserting and updating records.
-* Graphical User Interface support for database sizing and creation, ingest configuration, and data exploration.
+* Graphical User Interface support for database creation, monitoring, account configuration, and data exploration.
 * Programmatic access to all Cloud features over HTTPS
 * Data ingest that allows you to push records when ready and without having to open up your data center
+* User management that allows teams to invite others and collaborate on your data
+* Usage-based metering and billing that gives you detailed, intra-hour insight into your spend
+* Full backups to S3 and EBS snapshotting are automated and occur daily for all databases
+
 
 ## Cloud trial
 

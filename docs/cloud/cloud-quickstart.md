@@ -31,8 +31,6 @@ Next, you'll be asked to verify your account using the code sent to the email ad
 
 ![Figure 2. Verify your account](/assets/images/quick-start-guide/cloud/verification_email.png)
 
-
-
 ### Trial Accounts
 
 {% include /cloud/trial-account-limits.md %}
@@ -43,22 +41,17 @@ Navigate back to FeatureBase using [cloud.featurebase.com](https://cloud.feature
 
 ![Figure 3. Sign In](/assets/images/quick-start-guide/cloud/sign_in.png)
 
-
-When you sign in, you'll be directed to the Home screen where you have options to complete a variety of actions using the navigation pane on the left side of the screen.
+When you sign in, you'll be directed to the Home screen where you have options to complete a variety of actions on the page or using the navigation pane on the left side of the screen.
 
 ![Figure 4. FeatureBase Home Screen](/assets/images/quick-start-guide/cloud/home_page.png)
 
-
 ## Configuring your environment
 
-In order to use our application, you’ll need data. In a real-life situation, the FeatureBase team will provide guided onboarding and data modeling for our organization’s data. In this exercise, we’ll be working with curated demo data to showcase the low-latency capabilities of FeatureBase. Navigate to the ```Databases``` screen, click "New Database", and select ```Start with pre-loaded sample data``` to create a database pre-loaded with the demo data. You may need enter a Database name if this isn't your first Database.
+In order to use FeatureBase, you’ll need data. In a real-life situation, the FeatureBase team will provide guided onboarding and data modeling for our organization’s data. In this exercise, we’ll be working with curated demo data to showcase the low-latency capabilities of FeatureBase. From the ```Home``` screen, you'll see three options: **Start Small**, **Start with a billion records**, and **Make something custom**. Note these options only show when you have no databases in you organization. For this guide, click "CREATE" under **Start with a billion records** to create a database named "customer_segmentation_db" that is pre-loaded with the demo data. This can also be accomplished [using the Databases page](/docs/cloud/cloud-databases/cloud-db-create-sample/)
 
->This is a great time to grab a cup of coffee or reply to all those waiting Slack messages! A new database is spinning up and over 1B records are loading.
+>This is a great time to grab a cup of coffee or reply to all those waiting Slack messages! A new database is spinning up and over 1B records are loading. Alternatively, you can browse the linked cookbooks and content on the home page. These are there to help you start interacting with FeatureBase cloud, as well as keep you updated on new releases and functionality.
 
-![Figure 5. Configure a Quick Start Database that is pre-loaded with demo data](/assets/images/quick-start-guide/cloud/create_cseg_db.png)
-
-
-While the database is spinning up, you will see updates to "Status" on the ```Databases``` section as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database. 
+While the database is spinning up, you will see updates to "Status" on the ```Home``` page as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the creation process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database. 
 
 ![Figure 6. New Database: PROVISIONING](/assets/images/quick-start-guide/cloud/db_creating.png)
 
@@ -66,7 +59,7 @@ While the database is spinning up, you will see updates to "Status" on the ```Da
 ![Figure 7. New Database: Running](/assets/images/quick-start-guide/cloud/db_running.png)
 
 
-After about 10 minutes, the database status will progress to ```RUNNING```, and you can click on the database name and check the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. Additionally, you will some system tables that contain information about your database. In the next section, we will perform a variety of common analytical queries on both datasets.
+After about 10 minutes, the database status will progress to ```RUNNING``` and some [database metrics](/docs/cloud/cloud-databases/cloud-db-metrics/) will populate on the page. Click on "All Details" under the database name and then the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. Additionally, you will some system tables that contain information about your database. In the next section, we will perform a variety of common analytical queries on both datasets.
 
 ![Figure 8. Demo Data restored into tables from backup](/assets/images/quick-start-guide/cloud/tables_page_with_cseg.png)
 
@@ -157,8 +150,6 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 
 >NOTE: Included in the stock dataset is a table known as skills, please use the discovery queries to take a look!
-
-
 
 ### TopK - A FeatureBase Superpower
 
