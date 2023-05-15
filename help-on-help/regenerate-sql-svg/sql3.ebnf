@@ -14,7 +14,8 @@ statement = show_tables
       | show_create_table
       | drop_table
       | create_table_stmt
-      | create_view_stmt      
+      | create_view_stmt     
+      | kill_query_stmt 
       | alter_table_stmt
       | select_stmt
       | insert_stmt
@@ -77,6 +78,15 @@ column_def = identifier, type_name, { column_constraint } ;
 
 *)
 create_view_stmt = "CREATE", "VIEW", [ "IF", "NOT", "EXISTS" ], identifier, "AS", select_statement ;
+
+(*
+
+  KILL QUERY
+  ----------------
+  Cancels a running query.
+
+*)
+kill_query_stmt = "KILL", "QUERY", string_literal;
 
 (*
 

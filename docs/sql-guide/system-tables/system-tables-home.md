@@ -25,10 +25,12 @@ The fb_database_nodes table provides a listing of all the cluster nodes or worke
 
 ## fb_exec_requests
 
-The fb_exec_requests table provides a query log of requests executed by node.
+The fb_exec_requests table provides a query log of requests executed (and executing) by node.
 
 {: .note }
-This table will only keep the latest 2000 records (queries). Additionally, the `sql` and `plan` columns are limited to 4000 characters each.
+This table will only keep the latest 2000 records (queries). Additionally, the `sql` and `plan` columns are limited to 4000 characters each. 
+
+{% include /sql-guide/query-status.md %}
 
 ## fb_table_ddl
 
