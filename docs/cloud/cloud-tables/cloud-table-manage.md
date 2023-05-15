@@ -36,9 +36,7 @@ Perform data modeling **before** creating tables to avoid issues.
 
 ## Column data types and constraints
 
-{% include /cloud-table/cloud-summary-table-pk.md%}
-
-<!--* [Learn about data types and constraints](/docs/sql-preview/data-types/data-types-home)-->
+* [Learn about data types and constraints](/docs/sql-preview/data-types/data-types-home)
 
 ## Naming standard
 
