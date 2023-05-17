@@ -5,7 +5,7 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-## `max-map-count` reference
+# `max-map-count` reference
 {: .no_toc }
 
 Linux systems limit memory maps for processes and users.

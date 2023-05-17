@@ -24,13 +24,16 @@ You can run SQL Queries against your FeatureBase Community database using the fo
 
 ## FeatureBase Query editor
 
-Use the Query editor to run single-line PQL and SQL queries against your database indexes.
+Use the Query editor to run PQL and SQL queries against your database indexes.
 
 You can view a list of:
 
 * available indexes
 * queries you've run
 * execution errors
+
+{: .important}
+The query editor does not support multi-line statements even when separated by semicolon or blank lines.
 
 ## FeatureBase Query builder
 

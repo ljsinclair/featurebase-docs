@@ -17,3 +17,11 @@ $link-color: $purple-000;
 
 // Code
 $code-background-color: #F7F7FB;
+
+// Syntax highlighting with dark purple text
+// makes code block legible in table headings
+
+.language-plaintext, .highlighter-rouge {
+ color: #221051
+
+}

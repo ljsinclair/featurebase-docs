@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # REVERSE() function
 
-`Reverse()` function reverses all instances of a specified string in the selected column.
+`REVERSE()` function reverses all instances of a specified string in the selected column.
 
 ## Syntax
 

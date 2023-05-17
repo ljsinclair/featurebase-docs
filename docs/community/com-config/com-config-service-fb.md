@@ -5,7 +5,7 @@ parent: Community configuration
 grand_parent: Community
 ---
 
-## How do I setup FeatureBase Community to automatically start?
+# How do I setup FeatureBase Community to automatically start?
 {: .no_toc }
 
 You can setup FeatureBase to automatically start using the Linux systemd service.

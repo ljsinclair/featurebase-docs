@@ -7,7 +7,7 @@ nav_order: 11
 has_toc: false
 ---
 
-# Backup and Restore FeatureBase Community Databases
+# How do I backup and Restore FeatureBase Community Databases?
 {: .no_toc }
 
 FeatureBase Community databases can be backed-up and restored for a number of reasons, including the following:
