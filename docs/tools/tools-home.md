@@ -18,3 +18,4 @@ Tools allow users to interact with FeatureBase in different ways. As we expand t
 ## Tools
 
 * [fbsql](/docs/tools/fbsql/fbsql-home)
+* [Python client library](/docs/tools/python-client-library/python-client-library-home)
