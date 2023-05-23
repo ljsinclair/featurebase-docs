@@ -176,8 +176,9 @@ More complex, the next query returns the top ten hobbies among females who also 
 Another query commonly seen in aggregation-related use cases is the ```GROUP BY```. For example, let’s group by the hobbies counting only those with ultimate ```COUNT``` above 200,000,000.
 
 ```sql
-SELECT  hobbies, COUNT(*) as cnt
+SELECT hobbies, COUNT(*) as cnt
 FROM cseg
+WITH (flatten(hobbies))
 GROUP BY hobbies
 HAVING COUNT(*) > 200000000
 ORDER BY cnt DESC;
@@ -191,6 +192,7 @@ Another useful facet of ```GROUP BY``` is the ability to add an aggregate argume
 ```sql
 SELECT education, SUM(income)
 FROM cseg
+WITH (flatten(education))
 WHERE age=18
 GROUP BY education;
 ```
@@ -253,8 +255,9 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 ### Grouping with Complex Conditions
 
 ```sql
-SELECT  hobbies, COUNT(*) as cnt
+SELECT hobbies, COUNT(*) as cnt
 FROM cseg
+WITH (flatten(hobbies))
 GROUP BY hobbies
 HAVING COUNT(*) > 200000000
 ORDER BY cnt DESC;
@@ -263,6 +266,7 @@ ORDER BY cnt DESC;
 ```sql
 SELECT education, SUM(income)
 FROM cseg
+WITH (flatten(education))
 WHERE age=18
 GROUP BY education;
 ```
