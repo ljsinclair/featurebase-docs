@@ -7,6 +7,12 @@ nav_order: 2
 
 # Data Modeling - Part 2 - Mapping
 
+Three mapping actions take place during data modeling:
+
+* Mapping source to destination data types
+* Determining if source data can be imported using the `SET` or `SETQ` data types
+* Determining data to use as a unique identifier for each row to be imported
+
 ## Mapping to FeatureBase data types
 
 | Data type | Represented as | Support | Additional information |
@@ -16,7 +22,7 @@ nav_order: 2
 | `ID` |  |  |
 | `IDSET` |  |  |
 | `IDSETQ` |  |  |
-| `INT` | Bitstrings to reduce storage overheads | Range queries |  |
+| `INT` |  | Range queries |  |
 | `STRING` |  |  |
 | `STRINGSET` |  |  |
 | `STRINGSETQ` |  |  |
@@ -80,12 +86,15 @@ At millisecond granularity, it would use 4.9MB per million records.
 
 -->
 
+## SET/SETQ (working title)
+
 THEN INSERT:
 
 SET/SETQ info (there's a version of this in the concepts-rewrites branch)
 
 
-## Mapping the `_id` column
+## Determine the unique identifier
+
 
 THEN rewrite content fropm concept_ingest_id (also rewritten in concepts-rewrites branch)
 
