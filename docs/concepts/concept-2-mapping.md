@@ -71,6 +71,9 @@ THEN INSERT:
 
 SET/SETQ info (there's a version of this in the concepts-rewrites branch)
 
+
+## Mapping the `_id` column
+
 THEN rewrite content fropm concept_ingest_id (also rewritten in concepts-rewrites branch)
 
 
