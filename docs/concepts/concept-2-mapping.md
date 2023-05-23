@@ -7,10 +7,23 @@ nav_order: 2
 
 # Data Modeling - Part 2 - Mapping
 
+## Mapping to FeatureBase data types
+
+| Data type | Represented as | Support | Additional information |
+|---|---|
+| `BOOLEAN` |  |  |
+| `DECIMAL` |  |  |
+| `ID` |  |  |
+| `IDSET` |  |  |
+| `IDSETQ` |  |  |
+| `INT` | Bitstrings to reduce storage overheads | Range queries |  |
+| `STRING` |  |  |
+| `STRINGSET` |  |  |
+| `STRINGSETQ` |  |  |
+| `TIMESTAMP` |  |  |
 
 
 <!--ORIGINAL CONTENT FROM overview-data-modeling.md
-
 
 ### Numeric Types
 

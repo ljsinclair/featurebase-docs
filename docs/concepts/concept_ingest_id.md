@@ -9,6 +9,8 @@ has_children: false
 
 When ingesting into FeatureBase, each record must be associated with a key.
 
+<!--only applies to community cli ingest-->
+
 Ingesters support four ways to do this, three suitable for production workloads:
 
 - `primary-key-fields`,
