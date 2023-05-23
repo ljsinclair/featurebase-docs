@@ -2,6 +2,7 @@
 title: Star schema example
 layout: default
 parent: Concepts
+nav_order: 10
 ---
 
 # Concepts - importing data from a star schema
@@ -15,12 +16,14 @@ The star schema is an approach used to build data warehouses and features tables
 
 * [Learn more about star schemas, fact and dimension tables](https://en.wikipedia.org/wiki/Star_schema){:target="_blank"}
 
-## Example problem
+## Problem description
 
 A sales database is setup with a star schema featuring:
 
 * A central **Fact** table that records sales over the past 20 years
 * Three **Dimension** tables that contain attributes related to those sales.
+
+SCREENSHOT HERE
 
 A query to determine sales of specific items take a long time to run because:
 * the fact table has millions of rows
@@ -33,6 +36,9 @@ The organization wants to avoid redesigning the database if possible and wants t
 {% include /concepts/concept-data-modeling-process-table.md %}
 
 ## Analysis
+
+Analysis needs to identify the specific table columns being queried to determine how they will map to FeatureBase data types in the next step.
+
 
 
 
@@ -73,4 +79,22 @@ Based on the analysis, the table row data types map as follow:
 |  |
 |
 
-##
+## Mapping
+
+
+
+## Destination
+
+
+
+## Method
+
+
+
+
+## Testing
+
+
+
+
+## Production
