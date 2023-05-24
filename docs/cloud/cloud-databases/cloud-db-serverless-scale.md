@@ -30,7 +30,7 @@ This section needs to move to SQL once out of preview and replaced with a UI met
 ### Syntax 
 
 ```sql
-ALTER DATABASE {database-name}[WITH UNITS {<int-workers>}];
+ALTER DATABASE {database-name}[WITH WORKERS {<int-workers>}];
 ```
 
 ###  Arguments
@@ -38,7 +38,7 @@ ALTER DATABASE {database-name}[WITH UNITS {<int-workers>}];
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `database-name` | Name of existing database to alter | Yes |  |
-| WITH UNITS `<int-workers>` | Integer value of Worker units to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
+| WITH WORKERS `<int-workers>` | Integer value of Workers to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
 
 ## Additional information
 
@@ -51,7 +51,7 @@ ALTER DATABASE {database-name}[WITH UNITS {<int-workers>}];
 ## Examples
 
 ```sql
-ALTER DATABASE my-db WITH UNITS 3;
+ALTER DATABASE my-db WITH WORKERS 3;
 ```
 
 ## Next step

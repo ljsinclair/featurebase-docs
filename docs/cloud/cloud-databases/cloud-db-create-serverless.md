@@ -40,7 +40,7 @@ This section needs to move to SQL once out of preview
 ### Syntax 
 
 ```sql
-CREATE DATABASE {database-name} [WITH UNITS {<int-workers>}];
+CREATE DATABASE {database-name} [WITH WORKERS {<int-workers>}];
 ```
 
 ###  Arguments
@@ -48,7 +48,7 @@ CREATE DATABASE {database-name} [WITH UNITS {<int-workers>}];
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `database-name` | Name of existing database to alter | Yes |  |
-| WITH UNITS `<int-workers>` | Integer value of Worker units to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
+| WITH WORKERS `<int-workers>` | Integer value of Workers to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
 
 ## Additional information
 
@@ -61,7 +61,7 @@ CREATE DATABASE {database-name} [WITH UNITS {<int-workers>}];
 ## Examples
 
 ```sql
-CREATE DATABASE my-db WITH UNITS 1;
+CREATE DATABASE my-db WITH WORKERS 1;
 ```
 
 ## Next step

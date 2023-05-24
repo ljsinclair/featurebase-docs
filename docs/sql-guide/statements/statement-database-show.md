@@ -28,7 +28,7 @@ SHOW DATABASES
 | `updated_by`| the unique identifier of the user that made the last update to the databse |
 | `create_at` | the timestamp when the database was created |
 | `updated_at` | the timestamp when the database was last modified |
-|`units`| the number of compute nodes in the database | 
+|`workers`| the number of compute nodes in the database | 
 |`description`| the textual description of the database |
 
 ## Examples
