@@ -26,11 +26,11 @@ Import involves a 4-step process:
 
 | Step | Description | Additional information |
 |---|---|---|
-| Accumulate | Take a copy of data from the source in batches | [Data modeling analysis](/docs/concepts/concept-1-analysis) |
-| Translate | Obtain and map supplied row key to data  | [Mapping the `_id` column](/docs/concepts/concept-2-mapping#mapping-the-id-column) |
+| Accumulate | Take a copy of data from the source in batches | [Data modeling analysis](/docs/concepts/concept-dm1-analysis) |
+| Translate | Obtain and map supplied row key to data  | [Mapping the `_id` column](/docs/concepts/concept-dm2-mapping#mapping-the-id-column) |
 | Conversion | Batched data is converted using Range encoding and Bit slicing then into Roaring Bitmap Format | * [Range encoding](https://en.wikipedia.org/wiki/Range_coding){:target="_blank"}<br/>* [Bit slicing](https://en.wikipedia.org/wiki/Bit_slicing){:target="_blank"}<br/>* [Roaring Bitmap](https://www.roaringbitmap.org/){:target="_blank"} |
-| Flushing | A transaction ID is obtained to lock tables then data is copied to the destination | [Creating destination tables](/docs/concepts/concept-3-destination) |
+| Flushing | A transaction ID is obtained to lock tables then data is copied to the destination | [Creating destination tables](/docs/concepts/concept-dm3-destination) |
 
 ## Next step
 
-* [Part 5 - Testing](/docs/concepts/concept-5-testing)
+* [Part 5 - Testing](/docs/concepts/concept-dm5-testing)

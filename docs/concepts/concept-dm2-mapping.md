@@ -114,4 +114,4 @@ THEN rewrite content fropm concept_ingest_id (also rewritten in concepts-rewrite
 
 ## Next step
 
-* [Part 3 - Destination](/docs/concepts/concept-3-destination)
+* [Part 3 - Destination](/docs/concepts/concept-dm3-destination)

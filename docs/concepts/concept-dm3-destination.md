@@ -13,4 +13,4 @@ nav_order: 3
 
 ## Next step
 
-* [Part 4 - Method](/docs/concepts/concept-4-method)
+* [Part 4 - Method](/docs/concepts/concept-dm4-method)

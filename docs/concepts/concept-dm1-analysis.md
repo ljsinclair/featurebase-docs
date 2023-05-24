@@ -13,4 +13,4 @@ nav_order: 1
 
 ## Next step
 
-* [Part 2 - Mapping](/docs/concepts/concept-2-mapping)
+* [Part 2 - Mapping](/docs/concepts/concept-dm2-mapping)
