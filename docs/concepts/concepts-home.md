@@ -9,3 +9,5 @@ has_toc: true
 # FeatureBase concepts
 
 High level conceptual information about FeatureBase features.
+
+## Data modeling
