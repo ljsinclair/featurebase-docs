@@ -10,7 +10,7 @@ nav_order: 2
 Three mapping actions take place during data modeling:
 
 * Mapping source to destination data types
-* Determining if source data can be imported using the `SET` or `SETQ` data types
+* [HIGH LEVEL REASON FOR USING SET DATA TYPES]
 * Determining data to use as a unique identifier for each row to be imported
 
 ## Mapping to FeatureBase data types
@@ -86,11 +86,24 @@ At millisecond granularity, it would use 4.9MB per million records.
 
 -->
 
-## SET/SETQ (working title)
+## [REASON SET DATATYPES USEFUL]
 
-THEN INSERT:
+For example, `GROUP BY` and `UNION` clauses are typically used when querying data spread across multiple tables, columns and rows. As data increases these queries become less efficient
 
-SET/SETQ info (there's a version of this in the concepts-rewrites branch)
+The FeatureBase `SET` and `SETQ` data types are used to reduce reliance on these clauses and streamline data.
+
+## The `SET` datatype
+
+{% include /concepts/concept-set-datatype-summary.md%}
+
+## The `SETQ` datatype
+
+{% include /concepts/concept-setq-datatype-summary.md%}
+
+{% include /sql-guide/sql-timequantum-extra.md %}
+
+{% include /sql-guide/sql-ttl-extra.md %}
+
 
 
 ## Determine the unique identifier
