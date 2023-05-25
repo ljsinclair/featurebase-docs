@@ -12,92 +12,48 @@ FIRST DRAFT
 {: .note}
 While FeatureBase is a Bitmap index, we refer to Tables and columns rather than indexes for ease of understanding.
 
-In traditional databases, data is saved to different tables to:
-* avoid duplication which would slow queries down
-* reduce the storage footprint
+## Relationships between data
 
-RAID https://en.wikipedia.org/wiki/Cardinality_(data_modeling)
+Cardinality describes the numerical relationship between different tables and their rows which may be described as:
 
-However, indexes and JOINS become unwieldly and queries slow down once the [DATA DENSITY? Need official term] reaches a certain point.
+| Cardinality | Example |
+|---|---|
+| one to one | Relationship between student ID and student name |
+| one to many | Relationship between student name and the subjects they are taking |
+| many to many | Relationship between the educational institution, lecturers, students and resources |
 
-DBAs engage in database tuning to overcome this problem and may in certain cases need to redesign some or all the database.
+## Using cardinality to help design relationships between tables
 
-FeatureBase overcomes this problem in 2 ways.
+**Normalizing** is the act of identifying the cardinality of your data in order to design the relationships between different tables.
 
-| Solution | Description | Benefit | Cost |
+For example, a data warehouse run by a state meteorology department may setup a database with the following attributes:
+
+| Table | Description | Example |
 |---|---|---|
-| Encoding and conversion | Ingestion converts source data in batches to base-2, range-encodes and bit slices before saving to FeatureBase | Data footprint can be reduced by up to 10% |
-| Flat files | All ingested data is saved to a single flat file which is structured based on:<br/>* how the data is keyed<br/>* the queries you want to run | Simpler queries with no joins | Higher data footprint |
+| Dimension | Descriptive information that remains relatively constant is saved to one or more tables | * Name and location of weather stations around a city<br/>* Equipment inventory within each weather station |
+| Fact | Regularly updated values are saved to a central table with foreign keys linking to Dimension tables | time-stamped readings at each station from temperature, wind, UV and humidity equipment |
 
-## How does FeatureBase overcome the duplication problem?
+## Pros and cons of data normalization
 
-FeatureBase supplies a number of data types which help avoid the very duplication that multiple RDBMS tables overcome.
+| Pro | Con |
+|---|---|
+| Less duplication of data means faster inserts, updates and a smaller footprint | `JOIN` clauses are required to query data which makes queries more complex and therefore slower to return results |
+| Normalized databases make maintaining data integrity easier | Data in separate tables makes indexing less efficient |
 
-### An array of values in a single row
+DBAs engage in database tuning to overcome these issues, and may in certain cases denormalize the data to improve query response.
 
-The `SET` data type allows you to create an array of values in a table cell [OFFICIAL TERM LATER].
+## How does FeatureBase overcome these issues?
 
-For example:
+To avoid the problems inherent with normalized databases, FeatureBase denormalises all data, saving to a flat structure which:
+* removes the need for `JOIN` clauses
+* makes data indexing more efficient
 
-| sepal_len_cm | sepal_wid_cm | petal_len_cm | petal_wid_cm | class |
-| 4.8 | 3.0 | 1.4 | 0.3 | Iris-setosa |
-| 5.1 | 3.8 | 1.6 | 0.2 | Iris-setosa |
-| 4.6 | 3.2 | 1.4 | 0.2 | Iris-setosa |
-| 5.3 | 3.7 | 1.5 | 0.2 | Iris-setosa |
-| 5.0 | 3.3 | 1.4 | 0.2 | Iris-setosa |
-| 7.0 | 3.2 | 4.7 | 1.4 | Iris-versicolor |
-| 6.4 | 3.2 | 4.5 | 1.5 | Iris-versicolor |
-| 6.9 | 3.1 | 4.9 | 1.5 | Iris-versicolor |
-| 5.5 | 2.3 | 4.0 | 1.3 | Iris-versicolor |
-| 6.5 | 2.8 | 4.6 | 1.5 | Iris-versicolor |
-| 6.3 | 3.3 | 6.0 | 2.5 | Iris-virginica |
-| 5.8 | 2.7 | 5.1 | 1.9 | Iris-virginica |
-| 7.1 | 3.0 | 5.9 | 2.1 | Iris-virginica |
-| 6.3 | 2.9 | 5.6 | 1.8 | Iris-virginica |
-| 6.5 | 3.0 | 5.8 | 2.2 | Iris-virginica |
+The issues with denormalized data are solved as follows:
 
-For a FeatureBase table:
-* The class becomes the unique key
-* the other columns are [turned into?] `SET` fields
-
-The result:
-<table>
-  <tr>
-    <th>sepal_len_cm</th>
-    <th>sepal_wid_cm</th>
-    <th>petal_len_cm</th>
-    <th>petal_wid_cm</th>
-    <th>Class</th>
-  </tr>
-  <tr>
-    <td>4.8</td>
-    <td>3.0</td>
-    <td>1.4</td>
-    <td>0.3</td>
-    <td rowspan="5">Iris-setosa</td>
-  </tr>
-  <tr>
-    <td>5.1</td>
-    <td>3.8</td>
-    <td>1.6</td>
-    <td>0.2</td>
-  </tr>
-  <tr>
-    <td>4.6</td>
-    <td>3.2</td>
-    <td>1.4</td>
-    <td>0.2</td>
-  </tr>
-  <tr>
-    <td>5.5</td>
-    <td>3.7</td>
-    <td>1.5</td>
-    <td>0.2</td>
-  </tr>
-  <tr>
-    <td>5.0</td>
-    <td>3.3</td>
-    <td>1.4</td>
-    <td>0.2</td>
-  </tr>
-</table>
+| Solution | Benefit | Additional information |
+|---|---|---|
+| Ingestion converts source data in batches to base-2, range-encoded and bit sliced indexes before saving to a destination table | Data footprint can be reduced by up to 10% | [Learn about ingestion](/docs/concepts/concept-ingestion) |
+| `SETQ` data types can be used with timestamped data to automatically remove data. | Data footprint reduced after set time. | [Learn about SETQ data types](/docs/concepts/concept-setq) |
+| Data integrity | * All ingested data is uniquely identified with a string or integer | [Learn how the `_id` column is used](/docs/concepts/concept-table-id) |
+| data duplication | `SET` data type address one-to-many cardinality in a single row | [Learn about `SET` data types](/docs/concepts/concept-datatype-set) |
+| Upsert rules for insert and update | Data integrity can be maintained because specific rules govern insertion and update actions | [Learn how Upsert works](/docs/concepts/concept-upsert)
