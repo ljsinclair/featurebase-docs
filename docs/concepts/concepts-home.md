@@ -29,10 +29,9 @@ Low cardinality data has a one-to-one relationship with data in each row and col
 
 One-to-many and many-to-many cardinality cannot be represented in a two dimensional table because values become duplicated:
 
-| StudentID | Subjects |
-|---|---|
-| 01 | English, French, History |
-| 02 | French, Geography, Finance |
+{% include /concepts-concept-eg1-one-many.md %}
+
+
 
 | StudentID | Subject |
 |---|---|

@@ -19,3 +19,8 @@ discuss:
 * base 2 conversion --
 * range encoding
 * bit slicing
+
+
+References
+
+* bitmap encoding -- https://www.featurebase.com/blog/range-encoded-bitmaps
