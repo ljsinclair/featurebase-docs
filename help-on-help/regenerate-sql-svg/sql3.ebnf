@@ -155,6 +155,15 @@ bulk_insert_stmt = "BULK", ( "INSERT" | "REPLACE" ), "INTO", table_name, [ colum
 
 (*
 
+  BULK INSERT Data Flow
+  ----------------
+  Bulk insert takes data through separate steps
+
+*)
+bulk_insert_steps = "SOURCE DATA", "MAP DATA", [ "TRANSFORM DATA" ], "INSERT DATA" ;
+
+(*
+
   Examples
   ----------------
 
@@ -201,8 +210,11 @@ bulk_insert_option =
     | "ROWSLIMIT", integer_literal
     | "INPUT", string_literal
     | "FORMAT", string_literal
+    | "NULL_AS_EMPTY_SET"
     | "ALLOW_MISSING_VALUES"
-    | "HEADER_ROW" ;
+    | "HEADER_ROW"
+    | "CSV_EMPTY_STRING_AS_NULL"
+    | "CSV_NULL_AS_NULL" ;
 
 (*
 

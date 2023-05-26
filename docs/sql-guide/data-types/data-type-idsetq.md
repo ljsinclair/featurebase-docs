@@ -39,10 +39,6 @@ Use the INT data type to perform range queries using `<` or `>`
 
 {% include /sql-guide/ttl-additional.md %}
 
-## Update Behavior
-
-{% include /sql-guide/timequantum_updates.md %}
-
 ## Examples
 
 ### CREATE TABLE with all data types

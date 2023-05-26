@@ -37,6 +37,19 @@ INSERT INTO
 | column_list | List of columns which must include the `_id` column | Optional | FeatureBase assumes values to be inserted into existing columns if omitted |
 | value_list | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | The length of the value_list must match the length of the column_list. |
 
+## Value assignment
+There are special assignments for certain literal values.
+
+| Literal Value | Target Data Type | Resultant | Further information |
+|---|---|---|---|
+| `,'',` | `string`| `''` (empty string) | |
+| `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |
+| `[]` | `stringset` <br/>`idset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
+
+## UPDATE/REPLACE behavior
+
+{% include /sql-guide/update_behavior.md %}
+
 ## Examples
 
 ### CREATE products and sales tables and columns with string data types

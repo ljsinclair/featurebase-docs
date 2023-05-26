@@ -30,10 +30,6 @@ TIMESTAMP [TIMEUNIT {value}]
 
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
-## Update Behavior
-
-{% include /sql-guide/mutex_updates.md %}
-
 ## Examples
 
 ### Implicitly convert integer to timestamp

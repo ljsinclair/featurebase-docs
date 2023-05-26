@@ -34,10 +34,6 @@ If data has high cardinality:
 * performance can decrease
 * storage will increase
 
-## Update Behavior
-
-{% include /sql-guide/mutex_updates.md %}
-
 ## Examples
 
 ### CREATE products and sales tables and columns with string datatypes
