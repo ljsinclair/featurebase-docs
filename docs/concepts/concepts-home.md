@@ -11,7 +11,7 @@ In traditional database design, the relationships between data is the starting p
 
 The relationships between data is called **Cardinality** whilst the act of arranging the data is called **Normalization**.
 
-## Relationships between data
+## Cardinality describes relationships between data
 
 The cardinality of data can be expressed as follows:
 
@@ -19,16 +19,11 @@ The cardinality of data can be expressed as follows:
 * One-to-many
 * Many-to-many
 
-### One-to-one cardinality
+### One-to-one or low cardinality
 
-One-to-one cardinality contains no duplication so can be represented in a two dimensional table:
+Low cardinality data has a one-to-one relationship with data in each row and column. Low cardinality data can be represented in a two dimensional table:
 
-| StudentID | Student_name | Student_surname |
-|---|---|---|
-| 01 | Charles | Voss |
-| 02 | Regina | Lambert |
-| 03 | Peter | Joshua |
-| 04 | Herman | Scobie |
+{% include /concepts/concept-eg-low-cardinality.md %}
 
 ## One-to-many and many-to-many cardinality
 
@@ -95,3 +90,7 @@ To overcome issues with normalized data, FeatureBase represents all data in a de
 
 
 DATA MODELING
+
+## Further information
+
+* [Cardinality(data modeling) on Wikipedia](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)){:target="_blank"}
