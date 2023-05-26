@@ -7,9 +7,29 @@ nav_order: 4
 
 # How does FeatureBase overcome the duplication problem?
 
+FeatureBase denormalises data and saves to a single table rather than dividing it up into tables.
+
+This may result in extensive duplication.
+
+## Before you begin
+
+* [Learn how FeatureBase differs to a traditional database](/docs/concepts/concepts-home)
+
+## Data cardinality and RDBMS tables
+
+Cardinality describes the numerical relationship between different tables and their rows which may be described as:
+
+| Cardinality | Example |
+|---|---|
+| one to one | Relationship between student ID and student name |
+| one to many | Relationship between student name and the subjects they are taking |
+| many to many | Relationship between the educational institution, lecturers, students and resources |
+
 In a traditional database, a one-to-many cardinality between data is resolved by normalizing the data and creating multiple tables.
 
 As FeatureBase ingests data in a flat, denormalized structure, there is a resulting duplication of data.
+
+## How does FeatureBase overcome the duplication problem?
 
 This duplication can be resolved using `SET` data types which remove duplication by creating an array of values in a single row.
 
