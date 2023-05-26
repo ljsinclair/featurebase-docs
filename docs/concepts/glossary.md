@@ -127,6 +127,7 @@ nav_order: 1
 | Term | Context | Further information |
 |---|---|---|
 | Node | FeatureBase Community Cluster | An individual running instance of FeatureBase server which belongs to a cluster. |
+| Normalizing | The act of identifying the cardinality of your data in order to design the relationships between different tables. | [FeatureBase concepts](/docs/concepts/concepts-home) |
 | NOT | PQL query | [PQL NOT read query](/docs/pql-guide/pql-read-not) |
 
 ## O
