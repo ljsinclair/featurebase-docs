@@ -72,7 +72,11 @@ TABLE GOES HERE
 
 
 
+## Roaring Bitmap compression
 
+Roaring bitmap compression breaks large sets of integers into containers of 2^16 integers (65536 bits) which makes computation faster.
+
+* [Learn about Roaring Bitmap](https://roaringbitmap.org/about/)
 
 
 

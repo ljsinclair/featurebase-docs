@@ -174,3 +174,12 @@ Using the `SET` data type, the table above is reduced to three rows:
 
 * [IDSET data type](/docs/sql-guide/data-types/data-type-idset)
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+
+<!--further info to veriy if here
+
+
+## The `SET` datatype
+
+{% include /concepts/concept-set-datatype-summary.md%}
+
+-->

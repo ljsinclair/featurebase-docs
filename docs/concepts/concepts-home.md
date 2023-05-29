@@ -82,8 +82,6 @@ The FeatureBase approach is to denormalize data. The issues with this approach a
 
 * [Learn the techniques used before importing data to FeatureBase]
 
-DATA MODELING
-
 ## Further information
 
 * [Cardinality(data modeling) on Wikipedia](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)){:target="_blank"}
