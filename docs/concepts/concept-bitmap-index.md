@@ -5,24 +5,19 @@ parent: Concepts
 nav_order: 1
 ---
 
+NOTE TO SELF, SPLIT THIS INTO A SERIES OF PAGES rather than one huge one.
+
 <!--References:
 * Bitmaps -- https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
 * Row, column oriented method relating to bitmaps -- https://app.slack.com/client/T2M810Z29/C059DQTQGLB
 * bitmap encoding, range encoded bitmaps, bit slice bitmaps -- https://www.featurebase.com/blog/range-encoded-bitmaps
 -->
 
-# How does FeatureBase convert then store my data?
+# How does FeatureBase encode data?
 
-This high-level overview explains the methods FeatureBase uses to convert your data to Roaring Bitmap format before inserting to FeatureBase.
+This high-level overview explains the methods FeatureBase uses to convert your data to base-2, range-encoded bit-sliced indexes.
 
-The following terms are explained with examples:
-* Range encoding
-* Bit slicing
-* Bitmap indexes
-
-{: .important}
-Featurebase presents your data in traditional row and column orientation in the GUI. This is for convenience only and does not represent the underlying data format.
-
+A series of examples are provided to demonstrate the logic.
 
 ## Before you begin
 
@@ -32,6 +27,8 @@ Featurebase presents your data in traditional row and column orientation in the 
 ## Data representation in traditional databases
 
 In traditional databases, the relationships between data is determined by its position in a row and column. For example:
+
+RECREATE THIS AS INCLUDE FILES FOR EACH SUBSEQUENT PAGE
 
 | Species | Vertebrae | Captive |
 |---|---|---|
@@ -111,6 +108,10 @@ For example:
 | ...|  |  |  |
 | 956 | 1 | 1 | 1 | 1 |
 
+## Next step
+
+* [Represent the data in 30 bitmaps using bit-slicing](#)
+
 ### Bit slicing values
 
 Bit slicing can represent numerical values in base 10 using 30 indexes instead of 957.
@@ -170,6 +171,10 @@ Bitmaps are then used to encode these values as follows:
 | 8 | 0 | 0 | 0 | 0 |
 | 9 | 0 | 1 | 0 | 0 |
 
+## Next step
+
+* [Represent the data in 28 bitmaps with range encoding](#)
+
 ### Range encoding bit-sliced index values
 
 Range encoding the bit-slice indexes means the values within the bitmaps representing **9** are set to `1`.
@@ -200,6 +205,10 @@ Adding a **not_null** bitmap in its place means this data is retained:
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | not_null | 1 | 1 | 1 | 1 |
+
+## Next step
+
+* [Represent the data in 10 bitmaps](#)
 
 
 
