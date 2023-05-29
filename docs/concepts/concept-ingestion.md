@@ -13,6 +13,7 @@ nav_order: 1
 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concept-home)
 * [Learn how to use Data modeling to structure data before ingestion](/docs/concepts/concept-data-modeling)
+* [Learn about the unique identifier](/docs/concepts/concept-unique-id)
 
 ##
 

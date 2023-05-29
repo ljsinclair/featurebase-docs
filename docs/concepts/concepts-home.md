@@ -9,27 +9,28 @@ has_toc: true
 
 This high-level overview explains how data is arranged in traditional databases and FeatureBase bitmap databases.
 
-Two concepts will be explained in basic terms:
+Two terms are useful to understand in data modeling:
 * Cardinality -- the relationships between data
-* Normalization -- the act of arranging the data
+* Normalization -- the act of arranging the data to
 
-## Cardinality describes relationships between data
+## What is cardinality?
 
 The cardinality of data can be expressed as follows:
 
-* One-to-one
-* One-to-many
-* Many-to-many
+| Relationship | Cardinality | Dimensions to represent | Example |
+|---|---|---|---|
+| one-to-one | High | Two | User ID, name and password |
+| one-to-many<br/>many-to-many | Low | Three or more |
 
-### One-to-one or low cardinality
+### High cardinality data
 
-Low cardinality data has a one-to-one relationship with data in each row and column. Low cardinality data can be represented in a two dimensional table:
+High cardinality data has a high number of unique relationships which can be represented in a two dimensional table:
 
 {% include /concepts/concept-eg-low-cardinality.md %}
 
-## One-to-many and many-to-many cardinality
+## Low cardinality data
 
-One-to-many and many-to-many cardinality cannot be represented in a two dimensional table because values become duplicated:
+Low cardinality data has a lower number of unique values in relation to a high number of duplications which must be represented in additional dimensions:
 
 {% include /concepts-concept-eg1-one-many.md %}
 

@@ -11,10 +11,18 @@ nav_order: 1
 * bitmap encoding, range encoded bitmaps, bit slice bitmaps -- https://www.featurebase.com/blog/range-encoded-bitmaps
 -->
 
-# How does FeatureBase store data?
+# How does FeatureBase convert then store my data?
+
+This high-level overview explains the methods FeatureBase uses to convert your data to Roaring Bitmap format before inserting to FeatureBase.
+
+The following terms are explained with examples:
+* Range encoding
+* Bit slicing
+* Bitmap indexes
 
 {: .important}
-The FeatureBase GUI and SQL queries represent data in traditional row and column orientation. This discussion concerns how data is stored within the system.
+Featurebase presents your data in traditional row and column orientation in the GUI. This is for convenience only and does not represent the underlying data format.
+
 
 ## Before you begin
 
