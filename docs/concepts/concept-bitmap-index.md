@@ -1,11 +1,19 @@
 ---
-title: Bitmap indexes
+title: Part 1 - Bitmap indexes
 layout: default
 parent: Concepts
 nav_order: 1
 ---
 
-NOTE TO SELF, SPLIT THIS INTO A SERIES OF PAGES rather than one huge one.
+# Part 1 - bitmap indexes
+
+This is the first part in a series of articles that explains how FeatureBase uses bitmaps, bit-slicing and range-encoding to:
+* represent your data
+* reduce the storage overhead of your data
+
+This article demonstrates how data with a one-to-one relationship (high-cardinality) can be represented as equality-encoded bitmaps.
+
+The issues with encoding high-cardinality data are demonstrated which provides context for subsequent parts.
 
 <!--References:
 * Bitmaps -- https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
@@ -13,29 +21,12 @@ NOTE TO SELF, SPLIT THIS INTO A SERIES OF PAGES rather than one huge one.
 * bitmap encoding, range encoded bitmaps, bit slice bitmaps -- https://www.featurebase.com/blog/range-encoded-bitmaps
 -->
 
-# How does FeatureBase encode data?
-
-This high-level overview explains the methods FeatureBase uses to convert your data to base-2, range-encoded bit-sliced indexes.
-
-A series of examples are provided to demonstrate the logic.
-
 ## Before you begin
 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about data cardinality](/docs/concepts/concepts-home#cardinality-describes-relationships-between-data)
 
-## Data representation in traditional databases
-
-In traditional databases, the relationships between data is determined by its position in a row and column. For example:
-
-RECREATE THIS AS INCLUDE FILES FOR EACH SUBSEQUENT PAGE
-
-| Species | Vertebrae | Captive |
-|---|---|---|
-| Manatee | Yes | 3 |
-| Sea Horse | Yes | 956 |
-| Koala | Yes | 19 |
-| Starfish | No | 20 |
+{% include /concepts/concept-eg-species-table.md %}
 
 ## High cardinality data represented as equality-encoded bitmaps
 
