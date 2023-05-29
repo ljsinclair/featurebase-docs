@@ -29,13 +29,16 @@ Featurebase presents your data in traditional row and column orientation in the 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about data cardinality](/docs/concepts/concepts-home#cardinality-describes-relationships-between-data)
 
-## Data storage the traditional way
+## Data representation in traditional databases
 
 In traditional databases, the relationships between data is determined by its position in a row and column. For example:
 
-TABLE GOES HERE
-
-## FeatureBase Bitmap encoding
+| Species | Vertebrae | Captive |
+|---|---|---|
+| Manatee | Yes | 3 |
+| Sea Horse | Yes | 956 |
+| Koala | Yes | 19 |
+| Starfish | No | 20 |
 
 ## High cardinality data represented as equality-encoded bitmaps
 
@@ -43,7 +46,8 @@ High Cardinality data has a one-to-one relationship which means there is no dupl
 
 High Cardinality data works well in bitmaps because the relationship either exists or it does not.
 
-For example, a single bitmap (represented as a row) may be represented as follows:
+For example, the first column values can be represented as a single bitmap:
+
 |  | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | Vertebrate | 1 | 1 | 1 | 0 |
@@ -52,13 +56,11 @@ Those species with a backbone are represented by:
 * 1 if the species has a backbone
 * 0 if the species does not have a backbone
 
-## Low cardinality data representation using range encoding
+## Low cardinality data representation
 
-Low cardinality values have a one-to-many or many-to-many relationship.
+Low cardinality values have a one-to-many or many-to-many relationship. The way the data and relationships are represented requires multiple bitmaps.
 
-For example, species in captivity may be represented in two ways when equality-encoding.
-
-### One bitmap per value
+### Equality encoding one bitmap per value
 
 Specifying a single bitmap per value means the data is accurately recorded, but:
 * a new bitmap must be created each time the captivity numbers change
@@ -69,11 +71,11 @@ For example:
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 3 | 1 | 0 | 0 | 0 |
-| 14 | 0 | 0 | 1 | 0 |
-| 21 | 0 | 0 | 0 | 1 |
+| 19 | 0 | 0 | 1 | 0 |
+| 20 | 0 | 0 | 0 | 1 |
 | 956 | 0 | 1 | 0 | 0 |
 
-### Specify a grouping of values for each bitmap
+### Equality encoding with groups of values
 
 Grouping values reduces the number of bitmaps but data is lost. For example:
 
@@ -82,62 +84,63 @@ Grouping values reduces the number of bitmaps but data is lost. For example:
 | 0-500 | 1 | 0 | 1 | 1 |
 | 5001-1000 | 0 | 1 | 0 | 0 |
 
-### Range encoding the data
+### Range encoding values
 
-Range encoding is similar to equality-encoding the data but also encodes a bit for each bitmap that follows. This means:
-* a bitmap can represent the captivity counts for all animals
-* range queries can be performed using a far smaller number of bitmaps
-* to represent all values requires n+1 bitmaps, in this case 957 bitmaps
+Range encoding the bitmaps:
+* represents all values accurately
+* requires n+1 bitmaps in total, in this case, one bitmap to represent all values between 0 and 956.
 
 For example:
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 1 |
 | 1 | 0 | 0 | 0 | 0 |
 | 2 | 0 | 0 | 0 | 0 |
 | 3 | 1 | 0 | 0 | 0 |
-| 4 | 1 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 0 | 0 |
 | 5 | 1 | 0 | 0 | 0 |
+| ...|  |  |  |
+| 9 | 0 | 0 | 1 | 0 |
+| 10 | 0 | 0 | 1 | 0 |
 | ...|  |  |  |
 | 14 | 1 | 0 | 1 | 0 |
 | 15 | 1 | 0 | 1 | 0 |
 | ...|  |  |  |
-| 21 | 1 | 0 | 1 | 1 |
+| 20 | 1 | 0 | 1 | 1 |
 | ...|  |  |  |
 | 956 | 1 | 1 | 1 | 1 |
 
-### Bit slice indexes
+### Bit slicing values
 
-Bit slice indexes allows the representation of low cardinality data, that is, data with a one-to-many or many-to-many relationships.
+Bit slicing can represent numerical values in base 10 using 30 indexes instead of 957.
 
-A bit sliced index allows groups of values to be represented in a single row.
-
-As a starting point, the data can be encoded as follows:
+To conceptualise bit slicing, the captivity data can be represented as follows:
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
-| Units | 3 | 6 | 4 | 1 |
+| Units | 3 | 6 | 9 | 0 |
 | Tens | 0 | 5 | 1 | 2 |
 | Hundreds | 0 | 9 | 0 | 0 |
 
-Three bit-sliced indexes can then represent the data:
+Bitmaps are then used to encode these values as follows:
 
-### bit sliced units index:
+#### Bitmaps representing units
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
 | 2 | 0 | 0 | 0 | 0 |
 | 3 | 1 | 0 | 0 | 0 |
-| 4 | 0 | 0 | 1 | 0 |
+| 4 | 0 | 0 | 0 | 0 |
 | 5 | 0 | 0 | 0 | 0 |
 | 6 | 0 | 1 | 0 | 0 |
 | 7 | 0 | 0 | 0 | 0 |
 | 8 | 0 | 0 | 0 | 0 |
-| 9 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 0 | 1 | 0 |
 
-#### Bit-sliced tens index
+#### Bitmaps representing tens
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
@@ -152,7 +155,7 @@ Three bit-sliced indexes can then represent the data:
 | 8 | 0 | 0 | 0 | 0 |
 | 9 | 0 | 0 | 0 | 0 |
 
-#### Bit-sliced hundreds index
+#### Bitmaps representing hundreds
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
@@ -167,9 +170,37 @@ Three bit-sliced indexes can then represent the data:
 | 8 | 0 | 0 | 0 | 0 |
 | 9 | 0 | 1 | 0 | 0 |
 
-### Range encoded bit-sliced index
+### Range encoding bit-sliced index values
 
-Adding range-encoding to the three bit sliced indexes means
+Range encoding the bit-slice indexes means the values within the bitmaps representing **9** are set to `1`.
+
+These bitmaps can therefore be removed.
+
+To overcome a situation where a value **only exists** in a bitmap, a **not_null** bitmap is added.
+
+For example, the range-encoding on the **Units** bitmaps results in the following:
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 |
+| 2 | 0 | 0 | 0 | 1 |
+| 3 | 1 | 0 | 0 | 1 |
+| 4 | 1 | 0 | 0 | 1 |
+| 5 | 1 | 0 | 0 | 1 |
+| 6 | 1 | 1 | 0 | 1 |
+| 7 | 1 | 1 | 0 | 1 |
+| 8 | 1 | 1 | 0 | 1 |
+| 9 | 1 | 1 | 1 | 1 |
+
+Removing the `9` bitmap would result in a loss of data for the **Koala**.
+
+Adding a **not_null** bitmap in its place means this data is retained:
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| not_null | 1 | 1 | 1 | 1 |
+
 
 
 
