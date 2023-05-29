@@ -51,17 +51,23 @@ Data normalization is not a perfect solution to data cardinality:
 | Data integrity is easier to maintain | Data in separate tables makes indexing less efficient |
 | Less duplication of data means faster inserts, updates and a smaller footprint | `JOIN` clauses are required to query data which makes queries more complex and therefore slower to return results |
 
-## Overcoming the issues with normalization
+## How issues with normalization are resolved
 
 DBAs responsible for traditional databases use a number of methods to overcome the issues with normalized data and may in certain cases denormalize data if the benefits outweigh the costs.
 
-The FeatureBase approach is to denormalize data. The issues with this approach are addressed as follows:
+FeatureBase presents an alternative method.
+
+## The FeatureBase approach: denormalize all data
+
+By denormalizing data, `JOIN` clauses disappear and indexing is faster.
+
+FeatureBase provides three solutions to the problems of normalized data:
 
 ### Data integrity solutions
 
 | Solution | Additional information |
 |---|---|
-| Source data integrity is guaranteed because FeatureBase ingests data using REST API PUSH or Streaming or via flat files | [Learn about ingestion](/docs/concepts/concept-ingestion) |
+| FeatureBase never alters your data, so data integrity is guaranteed | [Learn about ingestion](/docs/concepts/concept-ingestion) |
 | All rows are uniquely identified with a string or integer value | [Learn how the `_id` column is used](/docs/concepts/concept-table-id) |
 | Specific rules govern insertion and update actions | [Learn how Upsert works](/docs/concepts/concept-upsert) |
 
@@ -75,9 +81,8 @@ The FeatureBase approach is to denormalize data. The issues with this approach a
 
 | Solution | Additional information |
 |---|---|
+| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-bitmap-index) |
 | `SETQ` data types can be used with timestamped data to automatically remove data to continually maintain database size. | Data footprint reduced after set time. | [Learn about SETQ data types](/docs/concepts/concept-setq) |
-| Denormalized data is processed during ingestion using range encoding and bit slicing | [Learn about ingestion](/docs/concepts/concept-ingestion) |
-| Data is converted to base-2 then converted to the FeatureBase implementation of Roaring Bitmaps before insertion into indexes | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-bitmap-index) |
 
 ## Next step
 
