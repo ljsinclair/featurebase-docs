@@ -37,46 +37,139 @@ TABLE GOES HERE
 
 ## FeatureBase Bitmap encoding
 
-In FeatureBase the relationships are represented as an array of ones and zeroes:
-* `1` designates a relationship
-* `0` designates no relationship
+## High cardinality data represented as equality-encoded bitmaps
 
-## Example
+High Cardinality data has a one-to-one relationship which means there is no duplication and the data can be represented easily within the row and column dimensions of a single table.
 
-A table with one-to-many relationships would typically be split into separate tables.
+High Cardinality data works well in bitmaps because the relationship either exists or it does not.
 
-{% include /concepts-concept-eg1-one-many.md %}
+For example, a single bitmap (represented as a row) may be represented as follows:
+|  | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| Vertebrate | 1 | 1 | 1 | 0 |
 
-This data is represented in a bitmap as follows:
+Those species with a backbone are represented by:
+* 1 if the species has a backbone
+* 0 if the species does not have a backbone
 
-| StudentID | English | Finance | French | Geography | History |
-|---|---|---|---|---|---|
-| 01 | 1 | 0 | 1 | 0 | 1 |
-| 02 | 0 | 1 | 1 | 1 | 0 |
+## Low cardinality data representation using range encoding
 
-<!--Note to self -- separate this into 2 bitmaps to make the point -->
+Low cardinality values have a one-to-many or many-to-many relationship.
 
-### Equality encoded bitmaps
+For example, species in captivity may be represented in two ways when equality-encoding.
 
-<!--(SEE Equality-encoded Bitmaps on https://www.featurebase.com/blog/range-encoded-bitmaps)-->
+### One bitmap per value
 
-Benefits and costs
+Specifying a single bitmap per value means the data is accurately recorded, but:
+* a new bitmap must be created each time the captivity numbers change
+* multiple `OR` operations are required to query the captivity numbers.
 
+For example:
 
-### Range encoded bitmaps
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 3 | 1 | 0 | 0 | 0 |
+| 14 | 0 | 0 | 1 | 0 |
+| 21 | 0 | 0 | 0 | 1 |
+| 956 | 0 | 1 | 0 | 0 |
 
+### Specify a grouping of values for each bitmap
 
+Grouping values reduces the number of bitmaps but data is lost. For example:
 
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 0-500 | 1 | 0 | 1 | 1 |
+| 5001-1000 | 0 | 1 | 0 | 0 |
 
+### Range encoding the data
 
+Range encoding is similar to equality-encoding the data but also encodes a bit for each bitmap that follows. This means:
+* a bitmap can represent the captivity counts for all animals
+* range queries can be performed using a far smaller number of bitmaps
+* to represent all values requires n+1 bitmaps, in this case 957 bitmaps
 
-The table above can be represented as follows:
+For example:
 
-TABLE GOES HERE
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 1 | 0 | 0 | 0 | 0 |
+| 2 | 0 | 0 | 0 | 0 |
+| 3 | 1 | 0 | 0 | 0 |
+| 4 | 1 | 0 | 0 | 0 |
+| 5 | 1 | 0 | 0 | 0 |
+| ...|  |  |  |
+| 14 | 1 | 0 | 1 | 0 |
+| 15 | 1 | 0 | 1 | 0 |
+| ...|  |  |  |
+| 21 | 1 | 0 | 1 | 1 |
+| ...|  |  |  |
+| 956 | 1 | 1 | 1 | 1 |
 
-## Advantages of bitmap encoding
+### Bit slice indexes
 
+Bit slice indexes allows the representation of low cardinality data, that is, data with a one-to-many or many-to-many relationships.
 
+A bit sliced index allows groups of values to be represented in a single row.
+
+As a starting point, the data can be encoded as follows:
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| Units | 3 | 6 | 4 | 1 |
+| Tens | 0 | 5 | 1 | 2 |
+| Hundreds | 0 | 9 | 0 | 0 |
+
+Three bit-sliced indexes can then represent the data:
+
+### bit sliced units index:
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 |
+| 2 | 0 | 0 | 0 | 0 |
+| 3 | 1 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 1 | 0 |
+| 5 | 0 | 0 | 0 | 0 |
+| 6 | 0 | 1 | 0 | 0 |
+| 7 | 0 | 0 | 0 | 0 |
+| 8 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 0 | 0 | 0 |
+
+#### Bit-sliced tens index
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 |
+| 2 | 0 | 0 | 0 | 1 |
+| 3 | 0 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 0 | 0 |
+| 5 | 0 | 1 | 0 | 0 |
+| 6 | 0 | 0 | 0 | 0 |
+| 7 | 0 | 0 | 0 | 0 |
+| 8 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 0 | 0 | 0 |
+
+#### Bit-sliced hundreds index
+
+| Captive | Manatee | Sea Horse | Koala | Starfish |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 2 | 0 | 0 | 0 | 0 |
+| 3 | 0 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 0 | 0 |
+| 5 | 0 | 0 | 0 | 0 |
+| 6 | 0 | 0 | 0 | 0 |
+| 7 | 0 | 0 | 0 | 0 |
+| 8 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 1 | 0 | 0 |
+
+### Range encoded bit-sliced index
+
+Adding range-encoding to the three bit sliced indexes means
 
 
 
@@ -86,16 +179,6 @@ Roaring bitmap compression breaks large sets of integers into containers of 2^16
 
 * [Learn about Roaring Bitmap](https://roaringbitmap.org/about/)
 
-
-
-
-FeatureBase reverses the logicrepresenting the relationships as an array of ones and zeroes
-
-
-
-FeatureBase instead store
-
-FeatureBase
 
 
 
