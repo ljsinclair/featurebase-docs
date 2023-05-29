@@ -7,30 +7,118 @@ nav_order: 4
 
 ## Unique identifier (working title)
 
-This high-level overview explains
+Unique identifiers are required for every row of data to be imported to FeatureBase.
 
-unique identifier
-needed for data being imported
+Traditional databases use keys to identify columns in tables. FeatureBase has a similar concept in the `_id` column.
+
+## Before you begin
+
+{: .important}
+You may need to experiment to determine the correct values to use as your `_id`. Featurebase Cloud provides **Development** database settings for this purpose.
+
+## How do I identify the correct `_id`?
+
+The data you wish to import to FeatureBase may have:
+* a single identifier
+* two or more identifiers
+* no unique identifiers
+
+## Data contains single unique identifier
+
+Data that contains a single unique identifier is easiest to conceptualise. For example:
+
+| Name | Surname | Age | UUID | CampusID | Grade |
+|---|---|---|---|---|---|---|
+| Toby | Bandini | 14 | 63a8 | An | 9 |
+| Kham | Thibault | 16 | 98e9 | An | 11 |
+| Neta | Van Ogtrop | 16 | 9ccb | An | 11 |
+| Refilwe | Ahlers | 15 | 7325 | An | 10 |
+| Mitra | Bandini | 17 | 6ed3 | Bo | 12 |
+| Hed | Pahlke | 16 | 62a5 | Bo | 11 |
+| Rani | Knudsen | 15 | bd6c | Bo | 10 |
+| Bahati | Cuesta | 16 | 5651 | Bo | 9 |
+
+## Data contains two unique identifiers
 
 
-Each row in a FeatureBase database has a unique identifier which is found in the `_id` column.
 
-This must be determined before attempting to import data to FeatureBase.
+| Name | Surname | Age | UUID | CampusID | Grade | StudentID |
+|---|---|---|---|---|---|---|---|
+| Toby | Bandini | 14 | 63a8 | An | 9 | An0 |
+| Kham | Thibault | 16 | 98e9 | An | 11 | An1 |
+| Neta | Van Ogtrop | 16 | 9ccb | An | 11 | An2 |
+| Refilwe | Ahlers | 15 | 7325 | An | 10 | An3 |
+| Mitra | Bandini | 17 | 6ed3 | Bo | 12 | Bo1 |
+| Hed | Pahlke | 16 | 62a5 | Bo | 11 | Bo2 |
+| Rani | Knudsen | 15 | bd6c | Bo | 10 | Bo3 |
+| Bahati | Cuesta | 16 | 5651 | Bo | 9 | Bo4 |
+
+## Source data - Students table
 
 
-## Unique identifier data type
 
-The `_id` can be one of two data types:
+| SubjectID | Subject |
+|---|---|
+| Eng | English |
+| Bio | Biology |
+| Geo | Geography |
+| Eco | Economics |
+| Fin | Finance |
+| Sci | General Science |
 
-| Data type | Values | Additional information |
+## Scenario 1 - import all data
+
+If importing all data from the source table, the `UUID` column can be used as the unique identifier
+
+## Scenario 2 - Import year 9 data
+
+
+
+## Scenario 2 - Import Anderson Campus data
+
+There are two ways to key the Anderson Campus data
+
+| UUID | Age | Grade |
 |---|---|---|
-| `id` | integer | [ID data type](/docs/sql-guide/data-types/data-type-id) |
-| `string` | string | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+| 63a8 | 14 | 9 |
+| 98e9 | 16 | 11 |
+| 9ccb | 16 | 11 |
+| 7325 | 15 | 10 |
+
+| Campus | studentID | UUID | Age | Grade |
+|---|---|---|---|---|
+| (string) | (int) | (string) | (int) | (int) |
+| Anderson | 0 | 63a8 | 14 | 9 |
+| Anderson | 1 | 98e9 | 16 | 11 |
+| Anderson | 2 | 9ccb | 16 | 11 |
+| Anderson | 3 | 7325 | 15 | 10 |
 
 
-## How do I identify appropriate values for the `_id` column?
 
-Any unique integer or string value in your source data can be used as a row `_id`. For example, the `UUID` field in the following table:
+
+
+If only the Anderson campus data is to be imported, there are two possible unique identifiers:
+* UUID
+* studentID
+
+| Campus | studentID | UUID | Age | Grade |
+|---|---|---|---|---|
+| (string) | (int) | (string) | (int) | (int) |
+| Anderson | 0 | 63a8 | 14 | 9 |
+| Anderson | 1 | 98e9 | 16 | 11 |
+| Anderson | 2 | 9ccb | 16 | 11 |
+| Anderson | 3 | 7325 | 15 | 10 |
+
+## Scenario 3 - Import student age and grade
+
+| StudentID | Grade | Age |
+|---|---|---|
+| 0 | 9 | 14 |
+
+
+
+
+
 
 | Campus | studentID | UUID | Age | Grade |
 |---|---|---|---|---|
@@ -44,11 +132,19 @@ Any unique integer or string value in your source data can be used as a row `_id
 | Bowie    | 2 | bd6c | 15 | 10 |
 | Bowie    | 3 | 5651 | 16 | 10 |
 
-## What if my table has no unique identifier?
 
-{: .important}
-This method is not available if importing data using the SQL `BULK IMPORT`
-statement.
+## Example 2 - the data has two or more identifiers
+
+The
+
+| PK(_id)| INCIDENT_NUMBER | OFFENSE_CODE | OFFENSE_CODE_GROUP | OCCURRED_ON_DATE |
+| ------- | ------------ | ------------ | ------------ | ------------ |
+| 1 | I162097077 | 00735 | Auto Theft Recovery | 2016-11-28T12:00:00Z |
+| 2 | I162097077 | 01300 | Recovered Stolen Property | 2016-11-28T12:00:00Z |
+| 3 | I162097077 | 03125 | Warrant Arrests | 2016-11-28T12:00:00Z |
+
+
+## Example 3 - the data has no unique identifier
 
 In this example, the `IRIS_CLASS_MEASUREMENTS` table has no unique ID:
 
