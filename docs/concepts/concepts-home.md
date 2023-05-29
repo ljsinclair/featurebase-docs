@@ -9,7 +9,6 @@ has_toc: true
 
 This high-level overview explains how data is arranged in traditional databases and FeatureBase bitmap databases.
 
-Two terms are useful to understand in data modeling:
 * Cardinality -- the relationships between data
 * Normalization -- the act of arranging the data to
 
@@ -20,7 +19,8 @@ The cardinality of data can be expressed as follows:
 | Relationship | Cardinality | Dimensions to represent | Example |
 |---|---|---|---|
 | one-to-one | High | Two | User ID, name and password |
-| one-to-many<br/>many-to-many | Low | Three or more |
+| one-to-many<br/>many-to-many | Low | Three or more | Single account used to access multiple services |
+| many-to-many | Low | Three or more | A password manager used to record muliple account usernames and passwords for multiple services |
 
 ### High cardinality data
 
