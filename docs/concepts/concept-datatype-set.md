@@ -1,7 +1,8 @@
 ---
-title: Duplication solution
+title: SET data type mapping
 layout: default
-parent: Concepts
+parent: Data modeling overview
+grand-parent: Concepts
 nav_order: 4
 ---
 

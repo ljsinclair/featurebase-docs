@@ -1,11 +1,11 @@
 ---
-title: Part 1 - Data modeling overview
+title: Data modeling overview
 layout: default
 parent: Concepts
-nav_order: 10
+nav_order: 2
 ---
 
-# Data modeling with FeatureBase
+# An overview of Data modeling with FeatureBase
 
 Data modeling in FeatureBase involves:
 * identifying the issues you're experiencing with your data
