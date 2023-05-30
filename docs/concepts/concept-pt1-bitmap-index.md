@@ -15,9 +15,7 @@ This is the first part in a series of articles that explains how FeatureBase use
 Within this article you will find:
 * an explanation of quality encoding
 * how high cardinality data can be represented as equality-encoded bitmaps
-* the issues caused by low cardinality data
-
-This article provides context for the next in the series: Bit slicing indexes.
+* the issues encountered when attempting to encode low cardinality data
 
 ## Before you begin
 
@@ -81,13 +79,11 @@ Grouping values reduces the number of bitmaps but data is lost. For example:
 
 ### Range encoding values
 
-Range encoded values allow range queries to include:
-* less `or` operators
-* because a smaller number of bitmaps need to be queried.
+Range encoding means:
+* there is no loss of data
+* all values must be represented in an individual bitmap.
 
-However, whilst Range encoding means there is no loss of data, all values must be represented in an individual bitmap. In this case, one bitmap for each value between 0 and 956 (n+1 bitmaps)
-
-For example:
+In this case, one bitmap for each value between 0 and 956 (n+1 bitmaps)
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
@@ -108,11 +104,15 @@ For example:
 | ...|  |  |  |
 | 956 | 1 | 1 | 1 | 1 |
 
+Range encoded values allow range queries to include:
+* less `or` operators,
+* because the system can query only a smaller number of bitmaps need to be queried.
+
+For example to determine the lowest numbers of species in captivity, only Bitmap 5 needs to be queried.
+
 ## Next step
 
 * [Part 2 - base-2 range-encoded bitmaps](/docs/concepts/pt2-range-encode-bit-slice)
-
-* [Represent the data in 30 bitmaps using bit-slicing](#)
 
 <!--
 Garrett diagrams:
