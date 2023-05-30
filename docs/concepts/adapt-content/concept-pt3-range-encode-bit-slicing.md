@@ -29,7 +29,7 @@ These bitmaps can therefore be removed.
 
 For example:
 
-TABLES
+{% include /concepts/concept-eg-range-enc-bit-slice.md %}
 
 ## How to avoid losing data from a high-value bitmap
 
@@ -68,7 +68,7 @@ Adding a **not_null** bitmap in its place means this data is retained:
 
 
 
-
+<!--
 
 References:
 
@@ -80,7 +80,7 @@ Garrett diagrams:
 
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
-
+-->
 
 ## Further information
 

@@ -26,11 +26,7 @@ Bit slicing can represent the low-cardinality values using 30 indexes by represe
 
 To conceptualise bit slicing, the captivity data can be represented as follows:
 
-| Captive | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| Units | 3 | 6 | 9 | 0 |
-| Tens | 0 | 5 | 1 | 2 |
-| Hundreds | 0 | 9 | 0 | 0 |
+{% include /concepts/concept-eg-pre-bit-slice.md %}
 
 Bitmaps are then used to encode these values as follows:
 
