@@ -66,7 +66,7 @@ The first thing to understand about FeatureBase is that data exists in a single 
 
 ## Next step
 
-* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-pt1-bitmap-index)
+* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
 * [Learn how to identify the unique key and map to FeatureBase datatypes](/docs/concepts/concept-data-modeling)
 
 ## Further information
