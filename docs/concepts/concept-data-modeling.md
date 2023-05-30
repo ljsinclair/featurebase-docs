@@ -1,14 +1,67 @@
 ---
-title: Data modeling
+title: Part 1 - Data modeling overview
 layout: default
 parent: Concepts
 nav_order: 10
 ---
 
-## Data modeling with FeatureBase
+# Data modeling with FeatureBase
 
-At a high level, data modeling involves identifying problems being experienced then determining how they can be resolved.
+Data modeling in FeatureBase involves:
+* identifying the issues you're experiencing with your data
+* determining the data to import
+* identifying the unique key for each row of data
+* mapping data types, including those that handle high-cardinality data
+* creating the destination
+* determining the import method
+* testing the outcome
+* fix issues and import for production use
+* Conclusion
 
+## Before you begin
+
+* [Learn about cardinality and normalization](/docs/concepts/concepts-home)
+* [Learn how FeatureBase stores data in bitmaps](/docs/concepts/concepts-bitmap-index)
+
+## Identifying issues
+
+Description
+
+## Determining the data to import
+
+Description
+
+## Identifying the unique key
+
+Description
+
+* [Learn how to identify the unique key](/docs/concepts/concept-unique-id)
+
+## Mapping data types
+
+DESCRIPTION
+Add high-level description of set/setq
+
+* [Learn how to map data types]
+
+## Determining the import method
+
+DESCRIPTION OF INGEST plus methods plus it's push/stream NOT altering source data
+
+* [Learn how data is ingested to FeatureBase](/docs/concepts/concept-ingestion)
+
+## Testing the outcome
+
+DESCRIPTION
+something here about what's described in crime story
+
+Querying also would be done here.
+
+## Fixing problems and importing to production (working title)
+
+post testing, fix the issues, ingest again to a new db/tables
+
+## Go about your day (not really good title -- more a conclusion)
 
 ## Before you begin
 * [Learn the differences between FeatureBase and traditional databases](/docs/concepts/concept-home)
