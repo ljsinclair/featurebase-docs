@@ -27,6 +27,12 @@ Range encoding the bit-slice indexes means the values within the bitmaps represe
 
 These bitmaps can therefore be removed.
 
+For example:
+
+TABLES
+
+## How to avoid losing data from a high-value bitmap
+
 To overcome a situation where a value **only exists** in a bitmap, a **not_null** bitmap is added.
 
 For example, the range-encoding on the **Units** bitmaps results in the following:
