@@ -1,8 +1,9 @@
 ---
 title: Part 3 - range encoded bit-sliced indexes
 layout: default
-parent: Concepts
-nav_order: 1
+parent: Bitmap indexes
+grand-parent: Concepts
+nav_order: 3
 ---
 
 # Part 3 - Range encoding bit-sliced indexes
@@ -15,8 +16,8 @@ Range-encoding these indexes allows the total number of indexes to be reduced to
 
 ## Before you begin
 
-* [Part 1 - Bitmap encoding data](/docs/concepts/concept-bitmap-index)
-* [Part 2 - Bit-slicing data](/docs/concepts/concept-bit-slicing)
+* [Part 1 - Bitmap encoding data](/docs/concepts/concept-pt1-bitmap-index)
+* [Part 2 - Bit-slicing data](/docs/concepts/concept-pt2-bit-slicing)
 
 {% include /concepts/concept-eg-species-table.md %}
 
@@ -53,7 +54,7 @@ Adding a **not_null** bitmap in its place means this data is retained:
 
 ## Next step
 
-* [Represent the data in 10 bitmaps](#)
+* [Part 4 - converting to base-2](/docs/concepts/concept-pt4-base-2)
 
 
 

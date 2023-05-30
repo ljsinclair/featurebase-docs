@@ -66,7 +66,7 @@ The first thing to understand about FeatureBase is that data exists in a single 
 
 ## Next step
 
-* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-bitmap-index)
+* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-pt1-bitmap-index)
 * [Learn how to identify the unique key and map to FeatureBase datatypes](/docs/concepts/concept-data-modeling)
 
 ## Further information
@@ -95,7 +95,7 @@ The first thing to understand about FeatureBase is that data exists in a single 
 
 | Solution | Additional information |
 |---|---|
-| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-bitmap-index) |
+| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-pt1-bitmap-index) |
 | `SETQ` data types can be used with timestamped data to automatically remove data to continually maintain database size. | Data footprint reduced after set time. | [Learn about SETQ data types](/docs/concepts/concept-setq) |
 
 ## Next step

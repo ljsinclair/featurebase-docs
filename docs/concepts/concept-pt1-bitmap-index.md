@@ -1,7 +1,8 @@
 ---
 title: Part 1 - Bitmap indexes
 layout: default
-parent: Concepts
+parent: Bitmap indexes
+grand-parent: Concepts
 nav_order: 1
 ---
 
@@ -11,20 +12,22 @@ This is the first part in a series of articles that explains how FeatureBase use
 * represent your data
 * reduce the storage overhead of your data
 
-This article demonstrates how data with a one-to-one relationship (high-cardinality) can be represented as equality-encoded bitmaps.
+Within this article you will find:
+* an explanation of quality encoding
+* how high cardinality data can be represented as equality-encoded bitmaps
+* the issues caused by low cardinality data
 
-The issues with encoding high-cardinality data are demonstrated which provides context for subsequent parts.
-
-<!--References:
-* Bitmaps -- https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
-* Row, column oriented method relating to bitmaps -- https://app.slack.com/client/T2M810Z29/C059DQTQGLB
-* bitmap encoding, range encoded bitmaps, bit slice bitmaps -- https://www.featurebase.com/blog/range-encoded-bitmaps
--->
+This article provides context for the next in the series: Bit slicing indexes.
 
 ## Before you begin
 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about data cardinality](/docs/concepts/concepts-home#cardinality-describes-relationships-between-data)
+
+
+## What is a bitmap index?
+
+
 
 {% include /concepts/concept-eg-species-table.md %}
 
@@ -202,32 +205,19 @@ Adding a **not_null** bitmap in its place means this data is retained:
 * [Represent the data in 10 bitmaps](#)
 
 
+## Further information
 
+* [Bitmap index on Wikipedia](https://en.wikipedia.org/wiki/Bitmap_index)
 
-## Roaring Bitmap compression
-
-Roaring bitmap compression breaks large sets of integers into containers of 2^16 integers (65536 bits) which makes computation faster.
-
-* [Learn about Roaring Bitmap](https://roaringbitmap.org/about/)
-
-
-
-
-
-
-
+<!--
 References:
 
-https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
-* bitmap encoding -- https://www.featurebase.com/blog/range-encoded-bitmaps
-
+* Bitmaps -- https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
+* Row, column oriented method relating to bitmaps -- https://app.slack.com/client/T2M810Z29/C059DQTQGLB
+* bitmap encoding, range encoded bitmaps, bit slice bitmaps -- https://www.featurebase.com/blog/range-encoded-bitmaps
 
 Garrett diagrams:
 
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
-
-
-## Further information
-
-* [Bitmap index on Wikipedia](https://en.wikipedia.org/wiki/Bitmap_index)
+-->

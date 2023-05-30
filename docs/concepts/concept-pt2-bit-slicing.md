@@ -1,8 +1,9 @@
 ---
-title: 2 - bit-slicing data
+title: Part 2 - bit-slicing data
 layout: default
-parent: Concepts
-nav_order: 1
+parent: Bitmap indexes
+grand-parent: Concepts
+nav_order: 2
 ---
 
 # Part 2 - Bit slicing data
@@ -15,7 +16,7 @@ This number can be reduced substantially using bit-slicing.
 
 ## Before you begin
 
-* [Learn about Bitmaps](/docs/concepts/concept-bitmap-index)
+* [Learn about Bitmaps](/docs/concepts/concept-pt1-bitmap-index)
 
 {% include /concepts/concept-eg-species-table.md %}
 
