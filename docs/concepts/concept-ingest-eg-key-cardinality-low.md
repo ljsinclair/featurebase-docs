@@ -89,10 +89,7 @@ SELECT * from myspecies;
 
 ## Step 6 - Query the data
 
-The following SQL functions are required to query values in `SET` columns:
-* [`SETCONTAINS` function](/docs/sql-guide/functions/function-setcontains)
-* [`SETCONTAINSALL` function](/docs/sql-guide/functions/function-setcontainsall)
-* [`SETCONTAINSANY` function](/docs/sql-guide/functions/function-setcontainsany)
+`SETCONTAINS` SQL functions are required to query values in `SET` columns:
 
 ### Query the existence of a value using `SETCONTAINS`
 
@@ -123,6 +120,6 @@ from myspecies;
 
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-* [`SETCONTAINS` function](/docs/sql-guide/functions/function-setcontains)
-* [`SETCONTAINSALL` function](/docs/sql-guide/functions/function-setcontainsall)
-* [`SETCONTAINSANY` function](/docs/sql-guide/functions/function-setcontainsany)
+* [SETCONTAINS function](/docs/sql-guide/functions/function-setcontains)
+* [SETCONTAINSALL function](/docs/sql-guide/functions/function-setcontainsall)
+* [SETCONTAINSANY function](/docs/sql-guide/functions/function-setcontainsany)
