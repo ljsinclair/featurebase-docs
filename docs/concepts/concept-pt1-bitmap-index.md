@@ -1,7 +1,7 @@
 ---
 title: Part 1 - Bitmap indexes
 layout: default
-parent: Bitmap indexes
+parent: Bitmap index overview
 grand-parent: Concepts
 nav_order: 1
 ---

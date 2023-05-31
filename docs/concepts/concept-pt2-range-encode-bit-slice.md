@@ -1,7 +1,7 @@
 ---
 title: Part 2 - bit-slicing and range-encoding
 layout: default
-parent: Bitmap indexes
+parent: Bitmap index overview
 grand-parent: Concepts
 nav_order: 2
 ---
