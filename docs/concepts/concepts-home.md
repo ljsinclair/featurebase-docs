@@ -10,7 +10,7 @@ has_toc: true
 This high-level overview explains how data is arranged in traditional databases and FeatureBase bitmap databases.
 
 * Cardinality -- the relationships between data
-* Normalization -- the act of arranging the data to
+* Normalization -- the act of arranging the data
 
 ## What is cardinality?
 
@@ -30,9 +30,9 @@ High cardinality data has a high number of unique relationships which can be rep
 
 ## Low cardinality data
 
-Data described as **low cardinality** have multiple relationships which means they cannot be represented in two dimensions.
+Data described as **low cardinality** have multiple relationships has a one-to-many or many-to-many relationship:
 
-
+{% include /concepts/concept-eg-one-many.md %}
 
 ## Database normalization in relation to data cardinality
 
@@ -47,6 +47,20 @@ This set of rules means:
 * Low cardinality data that has one-to-many or many-to-many relationships are:
   * inserted into separate two dimensional tables, and
   * relationships are maintained using keys
+
+For example, the low cardinality table above can be normalized as follows:
+
+| SubjectID | SubjectName |
+|---|---|
+| En | English |
+| Fi | Finance |
+| Fr | French |
+| Ge | Geography |
+| Hi | History |
+
+The SubjectID can then be linked with a key to the `Students` table `StudentID` key.
+
+<!--Need a schema diagram for this relationship for better clarity-->
 
 ## Benefits and costs of data normalization
 
