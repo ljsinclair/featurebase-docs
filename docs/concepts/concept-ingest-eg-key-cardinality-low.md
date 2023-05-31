@@ -1,5 +1,5 @@
 ---
-title: Ingest example - low cardinality data
+title: Importing low cardinality data
 layout: default
 parent: Concepts
 ---

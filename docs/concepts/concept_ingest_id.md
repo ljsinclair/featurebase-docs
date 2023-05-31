@@ -1,11 +1,12 @@
 ---
-title: Ingest ID
+title: Unique identifier
 layout: default
-parent: Concepts
-has_children: false
+parent: Data modeling overview
+grand-parent: Concepts
+nav_order: 1
 ---
 
-# Conceptualising the ID field
+# Conceptualising the unique identifier
 
 When ingesting into FeatureBase, each record must be associated with a key.
 

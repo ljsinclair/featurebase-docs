@@ -1,9 +1,9 @@
 ---
 title: Ingest workflow
 layout: default
-parent: Concepts
-has_children: false
-nav_order: 1
+parent: Data modeling overview
+grand-parent: Concepts
+nav_order: 4
 ---
 
 # Conceptualising the Ingest workflow

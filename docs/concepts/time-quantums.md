@@ -1,8 +1,8 @@
 ---
 title: Time Quantums
 layout: default
-parent: Concepts
-has_children: false
+parent: Data modeling overview
+grand-parent: Concepts
 nav_order: 2
 ---
 

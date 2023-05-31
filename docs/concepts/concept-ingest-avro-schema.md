@@ -1,8 +1,9 @@
 ---
 title: Ingesting from Avro schema registry
 layout: default
-parent: Concepts
-has_children: false
+parent: Data modeling overview
+grand-parent: Concepts
+nav-order: 5
 ---
 
 # Ingesting from Avro Schema Registry

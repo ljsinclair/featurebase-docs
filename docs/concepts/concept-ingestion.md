@@ -2,7 +2,7 @@
 title: Ingest data
 layout: default
 parent: Concepts
-nav_order: 1
+nav_order: 5
 ---
 
 # Converting data

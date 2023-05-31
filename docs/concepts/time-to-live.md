@@ -1,9 +1,9 @@
 ---
 title: Time To Live (TTL)
 layout: default
-parent: Concepts
-has_children: false
-nav_order: 3
+parent: Data modeling overview
+grand-parent: Concepts
+nav-order: 3
 ---
 
 TTL stands for time to live. TTL allows you to delete time views. Views are only deleted when the end of the time range the view represents is older than the TTL. TTL is only an option for `IDSET` and `STRINGSET` columns with time quantums set.
