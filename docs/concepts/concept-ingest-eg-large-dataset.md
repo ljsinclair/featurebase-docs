@@ -1,9 +1,9 @@
 ---
 title: A True Crime Story
 layout: default
-parent: Concepts
-has_children: false
-nav_order: 4
+parent: Examples
+grand_parent: Concepts
+nav_order: 2
 ---
 
 # A True Crime Story...Well, A Story About Modeling True Crime Data
@@ -33,10 +33,10 @@ occurred_on_date TIMESTAMP,
 year INT MIN -1 MAX 10000,
 month INT MIN -1 MAX 12,
 day_of_week STRING,
-hour INT MIN -1 MAX 24, 
-ucr_part STRING, 
-street STRING, 
-lat DECIMAL(8), 
+hour INT MIN -1 MAX 24,
+ucr_part STRING,
+street STRING,
+lat DECIMAL(8),
 long DECIMAL(8)
 ) COMMENT 'table containing Boston crime data';
 ```
@@ -75,10 +75,10 @@ occurred_on_date,
 year,
 month,
 day_of_week,
-hour, 
-ucr_part, 
-street, 
-lat, 
+hour,
+ucr_part,
+street,
+lat,
 long)
 MAP (
 0 STRING,
@@ -146,10 +146,10 @@ occurred_on_date TIMESTAMP,
 year INT MIN -1 MAX 10000,
 month INT MIN -1 MAX 12,
 day_of_week STRING,
-hour INT MIN -1 MAX 24, 
-ucr_part STRINGSET, 
-street STRING, 
-lat DECIMAL(8), 
+hour INT MIN -1 MAX 24,
+ucr_part STRINGSET,
+street STRING,
+lat DECIMAL(8),
 long DECIMAL(8)
 ) COMMENT 'table containing Boston crime data using SETs';
 ```
@@ -187,10 +187,10 @@ occurred_on_date,
 year,
 month,
 day_of_week,
-hour, 
-ucr_part, 
-street, 
-lat, 
+hour,
+ucr_part,
+street,
+lat,
 long)
 MAP (
 0 STRING,

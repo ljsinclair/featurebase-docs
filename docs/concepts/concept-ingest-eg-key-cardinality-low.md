@@ -1,7 +1,9 @@
 ---
 title: Importing low cardinality data
 layout: default
-parent: Concepts
+parent: Examples
+grand_parent: Concepts
+nav_order: 1
 ---
 
 # Example - importing low-cardinality data
