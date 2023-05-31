@@ -56,7 +56,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^0 = 1`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 1 |
@@ -65,7 +65,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^1=2`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 0 |
 | Sea Horse | 1 | 1 |
@@ -74,7 +74,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^2=4`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 0 |
 | Sea Horse | 1 | 0 |
@@ -83,7 +83,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^3=8`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -92,7 +92,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^4=16`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -101,7 +101,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^5=32`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -110,7 +110,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^6=64`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 1 |
@@ -119,7 +119,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^7=128`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -128,7 +128,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^8=256`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -137,7 +137,7 @@ This means the bit-sliced indexes are now represented with:
 
 ### Bitmap `2^9=512`
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
@@ -156,13 +156,13 @@ If values are **only** encoded in the highest value bitmaps, FeatureBase automat
 
 For example, the `Sea Horse` captivity values in **Bitmap-1** are encoded as follows in **Bitmap 2^9**.
 
-| Bits --> | 1 | 0 |
+|  | 1 | 0 |
 |---|---|
 | Sea Horse | 1 | 0 |
 
 To avoid losing this data, FeatureBase adds a **not_null** bitmap:
 <!--Query -- I wonder if it actually just changes the name?-->
-| Bits --> | not_null | 0 |
+|  | not_null | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
