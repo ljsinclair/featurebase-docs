@@ -49,7 +49,7 @@ Bit slicing or Bit Plane slicing converts each binary value into an array of bit
 ## Step 3 - Equality encoding the values
 
 {: .note}
-This step is required to make range encoding more effective in the next step
+This step is required to make range encoding more effective in the step 4.
 
 Equality encoding the binary values means the relationships between `0` or `1` are represented in Boolean terms. This requires two bitmaps:
 
@@ -158,7 +158,7 @@ For example, when range-encoding data in the **Bitmap 2^9** data, **Bitmap-1** i
 
 ## Step 5 - Application logic
 
-FeatureBase automatically removes the highest-value **Bitmap-1** bitmaps because:
+FeatureBase automatically removes highest value bitmaps because:
 * the data is identical
 * the true values can be determined from the remaining bitmaps.
 
@@ -166,14 +166,14 @@ FeatureBase automatically removes the highest-value **Bitmap-1** bitmaps because
 
 If values are **only** encoded in the highest value bitmaps, FeatureBase automatically creates a new bitmap to prevent data loss.
 
-For example, the `Sea Horse` captivity values are encoded as follows in **Bitmap 2^9**.
+For example, the `Sea Horse` captivity values in **Bitmap-1** are encoded as follows in **Bitmap 2^9**.
 
 | Bits --> | 1 | 0 |
 |---|---|
 | Sea Horse | 1 | 0 |
 
-To avoid losing this data, FeatureBase adds a **not_null** bitmap which will not be automatically deleted.
-
+To avoid losing this data, FeatureBase adds a **not_null** bitmap:
+<!--Query -- I wonder if it actually just changes the name?-->
 | Bits --> | not_null | 0 |
 |---|---|
 | Manatee | 1 | 1 |
