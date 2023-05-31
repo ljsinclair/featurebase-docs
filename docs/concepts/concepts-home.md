@@ -26,13 +26,13 @@ The relationships between data is called **Cardinality** and can be conceptualiz
 
 High cardinality data has a high number of unique relationships which can be represented in a two dimensional table:
 
-{% include /concepts/concept-eg-low-cardinality.md %}
+{% include /concepts/concept-eg-high-cardinality.md %}
 
 ## Low cardinality data
 
 Data described as **low cardinality** have multiple relationships which means they cannot be represented in two dimensions.
 
-{% include /concepts-concept-eg1-one-many.md %}
+
 
 ## Database normalization in relation to data cardinality
 
