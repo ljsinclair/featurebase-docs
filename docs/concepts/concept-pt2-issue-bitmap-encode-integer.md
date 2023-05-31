@@ -6,15 +6,20 @@ grand-parent: Concepts
 nav_order: 1
 ---
 
-# Part 2 - encoding issues (working title)
+# Part 2 - Equality encoding issues with integer values
 
+In part 1, the basic concepts of bitmaps were explained, and how equality encoding works well with Boolean data.
 
+In this part, issues with equality encoding integer values are discussed to demonstrate why FeatureBase uses a different approach.
 
 ## Before you begin
-* [Learn about bitmap indexes and equality encoding](/docs/concepts/concept-pt1-bitmap-index)
+* [Part 1 - Bitmap indexes and equality encoding data](/docs/concepts/concept-pt1-bitmap-index)
 
+## Sample data
 
-### Equality encoding one bitmap per value
+{% include /concepts/concept-eg-species-table-data.md %}
+
+## Equality encoding one bitmap per value
 
 Specifying a single bitmap per value means the data is accurately recorded, but:
 * a new bitmap must be created each time the captivity numbers change
