@@ -6,29 +6,27 @@ grand_parent: Concepts
 nav_order: 2
 ---
 
-## Part 2 - Bit-slicing and range-encoding integer data
+# Part 2 - Bit-slicing and range-encoding integer data
 
 In part 1, the basic concepts of bitmaps were explained, how equality encoding works well with Boolean data but has trouble with integers and other data types.
 
-In this part, Bit-slicing and Range encoding integer data is explained which successfully encodes integers in a small number of bitmaps ready for insertion to FeatureBase.
+In this part, the sample captivity data is Bit-sliced and Range-encoded to demonstrate how FeatureBase prepares data ready for final Roaring Bitmap compression.
+
+After this, data is inserted into FeatureBase ready for querying.
 
 ## Before you begin
+
 * [Part 1 - Bitmap indexes and equality encoding data](/docs/concepts/concept-pt1-bitmap-index)
 
 ## Sample data
 
 {% include /concepts/concept-eg-species-table-data.md %}
 
-## Step 1 - convert integer values to binary
+The `Species` and `Captive` data is to be imported to FeatureBase.
+
+## Step 1 - convert `captive` integer values to binary
 
 The `Captive` data can be converted to binary (base-2) as follows:
-
-|  | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| Captive | 011 | 1110111100 | 10011 | 10100 |
-
-{: .note}
-Changing the table orientation means the examples that follow will be easier to understand.
 
 | Species | Captive |
 |---|---|
@@ -41,7 +39,9 @@ Changing the table orientation means the examples that follow will be easier to 
 
 Bit slicing or Bit Plane slicing converts each binary value into an array of bits. For example:
 
-{% include /concepts/concept-eg-bitmap.md %}
+|  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
 | Sea Horse | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
 | Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
 | Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
