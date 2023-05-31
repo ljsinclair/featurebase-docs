@@ -1,11 +1,6 @@
----
-title: Data Modeling - Method
-layout: default
-parent: Concepts
-nav_order: 4
----
-
-# Data Modeling - Part 4 - Method
+<!--DO NOT REVIEW-->
+<!-- This content was written during the edit process for the current branch "concepts-examples" and may yet be useful when rewriting the data modeling content.
+For now I've dropped it into the /old-backup folder
 
 The method you choose to import data to FeatureBase will differ based on your use case and the way your data is supplied.
 
@@ -31,6 +26,4 @@ Import involves a 4-step process:
 | Conversion | Batched data is converted using Range encoding and Bit slicing then into Roaring Bitmap Format | * [Range encoding](https://en.wikipedia.org/wiki/Range_coding){:target="_blank"}<br/>* [Bit slicing](https://en.wikipedia.org/wiki/Bit_slicing){:target="_blank"}<br/>* [Roaring Bitmap](https://www.roaringbitmap.org/){:target="_blank"} |
 | Flushing | A transaction ID is obtained to lock tables then data is copied to the destination | [Creating destination tables](/docs/concepts/concept-dm3-destination) |
 
-## Next step
-
-* [Part 5 - Testing](/docs/concepts/concept-dm5-testing)
+-->
