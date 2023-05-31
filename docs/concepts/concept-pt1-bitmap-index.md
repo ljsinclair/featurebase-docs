@@ -128,4 +128,8 @@ Garrett diagrams:
 
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
 * https://app.slack.com/client/T2M810Z29/C059DQTQGLB
+
+Content based on:
+* https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
+* https://www.featurebase.com/blog/range-encoded-bitmaps
 -->

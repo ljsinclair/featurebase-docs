@@ -195,3 +195,9 @@ The resulting data is inserted into FeatureBase.
 ## Further information
 
 * [Learn about Roaring Bitmaps](https://roaringbitmap.org/about/)
+
+<!--
+Content based on:
+* https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
+* https://www.featurebase.com/blog/range-encoded-bitmaps
+-->
