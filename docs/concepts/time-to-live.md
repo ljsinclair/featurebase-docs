@@ -6,6 +6,8 @@ grand_parent: Concepts
 nav-order: 3
 ---
 
+# Time to live - a `SETQ` constraint
+
 TTL stands for time to live. TTL allows you to delete time views. Views are only deleted when the end of the time range the view represents is older than the TTL. TTL is only an option for `IDSET` and `STRINGSET` columns with time quantums set.
 
 ## Before you begin

@@ -6,6 +6,8 @@ grand_parent: Concepts
 nav_order: 2
 ---
 
+# Time Quantums - a `SETQ` constraint
+
 ## Before you begin
 
 * [Learn about data modeling](/docs/concepts/overview-data-modeling)
