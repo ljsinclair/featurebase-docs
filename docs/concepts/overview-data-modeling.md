@@ -2,8 +2,8 @@
 title: Data modeling overview
 layout: default
 parent: Concepts
-nav_order: 2
 has_children: true
+nav_order: 2
 ---
 
 # Data modeling overview
