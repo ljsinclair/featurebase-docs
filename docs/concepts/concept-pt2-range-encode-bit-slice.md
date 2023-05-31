@@ -25,13 +25,13 @@ After this, data is inserted into FeatureBase ready for querying.
 
 {% include /concepts/concept-eg-species-table-data.md %}
 
-The `Species` and `Captive` data is to be imported to FeatureBase.
+The `Species` and `Captivity` data is to be imported to FeatureBase.
 
-## Step 1 - convert `captive` integer values to binary
+## Step 1 - convert `Captivity` integer values to binary
 
-The `Captive` data can be converted to binary (base-2) as follows:
+The `Captivity` data can be converted to binary (base-2) as follows:
 
-| Species | Captive |
+| Species | Captivity |
 |---|---|
 | Manatee | 011 |
 | Sea Horse | 1110111100 |
@@ -42,7 +42,7 @@ The `Captive` data can be converted to binary (base-2) as follows:
 
 Bit slicing or Bit Plane slicing converts each binary value into an array of bits.
 
-{% include /concepts/concept-eg-bit-slice-species-captive-table.md %}
+{% include /concepts/concept-eg-bit-slice-species-Captivity-table.md %}
 
 ## Step 3 - Range encoding
 
@@ -173,7 +173,7 @@ To avoid losing this data, FeatureBase adds a **not_null** bitmap:
 
 As a point of comparison, here are the original bit-sliced integer values:
 
-{% include /concepts/concept-eg-bit-slice-species-captive-table.md %}
+{% include /concepts/concept-eg-bit-slice-species-Captivity-table.md %}
 
 These bitmaps comprise the data once range encoding is completed, high-value columns are removed, and a `not_null` bitmap is added to retain data.
 

@@ -64,7 +64,7 @@ Equality encoding non-Boolean data like integers is less effective but is possib
 
 For example:
 
-| Captive | Manatee | Sea Horse | Koala | Starfish |
+| Captivity | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 3 | 1 | 0 | 0 | 0 |
 | 19 | 0 | 0 | 1 | 0 |
@@ -79,7 +79,7 @@ The issue here is that:
 
 Grouping values reduces the number of bitmaps:
 
-| Captive | Manatee | Sea Horse | Koala | Starfish |
+| Captivity | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 0-500 | 1 | 0 | 1 | 1 |
 | 5001-1000 | 0 | 1 | 0 | 0 |
@@ -96,7 +96,7 @@ The drawback of Range encoding is that n+1 bitmaps are required to represent the
 
 For example, to range encode the captivity data, there will be one bitmap for each value between 0 and 956:
 
-| Captive | Manatee | Sea Horse | Koala | Starfish |
+| Captivity | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 0 | 0 | 0 | 0 | 1 |
 | 1 | 0 | 0 | 0 | 0 |
