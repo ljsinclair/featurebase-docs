@@ -7,16 +7,7 @@ nav_order: 2
 
 # An overview of Data modeling with FeatureBase
 
-Data modeling in FeatureBase involves:
-* identifying the issues you're experiencing with your data
-* determining the data to import
-* identifying the unique key for each row of data
-* mapping data types, including those that handle high-cardinality data
-* creating the destination
-* determining the import method
-* testing the outcome
-* fix issues and import for production use
-* Conclusion
+{% include /concepts/concept-data-modeling-summary.md %}
 
 ## Before you begin
 

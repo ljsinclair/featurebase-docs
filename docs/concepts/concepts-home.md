@@ -36,15 +36,17 @@ Data described as **low cardinality** have multiple relationships which means th
 
 ## Database normalization in relation to data cardinality
 
-Raw data may represent cardinality with duplications and redundant data. This data is said to be **unnormalized**.
+Database normalization has a set of **normal forms** which provide guidance on how data is represented.
 
-Database normalization has a set of **normal forms** or rules which govern how data is represented. The **first normal form** provides rules that include:
+The **first normal form** provides guidance on:
 * arranging data into two dimensions
 * the use of relation names, attributes and keys to reference rows
 
 This set of rules means:
-* High cardinality data requires no alteration
-* Low cardinality data is recreated into separate two dimensional tables and relationships are maintained using keys
+* High cardinality data requires no alteration (because there is no duplication and the relationships are one-to-one)
+* Low cardinality data that has one-to-many or many-to-many relationships are:
+  * inserted into separate two dimensional tables, and
+  * relationships are maintained using keys
 
 ## Benefits and costs of data normalization
 
@@ -59,47 +61,18 @@ DBAs responsible for normalized systems use different methods to overcome the is
 
 ## How does FeatureBase handle data cardinality?
 
-The first thing to understand about FeatureBase is that data exists in a single two-dimensional bitmap index. Relationships are maintained using:
-
-* a unique key for each row of data
-* FeatureBase specific data-types which provide an additional dimension for low cardinality data to exist within high cardinality rows.
-
-## Next step
+FeatureBase does not use Database normalization. Instead, the system inserts data into a two-dimensional bitmap index.
 
 * [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
-* [Learn how to identify the unique key and map to FeatureBase datatypes](/docs/concepts/concept-data-modeling)
+
+## How should I structure data to be imported to FeatureBase?
+
+{% include /concepts/concept-data-modeling-summary.md %}
+
+* [Learn how to structure your data ready to import to FeatureBase](/docs/concepts/concept-data-modeling)
 
 ## Further information
 
 * [Cardinality(data modeling) on Wikipedia](https://en.wikipedia.org/wiki/Cardinality_(data_modeling)){:target="_blank"}
 * [Database Normalization on Wikipedia](https://en.wikipedia.org/wiki/Database_normalization){:target="_blank"}
 * [Database denormalization on Wikipedia](https://en.wikipedia.org/wiki/Denormalization){:target="_blank"}
-
-<!--
-
-### Data integrity solutions
-
-| Solution | Additional information |
-|---|---|
-| FeatureBase never alters your data, so data integrity is guaranteed | [Learn about ingestion](/docs/concepts/concept-ingestion) |
-| All rows are uniquely identified with a string or integer value | [Learn how the `_id` column is used](/docs/concepts/concept-table-id) |
-| Specific rules govern insertion and update actions | [Learn how Upsert works](/docs/concepts/concept-upsert) |
-
-### Data duplication solutions
-
-| Solution | Additional information |
-|---|---|
-| `SET` and `SETQ` data types address cardinality issues in a single row | [Learn about `SET` data types](/docs/concepts/concept-datatype-set) |
-
-### Storage footprint solutions
-
-| Solution | Additional information |
-|---|---|
-| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-pt1-bitmap-index) |
-| `SETQ` data types can be used with timestamped data to automatically remove data to continually maintain database size. | Data footprint reduced after set time. | [Learn about SETQ data types](/docs/concepts/concept-setq) |
-
-## Next step
-
-* [Learn the techniques used before importing data to FeatureBase]
-
--->
