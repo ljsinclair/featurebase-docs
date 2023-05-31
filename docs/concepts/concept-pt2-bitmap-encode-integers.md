@@ -8,13 +8,14 @@ nav_order: 1
 
 # Part 1 - bitmap indexes
 
-This is the first in a series of articles that explains how FeatureBase uses bitmaps, bit-slicing and range-encoding to:
+This is the first part in a series of articles that explains how FeatureBase uses bitmaps, bit-slicing and range-encoding to:
 * represent your data
 * reduce the storage overhead of your data
 
-This article includes explanations of:
-* bitmap indexes
-* equality encoding Boolean data
+Within this article you will find:
+* an explanation of quality encoding
+* how high cardinality data can be represented as equality-encoded bitmaps
+* the issues encountered when attempting to encode low cardinality data
 
 ## Before you begin
 
@@ -28,19 +29,9 @@ A bitmap index is:
 * that represent high cardinality data (e.g., data with one-to-one relationships)
 * identified by a unique key
 
-For example:
-
-{% include /concepts/concept-eg-bitmap.md %}
-
 {% include /concepts/concept-eg-species-table-summary.md %}
 
 {% include /concepts/concept-eg-species-table-data.md %}
-
-## What is equality-encoding?
-
-
-
-## Sample data
 
 ## High cardinality data represented as equality-encoded bitmaps
 

@@ -74,6 +74,10 @@ create table doctest
   );
 ```
 
+### CREATE TABLE with STRINGSET data type
+
+{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+
 ### CREATE TABLE with all column types
 
 {% include /sql-guide/table_create_eg_all_datatypes.md %}

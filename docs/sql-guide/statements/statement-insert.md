@@ -80,14 +80,14 @@ INSERT INTO products
 ### INSERT value in services table
 
 ```sql
-INSERT INTO services (_id, servicelist, price) 
+INSERT INTO services (_id, servicelist, price)
 VALUES (1, 'free deliveries on orders over $50', 0.00);
 ```
 
 ### Overwrite existing value
 
 ```sql
-INSERT INTO services (_id, servicelist, price) 
+INSERT INTO services (_id, servicelist, price)
 VALUES (2, 'local postage per item', 2.20);
 ```
 
@@ -106,8 +106,22 @@ idsetcolq idsetq timequantum 'YMD'
 The following statement inserts values with an associated timestamp (using either a unix time or timestamp) into `timeq`,  which has `IDSETQ` and `STRINGSETQ` data types.
 
 ```sql
-INSERT INTO timeq(_id, stringsetcolq, idsetcolq) 
+INSERT INTO timeq(_id, stringsetcolq, idsetcolq)
 VALUES (1, {'2018-08-31T00:00:00Z', ['A','B']}, {1676649734, [1]});
+```
+
+### CREATE TABLE with `STRINGSET` data types
+
+{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+
+### INSERT data to `STRINGSET`
+
+```sql
+INSERT
+  into myspecies (_id, species)
+  values
+    ('yes', ['Manatee', 'Sea Horse', 'Koala']),
+    ('no', ['Starfish']);
 ```
 
 ## Further information

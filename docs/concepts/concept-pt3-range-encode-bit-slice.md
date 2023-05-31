@@ -29,9 +29,7 @@ The examples that follow are based on low-cardinality data contained in the **Ca
 
 Changing the orientation of the table allows the values to be better conceptualised in bitmap columns representing powers of two:
 
-|  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
+{% include /concepts/concept-eg-bitmap.md %}
 | Sea Horse | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
 | Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
 | Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |

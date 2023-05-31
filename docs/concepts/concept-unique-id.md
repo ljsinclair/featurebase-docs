@@ -23,6 +23,8 @@ The data you wish to import to FeatureBase may have:
 * two or more identifiers
 * no unique identifiers
 
+However, the way you key the data may result in different cardinality
+
 ## Data contains single unique identifier
 
 Data that contains a single unique identifier is easiest to conceptualise. For example:
