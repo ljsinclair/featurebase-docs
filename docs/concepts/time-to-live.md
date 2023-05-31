@@ -88,4 +88,4 @@ curl -XPATCH http://localhost:10101/index/**test_ttl_index**/field/**data_ttl** 
 
 ## Further information
 
-* [Case Study: Data Modeling](/docs/concepts/a-true-crime-story)
+* [Large dataset import example](/docs/concepts/concept-eg-large-dataset)

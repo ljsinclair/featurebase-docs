@@ -110,7 +110,7 @@ The drawback of Range encoding is that n+1 bitmaps are required to represent the
 
 ## Next step
 
-* [Part 2 - base-2 range-encoded bitmaps](/docs/concepts/pt2-range-encode-bit-slice)
+* [Part 2 - base-2 range-encoded bitmaps](/docs/concepts/concept-pt2-range-encode-bit-slice)
 
 ## Further information
 

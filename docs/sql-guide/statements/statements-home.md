@@ -47,7 +47,7 @@ SQL statements can be executed in the Query editor.
 
 ## System statements
 
-* [KILL QUERY statement](/docs/sql-guide/statements/statement-kill)
+* [KILL QUERY statement](/docs/sql-guide/statements/statement-kill-query)
 
 ## Further Information
 
