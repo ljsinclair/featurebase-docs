@@ -1,7 +1,9 @@
 ---
 title: Sizing database
 layout: default
-parent: Concepts
+parent: Data modeling overview
+grand-parent: Concepts
+nav-order: 10
 ---
 
 # Sizing FeatureBase database
