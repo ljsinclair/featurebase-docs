@@ -4,7 +4,7 @@ layout: default
 parent: Concepts
 ---
 
-# How do I map low cardinality data? (working title)
+# Example - importing low-cardinality data
 
 There may be times where your choice of unique identifier results in data that has low cardinality where the relationships are:
 * a one-to-many
@@ -17,14 +17,13 @@ The purpose of this content is to:
 ## Before you begin
 
 * [Learn about data cardinality](/docs/concepts/concepts-home)
-* [Learn about data modeling](/docs/concepts/concept-data-modeling)
-* [Learn about `SET` data types](/docs/concepts/concept-datatype-set)
+* [Learn about data modeling](/docs/concepts/overview-data-modeling)
 
 ## Sample data
 
 {% include /concepts/concept-eg-species-table-data.md %}
 
-## Choosing the unique identifier
+## Step 1 - Choose the unique identifier
 
 The choice of `Vertebrae` as unique identifier for your data results in the `Species` column populated by low cardinality or one-to-many data:
 
@@ -37,7 +36,7 @@ If the data were to be inserted into a traditional RDBMS database, the low cardi
 
 FeatureBase allows you to insert the data into a single row without losing the ability to query individual items.
 
-## Create the destination table statement
+## Step 2 - Create the destination table
 
 A Create Table statement is created and run:
 
@@ -45,7 +44,7 @@ A Create Table statement is created and run:
 
 The `STRINGSET` data type allows you to insert the species data as individual items within the same row and column.
 
-## Create a source file containing the data
+## Step 3 - Create a source file containing the data
 
 Create a CSV file with the following structure then save as `*/featurebase/import/myspecies.csv`
 
@@ -57,9 +56,9 @@ A header row is not required because the `BULK INSERT` statement defines the des
 "no", "Starfish"
 ```
 
-## BULK INSERT statement
+## Step 4 - insert the data
 
-The following `BULK INSERT` statement:
+The following `BULK INSERT` statement can be run in the FeatureBase query editor. The statement:
 * specifies the file format
 * requires an absolute path to **myspecies.csv**
 * maps each column of data in the CSV to the columns in the table.
@@ -75,7 +74,7 @@ BULK INSERT
     input 'FILE';
 ```
 
-## Confirm the data is successfully inserted
+## Step 5 - Confirm the data is successfully inserted
 
 A `SELECT *` statement demonstrates the values have been added to the table:
 
@@ -83,12 +82,12 @@ A `SELECT *` statement demonstrates the values have been added to the table:
 SELECT * from myspecies;
 ```
 
-## Querying the data
+## Step 6 - Query the data
 
-The following functions are required to query values in `SET` columns:
-* `SETCONTAINS`
-* `SETCONTAINSALL`
-* `SETCONTAINSANY`
+The following SQL functions are required to query values in `SET` columns:
+* [`SETCONTAINS`]()
+* [`SETCONTAINSALL`]()
+* [`SETCONTAINSANY`]()
 
 ### Query the existence of a value using `SETCONTAINS`
 
@@ -114,3 +113,11 @@ This statement returns true or false if a row contains either a Seahorse OR Star
 select _id, setcontainsany(species, ['Seahorse', 'Starfish']) as Sea_Creatures
 from myspecies;
 ```
+
+## Further information
+
+* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [`SETCONTAINS` function](/docs/sql-guide/functions/function-setcontains)
+* [`SETCONTAINSALL` function](/docs/sql-guide/functions/function-setcontainsall)
+* [`SETCONTAINSANY` function](/docs/sql-guide/functions/function-setcontainsany)
