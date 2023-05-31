@@ -22,7 +22,7 @@ The purpose of this content is to:
 
 ## Sample data
 
-{% include /concepts/concept-eg-species-table-summary.md %}
+{% include /concepts/concept-eg-species-table-data.md %}
 
 ## Choosing the unique identifier
 
