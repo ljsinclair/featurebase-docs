@@ -4,5 +4,6 @@ Data modeling in FeatureBase involves:
 * mapping data types, including those that handle high-cardinality data
 * choosing a method to import your data
 * creating the destination
+* running the import
 * testing the outcome
 * fixing issues that may have occurred
