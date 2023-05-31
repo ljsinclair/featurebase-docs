@@ -14,7 +14,7 @@ nav_order: 2
 
 ## What are time quantums?
 
-A time quantum is a feature for `IDSET` and `STRINGSET` type columns that allows you to associate a time (or multiple times) with each value in the column. Setting a time quantum creates views on the column that allow range queries down to the time granularity specified. You can think of a view as a rollup of your data based on the granularity of time you specify. If no time quantums are set, your data has one "standard" view by default.
+A time quantum is a feature for `IDSETQ` and `STRINGSETQ` type columns that allows you to associate a time (or multiple times) with each value in the column. Setting a time quantum creates views on the column that allow range queries down to the time granularity specified. You can think of a view as a rollup of your data based on the granularity of time you specify. If no time quantums are set, your data has one "standard" view by default.
 
 ## When should you use time quantums?
 
