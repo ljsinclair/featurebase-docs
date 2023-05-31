@@ -85,9 +85,9 @@ SELECT * from myspecies;
 ## Step 6 - Query the data
 
 The following SQL functions are required to query values in `SET` columns:
-* [`SETCONTAINS`]()
-* [`SETCONTAINSALL`]()
-* [`SETCONTAINSANY`]()
+* [`SETCONTAINS` function](/docs/sql-guide/functions/function-setcontains)
+* [`SETCONTAINSALL` function](/docs/sql-guide/functions/function-setcontainsall)
+* [`SETCONTAINSANY` function](/docs/sql-guide/functions/function-setcontainsany)
 
 ### Query the existence of a value using `SETCONTAINS`
 
