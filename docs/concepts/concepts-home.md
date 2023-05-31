@@ -7,10 +7,9 @@ has_toc: true
 ---
 # How does FeatureBase differ to a traditional database?
 
-This high-level overview explains how data is arranged in traditional databases and FeatureBase bitmap databases.
+This high-level overview explains the concepts of cardinality and normalization in relation to traditional databases.
 
-* Cardinality -- the relationships between data
-* Normalization -- the act of arranging the data
+This information provides context for the FeatureBase approach to data storage.
 
 ## What is cardinality?
 
