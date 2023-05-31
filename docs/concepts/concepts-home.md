@@ -3,7 +3,6 @@ title: Concepts
 layout: default
 has_children: true
 nav_order: 2
-has_toc: true
 ---
 # How does FeatureBase differ to a traditional database?
 
@@ -74,15 +73,17 @@ DBAs responsible for normalized systems use different methods to overcome the is
 
 ## How does FeatureBase handle data cardinality?
 
-FeatureBase does not use Database normalization. Instead, the system inserts data into a two-dimensional bitmap index.
+FeatureBase does not use Database normalization. Instead, the system inserts data into a two-dimensional bitmap index which is:
+* designed to overcome issues with low cardinality data
+* optimized to reduce storage overheads and query execution time
 
-* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
+[Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
 
 ## How should I structure data to be imported to FeatureBase?
 
 {% include /concepts/concept-data-modeling-summary.md %}
 
-* [Learn how to structure your data ready to import to FeatureBase](/docs/concepts/overview-data-modeling)
+[Learn how to structure your data ready to import to FeatureBase](/docs/concepts/overview-data-modeling)
 
 ## Examples
 
