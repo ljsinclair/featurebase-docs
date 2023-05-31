@@ -7,12 +7,15 @@ nav_order: 2
 ---
 
 # Part 2 - Bit-slicing and range-encoding integer data
+{: .no_toc }
 
 In part 1, the basic concepts of bitmaps were explained, how equality encoding works well with Boolean data but has trouble with integers and other data types.
 
 In this part, the sample captivity data is Bit-sliced and Range-encoded to demonstrate how FeatureBase prepares data ready for final Roaring Bitmap compression.
 
 After this, data is inserted into FeatureBase ready for querying.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

@@ -7,6 +7,7 @@ nav_order: 1
 ---
 
 # Part 1 - bitmap indexes
+{: .no_toc }
 
 This is the first in a series of articles that explains how FeatureBase uses bitmaps, bit-slicing and range-encoding to:
 * represent your data
@@ -16,6 +17,8 @@ This article includes explanations of:
 * bitmap indexes
 * equality encoding boolean data
 * issues with equality encoding integer values
+
+{% include page-toc.md %}
 
 ## Before you begin
 

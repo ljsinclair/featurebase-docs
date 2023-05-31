@@ -7,6 +7,7 @@ nav_order: 1
 ---
 
 # Example - importing low-cardinality data
+{: .no_toc }
 
 There may be times where your choice of unique identifier results in data that has low cardinality where the relationships are:
 * a one-to-many
@@ -15,6 +16,8 @@ There may be times where your choice of unique identifier results in data that h
 The purpose of this content is to:
 * provide an example of how the choice of unique identifier may lead to low cardinality data
 * provide examples of how this data can be successfully imported to FeatureBase without requiring separate tables and keys to maintain relationships.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
