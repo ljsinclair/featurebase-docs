@@ -20,7 +20,7 @@ This article includes explanations of:
 ## Before you begin
 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
-* [Learn about data cardinality](/docs/concepts/concepts-home#cardinality-describes-relationships-between-data)
+* [Learn about data cardinality](/docs/concepts/concepts-home)
 
 ## What is a bitmap index?
 
