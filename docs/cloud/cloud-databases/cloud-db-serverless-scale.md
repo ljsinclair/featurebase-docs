@@ -19,7 +19,7 @@ This procedure explains how to scale a serverless database.
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn about FeatureBase Serverless](/docs/cloud/cloud-databases/cloud-db-serverless-home)
-* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-create)
+* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-serverless)
 
 ## Scale a serverless database with SQL
 
