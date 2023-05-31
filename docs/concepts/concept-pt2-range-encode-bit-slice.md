@@ -37,39 +37,37 @@ The `Captive` data can be converted to binary (base-2) as follows:
 
 ## Step 2 - Bit slicing the integer values
 
-Bit slicing or Bit Plane slicing converts each binary value into an array of bits. For example:
+Bit slicing or Bit Plane slicing converts each binary value into an array of bits.
 
-|  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
-| Sea Horse | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
-| Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
-| Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+{% include /concepts/concept-eg-bit-slice-species-captive-table.md %}
 
-## Step 3 - Equality encoding the values
+## Step 3 - Range encoding
 
-{: .note}
-This step is required to make range encoding more effective in the step 4.
+{% include /concepts/concept-range-encoding-summary.md %}
 
-Equality encoding the binary values means the relationships between `0` or `1` are represented in Boolean terms. This requires two bitmaps:
+When Range encoding, each value needs a bitmap to represent the highest and lowest value.
+
+This means the bit-sliced indexes are now represented with:
+* one bitmap representing `1`
+* one bitmap representing `0`
 
 ### Bitmap `2^0 = 1`
 
 | Bits --> | 1 | 0 |
 |---|---|
-| Manatee | 0 | 1 |
-| Sea Horse | 0 | 1 |
+| Manatee | 1 | 1 |
+| Sea Horse | 1 | 1 |
 | Koala | 1 | 0 |
-| Starfish | 0 | 1 |
+| Starfish | 1 | 1 |
 
 ### Bitmap `2^1=2`
 
 | Bits --> | 1 | 0 |
 |---|---|
 | Manatee | 1 | 0 |
-| Sea Horse | 0 | 1 |
+| Sea Horse | 1 | 1 |
 | Koala | 1 | 0 |
-| Starfish | 0 | 1 |
+| Starfish | 1 | 1 |
 
 ### Bitmap `2^2=4`
 
@@ -77,32 +75,32 @@ Equality encoding the binary values means the relationships between `0` or `1` a
 |---|---|
 | Manatee | 1 | 0 |
 | Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
+| Koala | 1 | 1 |
 | Starfish | 1 | 0 |
 
 ### Bitmap `2^3=8`
 
 | Bits --> | 1 | 0 |
 |---|---|
-| Manatee | 0 | 1 |
+| Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
+| Koala | 1 | 1 |
 | Starfish | 1 | 0 |
 
 ### Bitmap `2^4=16`
 
 | Bits --> | 1 | 0 |
 |---|---|
-| Manatee | 0 | 1 |
+| Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
+| Koala | 1 | 1 |
 | Starfish | 0 | 1 |
 
 ### Bitmap `2^5=32`
 
 | Bits --> | 1 | 0 |
 |---|---|
-| Manatee | 0 | 1 |
+| Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
 | Koala | 1 | 0 |
 | Starfish | 1 | 0 |
@@ -111,52 +109,39 @@ Equality encoding the binary values means the relationships between `0` or `1` a
 
 | Bits --> | 1 | 0 |
 |---|---|
-| Manatee | 0 | 1 |
-| Sea Horse | 0 | 1 |
-| Koala | 0 | 1 |
-| Starfish | 0 | 1 |
+| Manatee | 1 | 1 |
+| Sea Horse | 1 | 1 |
+| Koala | 1 | 1 |
+| Starfish | 1 | 1 |
 
 ### Bitmap `2^7=128`
-
-| Bits --> | 1 | 0 |
-|---|---|
-| Manatee | 0 | 1 |
-| Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
-| Starfish | 0 | 1 |
-
-### Bitmap `2^8=256`
-
-| Bits --> | 1 | 0 |
-|---|---|
-| Manatee | 0 | 1 |
-| Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
-| Starfish | 0 | 1 |
-
-### Bitmap `2^9=512`
-
-| Bits --> | 1 | 0 |
-|---|---|
-| Manatee | 0 | 1 |
-| Sea Horse | 1 | 0 |
-| Koala | 0 | 1 |
-| Starfish | 0 | 1 |
-
-### Step 4 - Range encoding equality encoded bit-sliced indexes
-
-{% include /concepts/concept-range-encoding-summary.md %}
-
-For example, when range-encoding data in the **Bitmap 2^9** data, **Bitmap-1** is encoded as follows:
 
 | Bits --> | 1 | 0 |
 |---|---|
 | Manatee | 1 | 1 |
 | Sea Horse | 1 | 0 |
 | Koala | 1 | 1 |
-| Starfish | 1 | 1 |
+| Starfish | 0 | 1 |
 
-## Step 5 - Application logic
+### Bitmap `2^8=256`
+
+| Bits --> | 1 | 0 |
+|---|---|
+| Manatee | 1 | 1 |
+| Sea Horse | 1 | 0 |
+| Koala | 1 | 1 |
+| Starfish | 0 | 1 |
+
+### Bitmap `2^9=512`
+
+| Bits --> | 1 | 0 |
+|---|---|
+| Manatee | 1 | 1 |
+| Sea Horse | 1 | 0 |
+| Koala | 1 | 1 |
+| Starfish | 0 | 1 |
+
+## Step 4 - Application logic
 
 FeatureBase automatically removes highest value bitmaps because:
 * the data is identical
@@ -185,23 +170,18 @@ To avoid losing this data, FeatureBase adds a **not_null** bitmap:
 
 As a point of comparison, here are the original bit-sliced integer values:
 
-|  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
-| Sea Horse | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
-| Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
-| Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+{% include /concepts/concept-eg-bit-slice-species-captive-table.md %}
 
 These bitmaps comprise the data once range encoding is completed, high-value columns are removed, and a `not_null` bitmap is added to retain data.
 
-|  | not_null |512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|  | not_null | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Manatee | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
 | Sea Horse | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
 | Koala | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Starfish | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | 1 |
 
-## Step 6 - Compressing the data before inserting to FeatureBase
+## Step 5 - Compressing the data before inserting to FeatureBase
 
 Roaring Bitmap compression is applied to the final bitmaps which:
 * breaks large sets of integers into containers of 2^16 integers (65536 bits)
