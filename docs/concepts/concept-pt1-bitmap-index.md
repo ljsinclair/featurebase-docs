@@ -55,7 +55,7 @@ Those species with a backbone are represented by:
 
 ### Equality encoding integer values
 
-Equality encoding integers (and other non-boolean data) is less effective but is possible.
+Equality encoding non-Boolean data like integers is less effective but is possible.
 
 For example:
 
@@ -72,22 +72,24 @@ The issue here is that:
 
 ### Equality encoding groups of values
 
-Grouping values reduces the number of bitmaps, but data is lost.
+Grouping values reduces the number of bitmaps:
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 0-500 | 1 | 0 | 1 | 1 |
 | 5001-1000 | 0 | 1 | 0 | 0 |
 
-In this example the data on exact numbers of each species in captivity is lost
+However, exact numbers of each species in captivity is lost.
 
 ### Range encoding integer values
 
 {% include /concepts/concept-range-encoding-summary.md %}
 
-Range encoding the data means there is no loss of data, as compared to equality encoding in groups.
+Range encoding means there is no loss of data as compared to equality encoding in groups.
 
-The drawback of Range encoding is that n+1 bitmaps are required to represent the data, in this case: one bitmap for each value between 0 and 956. For example:
+The drawback of Range encoding is that n+1 bitmaps are required to represent the data.
+
+For example, to range encode the captivity data, there will be one bitmap for each value between 0 and 956:
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
