@@ -4,6 +4,7 @@ layout: default
 parent: Concepts
 nav_order: 1
 has_toc: true
+has_children: true
 ---
 
 # An overview of FeatureBase bitmaps
