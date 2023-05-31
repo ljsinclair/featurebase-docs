@@ -6,13 +6,17 @@ parent: Concepts
 
 # How do I map low cardinality data? (working title)
 
-There may be times where your choice of unique identifier results in data that has a one-to-many relationship, or low cardinality.
+There may be times where your choice of unique identifier results in data that has low cardinality where the relationships are:
+* a one-to-many
+* many-to-many
 
-The examples that follow explain how the low cardinality data can be ingested by FeatureBase using `SET` data types.
+The purpose of this content is to:
+* provide an example of how the choice of unique identifier may lead to low cardinality data
+* provide examples of how this data can be successfully imported to FeatureBase without requiring separate tables and keys to maintain relationships.
 
 ## Before you begin
 
-* [Learn about data cardinality]
+* [Learn about data cardinality](/docs/concepts/concepts-home)
 * [Learn about data modeling](/docs/concepts/concept-data-modeling)
 * [Learn about `SET` data types](/docs/concepts/concept-datatype-set)
 
@@ -22,46 +26,43 @@ The examples that follow explain how the low cardinality data can be ingested by
 
 ## Choosing the unique identifier
 
-By choosing the `Vertebrae` column as unique identifier for your data results in the `Species` column populated by low cardinality or one-to-many data:
+The choice of `Vertebrae` as unique identifier for your data results in the `Species` column populated by low cardinality or one-to-many data:
 
 | Vertebrae | Species |
 |---|---|
 | yes | Manatee, Sea Horse, Koala |
 | no | Starfish |
 
-Database normalization forms dictate that low cardinality data like that in the `yes` row is inserted into separate tables to avoid duplication.
+If the data were to be inserted into a traditional RDBMS database, the low cardinality data would be inserted into separate tables to avoid duplication.
 
-In this example,
-* the `STRINGSET` data type will be used to insert low-cardinality data into a single row
-* SELECT queries with
+FeatureBase allows you to insert the data into a single row without losing the ability to query individual items.
 
-## CREATE TABLE statement
+## Create the destination table statement
 
 A Create Table statement is created and run:
 
 {% include /sql-guide/table-create-eg-stringset-datatype.md %}
 
-## CSV ingest file
+The `STRINGSET` data type allows you to insert the species data as individual items within the same row and column.
+
+## Create a source file containing the data
 
 Create a CSV file with the following structure then save as `*/featurebase/import/myspecies.csv`
 
 {: .note}
-The CSV file requires no header row because the `BULK INSERT` statement specifies where the data should be inserted.
+A header row is not required because the `BULK INSERT` statement defines the destination columns
 
 ```csv
 "yes", "Manatee, Sea Horse, Koala"
-"no", "Star fish"
+"no", "Starfish"
 ```
 
 ## BULK INSERT statement
 
 The following `BULK INSERT` statement:
 * specifies the file format
-* includes the path to **myspecies.csv**
+* requires an absolute path to **myspecies.csv**
 * maps each column of data in the CSV to the columns in the table.
-
-{: .important}
-An absolute file path is required to successfully insert the data
 
 ```sql
 BULK INSERT
@@ -74,7 +75,7 @@ BULK INSERT
     input 'FILE';
 ```
 
-## SELECT statements
+## Confirm the data is successfully inserted
 
 A `SELECT *` statement demonstrates the values have been added to the table:
 
@@ -82,12 +83,14 @@ A `SELECT *` statement demonstrates the values have been added to the table:
 SELECT * from myspecies;
 ```
 
+## Querying the data
+
 The following functions are required to query values in `SET` columns:
 * `SETCONTAINS`
 * `SETCONTAINSALL`
-* `SETCONTAINSAny`
+* `SETCONTAINSANY`
 
-### `SETCONTAINS`
+### Query the existence of a value using `SETCONTAINS`
 
 This statement returns `true` for the first row and `false` for the second:
 
@@ -96,7 +99,7 @@ select _id, setcontains(species, 'Koala') as HasKoala
     from myspecies;
 ```
 
-### `SETCONTAINSALL`
+### Return all values containing two values with `SETCONTAINSALL`
 
 This statement returns all values from all rows that contain `Manatee` and `Sea Horse`
 
@@ -104,7 +107,7 @@ This statement returns all values from all rows that contain `Manatee` and `Sea 
 SELECT _id, species from myspecies where setcontainsall(species, ['Manatee','Sea Horse']);
 ```
 
-### `SETCONTAINSANY`
+### Return true or false when one or more values exist with `SETCONTAINSANY`
 
 This statement returns true or false if a row contains either a Seahorse OR Starfish and outputs results in a column **Sea_Creatures**
 ```
