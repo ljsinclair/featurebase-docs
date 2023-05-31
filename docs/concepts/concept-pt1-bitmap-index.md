@@ -2,7 +2,7 @@
 title: Part 1 - Bitmap indexes
 layout: default
 parent: Bitmap index overview
-grand-parent: Concepts
+grand_parent: Concepts
 nav_order: 1
 ---
 

@@ -2,7 +2,7 @@
 title: Unique identifier
 layout: default
 parent: Data modeling overview
-grand-parent: Concepts
+grand_parent: Concepts
 nav_order: 1
 ---
 

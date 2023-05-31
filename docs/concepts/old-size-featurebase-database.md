@@ -2,7 +2,7 @@
 title: Sizing database
 layout: default
 parent: Data modeling overview
-grand-parent: Concepts
+grand_parent: Concepts
 nav-order: 10
 ---
 

@@ -2,7 +2,7 @@
 title: Time Quantums
 layout: default
 parent: Data modeling overview
-grand-parent: Concepts
+grand_parent: Concepts
 nav_order: 2
 ---
 
