@@ -3,18 +3,17 @@ title: Part 2 - bit-slicing and range-encoding
 layout: default
 parent: Bitmap indexes
 grand-parent: Concepts
-nav_order: 3
+nav_order: 2
 ---
 
-## Part 3 - Bit-slicing and range-encoding integer data
+## Part 2 - Bit-slicing and range-encoding integer data
 
-In part 1 and 2, the basic concepts of bitmaps were explained, how equality encoding works well with Boolean data but has trouble with integers.
+In part 1, the basic concepts of bitmaps were explained, how equality encoding works well with Boolean data but has trouble with integers and other data types.
 
 In this part, Bit-slicing and Range encoding integer data is explained which successfully encodes integers in a small number of bitmaps ready for insertion to FeatureBase.
 
 ## Before you begin
 * [Part 1 - Bitmap indexes and equality encoding data](/docs/concepts/concept-pt1-bitmap-index)
-* [Part 2 - Issues encoding integer data for bitmaps](/docs/concepts/concept-pt2-issue-bitmap-encode-integer)
 
 ## Sample data
 
@@ -146,7 +145,7 @@ Equality encoding the binary values means the relationships between `0` or `1` a
 
 ### Step 4 - Range encoding equality encoded bit-sliced indexes
 
-When range encoding, all values greater than a specific value are set to 1.
+{% include /concepts/concept-range-encoding-summary.md %}
 
 For example, when range-encoding data in the **Bitmap 2^9** data, **Bitmap-1** is encoded as follows:
 

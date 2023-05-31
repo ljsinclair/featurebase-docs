@@ -14,7 +14,8 @@ This is the first in a series of articles that explains how FeatureBase uses bit
 
 This article includes explanations of:
 * bitmap indexes
-* equality encoding Boolean data
+* equality encoding boolean data
+* issues with equality encoding integer values
 
 ## Before you begin
 
@@ -42,9 +43,7 @@ Equality encoding is a basic encoding method used with bitmap indexes whereby th
 * `1` is encoded if the relationship exists
 * `0` is encoded if the relationship does not
 
-High cardinality data works well in bitmaps because the relationship is Boolean, it either exists or it does not.
-
-For example, the first column values can be represented as a single bitmap:
+Boolean data can be equality encoded because the relationship either exists or it doesn't. For example:
 
 |  | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
@@ -54,15 +53,9 @@ Those species with a backbone are represented by:
 * 1 if the species has a backbone
 * 0 if the species does not have a backbone
 
-## Low cardinality data representation
+### Equality encoding integer values
 
-Low cardinality values have a one-to-many or many-to-many relationship. The way the data and relationships are represented requires multiple bitmaps.
-
-### Equality encoding one bitmap per value
-
-Specifying a single bitmap per value means the data is accurately recorded, but:
-* a new bitmap must be created each time the captivity numbers change
-* multiple `OR` operations are required to query the captivity numbers.
+Equality encoding integers (and other non-boolean data) is less effective but is possible.
 
 For example:
 
@@ -73,22 +66,28 @@ For example:
 | 20 | 0 | 0 | 0 | 1 |
 | 956 | 0 | 1 | 0 | 0 |
 
-### Equality encoding with groups of values
+The issue here is that:
+* multiple `OR` operations are required to query the captivity numbers.
+* a new bitmap must be created each time captivity numbers change
 
-Grouping values reduces the number of bitmaps but data is lost. For example:
+### Equality encoding groups of values
+
+Grouping values reduces the number of bitmaps, but data is lost.
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
 | 0-500 | 1 | 0 | 1 | 1 |
 | 5001-1000 | 0 | 1 | 0 | 0 |
 
-### Range encoding values
+In this example the data on exact numbers of each species in captivity is lost
 
-Range encoding means:
-* there is no loss of data
-* all values must be represented in an individual bitmap.
+### Range encoding integer values
 
-In this case, one bitmap for each value between 0 and 956 (n+1 bitmaps)
+{% include /concepts/concept-range-encoding-summary.md %}
+
+Range encoding the data means there is no loss of data, as compared to equality encoding in groups.
+
+The drawback of Range encoding is that n+1 bitmaps are required to represent the data, in this case: one bitmap for each value between 0 and 956. For example:
 
 | Captive | Manatee | Sea Horse | Koala | Starfish |
 |---|---|---|---|---|
@@ -108,12 +107,6 @@ In this case, one bitmap for each value between 0 and 956 (n+1 bitmaps)
 | 20 | 1 | 0 | 1 | 1 |
 | ...|  |  |  |
 | 956 | 1 | 1 | 1 | 1 |
-
-Range encoded values allow range queries to include:
-* less `or` operators,
-* because the system can query only a smaller number of bitmaps need to be queried.
-
-For example to determine the lowest numbers of species in captivity, only Bitmap 5 needs to be queried.
 
 ## Next step
 
