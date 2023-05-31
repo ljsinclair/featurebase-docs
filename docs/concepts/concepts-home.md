@@ -32,7 +32,7 @@ High cardinality data has a high number of unique relationships which can be rep
 
 Data described as **low cardinality** have multiple relationships has a one-to-many or many-to-many relationship:
 
-{% include /concepts/concept-eg-one-many.md %}
+{% include /concepts/concept-eg1-one-many.md %}
 
 ## Database normalization in relation to data cardinality
 
