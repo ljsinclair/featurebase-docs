@@ -9,13 +9,11 @@ nav_order: 1
 # Example - importing low-cardinality data
 {: .no_toc }
 
-There may be times where your choice of unique identifier results in data that has low cardinality where the relationships are:
-* a one-to-many
-* many-to-many
+In a traditional database, low cardinality data is typically normalized into separate tables and keys are used to maintain the relationships.
 
-The purpose of this content is to:
-* provide an example of how the choice of unique identifier may lead to low cardinality data
-* provide examples of how this data can be successfully imported to FeatureBase without requiring separate tables and keys to maintain relationships.
+The examples below demonstrate:
+1. How FeatureBase ingests low-cardinality data into a single row
+2. How choosing particular keys results in less rows imported, which under certain circumstances may be interpreted as an error.
 
 {% include page-toc.md %}
 
@@ -30,16 +28,14 @@ The purpose of this content is to:
 
 ## Step 1 - Choose the unique identifier
 
-The choice of `Vertebrae` as unique identifier for your data results in the `Species` column populated by low cardinality or one-to-many data:
+The choice of `Vertebrae` as unique identifier for your data results in:
+* the `Species` column populated by low cardinality or one-to-many data:
+* a fewer number of rows to be ingested by FeatureBase.
 
 | Vertebrae | Species |
 |---|---|
 | yes | Manatee, Sea Horse, Koala |
 | no | Starfish |
-
-If the data were to be inserted into a traditional RDBMS database, the low cardinality data would be inserted into separate tables to avoid duplication.
-
-FeatureBase allows you to insert the data into a single row without losing the ability to query individual items.
 
 ## Step 2 - Create the destination table
 
