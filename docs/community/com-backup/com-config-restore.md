@@ -7,10 +7,10 @@ grand_parent: Community
 
 # How do I restore from a backup?
 
-The `featurebase-restore` command is used to restore a backup to a new FeatureBase cluster of any size.
+The `featurebase restore` and `featurebase restoretar` commands are used to restore a backup to a new FeatureBase cluster of any size.
 
 {: .warning}
-`featurebase-restore` should **only** be executed against an empty cluster. Data loss and/or instability **will** occur if this is attempted on a live cluster with data.
+Restoring should **only** be executed against an empty cluster. Data loss and/or instability **will** occur if this is attempted on a live cluster with data.
 
 ## Before you begin
 
@@ -18,24 +18,33 @@ The `featurebase-restore` command is used to restore a backup to a new FeatureBa
 * [Backup FeatureBase Community](/docs/community/com-backup/com-config-backup)
 * Obtain Administrator permissions to the destination FeatureBase cluster
 
+## What's the difference between restore and restoretar?
+
+### restore
+
+The `restore` command should be used when your source is a directory (an uncompressed backup outputted from the `backup` command) and is located on local disk. This command allows for parallelization of restoring rbf files, so it can complete faster than `restoretar`. 
+
+### restoretar
+
+The `restoretar` command should be used when your source is a tar file (an tar compressed backup outputted from the `backuptar` command). This command can accept a streamed input if the source is not on local disk. This command will generally take longer than `restore` as it restores each file sequentially. 
+
 ## Syntax
 
 ```
-featurebase restore
+featurebase [restore|restoretar]
   {--host
     [ {https://hostname:port --auth-token <token> <tls_flags>}
       | hostname:port
     ]
-  [--concurrency <int_val>]
-  {[-s|-source]/directory/path/}
+  {[-s|-source] /directory/path/}
 ```
 
 ## Restore flags
 
 | Argument | Description | Required? |
 |---|---|---|
-| `-s` or `-source` | Source directory and backup file. | Yes |
-| `/backup-directory/path/` | Directory containing backups | Yes |
+| `-s` or `-source` | Source directory or backup file. | Yes |
+| `/directory/path/` | Directory containing backup or `.tar` backup file | Yes |
 
 ## Common Backup/Restore flags
 
@@ -71,6 +80,14 @@ featurebase restore
   --concurrency 8
   --host featurebase-hostname-or-ip:10101
   -s /path/to/backup/
+```
+
+### Use tar restore
+
+```
+featurebase restoretar
+  --host featurebase-hostname-or-ip:10101
+  -s /path/to/backup/backup.tar
 ```
 
 ### Restore with TLS flags

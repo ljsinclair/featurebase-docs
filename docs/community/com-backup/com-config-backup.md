@@ -8,11 +8,11 @@ grand_parent: Community
 
 # How do I backup my FeatureBase Community installation?
 
-You can create FeatureBase backups on the CLI using the `featurebase-backup` command and suitable flags.
+You can create FeatureBase backups on the CLI using the `featurebase backup` or `featurebase backuptar` commands and suitable flags.
 
 ## What's included in the backup?
 
-A `featurebase backup` includes:
+A featurebase backup includes:
 * schema
 * key translation data
 * indexes
@@ -35,15 +35,24 @@ A `featurebase backup` includes:
 {: .important}
 Stop any jobs that create, alter or delete records before running a backup. Only existing, unaltered records are guaranteed to be backed-up.
 
+## What's the difference between backup and backuptar?
+
+### backup
+
+The `backup` command should be used when you are prioritizing backup speed and want to write the backup to local disk. This command allows for the parallelization of copying rbf files, so it can complete faster than `backuptar`. Additionally, this command will check if there is space on the server for the backup before it runs. The output of this command are all of the uncompressed directories and files.
+
+### backuptar
+
+The `backuptar` command copies the rbf files in an append fashion and streams them to output one at a time. This means it cannot be parallelized, but it can be helpful if you'd like pipe this stream into other commands, such as writing the backup to another location other than local disk. This command will generally take longer than `backup` as it backs up up each file sequentially. The output of this command is a file in a compressed tar format.
+
 ## Syntax
 
 ```sh
-featurebase backup
+featurebase [backup|backuptar]
   {--host
     [ {https://hostname:port --auth-token <token> <tls_flags>}
       | hostname:port
     ]
-  [--concurrency <int_val>]
   [--no-sync]
   {[-o|--output] /backup-directory/path/}
 ```
@@ -55,8 +64,8 @@ featurebase backup
 | Argument | Description | Required? | Further information |
 |---|---|---|---|
 | `-no-sync` | Backup runs without the operating system moving data to persistent storage. | Optional | [Override storage synchronization](#override-storage-synchronization) |
-| `-o` or `-output` | Backup output directory | Yes |  |
-| `/backup-directory/path/` | Backup directory which will be created if it does not exist | Yes | Backup process will fail if directory not empty |
+| `-o` or `-output` | Backup output directory. Add file name with `backuptar` | Yes |  |
+| `/backup-directory/path/` | Backup directory which will be created if it does not exist. Add file name with `backuptar` | Yes | Backup process will fail if directory not empty |
 
 ### Common Backup/Restore flags
 
@@ -95,12 +104,12 @@ featurebase backup
   --no-sync
 ```
 
-### Host backup
+### Host tar backup with gzip
 
 ```
-featurebase backup
+featurebase backuptar
   --host featurebase-hostname-or-ip:10101
-  --output /backups/featurebase-backups
+  --output - | gzip > backup.tar.gz
 ```
 
 ### Authenticated backup
