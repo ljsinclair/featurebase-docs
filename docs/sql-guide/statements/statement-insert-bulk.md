@@ -120,13 +120,36 @@ There are special assignments for certain literal values when inserting NDJSON d
 
 ## TRANSFORM clause
 
-* a list of valid SQL expressions that are used to specify data transformation before values are inserted.
-* uses variables named for the ordinal position values are specified in the MAP clause.
+The `TRANSFORM` clause is a list of valid SQL expressions that are used to specify data transformation before values are inserted. The variables to transform are named based on the ordinal position values are specified in the MAP clause.
 
 {: .important}
 The number of expressions in the column list and TRANSFORM clause must match.
 
-* [TRANSFORM example](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
+### TUPLE() Function
+
+The `TUPLE()` function is used in the `TRANSFORM` clause when loading [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq) and [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) columns. It returns a tuple containing a `TIMESTAMP` and an [IDSET](/docs/sql-guide/data-types/data-type-idset) or [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)
+
+### TUPLE() syntax
+
+```
+TUPLE(time_expr,set_expr)
+```
+
+### TUPLE() arguments
+
+| Argument | Data type | Description | Required? | Further information |
+|---|---|---|---|---|
+| `time_expr` | timestamp | timestamp literal or expression to be returned as the first value of the tuple | Yes | |
+| `set_expr` | [IDSET](/docs/sql-guide/data-types/data-type-idset) <br> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) | [IDSET](/docs/sql-guide/data-types/data-type-idset) or [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) literal or expression to be returned as the second value of the tuple | Yes | |
+
+### TUPLE() returns
+
+| Data type | Value |
+|---|---|
+| tuple | tuple containing a `TIMESTAMP` and `SET`. This can be ingested into [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq) and [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) columns |
+
+
+* [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
 
 ## Examples
 
@@ -148,6 +171,7 @@ The number of expressions in the column list and TRANSFORM clause must match.
 TRANSFORM (
     @0 + 10, -- offset the new _id value by 10
     @1,      -- pass through unchanged
+    TUPLE(@3,@4),      -- create tuple to load time quantum fields
     CASE     -- clean up state names
         WHEN @2 = 'Texas' then 'TX' end
         WHEN @2 = 'California' then 'CA' end
