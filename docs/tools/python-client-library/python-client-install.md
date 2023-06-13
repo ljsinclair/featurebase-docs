@@ -7,20 +7,19 @@ nav_order: 1
 ---
 # How do I install the python client library?
 
-{% include /tools-python/python-release-note.md %}
-
 ## Before you begin
 * [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
 * [Install python 3.7+](https://www.python.org/downloads/)
 
 ## Step 1 - Navigate to source code
 
-* [Navigate to FeatureBase releases](https://releases.molecula.cloud){:target="_blank"}
+The source code for featurebase python client library is stored in a public repository on github.
+* [Navigate to FeatureBase repository](https://github.com/FeatureBaseDB/python-featurebase){:target="_blank"}
 
-## Step 2 - Download the python client wheel file
+## Step 2 - Download the python client source
 
-The python wheel file is stored in a subfolder named `python-featurebase`  under the version specific release folder. (i.e. `molecula-v5.0.0`). Click the `.whl` file to download it, or download the entire FeatureBase release.
+Download the repository content to your local. You can clone the repository using `git` or download the source code as a zip file and extract. 
 
 ## Step 3 - Install the python client library
 
-Navigate to the directory you downloaded the `.whl` file and install with `pip3 install <file>.whl` 
+Navigate to the directory where you have downloaded the `python-featurebase` source files and run `make` command to build and install the library as a new package into your local python environment. 

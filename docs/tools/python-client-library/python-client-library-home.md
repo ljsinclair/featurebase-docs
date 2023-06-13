@@ -11,8 +11,6 @@ has_toc: false
 
 The python client library is a python package containing components needed to access FeatureBase databases from your python applications. It provides a simple client class that represents a connection to a FeatureBase database. This connection class exposes a small set of public methods for the application to submit queries against the FeatureBase database. 
 
-{% include /tools-python/python-release-note.md %}
-
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
