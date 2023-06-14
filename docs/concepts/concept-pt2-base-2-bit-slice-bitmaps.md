@@ -40,7 +40,7 @@ The `Captivity` data can be converted to binary (base-2) as follows:
 
 Bit slicing or Bit Plane slicing converts each binary value into an array of bits.
 
-{% include /concepts/concept-eg-bit-slice-species-captivity-table.md %}
+{% include /concepts/concept-eg-bit-slice-species-captive-table.md %}
 
 ## Step 3 - Compressing the data before inserting to FeatureBase
 
