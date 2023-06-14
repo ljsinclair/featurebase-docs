@@ -9,14 +9,9 @@ nav_order: 2
 # Part 2 - Bit-sliced base-2 integer encoding
 {: .no_toc }
 
-In part 1, the basic concepts of bitmaps were explained, how equality encoding works well with Boolean data but causes issues with other data types.
+{% include /concepts/concept-bitmap-pt1-summary.md %}
 
-The FeatureBase solution to these issues are discussed in this part, and involve:
-* converting data to base-2
-* bit-slicing the data
-* applying Roaring Bitmap compression to the data before saving to FeatureBase.
-
-After this, data is inserted into FeatureBase ready for querying.
+{% include /concepts/concept-bitmap-pt2-summary.md %}
 
 {% include page-toc.md %}
 

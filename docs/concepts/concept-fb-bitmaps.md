@@ -9,4 +9,8 @@ has_toc: true
 
 # An overview of FeatureBase bitmaps
 
-This two-part series explains concepts surrounding the implementation of Bitmap indexes in FeatureBase.
+{% include /concepts/concept-bitmap-index-summary.md %}
+
+{% include /concepts/concept-bitmap-pt1-summary.md %}
+
+{% include /concepts/concept-bitmap-pt2-summary.md %}

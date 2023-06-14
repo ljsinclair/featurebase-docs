@@ -9,12 +9,11 @@ nav_order: 1
 # Part 1 - bitmap indexes
 {: .no_toc }
 
-FeatureBase is a bitmap-index database which:
-* converts data to base-2
-* bit-slices the data
-* applies Roaring Bitmap compression to the data before saving to FeatureBase.
+{% include /concepts/concept-bitmap-index-summary.md %}
 
-In this part the limitations of encoding data to bitmaps are discussed. This gives context to the FeatureBase solution discussed in part 2.
+{% include /concepts/concept-bitmap-pt1-summary.md %}
+
+This gives context to the solution discussed in Part 2.
 
 {% include page-toc.md %}
 
