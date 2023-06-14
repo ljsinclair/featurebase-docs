@@ -21,6 +21,8 @@ nav_order: 2
 
 ## Sample data
 
+Part 1 and 2 use the following sample data for examples:
+
 {% include /concepts/concept-eg-species-table-data.md %}
 
 The `Species` and `Captivity` data is to be imported to FeatureBase.
