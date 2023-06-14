@@ -83,7 +83,7 @@ FeatureBase does not use Database normalization. Instead, the system inserts dat
 
 {% include /concepts/concept-data-modeling-summary.md %}
 
-[Learn how to structure your data ready to import to FeatureBase](/docs/concepts/overview-data-modeling)
+[Learn how to perform Data Modeling for the FeatureBase Bitmap database](/docs/concepts/overview-data-modeling)
 
 ## Examples with data
 

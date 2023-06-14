@@ -27,7 +27,7 @@ Part 1 and 2 use the following sample data for examples:
 
 The `Species` and `Captivity` data is to be imported to FeatureBase.
 
-## Step 1 - convert `Captivity` integer values to base-2
+## Step 1 - convert integer values to base-2
 
 The `Captivity` data can be converted to binary (base-2) as follows:
 
