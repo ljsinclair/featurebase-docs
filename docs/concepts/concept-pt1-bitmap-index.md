@@ -12,7 +12,7 @@ nav_order: 1
 FeatureBase is a bitmap-index database which:
 * converts data to base-2
 * bit-slices the data
-* applies Roaring Bitmap compression to the data before saving to Featurebase.
+* applies Roaring Bitmap compression to the data before saving to FeatureBase.
 
 In this part the limitations of encoding data to bitmaps are discussed. This gives context to the FeatureBase solution discussed in part 2.
 
