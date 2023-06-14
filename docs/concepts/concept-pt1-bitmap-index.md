@@ -69,9 +69,9 @@ For example:
 | 20 | 0 | 0 | 0 | 1 |
 | 956 | 0 | 1 | 0 | 0 |
 
-The issue here is that:
-* multiple `OR` operations are required to query the captivity numbers.
-* a new bitmap must be created each time captivity numbers change
+There are two issues with this approach:
+1. multiple `OR` operations are required to query the captivity numbers.
+2. a new bitmap must be created each time captivity numbers change
 
 ### Equality encoding groups of values
 
@@ -87,10 +87,6 @@ However, exact numbers of each species in captivity is lost.
 ## Next step
 
 * [Part 2 - base-2 bit-sliced bitmaps](/docs/concepts/concept-pt2-base-2-bit-slice-bitmaps)
-
-## Further information
-
-* [Analysis of basic data recording techniques (equality encoding and range encoding)](https://www.researchgate.net/publication/221206605_Analysis_of_Basic_Data_Reordering_Techniques){:target="_blank"}
 
 <!--
 Garrett diagrams:
