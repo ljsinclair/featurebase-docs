@@ -24,6 +24,12 @@ This gives context to the solution discussed in Part 2.
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about data cardinality](/docs/concepts/concepts-home)
 
+## Sample data
+
+Part 1 and 2 use the following sample data for examples:
+
+{% include /concepts/concept-eg-species-table-data.md %}
+
 ## What is a bitmap index?
 
 A bitmap index is:
@@ -36,10 +42,6 @@ For example:
 |  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
-
-## Sample data
-
-{% include /concepts/concept-eg-species-table-data.md %}
 
 ## What is equality-encoding?
 
