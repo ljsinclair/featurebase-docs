@@ -11,6 +11,8 @@ has_toc: true
 
 {% include /concepts/concept-bitmap-index-summary.md %}
 
+The overview has two parts:
+
 {% include /concepts/concept-bitmap-pt1-summary.md %}
 
 {% include /concepts/concept-bitmap-pt2-summary.md %}
