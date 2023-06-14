@@ -89,7 +89,7 @@ However, exact numbers of each species in captivity is lost.
 
 ## Next step
 
-* [Part 2 - base-2 bit-sliced bitmaps](/docs/concepts/concept-pt2-base-2-bit-slice-bitmaps)
+* [Part 2 - FeatureBase base-2 bit-sliced bitmaps](/docs/concepts/concept-pt2-base-2-bit-slice-bitmaps)
 
 <!--
 Garrett diagrams:

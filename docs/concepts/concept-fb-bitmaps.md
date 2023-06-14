@@ -13,6 +13,6 @@ has_toc: true
 
 The overview has two parts:
 
-{% include /concepts/concept-bitmap-pt1-summary.md %}
+* {% include /concepts/concept-bitmap-pt1-summary.md %}
 
-{% include /concepts/concept-bitmap-pt2-summary.md %}
+* {% include /concepts/concept-bitmap-pt2-summary.md %}

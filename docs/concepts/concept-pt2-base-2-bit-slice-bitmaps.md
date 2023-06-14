@@ -6,7 +6,7 @@ grand_parent: Concepts
 nav_order: 2
 ---
 
-# Part 2 - Bit-sliced base-2 integer encoding
+# Part 2 - FeatureBase base-2 bit-sliced bitmaps
 {: .no_toc }
 
 {% include /concepts/concept-bitmap-pt1-summary.md %}
