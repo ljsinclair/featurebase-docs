@@ -11,6 +11,8 @@ nav_order: 1
 
 {% include /concepts/concept-bitmap-index-summary.md %}
 
+The underlying reasons this approach was chosen is explained in two parts:
+
 {% include /concepts/concept-bitmap-pt1-summary.md %}
 
 This gives context to the solution discussed in Part 2.
