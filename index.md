@@ -42,23 +42,21 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community |
 |---|---|---|
-| Streaming (HTTPS)  | Yes | No |
+| Streaming (HTTPS)  | Yes | Yes |
 | Kafka (Pull-based) | Client-side kafka consumption & push | [Kafka ingestion](/docs/community/com-ingest/com-ingest-manage/#kafka-import-method) |
-| Database (Pull-based) | No | [SQL ingestion](/docs/community/com-ingest/com-ingest-manage/#sql-import-method) |
-| CSV/Bulk Ingest  | No | [CSV ingestion](docs/community/com-ingest/com-ingest-manage/#csv-import-method) |
-
-
+| Database (Pull-based) | Client-side SQL consumption & push | [SQL ingestion](/docs/community/com-ingest/com-ingest-manage/#sql-import-method) |
+| CSV/Bulk Ingest  | Yes | [CSV ingestion](docs/community/com-ingest/com-ingest-manage/#csv-import-method) |
 
 ## Data Consumption
 
 | Feature | Cloud | Community | Further information |
 |---|---|---|---|
 | Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-data) | [Query community tables](/docs/community/com-query/com-query-home) |  |
-| FeatureBase SQL - HTTPS | Yes | No | Any language/tool (Python, Go, etc) that can read over HTTPS  |
+| FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
 | Pilosa Query Language (PQL) Query Builder | No | Yes | [Learn about PQL](/docs/pql-guide/pql-home) |
-| Python Client | No | [Python client library](/docs/community/com-query/old-python-library) | |
+| Python Client | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | |
 | Grafana Plug-In | No | [Community grafana connector](/docs/community/com-query/old-grafana-connector) |  |
 | Postgres Lookup Database Option | No | Yes |   |
 
@@ -66,9 +64,9 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community |
 |---|---|---|
-| Backup and Restore | No | [Community backup and restore](/docs/community/com-backup/com-config-backup) |
+| Backup and Restore | Yes | [Community backup and restore](/docs/community/com-backup/com-config-backup) |
 | Data Replication | Yes | Yes |
-| Metrics & Monitoring | No | [Community metrics & monitoring](/docs/community/com-monitoring/com-monitoring-home) |
+| Metrics & Monitoring | [Cloud metrics](/docs/cloud/cloud-databases/cloud-db-metrics/) | [Community metrics & monitoring](/docs/community/com-monitoring/com-monitoring-home) |
 | Editable FeatureBase Config File | No | Yes |
 
 ## Security
