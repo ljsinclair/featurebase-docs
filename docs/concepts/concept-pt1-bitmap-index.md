@@ -9,14 +9,12 @@ nav_order: 1
 # Part 1 - bitmap indexes
 {: .no_toc }
 
-This is the first in a series of articles that explains how FeatureBase uses bitmaps, bit-slicing and range-encoding to:
-* represent your data
-* reduce the storage overhead of your data
+FeatureBase is a bitmap-index database which:
+* converts data to base-2
+* bit-slices the data
+* applies Roaring Bitmap compression to the data before saving to Featurebase.
 
-This article includes explanations of:
-* bitmap indexes
-* equality encoding boolean data
-* issues with equality encoding integer values
+In this part the limitations of encoding data to bitmaps are discussed. This gives context to the FeatureBase solution discussed in part 2.
 
 {% include page-toc.md %}
 
@@ -86,38 +84,9 @@ Grouping values reduces the number of bitmaps:
 
 However, exact numbers of each species in captivity is lost.
 
-### Range encoding integer values
-
-{% include /concepts/concept-range-encoding-summary.md %}
-
-Range encoding means there is no loss of data as compared to equality encoding in groups.
-
-The drawback of Range encoding is that n+1 bitmaps are required to represent the data.
-
-For example, to range encode the captivity data, there will be one bitmap for each value between 0 and 956:
-
-| Captivity | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 2 | 0 | 0 | 0 | 0 |
-| 3 | 1 | 0 | 0 | 0 |
-| 4 | 0 | 0 | 0 | 0 |
-| 5 | 1 | 0 | 0 | 0 |
-| ...|  |  |  |
-| 9 | 0 | 0 | 1 | 0 |
-| 10 | 0 | 0 | 1 | 0 |
-| ...|  |  |  |
-| 14 | 1 | 0 | 1 | 0 |
-| 15 | 1 | 0 | 1 | 0 |
-| ...|  |  |  |
-| 20 | 1 | 0 | 1 | 1 |
-| ...|  |  |  |
-| 956 | 1 | 1 | 1 | 1 |
-
 ## Next step
 
-* [Part 2 - base-2 range-encoded bitmaps](/docs/concepts/concept-pt2-range-encode-bit-slice)
+* [Part 2 - base-2 bit-sliced bitmaps](/docs/concepts/concept-pt2-base-2-bit-slice-bitmaps)
 
 ## Further information
 
