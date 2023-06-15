@@ -125,30 +125,6 @@ The `TRANSFORM` clause is a list of valid SQL expressions that are used to speci
 {: .important}
 The number of expressions in the column list and TRANSFORM clause must match.
 
-### TUPLE() Function
-
-The `TUPLE()` function is used in the `TRANSFORM` clause when loading [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq) and [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) columns. It returns a tuple containing a `TIMESTAMP` and an [IDSET](/docs/sql-guide/data-types/data-type-idset) or [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)
-
-### TUPLE() syntax
-
-```
-TUPLE(time_expr,set_expr)
-```
-
-### TUPLE() arguments
-
-| Argument | Data type | Description | Required? | Further information |
-|---|---|---|---|---|
-| `time_expr` | timestamp | timestamp literal or expression to be returned as the first value of the tuple | Yes | |
-| `set_expr` | [IDSET](/docs/sql-guide/data-types/data-type-idset) <br> [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) | [IDSET](/docs/sql-guide/data-types/data-type-idset) or [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) literal or expression to be returned as the second value of the tuple | Yes | |
-
-### TUPLE() returns
-
-| Data type | Value |
-|---|---|
-| tuple | tuple containing a `TIMESTAMP` and `SET`. This can be ingested into [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq) and [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) columns |
-
-
 * [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
 
 ## Examples
