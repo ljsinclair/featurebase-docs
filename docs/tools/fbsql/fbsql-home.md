@@ -123,6 +123,29 @@ Lists the views in the database your are connected to.
 
 Prints the argument to standard output, followed by a newline.
 
+####  local file reference
+
+```shell
+\file filename [alias]
+```
+
+Adds a reference to `filename` to the the query buffer. An optional alias can be provided in order to simplify referencing a long or complex file name.
+
+Local file references can be use in [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk/) statements with `INPUT STREAMX`. For example, the following commands will insert contents from local file `insert_test.csv` using an alias `icsv`:
+
+```
+fbsql=# \file insert_test.csv icsv
+fbsql-# bulk replace
+     -#     into insert_test (_id, int1, string1, timestamp1)
+     -#     map (0 id, 1 int, 2 string)
+     -#     transform (@0, @1, @2, current_timestamp)
+     -# from
+     -#     'icsv'
+     -# with
+     -#     format 'CSV'
+     -#     input 'STREAMX';
+```
+
 ####  use a file for commands
 
 ```shell

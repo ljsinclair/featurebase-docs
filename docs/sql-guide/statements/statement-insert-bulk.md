@@ -56,7 +56,7 @@ BULK INSERT
     [
       [BATCHSIZE integer_literal]
       [ROWSLIMIT integer_literal]
-      [INPUT ['path/file_name' | 'URL' | 'STREAM']]
+      [INPUT ['path/file_name' | 'INLINE' | 'STREAMX' |'URL']]
       [FORMAT
         ['CSV' [HEADER_ROW] [CSV_EMPTY_STRING_AS_NULL] [CSV_NULL_AS_NULL] [NULL_AS_EMPTY_SET]] |
         ['NDJSON' [ALLOW_MISSING_VALUES] [NULL_AS_EMPTY_SET]] |
@@ -80,13 +80,13 @@ BULK INSERT
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
-| `x'records'` | CSV or NDJSON records as a string literal. | Required for STREAM | Not supported for `FORMAT 'PARQUET'` |
+| `x'records'` | CSV or NDJSON records as a string literal. | Required for INLINE | Not supported for `FORMAT 'PARQUET'` |
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
-| `INPUT` | Input values must match those used in the `FROM` clause |  |  |
-| `'STREAM'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [STREAM quotation marks](#using-stream-with-quotation-marks) |
-| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (STREAM)` |
+| `INPUT` | Input values must match those used in the `FROM` clause |  | `STREAM` has been replaced by `INLINE` to better describe its use. `STREAMX` is new functionality which supports a streaming payload using an http multipart POST. See [fbsql](/docs/tools/fbsql/fbsql-home/) for an implementation of its use. `BATCHSIZE` is honored with `STREAMX` as it batches records according to that value as the stream of records is received by the server. There's no batching on the client. `STREAMX` will eventually be renamed `STREAM`. |
+| `'INLINE'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (INLINE)` |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
 | `CSV_EMPTY_STRING_AS_NULL` | `CSV` argument that will assign `""` value as `null` | Optional |  |
@@ -157,17 +157,17 @@ TRANSFORM (
 ```
 ### FROM examples
 
-#### Using STREAM argument
+#### Using INLINE argument
 
-The contents of an inline stream string literal are treated as a file and read line-by-line.
+The contents of an inline string literal are treated as a file and read line-by-line.
 
-Single line stream string literal
+Single line string literal
 
 ```
 'this is a single-line string literal'
 ```
 
-Multi-line stream string literal
+Multi-line string literal
 
 Multi line (prepend with `x`)
 
@@ -180,7 +180,7 @@ string
 literal'
 ```
 
-#### Using STREAM with quotation marks
+#### Using INLINE with quotation marks
 
 FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
 

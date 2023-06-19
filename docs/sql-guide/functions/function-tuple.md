@@ -74,7 +74,7 @@ B,2014-07-15T01:18:46Z,stringset2, 2
 with
     BATCHSIZE 10000
     format 'CSV'
-    input 'STREAM';
+    input 'INLINE';
 
 ```
 
