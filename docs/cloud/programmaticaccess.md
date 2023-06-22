@@ -32,7 +32,7 @@ It’s best practice to have tokens that expire frequently in order to protect c
 
 Alternatively, every API call can be accompanied with a valid API key. [Learn how to create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
 
-Use an API key' secret for all of your API calls as the Authorization header:
+Use an API key's secret for all of your API calls as the Authorization header:
 
 `--header 'X-API-Key: <key secret>'`
 
