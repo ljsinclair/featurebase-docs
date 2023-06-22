@@ -34,6 +34,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 |:---:|---|---|
 | `=` | **both** operands are equal. | `select _id from products WHERE price = 52.50;` |
 | `!=` | **both** operands are **not** equal. | `select stock from products WHERE price != 0.50;` |
+| `<>` | **both** operands are **not** equal. | `select stock from products WHERE price <> 0.50;` |
 | `AND` | **both** conditions match the operand. | `select * from products WHERE stock > 20 AND price < 10;` |
 | `BETWEEN` | the operand is within the range of two integer values | `select * from products WHERE stock BETWEEN 0 AND 100;` |
 | `LIKE` | the operand matches the specified pattern. | `select * from products WHERE prodlist LIKE '%play%';` |
