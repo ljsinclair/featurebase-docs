@@ -21,11 +21,7 @@ Learn how to update a FeatureBase Cloud API key's description.
 ## Update an API key's description
 
 * Click **Configuration** > **Manage API keys**.
-<ul>
-<li>
-Click <span class="material-icons md-18">more_vert</span> on the API key to update.
-</li>
-</ul>
+* Click <span class="material-icons md-18">more_vert</span> on the API key to update.
 * Update the description in the confirmation dialog.
 * Click **Rename This Key**.
 

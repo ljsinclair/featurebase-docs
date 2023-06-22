@@ -19,12 +19,17 @@ FeatureBase API keys are used for authentication [when accessing FeatureBase pro
 
 {% include page-toc.md %}
 
-## Accessing API keys
+{% include /cloud-auth/cloud-auth-revoke-warning.md %}
 
-To view your API keys, click **Configuration** > **Manage API Keys**. Here you can see all of the API keys that are available to you. If you are an admin in your organization, you will be able to see all of the API keys in your organization (toggleable in the top right).
+## How do I access API keys for my organization?
 
-{: .note }
-API key secrets are not stored. If you lose a key's secret, it is recommended that you revoke the key and create a new one. [Learn how to revoke an API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
+Users can access API keys via the Cloud UI. 
+
+1. Click **Configuration**
+2. Click **Manage API Keys** 
+
+{: .note } 
+Only admins can see all of the API keys that belong to your organization. Non-admins can see only their own keys.
 
 ## Managing API keys in FeatureBase Cloud
 
