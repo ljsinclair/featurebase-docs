@@ -50,8 +50,8 @@ Bitmaps are explained in two parts:
 
 | Part | Bitmap type | Description | Additional information |
 |:---:|---|---|---|
-| 1 | Traditional | A high-level explanation of bitmaps and how data is encoded, including issues which may occur. | [Part 1 - Bitmap index](/docs/concepts/concept-fb-bitmaps-pt1-standard-bitmaps) |
-| 2 | Bit sliced | A high-level explanation and demonstration of how Integer data is converted to base-2 then bit-sliced. | [Part 2 - Bit slice index](/docs/concepts/concept-fb-bitmaps-pt2-base-2-bit-slice-bitmaps) |
+| 1 | Standard | A high-level explanation of bitmaps and how data is encoded, including issues which may occur. | [Part 1 - Standard Bitmaps and encoding methods](/docs/concepts/concept-fb-bitmaps-pt1-standard-bitmaps) |
+| 2 | Bit sliced | A high-level explanation and demonstration of how Integer data is converted to base-2 then bit-sliced. | [Part 2 - Bit slice bitmaps](/docs/concepts/concept-fb-bitmaps-pt2-base-2-bit-slice-bitmaps) |
 
 ## Why is Roaring Bitmap compression used on my data?
 
