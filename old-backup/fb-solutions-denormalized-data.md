@@ -42,7 +42,7 @@ Another alternative would be to adapt the content for the help homepage content 
 
 | Solution | Additional information |
 |---|---|
-| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-pt1-bitmap-index) |
+| Data is bit-sliced, range-encoded then converted to base-2 then translated to roaring bitmap format | [Learn how FeatureBase bitmap indexes work](/docs/concepts/concept-fb-bitmaps-pt1-standard-bitmaps) |
 | `SETQ` data types can be used with timestamped data to automatically remove data to continually maintain database size. | Data footprint reduced after set time. | [Learn about SETQ data types](/docs/concepts/concept-setq) |
 
 ## Next step
