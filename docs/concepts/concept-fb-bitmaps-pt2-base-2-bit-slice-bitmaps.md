@@ -9,17 +9,7 @@ nav_order: 2
 # Part 2 - FeatureBase base-2 bit-sliced bitmaps
 {: .no_toc }
 
-{% include /concepts/concept-bitmap-index-summary.md %}
-
-Bit-sliced bitmaps are used to encode user data mapped to the following data types:
-
-| User data | FeatureBase data type | Additional information |
-|---|---|---|
-| Floating point | Decimal |  |
-| Signed Integer | Integer | A bitmap is added for the sign |
-| Date and time | Timestamp |  |
-
-In this part, sample data is used to explain:
+In part 2, sample data is used to explain:
 * base-2 conversion
 * bit-slicing that data
 
@@ -33,6 +23,16 @@ In this part, sample data is used to explain:
 ## Sample data
 
 {% include /concepts/concept-eg-species-table-data.md %}
+
+## What data is converted to bit-sliced bitmaps?
+
+User data mapped to the following data types is converted to bit-sliced bitmaps:
+
+| User data | FeatureBase data type | Additional information |
+|---|---|---|
+| Floating point | Decimal |  |
+| Signed Integer | Integer | A bitmap is added for the sign |
+| Date and time | Timestamp |  |
 
 ## Step 1 - convert integer values to base-2
 
