@@ -3,7 +3,7 @@ title: Manage users
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 8
+nav_order: 12
 has_toc: false
 ---
 

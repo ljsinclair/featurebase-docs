@@ -3,7 +3,7 @@ title: Manage cloud ingestion
 layout: default
 parent: Cloud
 has_children: false
-nav_order: 5
+nav_order: 7
 has_toc: false
 ---
 

@@ -3,7 +3,7 @@ title: Query data
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 6
+nav_order: 9
 has_toc: false
 ---
 
