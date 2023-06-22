@@ -1,4 +1,4 @@
-Each value of user data mapped to the following data types is converted to individual standard bitmaps:
+Each value of user data mapped to the following data types are converted to standard bitmaps:
 
 | User data | FeatureBase data type |
 |---|---|

@@ -12,8 +12,6 @@ nav_order: 1
 A standard bitmap is:
 {% include /concepts/concept-bitmap-standard-summary.md %}
 
-{% include /concepts/concept-bitmap-standard-data-type-table.md %}
-
 In this part, sample data is used to explain:
 * standard bitmaps
 * equality-encoding values
@@ -29,6 +27,10 @@ In this part, sample data is used to explain:
 ## Sample data
 
 {% include /concepts/concept-eg-species-table-data.md %}
+
+## What data types are converted to standard bitmaps?
+
+{% include /concepts/concept-bitmap-standard-data-type-table.md %}
 
 ## How is data encoded?
 
