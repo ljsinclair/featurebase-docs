@@ -17,7 +17,7 @@ In part 2, sample data is used to explain:
 
 ## Before you begin
 
-* [Learn about standard bitmaps](/docs/concepts/concept-fb-bitmaps)
+* [Learn about bitmaps](/docs/concepts/concept-fb-bitmaps)
 * [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-fb-bitmaps-pt1-standard-bitmaps)
 
 ## Sample data
@@ -56,6 +56,9 @@ Bit slicing or Bit Plane slicing converts each binary value into an array of bit
 | Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
 | Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
 
+## Further information
+
+* [Bit slicing data(Wikipedia)](https://en.wikipedia.org/wiki/Bit_slicing){:target="_blank"}
 <!--
 Content based on:
 * https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
