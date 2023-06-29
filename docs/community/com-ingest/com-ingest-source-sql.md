@@ -21,7 +21,7 @@ You will need the following privileges on the database:
 * Other privileges as required
 * [Learn how to manage import](/docs/community/com-ingest/com-ingest-manage)
 
-### Connect string (merge into the include file, below)
+### Connect string
 
 The SQL ingest tool connects to the source database using your login credentials before executing SQL queries.
 
