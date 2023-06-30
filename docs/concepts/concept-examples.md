@@ -12,7 +12,7 @@ The following examples demonstrate how data can be imported to FeatureBase.
 
 ## Before you begin
 
-* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
+* [Learn how data is encoded in bitmap indexes](/docs/concepts/concept-bitmaps)
 * [Learn how to structure your data ready to import to FeatureBase](/docs/concepts/overview-data-modeling)
 
 ## SQL BULK INSERT

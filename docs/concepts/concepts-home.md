@@ -77,7 +77,7 @@ FeatureBase does not use Database normalization. Instead, the system inserts dat
 * designed to overcome issues with low cardinality data
 * optimized to reduce storage overheads and query execution time
 
-[Learn how data is encoded in bitmap indexes](/docs/concepts/concept-fb-bitmaps)
+[Learn how data is encoded in bitmap indexes](/docs/concepts/concept-bitmaps)
 
 ## How should I structure data to be imported to FeatureBase?
 
