@@ -41,14 +41,7 @@ FeatureBase compresses bitmaps using **Roaring Bitmap Format**, a variation on *
 
 FeatureBase converts data types to bitmaps as follows:
 
-| User data | FeatureBase data type | Bitmap type |
-|---|---|---|
-| Boolean | Bool | standard bitmap |
-| Floating point | Decimal | Bit-sliced index |
-| Unsigned integer | ID | standard bitmap |
-| Signed Integer | Integer | Bit-sliced index |
-| Alphanumeric | String | standard bitmap |
-| Date and time | Timestamp | Bit-sliced index |
+{% include /sql-guide/datatypes-bitmap-table.md %}
 
 ## Which bitmaps are used for low cardinality data?
 
