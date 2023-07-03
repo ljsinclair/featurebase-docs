@@ -16,6 +16,9 @@ The interface allows you to run SQL:
 * by loading files containing SQL queries
 * using scripts to automate tasks
 
+{: .note}
+FBSql requires the download of FeatureBase source code and does not run as a standalone application
+
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or

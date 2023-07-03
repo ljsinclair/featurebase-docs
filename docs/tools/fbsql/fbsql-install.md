@@ -17,33 +17,29 @@ nav_order: 1
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
 * [Create and login to your GitHub account](https://github.com/){:target="_blank"}
 
-## Step 1 - Download the FBSql source code
 
-* Open a CLI then CD to the destination directory.
-* Run the following command:
+## Step 1 - Create a destination directory and download
 
-```shell
+* Open a CLI then create a destination directory:
+
+```sh
+mkdir fbsql
+```
+
+* CD to `fbsql` then clone the FeatureBase code repository
+
+```
 git clone https://github.com/FeatureBaseDB/featurebase
 ```
 
-## Step 3 - Build fbsql
+## Step 2 - install FBSQL
 
-* CD to the
-
-Navigate to the source code folder
-
-```shell
-cd featurebase
-```
-
- and then run
+* CD to `featurebase` then setup FBSQL
 
  ```shell
 make install-fbsql
 ```
 
-{: .note }
-In the very near future, fbsql will be packaged with every release on the [FeatureBase Releases](https://github.com/FeatureBaseDB/featurebase/releases) page.
+## Further information
 
-## Next step
-* [See fbsql examples](/docs/tools/fbsql/fbsql-home#examples)
+* [Running SQL queries using FBSQL](/docs/tools/fbsql/fbsql-running-sql)
