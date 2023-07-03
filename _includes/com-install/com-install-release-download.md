@@ -18,5 +18,5 @@ mkdir featurebase
   * `<processor>`
 
 ```
-curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<os>-<processor>64.tar.gz -o featurebase.tar.tgz
+curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<os>-<processor>64.tar.gz -o featurebase.tar.gz
 ```

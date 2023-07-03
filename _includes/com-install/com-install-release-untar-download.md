@@ -3,5 +3,5 @@
 * Run the following command from the `/featurebase` directory
 
 ```
-tar -zxvf featurebase.gz.tgz
+tar -zxvf featurebase.tar.gz
 ```
