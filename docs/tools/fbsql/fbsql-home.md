@@ -11,10 +11,7 @@ has_toc: false
 
 FeatureBase supplies the **FBSql** CLI tool you can use to run SQL queries without needing to access the GUI or run complex API calls.
 
-The interface allows you to run SQL:
-* directly from the FBSql interface, or
-* by loading files containing SQL queries
-* using scripts to automate tasks
+{% include /fbsql/fbsql-run-queries-summary.md %}
 
 {: .note}
 FBSql requires the download of FeatureBase source code and does not run as a standalone application
@@ -37,7 +34,9 @@ SQL queries can be run on a FeatureBase Cloud or Community database using script
 
 * [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
 
+## How do I load values to FBSQL
 
+* [Learn about FBSql loaders](/docs/tools/fbsql/fbsql-loaders)
 
 ## Usage
 

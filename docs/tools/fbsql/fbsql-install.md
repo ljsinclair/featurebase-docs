@@ -17,8 +17,7 @@ nav_order: 1
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
 * [Create and login to your GitHub account](https://github.com/){:target="_blank"}
 
-
-## Step 1 - Create a destination directory and download
+## Step 1 - Create a destination directory for the source code
 
 * Open a CLI then create a destination directory:
 

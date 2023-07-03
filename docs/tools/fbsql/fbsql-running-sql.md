@@ -8,6 +8,8 @@ nav_order: 2
 
 # How do I run SQL queries with FBSQL?
 
+{% include /fbsql/fbsql-run-queries-summary.md %}
+
 
 ## Before you begin
 
