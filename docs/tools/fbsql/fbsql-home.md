@@ -1,5 +1,5 @@
 ---
-title: fbsql
+title: fbsql CLI tool
 layout: default
 parent: Tools
 has_children: true
@@ -7,46 +7,34 @@ nav_order: 1
 has_toc: false
 ---
 
-# fbsql (CLI Client)
+# How do I run SQL queries from the command-line?
 
-fbsql is a terminal-based front-end to FeatureBase. It allows you to query your FeatureBase data and see the results via the command-line. Alternatively, input can be from a file or from command line arguments. fbsql allows you to query your data:
+FeatureBase supplies the **FBSql** CLI tool you can use to run SQL queries without needing to access the GUI or run complex API calls.
 
-* directly from the fbsql interface
-* by loading files containing the SQL queries
-
-You can also write scripts and automate tasks using built-in meta commands and shell-like features.
+The interface allows you to run SQL:
+* directly from the FBSql interface, or
+* by loading files containing SQL queries
+* using scripts to automate tasks
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
 {% include /com-install/com-install-before-begin.md %}
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
-## Install fbsql
+## How do I install FBSql?
+
+FBSQL requires the `GO` framework to run.
 
 * [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
 
-## fbsql flags
+## How do I use FBSQL?
 
-The following flags can be provided when running fbsql. None of the flags are required to start fbsql.
+SQL queries can be run on a FeatureBase Cloud or Community database using scripting flags and terminal-like commands.
 
-| Flag | Description | Default |
-|---|---|---|
-| `--api-key` | [Cloud API key](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey) that can be used for authn/authz for cloud as an alternative to `--email` and `--password`.  | |
-| `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. | |
-| `--config` | Configuration file to read from. | | 
-| `--csv` | Switches to CSV (Comma-Separated Values) output mode. This is equivalent to `\pset format csv`. | |
-| `-d`<br>`--dbname` | Specifies the name of the database to connect to. | |
-| `--email` | Email address for FeatureBase Cloud access. | | 
-| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. | | 
-| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. | |
-| `--host` | Specifies the host name of the machine on which the server is running. This can be a URL to a cloud instance of FeatureBase. In that case, the value of **hostname** might be something like `https://query.featurebase.com`. | `localhost`|
-| `--loader-impala` | Run fbsql in non-interactive mode to load data from Impala. Based on the configuration file provided as an argument to this flag, fbsql will query Impala and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from Impala are loaded. For more information, see [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) | |
-| `--loader-kafka` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) | |
-| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded. For more information, see [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) | |
-| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
-| `--password` | Password for FeatureBase Cloud access. | |
-| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. | Attempts to detect `10101` or `8080` (for serverless) | 
-| `-P`<br>`--pset` | Specifies printing options, in the style of `\pset`. Note that here you have to separate name and value with an equal sign instead of a space. For example, to set the output format to CSV, you could write -P format=csv. | |
+* [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
+
+
 
 ## Usage
 

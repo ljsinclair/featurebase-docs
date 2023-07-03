@@ -10,22 +10,25 @@ nav_order: 1
 {% include page-toc.md %}
 
 ## Before you begin
+
 * [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
-* [Install go](https://go.dev/doc/install)
+* [Install and setup Git on the target system](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+* [Install go](https://go.dev/doc/install){:target="_blank"}
+* [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+* [Create and login to your GitHub account](https://github.com/){:target="_blank"}
 
-## Step 1 - Navigate to source code
+## Step 1 - Download the FBSql source code
 
-* [Navigate to the source code](https://github.com/FeatureBaseDB/featurebase)
-
-## Step 2 - Download the source code
-
-In your terminal, clone the repository
+* Open a CLI then CD to the destination directory.
+* Run the following command:
 
 ```shell
 git clone https://github.com/FeatureBaseDB/featurebase
 ```
 
 ## Step 3 - Build fbsql
+
+* CD to the
 
 Navigate to the source code folder
 
@@ -34,7 +37,7 @@ cd featurebase
 ```
 
  and then run
- 
+
  ```shell
 make install-fbsql
 ```
