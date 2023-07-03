@@ -10,14 +10,18 @@ nav_order: 2
 
 {% include /fbsql/fbsql-run-queries-summary.md %}
 
-
 ## Before you begin
 
 * [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
+## FBSQL syntax
 
-CUT FROM ORIGINAL FBSQL HOME
+```sh
+
+
+
+```
 
 
 ## fbsql flags
