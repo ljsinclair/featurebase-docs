@@ -5,9 +5,6 @@ parent: Concepts
 has_children: true
 nav_order: 1
 ---
-
-<!-- Add in the benefits of bitmaps from https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real plus (maybe) https://drive.google.com/file/d/1ArKaqwuGtPcwbE_SLYUFMakipzRbF44x/view -->
-
 # An overview of FeatureBase bitmaps
 {: .no_toc }
 
@@ -53,13 +50,3 @@ Uncompressed bitmaps scale with the number of values and the cardinality of that
 FeatureBase overcomes this issue by compressing all bitmap data using Roaring Bitmap Format, based on Roaring Bitmaps.
 
 * [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
-
-## Explaining Bitmaps
-
-FeatureBase Bitmaps are explained in three parts:
-
-| Part | Bitmap type | Description | Additional information |
-|:---:|---|---|---|
-| 1 | Standard | A high-level explanation of bitmaps and how data is encoded, including issues which may occur. | [Part 1 - Standard Bitmaps and encoding methods](/docs/concepts/concept-bitmaps-standard) |
-| 2 | Bit sliced | A high-level explanation and demonstration of how Integer data is converted to base-2 then bit-sliced. | [Part 2 - Bit slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice) |
-| 3 | Roaring Bitmap Format (RBF) | An explanation of how Roaring Bitmap Format is used to compress Bitmap data and how updates are made. | [Part 3 - Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format) |
