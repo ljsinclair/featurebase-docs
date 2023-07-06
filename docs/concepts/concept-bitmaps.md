@@ -30,16 +30,25 @@ Data is converted to bitmaps based on the destination data type:
 
 ## Why use bitmaps for data storage?
 
+## Updating data
+
+Updates are faster because data is stored:
+* in base-2
+* as an individual bitmap rather than within a row and column format
+
+This means an alteration involves flipping bits to `1` or `0`
+
+## Querying data
+
 There are two limitations to every data query:
 * Latency, where the structure and encoding cause delays returning results
 * Concurrency, where queries slow down because multiple users are accessing the same data at the same time
 
-Queries on bitmap data is substantially faster than data stored in other database types:
-
-| Limitation | Benefit | Description |
+| Limitation | Solution | Description |
 |---|---|---|
 | Latency | Data encoded in base-2 | Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
 | Latency | Data encoded as bitmap or bit-slice | Values are encoded as individual bitmaps, therefore queries can directly and sequentially access specified values without needing to traverse all other values in a database table |
+| Latency | Bit-slice bitmaps | Range queries can be built as a combination of underlying bitmaps rather than as a complex mix of tables and columns |
 | Concurrency | Lower latency queries | Faster queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
 
 ## What are the drawbacks of Bitmaps?

@@ -6,16 +6,16 @@ grand_parent: Concepts
 nav_order: 1
 ---
 
-# FeatureBase Bitmaps part 1 - standard bitmaps
+# What are bitmaps and how are they encoded?
 {: .no_toc }
 
 A standard bitmap is:
 {% include /concepts/concept-bitmap-standard-summary.md %}
 
-In part 1, sample data is used to explain:
+This high-level overview uses sample data to explain:
 * standard bitmaps
-* equality-encoding values
-* equality-encoding grouped values
+* equality encoding data
+* limitations of equality encoding
 
 {% include page-toc.md %}
 
@@ -76,17 +76,12 @@ Grouping values reduces the number of bitmaps:
 
 However, exact numbers of each species in captivity is lost.
 
-## Next part
+## Solving equality encoding
 
-* Learn how these issues are overcome in [Part 2 - FeatureBase bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+FeatureBase uses bit-slice bitmaps to overcome equality encoding issues.
 
-<!--
-Garrett diagrams:
+* [Learn about bit-slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
-* https://app.slack.com/client/T2M810Z29/C059DQTQGLB
-* https://app.slack.com/client/T2M810Z29/C059DQTQGLB
+## Further information
 
-Content based on:
-* https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
-* https://www.featurebase.com/blog/range-encoded-bitmaps
--->
+* [Learn about bitmap compression with Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)

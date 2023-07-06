@@ -9,24 +9,18 @@ nav_order: 2
 # FeatureBase bitmaps part 2 - Bit-sliced bitmaps
 {: .no_toc }
 
-Standard bitmaps and their issues were explained in part 1. In part 2, sample data is used to explain:
-* the benefits of bit-slice bitmaps
-* how bit-slicing works
+Bit Slice bitmaps allow FeatureBase to represent any number in the 64-bit range (10^19) using only 64 bitmaps. This means integer, timestamp and fixed-point decimals can be handled more efficiently than a standard bitmap.
+
+Bit-slicing data involves:
+* converting integer values to base-2
+* creating a single bitmap for each power of 2
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
-
-## Why does FeatureBase bit-slice bitmaps?
-
-Bit Slice bitmaps allow FeatureBase to represent any number in the 64-bit range (10^19) using only 64 bitmaps. This means integer, timestamp and fixed-point decimals can be handled more efficiently than a standard bitmap.
-
-Bit slicing creates a single bitmap for each binary digit of values in a column. This means:
-* updates are faster because only one bit is altered in the appropriate bitmap
-* range queries are faster because they can be made using boolean combinations of the underlying bitmaps
+* [Learn about standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
 
 ## What data types are converted to bit-sliced bitmaps?
 
