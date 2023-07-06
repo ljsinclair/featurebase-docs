@@ -30,6 +30,8 @@ Data is converted to bitmaps based on the destination data type:
 
 ## Why use bitmaps for data storage?
 
+{% include /concepts/concept-bitmap-benefit-updates.md %}
+
 ## Updating data
 
 Updates are faster because data is stored:
