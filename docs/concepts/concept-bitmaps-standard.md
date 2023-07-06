@@ -1,5 +1,5 @@
 ---
-title: Part 1 - standard bitmaps
+title: Standard bitmaps
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts

@@ -1,38 +1,36 @@
 ---
-title: Part 3 - Roaring Bitmap Format
+title: Roaring Bitmap Format
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts
 nav_order: 3
 ---
-# FeatureBase bitmaps part 3 - Roaring Bitmap Format
+# Bitmap compression using Roaring Bitmap Format
 
 <!-- From https://www.featurebase.com/blog/featurebase-technical-white-paper
 
 -->
 
-Data encoded to standard and bit-sliced bitmaps are compressed using Roaring Bitmap Format, a b-tree database structure based on Roaring Bitmaps.
+{% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
 ## Before you begin
 
-* [Learn about Roaring Bitmaps]()
+* [Learn about Roaring Bitmaps](https://www.roaringbitmap.org/){:target="_blank"}
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
-* [Part 2 - FeatureBase bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+* [Learn about standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
+* [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
-## What is RBF?
+## What is Roaring Bitmap Format?
 
 Roaring Bitmap Format (RBF) is a b-tree database with full ACID (Atomicity, Consistency, Isolation, Durability) transaction support which allows incremental updates.
 
-Roaring performs the following operations on bitmaps:
-* splits each bitmap into containers of 2^16-1 (65,535) bits wide
-* chooses an encoding type that will give the best compression
+## Bitmap container encoding and compression
 
-## RBF containers
+RBF splits each bitmap into a container that is 2^16-1 (65,535) bits wide.
 
-There are three types of encoding types for containers:
+Containers are encoded into one of three types which determine data compression:
 
-| Container encoding type | Description |
+| Encoding | Description |
 |---|---|
 | Array | Used for sparse containers with few bits set. An array of 16-bit integers is kept to tell which of the 65,535 bits are set. |
 | Bitmap | Uncompressed and always take up 8KB (65,536 bits) |

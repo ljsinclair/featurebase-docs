@@ -1,5 +1,5 @@
 ---
-title: Part 2 - bit-slice bitmaps
+title: Bit-slice bitmaps
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts

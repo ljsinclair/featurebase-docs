@@ -8,9 +8,9 @@ nav_order: 1
 # An overview of FeatureBase bitmaps
 {: .no_toc }
 
-{% include /concepts/concept-ingest-summary.md %}
-
-This overview uses sample data to help explain the two types of bitmap FeatureBase uses to encode data.
+FeatureBase converts data to base-2 bitmaps of two types:
+* standard bitmaps
+* bit-slice bitmaps
 
 {% include page-toc.md %}
 
@@ -18,20 +18,11 @@ This overview uses sample data to help explain the two types of bitmap FeatureBa
 
 * [Learn about cardinality and data normalization](/docs/concepts/concepts-home)
 
-## What are bitmaps?
-
-
-* [Learn about Bitmaps](/docs/concepts/concept-bitmaps-standard)
-
 ## Which bitmap type will be created for my data?
 
-Data stored in FeatureBase is stored as:
-* individual bitmaps for each value, or
-* bit-sliced bitmaps for each power of two.
+Data is converted to bitmaps based on the destination data type:
 
 {% include /sql-guide/datatypes-bitmap-table.md %}
-
-* [Learn about bit-slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
 ## Are column names converted to bitmaps?
 
@@ -65,13 +56,6 @@ Bitmaps have two main issues:
 
 ### Data storage overheads
 
-Uncompressed bitmaps scale with the number of values and the cardinality of that value.
-
-| Database | Values saved as | Storage overhed 10,000 value dataset |
-|---|---|---|
-| RDBMS | Row and column based structure | 20480 - 30720 KB |
-| FeatureBase | Individual bitmaps, or<br/>Bitmap for each power of 2 (Bit-slice) | 1280000 KB |
-
-FeatureBase overcomes this issue by compressing all bitmap data using Roaring Bitmap Format, based on Roaring Bitmaps.
+{% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
