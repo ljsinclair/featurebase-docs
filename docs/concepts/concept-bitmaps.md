@@ -53,12 +53,15 @@ Queries on bitmap data is substantially faster than data stored in other databas
 
 ## What are the drawbacks of Bitmaps?
 
+Bitmaps have two main issues:
+* low-cardinality data duplication
+* data storage overheads
 
+### Low cardinality data duplication
 
-### Low cardinality data issues
+{% include /sql-guide/datatype-set-setq-summary.md %}
 
-
-
+* [Learn about `SET` and `SETQ` data types](/docs/sql-guide/data-types/data-types-home#low-cardinality-data-types)
 
 ### Data storage overheads
 
