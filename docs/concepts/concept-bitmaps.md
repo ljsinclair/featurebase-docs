@@ -23,6 +23,7 @@ This overview uses sample data to help explain the two types of bitmap FeatureBa
 FeatureBase bitmap-base data format encodes data as either:
 * individual bitmaps for each value
 * bit-sliced bitmaps that create bitmaps for each power of two
+
 This means:
 * Boolean clauses such as `WHERE`, `OR` etc are faster because values are either `0` or `1`
 * Queries can start at a specific value in the table rather than needing to pass every other value
