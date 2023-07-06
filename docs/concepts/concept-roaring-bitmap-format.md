@@ -5,19 +5,20 @@ parent: Bitmap index overview
 grand_parent: Concepts
 nav_order: 3
 ---
-# FeatureBase bitmaps part 3 - Roaring Bitmap format
+# FeatureBase bitmaps part 3 - Roaring Bitmap Format
 
 <!-- From https://www.featurebase.com/blog/featurebase-technical-white-paper
 
 -->
 
-Data encoded to standard and bit-sliced bitmaps are compressed using Roaring Bitmap Format, a b-tree database structure.
+Data encoded to standard and bit-sliced bitmaps are compressed using Roaring Bitmap Format, a b-tree database structure based on Roaring Bitmaps.
 
 ## Before you begin
 
+* [Learn about Roaring Bitmaps]()
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-pt1-standard-bitmaps)
-* [Part 2 - FeatureBase bit-sliced bitmaps](/docs/concepts/concept-bitmaps-pt2-bit-slice-bitmaps)
+* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
+* [Part 2 - FeatureBase bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
 ## What is RBF?
 

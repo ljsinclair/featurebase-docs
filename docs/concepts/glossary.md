@@ -43,6 +43,7 @@ nav_order: 1
 | CLEAR | PQL query | [PQL CLEAR write query](/docs/pql-guide/pql-write-clear) |
 | CLEARROW | PQL query | [PQL CLEARROW write query](/docs/pql-guide/pql-write-clearrow) |
 | Cluster | FeatureBase Community | A Cluster configuration of [FeatureBase nodes](#n) where data is evenly distributed and any node can respond to queries. Also defines how data is replicated and inter-node communication. |
+| Concurrency | SQL/PQL Queries | Number of concurrent users running queries on data and how this may affect query latency |
 | CONSTROW | PQL query | [PQL CONSTROW read query](/docs/pql-guide/pql-read-constrow) |
 | COUNT | PQL query | [PQL COUNT read query](/docs/pql-guide/pql-read-count) |
 
@@ -70,6 +71,7 @@ nav_order: 1
 | Field | Table rows | Field data types to group rows into different categories:<br/>* [`bool`](/docs/sql-guide/data-types/data-type-bool)<br/>* [`int`](/docs/sql-guide/data-types/data-type-int)<br/>* [`set`](/docs/pql-guide/pql-write-set)<br/>* [`time`]()<br/>* [`timestamp`](/docs/sql-guide/data-types/data-type-timestamp)<br/>* [Mutex]()|
 | Fields, ranked | Table rows | Rows kept in sorted order within the field. |
 | Fragment | FeatureBase Community Row fields and database shards | A fragment typically corresponds to a file on disk which represents an intersection of:<br/>* field and shard, or<br/>* field, shard and `time` data type `time quantum` constraint |
+| Freshness | Data import/ingest | How much time elapses from when a data point is "sensed" by the system, until that data point will affect the results of a query. |
 
 ## G
 
@@ -108,7 +110,8 @@ nav_order: 1
 
 | Term | Context | Further information |
 |---|---|---|
-| LIMIT | PQL query | [PQL LIMIT read query](/docs/pql-guide/pql-read-limit) |
+| Latency | SQL/PQL Queries | How much time elapses between when a query is sent to a system and when the results return to the client. |
+
 
 ## M
 
@@ -181,6 +184,7 @@ nav_order: 1
 
 | Term | Context | Further information |
 |---|---|---|
+| Throughput | Data import/ingestion | Quantity of data that can be imported/ingested in a given time. May involve trade-off between Latency and Freshness |
 | Time Quantum | SQL IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
 | Timestamp | Data type | [Timestamp data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | TTL (Time To Live) |  IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |

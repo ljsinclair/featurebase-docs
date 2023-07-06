@@ -6,9 +6,11 @@ nav_order: 2
 ---
 # How does FeatureBase differ to a traditional database?
 
-This high-level overview explains the concepts of cardinality and normalization in relation to traditional databases.
+FeatureBase is a database that uses a bitmap-based data format rather than pure bitmap indexes.
 
-This information provides context for the FeatureBase approach to data storage.
+This high-level overview provides context by explaining:
+* data cardinality
+* data normalization in traditional databases
 
 ## What is cardinality?
 

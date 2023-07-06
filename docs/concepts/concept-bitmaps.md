@@ -23,19 +23,12 @@ This overview uses sample data to help explain the two types of bitmap FeatureBa
 
 ## Why use bitmaps for data storage?
 
-FeatureBase uses Bitmaps for primary storage because they make queries faster:
-* Because each value is encoded as a single bitmap, queries can be made on specific values rather than needing to run through every single value in a column.
-* Base-2 (binary) encoding data means values in each bitmap are either **True** (1) or **False** (0). Therefore queries featuring Boolean clauses such as `WHERE`, `OR`, etc are faster.
-
-## What are the drawbacks of Bitmaps?
-
-The number of bitmaps in a system increase rapidly because each value is encoded as an individual bitmap.
-
-Additionally, the size of uncompressed bitmaps scale with the cardinality of the value not just the number of values. For example, a dataset of 10,000 distinct values will be stored:
-* in approximately 20-30MB in a traditional database
-* in approximately 1.25GB for a bitmap database
-
-FeatureBase compresses bitmaps using **Roaring Bitmap Format**, a variation on **Roaring Bitmaps**.
+FeatureBase bitmap-base data format encodes data as either:
+* individual bitmaps for each value
+* bit-sliced bitmaps that create bitmaps for each power of two
+This means:
+* Boolean clauses such as `WHERE`, `OR` etc are faster because values are either `0` or `1`
+* Queries can start at a specific value in the table rather than needing to pass every other value
 
 ## Which bitmap type will be created for my data?
 
@@ -43,15 +36,23 @@ FeatureBase converts data types to bitmaps as follows:
 
 {% include /sql-guide/datatypes-bitmap-table.md %}
 
-## Which bitmaps are used for low cardinality data?
+## Which values are encoded as bitmaps?
 
-Standard bitmaps are used for low cardinality data mapped to the four FeatureBase `SET` and `SETQ` data types.
-
-* [Learn about low cardinality `SET` and `SETQ` data types](/docs/sql-guide/data-types/data-types-home#low-cardinality-data-types)
+{% include /concepts/concept-bitmap-standard-data-type-table.md %}
 
 ## Are column names converted to bitmaps?
 
 {% include /concepts/concept-table-def-save-to-disk.md %}
+
+## What are the drawbacks of Bitmaps?
+
+Uncompressed bitmaps scale with the number of values and the cardinality of that value. For example, a dataset of 10,000 distinct values will be stored:
+* in approximately 20-30MB in a traditional database
+* in approximately 1.25GB for a bitmap database
+
+FeatureBase overcomes this issue by compressing all bitmap data using Roaring Bitmap Format, based on Roaring Bitmaps.
+
+* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
 
 ## Explaining Bitmaps
 
@@ -59,6 +60,6 @@ FeatureBase Bitmaps are explained in three parts:
 
 | Part | Bitmap type | Description | Additional information |
 |:---:|---|---|---|
-| 1 | Standard | A high-level explanation of bitmaps and how data is encoded, including issues which may occur. | [Part 1 - Standard Bitmaps and encoding methods](/docs/concepts/concept-bitmaps-pt1-standard-bitmaps) |
-| 2 | Bit sliced | A high-level explanation and demonstration of how Integer data is converted to base-2 then bit-sliced. | [Part 2 - Bit slice bitmaps](/docs/concepts/concept-bitmaps-pt2-bit-slice-bitmaps) |
-| 3 | Roaring Bitmap Format (RBF) | An explanation of how Roaring Bitmap Format is used to compress Bitmap data and how updates are made. | [Part 3 - Roaring Bitmap Format](/docs/concepts/concept-bitmaps-pt3-roaring-bitmap-format) |
+| 1 | Standard | A high-level explanation of bitmaps and how data is encoded, including issues which may occur. | [Part 1 - Standard Bitmaps and encoding methods](/docs/concepts/concept-bitmaps-standard) |
+| 2 | Bit sliced | A high-level explanation and demonstration of how Integer data is converted to base-2 then bit-sliced. | [Part 2 - Bit slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice) |
+| 3 | Roaring Bitmap Format (RBF) | An explanation of how Roaring Bitmap Format is used to compress Bitmap data and how updates are made. | [Part 3 - Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format) |

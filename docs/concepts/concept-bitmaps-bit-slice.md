@@ -18,7 +18,7 @@ Standard bitmaps and their issues were explained in part 1. In part 2, sample da
 ## Before you begin
 
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-pt1-standard-bitmaps)
+* [Part 1 - standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
 
 ## Why does FeatureBase bit-slice bitmaps?
 
