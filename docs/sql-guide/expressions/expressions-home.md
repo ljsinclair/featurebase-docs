@@ -13,7 +13,6 @@ parent: SQL guide
 
 {% include /sql-guide/sql-guide-before-begin.md %}
 
-
 ## identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
 
@@ -41,11 +40,6 @@ Literals are explicitly specified fixed values that conform to a specific data t
 | `set` | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
 | `string` |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
-
-<!-- commented out because there's no destination
-### [table_name].column_name
-
--->
 
 ### [unary_op] expr
 
