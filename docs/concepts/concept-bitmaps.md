@@ -49,8 +49,6 @@ Bitmaps have two main issues:
 
 ### Low cardinality data duplication
 
-* [Learn about issues with low-cardinality data](/docs/concepts/concepts-home/#what-is-cardinality)
-
 FeatureBase overcomes low-cardinality issues with four unique data types suitable for `integer` or `string` values.
 
 {% include /sql-guide/datatype-set-setq-summary.md %}
