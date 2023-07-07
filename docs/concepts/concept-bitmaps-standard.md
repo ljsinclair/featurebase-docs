@@ -51,13 +51,9 @@ Equality encoding represents this data as follows:
 
 ## Equality encoding integer values
 
-Equality encoding integer values is less effective because Boolean relationships are harder to represent. For example, the downloads for historical products are represented as follows:
+Equality encoding integer values is less effective because Boolean relationships are harder to represent.
 
-| ID | historical_name | downloads |
-|---|---|---|
-| 1 | Pilosa | 10,000 |
-| 2 | Molecula | 18,524 |
-| 3 | FeatureBase | 50,000 |
+{% include /concepts/concept-bitmap-source-data-table.md %}
 
 ### Equality encoding specific values
 
@@ -94,7 +90,7 @@ Values can be encoded as a range which reduces the number of bitmaps and create/
 
 The fundamental issue with this approach is the specific values are lost.
 
-## Solution: bit-slice bitmaps
+### Solution: bit-slice bitmaps
 
 To avoid the issues with equality encoding, FeatureBase encodes integer values as bit-slice bitmaps.
 

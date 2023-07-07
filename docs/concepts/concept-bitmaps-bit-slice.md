@@ -9,18 +9,18 @@ nav_order: 2
 # FeatureBase bitmaps part 2 - Bit-sliced bitmaps
 {: .no_toc }
 
-Bit Slice bitmaps allow FeatureBase to represent any number in the 64-bit range (10^19) using only 64 bitmaps. This means integer, timestamp and fixed-point decimals can be handled more efficiently than a standard bitmap.
-
-Bit-slicing data involves:
-* converting integer values to base-2
+Bit-slicing data involves creating a single bitmap for each power of 2. This involves:
+* converting the number to base-2
 * creating a single bitmap for each power of 2
+
+This approach means FeatureBase can represent any number in the 64-bit range (10^19) using only 64 bitmaps.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
+* [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-standard)
 
 ## What data types are converted to bit-sliced bitmaps?
 
@@ -30,33 +30,69 @@ User data mapped to the following data types is converted to bit-sliced bitmaps:
 
 ## How does FeatureBase bit-slice integer data?
 
-Sample data is used to demonstrate how a column of values is converted to base-2 then bit-sliced.
+Bit-slicing requires integers to be converted to base-2.
 
-### Sample data
+{% include /concepts/concept-bitmap-source-data-table.md %}
 
-{% include /concepts/concept-eg-species-table-data.md %}
+{: .note}
+Equality encoding the `historical_name` column is explained in [Equality encoding boolean data](/docs/concepts/concept-bitmaps-standard)
 
-### Step 1 - convert integer values to base-2
+Bit-slicing the `downloads` data can be performed as follows.
 
-The `Captivity` data can be converted to binary (base-2) as follows:
+### Step 1 - convert values to base-2
 
-| Species | Captivity |
+Using `historical_name` as the ID, the download values convert as follows:
+
+| id | downloads |
 |---|---|
-| Manatee | 011 |
-| Sea Horse | 1110111100 |
-| Koala | 10011 |
-| Starfish | 10100 |
+| Pilosa | 10011100010000 |
+
+| id | downloads |
+|---|---|
+| Molecula | 100100001011100 |
+
+| id | downloads |
+|---|---|
+| FeatureBase | 1100001101010000 |
 
 ### Step 2 - Bit slicing the integer values
 
 Bit slicing converts each binary value into an array of bits.
 
-|  | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| Manatee | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
-| Sea Horse | 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
-| Koala | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 1 |
-| Starfish | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+```
+| id | 32768 | 16384 | 8192 | 4096 | 2048 | 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Pilosa | 0 | 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+```
+
+```
+| id | 32768 | 16384 | 8192 | 4096 | 2048 | 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Molecula | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+```
+
+```
+| id | 32768 | 16384 | 8192 | 4096 | 2048 | 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| FeatureBase | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+```
+
+## Step 3 - Save bitmaps for each power of 2
+
+The bit-slice values are now saved as powers of 2. For example:
+
+| id | 32768 |
+|---|---|
+| Pilosa | 0 |
+| Molecula | 0 |
+| FeatureBase | 0 |
+
+## Further information
+
+* [Learn how FeatureBase compresses bitmaps and reduces storage overheads](/docs/concepts/concept-roaring-bitmap-format)
+
+
+
 
 ## Next step
 
