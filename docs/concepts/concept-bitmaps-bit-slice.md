@@ -9,11 +9,7 @@ nav_order: 2
 # FeatureBase bitmaps part 2 - Bit-sliced bitmaps
 {: .no_toc }
 
-Bit-slicing data involves creating a single bitmap for each power of 2. This involves:
-* converting the number to base-2
-* creating a single bitmap for each power of 2
-
-This approach means FeatureBase can represent any number in the 64-bit range (10^19) using only 64 bitmaps.
+Bit-sliced data creates a single bitmap for each power of 2. This approach means FeatureBase can represent any number in the 64-bit range (10^19) using only 64 bitmaps.
 
 {% include page-toc.md %}
 
@@ -24,18 +20,11 @@ This approach means FeatureBase can represent any number in the 64-bit range (10
 
 ## How does FeatureBase bit-slice integer data?
 
-Bit-slicing requires integers to be converted to base-2.
-
 {% include /concepts/concept-bitmap-source-data-table.md %}
-
-{: .note}
-Equality encoding the `historical_name` column is explained in [Equality encoding boolean data](/docs/concepts/concept-bitmaps-standard)
-
-Bit-slicing the `downloads` data can be performed as follows.
 
 ### Step 1 - convert values to base-2
 
-Using `historical_name` as the ID, the download values convert as follows:
+Using `historical_name` as the `id` means integer values can be represented as individual base-2 values
 
 | id | downloads |
 |---|---|
@@ -51,7 +40,7 @@ Using `historical_name` as the ID, the download values convert as follows:
 
 ### Step 2 - Bit slicing the integer values
 
-Bit slicing converts each binary value into an array of bits.
+Bit slicing adds a column for each power of 2.
 
 ```
 | id | 32768 | 16384 | 8192 | 4096 | 2048 | 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
@@ -71,9 +60,9 @@ Bit slicing converts each binary value into an array of bits.
 | FeatureBase | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
 ```
 
-## Step 3 - Save bitmaps for each power of 2
+## Step 3 - Save bitslice bitmaps
 
-The bit-slice values are now saved as powers of 2. For example:
+The bit-slice columns can now be saved as individual bitmaps. For example:
 
 | id | 32768 |
 |---|---|
@@ -91,19 +80,6 @@ User data mapped to the following data types is converted to bit-sliced bitmaps:
 
 * [Learn how FeatureBase compresses bitmaps and reduces storage overheads](/docs/concepts/concept-roaring-bitmap-format)
 
-
-
-
-## Next step
-
-* Learn how FeatureBase compresses bitmaps in [Part 3 - Roaring Bitmap Format](/docs/concepts/concept-fb-pt3-roaring-bitmap-format)
-
 ## Further information
 
 * [Learn about bit-slice indexing](https://pages.cs.wisc.edu/~nil/764/DADS/36_improved-query-performance-with.pdf){:target="_blank"}
-<!--
-Content based on:
-* https://www.featurebase.com/blog/featurebase-technical-white-paper
-* https://www.featurebase.com/blog/bitmaps-making-real-time-analytics-real
-* https://www.featurebase.com/blog/range-encoded-bitmaps
--->
