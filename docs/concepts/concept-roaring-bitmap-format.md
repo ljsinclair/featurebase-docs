@@ -5,11 +5,10 @@ parent: Bitmap index overview
 grand_parent: Concepts
 nav_order: 3
 ---
-# Bitmap compression using Roaring Bitmap Format
+# How does FeatureBase reduce storage overheads?
+{: .no_toc }
 
-<!-- From https://www.featurebase.com/blog/featurebase-technical-white-paper
-
--->
+<!-- From https://www.featurebase.com/blog/featurebase-technical-white-paper-->
 
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
