@@ -24,7 +24,12 @@ Bitmaps make updates and queries faster because the data is encoded as `1` or `0
 
 ### Faster updates
 
-Updating data means flipping or adding bits to a bitmap rather than working within traditional row and column formats.
+Bitmap updates in FeatureBase are faster for two reasons.
+
+| Bitmap type | Update description |
+|---|---|
+| Standard | FeatureBase can directly update a value encoded as a standard bitmap without needing to traverse other values in the structure |
+| Bit-slice | Updates to bit-slice bitmaps mean flipping or adding bits rather than altering the entire value |
 
 ### Faster queries
 
