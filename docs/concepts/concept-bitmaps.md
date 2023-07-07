@@ -8,9 +8,9 @@ nav_order: 1
 # An overview of FeatureBase bitmaps
 {: .no_toc }
 
-FeatureBase converts data to base-2 bitmaps of two types:
-* standard bitmaps
-* bit-slice bitmaps
+FeatureBase converts data to base-2 (binary) in two types of bitmap:
+* Standard bitmaps for individual values, or
+* Bit-sliced bitmaps which slice integer values into a single bitmap for each power of two
 
 {% include page-toc.md %}
 
@@ -18,25 +18,15 @@ FeatureBase converts data to base-2 bitmaps of two types:
 
 * [Learn about cardinality and data normalization](/docs/concepts/concepts-home)
 
-## Which bitmap type will be created for my data?
-
-Data is converted to bitmaps based on the destination data type:
-
-{% include /sql-guide/datatypes-bitmap-table.md %}
-
-## Are column names converted to bitmaps?
-
-{% include /concepts/concept-table-def-save-to-disk.md %}
-
 ## Why use bitmaps for data storage?
 
 Bitmaps make updates and queries faster because the data is encoded as `1` or `0`.
 
-## Faster updates
+### Faster updates
 
 Updating data means flipping or adding bits to a bitmap rather than working within traditional row and column formats.
 
-## Faster queries
+### Faster queries
 
 There are two limitations to every data query:
 * Latency, where the structure and encoding cause delays returning results
@@ -66,3 +56,17 @@ Bitmaps have two main issues:
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+
+## What bitmaps are created for my data?
+
+Data is converted to bitmaps based on the destination data type:
+
+{% include /sql-guide/datatypes-bitmap-table.md %}
+
+## Are column names converted to bitmaps?
+
+{% include /concepts/concept-table-def-save-to-disk.md %}
+
+## Further information
+
+* [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)
