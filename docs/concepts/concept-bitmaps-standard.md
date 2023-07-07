@@ -9,11 +9,7 @@ nav_order: 1
 # What are bitmaps and how are they encoded?
 {: .no_toc }
 
-FeatureBase encodes certain values as individual bitmaps. This involves:
-* saving values to disk as column identifiers
-* using binary values to represent the existence or absence of a relationship between the row `_id` and the column
-
-This overview uses examples to explain how values are encoded for standard bitmaps.
+FeatureBase uses **equality** encoding to create a Boolean relationship between a value and its unique identifier. The results are saved as an array which forms a single bitmap.
 
 {% include page-toc.md %}
 
@@ -22,19 +18,18 @@ This overview uses examples to explain how values are encoded for standard bitma
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
 
-## What data types are converted to standard bitmaps?
+## How does equality encoding work?
 
-{% include /concepts/concept-bitmap-standard-data-type-table.md %}
+Equality encoding values works by:
+* saving values to disk as column names
+* encoding a `1` to represent the relationship between column name and unique row identifier
+* encoding a `0` if that relationship does not exist.
 
-## How is data encoded?
+As a result, a single bitmap is created for each value.
 
-Equality encoding is the process of representing relationships between:
-* values written to disk as column names, and
-* row identifiers
+The following table contains source data representing historical names for the FeatureBase product:
 
-For example, a source table containing historical names for the FeatureBase product is structured as follows:
-
-| id | historical_names |
+| id | historical_name |
 |---|---|
 | 01 | Pilosa |
 | 02 | Molecula |
@@ -56,18 +51,17 @@ Equality encoding represents this data as follows:
 
 ## Equality encoding integer values
 
-Equality encoding integer values is less effective because the relationships cannot easily be represented in binary terms.
+Equality encoding integer values is less effective because Boolean relationships are harder to represent. For example, the downloads for historical products are represented as follows:
 
-For example, the downloads for historical products are represented as follows:
-
-| ID | historical_product | downloads |
+| ID | historical_name | downloads |
+|---|---|---|
 | 1 | Pilosa | 10,000 |
 | 2 | Molecula | 18,524 |
 | 3 | FeatureBase | 50,000 |
 
 ### Equality encoding specific values
 
-If the download value is used as the unique identifier, the data can be equality encoded as follows:
+Using the download value as unique identifier, the data can be encoded as follows:
 
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
@@ -80,6 +74,8 @@ If the download value is used as the unique identifier, the data can be equality
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
 | 50000 | 0 | 0 | 1 |
+
+#### Issues equality encoding integers
 
 The issue with equality encoding integers in this way is that two operations are required to update download numbers for any of the products:
 * A new bitmap created with the updated download numbers
@@ -94,11 +90,13 @@ Values can be encoded as a range which reduces the number of bitmaps and create/
 | 0-25000 | 1 | 1 | 0 |
 | 25001-50000 | 0 | 0 | 1 |
 
-The main issue with encoding as a range of values is the specifics are lost.
+#### Issues equality encoding as range
 
-## Encoding integer values with bit-slice bitmaps
+The fundamental issue with this approach is the specific values are lost.
 
-FeatureBase uses bit-slice bitmaps to overcome equality encoding issues.
+## Solution: bit-slice bitmaps
+
+To avoid the issues with equality encoding, FeatureBase encodes integer values as bit-slice bitmaps.
 
 * [Learn about bit-slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
