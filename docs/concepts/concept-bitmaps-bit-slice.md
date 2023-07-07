@@ -22,12 +22,6 @@ This approach means FeatureBase can represent any number in the 64-bit range (10
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
 * [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-standard)
 
-## What data types are converted to bit-sliced bitmaps?
-
-User data mapped to the following data types is converted to bit-sliced bitmaps:
-
-{% include /concepts/concept-bitmap-bitslice-data-type-table.md %}
-
 ## How does FeatureBase bit-slice integer data?
 
 Bit-slicing requires integers to be converted to base-2.
@@ -86,6 +80,12 @@ The bit-slice values are now saved as powers of 2. For example:
 | Pilosa | 0 |
 | Molecula | 0 |
 | FeatureBase | 0 |
+
+## What data types are converted to bit-sliced bitmaps?
+
+User data mapped to the following data types is converted to bit-sliced bitmaps:
+
+{% include /concepts/concept-bitmap-bitslice-data-type-table.md %}
 
 ## Further information
 

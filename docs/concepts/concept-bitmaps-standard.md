@@ -27,15 +27,11 @@ Equality encoding values works by:
 
 As a result, a single bitmap is created for each value.
 
-The following table contains source data representing historical names for the FeatureBase product:
+{% include /concepts/concept-bitmap-source-data-table.md %}
 
-| id | historical_name |
-|---|---|
-| 01 | Pilosa |
-| 02 | Molecula |
-| 03 | FeatureBase |
+## How does FeatureBase equality encode data?
 
-Equality encoding represents this data as follows:
+The `historical_name` data can be equality encoded as follows:
 
 | ID | Pilosa | Molecula | FeatureBase |
 |---|---|---|---|
@@ -53,11 +49,9 @@ Equality encoding represents this data as follows:
 
 Equality encoding integer values is less effective because Boolean relationships are harder to represent.
 
-{% include /concepts/concept-bitmap-source-data-table.md %}
-
 ### Equality encoding specific values
 
-Using the download value as unique identifier, the data can be encoded as follows:
+Using the `downloads` column as unique identifier, the data can be encoded as follows:
 
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
