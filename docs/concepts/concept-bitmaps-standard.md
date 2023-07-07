@@ -9,13 +9,11 @@ nav_order: 1
 # What are bitmaps and how are they encoded?
 {: .no_toc }
 
-A standard bitmap is:
-{% include /concepts/concept-bitmap-standard-summary.md %}
+FeatureBase encodes certain values as individual bitmaps. This involves:
+* saving values to disk as column identifiers
+* using binary values to represent the existence or absence of a relationship between the row `_id` and the column
 
-This high-level overview uses sample data to explain:
-* standard bitmaps
-* equality encoding data
-* limitations of equality encoding
+This overview uses examples to explain how values are encoded for standard bitmaps.
 
 {% include page-toc.md %}
 
@@ -28,55 +26,77 @@ This high-level overview uses sample data to explain:
 
 {% include /concepts/concept-bitmap-standard-data-type-table.md %}
 
-## Sample data
-
-{% include /concepts/concept-eg-species-table-data.md %}
-
 ## How is data encoded?
 
-Equality encoding is a basic encoding method used with standard bitmaps whereby the relationships between two dimensions are represented as binary, where:
-* `1` is encoded if the relationship exists
-* `0` is encoded if the relationship does not
+Equality encoding is the process of representing relationships between:
+* values written to disk as column names, and
+* row identifiers
 
-Boolean data can be equality encoded because the relationship either exists or it doesn't. For example:
+For example, a source table containing historical names for the FeatureBase product is structured as follows:
 
-|  | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| Vertebrate | 1 | 1 | 1 | 0 |
+| id | historical_names |
+|---|---|
+| 01 | Pilosa |
+| 02 | Molecula |
+| 03 | FeatureBase |
 
-Those species with a backbone are represented by:
-* 1 if the species has a backbone
-* 0 if the species does not have a backbone
+Equality encoding represents this data as follows:
 
-### Equality encoding integer values
+| ID | Pilosa | Molecula | FeatureBase |
+|---|---|---|---|
+| 1 | 1 | 0 | 0 |
 
-Equality encoding non-Boolean data like integers is less effective but is possible.
+| ID | Pilosa | Molecula | FeatureBase |
+|---|---|---|---|
+| 2 | 0 | 1 | 0 |
 
-For example:
+| ID | Pilosa | Molecula | FeatureBase |
+|---|---|---|---|
+| 3 | 0 | 0 | 1 |
 
-| Captivity | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| 3 | 1 | 0 | 0 | 0 |
-| 19 | 0 | 0 | 1 | 0 |
-| 20 | 0 | 0 | 0 | 1 |
-| 956 | 0 | 1 | 0 | 0 |
+## Equality encoding integer values
 
-There are two issues with this approach:
-1. multiple `OR` operations are required to query the captivity numbers.
-2. a new bitmap must be created each time captivity numbers change
+Equality encoding integer values is less effective because the relationships cannot easily be represented in binary terms.
 
-### Equality encoding groups of values
+For example, the downloads for historical products are represented as follows:
 
-Grouping values reduces the number of bitmaps:
+| ID | historical_product | downloads |
+| 1 | Pilosa | 10,000 |
+| 2 | Molecula | 18,524 |
+| 3 | FeatureBase | 50,000 |
 
-| Captivity | Manatee | Sea Horse | Koala | Starfish |
-|---|---|---|---|---|
-| 0-500 | 1 | 0 | 1 | 1 |
-| 5001-1000 | 0 | 1 | 0 | 0 |
+### Equality encoding specific values
 
-However, exact numbers of each species in captivity is lost.
+If the download value is used as the unique identifier, the data can be equality encoded as follows:
 
-## Solving equality encoding
+| id-downloads | Pilosa | Molecula | FeatureBase |
+|---|---|
+| 10000 | 1 | 0 | 0 |
+
+| id-downloads | Pilosa | Molecula | FeatureBase |
+|---|---|
+| 18524 | 0 | 1 | 0 |
+
+| id-downloads | Pilosa | Molecula | FeatureBase |
+|---|---|
+| 50000 | 0 | 0 | 1 |
+
+The issue with equality encoding integers in this way is that two operations are required to update download numbers for any of the products:
+* A new bitmap created with the updated download numbers
+* the original bitmap deleted
+
+### Encoding values as a range
+
+Values can be encoded as a range which reduces the number of bitmaps and create/delete operations.
+
+| id-download-range | Pilosa | Molecula | FeatureBase |
+|---|---|---|
+| 0-25000 | 1 | 1 | 0 |
+| 25001-50000 | 0 | 0 | 1 |
+
+The main issue with encoding as a range of values is the specifics are lost.
+
+## Encoding integer values with bit-slice bitmaps
 
 FeatureBase uses bit-slice bitmaps to overcome equality encoding issues.
 
