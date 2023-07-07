@@ -33,17 +33,23 @@ As a result, a single bitmap is created for each value.
 
 The `historical_name` data can be equality encoded as follows:
 
+```
 | ID | Pilosa | Molecula | FeatureBase |
 |---|---|---|---|
 | 1 | 1 | 0 | 0 |
+```
 
+```
 | ID | Pilosa | Molecula | FeatureBase |
 |---|---|---|---|
 | 2 | 0 | 1 | 0 |
+```
 
+```
 | ID | Pilosa | Molecula | FeatureBase |
 |---|---|---|---|
 | 3 | 0 | 0 | 1 |
+```
 
 ## Equality encoding integer values
 
@@ -52,18 +58,23 @@ Equality encoding integer values is less effective because Boolean relationships
 ### Equality encoding specific values
 
 Using the `downloads` column as unique identifier, the data can be encoded as follows:
-
+```
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
 | 10000 | 1 | 0 | 0 |
+```
 
+```
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
 | 18524 | 0 | 1 | 0 |
+```
 
+```
 | id-downloads | Pilosa | Molecula | FeatureBase |
 |---|---|
 | 50000 | 0 | 0 | 1 |
+```
 
 #### Issues equality encoding integers
 
@@ -75,10 +86,12 @@ The issue with equality encoding integers in this way is that two operations are
 
 Values can be encoded as a range which reduces the number of bitmaps and create/delete operations.
 
+```
 | id-download-range | Pilosa | Molecula | FeatureBase |
 |---|---|---|
 | 0-25000 | 1 | 1 | 0 |
 | 25001-50000 | 0 | 0 | 1 |
+```
 
 #### Issues equality encoding as range
 

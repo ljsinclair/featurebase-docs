@@ -22,21 +22,32 @@ Bit-sliced data creates a single bitmap for each power of 2. This approach means
 
 {% include /concepts/concept-bitmap-source-data-table.md %}
 
+By bit-slicing, the `downloads` data can be encoded:
+* as 3 bits
+* in 16 bitmaps
+* with column names saved to disk
+
 ### Step 1 - convert values to base-2
 
-Using `historical_name` as the `id` means integer values can be represented as individual base-2 values
+Using `historical_name` as the `id` means `downloads` integer values can be represented as individual base-2 values
 
+```
 | id | downloads |
 |---|---|
 | Pilosa | 10011100010000 |
+```
 
+```
 | id | downloads |
 |---|---|
 | Molecula | 100100001011100 |
+```
 
+```
 | id | downloads |
 |---|---|
 | FeatureBase | 1100001101010000 |
+```
 
 ### Step 2 - Bit slicing the integer values
 
@@ -64,11 +75,13 @@ Bit slicing adds a column for each power of 2.
 
 The bit-slice columns can now be saved as individual bitmaps. For example:
 
+```
 | id | 32768 |
 |---|---|
 | Pilosa | 0 |
 | Molecula | 0 |
-| FeatureBase | 0 |
+| FeatureBase | 1 |
+```
 
 ## What data types are converted to bit-sliced bitmaps?
 
