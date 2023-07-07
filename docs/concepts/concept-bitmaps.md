@@ -76,4 +76,6 @@ Data is converted to bitmaps based on the destination data type:
 
 ## Further information
 
+* [Learn about standard bitmaps](/docs/concepts/concept-bitmaps-standard)
+* [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 * [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)
