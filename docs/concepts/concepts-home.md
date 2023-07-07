@@ -30,7 +30,7 @@ High cardinality data has a high number of unique relationships which can be rep
 
 ## Low cardinality data
 
-Data described as **low cardinality** have multiple relationships has a one-to-many or many-to-many relationship:
+Data described as **low cardinality** have multiple relationships has a one-to-many or many-to-many relationship. For example:
 
 {% include /concepts/concept-eg1-one-many.md %}
 
@@ -42,11 +42,9 @@ The **first normal form** provides guidance on:
 * arranging data into two dimensions
 * the use of relation names, attributes and keys to reference rows
 
-This set of rules means:
-* High cardinality data requires no alteration (because there is no duplication and the relationships are one-to-one)
-* Low cardinality data that has one-to-many or many-to-many relationships are:
-  * inserted into separate two dimensional tables, and
-  * relationships are maintained using keys
+This means:
+* high and low cardinality data is saved to separate tables to remove duplication
+* the relationships (one-to-many and many-to-many) are maintained through the use of keys that reference specific rows in different tables.
 
 For example, the low cardinality table above can be normalized as follows:
 
@@ -59,8 +57,6 @@ For example, the low cardinality table above can be normalized as follows:
 | Hi | History |
 
 The SubjectID can then be linked with a key to the `Students` table `StudentID` key.
-
-<!--Need a schema diagram for this relationship for better clarity-->
 
 ## Benefits and costs of data normalization
 

@@ -32,6 +32,8 @@ There are two limitations to every data query:
 * Latency, where the structure and encoding cause delays returning results
 * Concurrency, where queries slow down because multiple users are accessing the same data at the same time
 
+FeatureBase addresses these limitations as follows:
+
 | Limitation | Solution | Description |
 |---|---|---|
 | Concurrency | Lower latency queries | Faster queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
@@ -46,6 +48,10 @@ Bitmaps have two main issues:
 * data storage overheads
 
 ### Low cardinality data duplication
+
+* [Learn about issues with low-cardinality data](/docs/concepts/concepts-home/#what-is-cardinality)
+
+FeatureBase overcomes low-cardinality issues with four unique data types suitable for `integer` or `string` values.
 
 {% include /sql-guide/datatype-set-setq-summary.md %}
 
