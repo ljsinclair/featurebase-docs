@@ -6,7 +6,7 @@ grand_parent: Concepts
 nav_order: 1
 ---
 
-# What are bitmaps and how are they encoded?
+# How does FeatureBase encode non-integer values?
 {: .no_toc }
 
 FeatureBase uses **equality** encoding to create a Boolean relationship between a value and its unique identifier. The results are saved as an array which forms a single bitmap.

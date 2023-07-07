@@ -6,7 +6,7 @@ grand_parent: Concepts
 nav_order: 2
 ---
 
-# FeatureBase bitmaps part 2 - Bit-sliced bitmaps
+# How does FeatureBase encode integer values as bitmaps?
 {: .no_toc }
 
 Bit-sliced data creates a single bitmap for each power of 2. This approach means FeatureBase can represent any number in the 64-bit range (10^19) using only 64 bitmaps.
