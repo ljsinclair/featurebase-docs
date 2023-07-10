@@ -40,12 +40,12 @@ There are two limitations to every data query:
 
 FeatureBase addresses these limitations as follows:
 
-| Limitation | Solution | Description |
-|---|---|---|
-| Concurrency | Lower latency queries | Faster queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
-| Latency | Data encoded in base-2 | Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
-| Latency | Data encoded as bitmap or bit-slice | Queries can directly and sequentially access specified values without needing to traverse all other values in a database table |
-| Latency | Bit-slice bitmaps | Range queries can be built as a combination of underlying bitmaps rather than as a complex mix of tables and columns |
+| Query | Limitation | Solution |
+|---|---|---|---|
+| Multiple | Concurrency | Lower latency queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
+| Boolean queries | Latency | Equality encoded bitmaps mean Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
+| SELECT specific values | Latency | Data encoded as bitmap or bit-slice | Queries can directly and sequentially access specified values without needing to traverse all other values in a database table |
+| Range queries | Latency | Each value is broken into a single bitmap for each power of 2 which means a range query can combine the specific bitmaps instead of working with integers in a traditional row/column format |
 
 ## What are the drawbacks of Bitmaps?
 
@@ -70,6 +70,21 @@ FeatureBase overcomes low-cardinality issues with four unique data types suitabl
 Data is converted to bitmaps based on the destination data type:
 
 {% include /sql-guide/datatypes-bitmap-table.md %}
+
+## How does FeatureBase store bitmaps?
+
+At a high level FeatureBase bitmaps are stored as **Shards**, made up of:
+* a Roaring Bitmap Format (RBF) data file
+* a Write Ahead Log (WAL) file
+
+FeatureBase stores shards on disk in the following directories:
+
+| FeatureBase Product | Directory | Further information |
+|---|---|---|
+| Cloud | `etc` |  |
+| Community | `pilosa` | [FeatureBase Community data directory](/docs/community/com-config/com-config-data-directory)
+
+* [Learn more about shards and Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
 
 ## Are column names converted to bitmaps?
 

@@ -1,3 +1,3 @@
-The table definition, including column names are not converted to bitmaps. Instead they are saved to disk in the:
-* FeatureBase Cloud `etcd` directory, or
-* [FeatureBase Community data directory](/docs/community/com-config/com-config-data-directory)
+Column names are saved to disk in the Roaring Bitmap Format data file.
+
+* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)

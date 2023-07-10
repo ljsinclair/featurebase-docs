@@ -11,6 +11,15 @@ A FeatureBase Cluster is a distributed system that is maintained by `etcd` which
 
 The system requires at least three nodes to maintain data consistency and fault tolerances. <!--from https://stackoverflowteams.com/c/molecula/questions/179-->
 
+<!-- From glossary
+
+Shard
+Records are sharded on a preset width. Shards are operated on in parallel and are evenly distributed across the cluster via a consistent hash.
+
+ShardWidth
+This is the number of records in a shard. ShardWidth defaults to 2^20 or about one million. It can be modified, but only at compile time, and before ingesting any data.
+-->
+
 {% include page-toc.md %}
 
 ## Before you begin

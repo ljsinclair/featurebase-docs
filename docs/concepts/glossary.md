@@ -174,8 +174,9 @@ nav_order: 1
 | Term | Context | Further information |
 |---|---|---|
 | SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
-| Shard | FeatureBase Community Cluster | Records are sharded on a preset width. Shards are operated on in parallel and are evenly distributed across the cluster via a consistent hash. |
-| ShardWidth<br/>`cluster.shardwidth` parameter | FeatureBase Community Cluster | This is the number of records in a shard. ShardWidth defaults to 2^20 or about one million. It can be modified, but only at compile time, and before ingesting any data. |
+| Shard | Roaring Bitmap format | [Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format) |
+| Shard | FeatureBase Community Cluster | [FeatureBase Community cluster](/docs/community/com-cluster/com-cluster-manage) |
+| ShardWidth<br/>`cluster.shardwidth` parameter | FeatureBase Community Cluster | [FeatureBase Community cluster](/docs/community/com-cluster/com-cluster-manage) |
 | SORT | PQL query | [PQL SORT read query](/docs/pql-guide/pql-read-sort) |
 | STORE | PQL query | [PQL STORE write query](/docs/pql-guide/pql-write-store) |
 | SUM | PQL query | [PQL SUM read query](/docs/pql-guide/pql-read-sum) |
