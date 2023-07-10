@@ -9,7 +9,7 @@ nav_order: 1
 # How does FeatureBase encode non-integer values?
 {: .no_toc }
 
-FeatureBase uses **equality** encoding to create a Boolean relationship between a value and its unique identifier. The results are saved as an array which forms a single bitmap.
+FeatureBase uses **equality encoding** to create a Boolean relationship between a value and its unique identifier.
 
 {% include page-toc.md %}
 
@@ -20,12 +20,11 @@ FeatureBase uses **equality** encoding to create a Boolean relationship between 
 
 ## How does equality encoding work?
 
-Equality encoding values works by:
-* saving values to disk as column names
-* encoding a `1` to represent the relationship between column name and unique row identifier
-* encoding a `0` if that relationship does not exist.
-
-As a result, a single bitmap is created for each value.
+FeatureBase equality encoding:
+* uses the actual value as a column name, saved to disk
+* represents the relationship between unique identifier and column in boolean terms:
+  * `1` indicates the relationship exists
+  * `0` indicates it does not.
 
 {% include /concepts/concept-bitmap-source-data-table.md %}
 
