@@ -1,5 +1,5 @@
 ---
-title: Standard bitmaps
+title: Equality encoded bitmaps
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts

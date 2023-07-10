@@ -8,20 +8,23 @@ nav_order: 3
 # How does FeatureBase reduce storage overheads?
 {: .no_toc }
 
-<!-- From https://www.featurebase.com/blog/featurebase-technical-white-paper-->
-
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
 ## Before you begin
 
 * [Learn about Roaring Bitmaps](https://www.roaringbitmap.org/){:target="_blank"}
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about standard bitmaps and equality encoding data](/docs/concepts/concept-bitmaps-standard)
+* [Learn about equality encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+
+NEED TO TELL USERS WHAT SHARDS AND INDEXES MEAN IN THIS CONTEXT
 
 ## What is Roaring Bitmap Format?
 
 Roaring Bitmap Format (RBF) is a b-tree database with full ACID (Atomicity, Consistency, Isolation, Durability) transaction support which allows incremental updates.
+
+RBF inserts Roaring Bitmap Containers into the b-tree format which has the following benefits:
+* Full ACID transaction support within the RBF file (index and shard)
 
 ## Bitmap container encoding and compression
 

@@ -16,7 +16,7 @@ Bit-sliced data creates a single bitmap for each power of 2. This approach means
 ## Before you begin
 
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-standard)
+* [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 
 ## How does FeatureBase bit-slice integer data?
 

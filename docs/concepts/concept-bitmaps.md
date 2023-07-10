@@ -10,7 +10,7 @@ has_toc: false
 {: .no_toc }
 
 FeatureBase converts data to base-2 (binary) in two types of bitmap:
-* Standard bitmaps for individual values, or
+* equality encoded bitmaps for individual values, or
 * Bit-sliced bitmaps which slice integer values into a single bitmap for each power of two
 
 {% include page-toc.md %}
@@ -77,6 +77,6 @@ Data is converted to bitmaps based on the destination data type:
 
 ## Further information
 
-* [Learn about standard bitmaps](/docs/concepts/concept-bitmaps-standard)
+* [Learn about equality encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 * [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)

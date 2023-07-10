@@ -1,4 +1,6 @@
-Uncompressed bitmaps scale with the number of values and the cardinality of that value.
+Encoding data as base-2 equality-encoded or bit-slice bitmaps makes queries faster but incurs storage overheads because the number of bitmaps scale:
+* with the number of values, and
+* the cardinality of those values
 
 For example:
 
