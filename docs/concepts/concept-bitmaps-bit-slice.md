@@ -18,6 +18,16 @@ Bit-sliced data creates a single bitmap for each power of 2. This approach means
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
 * [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 
+## What data types are converted to bit-sliced bitmaps?
+
+User data mapped to the following data types is converted to bit-sliced bitmaps:
+
+| User data | FeatureBase data type | Additional information |
+|---|---|---|
+| Floating point | [Decimal](/docs/sql-guide/data-types/data-type-decimal) | A bitmap is added for the decimal point |
+| Signed Integer | [Integer](/docs/sql-guide/data-types/data-type-int) | A bitmap is added for the sign |
+| Date and time | [Timestamp](/docs/sql-guide/data-types/data-type-timestamp) |  |
+
 ## How does FeatureBase bit-slice integer data?
 
 {% include /concepts/concept-bitmap-source-data-table.md %}
@@ -83,15 +93,11 @@ The bit-slice columns can now be saved as individual bitmaps. For example:
 | FeatureBase | 1 |
 ```
 
-## What data types are converted to bit-sliced bitmaps?
+## Bitmap storage overheads
 
-User data mapped to the following data types is converted to bit-sliced bitmaps:
+{% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
-{% include /concepts/concept-bitmap-bitslice-data-type-table.md %}
-
-## Further information
-
-* [Learn how FeatureBase compresses bitmaps and reduces storage overheads](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
 
 ## Further information
 

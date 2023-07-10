@@ -18,6 +18,17 @@ FeatureBase uses **equality encoding** to create a Boolean relationship between 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
 
+## What data types are equality encoded?
+
+Each value of user data mapped to the following data types are converted to equality encoded bitmaps:
+
+| User data | FeatureBase data type |
+|---|---|
+| Boolean | [BOOL](/docs/sql-guide/data-types/data-type-bool) |
+| Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) |
+| Alphanumeric | [String](/docs/sql-guide/data-types/data-type-string) |
+| Low cardinality | [`SET`, `SETQ`](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
+
 ## How does equality encoding work?
 
 FeatureBase equality encoding:
@@ -26,9 +37,9 @@ FeatureBase equality encoding:
   * `1` indicates the relationship exists
   * `0` indicates it does not.
 
-{% include /concepts/concept-bitmap-source-data-table.md %}
-
 ## How does FeatureBase equality encode data?
+
+{% include /concepts/concept-bitmap-source-data-table.md %}
 
 The `historical_name` data can be equality encoded as follows:
 
@@ -74,14 +85,7 @@ Using the `downloads` column as unique identifier, the data can be encoded as fo
 |---|---|
 | 50000 | 0 | 0 | 1 |
 ```
-
-#### Issues equality encoding integers
-
-The issue with equality encoding integers in this way is that two operations are required to update download numbers for any of the products:
-* A new bitmap created with the updated download numbers
-* the original bitmap deleted
-
-### Encoding values as a range
+### Encoding integer values as a range
 
 Values can be encoded as a range which reduces the number of bitmaps and create/delete operations.
 
@@ -92,16 +96,25 @@ Values can be encoded as a range which reduces the number of bitmaps and create/
 | 25001-50000 | 0 | 0 | 1 |
 ```
 
-#### Issues equality encoding as range
+### Issues equality encoding integer values
 
-The fundamental issue with this approach is the specific values are lost.
+The following issues occur with equality encoding integers.
 
-### Solution: bit-slice bitmaps
+| Equality encoding method | Issue |
+|---|---|
+| Encode values | Two operations are required to update the values which incurs a processing overhead:<br/>* Create a new bitmap with updated values<br/>* Delete the original bitmap |
+| Range encoding | Specific values are lost |
 
-To avoid the issues with equality encoding, FeatureBase encodes integer values as bit-slice bitmaps.
+FeatureBase avoids these issues by bit-slicing integer values.
 
 * [Learn about bit-slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
-## Further information
+## Bitmap storage overheads
+
+{% include /concepts/concept-bitmap-storage-overhead-table.md %}
+
+* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+
+
 
 * [Learn about bitmap compression with Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)

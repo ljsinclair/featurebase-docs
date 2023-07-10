@@ -10,7 +10,7 @@ has_toc: false
 {: .no_toc }
 
 FeatureBase converts data to base-2 (binary) in two types of bitmap:
-* equality encoded bitmaps for individual values, or
+* Equality encoded bitmaps for non-integer values, or
 * Bit-sliced bitmaps which slice integer values into a single bitmap for each power of two
 
 {% include page-toc.md %}
