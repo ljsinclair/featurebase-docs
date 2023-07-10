@@ -17,9 +17,9 @@ nav_order: 3
 * [Learn about equality encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
-## What are the shard data files?
+## What kind of database is Roaring Bitmap Format?
 
-At the highest level, RBF consists of two data files which are described as a **shard**.
+At the highest level, RBF consists of two data files, saved to disk, also known as a **shard**.
 
 ![](/assets/images/concepts/concept-rbf-file-structure)
 
@@ -115,11 +115,13 @@ Bitwise operations (AND, OR, XOR, DIFFERENCE, NOT, etc.) are defined on each pos
 
 ### Bitmap page additional
 
-Bitmaps are defined as a combination of field and view
+Bitmaps are defined as a combination of field and view.
+
 <!-- awaiting feedback on what these are
 * Field=row
 * View=
 -->
+
 {: .note}
 Bitmap pages have no space for metadata so that is stored higher in the heirarchy
 
