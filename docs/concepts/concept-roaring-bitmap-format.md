@@ -10,6 +10,8 @@ nav_order: 3
 
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
+{% include page-toc.md %}
+
 ## Before you begin
 
 * [Learn about Roaring Bitmaps](https://www.roaringbitmap.org/){:target="_blank"}

@@ -13,7 +13,7 @@ nav_order: 2
 Below are the currently supported data sources (with links to the source specific documentation):
 
 - [Kafka](/docs/tools/fbsql/fbsql-loaders-kafka):           use the `--loader-kafka` flag with the `fbsql` binary to run the kafka loader.
-- [PostgreSQL](/docs/tools/fbsql/fbsql-loaders-postgresql): use the `--loader-postgres` flag with the `fbsql` binary to run the postgres loader.
+- [PostgreSQL](/docs/tools/fbsql/fbsql-loaders-postgres): use the `--loader-postgres` flag with the `fbsql` binary to run the postgres loader.
 - [Impala](/docs/tools/fbsql/fbsql-loaders-impala):         use the `--loader-impala` flag with the `fbsql` binary to run the impala loader.
 
 ## Source Independent Configuration Options
