@@ -14,5 +14,5 @@ create table allcoltypes
     idsetcol idset,
     idsetcolq idsetq timequantum 'YMD' ttl '24h'
   )
-  comment 'table containing all column types';
+  with comment 'table containing all column types';
 ```

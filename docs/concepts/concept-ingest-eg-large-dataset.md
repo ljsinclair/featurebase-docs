@@ -38,7 +38,7 @@ ucr_part STRING,
 street STRING,
 lat DECIMAL(8),
 long DECIMAL(8)
-) COMMENT 'table containing Boston crime data';
+) WITH COMMENT 'table containing Boston crime data';
 ```
 <!--- can bring back if needed but keeping until broken up
 |Data Type| Description |
@@ -151,7 +151,7 @@ ucr_part STRINGSET,
 street STRING,
 lat DECIMAL(8),
 long DECIMAL(8)
-) COMMENT 'table containing Boston crime data using SETs';
+) WITH COMMENT 'table containing Boston crime data using SETs';
 ```
 
 <!--- can bring back if needed but keeping until broken up
