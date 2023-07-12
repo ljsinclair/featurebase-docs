@@ -4,7 +4,7 @@ Encoding data as base-2 equality-encoded or bit-slice bitmaps makes queries fast
 
 For example, the average storage overheads for a 10,000 value dataset will be as follows:
 
-| Database | 10,000 value dataset saved in | Average storage overhead |
+| Database | Dataset saved as | Average storage overhead |
 |---|---|---|
 | RDBMS | Row and column based structure | 20480 - 30720 KB |
 | FeatureBase | * equality-encoded bitmaps<br/>* Bit-slice bitmaps | 1280000 KB |
