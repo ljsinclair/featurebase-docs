@@ -42,7 +42,7 @@ The following page types contain RBF metadata:
 
 | Page number | Page type | Description | Additional information |
 |---|---|---|---|
-| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist page](#freelist-page)<br/>* [Meta page example](#meta-page) |
+| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist page](/docs/concepts/concept-rbf-freelist.md)<br/>* [Meta page example](#meta-page) |
 | 1 | Root record | Stores a list of bitmaps<br/>* defined as combination of field and view<br/>* and root page number for that b-tree | [Root record example](#root-record) |
 
 ### B-tree structure and data pages
@@ -64,36 +64,6 @@ The following page types contain the b-tree structure and data:
 RBF has the following benefits and features:
 * full ACID (Atomicity, Consistency, Isolation, Durability) transaction support which allows incremental updates within the RBF file
 * 8KB page files can accommodate the largest possible Roaring Bitmap container
-
-### Freelist page
-
-The Freelist page is an internal bitmap used to track deallocated pages.
-
-#### How are pages deallocated?
-
-A page is available for deallocation when:
-* delete actions remove all elements from a page
-* a bitmap is deleted
-
-RBF deallocates pages to reduce disk space at the end of a transaction in three steps:
-1. Deallocate free pages from the end of the data file
-2. Adds deallocated pages to the Freelist
-3. Shrinks the Meta page `pageN` field to remove the deallocated pages
-
-{: .note}
-RBF cannot deallocate pages that are in use.
-
-#### How are pages reallocated?
-
-RBF allocates a new page on disk:
-* when a new bitmap is created
-* if an existing page fills up and needs to be split in two
-
-Page reallocation works on the following logic:
-
-| Page available in Freelist | Page not available |
-|---|---|
-| Reallocate the lowest numbered page first | * Extend the Freelist data file<br/>* Add a new page<br/>* Increment the Meta page `pageN` field by 1 |
 
 ### Leaf page additional
 
