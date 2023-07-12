@@ -24,7 +24,12 @@ The examples below demonstrate:
 
 ## Sample data
 
-{% include /concepts/concept-eg-species-table-data.md %}
+| Species | Vertebrae | Captivity |
+|---|---|---|
+| Manatee | Yes | 3 |
+| Sea Horse | Yes | 956 |
+| Koala | Yes | 19 |
+| Starfish | No | 20 |
 
 ## Step 1 - Choose the unique identifier
 
