@@ -10,7 +10,7 @@ has_toc: false
 {: .no_toc }
 
 FeatureBase converts data to base-2 (binary) in two types of bitmap:
-* Equality encoded bitmaps for non-integer values, or
+* Equality-encoded bitmaps for non-integer values, or
 * Bit-sliced bitmaps which slice integer values into a single bitmap for each power of two
 
 {% include page-toc.md %}
@@ -29,7 +29,7 @@ Bitmap updates in FeatureBase are faster for two reasons.
 
 | Bitmap type | Update description |
 |---|---|
-| Equality encoded | FeatureBase can directly update a value encoded as a standard bitmap without needing to traverse other values in the structure |
+| Equality-encoded | FeatureBase can directly update a value encoded as a standard bitmap without needing to traverse other values in the structure |
 | Bit-slice | Updates to bit-slice bitmaps mean flipping or adding bits rather than altering the entire value |
 
 ### Faster queries
@@ -43,9 +43,9 @@ FeatureBase addresses these limitations as follows:
 | Query | Limitation | Solution |
 |---|---|---|---|
 | Multiple | Concurrency | Lower latency queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
-| Boolean queries | Latency | Equality encoded bitmaps mean Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
-| SELECT specific values | Latency | Queries on equality encoded and bit-slice data can directly and sequentially access specified values without needing to traverse all other values in a database table |
-| Range queries | Latency | Each value is broken into a single bitmap for each power of 2 which means a range query can combine the specific bitmaps instead of working with integers in a traditional row/column format |
+| Boolean queries | Latency | Equality-encoded bitmaps mean Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
+| SELECT specific values | Latency | Queries on equality-encoded and bit-slice data can directly and sequentially access specified values without needing to traverse all other values in a database table |
+| Range queries | Latency | Integer values are bit-sliced into individual bitmaps for each power of two. This means range queries can combine the specific bitmaps instead of working with integers in a traditional row/column format |
 
 ## What are the drawbacks of Bitmaps?
 
@@ -92,6 +92,6 @@ FeatureBase stores shards on disk in the following directories:
 
 ## Further information
 
-* [Learn about equality encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
+* [Learn about equality-encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 * [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)

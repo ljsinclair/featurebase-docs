@@ -1,5 +1,5 @@
 ---
-title: Equality encoded bitmaps
+title: Equality-encoded bitmaps
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts
@@ -18,9 +18,9 @@ FeatureBase uses **equality encoding** to create a Boolean relationship between 
 * [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
 
-## What data types are equality encoded?
+## What data types are equality-encoded?
 
-Each value of user data mapped to the following data types are converted to equality encoded bitmaps:
+Each value of user data mapped to the following data types are converted to equality-encoded bitmaps:
 
 | User data | FeatureBase data type |
 |---|---|
@@ -41,7 +41,7 @@ FeatureBase equality encoding:
 
 {% include /concepts/concept-bitmap-source-data-table.md %}
 
-The `historical_name` data can be equality encoded as follows:
+The `historical_name` data can be equality-encoded as follows:
 
 ```
 | ID | Pilosa | Molecula | FeatureBase |

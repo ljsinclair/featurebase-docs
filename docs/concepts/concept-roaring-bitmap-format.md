@@ -16,7 +16,7 @@ nav_order: 3
 
 * [Learn about Roaring Bitmaps](https://www.roaringbitmap.org/){:target="_blank"}
 * [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about equality encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
+* [Learn about equality-encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
 
 ## What kind of database is Roaring Bitmap Format?

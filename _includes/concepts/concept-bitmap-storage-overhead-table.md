@@ -2,11 +2,11 @@ Encoding data as base-2 equality-encoded or bit-slice bitmaps makes queries fast
 * with the number of values, and
 * the cardinality of those values
 
-For example:
+For example, the average storage overheads for a 10,000 value dataset will be as follows:
 
-| Database | Values saved as | Storage overhead 10,000 value dataset |
+| Database | 10,000 value dataset saved in | Average storage overhead |
 |---|---|---|
 | RDBMS | Row and column based structure | 20480 - 30720 KB |
-| FeatureBase | Individual bitmaps, and<br/>Bit-slice bitmaps | 1280000 KB |
+| FeatureBase | * equality-encoded bitmaps<br/>* Bit-slice bitmaps | 1280000 KB |
 
 FeatureBase overcomes this issue by compressing all bitmap data using **Roaring Bitmap Format**, based on Roaring Bitmaps.
