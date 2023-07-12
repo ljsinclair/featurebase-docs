@@ -23,7 +23,7 @@ nav_order: 3
 
 At the highest level, RBF consists of two data files, saved to disk, also known as a **shard**.
 
-![](/assets/images/concepts/concept-rbf-file-structure)
+![](/assets/images/concepts/concept-rbf-file-structure.png)
 
 | Data file | Consisting of | Additional information |
 |---|---|
@@ -32,7 +32,7 @@ At the highest level, RBF consists of two data files, saved to disk, also known 
 
 ## What is the RBF data file?
 
-Roaring Bitmap Format (RBF) is a collection of b-trees serialized to disk that contain a page heirarchy used to store:
+Roaring Bitmap Format (RBF) is a collection of b-trees serialized to disk that contain a page hierarchy used to store:
 * RBF metadata
 * a b-tree structure that stores data in Roaring Bitmap containers.
 
