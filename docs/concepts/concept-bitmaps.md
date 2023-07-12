@@ -44,7 +44,7 @@ FeatureBase addresses these limitations as follows:
 |---|---|---|---|
 | Multiple | Concurrency | Lower latency queries mean data is accessed for shorter times, which reduces the number of connections and concurrency issues |
 | Boolean queries | Latency | Equality encoded bitmaps mean Boolean queries such as `WHERE` and `OR` are substantially faster because data relationships are represented as `1` (they exist) or `0` (they don't exist) |
-| SELECT specific values | Latency | Data encoded as bitmap or bit-slice | Queries can directly and sequentially access specified values without needing to traverse all other values in a database table |
+| SELECT specific values | Latency | Queries on equality encoded and bit-slice data can directly and sequentially access specified values without needing to traverse all other values in a database table |
 | Range queries | Latency | Each value is broken into a single bitmap for each power of 2 which means a range query can combine the specific bitmaps instead of working with integers in a traditional row/column format |
 
 ## What are the drawbacks of Bitmaps?
