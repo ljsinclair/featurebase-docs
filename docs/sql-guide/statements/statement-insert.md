@@ -46,6 +46,10 @@ There are special assignments for certain literal values.
 | `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |
 | `[]` | `stringset` <br/>`idset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
 
+## Warnings
+FeatureBase recommends limiting INSERT statements to one record per key to avoid unexpected results.
+Inconsistencies may occur when a single INSERT statement contains multiple records that share the same key, and are known to occur if, for a given key, a field is being set to both NULL and non-NULL values
+
 ## UPDATE/REPLACE behavior
 
 {% include /sql-guide/update_behavior.md %}
