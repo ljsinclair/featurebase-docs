@@ -22,12 +22,12 @@ FeatureBase uses **equality encoding** to create a Boolean relationship between 
 
 Each value of user data mapped to the following data types are converted to equality-encoded bitmaps:
 
-| User data | FeatureBase data type |
-|---|---|
-| Boolean | [BOOL](/docs/sql-guide/data-types/data-type-bool) |
-| Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) |
-| Alphanumeric | [String](/docs/sql-guide/data-types/data-type-string) |
-| Low cardinality | [`SET`, `SETQ`](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
+| User data        | FeatureBase data type                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| Boolean          | [BOOL](/docs/sql-guide/data-types/data-type-bool)                                       |
+| Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id)                                           |
+| Alphanumeric     | [String](/docs/sql-guide/data-types/data-type-string)                                   |
+| Low cardinality  | [`SET`, `SETQ`](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
 
 ## How does equality encoding work?
 
@@ -44,21 +44,21 @@ FeatureBase equality encoding:
 The `historical_name` data can be equality-encoded as follows:
 
 ```
-| ID | Pilosa | Molecula | FeatureBase |
-|---|---|---|---|
-| 1 | 1 | 0 | 0 |
+| ID  | Pilosa | Molecula | FeatureBase |
+| --- | ------ | -------- | ----------- |
+| 1   | 1      | 0        | 0           |
 ```
 
 ```
-| ID | Pilosa | Molecula | FeatureBase |
-|---|---|---|---|
-| 2 | 0 | 1 | 0 |
+| ID  | Pilosa | Molecula | FeatureBase |
+| --- | ------ | -------- | ----------- |
+| 2   | 0      | 1        | 0           |
 ```
 
 ```
-| ID | Pilosa | Molecula | FeatureBase |
-|---|---|---|---|
-| 3 | 0 | 0 | 1 |
+| ID  | Pilosa | Molecula | FeatureBase |
+| --- | ------ | -------- | ----------- |
+| 3   | 0      | 0        | 1           |
 ```
 
 ## Equality encoding integer values
@@ -68,42 +68,43 @@ Equality encoding integer values is less effective because Boolean relationships
 ### Equality encoding specific values
 
 Using the `downloads` column as unique identifier, the data can be encoded as follows:
+
 ```
 | id-downloads | Pilosa | Molecula | FeatureBase |
-|---|---|
-| 10000 | 1 | 0 | 0 |
+| ------------ | ------ | -------- | ----------- |
+| 10000        | 1      | 0        | 0           |
 ```
 
 ```
 | id-downloads | Pilosa | Molecula | FeatureBase |
-|---|---|
-| 18524 | 0 | 1 | 0 |
+| ------------ | ------ | -------- | ----------- |
+| 18524        | 0      | 1        | 0           |
 ```
-
 ```
 | id-downloads | Pilosa | Molecula | FeatureBase |
-|---|---|
-| 50000 | 0 | 0 | 1 |
+| ------------ | ------ | -------- | ----------- |
+| 50000        | 0      | 0        | 1           |
 ```
+
 ### Encoding integer values as a range
 
 Values can be encoded as a range which reduces the number of bitmaps and create/delete operations.
 
 ```
 | id-download-range | Pilosa | Molecula | FeatureBase |
-|---|---|---|
-| 0-25000 | 1 | 1 | 0 |
-| 25001-50000 | 0 | 0 | 1 |
+| ----------------- | ------ | -------- | ----------- |
+| 0-25000           | 1      | 1        | 0           |
+| 25001-50000       | 0      | 0        | 1           |
 ```
 
 ### Issues equality encoding integer values
 
 The following issues occur with equality encoding integers.
 
-| Equality encoding method | Issue |
+| Method | Issue |
 |---|---|
 | Encode values | Two operations are required to update the values which incurs a processing overhead:<br/>* Create a new bitmap with updated values<br/>* Delete the original bitmap |
-| Range encoding | Specific values are lost |
+| Range encoding | Specific values are lost  |
 
 FeatureBase avoids these issues by bit-slicing integer values.
 
@@ -114,7 +115,4 @@ FeatureBase avoids these issues by bit-slicing integer values.
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
-
-
-
 * [Learn about bitmap compression with Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
