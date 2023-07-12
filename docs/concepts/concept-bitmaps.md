@@ -29,7 +29,7 @@ Bitmap updates in FeatureBase are faster for two reasons.
 
 | Bitmap type | Update description |
 |---|---|
-| Standard | FeatureBase can directly update a value encoded as a standard bitmap without needing to traverse other values in the structure |
+| Equality encoded | FeatureBase can directly update a value encoded as a standard bitmap without needing to traverse other values in the structure |
 | Bit-slice | Updates to bit-slice bitmaps mean flipping or adding bits rather than altering the entire value |
 
 ### Faster queries
