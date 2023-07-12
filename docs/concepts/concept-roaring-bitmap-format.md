@@ -42,7 +42,7 @@ The following page types contain RBF metadata:
 
 | Page number | Page type | Description | Additional information |
 |---|---|---|---|
-| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist page](/docs/concepts/concept-rbf-freelist)<br/>* [Meta page example](#meta-page) |
+| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist reference](/docs/concepts/concept-rbf-freelist-ref)<br/>* [Meta page example](#meta-page) |
 | 1 | Root record | Stores a list of bitmaps<br/>* defined as combination of field and view<br/>* and root page number for that b-tree | [Root record example](#root-record) |
 
 ### B-tree structure and data pages

@@ -1,22 +1,22 @@
 ---
-title: Allocate & deallocate RBF pages
+title: RBF page allocation
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts
 nav_order: 4
 ---
 
-# How are RBF pages allocated and deallocated?
+# Reference: RBF page allocation
 
 The Roaring Bitmap Format Freelist page is an internal bitmap used to track deallocated pages.
 
 ## Before you begin
 
-* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format pages](/docs/concepts/concept-roaring-bitmap-format)
 
 ## How are pages deallocated?
 
-A page is available for deallocation when:
+An RBF page is available for deallocation when:
 * delete actions remove all elements from a page
 * a bitmap is deleted
 
