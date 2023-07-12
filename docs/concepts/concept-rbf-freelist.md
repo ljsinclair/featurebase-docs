@@ -1,5 +1,5 @@
 ---
-title: RBF Freelist
+title: Allocate & deallocate RBF pages
 layout: default
 parent: Bitmap index overview
 grand_parent: Concepts
