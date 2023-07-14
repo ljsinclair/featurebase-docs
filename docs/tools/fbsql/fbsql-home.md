@@ -1,5 +1,5 @@
 ---
-title: fbsql CLI tool
+title: CLI SQL tool
 layout: default
 parent: Tools
 has_children: true
@@ -9,9 +9,13 @@ has_toc: false
 
 # How do I run SQL queries from the command-line?
 
+SQL queries can be run against FeatureBase Cloud or Community databases without requiring access to the GUI or using API calls.
+
+
+
 FeatureBase supplies the **FBSql** CLI tool you can use to run SQL queries without needing to access the GUI or run complex API calls.
 
-{% include /fbsql/fbsql-run-queries-summary.md %}
+{% include /fbsql/fbsql-run-query-summary.md %}
 
 {: .note}
 FBSql requires the download of FeatureBase source code and does not run as a standalone application
