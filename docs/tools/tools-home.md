@@ -3,7 +3,7 @@ title: Tools
 layout: default
 has_children: true
 nav_order: 6
-has_toc: true
+has_toc: false
 ---
 
 # Can I access FeatureBase without using the CLI?
