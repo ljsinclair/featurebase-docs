@@ -30,23 +30,28 @@ The `OFFSET()` function doesn't have a direct return value. It affects the resul
 
 ## Examples
 
-### using OFFSET to skip rows
+### Colors table
+
+This table is used in subsequent OFFSET() queries.
 
 ```sql
 create table colors
     (_id id, color string);
 
-insert into segments(_id,color)
+insert into colors(_id,color)
     values (1,'green')
-insert into segments(_id,color)
+insert into colors(_id,color)
     values (2,'red')
-insert into segments(_id,color)
+insert into colors(_id,color)
     values (3,'yellow')
-insert into segments(_id,color)
+insert into colors(_id,color)
     values (4,'blue')
-insert into segments(_id,color)
+insert into colors(_id,color)
     values (5,'orange')
+```    
+### In this example, the OFFSET 3 clause skips the first three rows, and the LIMIT 2 clause fetches the next two rows from the "colors" table.
 
+```sql
 
 select * from colors limit 2 offset 3;
 +-----+--------+
@@ -56,26 +61,10 @@ select * from colors limit 2 offset 3;
 +-----+--------+
 |   5 | orange |  
 +-----+--------+
-In this example, the OFFSET 3 clause skips the first three rows, and the LIMIT 2 clause fetches the next two rows from the "colors" table.
 ```
-### returning all the rows after OFFSET
+### By using LIMIT -1, the query returns all the rows starting from the offset specified (in this case, the third row) until the end of the result set.
 
 ```sql
-create table colors
-    (_id id, color string);
-
-insert into segments(_id,color)
-    values (1,'green')
-insert into segments(_id,color)
-    values (2,'red')
-insert into segments(_id,color)
-    values (3,'yellow')
-insert into segments(_id,color)
-    values (4,'blue')
-insert into segments(_id,color)
-    values (5,'orange')
-
-
 select * from colors limit -1 offset 2;
 +-----+--------+
 | _id | color  |
@@ -86,5 +75,4 @@ select * from colors limit -1 offset 2;
 +-----+--------+
 |   5 | orange |  
 +-----+--------+
-By using LIMIT -1, the query returns all the rows starting from the offset specified (in this case, the third row) until the end of the result set.
 ```
