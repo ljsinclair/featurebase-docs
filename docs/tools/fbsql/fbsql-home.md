@@ -11,9 +11,6 @@ has_toc: false
 
 {% include /fbsql/fbsql-run-query-summary.md %}
 
-{: .note}
-FBSQL does not run as a standalone application and requires the download of FeatureBase source code
-
 ## Before you begin
 
 Setup and add data to:
