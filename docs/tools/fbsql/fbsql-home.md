@@ -9,21 +9,23 @@ has_toc: false
 
 # How do I run SQL queries from the command-line?
 
-{% include /fbsql/fbsql-run-query-summary.md %}
+{% include /fbsql/fbsql-summary.md %}
 
 ## Before you begin
 
-Setup and add data to:
-* [FeatureBase Cloud](/docs/cloud/cloud-home), or
-* [FeatureBase Community](/docs/community/com-home)
+{% include /fbsql/fbsql-before-begin.md %}
 
 ## How do I install FBSql?
 
 * [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
 
-## How do I use FBSQL?
+## How do I connect to a FeatureBase database?
 
-SQL queries can be run on a FeatureBase Cloud or Community database using scripting flags and terminal-like commands.
+* [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect)
+
+## How do I run queries?
+
+SQL queries can be run on FeatureBase databases accessible to the host machine.
 
 * [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
 
@@ -32,6 +34,8 @@ SQL queries can be run on a FeatureBase Cloud or Community database using script
 * [Learn about FBSql loaders](/docs/tools/fbsql/fbsql-loaders)
 
 ## FBSQL meta command reference
+
+Information on FBSQL meta commands are found in the following files:
 
 * [FBSQL scripting reference](/docs/tools/fbsql/fbsql-scripting)
 * [FBSQL printing configuration](/docs/tools/fbsql/fbsql-config-pset)

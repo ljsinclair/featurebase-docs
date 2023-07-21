@@ -8,12 +8,12 @@ nav_order: 2
 
 # How do I run SQL queries with FBSQL?
 
-{% include /fbsql/fbsql-run-query-summary.md %}
+FBSQL
 
 ## Before you begin
 
-* [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
+* [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect)
 
 ## FBSQL syntax
 
