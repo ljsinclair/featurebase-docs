@@ -17,7 +17,7 @@ FBSQL does not run as a standalone application and requires the download of Feat
 ## Before you begin
 
 Setup and add data to:
-* [FeatureBase Cloud](/docs/cloud/cloud-home)
+* [FeatureBase Cloud](/docs/cloud/cloud-home), or
 * [FeatureBase Community](/docs/community/com-home)
 
 ## How do I install FBSql?
