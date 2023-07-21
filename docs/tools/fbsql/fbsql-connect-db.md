@@ -8,6 +8,10 @@ nav_order: 3
 
 # How do I connect to a FeatureBase database in FBSQL
 
+You can connect to a FeatureBase database at any time when you've started FBSQL
+
+DOES THIS APPLY WHEN YOU STARTUP AND IN FBSQL OR JUST WHEN IN FBSQL?
+
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}

@@ -18,27 +18,38 @@ nav_order: 1
 ## Syntax
 
 ```
-pset [
-  [border [integer] ] |
-  [x | expanded [value]] |
-  [format [csv]] |
-  [location [timezone]] |
-  [[t|tuples]_only]
-]
+
+(pset | -P | --pset)
+  [
+    [border [integer] ] |
+    [x | expanded [value]] |
+    [format [csv]] |
+    [location [timezone]] |
+    [[t|tuples]_only]
+  ]
 ```
 
 ## pSET arguments
 
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
-| `pset` | Display current printing option settings |  |  |
+| `pset` | Display current printing option settings and prefix arguments and flags |  |  |
+| `-P`<br/>`--pset` | Alternate flag for using printing options |  | [Alternate flag additional](#alternate-flag-additional) |
 | `border [integer]` | Determine number of borders in result output table |  | [Border additional](#border-additional) |
 | `x` or `expanded` | Toggle display of query results as 2 columns | Off | When toggled on, column name is displayed in column one, results in column 2 |
-| format [csv] | Sets output format to aligned or csv | aligned | [CSV format additional](#csv format-additional) |
+| `pset format csv`<br/> `--csv` | Sets output format to aligned or csv | aligned | [CSV format additional](#csv format-additional) |
 | `location ['timezone']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
 | `t` or `tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
 
 ## Additional information
+
+### Alternate flag additional
+
+`-P` and `--pset` with flags must be must be in form `((-p|--pset) argument=flag)`
+
+{: .note}
+>Upper-case **P** is required when using `pset` arguments and flags.
+>Lower-case **p** is used to define connection ports.
 
 ### Border additional
 
