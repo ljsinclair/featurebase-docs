@@ -10,6 +10,8 @@ nav_order: 11
 
 `PSET` arguments are used to make changes to query result table output.
 
+ 
+
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}

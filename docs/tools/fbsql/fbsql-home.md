@@ -25,7 +25,7 @@ has_toc: false
 
 ## How do I run queries?
 
-SQL queries can be run on FeatureBase databases accessible to the host machine.
+You can run any valid SQL query against a connected FeatureBase database
 
 * [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
 

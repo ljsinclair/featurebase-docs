@@ -6,14 +6,11 @@ grand_parent: Tools
 nav_order: 20
 ---
 
-# `BULK INSERT` data to FeatureBase using FBSQL loaders
+# Define a datasource with FBSQL loaders
 
-Create a configuration file that defines connection details for an Implala, Kafka or Postgres data sources, then supply this to FeatureBase using FBSQL-loader syntax.
-
-This starts a process that:
-* Reads data from the defined data source
-* processes the data into `BULK INSERT` statements executed against the connected database
-* terminates FBSQL when the process is complete.
+FBSQL loaders are run when connecting to a FeatureBase database and:
+* rely on a suitably configured TOML file
+* allowing FeatureBase to read data from the data source then `BULK INSERT` this into an existing FeatureBase table.
 
 During processing no SQL or FBSQL commands can be run
 
@@ -26,25 +23,21 @@ During processing no SQL or FBSQL commands can be run
 ## Syntax
 
 ```sh
-(--loader-(impala|kafka|postgres)) filename.aaa
+fbsql
+<db-connection-string> \
+(--loader-(impala|kafka|postgres)) filename.toml
 ```
 
 ### Arguments
 
 | Argument | Description | Additional information |
 |---|---|---|
+| `<db-connection-string>` | FBSQL connection string to FeatureBase database | [Connect to FeatureBase database](/docs/tools/fbsql/fbsql-connect-db) |
 | `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
 | `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
 | `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |
+| filename
 
-
-`fbsql` is a CLI tool used to interact with FeatureBase using SQL. It can also be run in non-interactive mode to load data from supported data sources. These "loaders" connect to a data source, build batches of SQL `BULK INSERT` statements with the data returned from the source, and send those `BULK INSERT` requests to FeatureBase.
-
-Below are the currently supported data sources (with links to the source specific documentation):
-
-- [Kafka](/docs/tools/fbsql/fbsql-loaders-kafka):           use the `--loader-kafka` flag with the `fbsql` binary to run the kafka loader.
-- [PostgreSQL](/docs/tools/fbsql/fbsql-loaders-postgres): use the `--loader-postgres` flag with the `fbsql` binary to run the postgres loader.
-- [Impala](/docs/tools/fbsql/fbsql-loaders-impala):         use the `--loader-impala` flag with the `fbsql` binary to run the impala loader.
 
 ## Source Independent Configuration Options
 
@@ -72,7 +65,7 @@ The table below holds the key/value pairs supported in the TOML file independent
 |---|---|---|---|
 | `name` | Specifies the name of the FeatureBase column into which data will be written. | `col_name` | |
 | `source-type` | Specifies the FeatureBase column type the incoming data will be formatted as. For example, if a kafka message message contains `"foo":"6"` the configuration for foo should contain `source-type = "string"` even if the `foo` column in FeatureBase is an `Int` type. If a `source-type` is not provided, it will default to the FeatureBase field's type.  | `"idset"` | FeatureBase Column Type |
-| `primay-key` | Exactly one field of the source data should be set as the primary key. The name of the field designated the primary key does not need to map to a column in FeatureBase. | `true` | `false` |
+| `primary-key` | Exactly one field of the source data should be set as the primary key. The name of the field designated the primary key does not need to map to a column in FeatureBase. | `true` | `false` |
 
 Possible `source-type` values are:
 

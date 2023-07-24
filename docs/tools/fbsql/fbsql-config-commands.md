@@ -8,6 +8,8 @@ nav_order: 10
 
 # FBSQL Configuration reference
 
+FBSQL configuration commands are run from the FBSQL interface and do not require a database connection.
+
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
