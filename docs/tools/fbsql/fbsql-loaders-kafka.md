@@ -3,7 +3,7 @@ title: fbsql-loader-kafka
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 22
 ---
 
 # Kafka Loader
@@ -15,7 +15,7 @@ If fbsql is provided the `--loader-kafka=filename` flag, it will run as a Kafka 
 Messages from Kafka must be in JSON format.
 
 ### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to kafka: 
+The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to kafka:
 
 | Key | Description | Example Value | Default |
 |---|---|---|---|

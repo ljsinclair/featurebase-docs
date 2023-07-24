@@ -3,7 +3,7 @@ title: fbsql-loaders
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 20
 ---
 
 # FBSQL Loaders
@@ -32,7 +32,7 @@ The table below holds the key/value pairs supported in the TOML file independent
 
 ### Fields
 
-Providing field configuration in the TOML configuration file is optional. If no fields are provided, fbsql will try to map each source data field to a FeatureBase columns from the table specified in the configuration file. 
+Providing field configuration in the TOML configuration file is optional. If no fields are provided, fbsql will try to map each source data field to a FeatureBase columns from the table specified in the configuration file.
 
 Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#array-of-tables). Each source data field will need an entry in the file.
 

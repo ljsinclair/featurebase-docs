@@ -46,6 +46,10 @@ git clone https://github.com/FeatureBaseDB/featurebase
 make install-fbsql
 ```
 
+## Next step
+
+* [Connect to FBSQL](/docs/tools/fbsql/fbsql-connect)
+
 ## Further information
 
 * [Running SQL queries using FBSQL](/docs/tools/fbsql/fbsql-running-sql)

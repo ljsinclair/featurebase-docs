@@ -3,7 +3,7 @@ title: FBSQL print set reference
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 1
+nav_order: 11
 ---
 
 # Print SET reference

@@ -3,7 +3,7 @@ title: fbsql-loader-impala
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 21
 ---
 # Impala Loader
 
@@ -12,7 +12,7 @@ If fbsql is provided the `--loader-impala=filename` flag, it will run in non-int
 ## Impala Specific Configuration Options
 
 ### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to Impala: 
+The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to Impala:
 
 | Key | Description | Example Value | Default |
 |---|---|---|---|
@@ -32,11 +32,11 @@ The table below holds the key/value pairs supported in the TOML fields array if 
 Impala `CREATE TABLE` statement:
 ```sql
 CREATE TABLE testdb.impala_table (
-    idkey int, 
-    intf int, 
-    stringf string, 
-    idf int, 
-    stringsetf string, 
+    idkey int,
+    intf int,
+    stringf string,
+    idf int,
+    stringsetf string,
     idsetf string);
 ```
 
@@ -52,10 +52,10 @@ INSERT INTO testdb.impala_table VALUES
 FeatureBase `CREATE TABLE` statement:
 ```sql
 CREATE TABLE tbl (
-    _id id, 
-    intf int, 
-    stringf string, 
-    idf id, 
+    _id id,
+    intf int,
+    stringf string,
+    idf id,
     stringsetf stringset,
     idsetf idset);
 ```

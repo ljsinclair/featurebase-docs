@@ -3,7 +3,7 @@ title: fbsql-loader-postgres
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 23
 ---
 
 # PostgreSQL Loader
@@ -13,7 +13,7 @@ If fbsql is provided the `--loader-postgres=filename` flag, it will run in non-i
 ## PostgreSQL Specific Configuration Options
 
 ### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to PostgreSQL: 
+The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to PostgreSQL:
 
 | Key | Description | Example Value | Default |
 |---|---|---|---|
@@ -33,11 +33,11 @@ The table below holds the key/value pairs supported in the TOML fields array if 
 PostgreSQL `CREATE TABLE` statement:
 ```sql
 CREATE TABLE postgres_table (
-    idkey int, 
-    intf int, 
-    stringf varchar(30), 
-    idf int, 
-    stringsetf varchar(30), 
+    idkey int,
+    intf int,
+    stringf varchar(30),
+    idf int,
+    stringsetf varchar(30),
     idsetf varchar(30));
 ```
 
@@ -52,10 +52,10 @@ INSERT INTO postgres_table VALUES
 FeatureBase `CREATE TABLE` statement:
 ```sql
 CREATE TABLE tbl (
-    _id id, 
-    intf int, 
-    stringf string, 
-    idf id, 
+    _id id,
+    intf int,
+    stringf string,
+    idf id,
     stringsetf stringset,
     idsetf idset);
 ```

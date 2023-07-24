@@ -3,7 +3,7 @@ title: Scripting FBSQL
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 1
+nav_order: 5
 ---
 # FBSQL Scripting reference
 
