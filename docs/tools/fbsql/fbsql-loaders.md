@@ -1,12 +1,42 @@
 ---
-title: fbsql-loaders
+title: Import data using FBSQL
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 20
 ---
 
-# FBSQL Loaders
+# `BULK INSERT` data to FeatureBase using FBSQL loaders
+
+Create a configuration file that defines connection details for an Implala, Kafka or Postgres data sources, then supply this to FeatureBase using FBSQL-loader syntax.
+
+This starts a process that:
+* Reads data from the defined data source
+* processes the data into `BULK INSERT` statements executed against the connected database
+* terminates FBSQL when the process is complete.
+
+During processing no SQL or FBSQL commands can be run
+
+## Before you begin
+
+* [Learn about SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
+* [Connect to a FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect-db)
+
+## Syntax
+
+```sh
+(--loader-(impala|kafka|postgres)) filename.aaa
+```
+
+### Arguments
+
+| Argument | Description | Additional information |
+|---|---|---|
+| `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
+| `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
+| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |
+
 
 `fbsql` is a CLI tool used to interact with FeatureBase using SQL. It can also be run in non-interactive mode to load data from supported data sources. These "loaders" connect to a data source, build batches of SQL `BULK INSERT` statements with the data returned from the source, and send those `BULK INSERT` requests to FeatureBase.
 

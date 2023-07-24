@@ -8,6 +8,11 @@ nav_order: 22
 
 # Kafka Loader
 
+<!-- copied from original fbsql-loaders.md
+
+Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements.
+-->
+
 If fbsql is provided the `--loader-kafka=filename` flag, it will run as a Kafka consumer in non-interactive mode. Based on the configuration provided in **filename**, fbsql will read messages from a Kafka topic and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until terminated by the user.
 
 ## Kafka Specific Configuration Options

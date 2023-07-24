@@ -8,6 +8,11 @@ nav_order: 23
 
 # PostgreSQL Loader
 
+<!-- taken from original fbsql-loaders.md
+
+Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded.
+-->
+
 If fbsql is provided the `--loader-postgres=filename` flag, it will run in non-interactive mode. Based on the configuration provided in filename, fbsql will query PostgreSQL, read tuples returned, and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until all tuples returned by the query are processed.
 
 ## PostgreSQL Specific Configuration Options

@@ -7,6 +7,10 @@ nav_order: 21
 ---
 # Impala Loader
 
+<!-- copied out of fbsql-loaders.md original
+Based on the configuration file provided as an argument to this flag, fbsql will query Impala and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from Impala are loaded.
+-->
+
 If fbsql is provided the `--loader-impala=filename` flag, it will run in non-interactive mode. Based on the configuration provided in filename, fbsql will query Impala, read tuples returned, and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until all tuples returned by the query are processed.
 
 ## Impala Specific Configuration Options

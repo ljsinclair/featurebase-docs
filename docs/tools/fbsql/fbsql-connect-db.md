@@ -26,12 +26,13 @@ fbsql
     (
       ((-d|-dbname) featurebase-com) |
       (--host="<hostname>" \
-        (--port=10101)
+        (-(p|-port)=10101)
         (--api-key="<public-key>" |
           --email="user@example.com" \ --password="a1b2c3d4e5f6"
         )
       ) |
-      ( --config=filename.toml)
+      ( --config=filename.toml (\ --file example.sql))
+      (<fbsql-loader>)
     )
 ```
 
@@ -41,9 +42,12 @@ fbsql
 |---|---|---|
 | `-d`<br/>`-featurebase-com` | Connect to locally hosted FeatureBase Community database. | FeatureBase | Database name found in `*/featurebase/opt/featurebase.conf`**name** parameter |
 | `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` |  | |
+| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Local: `10101`<br/>Cloud serverless: `8080` |  |
 | `--api-key="<public-key>"` | API public key flag that can be used for authn/authz for cloud |  | [Obtain Cloud API key](#obtain-cloud-api-key-additional) |
 | `--email="user@example.com" \ --password="a1b2c3d4e5f6"` | User email and password credentials for FeatureBase application |  | [Obtain user credentials](#obtain user-credentials) |
-| `--config=filename.toml` | Designate a TOML file containing connection details |  | [TOML connection file](#toml-connection-file)
+| `--config=filename.toml` | Designate a TOML file containing connection details |  | [TOML connection file](#toml-connection-file) |
+| `--file example.sql`| Optionally run SQL contained in an externally defined file |  | [Run SQL in FBSQL](/docs/tools/fbsql/fbsql-running-sql) |
+| `<fbsql-loader>` | `BULK INSERT` data from a configuration file containing connection details for Impala, Kafka or Postgres datasources |  | [FBSQL loader](/docs/fbsql/fbsql-loaders) |
 
 ## Additional information
 
