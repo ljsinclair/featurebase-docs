@@ -1,7 +1,7 @@
 ---
 title: fbsql-loader-impala
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 2
 ---

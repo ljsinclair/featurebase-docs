@@ -1,7 +1,7 @@
 ---
 title: FBSQL connect to db
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 3
 ---
