@@ -11,17 +11,29 @@ nav_order: 2
 
 {% include /fbsql/fbsql-before-begin.md %}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
+* Open a CLI then CD to `fbsql/featurebase`
 
-## Connect to FBSQL interface
+## Syntax
 
-* Open a CLI then CD to `fbsql/featurebase` then run fbsql
+```sh
+fbsql (-)
 
+```
 ```sh
 CD fbsql/featurebase
 fbsql
 ```
 
-A successful connection displays the following information:
+A successful connection displays the following status information:
+
+| Status | Description |
+|---|---|
+| Detected on-prem, classic deployment | FBSQL installed locally |
+| Host: http://localhost  | No FeatureBase Community instance detected |
+| Host: http://localhost:10101 | FeatureBase Community instance running on default port |
+| You are not connected to a database | Started without connecting |
+| connecting to database: invalid database: dbname | error in database name |
+|
 
 ```sh
 FeatureBase CLI ()
