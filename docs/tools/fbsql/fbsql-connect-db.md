@@ -8,16 +8,18 @@ nav_order: 3
 
 # How do I connect to a FeatureBase database in FBSQL
 
-You can connect to a FeatureBase database at any time when you've started FBSQL
+Use a locally hosted FeatureBase database name to connect and run queries.
 
-DOES THIS APPLY WHEN YOU STARTUP AND IN FBSQL OR JUST WHEN IN FBSQL?
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-* Obtain connection IP or database name for the database
-* Obtain authentication information, either API key or login credentials
+{% include /fbsql/fbsql-before-begin-install-connect.md %}
+* Local database connections require the database name found in `*/featurebase/opt/featurebase.conf`
+* Remote database connections require:
+  * a network/internet connection with access to the remote system
+  * database hostname or IP address
+  * database API Key or user credentials
 
 ## Syntax
 
