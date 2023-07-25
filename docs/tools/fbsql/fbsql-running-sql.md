@@ -16,6 +16,8 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 * [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect-db)
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
 
+-c <dbname> > connect to database in currently connected FeatureBase instance
+
 ## External file Syntax
 
 ```
