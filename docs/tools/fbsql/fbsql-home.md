@@ -7,6 +7,8 @@ nav_order: 1
 has_toc: false
 ---
 
+<!-- look at https://github.com/FeatureBaseDB/sql-examples/blob/main/data/spotify/readme.md for in context examples that explain stuff that's in here-->
+
 # How do I run SQL queries from the command-line?
 
 {% include /fbsql/fbsql-summary.md %}
