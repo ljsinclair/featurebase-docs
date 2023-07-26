@@ -1,1 +1,1 @@
-| `--file example.sql`| Run SQL from a file |  | Optional | [Run SQL in FBSQL](/docs/tools/fbsql/fbsql-running-sql) |
+| `--file example.sql`| Run SQL from a file |  | [Run SQL in FBSQL](/docs/tools/fbsql/fbsql-running-sql) |

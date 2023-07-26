@@ -39,16 +39,19 @@ fbsql
   )
 ```
 
-## Arguments
+## Required Arguments
 
 | Argument | Description | Default | Additional information |
-|---|---|---|
-| `-d`<br/>`-featurebase-com` | Connect to locally hosted FeatureBase Community database. | FeatureBase | Database name found in `*/featurebase/opt/featurebase.conf`**name** parameter |
-| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` |  | |
-| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Local: `10101`<br/>Cloud serverless: `8080` |  |
-| `--api-key="<public-key>"` | API public key flag that can be used for authn/authz for cloud |  | [Obtain Cloud API key](#obtain-cloud-api-key-additional) |
-| `--email="user@example.com" \ --password="a1b2c3d4e5f6"` | User email and password credentials for FeatureBase application |  | [Create Cloud users](/docs/cloud/cloud-users/cloud-users-manage)
- |
+|---|---|---|---|
+| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` |  |  |
+| `-p`<br>`--port` | Specify TCP port on which FeatureBase is listening for connections. | Cloud serverless: `8080` |  |
+| `--api-key="<public-key>"` | API public key flag that can be used to authenticate with your cloud organization |  | [Obtain Cloud API key](#obtain-cloud-api-key-additional) |
+| `--email="user@example.com" \ --password="a1b2c3d4e5f6"` | User email and password credentials for FeatureBase application |  | [Create Cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
+
+## Optional arguments
+
+| Argument | Description | Default | Additional information |
+|---|---|---|---|
 {% include /fbsql/fbsql-config-filename-arg.md %}
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
 {% include /fbsql/fbsql-loader-arg.md %}
