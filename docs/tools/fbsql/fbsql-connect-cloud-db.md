@@ -34,7 +34,7 @@ fbsql
     )
   )
   [
-    --file example.sql |
+    -[f|-file] example.sql |
     --fbsql-loader (impala|kafka|postgres)
   ]
 

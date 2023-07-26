@@ -18,17 +18,21 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 
 -c <dbname> > connect to database in currently connected FeatureBase instance
 
-## External file Syntax
+## Syntax
 
-```
--(f|-file) example.sql
+```sh
+  (-[d|-dbname] database)
+  [ -[c|-command]
+
+  filename.sql] | <sql-statement> ]
 ```
 
 ## Arguments
 
-| Argument | Description | Additional information |
-|---|---|---|
-| `-f`<br/>`--file` | Read SQL commands from a text file then terminate. |  |
+| Argument | Description | Default | Additional information |
+|---|---|---|---|
+| `-d`<br/>`--dbname` | Specify a database to connect to |  |  |
+|
 
 
 | `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input.

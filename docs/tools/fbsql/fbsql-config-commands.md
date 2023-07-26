@@ -18,6 +18,14 @@ FBSQL configuration commands are run from the FBSQL interface and do not require
 ## Configuration syntax
 
 ```
+\
+  [
+    -[[c|-command] "<command-options"] |
+
+
+
+  ]
+
 \[
   [o | output]
   [timing [ on | off ]]
@@ -26,6 +34,21 @@ FBSQL configuration commands are run from the FBSQL interface and do not require
 ]
 
 ```
+
+## Arguments
+
+| Argument | Description | Default | Additional information |
+|---|---|---|---|
+| `-c "<command-options>"`<br/>`--command "<command-options>"` | Execute the command string `<command-options>` |  | [Command argument](#command-argument) |
+
+ Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the -f option. All -c options will be processed before all -f options are processed. When either -c or -f is specified, fbsql does not read commands from standard input; instead it terminates after processing all the -c and -f options in sequence.
+
+## Additional information
+
+### Command argument
+
+
+
 
 ## Commands and arguments
 
