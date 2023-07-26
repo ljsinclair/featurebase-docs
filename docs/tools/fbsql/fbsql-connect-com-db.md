@@ -14,7 +14,7 @@ Connect to a FeatureBase Community database with FBSQL.
 
 * [Learn about docopt Command line notation standards](http://docopt.org/){:target="_blank"} used for this page
 {% include /fbsql/fbsql-before-begin.md%}
-* [install FBSQL](/docs/tools/fbsql/fbsql-install)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 * Startup FeatureBase Community at the CLI:
   * [Startup FeatureBase](/docs/community/com-startup-connect) OR
   * [Startup FeatureBase systemctl service](/docs/community/com-config/com-config-service-fb-manage)

@@ -14,9 +14,9 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 
 * [Learn about docopt Command line notation standards](http://docopt.org/){:target="_blank"} used for this page
 {% include /fbsql/fbsql-before-begin.md%}
-* [install FBSQL](/docs/tools/fbsql/fbsql-install)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 * [Login to FeatureBase Cloud](/docs/cloud/cloud-login) to verify your system is running
-* Open a CLI then CD to `fbsql/featurebase`
+* Open a CLI then CD to `*/fbsql/featurebase`
 
 ## Syntax
 

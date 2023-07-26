@@ -15,7 +15,8 @@ has_toc: false
 
 ## Before you begin
 
-{% include /fbsql/fbsql-before-begin.md %}
+* [Setup a FeatureBase Cloud database](/docs/cloud/cloud-home), OR
+* [Setup a FeatureBase Community database](/docs/community/com-home)
 
 ## How do I install FBSql?
 
@@ -23,7 +24,7 @@ has_toc: false
 
 ## How do I connect to a FeatureBase database?
 
-You can connect to databases in three ways:
+Connect to your FeatureBase database using these methods:
 * [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
 * [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
 
