@@ -44,9 +44,12 @@ fbsql
 
 ## Optional arguments
 
-| Argument | Description | Default | Additional information |
-|---|---|---|---|
+### Load SQL from a source file
+
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
+
+### Insert data to FeatureBase from data source
+
 {% include /fbsql/fbsql-loader-arg.md %}
 
 ## Additional information
