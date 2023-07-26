@@ -20,7 +20,8 @@ FBSQL configuration commands are run from the FBSQL interface and do not require
 ```
 \
   [
-    -[[c|-command] "<command-options"] |
+    -[c|-command] "<command-options"
+    - |
 
 
 

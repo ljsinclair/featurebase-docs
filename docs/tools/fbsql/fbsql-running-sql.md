@@ -21,10 +21,11 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 ## Syntax
 
 ```sh
-  (-[d|-dbname] database)
-  [ -[c|-command]
-
-  filename.sql] | <sql-statement> ]
+  \[
+    (-[d|-dbname] database-name) |
+    (-[f|-file] filename.sql) |
+    (<sql-statement>)
+  ]
 ```
 
 ## Arguments
