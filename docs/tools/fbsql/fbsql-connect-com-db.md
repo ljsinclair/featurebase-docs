@@ -12,6 +12,7 @@ Connect to a FeatureBase Community database with FBSQL.
 
 ## Before you begin
 
+* [Learn about docopt Command line notation standards](http://docopt.org/){:target="_blank"} used for this page
 {% include /fbsql/fbsql-before-begin.md%}
 * [install FBSQL](/docs/tools/fbsql/fbsql-install)
 * Startup FeatureBase Community at the CLI:
