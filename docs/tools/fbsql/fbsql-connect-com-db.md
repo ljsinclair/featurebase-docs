@@ -40,6 +40,8 @@ fbsql
 |---|---|---|---|
 | `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` |  |  |
 | `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
+
+
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
 ## Optional arguments
