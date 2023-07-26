@@ -3,14 +3,14 @@ title: FBSQL print set reference
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 11
+nav_order: 12
 ---
 
 # Print SET reference
 
 `PSET` arguments are used to make changes to query result table output.
 
- 
+
 
 ## Before you begin
 

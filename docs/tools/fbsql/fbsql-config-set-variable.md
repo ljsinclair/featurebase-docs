@@ -3,7 +3,7 @@ title: FBSQL set variable reference
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 12
+nav_order: 13
 ---
 
 # FBSQL SET variable reference

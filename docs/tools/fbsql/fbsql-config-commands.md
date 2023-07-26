@@ -3,7 +3,7 @@ title: FBSQL config reference
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 10
+nav_order: 11
 ---
 
 # FBSQL Configuration reference
