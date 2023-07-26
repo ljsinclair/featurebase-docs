@@ -22,8 +22,9 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 
 ```sh
   \[
-    (-[d|-dbname] database-name) |
-    (-[f|-file] filename.sql) |
+    (-[d|-dbname] <database-name>) |
+    (--org-id <org-name>)
+    (-[f|-file] <filename.sql>) |
     (<sql-statement>)
   ]
 ```
@@ -50,13 +51,7 @@ The following flags can be provided when running fbsql. None of the flags are re
 
 
 
-| Flag | Description | Default |
-|---|---|---|
-| `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. | |
 
-
-
-| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. | |
 
 
 
