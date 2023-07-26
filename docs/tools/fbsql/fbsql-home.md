@@ -23,7 +23,9 @@ has_toc: false
 
 ## How do I connect to a FeatureBase database?
 
-* [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect)
+You can connect to databases in three ways:
+* [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
+* [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
 
 ## How do I run queries?
 
