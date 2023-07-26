@@ -32,11 +32,12 @@ fbsql
       [--email="user-email" \ --password="<user-pass"] |
       [--config=filename.toml]
     )
-    [
-      --file example.sql |
-      --fbsql-loader (impala|kafka|postgres)
-    ]
   )
+  [
+    --file example.sql |
+    --fbsql-loader (impala|kafka|postgres)
+  ]
+
 ```
 
 ## Required Arguments
