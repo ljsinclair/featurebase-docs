@@ -18,6 +18,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 * [Login to FeatureBase Cloud](/docs/cloud/cloud-login) to verify your system is running
 {% include /fbsql/fbsql-cli-folder.md %}
 
+{% include /fbsql/fbsql-help.md %}
 
 ## Syntax
 
@@ -35,8 +36,9 @@ fbsql
     )
   )
   [
-    -[f|-file] example.sql |
-    --fbsql-loader (impala|kafka|postgres)
+     |
+    (-[f|-file] <filename>) |
+    (--fbsql-loader (impala|kafka|postgres))
   ]
 
 ```
@@ -49,6 +51,12 @@ fbsql
 | `-p`<br>`--port` | Specify TCP port on which FeatureBase is listening for connections. | Cloud serverless: `8080` |  |
 | `--api-key="<public-key>"` | API public key flag that can be used to authenticate with your cloud organization |  | [Obtain Cloud API key](#obtain-cloud-api-key-additional) |
 | `--email="user@example.com" \ --password="a1b2c3d4e5f6"` | User email and password credentials for FeatureBase application |  | [Create Cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
+<!--
+--client-id string      Cognito Client ID for FeatureBase Cloud access. (default "6i2gs7mu215ab23cnvmshdoq6t")
+--region string         Cloud region for FeatureBase Cloud access (e.g. us-east-2). (default "us-east-2")
+| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
+-->
+
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
 ## Optional arguments

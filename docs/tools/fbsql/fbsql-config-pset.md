@@ -8,28 +8,31 @@ nav_order: 12
 
 # Print SET reference
 
-`PSET` arguments are used to make changes to query result table output.
-
-
+`PSET` flags can be used with the connection string or within FBSQL to make changes to query output.
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
+{% include /fbsql/fbsql-help.md %}
+
 ## Syntax
 
 ```
-
-(pset | -P | --pset)
+(
+  (fbsql pset) |
+  (\ -[P|-pset])
   [
-    [border [integer] ] |
-    [x | expanded [value]] |
+    [border [integer]] |
+    [-[x | -expanded] <int-value>] |
     [format [csv]] |
     [location [timezone]] |
-    [[t|tuples]_only]
+    [-[t|-tuples]_only]
   ]
 ```
+
+{% include /fbsql/fbsql-required-args.md %}
 
 ## pSET arguments
 

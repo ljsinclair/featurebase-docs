@@ -16,17 +16,17 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 * [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect-db)
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
 
--c <dbname> > connect to database in currently connected FeatureBase instance
+{% include /fbsql/fbsql-help.md %}
 
 ## Syntax
 
 ```sh
-  \[
+(fbsql | \ [
+    (-[c|connect dbname])
     (-[d|-dbname] <database-name>) |
-    (--org-id <org-name>)
-    (-[f|-file] <filename.sql>) |
-    (<sql-statement>)
+    (-[i|-include] <filename.sql>) |
   ]
+  (<sql-statement>)
 ```
 
 ## Arguments
@@ -34,7 +34,7 @@ Valid SQL queries can be run directly in the FBSQL interface or via defined file
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
 | `-d`<br/>`--dbname` | Specify a database to connect to |  |  |
-|
+| `-i <filename.sql>`<br/>`--include <filename.sql>` | Run SQL statements from file |  |  |
 
 
 | `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input.
@@ -45,15 +45,44 @@ instead it terminates after processing all the `-c` and `-f` options in sequence
 Except for that, this option is largely equivalent to the meta-command `\i`. | |
 
 
-## fbsql flags
 
-The following flags can be provided when running fbsql. None of the flags are required to start fbsql.
+## Examples
 
+### Table definition and INSERT statements
 
+The following statements can be run direct from the FBSQL interface or saved to a file.
 
+```sql
+CREATE TABLE people (_id id, name string, age int);
+INSERT INTO people VALUES (1, 'Amy', 42), (2, 'Bob', 27), (3, 'Carl', 33);
+```
 
+### Connect to database then Run SQL from file
 
+### Run SQL statement from FBSQL interface
 
+```sql
+select * from people;
+```
 
+### Run SQL from file using meta command
 
-| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
+Create `select_all_people.sql`:
+```tex
+select * from people;
+```
+
+Run the SQL from the file in the FBSQL interface
+```sql
+\include select_all_people.sql
+```
+
+### Results for both methods
+
+```
+ _id | name | age
+-----+------+-----
+   1 | Amy  |  42
+   2 | Bob  |  27
+   3 | Carl |  33
+```

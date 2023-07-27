@@ -13,15 +13,20 @@ nav_order: 13
 {% include /fbsql/fbsql-before-begin.md %}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
+{% include /fbsql/fbsql-help.md %}
+
 ## Set Variable syntax
 
-```sh
-\set [ name [ value [ ... ] ] ]
+```
+(fbsql | \ [set])
+  [ name [ value [ ... ] ] ]
 ```
 
-## Arguments
+{% include /fbsql/fbsql-required-args.md %}
 
-| Argument | Description |
+## SET flags
+
+| Flag | Description |
 |---|---|
 | name |  |
 | value |  |

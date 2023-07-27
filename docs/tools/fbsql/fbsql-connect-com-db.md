@@ -20,6 +20,8 @@ Connect to a FeatureBase Community database with FBSQL.
   * [Startup FeatureBase systemctl service](/docs/community/com-config/com-config-service-fb-manage)
 {% include /fbsql/fbsql-cli-folder.md %}
 
+{% include /fbsql/fbsql-help.md %}
+
 ## Syntax
 
 ```sh
@@ -29,6 +31,7 @@ fbsql
     (--config=filename.toml)
   )
   [
+    -[d|-dbname]="<database-name>"
     -[f|-file] example.sql |
     --fbsql-loader (impala|kafka|postgres)
   ]
@@ -43,6 +46,12 @@ fbsql
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
 ## Optional arguments
+
+### Connect to available database
+
+| Argument | Description | Default | Additional information |
+|---|---|---|---|
+|`-d="<database-name>"`<br/>`--dbname="<database-name>"` | Connect to available database on target system |  |  |
 
 ### Load SQL from a source file
 
