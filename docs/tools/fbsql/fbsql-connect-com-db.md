@@ -20,7 +20,7 @@ Connect to a FeatureBase Community database with FBSQL.
   * [Startup FeatureBase systemctl service](/docs/community/com-config/com-config-service-fb-manage)
 {% include /fbsql/fbsql-cli-folder.md %}
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
 

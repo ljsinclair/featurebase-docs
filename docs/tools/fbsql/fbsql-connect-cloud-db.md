@@ -18,7 +18,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 * [Login to FeatureBase Cloud](/docs/cloud/cloud-login) to verify your system is running
 {% include /fbsql/fbsql-cli-folder.md %}
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
 

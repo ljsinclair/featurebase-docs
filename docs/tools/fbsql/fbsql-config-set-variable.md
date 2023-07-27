@@ -13,7 +13,7 @@ nav_order: 13
 {% include /fbsql/fbsql-before-begin.md %}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Set Variable syntax
 

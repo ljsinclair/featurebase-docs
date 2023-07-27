@@ -17,7 +17,7 @@ SQL command output defaults to
 {% include /fbsql/fbsql-before-begin.md %}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
 

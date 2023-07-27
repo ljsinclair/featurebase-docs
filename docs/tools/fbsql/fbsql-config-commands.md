@@ -16,7 +16,7 @@ FBSQL configuration commands are run from the CLI.
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install
 * Open a CLI then CD to `*/fbsql/featurebase`
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
 
@@ -89,6 +89,15 @@ Flags:
 
 
 ## Arguments
+
+### Command and flag precedence
+
+| Argument | Description | Execution order |
+|---|---|---|
+| `-c`<br/>`--command` | FBSQL executes commands from CLI without opening FBSQL interface. | 1 |
+| `-f`<br/>`--file` | FBSQL executes commands without opening FBSQL interface | 2 |
+
+
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|

@@ -7,7 +7,7 @@ nav_order: 10
 ---
 # FBSQL Scripting reference
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 FBSQL includes a collection of meta commands which can be used to
 
