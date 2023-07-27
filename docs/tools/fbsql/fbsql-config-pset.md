@@ -1,12 +1,14 @@
 ---
-title: FBSQL print set reference
+title: FBSQL set output ref
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 12
 ---
 
-# Print SET reference
+# Set output reference
+
+SQL command output defaults to
 
 `PSET` flags can be used with the connection string or within FBSQL to make changes to query output.
 
@@ -20,9 +22,8 @@ nav_order: 12
 ## Syntax
 
 ```
-(
-  (fbsql pset) |
-  (\ -[P|-pset])
+(fbsql pset) |
+(\ -[P|-pset])
   [
     [border [integer]] |
     [-[x | -expanded] <int-value>] |
@@ -33,12 +34,12 @@ nav_order: 12
 ```
 
 {% include /fbsql/fbsql-required-args.md %}
+| `fbsql -p``\ pset` | List output flag settings |
 
-## pSET arguments
+## Optional flags
 
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
-| `pset` | Display current printing option settings and prefix arguments and flags |  |  |
 | `-P`<br/>`--pset` | Alternate flag for using printing options |  | [Alternate flag additional](#alternate-flag-additional) |
 | `border [integer]` | Determine number of borders in result output table |  | [Border additional](#border-additional) |
 | `x` or `expanded` | Toggle display of query results as 2 columns | Off | When toggled on, column name is displayed in column one, results in column 2 |

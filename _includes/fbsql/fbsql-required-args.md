@@ -1,6 +1,6 @@
 ## Required arguments
 
-| Argument | Required |
+| Argument | Description |
 |---|---|
-| `fbsql` | For flags to be executed from CLI |
-| `\` | For flags to be executed from FBSQL interface |
+| `fbsql` | Required for flags to be executed from CLI |
+| `\` | Required for flags to be executed from FBSQL interface |

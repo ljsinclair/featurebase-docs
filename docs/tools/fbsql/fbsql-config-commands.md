@@ -21,27 +21,18 @@ FBSQL configuration commands are run from the CLI.
 ## Syntax
 
 ```
-fbsql []
+[fbsql | \]
   [
-     |
     <command-flags>
+    <output-flags>
     <connection-flags>
     <file-flags>
-  ]
-```
-
-  [
-    (-[c|-command] <meta-flags> | <set-print-flags> | <set-variable-flags>)
   ]
 ```
 
 {% include /fbsql/fbsql-required-args.md %}
 
 ## Optional arguments
-
-| Argument | Description | Additional information |
-|---|---|---|
-| `-h`<br/>`--help` |  |  |
 
 
 ## Command flags
