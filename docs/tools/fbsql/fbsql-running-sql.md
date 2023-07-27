@@ -8,43 +8,61 @@ nav_order: 4
 
 # How do I run SQL queries with FBSQL?
 
-Valid SQL queries can be run directly in the FBSQL interface or via defined files
+Valid SQL queries can be run directly in the FBSQL interface or via defined files.
+
+{: .note}
+You can also run SQL from a file when you connect to a database.
 
 ## Before you begin
 
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-* [Connect to FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect-db)
+* Connect to a database:
+  * [Connect to a Cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
+  * [Connect to a Community database](/docs/tools/fbsql/fbsql-connect-community-db)
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
 
-{% include /fbsql/fbsql-help.md %}
+{% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
 
-```sh
-(fbsql | \ [
-    (-[c|connect dbname])
-    (-[d|-dbname] <database-name>) |
-    (-[i|-include] <filename.sql>) |
+```
+(\[
+    [ c|connect <cloud-database-name> ] |
+    [
+      [ d[<tablename> | t | v] ] |
+      [ l|list ]
+    ]
+    [ t|timing [on|off] ]
+    [ i|include <filename.sql> ] |
   ]
+
   (<sql-statement>)
 ```
 
 ## Arguments
 
+
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
-| `-d`<br/>`--dbname` | Specify a database to connect to |  |  |
-| `-i <filename.sql>`<br/>`--include <filename.sql>` | Run SQL statements from file |  |  |
+| `c <cloud-database-name>`<br/>`connect <cloud-database-name>` | Connect to a valid database in the current connection |  | [Connect cloud database additional](#connect-cloud-database-additional) |
+| `d` | Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
+| `d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
+| `dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
+| `dv` | Show definition of all views |  | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
+| `l`<br/>`list` | List databases in Cloud connection. |  |  |
+| `i <filename.sql>`<br/>`include <filename.sql>` | Run SQL statements from file |  | Equivalent to `fbsql --file` command |
+| `\timing` | Toggle time SQL statement takes to execute | off |  |
+| `<sql-statement>` | Valid SQL statements |  | [SQL Guide](/docs/sql-guide/sql-guide-home) |
 
+## Additional information
 
-| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input.
-This option can be repeated with the `-c` option.
-All `-c` options will be processed before all `-f` options are processed.
-When either `-c` or `-f` is specified, fbsql does not read commands from standard input;
-instead it terminates after processing all the `-c` and `-f` options in sequence.
-Except for that, this option is largely equivalent to the meta-command `\i`. | |
+### Cloud database connect additional
 
+{% include /fbsql/fbsql-db-connect-same.md %}
 
+A FeatureBase cloud database connection is required to use `\c`:
+* [Connect to a Cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
+* [Connect to a Community database](/docs/tools/fbsql/fbsql-connect-community-db)
 
 ## Examples
 

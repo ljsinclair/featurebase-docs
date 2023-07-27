@@ -25,13 +25,12 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Syntax
 
 ```sh
-fbsql
+[\! ]fbsql
   (
     (--host="<hostname>" \ -(p|-port)="<port-num>") |
     (--config=filename.toml)
   )
   [
-    -[d|-dbname]="<database-name>"
     -[f|-file] example.sql |
     --fbsql-loader (impala|kafka|postgres)
   ]
@@ -47,11 +46,7 @@ fbsql
 
 ## Optional arguments
 
-### Connect to available database
-
-| Argument | Description | Default | Additional information |
-|---|---|---|---|
-|`-d="<database-name>"`<br/>`--dbname="<database-name>"` | Connect to available database on target system |  |  |
+{% include /fbsql/fbsql-connection-interface-extra.md %}
 
 ### Load SQL from a source file
 

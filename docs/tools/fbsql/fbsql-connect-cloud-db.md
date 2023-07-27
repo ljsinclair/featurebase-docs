@@ -23,7 +23,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 ## Syntax
 
 ```sh
-fbsql
+[\! ]fbsql
   (
     (
     --host="<hostname>" \
@@ -36,7 +36,7 @@ fbsql
     )
   )
   [
-     |
+    (-[d|-dbname]="<cloud-database-name>") |
     (-[f|-file] <filename>) |
     (--fbsql-loader (impala|kafka|postgres))
   ]
@@ -60,6 +60,16 @@ fbsql
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
 ## Optional arguments
+
+{% include /fbsql/fbsql-connection-interface-extra.md %}
+
+### Connect to available database
+
+{% include /fbsql/fbsql-db-connect-same.md %}
+
+| Argument | Description | Default | Additional information |
+|---|---|---|---|
+|`-d="<cloud-database-name>"`<br/>`--dbname="<database-name>"` | Connect to available database on cloud system |  |  |
 
 ### Load SQL from a source file
 
