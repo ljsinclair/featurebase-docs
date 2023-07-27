@@ -16,7 +16,8 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 {% include /fbsql/fbsql-before-begin.md%}
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 * [Login to FeatureBase Cloud](/docs/cloud/cloud-login) to verify your system is running
-* Open a CLI then CD to `*/fbsql/featurebase`
+{% include /fbsql/fbsql-cli-folder.md %}
+
 
 ## Syntax
 

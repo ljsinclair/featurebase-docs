@@ -15,7 +15,7 @@ nav_order: 12
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* [Connect to FBSQL](/docs/tools/fbsql/fbsql-connect)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
 ## Syntax
 

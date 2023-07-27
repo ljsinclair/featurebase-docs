@@ -19,7 +19,7 @@ The format of an fbsql command is the backslash, followed immediately by a comma
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* [Connect to FBSQL](/docs/tools/fbsql/fbsql-connect)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
 ## FBSQL command syntax
 

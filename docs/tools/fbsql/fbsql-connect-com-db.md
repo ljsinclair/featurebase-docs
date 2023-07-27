@@ -18,7 +18,7 @@ Connect to a FeatureBase Community database with FBSQL.
 * Startup FeatureBase Community at the CLI:
   * [Startup FeatureBase](/docs/community/com-startup-connect) OR
   * [Startup FeatureBase systemctl service](/docs/community/com-config/com-config-service-fb-manage)
-* CD to `*/fbsql/featurebase` directory
+{% include /fbsql/fbsql-cli-folder.md %}
 
 ## Syntax
 

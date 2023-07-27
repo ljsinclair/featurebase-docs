@@ -13,7 +13,7 @@ FBSQL configuration commands are run from the FBSQL interface and do not require
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* [Connect to FBSQL](/docs/tools/fbsql/fbsql-connect)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 
 ## Configuration syntax
 
