@@ -7,7 +7,9 @@ nav_order: 11
 ---
 # FBSQL interface command reference
 
-Interface commands are also known as **meta commands** and are executable from the FBSQL interface.
+Interface commands are executable from the FBSQL interface and also known as:
+* meta-commands
+* slash or backslash commands
 
 ## Before you begin
 
@@ -22,31 +24,31 @@ Interface commands are also known as **meta commands** and are executable from t
 ```
 \
   [
-    [cd [directory-name]
-    [pset <output-flags>]
-
+    [<file-flags] |
+    [<output-flags>] |
+    [<variable-flags] |
+    [query-flags] |
   ]
 ```
 
+## File flags
 
+| Flag | Description | Default | Additional information |
+|---|---|---|---|
+| `\cd [directory-name]` |
 
-####  print output to query output channel
+## Output flags
 
-```shell
-\qecho text
-```
+* [Learn about FBSQL output flags](/docs/tools/fbsql/fbsql-config-output)
 
-This command is identical to \echo except that the output will be written to the query output channel, as set by \o.
+## Set variable flag
 
+* [Learn how to set a named variable]
 
+## Query flags
 
-## Flags
+* [Learn how to setup query output and write SQL queries in FBSQL]
 
-| Flag | Description | Additional information |
-|---|---|---|
-| `\cd` | Change system working directory | Defaults to `$home` |
-| `\pset` | Display current output settings | [PSET defaults](#pset-defaults) |
+## Additional information
 
-## PSET output flags
-
-* [Learn about FBSQL output flags](/docs/tools/fbsql/fbsql-config-pset)
+{% include /fbsql/fbsql-flags-execution-extra.md %}

@@ -15,24 +15,29 @@ nav_order: 13
 
 {% include /fbsql/fbsql-help-quit.md %}
 
-## Set Variable syntax
+## Syntax
 
 ```
-(fbsql | \ [set])
-  [ name [ value [ ... ] ] ]
+\ [
+    [set <variable-name> [variable-value,...]] |
+    [unset <variable-name>]
+  ]
 ```
 
-{% include /fbsql/fbsql-required-args.md %}
-
-## SET flags
+## Flags
 
 | Flag | Description |
 |---|---|
-| name |  |
-| value |  |
+| `\set` | List all variable names |
+| `\set|unset <variable-name>` | Set or unset named variable |
+| `\set <variable-name> <variable-value>` | Set a variable name and value. Multiple variables are concatenated. |
 
-Sets the fbsql variable **name** to **value**, or if more than one value is given, to the concatenation of all of them. If only one argument is given, the variable is set to an empty-string value. To unset a variable, [use the `\unset` command](#unset-variable).
-
-`\set` without any arguments displays the names and values of all currently-set fbsql variables.
+## Additional information
 
 Variable names are case-sensitive.
+
+## Use of variables
+
+| Usage | Description |
+|---|---|
+| `:<variable-name>` | A defined variable is inserted into a SQL statement |

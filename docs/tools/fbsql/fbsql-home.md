@@ -43,7 +43,7 @@ You can run any valid SQL query against a connected FeatureBase database
 Information on FBSQL meta commands are found in the following files:
 
 * [FBSQL scripting reference](/docs/tools/fbsql/fbsql-scripting)
-* [FBSQL printing configuration](/docs/tools/fbsql/fbsql-config-pset)
+* [FBSQL printing configuration](/docs/tools/fbsql/fbsql-config-output)
 * [FBSQL variable configuration](/docs/tools/fbsql/fbsql-set-variable)
 
 ### Entering SQL Commands

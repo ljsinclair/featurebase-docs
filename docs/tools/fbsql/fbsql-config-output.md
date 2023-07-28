@@ -20,15 +20,36 @@ Query output is set in the FBSQL interface.
 ## Syntax
 
 ```
-\pset
+\
   [
+    [o|out <filename>] |
+    [qecho <text>] |
+    [p|print] |
+    [echo <text>]
+    [file <filename>]
+    [w|write <filename>]
+    [r|reset]
+  ]
+  [pset
     [border [0..3]] |
-    [[x|expanded [on|off]]] |
+    [x|expanded [on|off]] |
     [format [aligned|csv]] |
     [location [timezone]] |
-    [-[t|-tuples]_only]
-  ]
+    [tuples_only]
+  ]  
 ```
+
+## Interface query output flags
+
+| Flag | Description |
+|---|---|
+| `\o <filename>`<br/>`\out <filename>` | Define file to write query results. |
+| `\qecho <text>` | Write `<text>` to defined output |
+| `\p`<br/>`\print` | Display most recent query or query buffer to FBSQL interface followed by a newline |
+| `\echo <text>` | write `<text>` to FBSQL interface |
+| `\file <filename> | Add `[file: <filename]` to query buffer |
+| `\w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
+| `\r`<br/>`\reset` | Reset query buffer |
 
 ## PSET flags
 
@@ -41,6 +62,10 @@ Query output is set in the FBSQL interface.
 | `\pset t` <br/> `\pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
 
 ## Additional information
+
+{% include /fbsql/fbsql-flags-execution-extra.md %}
+
+{% include /fbsql/fbsql-query-buffer-extra.md %}
 
 ### `pset` defaults
 
