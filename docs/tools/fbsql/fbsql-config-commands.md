@@ -61,7 +61,7 @@ FBSQL configuration commands are run from the CLI.
 ### File flag additional
 
 {: .note}
-FBSQL commands are always placed first in any multi-purpose file
+FBSQL commands are always placed first
 
 | Purpose | file extension |
 |---|---|

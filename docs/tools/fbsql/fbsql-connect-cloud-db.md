@@ -40,8 +40,9 @@ Login to your FeatureBase cloud database when you startup FBSQL.
     (-[f|-file] <filename>) |
     (--fbsql-loader (impala|kafka|postgres))
   ]
-
 ```
+
+{% include /fbsql/fbsql-execution-methods.md%}
 
 ## Required Arguments
 

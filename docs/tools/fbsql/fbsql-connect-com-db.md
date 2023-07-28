@@ -36,6 +36,8 @@ Connect to a FeatureBase Community database with FBSQL.
   ]
 ```
 
+{% include /fbsql/fbsql-execution-methods.md%}
+
 ## Required Arguments
 
 | Argument | Description | Default | Additional information |
