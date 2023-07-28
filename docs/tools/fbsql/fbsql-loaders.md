@@ -6,6 +6,13 @@ grand_parent: Tools
 nav_order: 20
 ---
 
+<!--
+From original | `--loader-impala` | Run fbsql in non-interactive mode to load data from Impala. Based on the configuration file provided as an argument to this flag, fbsql will query Impala and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from Impala are loaded. For more information, see [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) | |
+| `--loader-kafka` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) | |
+| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded. For more information, see [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) | |
+
+-->
+
 # Define a datasource with FBSQL loaders
 
 FBSQL loaders are run when connecting to a FeatureBase database and:

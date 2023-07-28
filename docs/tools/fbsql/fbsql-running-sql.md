@@ -8,7 +8,7 @@ nav_order: 4
 
 # How do I run SQL queries with FBSQL?
 
-Valid SQL queries can be run directly in the FBSQL interface or via defined files.
+Valid SQL queries can be run directly in the FBSQL interface and via files in accessible directories.
 
 {: .note}
 You can also run SQL from a file when you connect to a database.
@@ -28,7 +28,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ```
 (\[
-    [ c|connect <cloud-database-name> ] |
+    [ c|connect [ <cloud-database-name> | - ] ] |
     [
       [ d[<tablename> | t | v] ] |
       [ l|list ]
@@ -41,10 +41,10 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ## Arguments
 
-
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
-| `\c <cloud-database-name>`<br/>`\connect <cloud-database-name>` | Connect to a valid database in the current connection | [Connect cloud database additional](#connect-cloud-database-additional) |
+| `\c <cloud-database-name>`<br/>`\connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
+| `\c -` <br/> `\connect -` | Disconnect from the current database |  |  |
 | `\d` | Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
 | `\d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
 | `\dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
@@ -59,10 +59,6 @@ This reference explains FBSQL flags relating to database connections and schema
 ### Cloud database connect additional
 
 {% include /fbsql/fbsql-db-connect-same.md %}
-
-A FeatureBase cloud database connection is required to use `\c`:
-* [Connect to a Cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
-* [Connect to a Community database](/docs/tools/fbsql/fbsql-connect-community-db)
 
 ## Further information
 

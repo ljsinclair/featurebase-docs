@@ -8,3 +8,4 @@ FBSQL displays status information at startup
 | Could not detect deployment<br/>Host:http://<hostname> | FeatureBase Community service stopped | [Manage FeatureBase Community systemctl service](/docs/community/com-config/com-service-fb-manage) |
 | You are not connected to a database | Not connected to remote database |  |
 | connecting to database: invalid database: dbname | error in database name |  |
+| `dbname=#` | Connected to specific database |  |

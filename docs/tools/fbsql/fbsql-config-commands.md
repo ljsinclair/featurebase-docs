@@ -21,31 +21,24 @@ FBSQL configuration commands are run from the CLI.
 ## Syntax
 
 ```
-[fbsql | \]
+[fbsql]
   [
-    <command-flags>
-    <output-flags>
-    <connection-flags>
+    [-[c|-command]]<command-flags> |
     <file-flags>
   ]
 ```
 
-{% include /fbsql/fbsql-required-args.md %}
-
 ## Optional arguments
-
-
-## Command flags
 
 | Flag | Description | Required | Additional information |
 |---
-| `-c`<br/>`--command` | Begin FBSQL command which includes one or more flags |  |
+| `-c`<br/>`--command` | Begin FBSQL command which includes one or more flags |  |  |
+| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. | |
 
-## Meta flags
+## Output flags
 
-
-## Set print flags
-
+| `-P`<br>`--pset` | Specifies printing options, in the style of `\pset`. Note that here you have to separate name and value with an equal sign instead of a space. For example, to set the output format to CSV, you could write -P format=csv. | |
+| `--csv` | Switches to CSV (Comma-Separated Values) output mode. This is equivalent to `\pset format csv`. | |
 
 
 ## Set variable flags
@@ -57,6 +50,8 @@ FBSQL configuration commands are run from the CLI.
 |---|---|---|
 | `-config <filename.toml>` | Read FBSQL commands from specified file |
 | `-f <filename.ext>`<br/>`-file <filename.ext>` | Read commands from specified file | [File flag additional] |
+
+| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. | |
 
 ### File flag additional
 
