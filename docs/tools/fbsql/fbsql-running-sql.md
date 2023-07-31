@@ -61,17 +61,6 @@ This reference explains FBSQL flags relating to database connections and schema
 | `timing` | Toggle time SQL statement takes to execute | off |  |
 | `watch <second-val>` | Interval of <second-val> to repeat query in buffer or in history until manual break or fails |  |
 
-####  re-execute query buffer
-
-```shell
-\watch [ seconds ]
-```
-
-Repeatedly execute the current query buffer until interrupted or the query fails. Wait the specified number of seconds (default 2) between executions.
-
-If the current query buffer is empty, the most recently sent query is re-executed instead.
-
-
 ## Query output flags
 
 * [FBSQL query output](/docs/tools/fbsql/fbsql-config-output) |
@@ -85,8 +74,6 @@ If the current query buffer is empty, the most recently sent query is re-execute
 * [SQL guide](/docs/sql-guide/sql-guide-home) |
 
 ## Additional information
-
-* Variable names are case-sensitive
 
 {% include /fbsql/fbsql-flags-execution-extra.md %}
 
