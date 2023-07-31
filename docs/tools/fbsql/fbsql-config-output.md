@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 12
 ---
 
-# Set output reference
+# FBSQL Set output reference
 
 Query output is set in the FBSQL interface.
 

@@ -31,9 +31,9 @@ nav_order: 13
 
 | Flag | Description |
 |---|---|
-| `\set` | List all variable names |
-| `\set|unset <variable-name>` | Set or unset named variable |
-| `\set <variable-name> <variable-value>` | Set a variable name and value. Multiple variables are concatenated. |
+| `set` | List all variable names |
+| `set|unset <variable-name>` | Set or unset named variable |
+| `set <variable-name> <variable-value>` | Set a variable name and value. Multiple variables are concatenated. |
 
 ## Additional information
 
@@ -53,4 +53,3 @@ fbsql -c \set myval doctest
 ```sql
 SELECT * from :myval;
 ```
--->
