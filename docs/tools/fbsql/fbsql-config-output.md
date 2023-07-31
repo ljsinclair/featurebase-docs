@@ -50,7 +50,8 @@ Output can be directed to files in the currently set directory.
 |---|---|---|
 | `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |
 | `o <filename>`<br/>`out <filename>` | Define file to write query results. |  |
-| `file <filename> [<alias>]` | Add `[file: <filename]` to query buffer | [File ]
+| `file <filename> [<alias>]` | Add `[file: <filename]` to query buffer | [Filename alias example](#create-filename-alias) |
+| `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately | [Run content in file](#run-content-in-file) |
 | `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
 
 ## Query buffer flags
