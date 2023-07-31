@@ -27,7 +27,7 @@ This reference explains FBSQL flags relating to database connections and schema
 ## Syntax
 
 ```
-<meta-prefix>
+<prefix>
   [
     [ c|connect [ <cloud-database-name> | - ] ] |
     [

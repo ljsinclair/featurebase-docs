@@ -18,7 +18,7 @@ nav_order: 13
 ## Syntax
 
 ```
-<meta-prefix>
+<prefix>
   [
     [set <variable-name> [variable-value,...]] |
     [unset <variable-name>]

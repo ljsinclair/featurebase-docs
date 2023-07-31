@@ -20,7 +20,7 @@ Query output is set in the FBSQL interface.
 ## Syntax
 
 ```
-[ <meta-prefix>
+[ <prefix>
     <write-messages-to-output-flags> |
     <file-output-flags> |
     <query-buffer-flags>
