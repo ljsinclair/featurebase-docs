@@ -22,6 +22,12 @@ has_toc: false
 
 * [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
 
+## How do I open and quit the FBSQL interface?
+
+| Open interface | Quit interface |
+|---|---|
+| `fbsql [<optional flags>]` | `\q`<br/>`\quit` |
+
 ## How do I connect to a FeatureBase database?
 
 Connect to your FeatureBase database using these methods:
@@ -43,7 +49,6 @@ You can run any valid SQL query against a connected FeatureBase database
 Information on FBSQL meta commands are found in the following files:
 
 * [FBSQL scripting reference](/docs/tools/fbsql/fbsql-scripting)
-* [FBSQL printing configuration](/docs/tools/fbsql/fbsql-config-output)
 * [FBSQL variable configuration](/docs/tools/fbsql/fbsql-set-variable)
 
 ### Entering SQL Commands
