@@ -62,24 +62,9 @@ Inconsistencies may occur when a single INSERT statement contains multiple recor
 
 ### INSERT multiple records INTO `products` and `services` tables
 
-```sql
-INSERT INTO products
-  (_id, prodlist, price)
-  VALUES
-  (1, 'pen', 2.50),
-  (2, 'pencil', 0.50),
-  (3, 'playpen', 52.50),
-  (4, 'gold-plated earplugs', 122.50);
+{% include /sql-guide/insert-into-products-table-eg.md %}
 
-  INSERT INTO services
-    (_id, servicelist, price)
-    VALUES
-    (1, 'free delivery on orders over $50', NULL),
-    (2, 'local postage per item', 2.20),
-    (3, 'international postage per kilo', 15.99),
-    (4, 'local courier (same day to metro)', 25.00)
-    (5, 'local delivery > 10 items', 2.00);
-```
+{% include /sql-guide/insert-into-services-table-eg.md %}
 
 ### INSERT value in services table
 

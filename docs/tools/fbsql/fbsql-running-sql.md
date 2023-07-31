@@ -27,37 +27,62 @@ This reference explains FBSQL flags relating to database connections and schema
 ## Syntax
 
 ```
-[\
-  [ c|connect [ <cloud-database-name> | - ] ] |
+<meta-prefix>
   [
-    [ d[<tablename> | t | v] ] |
-    [ l|list ]
-  ]
-  [ t|timing [on|off] ]
-  [ i|include <filename.sql> ] |
-  <query-output-flags>
-  <set-variables-flag>
+    [ c|connect [ <cloud-database-name> | - ] ] |
+    [
+      [ d[<tablename> | t | v] ] |
+      [ l|list ]
+    ]
+    [ t|timing [on|off] ]
+    [ i|include <filename.sql> ] |
+    [ w|watch <second-val> ] |
+  <query-output-flags> |
+  <set-variables-flags> |
 ]
 <sql-query>
 
 ```
 
-## Arguments
+{% include /fbsql/fbsql-meta-prefix.md %}
+
+## Database flags
 
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
 | `\c <cloud-database-name>`<br/>`\connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
-| `\c -` <br/> `\connect -` | Disconnect from the current database |  |  |
-| `\d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
-| `\d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
-| `\dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
-| `\dv` | Show definition of all views |  | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
-| `\l`<br/>`\list` | List databases in connected Cloud database |  |  |
-| `\i <filename.sql>`<br/>`\include <filename.sql>` | Run SQL statements from file |  | Equivalent to `fbsql --file` command |
-| `\timing` | Toggle time SQL statement takes to execute | off |  |
-| `<query-output-flags>` | Define query output for SQL queries |  | [FBSQL query output](/docs/tools/fbsql/fbsql-config-output) |
-| `<set-variable-flag>` | Set a named variable to use in SQL queries | [SET variable flag](/docs/tools/fbsql/fbsql-config-set-variable)
-| `<sql-statement>` | Valid SQL statements |  | [SQL Guide](/docs/sql-guide/sql-guide-home) |
+| `c -` <br/> `connect -` | Disconnect from the current database |  |  |
+| `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
+| `d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
+| `dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
+| `dv` | Show definition of all views |  | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
+| `l`<br/>`list` | List databases in connected Cloud database |  |  |
+| `i <filename.sql>`<br/>`include <filename.sql>` | Run SQL statements from file |  | Equivalent to `fbsql --file` command |
+| `timing` | Toggle time SQL statement takes to execute | off |  |
+| `watch <second-val>` | Interval of <second-val> to repeat query in buffer or in history until manual break or fails |  |
+
+####  re-execute query buffer
+
+```shell
+\watch [ seconds ]
+```
+
+Repeatedly execute the current query buffer until interrupted or the query fails. Wait the specified number of seconds (default 2) between executions.
+
+If the current query buffer is empty, the most recently sent query is re-executed instead.
+
+
+## Query output flags
+
+* [FBSQL query output](/docs/tools/fbsql/fbsql-config-output) |
+
+## Set variable flags
+
+* [SET variable flag](/docs/tools/fbsql/fbsql-config-set-variable)
+
+## SQL syntax
+
+* [SQL guide](/docs/sql-guide/sql-guide-home) |
 
 ## Additional information
 

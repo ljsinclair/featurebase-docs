@@ -20,46 +20,64 @@ Query output is set in the FBSQL interface.
 ## Syntax
 
 ```
-\
-  [
-    [o|out <filename>] |
-    [qecho <text>] |
-    [p|print] |
-    [echo <text>]
-    [file <filename>]
-    [w|write <filename>]
-    [r|reset]
-  ]
-  [pset
-    [border [0..3]] |
-    [x|expanded [on|off]] |
-    [format [aligned|csv]] |
-    [location [timezone]] |
-    [tuples_only]
-  ]  
+[ <meta-prefix>
+    <write-messages-to-output-flags> |
+    <file-output-flags> |
+    <query-buffer-flags>
+] |
+[ <pset-prefix>
+    <pset-output-flags>
+]
 ```
 
-## Interface query output flags
+{% include /fbsql/fbsql-meta-prefix.md %}
 
-| Flag | Description |
+## Write messages to output flags
+
+Specified text can be written to destination output
+
+| Flag | Destination |
 |---|---|
-| `\o <filename>`<br/>`\out <filename>` | Define file to write query results. |
-| `\qecho <text>` | Write `<text>` to defined output |
-| `\p`<br/>`\print` | Display most recent query or query buffer to FBSQL interface followed by a newline |
-| `\echo <text>` | write `<text>` to FBSQL interface |
-| `\file <filename> | Add `[file: <filename]` to query buffer |
-| `\w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
-| `\r`<br/>`\reset` | Reset query buffer |
+| `echo <text>` | FBSQL interface |
+| `qecho <text>` | Query output channel as defined by `[o|out] <filename>` output |
+| `warn <text>` | Standard error channel |
 
-## PSET flags
+## File output flags
+
+Output can be directed to files in the currently set directory.
+
+| Flag | Description | Additional information |
+|---|---|---|
+| `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |
+| `o <filename>`<br/>`out <filename>` | Define file to write query results. |  |
+| `file <filename> [<alias>]` | Add `[file: <filename]` to query buffer | [File ]
+| `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
+
+## Query buffer flags
+
+| Flag | Description | Default |
+|---|---|---|
+| `p`<br/>`print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
+| `r`<br/>`reset` | Reset query buffer |
+
+## PSET prefix
+
+PSET flags can be executed from the CLI or FBSQL interface:
+
+| Interface | Prefix | Structure | Example |
+|---|---|---|---|
+| CLI | `fbsql [-P|--pset] <pset-meta-commands>` | PSET output flags structured as `flag="value"` | `fbsql --P border="1"` |
+| FBSQL | `\pset <pset-meta-commands>` | Valid sequence of PSET output flag, argument and value if required | `\pset border 2` |
+
+## PSET output flags
 
 | Flags | Description | Default | Additional information |
 |---|---|---|---|
-| `\pset border [0...3]` | Border for table output | 1 | [PSET border values](#query-border-values) |
-| `\pset [x|expanded] [on|off]` | Off | Change orientation of query results | [Query result orientation](#query-result-orientation) |
-| `\pset format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
-| `\pset location ['timezone']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
-| `\pset t` <br/> `\pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
+| `pset border [0...3]` | Border for table output | 1 | [PSET border values](#query-border-values) |
+| `pset expanded [on|off]`<br/>`x [on|off]` | Off | Change orientation of query results using `pset expanded` or `x`| [Query result orientation](#query-result-orientation) |
+| `pset format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
+| `pset location ['timezone']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
+| `pset t` <br/> `pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
 
 ## Additional information
 
@@ -67,7 +85,7 @@ Query output is set in the FBSQL interface.
 
 {% include /fbsql/fbsql-query-buffer-extra.md %}
 
-### `pset` defaults
+### PSET defaults
 
 ```
 border      1
@@ -79,18 +97,18 @@ tuples_only off
 
 ### Query border values
 
-| Value | Table border |
-|---|---|
-| 0 | None |
-| 1 | Internal dividing lines |
-| 2 | Table frame |
-| 3 | Add latex format dividing lines between rows |
+| Value | Table border | Additional information |
+|---|---|---|
+| 0 | None | Default |
+| 1 | Internal dividing lines |  |
+| 2 | Table frame |  |
+| 3 | Latex format dividing lines between rows if Add latex format dividing lines between rows | Requires Latex |
 
 ### Query result orientation
 
 | Value | Column name | Data |
 |---|---|
-| on | Right column | Left column |
+| on | Left column | Right column |
 | off | Top row | Bottom rows |
 
 ### CSV output format
@@ -123,6 +141,60 @@ The optional timezone can be set as follows:
 | Regular | * CSV column headers<br/>* titles<br/>* Various footers |
 | tuples_only | Table data |
 
+## Examples
+
+### Create file for SQL statement
+
+Create `docviewtest.sql` and add the following SQL statement:
+
+```sql
+SELECT * from doctest where _id = 0;
+```
+
+### Create filename alias
+
+```
+\file docviewtest.sql mynewview
+```
+
+Use the alias in a SQL statement:
+
+```sql
+CREATE VIEW docview AS :mynewview;
+```
+
+## PSET output on
+
+```
+\pset expanded on
+```
+
+Select statement:
+```sql
+select * from products;
+```
+
+Output:
+```sql
+ _id      | 1
+ prodlist | pen
+ price    | 2.50
+ stock    | NULL
+ _id      | 2
+ prodlist | pencil
+ price    | 0.50
+ stock    | NULL
+ _id      | 3
+ prodlist | playpen
+ price    | 52.50
+ stock    | NULL
+ _id      | 4
+ prodlist | gold-plated earplugs
+ price    | 122.50
+ stock    | NULL
+```
+
 ## Further information
 
 * [Learn about RFC-4180 quoting rules](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
+* [Create products table](/docs/sql-guide/statements/statement-table-create#create-table-with-decimal-data-type)

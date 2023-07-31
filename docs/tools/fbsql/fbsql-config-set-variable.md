@@ -18,11 +18,14 @@ nav_order: 13
 ## Syntax
 
 ```
-\ [
+<meta-prefix>
+  [
     [set <variable-name> [variable-value,...]] |
     [unset <variable-name>]
   ]
 ```
+
+{% include /fbsql/fbsql-meta-prefix.md %}
 
 ## Flags
 
@@ -34,10 +37,20 @@ nav_order: 13
 
 ## Additional information
 
-Variable names are case-sensitive.
+Variable names are case-sensitive and can be inserted into SQL statements in two ways:
+* `:<variable-name>`
+* `:"<variable-name>"`
 
-## Use of variables
+## Examples
 
-| Usage | Description |
-|---|---|
-| `:<variable-name>` | A defined variable is inserted into a SQL statement |
+### Define variable
+
+```
+fbsql -c \set myval doctest
+```
+### Use variable in SQL statement
+
+```sql
+SELECT * from :myval;
+```
+-->
