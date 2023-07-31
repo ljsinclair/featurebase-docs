@@ -50,7 +50,6 @@ Output can be directed to files in the currently set directory.
 |---|---|---|
 | `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |
 | `o <filename>`<br/>`out <filename>` | Define file to write query results. |  |
-| `file <filename> [<alias>]` | Add `[file: <filename]` to query buffer | [Filename alias example](#create-filename-alias) |
 | `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately | [Run content in file](#run-content-in-file) |
 | `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
 
@@ -147,27 +146,7 @@ The optional timezone can be set as follows:
 
 ## Examples
 
-### Create file for SQL statement
-
-Create `docviewtest.sql` and add the following SQL statement:
-
-```sql
-SELECT * from doctest where _id = 0;
-```
-
-### Create filename alias
-
-```
-\file docviewtest.sql mynewview
-```
-
-Use the alias in a SQL statement:
-
-```sql
-CREATE VIEW docview AS :mynewview;
-```
-
-## PSET output on
+### PSET output on
 
 ```
 \pset expanded on
