@@ -6,13 +6,6 @@ grand_parent: Tools
 nav_order: 20
 ---
 
-<!--
-From original | `--loader-impala` | Run fbsql in non-interactive mode to load data from Impala. Based on the configuration file provided as an argument to this flag, fbsql will query Impala and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from Impala are loaded. For more information, see [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) | |
-| `--loader-kafka` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) | |
-| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded. For more information, see [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) | |
-
--->
-
 # Define a datasource with FBSQL loaders
 
 FBSQL loaders are run when connecting to a FeatureBase database and:
@@ -31,7 +24,7 @@ During processing no SQL or FBSQL commands can be run
 
 ```sh
 fbsql
-<db-connection-string> \
+  <db-connection-string> \
 (--loader-(impala|kafka|postgres)) filename.toml
 ```
 
@@ -39,11 +32,18 @@ fbsql
 
 | Argument | Description | Additional information |
 |---|---|---|
-| `<db-connection-string>` | FBSQL connection string to FeatureBase database | [Connect to FeatureBase database](/docs/tools/fbsql/fbsql-connect-db) |
+| `<db-connection-string>` | FBSQL connection string to FeatureBase database | * [Connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [Connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
 | `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
 | `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
 | `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |
-| filename
+
+<!-- Plan here is to adapt the approach used for Community ingest flags, so the user works through a process:
+* homepage - overview, choose your input file
+* 3x input file definitions plus examples
+* 3x fbsql-flag-ref files for the specific files PLUS generic flags
+* 3x fbsql test cases for this (found in test cases node which is in branch now)
+
+-->
 
 
 ## Source Independent Configuration Options
