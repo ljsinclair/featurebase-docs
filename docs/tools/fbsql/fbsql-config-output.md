@@ -132,7 +132,7 @@ The optional timezone can be set as follows:
 
 | timezone | Description | Further information |
 |---|---|---|
-| <none> | Local time |  |
+| `<none>` | Local time |  |
 | `UTC` | UTC time |
 | `region/city` | Region and city UTC offset | [UTC region/city offset values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones){:target="_blank"}
 
