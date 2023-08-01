@@ -23,7 +23,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 ## Syntax
 
 ```sh
-[\! ]fbsql
+(<cli-flag-prefix>)
   (
     (
     --host="<hostname>" \
@@ -42,7 +42,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
   ]
 ```
 
-{% include /fbsql/fbsql-execution-methods.md%}
+{% include /fbsql/fbsql-cli-flag-prefix.md %}
 
 ## Required Arguments
 

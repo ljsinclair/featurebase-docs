@@ -30,7 +30,7 @@ Query output is set in the FBSQL interface.
 ]
 ```
 
-{% include /fbsql/fbsql-meta-prefix.md %}
+{% include /fbsql/fbsql-meta-flag-prefix.md %}
 
 ## Write messages to output flags
 
@@ -74,7 +74,7 @@ PSET flags can be executed from the CLI or FBSQL interface:
 | Flags | Description | Default | Additional information |
 |---|---|---|---|
 | `border [0...3]` | Border for table output | 1 | [PSET border values](#query-border-values) |
-| `expanded [on|off]` | Change orientation of query results. | Off | [Query result orientation](#query-result-orientation) |
+| `[ x|expanded [on|off]]` | Change orientation of query results. | Off | [Query result orientation](#query-result-orientation) |
 | `pset format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
 | `pset location ['timezone']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
 | `pset t` <br/> `pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |

@@ -25,7 +25,7 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Syntax
 
 ```sh
-[\! ]fbsql
+(<cli-flag-prefix>)
   (
     (--host="<hostname>" \ -(p|-port)="<port-num>") |
     (--config=filename.toml)
@@ -36,7 +36,7 @@ Connect to a FeatureBase Community database with FBSQL.
   ]
 ```
 
-{% include /fbsql/fbsql-execution-methods.md%}
+{% include /fbsql/fbsql-cli-flag-prefix.md %}
 
 ## Required Arguments
 

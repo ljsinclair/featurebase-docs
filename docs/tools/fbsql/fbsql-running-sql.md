@@ -27,7 +27,7 @@ This reference explains FBSQL flags relating to database connections and schema
 ## Syntax
 
 ```
-<prefix>
+<meta-flag-prefix>
   [
     [ c|connect [ <cloud-database-name> | - ] ] |
     [
@@ -44,14 +44,14 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ```
 
-{% include /fbsql/fbsql-meta-prefix.md %}
+{% include /fbsql/fbsql-meta-flag-prefix.md %}
 
 ## Database flags
 
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
-| `\c <cloud-database-name>`<br/>`\connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
-| `c -` <br/> `connect -` | Disconnect from the current database |  |  |
+| `c <cloud-database-name>`<br/>`connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. |  | [Connect cloud database additional](#connect-cloud-database-additional) |
+| `c -` <br/> `connect -` | Disconnect from the current cloud database |  |  |
 | `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
 | `d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
 | `dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
@@ -64,7 +64,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Flag | Description | Additional information |
 |---|---|---|
-| `i <filename.sql>`<br/>`include <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
+| * `i <filename.sql>`<br/>* `include <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
 | `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias examples](#create-filename-aliases) |
 
 ## Query output flags
