@@ -36,7 +36,7 @@ This reference explains FBSQL flags relating to database connections and schema
     ]
     [ t|timing [on|off] ]
     [ i|include <filename.sql> ] |
-    [ w|watch <second-val> ] |
+    [ w|watch <seconds> ] |
   <query-buffer-flags> |
   <query-output-flags> |
   <set-variables-flags> |
@@ -93,9 +93,11 @@ This reference explains FBSQL flags relating to database connections and schema
 
 {% include /fbsql/fbsql-db-connect-same.md %}
 
-## Create filename aliases
+## Examples
 
-### Filename alias for CSV file
+### Create filename aliases
+
+#### Filename alias for CSV file
 
 Create a filename alias for file containing CSV data:
 
@@ -136,7 +138,6 @@ Use the alias in a SQL statement:
 ```sql
 CREATE VIEW docview AS :mynewview;
 ```
-
 
 ## Further information
 
