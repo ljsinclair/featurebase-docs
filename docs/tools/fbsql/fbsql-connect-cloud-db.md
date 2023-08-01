@@ -62,8 +62,6 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 
 ## Optional arguments
 
-{% include /fbsql/fbsql-connection-interface-extra.md %}
-
 ### Connect to available database
 
 {% include /fbsql/fbsql-db-connect-same.md %}

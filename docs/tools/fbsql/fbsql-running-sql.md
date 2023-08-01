@@ -37,6 +37,7 @@ This reference explains FBSQL flags relating to database connections and schema
     [ t|timing [on|off] ]
     [ i|include <filename.sql> ] |
     [ w|watch <second-val> ] |
+  <query-buffer-flags> |
   <query-output-flags> |
   <set-variables-flags> |
 ]
@@ -67,9 +68,12 @@ This reference explains FBSQL flags relating to database connections and schema
 | * `i <filename.sql>`<br/>* `include <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
 | `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias examples](#create-filename-aliases) |
 
-## Query output flags
+## Query buffer flags
 
-* [FBSQL query output](/docs/tools/fbsql/fbsql-config-output) |
+| Flag | Description | Default |
+|---|---|---|
+| `p`<br/>`print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
+| `r`<br/>`reset` | Reset query buffer |
 
 ## Set variable flags
 

@@ -20,17 +20,30 @@ Query output is set in the FBSQL interface.
 ## Syntax
 
 ```
-[ <prefix>
-    <write-messages-to-output-flags> |
+
+[ (<meta-prefix>)
     <file-output-flags> |
+    <write-messages-to-output-flags> |
     <query-buffer-flags>
 ] |
-[ <pset-prefix>
+[ (<pset-prefix>)
     <pset-output-flags>
 ]
 ```
 
 {% include /fbsql/fbsql-meta-flag-prefix.md %}
+
+## Output flags
+
+Output can be directed to files in the currently set directory.
+
+| Flag | Description | Default | Additional information |
+|---|---|---|---|
+| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |  |
+| `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |  |
+| `o <filename>`<br/>`out <filename>` | Define file to write query results. |  | Determines destination for `qecho` flag |
+| `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately |  | [Run content in file](#run-content-in-file) |
+| `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |  |  |
 
 ## Write messages to output flags
 
@@ -42,16 +55,6 @@ Specified text can be written to destination output
 | `qecho <text>` | Query output channel as defined by `[o|out] <filename>` output |
 | `warn <text>` | Standard error channel |
 
-## File output flags
-
-Output can be directed to files in the currently set directory.
-
-| Flag | Description | Additional information |
-|---|---|---|
-| `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |
-| `o <filename>`<br/>`out <filename>` | Define file to write query results. |  |
-| `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately | [Run content in file](#run-content-in-file) |
-| `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |
 
 ## Query buffer flags
 

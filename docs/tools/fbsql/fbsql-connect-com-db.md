@@ -48,8 +48,6 @@ Connect to a FeatureBase Community database with FBSQL.
 
 ## Optional arguments
 
-{% include /fbsql/fbsql-connection-interface-extra.md %}
-
 ### Load SQL from a source file
 
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
