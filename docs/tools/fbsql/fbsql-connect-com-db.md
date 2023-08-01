@@ -26,14 +26,12 @@ Connect to a FeatureBase Community database with FBSQL.
 
 ```sh
 (<cli-flag-prefix>)
+  (
+    (--host="<community-hostname" / -[p|-port]=<port> ) |
+    --config=<filename.toml>
+  )
   [
-    <database-connection-flags>
-    <file-flags>
-    <fbsql-loader-flags>
-  ]
-
-    <sql-query>
-    -[f|-file] example.sql |
+    -[f|-file] <filename> |
     --fbsql-loader (impala|kafka|postgres)
   ]
 ```
@@ -51,21 +49,13 @@ FBSQL automatically connects to a local instance of FeatureBase Community
 | `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Host specification | `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
-## File flags
-
-| Flag | Description | Requires | Additional information |
-|---|---|---|---|
-| `-[f|-flag]` | Run contents of specified file without starting FBSQL interface | TOML file | [TOML file specification](#toml-file-specification) |
-
 ## Optional arguments
 
 ### Load SQL from a source file
 
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
 
-### FBSQL-loader flags
-
-Insert data to FeatureBase from a specified data source
+### Load data to FeatureBase from specified data source
 
 {% include /fbsql/fbsql-loader-arg.md %}
 
