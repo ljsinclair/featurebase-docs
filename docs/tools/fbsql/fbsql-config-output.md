@@ -47,21 +47,13 @@ Output can be directed to files in the currently set directory.
 
 ## Write messages to output flags
 
-Specified text can be written to destination output
+Write specified text to specific destination:
 
 | Flag | Destination |
 |---|---|
 | `echo <text>` | FBSQL interface |
 | `qecho <text>` | Query output channel as defined by `[o|out] <filename>` output |
-| `warn <text>` | Standard error channel |
-
-
-## Query buffer flags
-
-| Flag | Description | Default |
-|---|---|---|
-| `p`<br/>`print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
-| `r`<br/>`reset` | Reset query buffer |
+| `warn <text>` | FBSQL standard error channel |
 
 ## PSET prefix
 
