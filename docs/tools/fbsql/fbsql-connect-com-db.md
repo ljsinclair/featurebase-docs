@@ -26,11 +26,13 @@ Connect to a FeatureBase Community database with FBSQL.
 
 ```sh
 (<cli-flag-prefix>)
-  (
-    (--host="<hostname>" \ -(p|-port)="<port-num>") |
-    (--config=filename.toml)
-  )
   [
+    <database-connection-flags>
+    <file-flags>
+    <fbsql-loader-flags>
+  ]
+
+    <sql-query>
     -[f|-file] example.sql |
     --fbsql-loader (impala|kafka|postgres)
   ]
@@ -38,13 +40,22 @@ Connect to a FeatureBase Community database with FBSQL.
 
 {% include /fbsql/fbsql-cli-flag-prefix.md %}
 
-## Required Arguments
+## Database connection flags
 
-| Argument | Description | Default | Additional information |
+{: .note}
+FBSQL automatically connects to a local instance of FeatureBase Community
+
+| Argument | Description | Requires | Default | Additional information |
 |---|---|---|---|
-| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` |  |
-| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
+| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | port specification | `localhost` |  |
+| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Host specification | `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
 {% include /fbsql/fbsql-config-filename-arg.md %}
+
+## File flags
+
+| Flag | Description | Requires | Additional information |
+|---|---|---|---|
+| `-[f|-flag]` | Run contents of specified file without starting FBSQL interface | TOML file | [TOML file specification](#toml-file-specification) |
 
 ## Optional arguments
 
@@ -52,7 +63,9 @@ Connect to a FeatureBase Community database with FBSQL.
 
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
 
-### Insert data to FeatureBase from data source
+### FBSQL-loader flags
+
+Insert data to FeatureBase from a specified data source
 
 {% include /fbsql/fbsql-loader-arg.md %}
 
