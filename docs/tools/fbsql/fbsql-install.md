@@ -15,14 +15,15 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 
 ## Before you begin
 
-* [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
-* Setup a Linux, MacOS or Linux Virtual Machine as the target system
-* Obtain Administrator access
-* Configure target system with network access to your FeatureBase database
+* [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
+
+Setup a Linux or MacOS target system:
+* Obtain administrator permissions for FBSQL installation
+* Setup network to access your FeatureBase database
 * [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+* [Create and login to a GitHub account](https://github.com/){:target="_blank"}
 * [Install go](https://go.dev/doc/install){:target="_blank"}
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
-* [Create and login to your GitHub account](https://github.com/){:target="_blank"}
 
 ## Step 1 - Create a destination directory for the source code
 
@@ -32,7 +33,7 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 mkdir fbsql
 ```
 
-* CD to `fbsql` then clone the FeatureBase code repository
+* CD to `fbsql` then clone the FeatureBase code repository:
 
 ```
 git clone https://github.com/FeatureBaseDB/featurebase
@@ -40,12 +41,14 @@ git clone https://github.com/FeatureBaseDB/featurebase
 
 ## Step 2 - install FBSQL
 
-* CD to `fbsql/featurebase` then setup FBSQL
+Install FBSQL from the `*/fbsql/featurebase` directory:
 
- ```shell
+```shell
 make install-fbsql
 ```
 
-## Next step
+## Further information
 
-* [Connect to FBSQL](/docs/tools/fbsql/fbsql-connect-db)
+* [Learn how to connect to a Cloud database with FBSQL]()
+* [Learn how to connect to a Community database with FBSQL]()
+* [Learn how to run SQL commands with FBSQL]()
