@@ -36,7 +36,7 @@ Connect to a FeatureBase Community database with FBSQL.
   ]
 ```
 
-{% include /fbsql/fbsql-cli-flag-prefix.md %}
+{% include /fbsql/fbsql-prefix-cli-flags.md %}
 
 ## Database connection flags
 

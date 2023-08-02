@@ -10,9 +10,9 @@ has_toc: false
 # How do I run SQL queries from the command-line?
 
 The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
-* API-key and user authenticated connections to FeatureBase databases,
+* API-key and user authenticated connections to FeatureBase databases
 * SQL statements input via text files or the FBSQL interface
-* meta-commands for scripting and automating tasks
+* meta-commands to control output and task scripting and automation
 
 ## Before you begin
 

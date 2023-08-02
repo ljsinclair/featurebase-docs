@@ -27,19 +27,23 @@ This reference explains FBSQL flags relating to database connections and schema
 ## Syntax
 
 ```
-<meta-flag-prefix>
-  [
+[
+  (<meta-flag-prefix>)
     [ c|connect [ <cloud-database-name> | - ] ] |
     [
-      [ d[<tablename> | t | v] ] |
+      [ d[< tablename>|t|v] ] |
       [ l|list ]
     ]
     [ t|timing [on|off] ]
     [ i|include <filename.sql> ] |
     [ w|watch <seconds> ] |
-  <query-buffer-flags> |
-  <query-output-flags> |
-  <set-variables-flags> |
+    [
+      [set <variable-name> [variable-value,...]] |
+      [unset <variable-name>]
+    ] |
+    [p|print] |
+    [r|reset]
+  <query-output-flags>
 ]
 <sql-query>
 
@@ -49,17 +53,15 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ## Database flags
 
-| Argument | Description | Default | Additional information |
-|---|---|---|---|
-| `c <cloud-database-name>`<br/>`connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. |  | [Connect cloud database additional](#connect-cloud-database-additional) |
-| `c -` <br/> `connect -` | Disconnect from the current cloud database |  |  |
-| `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement |  | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
-| `d <tablename>` | Equivalent to `SHOW COLUMNS` statement |  | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
-| `dt` | Equivalent to `SHOW TABLES` statement |  | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
-| `dv` | Show definition of all views |  | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
-| `l`<br/>`list` | List databases in connected Cloud database |  |  |
-| `timing` | Toggle time SQL statement takes to execute | off |  |
-| `watch <second-val>` | Interval of <second-val> to repeat query in buffer or in history until manual break or fails |  |
+| Argument | Description | Additional information |
+|---|---|---|
+| * `c <cloud-database-name>`<br/>* `connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
+| *`c -`<br/>* `connect -` | Disconnect from the current cloud database |  |
+| `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
+| `d <tablename>` | Equivalent to `SHOW COLUMNS` statement | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
+| `dt` | Equivalent to `SHOW TABLES` statement | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
+| `dv` | Show definition of all views | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
+| * `l`<br/>* `list` | List databases in connected Cloud database |  |
 
 ## File flags
 
@@ -67,6 +69,13 @@ This reference explains FBSQL flags relating to database connections and schema
 |---|---|---|
 | * `i <filename.sql>`<br/>* `include <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
 | `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias examples](#create-filename-aliases) |
+
+## Query flags
+
+| Flag | Description | Default | Additional information |
+|---|---|---|---|
+| `timing` | Toggle time SQL statement takes to execute | off |  |
+| `watch <seconds>` | Repeat query from buffer or last in history at interval of <seconds> until failure or manual break |  |  |
 
 ## Query buffer flags
 

@@ -39,7 +39,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
   ]
 ```
 
-{% include /fbsql/fbsql-cli-flag-prefix.md %}
+{% include /fbsql/fbsql-prefix-cli-flags.md %}
 
 ## Database connection flags
 
@@ -82,7 +82,6 @@ There are several ways to create an API key for your FeatureBase Cloud account:
 
 * [Create Cloud API key via API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey)
 * [Create a Cloud API key](/docs/cloud/cloud-auth/cloud-auth-manage)
-* [Create a Community API key](/docs/community/com-auth/com-auth-key)
 
 {% include /fbsql/fbsql-toml-connection-file-extra.md %}
 

@@ -31,7 +31,7 @@ Query output is set in the FBSQL interface.
 ]
 ```
 
-{% include /fbsql/fbsql-meta-flag-prefix.md %}
+{% include /fbsql/fbsql-prefix-meta-flags.md %}
 
 ## Output flags
 
