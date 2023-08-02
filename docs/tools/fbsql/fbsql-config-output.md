@@ -23,6 +23,7 @@ Configure FBSQL output including:
 ```
 
 [ (<meta-prefix>)
+    <history-logs>
     <file-output-flags> |
     <write-messages-to-output-flags> |
     <query-buffer-flags>
@@ -34,15 +35,19 @@ Configure FBSQL output including:
 
 {% include /fbsql/fbsql-prefix-meta-flags.md %}
 
-## Output flags
+## History logs
+
+| Flag | Description | Default | Additional information |
+|---|---|---|---|
+| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |  |
+
+## File output flags
 
 Output can be directed to files in the currently set directory.
 
 | Flag | Description | Default | Additional information |
 |---|---|---|---|
-| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |  |
-| `cd [<directory-name>]` | Set FBSQL file directory to $home or optional directory | Directory FBSQL was started |  |
-| `o <filename>`<br/>`out <filename>` | Define file to write query results. |  | Determines destination for `qecho` flag |
+| `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Directory FBSQL was started |  |
 | `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately |  | [Run content in file](#run-content-in-file) |
 | `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |  |  |
 

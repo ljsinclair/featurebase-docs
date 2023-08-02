@@ -41,6 +41,7 @@ This reference explains FBSQL flags relating to database connections and schema
       [set <variable-name> [variable-value,...]] |
       [unset <variable-name>]
     ] |
+    [o|output <query-output-file>] |
     [p|print] |
     [r|reset]
   <query-output-flags>
@@ -76,6 +77,7 @@ This reference explains FBSQL flags relating to database connections and schema
 |---|---|---|---|
 | `timing` | Toggle time SQL statement takes to execute | off |  |
 | `watch <seconds>` | Repeat query from buffer or last in history at interval of <seconds> until failure or manual break |  |  |
+| `o <query-output-filename>`<br/>`out <query-output-filename>` | Define existing file to output query results |  |  |
 
 ## Query buffer flags
 
