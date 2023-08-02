@@ -1,14 +1,15 @@
 ---
-title: FBSQL set output ref
+title: FBSQL output flags
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 12
 ---
 
-# FBSQL Set output reference
+# FBSQL output flags reference
 
-Query output is set in the FBSQL interface.
+Configure FBSQL output including:
+*
 
 ## Before you begin
 
@@ -71,7 +72,7 @@ PSET flags can be executed from the CLI or FBSQL interface:
 | `border [0...3]` | Border for table output | 1 | [PSET border values](#query-border-values) |
 | `[ x|expanded [on|off]]` | Change orientation of query results. | Off | [Query result orientation](#query-result-orientation) |
 | `pset format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
-| `pset location ['timezone']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
+| `pset location ['tz-identifier']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
 | `pset t` <br/> `pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
 
 ## Additional information
@@ -120,14 +121,14 @@ tuples_only off
 | Linux<br/>MacOS | Single new-line character | `\n` |
 | Windows | Carriage return and newline sequence |`\r\n` |
 
-### Location timezone additional
+### Location time-zone additional
 
-The optional timezone can be set as follows:
+The optional time-zone can be set as follows:
 
-| timezone | Description | Further information |
+| `<tz identifier>` | Description | Further information |
 |---|---|---|
 | `<none>` | Local time |  |
-| `UTC` | UTC time |
+| `UTC` | UTC time |  |
 | `region/city` | Region and city UTC offset | [UTC region/city offset values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones){:target="_blank"}
 
 ### Tuples additional
@@ -141,7 +142,7 @@ The optional timezone can be set as follows:
 
 ## Examples
 
-### PSET output on
+### Change query result orientation
 
 ```
 \pset expanded on
@@ -170,6 +171,12 @@ Output:
  prodlist | gold-plated earplugs
  price    | 122.50
  stock    | NULL
+```
+
+### Change FBSQL time-zone
+
+```
+\pset location 'Australia/Melbourne'
 ```
 
 ## Further information
