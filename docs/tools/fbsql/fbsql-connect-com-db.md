@@ -12,14 +12,9 @@ Connect to a FeatureBase Community database with FBSQL.
 
 ## Before you begin
 
-* [Learn about docopt Command line notation standards](http://docopt.org/){:target="_blank"} used for this page
 {% include /fbsql/fbsql-before-begin.md%}
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-* Startup FeatureBase Community at the CLI:
-  * [Startup FeatureBase](/docs/community/com-startup-connect) OR
-  * [Startup FeatureBase systemctl service](/docs/community/com-config/com-config-service-fb-manage)
-{% include /fbsql/fbsql-cli-folder.md %}
-
+* [Startup FeatureBase Community](/docs/community/com-home#startup-featurebase-community), OR
+* [Verify your FeatureBase Cloud database is running](/docs/cloud/cloud-login)
 {% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax

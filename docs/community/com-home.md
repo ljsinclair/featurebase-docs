@@ -84,6 +84,9 @@ Refer to troubleshooting pages if you experience issues:
 
 * [FeatureBase Community troubleshooting](/docs/community/com-troubleshooting/com-troubleshooting-home)
 
-## Next step
+## Startup FeatureBase Community
+
+You can startup FeatureBase Community in two ways:
 
 * [Startup and connect to FeatureBase Community](/docs/community/com-startup-connect)
+* [Setup the FeatureBase systemctl service](/docs/community/com-config/com-config-home/#how-do-i-setup-and-manage-a-featurebase-systemd-service)

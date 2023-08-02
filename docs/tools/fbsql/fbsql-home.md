@@ -16,6 +16,7 @@ The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
 
 ## Before you begin
 
+{% include /fbsql/fbsql-before-begin.md %}
 * [Setup a FeatureBase Cloud database](/docs/cloud/cloud-home), OR
 * [Setup a FeatureBase Community database](/docs/community/com-home)
 

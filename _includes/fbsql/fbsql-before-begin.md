@@ -1,2 +1,3 @@
+* [Learn about "docopt" notation standards used in this guide](http://docopt.org/){:target="_blank"}
 * [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
-* [Setup a FeatureBase database](/index.md)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
