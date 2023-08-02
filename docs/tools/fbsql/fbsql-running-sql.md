@@ -49,7 +49,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ```
 
-{% include /fbsql/fbsql-meta-flag-prefix.md %}
+{% include /fbsql/fbsql-prefix-meta-flags.md %}
 
 ## Database flags
 
@@ -81,12 +81,16 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Flag | Description | Default |
 |---|---|---|
-| `p`<br/>`print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
-| `r`<br/>`reset` | Reset query buffer |
+| * `p`<br/>* `print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
+| * `r`<br/>* `reset` | Reset query buffer |
 
 ## Set variable flags
 
-* [SET variable flag](/docs/tools/fbsql/fbsql-config-set-variable)
+| Flag | Description |
+|---|---|
+| `set` | List all variable names |
+| `set|unset <variable-name>` | Set or unset named variable |
+| `set <variable-name> <variable-value>` | Set a variable name and value. Multiple variables are concatenated. |
 
 ## SQL syntax
 
@@ -101,6 +105,12 @@ This reference explains FBSQL flags relating to database connections and schema
 ### Cloud database connect additional
 
 {% include /fbsql/fbsql-db-connect-same.md %}
+
+### SET variable names
+
+Variable names are case-sensitive and are inserted into SQL statements in two ways:
+* `:<variable-name>`
+* `:"<variable-name>"`
 
 ## Examples
 

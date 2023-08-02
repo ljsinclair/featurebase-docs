@@ -47,18 +47,7 @@ FBSQL meta-commands give you full control over query output:
 
 * [FBSQL output reference](/docs/tools/fbsql/fbsql-config-output)
 
-## How do I load values to FBSQL
-
-FBSQL includes the `fbsql-loader` meta-command to read data from a specified Impala, Kafka or Postgres data source then `BULK INSERT` this data to your FeatureBase database.
-
-* [Learn about FBSql loaders](/docs/tools/fbsql/fbsql-loaders)
-
-## FBSQL meta command reference
-
-Information on FBSQL meta commands are found in the following files:
-
-* [FBSQL variable configuration](/docs/tools/fbsql/fbsql-set-variable)
-
 ## Further information
 
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
+* [Learn about FBSql loaders](/docs/tools/fbsql/fbsql-loaders)

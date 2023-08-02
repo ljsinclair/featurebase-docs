@@ -8,17 +8,16 @@ nav_order: 20
 
 # Define a datasource with FBSQL loaders
 
-FBSQL loaders are run when connecting to a FeatureBase database and:
-* rely on a suitably configured TOML file
-* allowing FeatureBase to read data from the data source then `BULK INSERT` this into an existing FeatureBase table.
-
-During processing no SQL or FBSQL commands can be run
+The `fbsql-loader` command can be run from the CLI to:
+* read data from a specified Impala, Kafka or Postgres data source
+* `BULK INSERT` this data to an existing FeatureBase database and table.
 
 ## Before you begin
 
 * [Learn about SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
 * [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-* [Connect to a FeatureBase database with FBSQL](/docs/tools/fbsql/fbsql-connect-db)
+* [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
+* [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
 
 ## Syntax
 
