@@ -1,3 +1,9 @@
-FBSQL is a command-line tool that allows you to connect to a FeatureBase database then run SQL:
-* written by hand, or
-* loaded from files using the FBSQL meta language
+You can connect to your FeatureBase Cloud or Community database then run SQL statements using:
+* Cloud database REST API
+* GUI query editor in any supported web browser
+* FBSQL Command Line Interface tool on Linux and MacOS
+
+The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
+* API-key and user authenticated connections to FeatureBase databases,
+* SQL statements input via text files or the FBSQL interface
+* meta-commands for scripting and automating tasks
