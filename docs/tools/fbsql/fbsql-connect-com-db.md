@@ -20,7 +20,7 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Syntax
 
 ```sh
-(<cli-flag-prefix>)
+(<cli-prefix>)
   (
     (--host="<community-hostname" / -[p|-port]=<port> ) |
     --config=<filename.toml>

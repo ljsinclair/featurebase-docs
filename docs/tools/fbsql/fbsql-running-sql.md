@@ -17,7 +17,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ## Before you begin
 
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
+{% include /fbsql/fbsql-before-begin.md %}
 * Connect to a database:
   * [Connect to a Cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
   * [Connect to a Community database](/docs/tools/fbsql/fbsql-connect-community-db)
