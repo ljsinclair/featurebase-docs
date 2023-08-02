@@ -35,11 +35,17 @@ The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
 * [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
 * [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
 
-## How do I run queries?
+## How do I run SQL queries?
 
 Run SQL queries in the FBSQL interface or using text files:
 
 * [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
+
+## How do I format SQL query output?
+
+FBSQL meta-commands give you full control over query output:
+
+* [FBSQL output reference](/docs/tools/fbsql/fbsql-config-output)
 
 ## How do I load values to FBSQL
 
@@ -51,7 +57,6 @@ FBSQL includes the `fbsql-loader` meta-command to read data from a specified Imp
 
 Information on FBSQL meta commands are found in the following files:
 
-* [FBSQL output reference](/docs/tools/fbsql/fbsql-config-output)
 * [FBSQL variable configuration](/docs/tools/fbsql/fbsql-set-variable)
 
 ## Further information
