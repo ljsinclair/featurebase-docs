@@ -58,7 +58,7 @@ Write specified text to specific destination:
 | Flag | Destination |
 |---|---|
 | `echo <text>` | FBSQL interface |
-| `qecho <text>` | Query output channel as defined by `[o|out] <filename>` output |
+| `qecho <text>` | Query output defined by `\[o|output <output-filename>]` |
 | `warn <text>` | FBSQL standard error channel |
 
 ## PSET prefix
