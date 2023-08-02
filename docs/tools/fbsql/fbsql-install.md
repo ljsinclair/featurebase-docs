@@ -16,7 +16,6 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 ## Before you begin
 
 * [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
-
 Setup a Linux or MacOS target system:
 * Obtain administrator permissions for FBSQL installation
 * Setup network to access your FeatureBase database
