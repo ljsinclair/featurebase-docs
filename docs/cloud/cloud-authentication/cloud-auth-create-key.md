@@ -27,7 +27,7 @@ The API key ID and Secret are displayed **only** when created. They are **not** 
 * Click **Create a key**.
 * Enter a description of the key to help identify it.
 * Click **Create**.
-* Take a copy of the ID and Secret
+* Take a copy of the ID and Secret.
 * Click **I've Saved The Key** when finished.
 
 ## Further information
