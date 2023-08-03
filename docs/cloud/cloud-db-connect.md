@@ -32,8 +32,6 @@ The Cloud API allows two methods to authenticate with your FeatureBase Cloud dat
 
 You can connect to your FeatureBase database and run SQL statements using the FBSQL command line tool.
 
-FBSQL connections require either:
-* a registered user account, or
-* a Cloud API-Key
+FBSQL connections require a registered user account, or a Cloud API-Key
 
 * [Learn more about FBSQL](/docs/tools/fbsql/fbsql-home)
