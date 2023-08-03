@@ -15,8 +15,8 @@ nav_order: 5
 
 ## Before you begin
 {: .no_toc }
-{% include /cloud/cloud-before-begin.md %}
-{: .important}
+
+* [Connect to FeatureBase Cloud](/docs/cloud/cloud-db-connect)
 
 {% include /cloud-users/cloud-summary-api-key-privs.md %}
 
