@@ -2,7 +2,7 @@
 title: Login to cloud
 layout: default
 parent: Connect to cloud db
-grand-parent: Cloud
+grand_parent: Cloud
 ---
 
 # How do I login to FeatureBase Cloud?
