@@ -1,9 +1,10 @@
 ---
 title: Login to cloud
 layout: default
-parent: Cloud
+parent: Connect to cloud db
+grand-parent: Cloud
 has_children: false
-nav_order: 3
+nav_order: 1
 ---
 
 # How do I login to FeatureBase Cloud?
@@ -16,6 +17,8 @@ nav_order: 3
 ## Sign in to FeatureBase Cloud
 
 * Open [https://cloud.featurebase.com/login](https://cloud.featurebase.com/login){:target="_blank"} in a browser.
+* Enter your user email and password.
+* Click **Sign in**
 
 ## Next step
 

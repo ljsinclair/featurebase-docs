@@ -2,6 +2,7 @@
 title: Connect to cloud db
 layout: default
 parent: Cloud
+has_children: true
 nav_order: 2
 ---
 
@@ -19,7 +20,7 @@ There are several methods to connect to your database:
 
 ## Connect via the web portal
 
-* [Learn how to sign-in via the Web portal](/docs/cloud/cloud-login)
+* [Learn how to sign-in via the Web portal](/docs/cloud/cloud-db-connect/cloud-login)
 
 ## Connect via REST API calls
 

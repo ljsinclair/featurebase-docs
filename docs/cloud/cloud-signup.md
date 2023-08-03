@@ -28,4 +28,4 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Next step
 
-* [Login to FeatureBase Cloud](/docs/cloud/cloud-login)
+* [Login to FeatureBase Cloud](/docs/cloud/cloud-db-connect/cloud-login)

@@ -2,7 +2,7 @@
 
 | Privilege | Applicable role(s) |
 |---|---|
-| [Login](/docs/cloud/cloud-login) | User, Administrator |
+| [Login](/docs/cloud/cloud-db-connect/cloud-login) | User, Administrator |
 | [Invite users](/docs/cloud/cloud-users/cloud-user-invite) | Administrator |
 | [Copy invite URL](/docs/cloud/cloud-users/cloud-user-invite#provide-invitation-url-optional) | Administrator|
 | [Read user profiles](/docs/cloud/cloud-users/cloud-users-view-search) | User (Own account), Administrator |
