@@ -23,10 +23,10 @@ nav_order: 3
 {: .important}
 The API key ID and Secret are displayed **only** when created. They are **not** stored in the application.
 
-{% include /cloud-auth/cloud-auth-new-key.md %}
-
-{% include /cloud-auth/cloud-auth-click-create.md %}
-
+{% include /cloud-auth/cloud-auth-menu.md %}
+* Click **Create a key**.
+* Enter a description of the key to help identify it.
+* Click **Create**.
 * Take a copy of the ID and Secret
 * Click **I've Saved The Key** when finished.
 
