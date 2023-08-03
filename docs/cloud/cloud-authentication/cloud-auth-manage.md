@@ -26,15 +26,15 @@ has_toc: false
 
 ## How do I create an API key?
 
-* [Learn how to create an API key](/docs/cloud/cloud-auth/cloud-auth-create-key)
+* [Learn how to create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
 
 ## How do I rename an API key?
 
-* [Learn how to rename an API key](/docs/cloud/cloud-auth/cloud-auth-rename-key)
+* [Learn how to rename an API key](/docs/cloud/cloud-authentication/cloud-auth-rename-key)
 
 ## How do I revoke an API key?
 
-* [Revoke API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
+* [Learn how to revoke API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
 
 ## Further information
 
