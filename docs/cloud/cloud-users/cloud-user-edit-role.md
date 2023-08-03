@@ -14,17 +14,13 @@ has_toc: false
 
 {% include page-toc.md %}
 
-{% include /cloud-users/cloud-summary-user-privs.md %}
-{% include /cloud-users/cloud-summary-db-privs.md %}
-{% include /cloud-users/cloud-summary-table-privs.md %}
-{% include /cloud-users/cloud-summary-org-privs.md %}
-
 ## Before you begin
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
 * [Invite a cloud user](/docs/cloud/cloud-users/cloud-user-invite)
+* [Learn about Cloud user roles](/docs/cloud/cloud-users/cloud-ref-user-roles)
 
 ## Change user role
 

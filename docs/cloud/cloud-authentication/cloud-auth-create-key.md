@@ -1,15 +1,15 @@
 ---
-title: Create Key
+title: Create API Key
 layout: default
 parent: Manage API Keys
 grand_parent: Cloud
 nav_order: 3
 ---
 
-# How do I create an API key?
+# How do I create a FeatureBase Cloud API key?
 {: .no_toc }
 
-This procedure explains how to create an API key in FeatureBase Cloud.
+{% include /cloud-auth/cloud-auth-api-summary.md %}
 
 {% include page-toc.md %}
 
@@ -20,15 +20,18 @@ This procedure explains how to create an API key in FeatureBase Cloud.
 
 ## Create API Key
 
+{: .important}
+The API key ID and Secret are displayed **only** when created. They are **not** stored in the application.
+
 {% include /cloud-auth/cloud-auth-new-key.md %}
 
 {% include /cloud-auth/cloud-auth-click-create.md %}
 
-* Your key's information will be displayed in the confirmation dialogue. **SAVE YOUR KEY'S ID AND SECRET**. We do not store API keys. This is the only time the key will be shown to you.
-
-* Click **I've Saved The Key**
+* Take a copy of the ID and Secret
+* Click **I've Saved The Key** when finished.
 
 ## Further information
 
-* [Create key API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey)
-* [Learn how to access FeatureBase programmatically](/docs/cloud/programmaticaccess//)
+* [Cloud API reference](https://api-docs-featurebase-cloud.redoc.ly){:target="_blank"}
+* [Create key API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey){:target="_blank"}
+* [Learn about the FBSQL command-line SQL query tool](/docs/tools/fbsql/fbsql-home)

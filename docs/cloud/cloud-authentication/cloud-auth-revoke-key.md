@@ -9,28 +9,28 @@ nav_order: 5
 # How do I revoke an API key in FeatureBase Cloud?
 {: .no_toc }
 
-Learn how to revoke a FeatureBase Cloud API key.
+You may need to revoke an API key if:
+* you've lost the SECRET or ID values
+* you're rotating API keys for security purposes
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
-
-{% include /cloud-auth/cloud-auth-revoke-warning.md %}
+* [Learn how to manage API keys](/docs/cloud/cloud-authentication/cloud-auth-manage)
+* [Learn how to create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
 
 ## Warnings
 
-After a key is revoked, API calls using a revoked key will:
-* complete as normal if already in progress
-* be rejected if the call has not yet started
+Any API calls using a revoked key will:
+* complete if already in progress
+* be rejected by FeatureBase Cloud if not already started.
 
 ## Revoke an API key
 
-* Click **Configuration** > **Manage API keys**.
-* Click <span class="material-icons md-18">more_vert</span> on the API key to revoke.
-* Click **Revoke**.
+{% include /cloud-auth/cloud-auth-menu.md %}
+* Click <span class="material-icons md-18">more_vert</span> on the API key > **Revoke**
 * Click **Revoke This Key** in the confirmation dialog.
 
 ## Further information

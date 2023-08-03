@@ -14,6 +14,7 @@ has_toc: false
 
 {% include page-toc.md %}
 
+{% include /cloud-users/cloud-summary-api-key-privs.md %}
 {% include /cloud-users/cloud-summary-user-privs.md %}
 {% include /cloud-users/cloud-summary-db-privs.md %}
 {% include /cloud-users/cloud-summary-table-privs.md %}

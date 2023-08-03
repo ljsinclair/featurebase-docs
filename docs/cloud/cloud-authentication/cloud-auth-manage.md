@@ -9,35 +9,34 @@ nav_order: 5
 # How do I manage API keys in FeatureBase Cloud?
 {: .no_toc }
 
-This page provides an overview of FeatureBase API keys and links to guide you through the process of managing API keys.
+{% include /cloud-auth/cloud-auth-api-summary.md %}
 
-FeatureBase API keys are used for authentication [when accessing FeatureBase programmatically](/docs/cloud/programmaticaccess/).
+{% include page-toc.md %}
 
 ## Before you begin
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
+{: .important}
 
-{% include page-toc.md %}
+{% include /cloud-users/cloud-summary-api-key-privs.md %}
 
-{% include /cloud-auth/cloud-auth-revoke-warning.md %}
+## Where do I manage API keys?
 
-## How do I access API keys for my organization?
+{% include /cloud-auth/cloud-auth-menu.md %}
 
-Users can access API keys via the Cloud UI. 
+## How do I create an API key?
 
-1. Click **Configuration**
-2. Click **Manage API Keys** 
+* [Learn how to create an API key](/docs/cloud/cloud-auth/cloud-auth-create-key)
 
-{: .note } 
-Only admins can see all of the API keys that belong to your organization. Non-admins can see only their own keys.
+## How do I rename an API key?
 
-## Managing API keys in FeatureBase Cloud
+* [Learn how to rename an API key](/docs/cloud/cloud-auth/cloud-auth-rename-key)
 
-* [Create API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
-* [Rename API key](/docs/cloud/cloud-authentication/cloud-auth-rename-key/)
+## How do I revoke an API key?
+
 * [Revoke API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
 
 ## Further information
 
-* [Learn how to access FeatureBase Cloud programmatically](/docs/cloud/programmaticaccess/)
 * [API keys HTTP API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Keys)
+* [FBSQL command-line query editor](/docs/tools/fbsql/fbsql-home)

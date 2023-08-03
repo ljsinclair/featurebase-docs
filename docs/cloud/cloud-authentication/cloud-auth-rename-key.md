@@ -9,19 +9,20 @@ nav_order: 4
 # How do I update an API key's description in FeatureBase Cloud?
 {: .no_toc }
 
-Learn how to update a FeatureBase Cloud API key's description.
+It can be useful to edit the description of an API key to match its use-case.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
+* [Learn how to manage API keys](/docs/cloud/cloud-authentication/cloud-auth-manage)
+* [Learn how to create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
 
-## Update an API key's description
+## Update the API key description
 
-* Click **Configuration** > **Manage API keys**.
-* Click <span class="material-icons md-18">more_vert</span> on the API key to update.
+{% include /cloud-auth/cloud-auth-menu.md %}
+* Click <span class="material-icons md-18">more_vert</span> on the API key > **Rename**.
 * Update the description in the confirmation dialog.
 * Click **Rename This Key**.
 
