@@ -4,6 +4,7 @@ layout: default
 parent: Cloud
 has_children: true
 nav_order: 3
+has_toc: false
 ---
 
 # How do I connect to my FeatureBase Cloud database?
