@@ -3,7 +3,7 @@ title: Connect to cloud db
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I connect to my FeatureBase Cloud database?
