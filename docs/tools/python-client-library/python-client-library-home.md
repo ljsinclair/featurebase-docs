@@ -120,9 +120,10 @@ Result is a simple data object representing the results of a SQL query. It conta
 | `ok` | Boolean indicating query execution status |
 | `schema` | Field definitions for the result data |
 | `data` | Data rows returned by the server |
-| `error` | Error information with a code and description |
+| `error` | Error information returned by the server  |
 | `warnings` | Warning information returned by the server |
 | `execution_time` | Amount of time (microseconds) it took for the server to execute the SQL |
+| `rows_affected` | Number of data rows affected by the SQL statement |
 
 ## Further Information
 
