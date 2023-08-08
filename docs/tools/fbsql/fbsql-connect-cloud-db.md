@@ -32,7 +32,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
   [
     -[d|-dbname]="<cloud-database-name>" |
     -[f|-file] <filename> |
-    load-from-datasource>
+    <load-from-datasource>
   ]
 ```
 
