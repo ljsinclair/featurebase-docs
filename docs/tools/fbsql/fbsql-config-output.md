@@ -68,10 +68,9 @@ PSET flags can be executed from the CLI or FBSQL interface:
 | Flags | Description | Default | Additional information |
 |---|---|---|---|
 | `border [0...3]` | Border for table output | 1 | [PSET border values](#pset-query-border-values) |
-| `[ x|expanded [ on|off ] ]` | Change orientation of query results. | Off | [Query result orientation](#pset-query-result-orientation) |
-| `format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
-| `location ['<tz-identifier>']` | Location for query result timestamps | local time zone | [Timezone identifier](#pset-timezone-identifier)
-| `[t | tuples_only]` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#pset-tuples-additional) |
+| `format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-result-orientation) |
+| `location ['<tz-identifier>']` | Location for query result timestamps | local time zone | [Timezone identifier](#pset-time-zone-identifier)
+| `[t | tuples_only]` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#pset-tuples) |
 
 ## Additional information
 
