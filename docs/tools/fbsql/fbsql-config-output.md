@@ -40,8 +40,8 @@ FBSQL output can be configured from the command-line or FBSQL interface.
 
 ## File output
 
-| Flag | Description | Default | Additional information |
-|---|---|---|---|
+| Flag | Description | Additional information |
+|---|---|---|
 | `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Directory FBSQL started |  |
 {% include /fbsql/fbsql-interface-run-file-content.md %}
 
