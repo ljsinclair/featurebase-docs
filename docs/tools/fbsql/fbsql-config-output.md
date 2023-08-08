@@ -132,8 +132,6 @@ The optional time-zone can be set as follows:
 
 `tuples_only` toggles relates to `output CSV`
 
-CSV output set in
-
 | Output | Query output |
 |---|---|
 | Regular | * CSV column headers<br/>* titles<br/>* Various footers |
