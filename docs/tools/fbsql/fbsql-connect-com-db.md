@@ -50,9 +50,9 @@ FBSQL automatically connects to a local instance of FeatureBase Community
 
 {% include /fbsql/fbsql-load-sql-file-arg.md %}
 
-### Load data to FeatureBase from specified data source
+### Load data from data source
 
-{% include /fbsql/fbsql-loader-arg.md %}
+* [Learn how to use FBSQL to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
 
 ## Additional information
 
