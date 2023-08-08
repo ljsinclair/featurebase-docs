@@ -15,9 +15,8 @@ The `fbsql-loader` command can be run from the CLI to:
 ## Before you begin
 
 * [Learn about SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-* [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
-* [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
+{% include /fbsql/fbsql-before-begin.md%}
+{% include /fbsql/fb-db-create.md %}
 
 ## Syntax
 
@@ -31,7 +30,7 @@ fbsql
 
 | Argument | Description | Additional information |
 |---|---|---|
-| `<db-connection-string>` | FBSQL connection string to FeatureBase database | * [Connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [Connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
+| `<db-connection-string>` | FBSQL connection string to FeatureBase database | * [FBSQL connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [FBSQL connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
 | `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
 | `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
 | `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |

@@ -21,7 +21,7 @@ Setup a Linux or MacOS target system:
 * [Create and login to a GitHub account](https://github.com/){:target="_blank"}
 * [Install go](https://go.dev/doc/install){:target="_blank"}
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
-* Delete the `fbsql` directory if it exists
+* Delete your previous FBSQL installation directory and contents if it exists
 
 ## Step 1 - Setup installation directory
 

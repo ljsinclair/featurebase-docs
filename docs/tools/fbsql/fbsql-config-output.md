@@ -8,15 +8,12 @@ nav_order: 12
 
 # FBSQL output flags reference
 
-Configure FBSQL output including:
-* history logs
-*
+FBSQL output can be configured from the command-line or FBSQL interface.
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
-
+{% include /fbsql/fb-db-create.md %}
 {% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax

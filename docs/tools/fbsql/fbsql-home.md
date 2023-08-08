@@ -17,8 +17,8 @@ The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* [Setup a FeatureBase Cloud database](/docs/cloud/cloud-home), OR
-* [Setup a FeatureBase Community database](/docs/community/com-home)
+* [Learn about "docopt" notation standards used in this guide](http://docopt.org/){:target="_blank"}
+{% include /fbsql/fb-db-create.md %}
 
 ## How do I install FBSql?
 

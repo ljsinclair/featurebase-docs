@@ -15,10 +15,7 @@ This reference explains FBSQL flags relating to database connections and schema
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md %}
-* Connect to a database:
-  * [Connect to a Cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
-  * [Connect to a Community database](/docs/tools/fbsql/fbsql-connect-community-db)
-
+{% include /fbsql/fb-db-create.md %}
 {% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
