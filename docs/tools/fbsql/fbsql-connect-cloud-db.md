@@ -59,9 +59,9 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 
 {% include /fbsql/fbsql-db-connect-same.md %}
 
-| Argument | Description | Default | Additional information |
-|---|---|---|---|
-|`-d="<cloud-database-name>"`<br/>`--dbname="<database-name>"` | Connect to available database on cloud system |  |  |
+| Argument | Description | Additional information |
+|---|---|---|
+|`-[d|-dbname]="<cloud-database-name>"` | Connect to available Cloud database | [Create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage) |
 
 ### Load SQL from a source file
 
