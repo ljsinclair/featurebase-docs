@@ -13,8 +13,8 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
-* [Startup FeatureBase Community](/docs/community/com-home#startup-featurebase-community), OR
-* [Verify your FeatureBase Cloud database is running](/docs/cloud/cloud-login)
+* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
+{% include /fbsql/fbsql-cli-folder.md %}
 {% include /fbsql/fbsql-help-quit.md %}
 
 ## Syntax
