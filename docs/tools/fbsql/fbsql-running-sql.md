@@ -10,9 +10,6 @@ nav_order: 4
 
 Valid SQL queries can be run directly in the FBSQL interface and via files in accessible directories.
 
-{: .note}
-You can also run SQL from a file when you connect to a database.
-
 This reference explains FBSQL flags relating to database connections and schema
 
 ## Before you begin
@@ -30,24 +27,20 @@ This reference explains FBSQL flags relating to database connections and schema
 [
   (<meta-flag-prefix>)
     [ c|connect [ <cloud-database-name> | - ] ] |
-    [
-      [ d[< tablename>|t|v] ] |
-      [ l|list ]
-    ]
-    [ t|timing [on|off] ]
+    [ d[< tablename>|t|v ] ] |
+    [ l|list ] |
+    # Variables
+    [ set <variable-name> [variable-value,...] ] |
+    [ unset <variable-name> ] |
+    # running queries
     [ i|include <filename.sql> ] |
-    [ w|watch <seconds> ] |
-    [
-      [set <variable-name> [variable-value,...]] |
-      [unset <variable-name>]
-    ] |
-    [o|output <query-output-file>] |
-    [p|print] |
-    [r|reset]
-  <query-output-flags>
+    [ watch <seconds> ] |
+    [ t|timing [on|off] ] |
+    [ p|print ] |
+    [ r|reset ] |
+    [ <pset-query-output-flags> ]
 ]
 <sql-query>
-
 ```
 
 {% include /fbsql/fbsql-prefix-meta-flags.md %}
@@ -68,33 +61,37 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Flag | Description | Additional information |
 |---|---|---|
-| * `i <filename.sql>`<br/>* `include <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
-| `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias examples](#create-filename-aliases) |
+|`[i|include] <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
+| `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias](#filename-alias) |
+| `[w|write] <filename>` | Write most recent query or query buffer to file |  | [File write](#file-write) |
 
 ## Query flags
 
-| Flag | Description | Default | Additional information |
-|---|---|---|---|
-| `timing` | Toggle time SQL statement takes to execute | off |  |
-| `watch <seconds>` | Repeat query from buffer or last in history at interval of <seconds> until failure or manual break |  |  |
-| `o <query-output-filename>`<br/>`out <query-output-filename>` | Define existing file to output query results |  |  |
+| Flag | Description | Default |
+|---|---|---|
+| `timing` | Toggle time SQL statement takes to execute | off |
+| `watch <seconds>` | Repeat query from buffer or last in history at interval of <seconds> until failure or manual break |  |
 
 ## Query buffer flags
 
-| Flag | Description | Default |
-|---|---|---|
-| * `p`<br/>* `print` | Display most recent query or query buffer to FBSQL interface followed by a newline |  |
-| * `r`<br/>* `reset` | Reset query buffer |
+| Flag | Description |
+|---|---|
+| `[p | print]` | Display most recent query or query buffer to FBSQL interface followed by a newline |
+| `[r | reset]` | Reset query buffer |
 
 ## Set variable flags
 
-| Flag | Description |
-|---|---|
-| `set` | List all variable names |
-| `set|unset <variable-name>` | Set or unset named variable |
-| `set <variable-name> <variable-value>` | Set a variable name and value. Multiple variables are concatenated. |
+| Flag | Description | Additional information |
+|---|---|---|
+| `set` | List all variable names |  |
+| `[set|unset] <variable-name>` | Set or unset named variable |  |
+| `set <variable-name> <value>...` | Set a variable name and value. Multiple values are concatenated. | [SET variable names](#set-variable-names) |
 
-## SQL syntax
+## PSET query output flags
+
+* [PSET query output flags](/docs/tools/fbsql/fbsql-config-output#pset-prefix)
+
+## SQL query syntax
 
 * [SQL guide](/docs/sql-guide/sql-guide-home) |
 
@@ -108,17 +105,20 @@ This reference explains FBSQL flags relating to database connections and schema
 
 {% include /fbsql/fbsql-db-connect-same.md %}
 
-### SET variable names
+### Filename alias
 
-Variable names are case-sensitive and are inserted into SQL statements in two ways:
-* `:<variable-name>`
-* `:"<variable-name>"`
+Aliases are case sensitive and can be inserted into statements in two ways:
+
+| Quotation marks | Example |
+|---|---|
+| Single | `:'<variable-name>'` |
+| Double | `:"<variable-name>"` |
 
 ## Examples
 
-### Create filename aliases
+### Filename alias examples
 
-#### Filename alias for CSV file
+#### Alias for CSV file
 
 Create a filename alias for file containing CSV data:
 
@@ -159,6 +159,21 @@ Use the alias in a SQL statement:
 ```sql
 CREATE VIEW docview AS :mynewview;
 ```
+
+### SET variable
+
+| SET variable | Result |
+|---|---|
+| `\set myvarname 1,2,3,4` | `myvarname = '1,2,3,4'` |
+| `\set myvarname 1 2 3 4` | `myvarname = '1234'` |
+
+### SET variable in a query
+
+`\SET prod products`
+
+Query with variable
+
+`select * from :prod;`
 
 ## Further information
 

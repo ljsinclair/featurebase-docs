@@ -9,6 +9,7 @@ nav_order: 12
 # FBSQL output flags reference
 
 Configure FBSQL output including:
+* history logs
 *
 
 ## Before you begin
@@ -23,10 +24,9 @@ Configure FBSQL output including:
 ```
 
 [ (<meta-prefix>)
-    <history-logs>
-    <file-output-flags> |
-    <write-messages-to-output-flags> |
-    <query-buffer-flags>
+    <history-logs> |
+    <file-output> |
+    <write-text-to-output>
 ] |
 [ (<pset-prefix>)
     <pset-output-flags>
@@ -37,29 +37,25 @@ Configure FBSQL output including:
 
 ## History logs
 
-| Flag | Description | Default | Additional information |
-|---|---|---|---|
-| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |  |
+| Flag | Description | Default |
+|---|---|---|
+| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |
 
-## File output flags
-
-Output can be directed to files in the currently set directory.
+## File output
 
 | Flag | Description | Default | Additional information |
 |---|---|---|---|
-| `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Directory FBSQL was started |  |
+| `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Directory FBSQL started |  |
 | `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately |  | [Run content in file](#run-content-in-file) |
-| `w`<br/>`\write <filename>` | Write most recent query or query buffer to defined file |  |  |
 
-## Write messages to output flags
+## Write text to output
 
-Write specified text to specific destination:
-
-| Flag | Destination |
+| Flag | Description |
 |---|---|
-| `echo <text>` | FBSQL interface |
-| `qecho <text>` | Query output defined by `\[o|output <output-filename>]` |
-| `warn <text>` | FBSQL standard error channel |
+| `[o | out] <query-output-filename>` | Define existing file to output query results |
+| `echo <text>` | Output `<text>` to FBSQL interface |
+| `qecho <text>` | Output `<text>` to file defined by `\[o|output <output-filename>]` |
+| `warn <text>` | Output `<text>` to FBSQL standard error channel |
 
 ## PSET prefix
 
@@ -74,11 +70,11 @@ PSET flags can be executed from the CLI or FBSQL interface:
 
 | Flags | Description | Default | Additional information |
 |---|---|---|---|
-| `border [0...3]` | Border for table output | 1 | [PSET border values](#query-border-values) |
-| `[ x|expanded [on|off]]` | Change orientation of query results. | Off | [Query result orientation](#query-result-orientation) |
-| `pset format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
-| `pset location ['tz-identifier']` | Location for query result timestamps | local time zone | [Location timezone additional ](#location-timezone-additional)
-| `pset t` <br/> `pset tuples_only` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#tuples-additional) |
+| `border [0...3]` | Border for table output | 1 | [PSET border values](#pset-query-border-values) |
+| `[ x|expanded [ on|off ] ]` | Change orientation of query results. | Off | [Query result orientation](#pset-query-result-orientation) |
+| `format [aligned | csv]` | Toggle query result format from column, row format to RFC 4180 standard CSV format | Aligned | [Query output format](#pset-query-output-format) |
+| `location ['<tz-identifier>']` | Location for query result timestamps | local time zone | [Timezone identifier](#pset-timezone-identifier)
+| `[t | tuples_only]` | Toggle storage of multiple values in a single variable. | off | [Tuples additional](#pset-tuples-additional) |
 
 ## Additional information
 
@@ -96,7 +92,7 @@ location    Local
 tuples_only off
 ```
 
-### Query border values
+### PSET query border values
 
 | Value | Table border | Additional information |
 |---|---|---|
@@ -105,7 +101,7 @@ tuples_only off
 | 2 | Table frame |  |
 | 3 | Latex format dividing lines between rows if Add latex format dividing lines between rows | Requires Latex |
 
-### Query result orientation
+### PSET query result orientation
 
 {: .note}
 `\x [on | off]` can also be used to change result orientation
@@ -115,7 +111,7 @@ tuples_only off
 | on | Left column | Right column |
 | off | Top row | Bottom rows |
 
-### CSV output format
+### PSET CSV output format
 
 * Titles and footers are not printed.
 * Header line with column names generated when `tuples_only` parameter is `off`
@@ -126,7 +122,7 @@ tuples_only off
 | Linux<br/>MacOS | Single new-line character | `\n` |
 | Windows | Carriage return and newline sequence |`\r\n` |
 
-### Location time-zone additional
+### PSET time-zone identifier
 
 The optional time-zone can be set as follows:
 
@@ -136,9 +132,11 @@ The optional time-zone can be set as follows:
 | `UTC` | UTC time |  |
 | `region/city` | Region and city UTC offset | [UTC region/city offset values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones){:target="_blank"}
 
-### Tuples additional
+### PSET tuples
 
-`\pset tuples_only` toggles between regular and tuples output.
+`tuples_only` toggles relates to `output CSV`
+
+CSV output set in
 
 | Output | Query output |
 |---|---|
