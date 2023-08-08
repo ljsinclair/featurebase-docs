@@ -11,8 +11,6 @@ FBSQL is provided as a tool for anyone who downloads the FeatureBase source code
 
 The application will run natively on any Linux or MacOS operating system. For Windows machines, the system can be setup and run on a Linux virtual machine.
 
-{% include page-toc.md %}
-
 ## Before you begin
 
 * [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
