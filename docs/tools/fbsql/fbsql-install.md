@@ -1,11 +1,11 @@
 ---
-title: Install fbsql
+title: Install or upgrade FBSQL
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 1
 ---
-# How do I install the fbsql CLI?
+# How do I install or upgrade the FBSQL CLI?
 
 FBSQL is provided as a tool for anyone who downloads the FeatureBase source code from GitHub.
 
@@ -23,24 +23,21 @@ Setup a Linux or MacOS target system:
 * [Create and login to a GitHub account](https://github.com/){:target="_blank"}
 * [Install go](https://go.dev/doc/install){:target="_blank"}
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+* Delete the `FBSQL` directory if it exists
 
-## Step 1 - Create a destination directory for the source code
+## Step 1 - Setup installation directory
 
-* Open a CLI then create a destination directory in an appropriate directory
+* Open a CLI on your computer.
+* Run `mkdir fbsql`.
 
-```sh
-mkdir fbsql
-```
+## Step 2 - clone the repository and install FBSQL
 
 * CD to `fbsql` then clone the FeatureBase code repository:
 
 ```
 git clone https://github.com/FeatureBaseDB/featurebase
 ```
-
-## Step 2 - install FBSQL
-
-Install FBSQL from the `*/fbsql/featurebase` directory:
+* CD to `featurebase` then run the installation command:
 
 ```shell
 make install-fbsql
