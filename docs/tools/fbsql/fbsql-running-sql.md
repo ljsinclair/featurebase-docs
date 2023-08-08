@@ -26,10 +26,8 @@ This reference explains FBSQL flags relating to database connections and schema
     [ c|connect [ <cloud-database-name> | - ] ] |
     [ d[< tablename>|t|v ] ] |
     [ l|list ] |
-    # Variables
     [ set <variable-name> [variable-value,...] ] |
     [ unset <variable-name> ] |
-    # running queries
     [ i|include <filename.sql> ] |
     [ watch <seconds> ] |
     [ t|timing [on|off] ] |

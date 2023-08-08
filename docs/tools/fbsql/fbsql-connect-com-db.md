@@ -27,7 +27,7 @@ Connect to a FeatureBase Community database with FBSQL.
   )
   [
     -[f|-file] <filename> |
-    --fbsql-loader (impala|kafka|postgres)
+    <load-from-datasource>
   ]
 ```
 
