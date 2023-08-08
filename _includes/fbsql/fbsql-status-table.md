@@ -1,6 +1,6 @@
 ### FBSQL status
 
-FBSQL displays status information at startup
+FBSQL displays status information at startup:
 
 | Status | Description | Additional information |
 |---|---|---|
