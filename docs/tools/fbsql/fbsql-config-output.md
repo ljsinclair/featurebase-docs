@@ -43,7 +43,7 @@ FBSQL output can be configured from the command-line or FBSQL interface.
 | Flag | Description | Default | Additional information |
 |---|---|---|---|
 | `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Directory FBSQL started |  |
-| `i <filename>`<br/>`insert <filename>` | Run content of specified file immediately |  | [Run content in file](#run-content-in-file) |
+{% include /fbsql/fbsql-interface-run-file-content.md %}
 
 ## Write text to output
 

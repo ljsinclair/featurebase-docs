@@ -56,9 +56,9 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Flag | Description | Additional information |
 |---|---|---|
-|`[i|include] <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
 | `file <filename> [<alias>]` | Create alias for filename to use in SQL queries | [Filename alias](#filename-alias) |
 | `[w|write] <filename>` | Write most recent query or query buffer to file |  | [File write](#file-write) |
+{% include /fbsql/fbsql-interface-run-file-content.md %}
 
 ## Query flags
 
@@ -88,7 +88,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 ## SQL query syntax
 
-* [SQL guide](/docs/sql-guide/sql-guide-home) |
+* [SQL guide](/docs/sql-guide/sql-guide-home)
 
 ## Additional information
 
