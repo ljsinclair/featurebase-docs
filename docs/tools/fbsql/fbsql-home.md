@@ -19,9 +19,9 @@ The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
 * [Learn about "docopt" notation standards used in this guide](http://docopt.org/){:target="_blank"}
 {% include /fbsql/fb-db-create.md %}
 
-## How do I install FBSql?
+## How do I install or upgrade FBSql?
 
-* [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
+* [Learn How To Install or upgrade FBSQL](/docs/tools/fbsql/fbsql-install)
 
 ## How do I open and quit the FBSQL interface?
 
@@ -39,7 +39,7 @@ The FBSQL Command Line Interface tool for Linux and MacOS systems supports:
 
 Run SQL queries in the FBSQL interface or using text files:
 
-* [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql.md)
+* [Learn how to run SQL on FBSQL](/docs/tools/fbsql/fbsql-running-sql)
 
 ## How do I format SQL query output?
 
@@ -50,4 +50,4 @@ FBSQL meta-commands give you full control over query output:
 ## Further information
 
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
-* [Learn about FBSql loaders](/docs/tools/fbsql/fbsql-loaders)
+* [Learn about FBSQL loaders](/docs/tools/fbsql/fbsql-loaders)
