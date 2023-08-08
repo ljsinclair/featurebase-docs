@@ -13,7 +13,6 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
-* [Install FBSQL](/docs/tools/fbsql/fbsql-install)
 {% include /fbsql/fbsql-cli-folder.md %}
 {% include /fbsql/fbsql-help-quit.md %}
 
