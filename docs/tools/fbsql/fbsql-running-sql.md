@@ -44,13 +44,13 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Argument | Description | Additional information |
 |---|---|---|
-| * `c <cloud-database-name>`<br/>* `connect <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
-| *`c -`<br/>* `connect -` | Disconnect from the current cloud database |  |
+| `[c|connect] <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
+| `[c|connect] -` | Disconnect from the current cloud database |  |
 | `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
 | `d <tablename>` | Equivalent to `SHOW COLUMNS` statement | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
 | `dt` | Equivalent to `SHOW TABLES` statement | [SHOW TABLES](/docs/sql-guide/statements/statement-table-show) |
 | `dv` | Show definition of all views | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
-| * `l`<br/>* `list` | List databases in connected Cloud database |  |
+| `[l|list]` | List databases in connected Cloud database |  |
 
 ## File flags
 
