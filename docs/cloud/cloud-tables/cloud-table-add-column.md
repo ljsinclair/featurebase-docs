@@ -3,7 +3,7 @@ title: Add columns
 layout: default
 parent: Manage tables
 grand_parent: Cloud
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I add a column to an existing table in FeatureBase Cloud?
