@@ -118,7 +118,7 @@ Aliases are case sensitive and can be inserted into statements in two ways:
 Create a filename alias for file containing CSV data:
 
 ```
-fbsql=# \file insert_test.csv icsv
+\file insert_test.csv icsv
 ```
 
 Use the alias in SQL statement:
@@ -137,7 +137,7 @@ fbsql-# bulk replace
 
 #### Alias for SQL file
 
-Create `docviewtest.sql` and add the following SQL statement:
+* Create `docviewtest.sql` and add the following SQL statement:
 
 ```sql
 SELECT * from doctest where _id = 0;
@@ -146,7 +146,7 @@ SELECT * from doctest where _id = 0;
 Add filename alias:
 
 ```
-\file docviewtest.sql mynewview
+fbsql -c '\file docviewtest.sql mynewview'
 ```
 
 Use the alias in a SQL statement:
@@ -159,8 +159,8 @@ CREATE VIEW docview AS :mynewview;
 
 | SET variable | Result |
 |---|---|
-| `\set myvarname 1,2,3,4` | `myvarname = '1,2,3,4'` |
-| `\set myvarname 1 2 3 4` | `myvarname = '1234'` |
+| `set myvarname 1,2,3,4` | `myvarname = '1,2,3,4'` |
+| `set myvarname 1 2 3 4` | `myvarname = '1234'` |
 
 ### SET variable in a query
 
