@@ -33,7 +33,7 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 * CD to `fbsql` then clone the FeatureBase code repository:
 
 ```
-git clone https://github.com/FeatureBaseDB/featurebase
+git clone git@github.com:molecula/featurebase.git
 ```
 * CD to `featurebase` then run the installation command:
 
