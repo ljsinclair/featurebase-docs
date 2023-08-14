@@ -1,6 +1,6 @@
 ```sql
 INSERT INTO products
-  (_id, prodlist, price)
+  (_id, item, price)
   VALUES
   (1, 'pen', 2.50),
   (2, 'pencil', 0.50),

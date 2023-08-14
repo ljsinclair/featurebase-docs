@@ -20,7 +20,7 @@ nav_order: 3
 ### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 
-## DML syntax
+## Syntax
 
 ```
 INSERT INTO
@@ -31,24 +31,33 @@ INSERT INTO
 
 ## Arguments
 
-| Argument | Description | Required? | Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | table_name | Target table name | Yes |  |
 | column_list | List of columns which must include the `_id` column | Optional | FeatureBase assumes values to be inserted into existing columns if omitted |
-| value_list | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | The length of the value_list must match the length of the column_list. |
+| value_list | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | [Value list additional](#value-list-additional) |
 
-## Value assignment
+## Additional information
+
+### Limitations
+
+The `INSERT` statement has the following limitations:
+
+| Limitation | Example | Result |
+|---|---|---|
+| Number of values to INSERT must match the number of columns in `column_list` | `INSERT INTO productnames (_id, products, sales)` VALUES (1, 'FeatureBase') | Run fails with error |
+| Values in rows with duplicate `_id` keys are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
+| Null values in rows with duplicate `_id` keys are ignored | | `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
+
+### Value assignment
+
 There are special assignments for certain literal values.
 
-| Literal Value | Target Data Type | Resultant | Further information |
+| Literal Value | Target Data Type | Result | Further information |
 |---|---|---|---|
 | `,'',` | `string`| `''` (empty string) | |
 | `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |
 | `[]` | `stringset` <br/>`idset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
-
-## Warnings
-FeatureBase recommends limiting INSERT statements to one record per key to avoid unexpected results.
-Inconsistencies may occur when a single INSERT statement contains multiple records that share the same key, and are known to occur if, for a given key, a field is being set to both NULL and non-NULL values
 
 ## UPDATE/REPLACE behavior
 
@@ -56,9 +65,9 @@ Inconsistencies may occur when a single INSERT statement contains multiple recor
 
 ## Examples
 
-### CREATE products and sales tables and columns with string data types
+### CREATE TABLE with string data types
 
-{% include /sql-guide/table_create_products_sales.md %}
+{% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
 ### INSERT multiple records INTO `products` and `services` tables
 
@@ -80,15 +89,9 @@ INSERT INTO services (_id, servicelist, price)
 VALUES (2, 'local postage per item', 2.20);
 ```
 
-### CREATE table with time quantum data types
+### CREATE TABLE with TIMEQUANTUM constraints
 
-```sql
-CREATE TABLE timeq (
-_id id,
-stringsetcolq stringsetq timequantum 'YMD',
-idsetcolq idsetq timequantum 'YMD'
-);
-```
+{% include /sql-guide/table-create-timequantum-eg.md %}
 
 ### INSERT for time quantum data types
 
@@ -101,7 +104,7 @@ VALUES (1, {'2018-08-31T00:00:00Z', ['A','B']}, {1676649734, [1]});
 
 ### CREATE TABLE with `STRINGSET` data types
 
-{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+{% include /sql-guide/table-create-stringset-datatype-eg.md %}
 
 ### INSERT data to `STRINGSET`
 

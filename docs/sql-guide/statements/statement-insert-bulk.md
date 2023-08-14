@@ -42,7 +42,7 @@ Supported formats include:
 ![expr](/assets/images/sql-guide/bulk_insert_options.svg)
 ![expr](/assets/images/sql-guide/bulk_insert_option.svg)
 
-## DML syntax
+## Syntax
 
 ```
 BULK INSERT

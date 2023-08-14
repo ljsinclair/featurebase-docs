@@ -13,7 +13,7 @@ Timestamp is a date-time data type which represents the specified `timeunit` as 
 ## Before you begin
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
-## DDL Syntax
+## Syntax
 
 ```
 TIMESTAMP [TIMEUNIT {value}]

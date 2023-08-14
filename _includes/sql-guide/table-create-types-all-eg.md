@@ -1,4 +1,3 @@
-
 ```sql
 create table allcoltypes
   (

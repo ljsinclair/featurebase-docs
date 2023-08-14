@@ -15,14 +15,14 @@ Add, Rename or Drop columns from an existing table.
 <!---NOTE: alter_table_stmt.svg IS WRONG:
 * It omits table_name
 * RENAME is not yet implemented so needs to be removed (see below)
-The statement in the DDL syntax is correct and I've tested it-->
+The statement in the Syntax is correct and I've tested it-->
 ![expr](/assets/images/sql-guide/alter_table_stmt.svg)
 
 <!--RENAME generates an error:
 "query error: internal error (/builds/molecula/featurebase/sql3/planner/opaltertable.go:112) column rename is unimplemented"
 Once it's implemented:
 1. add RENAME back into the BNF diagram
-2. add the following SQL to the DDL syntax (between ADD and DROP) once it's implemented:
+2. add the following SQL to the Syntax (between ADD and DROP) once it's implemented:
 
 RENAME COLUMN {column_name to column_name } |
 
@@ -32,7 +32,7 @@ RENAME COLUMN {column_name to column_name } |
 ![expr](/assets/images/sql-guide/add_column.svg)
 ![expr](/assets/images/sql-guide/drop_column.svg)
 
-## DDL syntax
+## Syntax
 
 ```
 ALTER table_name [

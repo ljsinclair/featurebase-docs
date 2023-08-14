@@ -46,7 +46,7 @@ The choice of `Vertebrae` as unique identifier for your data results in:
 
 A Create Table statement is created and run:
 
-{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+{% include /sql-guide/table-create-stringset-datatype-eg.md %}
 
 The `STRINGSET` data type allows you to insert the species data as individual items within the same row and column.
 

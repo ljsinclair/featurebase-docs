@@ -10,7 +10,7 @@ nav_order: 4
 
 IDSET is a FeatureBase datatype used to set multiple ID values for a single column.
 
-## DDL syntax
+## Syntax
 
 ```
 IDSET
@@ -34,4 +34,4 @@ The IDSET data type:
 
 ### CREATE TABLE with all data types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}

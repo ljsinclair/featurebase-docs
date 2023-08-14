@@ -17,16 +17,11 @@ FeatureBase supports different types of queries that are discussed further in th
 
 {% include /cloud/cloud-db-create-before-begin.md %}
 
-## How do I run SQL queries in FeatureBase?
+## Running SQL queries
 
-FeatureBase supplies a number of methods to run SQL queries:
+SQL queries can be run against FeatureBase tables in the following ways:
 
-| Method | Description | Further information |
-|---|---|---|
-| API | Use REST APIs to perform CRUDL (Create/Read/Update/Delete/List) operations on their cloud resources | [Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
-| Cloud query editor | Built-in GUI query editor | [Cloud query editor](/docs/cloud/cloud-query/cloud-query-data) |
-| Community query editor | Built-in GUI query editor | [Community query editor](/docs/community/com-query/com-query-home) |
-| FBSQL CLI tool | CLI tool used to run queries against a FeatureBase database | [FBSQL tool](/docs/tools/fbsql/fbsql-home) |
+{% include /sql-guide/sql-guide-supported-tools.md %}
 
 ## Statements
 

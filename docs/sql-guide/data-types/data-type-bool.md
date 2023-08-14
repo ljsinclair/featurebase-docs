@@ -8,10 +8,10 @@ nav_order: 1
 
 # BOOL data type
 
-## DDL Syntax
+## Syntax
 
 ```
-BOOL
+BOOL [TRUE | FALSE]
 ```
 
 ## Arguments
@@ -33,6 +33,20 @@ Use this table to determine how integer and string values are represented when a
 
 ## Examples
 
-### CREATE TABLE with all data types
+### CREATE TABLE with boolean data type
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+```sql
+CREATE TABLE docbool  (
+    _id id,
+    boolcol bool);
+```
+
+### INSERT INTO boolean data type
+
+```sql
+INSERT INTO docbool
+  (_id, boolcol)
+  VALUES
+  (1, FALSE),
+  (2, TRUE);
+```

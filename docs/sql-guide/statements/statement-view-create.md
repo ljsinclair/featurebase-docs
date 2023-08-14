@@ -14,7 +14,7 @@ Creates a FeatureBase view. The view already exists and `IF NOT EXISTS` is not s
 
 ![expr](/assets/images/sql-guide/create_view_stmt.svg)
 
-## DDL Syntax
+## Syntax
 
 ```
 CREATE VIEW view_name

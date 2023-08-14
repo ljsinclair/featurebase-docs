@@ -10,7 +10,7 @@ nav_order: 2
 
 Decimal is a numeric data type used with `scale` constraint.
 
-## DDL Syntax
+## Syntax
 
 ```
 DECIMAL[({SCALE value})]
@@ -35,8 +35,8 @@ DECIMAL[({SCALE value})]
 
 ### CREATE TABLE with all data types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}
 
 ### CREATE TABLE with decimal data type
 
-{% include /sql-guide/table_create_products_sales.md %}
+{% include /sql-guide/table-create-prod-sale-string-eg.md %}

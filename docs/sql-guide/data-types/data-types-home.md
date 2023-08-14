@@ -66,7 +66,7 @@ Values are supplied as comma-separated values and once ingested can be queried u
 
 ## Example Create Table statement
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}
 
 ## Further information
 

@@ -14,7 +14,7 @@ Kills a running SQL query. If the targeted query is not in running status then t
 
 ![expr](/assets/images/sql-guide/kill_query_stmt.svg)
 
-## DDL Syntax
+## Syntax
 
 ```sql
 KILL QUERY 'request_id';

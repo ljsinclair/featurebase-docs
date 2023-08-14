@@ -10,7 +10,7 @@ nav_order: 5
 
 IDSETQ is a FeatureBase datatype used to set multiple ID values and associate times for each value in a single column.
 
-## DDL syntax
+## Syntax
 
 ```
 IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]
@@ -41,6 +41,10 @@ Use the INT data type to perform range queries using `<` or `>`
 
 ## Examples
 
+### CREATE TABLE with SETQ Timequantum
+
+{% include /sql-guide/table-create-timequantum-eg.md %}
+
 ### CREATE TABLE with all data types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}
