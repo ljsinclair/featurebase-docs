@@ -71,7 +71,7 @@ SELECT
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
 | column_expr | Specify a column or non-aggregate calculation on a column which is not required to appear in the select_list | Must exist in the from_clause |  |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional | [`<expr>` filter conditions](#expr-filter) |
-| order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
+| order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | [Ordering results](#ordering-results) |
 
 ## Additional information
 
@@ -121,7 +121,15 @@ The table_or_subquery expression can be:
 * a table_name or table_valued_function
 * a parenthesized `SELECT` statement
 
-Both expressions can be aliased with a <table_alias>
+Both expressions can be aliased with a `<table_alias>`
+
+### Ordering results
+
+| Subclause | Description |
+|---|---|
+| `asc` | Ascending order of results |
+| `desc` | Descending order of results |
+| `rank` | Used to order results by weighting that shows relative similarity between strings in tables containing vector values |
 
 ## Examples
 

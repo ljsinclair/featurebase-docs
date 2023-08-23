@@ -57,7 +57,8 @@ There are special assignments for certain literal values.
 |---|---|---|---|
 | `,'',` | `string`| `''` (empty string) | |
 | `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |
-| `[]` | `stringset` <br/>`idset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
+| `[]` | `idset` <br/>`stringset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
+| `{}` | `idsetq`<br/>`stringsetq` | Curly brackets surround each datestamp and value to be inserted into the array | May also be used for vector arrays |
 
 ## UPDATE/REPLACE behavior
 
@@ -96,6 +97,9 @@ VALUES (2, 'local postage per item', 2.20);
 ### INSERT for time quantum data types
 
 The following statement inserts values with an associated timestamp (using either a unix time or timestamp) into `timeq`,  which has `IDSETQ` and `STRINGSETQ` data types.
+
+{: .important}
+Curly brackets in the following example are mandatory and do not represent syntax grammar.
 
 ```sql
 INSERT INTO timeq(_id, stringsetcolq, idsetcolq)

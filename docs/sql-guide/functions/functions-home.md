@@ -50,6 +50,7 @@ has_toc: false
 * [STR()](/docs/sql-guide/functions/function-str)
 * [STRINGSPLIT()](/docs/sql-guide/functions/function-stringsplit)
 * [SUBSTRING()](/docs/sql-guide/functions/function-substring)
+* [TANIMOTO()](/docs/sql-guide/functions/function-tanimoto)
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [UPPER()](/docs/sql-guide/functions/function-upper)
 * [LOWER()](/docs/sql-guide/functions/function-lower)
