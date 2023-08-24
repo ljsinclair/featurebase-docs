@@ -132,7 +132,7 @@ fbsql-# bulk replace
      -#     'icsv'
      -# with
      -#     format 'CSV'
-     -#     input 'STREAMX';
+     -#     input 'STREAM';
 ```
 
 #### Alias for SQL file
