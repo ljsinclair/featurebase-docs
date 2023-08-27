@@ -1,7 +1,7 @@
 ---
 title: DATETIMEADD()
 layout: default
-parent: SQL functions
+parent: Functions
 grand_parent: SQL guide
 ---
 

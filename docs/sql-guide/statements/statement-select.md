@@ -58,6 +58,34 @@ SELECT
   [<order_by_clause>];
 ```
 
+<!-- Alternate SYNTAX
+SELECT
+  [DISTINCT]
+  [TOP|TOPN (expr]
+  {[select-item,...]| AS | column_alias | [qualifier.]* }
+  {FROM
+    [table | subquery],...] |
+    [
+      [identifier | table_valued_function] [AS] | [table_alias] | [table_options]
+    ]
+    [
+      [shards (integer_literal,...)] |
+      [flatten (identifier)]
+    ]
+  }
+  WHERE expr
+  GROUP BY [column | order_by_expression]
+
+  col-name,...}
+  [WHERE ]
+  [Having]
+  GROUP BY
+
+  ORDER BY [col_name | num_results] [asc | desc]
+-->
+
+SELECT id, description, cosine_distance([-0.027067707851529, 0.009963636286557, 0.034747183322906], dabed) AS rank FROM products;
+
 ## Arguments
 
 | Argument | Description | Required | Additional information |
@@ -123,13 +151,11 @@ The table_or_subquery expression can be:
 
 Both expressions can be aliased with a `<table_alias>`
 
-### Ordering results
+#### Arguments
 
-| Subclause | Description |
+| Argument | Description |
 |---|---|
-| `asc` | Ascending order of results |
-| `desc` | Descending order of results |
-| `rank` | Used to order results by weighting that shows relative similarity between strings in tables containing vector values |
+| col_name | Column name
 
 ## Examples
 
@@ -234,11 +260,13 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 
 ### SELECT statement with wildcard
 
-```sql
-SELECT * FROM services WHERE servicelist LIKE '%free%';
-```
+{% include /sql-guide/select-wildcard.md %}
+
+### SELECT with cosine_distance
+
+{% include /sql-guide/select-cosine-distance.md %}
+
 
 ## Further information
-
 
 * [SQL statement wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){:target="_blank"}

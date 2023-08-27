@@ -75,6 +75,10 @@ CREATE TABLE
 
 {% include /sql-guide/table-create-timequantum-eg.md %}
 
+### CREATE TABLE with vector array
+
+{% include /sql-guide/table-create-vector.md %}
+
 ### CREATE TABLE with all column types
 
 {% include /sql-guide/table-create-types-all-eg.md %}

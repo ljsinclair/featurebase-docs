@@ -25,24 +25,25 @@ Data types and constraints are used to define table columns when creating tables
 
 {% include /sql-guide/datatype-mapping.md %}
 
+## Date/Time data types
+
+{% include /sql-guide/data-type-timestamp-summary.md %}
+
+* [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
+
 ## Numeric data types
 
 | User data | Data type |
 |---|---|
 | Boolean, yes/no | [BOOL](/docs/sql-guide/data-types/data-type-bool) |
 | Floating point | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
+| Floating point array | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |
 | Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) |
 | Signed integer | [INT](/docs/sql-guide/data-types/data-type-int) |
 
 ## String data types
 
 * [STRING](/docs/sql-guide/data-types/data-type-string)
-
-## Date/Time data types
-
-{% include /sql-guide/data-type-timestamp-summary.md %}
-
-* [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
 
 ## Low-cardinality data types
 
@@ -64,7 +65,9 @@ Values are supplied as comma-separated values and once ingested can be queried u
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
-## Example Create Table statement
+## Examples
+
+### Create Table statement with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
 

@@ -120,6 +120,16 @@ INSERT
     ('no', ['Starfish']);
 ```
 
+### INSERT data to vector table
+
+#### CREATE TABLE statement
+
+{% include /sql-guide/table-create-vector.md %}
+
+#### INSERT INTO statement
+
+{% include /sql-guide/insert-into-vector-table.md %}
+
 ## Further information
 
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)

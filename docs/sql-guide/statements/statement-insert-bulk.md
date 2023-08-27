@@ -72,20 +72,21 @@ BULK INSERT
 |---|---|---|---|
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
-| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. | Optional |  |
-| `MAP` | Map expresses how the source data is mapped from its location and what datatype it should be outputted as. | Yes | [Map examples](#map-examples) |
+| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
+| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `TRANSFORM expr` | A number of SQL expressions matching those in the column_list which specify data transformation using ordinal positions defined in the MAP clause.  Variables are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
 | `x'records'` | CSV or NDJSON records as a string literal. | Required for INLINE | Not supported for `FORMAT 'PARQUET'` |
 | `WITH` | Pass one or more statement level options. | Optional |  |
-| `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
+| `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional | Can be used with `STREAM` to batch records as they are streamed to the server where batching not available on client |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
-| `INPUT` | Input values must match those used in the `FROM` clause |  | `INLINE` is used for data included directly in the `FROM` clause. `STREAM` supports a streaming payload using an http multipart POST. See [fbsql](/docs/tools/fbsql/fbsql-home/) for an implementation of its use. `BATCHSIZE` is honored with `STREAM` as it batches records according to that value as the stream of records is received by the server. There's no batching on the client. |
-| `'INLINE'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `INPUT` | Input values must match those used in the `FROM` clause |  |  |
+| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `'STREAM'` | `STREAM` supports a streaming payload using an http multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
 | `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (INLINE)` |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
@@ -93,8 +94,7 @@ BULK INSERT
 | `CSV_NULL_AS_NULL` | `CSV` argument that will assign `NULL` value as `null` | Optional |  |
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument that outputs a `NULL` value from the MAP clause if the path expression fails. | Optional |  |
 
-## MAP clause
-The Map clause expresses how the source data is mapped from its location and what datatype it should be outputted as. Values from the MAP clause are placed directly into the columns specified in the `column_list`.
+## Additional information
 
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
@@ -107,6 +107,7 @@ There are special assignments for certain literal values when inserting CSV data
 | `,NULL,` | All unless explicitly listed | `'NULL'` (string literal) | if `CSV_NULL_AS_NULL` is used, the resultant becomes `NULL` |
 
 ### NDJSON Value Assignment
+
 There are special assignments for certain literal values when inserting NDJSON data.
 
 | Literal Value | Target Data Type | Resultant | Further information |
@@ -118,24 +119,15 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-## TRANSFORM clause
-
-The `TRANSFORM` clause is a list of valid SQL expressions that are used to specify data transformation before values are inserted. The variables to transform are named based on the ordinal position values are specified in the MAP clause.
-
-{: .important}
-The number of expressions in the column list and TRANSFORM clause must match.
-
-* [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-examples)
-
 ## Examples
 
 ### MAP examples
 
-| Input type | MAP expression for value in source column | Example |
+| Input type | MAP expression for value in source column | Example | Additional information |
 |---|---|---|
-| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |
-| NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) |
-| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |
+| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |  |
+| NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
+| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |  |
 
 ### TRANSFORM examples
 
@@ -207,7 +199,7 @@ with
 ```
 -->
 
-### Bulk insert statement that reads from a CSV file
+### BULK INSERT with read from CSV file
 
 ```sql
 bulk replace
@@ -219,6 +211,20 @@ from
 with
     format 'CSV'
     input 'FILE';
+```
+
+### BULK INSERT with STREAM
+
+```sql
+bulk replace
+  into insert_test (_id, int1, string1, timestamp1)
+  map (0 id, 1 int, 2 string)
+  transform (@0, @1, @2, current_timestamp)
+  from
+    'icsv'
+  with
+    format 'CSV'
+    input 'STREAM';
 ```
 
 ## Further information

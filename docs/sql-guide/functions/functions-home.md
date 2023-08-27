@@ -1,5 +1,5 @@
 ---
-title: SQL functions
+title: Functions
 layout: default
 parent: SQL guide
 has_children: true
