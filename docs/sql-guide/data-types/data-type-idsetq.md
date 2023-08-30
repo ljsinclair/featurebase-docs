@@ -37,6 +37,8 @@ Use the INT data type to perform range queries using `<` or `>`
 
 {% include /sql-guide/timequantum-additional.md %}
 
+{% include /sql-guide/timequantum-timestamp-summary.md %}
+
 {% include /sql-guide/ttl-additional.md %}
 
 ## Examples

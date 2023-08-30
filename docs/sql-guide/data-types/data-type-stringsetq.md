@@ -34,6 +34,8 @@ The STRINGSETQ data type:
 
 {% include /sql-guide/timequantum-additional.md %}
 
+{% include /sql-guide/timequantum-timestamp-summary.md %}
+
 {% include /sql-guide/ttl-additional.md %}
 
 ## Examples
@@ -42,6 +44,8 @@ The STRINGSETQ data type:
 
 {% include /sql-guide/table-create-timequantum-eg.md %}
 
-### CREATE TABLE with all data types
+{% include /sql-guide/create-table-with-stringsetq-timeq.md %}
 
-{% include /sql-guide/table-create-types-all-eg.md %}
+### INSERT INTO table with SETQ Timequantum
+
+{% include /sql-guide/insert-into-table-stringsetq-timeq.md %}

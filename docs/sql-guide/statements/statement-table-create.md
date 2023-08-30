@@ -71,6 +71,8 @@ CREATE TABLE
 
 {% include /sql-guide/table-create-segments-eg.md %}
 
+{% include /sql-guide/create-table-with-stringsetq-timeq.md %}
+
 ### CREATE TABLE with TIMEQUANTUM constraints
 
 {% include /sql-guide/table-create-timequantum-eg.md %}

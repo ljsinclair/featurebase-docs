@@ -60,6 +60,8 @@ There are special assignments for certain literal values.
 | `[]` | `idset` <br/>`stringset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
 | `{}` | `idsetq`<br/>`stringsetq` | Curly brackets surround each datestamp and value to be inserted into the array | May also be used for vector arrays |
 
+{% include /sql-guide/timequantum-timestamp-summary.md %}
+
 ## UPDATE/REPLACE behavior
 
 {% include /sql-guide/update_behavior.md %}

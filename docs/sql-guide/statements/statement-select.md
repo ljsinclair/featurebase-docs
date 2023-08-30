@@ -7,8 +7,11 @@ nav_order: 7
 ---
 
 # SELECT statement
+{: .no_toc }
 
 Returns data from FeatureBase tables based on specified rows, columns and clauses.
+
+{% include page-toc.md %}
 
 ## BNF diagrams
 
@@ -265,6 +268,14 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 ### SELECT with cosine_distance
 
 {% include /sql-guide/select-cosine-distance.md %}
+
+### SELECT with two RANGEQ() timestamps
+
+{% include /sql-guide/select-from-stringsetq-timeq.md %}
+
+## SELECT with one RANGEQ() timestamp
+
+{% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
 
 
 ## Further information
