@@ -20,7 +20,7 @@ setexcludes(targetset, testmember)
 | Argument | Description | Data type |
 |---|---|---|
 | `targetset` | The set in which the members of testset are being tested for membership. | `stringset` or `idset` |
-| `testmember` | The single member or value to test membership for in the targetset. | Type must match `targetset` |
+| `testmember` | The single member or value to test membership for in the targetset. | Type must be `string` |
 
 ## Returns
 
