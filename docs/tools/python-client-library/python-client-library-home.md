@@ -9,14 +9,14 @@ has_toc: false
 
 # Python client library
 
-The python client library is a python package containing components needed to access FeatureBase databases from your python applications. It provides a simple client class that represents a connection to a FeatureBase database. This connection class exposes a small set of public methods for the application to submit queries against the FeatureBase database. 
+The Python client library is a Python package containing components needed to access FeatureBase databases from your Python applications. It provides a simple client class that represents a connection to a FeatureBase database. This connection class exposes a small set of public methods for the application to submit queries against the FeatureBase database.
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
 {% include /com-install/com-install-before-begin.md %}
 
-## Install python client library
+## Install Python client library
 
 * [Learn How To Install python client library](/docs/tools/python-client-library/python-client-install)
 
@@ -38,7 +38,7 @@ The following parameters can be used with the client constructor method. All par
 
 ### Create client object
 
-Import the FeatureBase library and instantiate a client object by calling the client's constructor method. 
+Import the FeatureBase library and instantiate a client object by calling the client's constructor method.
 
 ```python
 # import the library
@@ -49,8 +49,8 @@ client = featurebase.client()
 
 # create a client that connects to FeatureBase Cloud
 c_client = featurebase.client(
-  hostport="query.featurebase.com/v2", 
-  database="<database_id>", 
+  hostport="query.featurebase.com/v2",
+  database="<database_id>",
   apikey="<APIKey_secret>"
   )
 ```
@@ -61,7 +61,7 @@ The `client.query()` method accepts a single SQL query and submits it to the ser
 
 ```python
 result = client.query("SELECT * from demo;")
-if result.ok: 
+if result.ok:
     print(result.data)
 ```
 
@@ -80,26 +80,26 @@ The `client.querybatch()` method accepts a list of SQL queries and submits them 
 Synchronous runs are best suited for executing DDL and DML queries that need to follow specific run orders.
 
 ```python
-# create a list of SQL statements. 
+# create a list of SQL statements.
 sqllist=[]
 sqllist.append("CREATE TABLE demo1(_id id, i1 int);")
 sqllist.append("INSERT INTO demo1(_id, i1) VALUES(1, 100);")
 sqllist.append("INSERT INTO demo1(_id, i1) VALUES(2, 200);")
 sqllist.append("select * from demo1;")
-#submit the list for synchronous execution and 
+#submit the list for synchronous execution and
 #instruct the client to stop when there is an error.
 results = client.querybatch(sqllist, stoponerror=True)
 for result in results:
-    if result.ok: 
+    if result.ok:
         print(result.data)
 ```                
 
-### Asynchronously run the queries in a batch 
+### Asynchronously run the queries in a batch
 
 Asynchronous runs are best suited for running SELECT queries that can be run concurrently.
 
 ```python
-# create a list of SQL statements. 
+# create a list of SQL statements.
 sqllist=[]
 sqllist.append("SELECT * from demo1;")
 sqllist.append("SELECT count(*) from demo1;")
@@ -107,7 +107,7 @@ sqllist.append("SELECT max(i1) from demo1;")
 #submit the list for asynchronous execution.
 results = client.querybatch(sqllist, asynchronous=True)
 for result in results:
-    if result.ok: 
+    if result.ok:
         print(result.data)
 ```
 
@@ -115,7 +115,7 @@ for result in results:
 
 Result is a simple data object representing the results of a SQL query. It contains the following attributes.
 
-| Attribute | Description | 
+| Attribute | Description |
 |---|---|
 | `ok` | Boolean indicating query execution status |
 | `schema` | Field definitions for the result data |
@@ -125,6 +125,6 @@ Result is a simple data object representing the results of a SQL query. It conta
 | `execution_time` | Amount of time (microseconds) it took for the server to execute the SQL |
 | `rows_affected` | Number of data rows affected by the SQL statement |
 
-## Further Information
+## Further information
 
 * [SQL guide](/docs/sql-guide/sql-guide-home)

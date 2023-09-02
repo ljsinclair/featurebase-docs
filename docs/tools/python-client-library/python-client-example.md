@@ -6,18 +6,17 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# Exmple application using python client library
+# Example application using python client library
 
-In this example, featurebase python client library is used to bulk insert data into a demo table. 
+In this example, FeatureBase python client library is used to bulk insert data into a demo table.
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
 {% include /com-install/com-install-before-begin.md %}
-
-## Install python client library
-
 * [Learn How To Install python client library](/docs/tools/python-client-library/python-client-install)
+
+## Example python application
 
 ```python
 import string
@@ -36,7 +35,7 @@ def get_random_string(length: int):
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
-# build a BULK INSERT sql and execute it using featurebase client 
+# build a BULK INSERT sql and execute it using featurebase client
 def upload_data_bulk(key_from: int, key_to: int):
     # build bulk insert sql
     insertClause="BULK INSERT INTO demo_upload(_id, keycol, val1, val2) MAP (0 ID, 1 INT, 2 STRING, 3 STRING) FROM x"
@@ -60,7 +59,7 @@ def upload_data_bulk(key_from: int, key_to: int):
 
 # create a demo table and load million rows
 def run(batchSize: int):
-    # create demo table 
+    # create demo table
     result=client.query(sql="CREATE TABLE demo_upload(_id ID, keycol INT, val1 STRING, val2 STRING)")
     if not result.ok:
         print(result.error.description)

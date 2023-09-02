@@ -9,21 +9,22 @@ has_toc: false
 # Introduction to FeatureBase Cloud
 {: .no_toc }
 
-FeatureBase Cloud is a fully managed version of FeatureBase and is intended for users that don’t want to have to operate and maintain the underlying hardware. Our Cloud solution takes what makes FeatureBase amazing and makes it even easier to provision and operate in order to get value from your data faster.
+FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easier to provision and operate in order to get value from your data faster.
 
 {% include page-toc.md %}
 
 ## Summary of features
 
-* Fully-managed database offering with simple “click to deploy” that avoids the pain of infrastructure procurement and maintenance.
-* Low-latency Database designed for queries across billions of records without impact from large ingest streams that are both inserting and updating records.
-* Graphical User Interface support for database creation, monitoring, account configuration, and data exploration.
-* Programmatic access to all Cloud features over HTTPS
-* Data ingest that allows you to push records when ready and without having to open up your data center
-* User management that allows teams to invite others and collaborate on your data
-* Usage-based metering and billing that gives you detailed, intra-hour insight into your spend
-* Full backups to S3 and EBS snapshotting are automated and occur daily for all databases
-
+| Feature | Benefit | Additional information |
+|---|---|---|
+| Fully managed | No need to maintain your own infrastructure and calculate processor and memory requirements | [FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
+| Automated backups | Full backups to S3 and EBS snapshotting are automated and occur daily for all databases |  |
+| Usage-based metering and billing | GUI provides detailed intra-hour insights into your spend |  |
+| Low-latency database | Database design won't be impacted by queries across billions of records or large ingest streams inserting and updating records | [Breaking the latency floor whitepaper](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"} |
+| One-click GUI for DB creation and monitoring | Tools to create standard or custom databases, monitor and configure available at a single click | [Manage databases](/docs/cloud/cloud-databases/cloud-db-manage) |
+| Simple user management | Create accounts directly in the GUI for users in your organization to collaborate on your data | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
+| HTTPS API | Programmatic access to all Cloud features over HTTPS | [FeatureBase Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
+| SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON or Parquet | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
 
 ## Cloud trial
 

@@ -6,16 +6,18 @@ nav_order: 6
 has_toc: false
 ---
 
-# Can I access FeatureBase without using the CLI?
+# How can I access my FeatureBase database?
 
-FeatureBase provides a number of tools that allow you to interact with data stored in the system.
+FeatureBase users can access their databases, tables and data using the GUI supplied with FeatureBase Cloud or FeatureBase Community.
+
+FeatureBase also provides three tools that allow you to interact with your databases without using the GUI.
 
 ## Before you begin
 
-* Learn about [FeatureBase Cloud](/docs/cloud/cloud-home)
-* Learn about [FeatureBase Community](/docs/community/com-home)
+* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
+* [Learn about FeatureBase Community](/docs/community/com-home)
 
-## FeatureBase tools
+## What tools are available?
 
 | Tool | Description | Supports | Additional information |
 |---|---|---|
