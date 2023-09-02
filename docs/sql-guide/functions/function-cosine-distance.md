@@ -4,7 +4,7 @@ layout: default
 parent: Functions
 grand_parent: SQL guide
 ---
-# CONSINE_DISTANCE() function
+# COSINE_DISTANCE() function
 
 `COSINE_DISTANCE()` is a mathematical function used with vector calculations.
 
