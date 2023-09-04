@@ -10,3 +10,4 @@ This table provides mapping between [FeatureBase SQL data types](/docs/sql-guide
 | string | [string](/docs/sql-guide/data-types/data-type-string) | keyed mutex |  |
 | not applicable | * [stringset](/docs/sql-guide/data-types/data-type-stringset)<br/>* [stringsetq](/docs/sql-guide/data-types/data-type-stringsetq) | keyed set | Used to reduce table rows and make queries more efficient. |
 | timestamp | [timestamp](/docs/sql-guide/data-types/data-type-timestamp) | timestamp |  |
+| vector | [vector](/docs/sql-guide/data-types/data-type-vector) | vector |  |
