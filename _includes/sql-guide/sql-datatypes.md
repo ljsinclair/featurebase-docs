@@ -8,3 +8,4 @@
 * [stringset](/docs/sql-guide/data-types/data-type-stringset)
 * [stringsetq](/docs/sql-guide/data-types/data-type-stringsetq)
 * [timestamp](/docs/sql-guide/data-types/data-type-timestamp)
+* [vector](/docs/sql-guide/data-types/data-type-vector)
