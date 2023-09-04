@@ -12,7 +12,7 @@ create table allcoltypes
     idcol id,
     idsetcol idset,
     idsetcolq idsetq timequantum 'YMD' ttl '24h',
-    dabed vector(768)
+    vectorcol vector(768)
   )
   with comment 'table containing all column types';
 ```
