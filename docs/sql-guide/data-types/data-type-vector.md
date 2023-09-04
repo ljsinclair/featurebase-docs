@@ -1,5 +1,5 @@
 ---
-title: Vector
+title: VECTOR
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
