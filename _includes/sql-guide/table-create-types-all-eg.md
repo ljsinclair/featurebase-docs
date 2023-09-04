@@ -11,7 +11,8 @@ create table allcoltypes
     stringsetcolq stringsetq timequantum 'YMD' ttl '24h',
     idcol id,
     idsetcol idset,
-    idsetcolq idsetq timequantum 'YMD' ttl '24h'
+    idsetcolq idsetq timequantum 'YMD' ttl '24h',
+    dabed vector(768)
   )
   with comment 'table containing all column types';
 ```
