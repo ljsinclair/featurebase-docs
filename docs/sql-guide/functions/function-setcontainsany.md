@@ -7,26 +7,27 @@ grand_parent: SQL guide
 
 # SETCONTAINSANY() function
 
-`SETCONTAINSANY()` tests membership of a set of values within a set. It returns true if any of the members of `testset` exist in `targetset`
+`SETCONTAINSANY()` returns **True** when **one or more** specified values are found within an `IDSET` or `STRINGSET` column.
 
 ## Syntax
 
-```
-setcontainsany(targetset, testset)
+```sql
+
+SETCONTAINSANY(
+  {idset-column, [int-value,...]} |
+  {stringset-column, ['string-value',...]}
+  )
 ```
 
 ## Arguments
 
-| Argument | Description | Data type | Return value |
-|---|---|---|---|
-| `targetset` | The set in which the members of testset are being tested for membership. | `stringset` or `idset` |
-| `testset` | The set of values to test membership for in the targetset. | Match `targetset` |
+{% include /sql-guide/function-setcontains-all-any-args.md %}
 
 ## Returns
 
-| Data type | Value |
-|---|---|
-| `bool` | True if any member of `testset` exists within `targetset`
+| Column contains | Data type | Result |
+|---|---|--|
+| One or more values | Boolean | True |
 
 ## Examples
 
@@ -34,17 +35,22 @@ setcontainsany(targetset, testset)
 
 ### Testing set membership in the select list
 
-This query returns `true`
+This query returns `TRUE`
 
 ```sql
-select setcontainsany(segment, ['BLUE', 'RED']) as HasBlueOrRed  
-    from segments;
+SELECT SETCONTAINSANY
+  (segment, ['BLUE', 'RED'])
+  AS HasBlueOrRed
+  FROM segments;
 ```
 
 ### Testing set membership as a where clause filter
 
-This query returns `true`.
+This query returns `TRUE`.
 
 ```sql
-select _id, segment from segments where setcontainsany(segment, ['BLUE', 'RED']);
+SELECT _id, segment
+  FROM segments
+  WHERE SETCONTAINSANY
+    (segment, ['BLUE', 'RED']);
 ```
