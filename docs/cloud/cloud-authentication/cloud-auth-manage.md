@@ -39,4 +39,4 @@ has_toc: false
 ## Further information
 
 * [API keys HTTP API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Keys)
-* [FBSQL command-line query editor](/docs/tools/fbsql/fbsql-home)
+* [fbsql command-line query editor](/docs/tools/fbsql/fbsql-home)

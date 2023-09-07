@@ -34,4 +34,4 @@ The API key ID and Secret are displayed **only** when created. They are **not** 
 
 * [Cloud API reference](https://api-docs-featurebase-cloud.redoc.ly){:target="_blank"}
 * [Create key API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey){:target="_blank"}
-* [Learn about the FBSQL command-line SQL query tool](/docs/tools/fbsql/fbsql-home)
+* [Learn about the fbsql command-line SQL query tool](/docs/tools/fbsql/fbsql-home)

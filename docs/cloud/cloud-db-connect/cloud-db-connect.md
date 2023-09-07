@@ -13,7 +13,7 @@ There are several methods to connect to your database:
 
 * via the web portal
 * via REST API calls used in applications
-* via FBSQL, a command-line SQL tool you can install on a local Linux or MacOS machine
+* via fbsql, a command-line SQL tool you can install on a local Linux or MacOS machine
 
 ## Before you begin
 
@@ -30,10 +30,10 @@ The Cloud API allows two methods to authenticate with your FeatureBase Cloud dat
 * [Cloud API security JWT access token](https://api-docs-featurebase-cloud.redoc.ly/latest#section/Security){:target="_blank"}
 * [Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-manage)
 
-## Connect via FBSQL command-line query editor
+## Connect via fbsql command-line query editor
 
-You can connect to your FeatureBase database and run SQL statements using the FBSQL command line tool.
+You can connect to your FeatureBase database and run SQL statements using the fbsql command line tool.
 
-FBSQL connections require a registered user account, or a Cloud API-Key
+fbsql connections require a registered user account, or a Cloud API-Key
 
-* [Learn more about FBSQL](/docs/tools/fbsql/fbsql-home)
+* [Learn more about fbsql](/docs/tools/fbsql/fbsql-home)

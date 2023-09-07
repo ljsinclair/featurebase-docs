@@ -1,12 +1,12 @@
 ---
-title: Import data using FBSQL
+title: Import data using fbsql
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 20
 ---
 
-# Define a datasource with FBSQL loaders
+# Define a datasource with fbsql loaders
 
 The `fbsql-loader` command can be run from the CLI to:
 * read data from a specified Impala, Kafka or Postgres data source
@@ -30,7 +30,7 @@ fbsql
 
 | Argument | Description | Additional information |
 |---|---|---|
-| `<db-connection-string>` | FBSQL connection string to FeatureBase database | * [FBSQL connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [FBSQL connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
+| `<db-connection-string>` | fbsql connection string to FeatureBase database | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
 | `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
 | `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
 | `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |

@@ -1,1 +1,1 @@
-|`[i|include] <filename.sql>` | Run SQL statements from file | Equivalent to `fbsql --file` command |
+|`[i|include] <filename>` | Run content from file which can include valid meta-commands and SQL queries | Equivalent to `fbsql --file` command |

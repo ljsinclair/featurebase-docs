@@ -6,9 +6,9 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# How do I login to a FeatureBase cloud database in FBSQL?
+# How do I login to a FeatureBase cloud database in fbsql?
 
-Login to your FeatureBase cloud database when you startup FBSQL.
+Login to your FeatureBase cloud database when you startup fbsql.
 
 ## Before you begin
 
@@ -68,7 +68,7 @@ Login to your FeatureBase cloud database when you startup FBSQL.
 
 ### Load data from data source
 
-* [Learn how to use FBSQL to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
 
 ## Additional information
 

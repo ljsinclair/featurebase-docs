@@ -64,7 +64,7 @@ CREATE TABLE tbl (
     idsetf idset);
 ```
 
-FBSQL configuration file pointed to by `--loader-impala`:
+fbsql configuration file pointed to by `--loader-impala`:
 ```toml
 table = "tbl"
 query = "select idkey, intf, stringf, idf, stringsetf, idsetf from testdb.impala_table;"

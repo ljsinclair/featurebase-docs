@@ -65,7 +65,7 @@ CREATE TABLE tbl (
     idsetf idset);
 ```
 
-FBSQL configuration file pointed to by `--loader-postgres`:
+fbsql configuration file pointed to by `--loader-postgres`:
 ```toml
 table = "tbl"
 query = "select idkey, intf, stringf, idf, stringsetf, idsetf from postgres_table;"

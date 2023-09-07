@@ -66,7 +66,7 @@ Sample Kafka Message:
 }
 ```
 
-FBSQL configuration file pointed to by `--loader-kafka`:
+fbsql configuration file pointed to by `--loader-kafka`:
 ```toml
 hosts = ["localhost:9092"]
 group = "grp"

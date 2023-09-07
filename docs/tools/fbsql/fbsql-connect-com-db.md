@@ -6,9 +6,9 @@ grand_parent: Tools
 nav_order: 3
 ---
 
-# How do I connect to a FeatureBase Community database with FBSQL?
+# How do I connect to a FeatureBase Community database with fbsql?
 
-Connect to a FeatureBase Community database with FBSQL.
+Connect to a FeatureBase Community database with fbsql.
 
 ## Before you begin
 
@@ -35,7 +35,7 @@ Connect to a FeatureBase Community database with FBSQL.
 ## Database connection flags
 
 {: .note}
-FBSQL automatically connects to a local instance of FeatureBase Community
+fbsql automatically connects to a local instance of FeatureBase Community
 
 | Argument | Description | Requires | Default | Additional information |
 |---|---|---|---|
@@ -51,7 +51,7 @@ FBSQL automatically connects to a local instance of FeatureBase Community
 
 ### Load data from data source
 
-* [Learn how to use FBSQL to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
 
 ## Additional information
 

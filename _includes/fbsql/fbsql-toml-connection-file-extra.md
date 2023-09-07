@@ -1,8 +1,8 @@
-### TOML connection file
+### Connection file
 
-A `filename.toml` connection file can be saved in the `*/fbsql/featurebase` directory or in an accessible file path.
+You can setup a file containing connection details in the `*/fbsql/featurebase` directory or in an accessible file path.
 
-Valid connection files have:
+Connections files have a `.toml` extension and contain:
 * a valid combination of arguments and values in form `argument = "value"`,
 * on individual lines,
 * with leading `--` and trailing `\` omitted.

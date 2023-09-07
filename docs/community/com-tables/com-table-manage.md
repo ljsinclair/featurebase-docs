@@ -28,7 +28,7 @@ FeatureBase Community supports the following SQL statements to create and alter 
 You can run these statements using any of the following methods:
 
 * [Learn about the built-in query editor and query builder](/docs/community/com-query/com-query-home)
-* [Learn how to use the FBSQL CLI tool](/docs/tools/fbsql/fbsql-home)
+* [Learn how to use the fbsql CLI tool](/docs/tools/fbsql/fbsql-home)
 * [Learn how to create and manage tables using the API](/docs/community/com-api/com-api-home)
 
 ## Create tables when importing data
