@@ -7,37 +7,46 @@ grand_parent: SQL guide
 
 # IDENTIFIER() function
 
-`IDENTIFIER()` function generates unique IDs for the provided index.
+The IDENTIFIER() function is used with the INSERT INTO statement to automatically generate a unique numeric `_id` value for a row of data.
+
+IDENTIFIER() supports the `id` numeric data type for a table `_id` column.
 
 ## Syntax
 
-```
-identifier(expr)
+```sql
+IDENTIFIER('table_name', <value>,...)
 ```
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| `expr` | `index` name as `string`. |
+| Argument | Description | Data type | Additional information |
+|---|---|---|---|
+| table_name | Existing table named in INSERT INTO statement | string | [String data type](/docs/sql-guide/data-types/data-type-string) |
+| <value> | Value that matches the destination column data type | Valid data types | [FeatureBase Data types](/docs/sql-guide/data-types/data-types-home) |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `id` | `unique ID created. |
-
+| [ID](/docs/sql-guide/data-types/data-type-id) | A valid, unique numeric value is automatically created for each row of data |
 
 ## Examples
 
-### create a unique ID for the row
+### Destination Table
 
 ```sql
 create table idtest
     (_id id, color string);
+```
 
-insert into idtest (_id,color)
-    values (idenitifier('idtest'),'green')
+### INSERT INTO with `identifier` function
+
+```sql
+INSERT INTO idtest (_id, color)
+    VALUES (idenitifier('idtest'),'green');
+```
+
+### SELECT statement
 
 select * from idtest;
 +-----+--------+
