@@ -1,6 +1,6 @@
-
 ### BULK INSERT statement with `TUPLE()`
 
+```sql
 BULK INSERT INTO tuple-demo(
     _id,
     time_col,
