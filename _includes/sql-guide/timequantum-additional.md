@@ -1,4 +1,4 @@
-## TIMEQUANTUM
+### TIMEQUANTUM
 
 TIMEQUANTUM creates a view of your data based on the specified time. This allows for lower latency queries at the cost of increased storage. For example, set TIMEQUANTUM to:
 * `MD` for queries that include a range of months

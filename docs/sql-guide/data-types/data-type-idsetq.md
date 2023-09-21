@@ -8,7 +8,7 @@ nav_order: 5
 
 # IDSETQ data type
 
-IDSETQ is a FeatureBase datatype used to set multiple ID values and associate times for each value in a single column.
+IDSETQ is a FeatureBase datatype used to associate multiple TIMESTAMP values with integer values within a single row.
 
 ## Syntax
 
@@ -40,6 +40,12 @@ Use the INT data type to perform range queries using `<` or `>`
 {% include /sql-guide/timequantum-timestamp-summary.md %}
 
 {% include /sql-guide/ttl-additional.md %}
+
+### `TIMEQUANTUM` values and `TUPLE()` function
+
+When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, the following values are returned:
+
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ## Examples
 

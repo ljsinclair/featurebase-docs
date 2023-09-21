@@ -1,4 +1,4 @@
-## TTL (Time To Live)
+### TTL (Time To Live)
 
 NOTE: FeatureBase recommends using a TTL of `1h` or more to improve results.
 
