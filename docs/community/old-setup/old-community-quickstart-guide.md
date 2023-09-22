@@ -18,7 +18,7 @@ In this demonstration you will:
 3. Restore two large-scale datasets into FeatureBase
 4. Run a set of analytics queries
 
->If you run into any roadblocks or have questions, please join our [Discord](https://discord.gg/featurefirstai).
+>If you run into any roadblocks or have questions, please join our [Discord](https://discord.com/invite/bSBYjDbUUb).
 
 ## Download FeatureBase Binary
 To download releases of FeatureBase, you must have a github account.

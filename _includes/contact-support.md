@@ -1,1 +1,1 @@
-[Contact FeatureBase Support on Discord](https://discord.gg/featurefirstai){:target=_blank}
+[Contact FeatureBase Support on Discord](https://discord.com/invite/bSBYjDbUUb){:target=_blank}

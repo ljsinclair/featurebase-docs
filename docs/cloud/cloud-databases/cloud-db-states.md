@@ -30,7 +30,7 @@ nav_order: 6
 | FROZEN | There was a problem with backup and no new operations can be done on the database |
 | DEPROVISIONING |  A user has chosen to delete the database so the system is de-provisioning services and spinning the database down. | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
 | DELETED |  The state after deprovisioning completed successfully | [Delete a cloud database](/docs/cloud/cloud-databases/cloud-db-delete) |
-| FAILED | Database action has failed to complete successfully. Unrecoverable. Data is lost or Database failed to be provisioned. [Contact support on Discord for help](https://discord.gg/featurefirstai){:target="_blank"} |
+| FAILED | Database action has failed to complete successfully. Unrecoverable. Data is lost or Database failed to be provisioned. [Contact support on Discord for help](https://discord.com/invite/bSBYjDbUUb){:target="_blank"} |
 
 
 ## Further information
