@@ -24,7 +24,7 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 | One-click GUI for DB creation and monitoring | Tools to create standard or custom databases, monitor and configure available at a single click | [Manage databases](/docs/cloud/cloud-databases/cloud-db-manage) |
 | Simple user management | Create accounts directly in the GUI for users in your organization to collaborate on your data | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
 | HTTPS API | Programmatic access to all Cloud features over HTTPS | [FeatureBase Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
-| SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON or Parquet | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
+| SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON , Parquet or ORC | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
 
 ## Cloud trial
 

@@ -24,6 +24,7 @@ These examples demonstrate the use of SQL `BULK INSERT`, available for FeatureBa
 * [Importing a large dataset using a CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [Importing a large dataset using a ndjson file](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
 * [Importing a large dataset using a parquet file](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [Importing a large dataset using a ORC file](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
 
 ## CLI ingest examples
 

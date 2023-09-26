@@ -113,3 +113,4 @@ SELECT TOP(10) * FROM github-stats;
 
 * [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)

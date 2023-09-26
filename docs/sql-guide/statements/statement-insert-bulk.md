@@ -28,6 +28,7 @@ Supported formats include:
 * CSV
 * PARQUET
 * NDJSON
+* ORC
 
 {% include page-toc.md %}
 
@@ -66,7 +67,8 @@ BULK INSERT
       [FORMAT
         ['CSV' [HEADER_ROW] [CSV_EMPTY_STRING_AS_NULL] [CSV_NULL_AS_NULL] [NULL_AS_EMPTY_SET]] |
         ['NDJSON' [ALLOW_MISSING_VALUES] [NULL_AS_EMPTY_SET]] |
-        ['PARQUET' [NULL_AS_EMPTY_SET]]
+        ['PARQUET' [NULL_AS_EMPTY_SET]] |
+        ['ORC' [NULL_AS_EMPTY_SET]]
       ]
       ...
     ]
@@ -91,10 +93,10 @@ BULK INSERT
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional | Can be used with `STREAM` to batch records as they are streamed to the server where batching not available on client |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
 | `INPUT` | Input values must match those used in the `FROM` clause |  |  |
-| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` and `ORC` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
 | `'STREAM'` | `STREAM` supports a streaming payload using an HTTP multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
-| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (INLINE)` |
-| `CONCURRENCY` | Number of concurrent workers to ingest the data after it has been presorted. Default `8`. | Optional | Only applies to CSV and NDJSON currently as PARQUET does not yet presort. |
+| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` ,`'PARQUET'` or 'ORC'` | Optional | `'PARQUET'` and `'ORC'` do not support `INPUT (INLINE)` |
+| `CONCURRENCY` | Number of concurrent workers to ingest the data after it has been presorted. Default `8`. | Optional | Only applies to CSV and NDJSON currently as PARQUET and ORC does not yet presort. |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
 | `CSV_EMPTY_STRING_AS_NULL` | `CSV` argument that will assign `""` value as `null` | Optional |  |
@@ -150,6 +152,7 @@ There are special assignments for certain literal values when inserting NDJSON d
 | CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |  |
 | NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
 | PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |  |
+| ORC | A string label that precisely matches the column name in the schema within the ORC file. | [BULK INSERT ORC example](/docs/sql-guide/statements/statement-insert-bulk-orc-example) |  |
 
 ### TRANSFORM examples
 
@@ -266,3 +269,4 @@ This would ingest all three files in a single request.
 * [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
 * [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
