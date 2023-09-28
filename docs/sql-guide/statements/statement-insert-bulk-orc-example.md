@@ -16,7 +16,8 @@ This example demonstrates how to:
 
 ## Before you begin
 
-{% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [ORC file format](https://github.com/scritchley/orc){:target="_blank}
 
 ## Step 1: create table
 
