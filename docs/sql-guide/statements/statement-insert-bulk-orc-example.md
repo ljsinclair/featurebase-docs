@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-# Ingest a ORC file with BULK INSERT
+# Ingest an ORC file with BULK INSERT
 
 This example demonstrates how to:
 
