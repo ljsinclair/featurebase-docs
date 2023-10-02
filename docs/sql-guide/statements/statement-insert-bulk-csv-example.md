@@ -17,6 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
 
 ## Step 1: create table
 

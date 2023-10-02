@@ -17,6 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
 
 ## Step 1: create table
 
@@ -39,7 +40,7 @@ BULK INSERT
     'decval' decimal(4) )
  FROM
 	'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
- WITH 
+ WITH
     FORMAT 'PARQUET'
     INPUT 'URL';
 ```

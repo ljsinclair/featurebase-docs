@@ -17,7 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 * {% include /sql-guide/bulk-insert-eg-before-begin.md%}
-* [ORC file format](https://github.com/scritchley/orc){:target="_blank}
+* [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 
 ## Step 1: create table
 
@@ -42,7 +42,7 @@ BULK INSERT
     3 INT )
  FROM
 	'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
- WITH 
+ WITH
     FORMAT 'ORC'
     INPUT 'URL';
 ```

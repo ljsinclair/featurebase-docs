@@ -19,16 +19,19 @@ In some cases, the data will be pre-sorted by internal FeatureBase partition bef
 
 ![expr](/assets/images/sql-guide/bulk_insert_steps.svg)
 
-Sources can include:
+
+## Before you begin
+
+Prepare your data source:
 * file(s)
 * URL(s)
 * inline blob
 
-Supported formats include:
-* CSV
-* PARQUET
-* NDJSON
-* ORC
+The data source must be in one of the following formats:
+* [Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
+* [Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
+* [New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
+* [Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 
 {% include page-toc.md %}
 
@@ -76,11 +79,11 @@ BULK INSERT
 
 ## Arguments
 
-| Argument | Description | Required? |Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
-| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
+| `column_name` | Valid columns belonging to `table_name` starting with the `_id` column | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
 | `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
@@ -95,7 +98,7 @@ BULK INSERT
 | `INPUT` | Input values must match those used in the `FROM` clause |  |  |
 | `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` and `ORC` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
 | `'STREAM'` | `STREAM` supports a streaming payload using an HTTP multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
-| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` ,`'PARQUET'` or 'ORC'` | Optional | `'PARQUET'` and `'ORC'` do not support `INPUT (INLINE)` |
+| `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` ,`'PARQUET'` or `'ORC'` | Optional | `'PARQUET'` and `'ORC'` do not support `INPUT (INLINE)` |
 | `CONCURRENCY` | Number of concurrent workers to ingest the data after it has been presorted. Default `8`. | Optional | Only applies to CSV and NDJSON currently as PARQUET and ORC does not yet presort. |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |

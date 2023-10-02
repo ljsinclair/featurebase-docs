@@ -17,6 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
 
 ## Step 1: create `github-stats` table
 
