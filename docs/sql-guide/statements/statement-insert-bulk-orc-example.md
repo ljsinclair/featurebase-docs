@@ -57,6 +57,4 @@ SELECT * FROM sampleorc;
 ## Further information
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
