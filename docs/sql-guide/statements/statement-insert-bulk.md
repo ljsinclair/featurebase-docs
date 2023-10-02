@@ -148,6 +148,11 @@ There are special assignments for certain literal values when inserting NDJSON d
 
 ## Examples
 
+* [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
+
 ### MAP examples
 
 | Input type | MAP expression for value in source column | Example | Additional information |
@@ -266,10 +271,3 @@ This would ingest all three files in a single request.
 ### BULK INSERT using TRANSFORM with TUPLE() function
 
 {% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
-
-## Further information
-
-* [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
-* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
