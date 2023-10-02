@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-# Ingest a CSV with BULK INSERT
+# BULK INSERT example using CSV formatted data source
 
 This example demonstrates how to:
 

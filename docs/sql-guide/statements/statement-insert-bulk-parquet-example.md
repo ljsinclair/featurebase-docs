@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-# Ingest a Parquet file with BULK INSERT
+# BULK INSERT example using Apache Parquet formatted data source
 
 This example demonstrates how to:
 

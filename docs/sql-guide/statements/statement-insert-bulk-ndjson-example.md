@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 6
 ---
 
-# BULK INSERT example using NDJSON file
+# BULK INSERT example using NDJSON formatted data source
 
 This example demonstrates how to:
 
