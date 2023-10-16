@@ -35,83 +35,94 @@ The Kafka Confluent ingest process:
 }
 ```
 
-## Kafka JSON parameters
-
-| Parameter | Description | Required | Additional information |
-|---|---|---|---|
-| `namespace` |  |  |  |
-| `"type": "record"` | The schema defines records. |  |  |
-| `name` |  |  |  |
-| `fields` |  |  |  |
-
 ## Additional information
+
+### Storing String, Integer and Decimal fields in Featurebase Tuple Store
+
+For Featurebase `string`, `int` and `decimal` type fields the default Bitmap store backend can be overridden and the new Tuple store backend can be specified as the field's target storage. In avro field definitions a new `storage-specifier` attribute can be used to specify the preferred backend for these three types. When no storage specification is provided these types will continute to store in the default Bitmap backend. Refer to the following table for avaialble `storage-specifier` options and valid use cases.
+
+#### Storage Specification
+
+| Field's FeatureBase Data Type | Avro Field Properties | Backend Selection |
+|---|---|---|
+|`STRING`| storage-specifier="tuplestore", length=256| This string field will be stored in Tuple store with 256 defined as maximum field length.|
+|`STRING`| mutex=true, quantum=(YMD), storage-specifier="bitmapstore"| This string mutex field will be stored in Bitmap store with time quantum support.|
+|`STRING`| mutex=true, quantum=(YMD), storage-specifier="tuplestore"| This field will be stored in Bitmap store. In this case the storage-specifier="tuplestore" is invalid and ignored. When either `mutex=true` or `quantum=(YMD)` is specified the default bitmap backend will be automatically selected to support the mutex and time quantum features.|
+|`INT`| storage-specifier="tuplestore"| This integer field will be stored in Tuple store.|
+|`DECIMAL`| storage-specifier="tuplestore", scale=2| This decimal field will be stored in Tuple store with precision set to 2 decimal points.|
 
 ### Mapping Avro and FeatureBase data types
 
 The `./molecula-consumer-kafka` and `./molecula-consumer-kafka-delete` CLI commands:
 * Read the Avro schema from the Confluent Schema Registry
-* Infers the FeatureBase data type for each field
+* Infers the FeatureBase data type for each field as specified in the following tables
 
 #### avro.Array
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Array : avro.String |  | STRINGSET |
-| avro.Array : avro.Bytes  |  | STRINGSET |
-| avro.Array : avro.Fixed  |  | STRINGSET |
-| avro.Array : avro.Enum   |  | STRINGSET |
-| avro.Array : avro.String | quantum=(YMD) | STRINGSETQ |
-| avro.Array : avro.Bytes  | quantum=(YMD) | STRINGSETQ |
-| avro.Array : avro.Fixed  | quantum=(YMD) | STRINGSETQ |
-| avro.Array : avro.Enum   | quantum=(YMD) | STRINGSETQ |
-| avro.Array : avro.Long   |  | IDSET |
-| avro.Array : avro.Long   | quantum=(YMD)  | IDSETQ |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Array : avro.String |  | STRINGSET | bitmap store |
+| avro.Array : avro.Bytes  |  | STRINGSET | bitmap store |
+| avro.Array : avro.Fixed  |  | STRINGSET | bitmap store |
+| avro.Array : avro.Enum   |  | STRINGSET | bitmap store |
+| avro.Array : avro.String | quantum=(YMD) | STRINGSETQ | bitmap store |
+| avro.Array : avro.Bytes  | quantum=(YMD) | STRINGSETQ | bitmap store |
+| avro.Array : avro.Fixed  | quantum=(YMD) | STRINGSETQ | bitmap store |
+| avro.Array : avro.Enum   | quantum=(YMD) | STRINGSETQ | bitmap store |
+| avro.Array : avro.Long   |  | IDSET | bitmap store |
+| avro.Array : avro.Long   | quantum=(YMD)  | IDSETQ | bitmap store |
 
 #### avro.Bytes
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Bytes | logicalType=decimal, scale | `DECIMAL` |
-| avro.Bytes | fieldType=decimal, scale | `DECIMAL` |
-| avro.Bytes | fieldType=recordTime | `STRINGSETQ` and `IDSETQ` |
-| avro.Bytes |  | `STRINGSET`   |
-| avro.Bytes | mutex=true | `STRING` |
-| avro.Bytes | quantum=(YMD) | `STRINGSETQ` |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Bytes | logicalType=decimal, scale | `DECIMAL` | bitmap store |
+| avro.Bytes | fieldType=decimal, scale | `DECIMAL` | bitmap store |
+| avro.Bytes | fieldType=decimal, scale, storage-specifier="tuplestore" | `DECIMAL`  | tuple store |
+| avro.Bytes | fieldType=recordTime | `STRINGSETQ` and `IDSETQ` | bitmap store |
+| avro.Bytes |  | `STRINGSET`   | bitmap store |
+| avro.Bytes | mutex=true | `STRING` | bitmap store |
+| avro.Bytes | storage-specifier="tuplestore" | `STRING` | tuple store |
+| avro.Bytes | quantum=(YMD) | `STRINGSETQ` | bitmap store |
+| avro.Bytes | quantum=(YMD) | `STRINGSETQ` | bitmap store |
 
 #### avro.boolean
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Boolean |  | `BOOL` |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Boolean |  | `BOOL` | bitmap store |
 
 #### avro.Double, avro.Float
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Double, avro.Float | scale | `DECIMAL` |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Double, avro.Float | scale | `DECIMAL` | bitmap store |
+| avro.Double, avro.Float | scale, storage-specifier="tuplestore" | `DECIMAL` | tuple store |
 
 #### avro.Enum
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Enum |  | `STRING` |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Enum |  | `STRING` | bitmap store |
 
 #### avro.Int, avro.Long
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.Int, avro.Long | fieldType=id   | IDSET  |
-| avro.Int, avro.Long | fieldType=id, mutex=false | ID  |
-| avro.Int, avro.Long | fieldType=id, quantum=(YMD)    | IDSETQ |
-| avro.Int, avro.Long | fieldType=int, min, max| INT |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.Int, avro.Long | fieldType=id   | IDSET  | bitmap store |
+| avro.Int, avro.Long | fieldType=id, mutex=false | ID  | bitmap store |
+| avro.Int, avro.Long | fieldType=id, quantum=(YMD)    | IDSETQ | bitmap store |
+| avro.Int, avro.Long | fieldType=int, min, max| INT | bitmap store |
+| avro.Int, avro.Long | fieldType=int, min, max, storage-specifier="tuplestore" | INT | tuple store |
 
 #### avro.String
 
-| Avro data type | Properties | FeatureBase Data type |
-|---|---|---|
-| avro.String || STRINGSET   |
-| avro.String | mutex=true| STRING |
-| avro.String | quantum=(YMD)  | STRINGSETQ  |
+| Avro data type | Properties | FeatureBase Data type | Backend |
+|---|---|---|---|
+| avro.String || STRINGSET   | bitmap store |
+| avro.String | mutex=true| STRING | bitmap store |
+| avro.String | quantum=(YMD)  | STRINGSETQ  | bitmap store |
+| avro.String | storage-specifier="tuplestore", length| STRING | tuple store |
 
 #### avro.Union
 

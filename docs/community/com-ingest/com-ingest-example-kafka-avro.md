@@ -24,6 +24,7 @@ This page provides examples of Kafka consumer ingest files and flags you can use
 In this example:
 
 * The Kafka schema will encode the data to Kafka
+* The Kafka Avro schema source includes example fields defined with storage specification set to `tuplestore`
 * The messages include three Kafka messages:
   * `a_stringset` and `a_timestamp` fields that use the union between a field and null
   * The third message `{"null": null}` can be passed when there is missing data for a record.
@@ -45,15 +46,18 @@ This means the `./molecula-consumer-kafka` CLI command:
         {"name": "an_int", "type": "int", "fieldType": "int"},
         {"name": "a_decimal", "type": "float", "fieldType": "decimal", "scale": 2},
         {"name": "a_timestamp", "type": ["bytes", "null"], "fieldType": "timestamp", "layout": "2006-01-02 15:04:05", "epoch": "1970-01-01 00:00:00"},
+        {"name": "an_int_tstore", "type": "int", "fieldType": "int", storage-specifier="tuplestore"},
+        {"name": "a_decimal_tstore", "type": "float", "fieldType": "decimal", "scale": 2, storage-specifier="tuplestore"},
+        {"name": "a_string_tstore", "type": "string", storage-specifier="tuplestore", length=256 },
     ]
 }
 ```
 
 ### Kafka avro raw data message
 ```
-{"a_string": "7EYSp", "a_stringset": {"array": ["vbbuf", "VQs7y", "9z4aw", "h1iqc", "aQQxr"]}, "an_int": 344, "a_decimal": 3.23, "a_timestamp": {"bytes": "2023-02-16 07:53:59"}},
-{"a_string": "iYeOV", "a_stringset": {"array": ["iYeOV", "v31XN", "uirDR"]}, "an_int": 884, "a_decimal": 4.32, "a_timestamp": {"bytes": "2023-01-31 11:11:30"}},
-{"a_string": "X9jWC", "a_stringset": {"null": null}, "an_int": 879, "a_decimal": 2.84, "a_timestamp": {"null": null}}
+{"a_string": "7EYSp", "a_stringset": {"array": ["vbbuf", "VQs7y", "9z4aw", "h1iqc", "aQQxr"]}, "an_int": 344, "a_decimal": 3.23, "a_timestamp": {"bytes": "2023-02-16 07:53:59"}, "an_int_tstore": 3440, "a_decimal_tstore": 33.23, "a_string_tstore": "TT-7EYSp"},
+{"a_string": "iYeOV", "a_stringset": {"array": ["iYeOV", "v31XN", "uirDR"]}, "an_int": 884, "a_decimal": 4.32, "a_timestamp": {"bytes": "2023-01-31 11:11:30"}, "an_int_tstore": 8840, "a_decimal_tstore": 44.32, "a_string_tstore": "TT-iYeOV"},
+{"a_string": "X9jWC", "a_stringset": {"null": null}, "an_int": 879, "a_decimal": 2.84, "a_timestamp": {"null": null}, "an_int_tstore": 8790, "a_decimal_tstore": 22.84, "a_string_tstore": "TT-X9jWC"}
 ```
 
 ## Kafka Avro ingest featuring Quantum values
