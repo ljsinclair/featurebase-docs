@@ -9,7 +9,9 @@ has_toc: false
 
 # SQL Statements
 
-SQL statements can be executed in the Query editor.
+Run SQL queries on your data using the following methods:
+
+{% include /sql-guide/sql-guide-supported-tools.md %}
 
 ## Before you begin
 
@@ -24,7 +26,7 @@ SQL statements can be executed in the Query editor.
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
-* [SHOW DATABASES](/docs/sql-guide/statements/statement-database-show)
+* [SHOW DATABASES](/docs/sql-guide/statements/statement-db-show)
 
 ## TABLE statements
 
@@ -38,7 +40,7 @@ SQL statements can be executed in the Query editor.
 
 ## DATABASE statements
 
-* [DROP DATABASE](/docs/sql-guide/statements/statement-database-drop)
+* [DROP DATABASE](/docs/sql-guide/statements/statement-db-drop)
 
 ## INSERT statements
 

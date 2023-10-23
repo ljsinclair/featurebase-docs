@@ -45,7 +45,7 @@ This reference explains fbsql flags relating to database connections and schema
 |---|---|---|
 | `[c|connect] <cloud-database-name>` | Connect to an available database in the currently connected cloud account. | [Connect cloud database additional](#connect-cloud-database-additional) |
 | `[c|connect] -` | Disconnect from the current cloud database |  |
-| `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement | [SHOW DATABASE](/docs/sql-guide/statements/statement-database-show) |
+| `d` | List all tables in the connected database. Equivalent to Cloud `SHOW DATABASE` statement | [SHOW DATABASE](/docs/sql-guide/statements/statement-db-show) |
 | `d <tablename>` | Equivalent to `SHOW COLUMNS` statement | [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show) |
 | `dt` | Equivalent to `SHOW TABLES` statement | [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show) |
 | `dv` | Show definition of all views | [CREATE VIEWS](/docs/sql-guide/statements/statement-view-create) |
