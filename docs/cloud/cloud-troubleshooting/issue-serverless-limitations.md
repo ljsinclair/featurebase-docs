@@ -8,4 +8,8 @@ nav_order: 4
 
 # Issue - Known limitations of serverless databases
 
-{% include /cloud-db/cloud-db-serverless-preview-warning.md %}
+{% include /cloud-db/cloud-db-serverless-warning.md %}
+
+## Limitations
+
+{% include /cloud-db/cloud-db-serverless-limits.md %}
