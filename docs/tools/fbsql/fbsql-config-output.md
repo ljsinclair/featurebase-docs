@@ -103,4 +103,3 @@ Testing 1,2,3
 
 * [PSET SQL query output formatting reference](/docs/tools/fbsql/fbsql-query-output-format)
 * [Learn about RFC-4180 quoting rules](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
-* [Create products table](/docs/sql-guide/statements/statement-table-create#create-table-with-decimal-data-type)
