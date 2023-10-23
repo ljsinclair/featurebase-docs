@@ -10,7 +10,7 @@ nav_order: 11
 
 Vector data types store a specified number of floating point values in an array.
 
-These vectors can be compared using the cosine_distance function.
+These vectors can be compared using the [COSINE_DISTANCE() function](#further-information).
 
 ## Syntax
 
@@ -35,3 +35,7 @@ VECTOR({length})
 ### CREATE TABLE statement with Vector
 
 {% include /sql-guide/table-create-vector.md %}
+
+## Further information
+
+* [COSINE_DISTANCE() function](/docs/sql-guide/functions/function-cosine-distance)

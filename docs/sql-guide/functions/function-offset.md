@@ -49,7 +49,9 @@ insert into colors(_id,color)
 insert into colors(_id,color)
     values (5,'orange')
 ```    
-### In this example, the OFFSET 3 clause skips the first three rows, and the LIMIT 2 clause fetches the next two rows from the "colors" table.
+### SELECT WITH LIMIT and OFFSET
+
+In this example, the OFFSET clause skips the first three rows, and the LIMIT 2 clause fetches the next two rows from the "colors" table.
 
 ```sql
 

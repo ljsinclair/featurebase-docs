@@ -29,9 +29,9 @@ Prepare your data source:
 
 The data source must be in one of the following formats:
 * [Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
-* [Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
-* [New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
-* [Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
+* [Lean about New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
+* [Learn about Apache ORC format](https://orc.apache.org/specification/){:target="_blank"}
+* [Learn about Apache PARQUET format](https://parquet.apache.org/){:target="_blank"}
 
 {% include page-toc.md %}
 
