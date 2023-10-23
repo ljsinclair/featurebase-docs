@@ -19,7 +19,7 @@ has_toc: false
 {% include /cloud/cloud-before-begin.md %}
 * [Learn about the user status](/docs/cloud/cloud-users/cloud-ref-user-status)
 
-## How do I control who can login to my organization?
+## How do I control who can sign in to my organization?
 
 * [Learn how to invite users to your organization](/docs/cloud/cloud-users/cloud-user-invite)
 * [Learn how to revoke the login privilege for existing users](/docs/cloud/cloud-users/cloud-user-deactivate)

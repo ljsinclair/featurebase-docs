@@ -7,14 +7,12 @@ nav_order: 5
 has_toc: false
 ---
 
-## How do I control who can login to my organization?
+## How do I control who can sign in to my organization?
 {: .no_toc }
 
-The Login privilege is granted to all **Active** users via their role.
-
-An Administrator can revoke the Login privilege by **deactivating** the account.
-
-The privilege can be restored by **activating** the account.
+Sign in privileges to your FeatureBase Cloud organization:
+* can be granted and revoked by an administrator
+* are automatically granted to **active** users via their role
 
 {: .note}
 {% include contact-support.md%} to delete user accounts.
@@ -28,7 +26,7 @@ The privilege can be restored by **activating** the account.
 {% include /cloud/cloud-before-begin.md %}
 * [Invite a cloud user](/docs/cloud/cloud-users/cloud-user-invite)
 
-## Deactivate a user
+## How do I revoke sign-in privileges and deactivate a user account?
 
 {: .note}
 You may choose to [change the user role](/docs/cloud/cloud-users/cloud-user-edit-role) rather than deactivating the account.
@@ -36,7 +34,7 @@ You may choose to [change the user role](/docs/cloud/cloud-users/cloud-user-edit
 * Click **Configuration** > **Manage users**
 * Click <span class="material-icons md-18">more_vert</span>  on the **Active** user > **Deactivate user**.
 
-## Reactivate a user
+## How do I grant sign-in privileges and reactivate a user account?
 
 * Click **Configuration** > **Manage users**
 * Click <span class="material-icons md-18">more_vert</span>  on the **Deactivated** user > **Reactivate User**.

@@ -19,7 +19,7 @@ API availability reports the aggregate status of all APIs under the api.featureb
 
 ## Web App availability
 
-Web App availability reports the status of FeatureBase Cloud's UI at [https://cloud.featurebase.com/](https://cloud.featurebase.com/). An outage here means that users may not be able to login to the UI or may face irregular behavior within the UI.
+Web App availability reports the status of FeatureBase Cloud's UI at [https://cloud.featurebase.com/](https://cloud.featurebase.com/). An outage here means that users may not be able to sign in to the UI or may face irregular behavior within the UI.
 
 ## Query API availability
 

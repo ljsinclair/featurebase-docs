@@ -6,12 +6,13 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# How do I login to a FeatureBase cloud database in fbsql?
+# How do I connect to a FeatureBase cloud database with fbsql?
 
-Login to your FeatureBase cloud database when you startup fbsql.
+Connect to a FeatureBase cloud database when you startup fbsql.
 
 ## Before you begin
 
+* [Create a database](/docs/cloud/databases/cloud-db-manage)
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 {% include /fbsql/fbsql-help-quit.md %}

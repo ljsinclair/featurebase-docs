@@ -1,11 +1,11 @@
 ---
-title: Login to cloud
+title: Sign in to cloud
 layout: default
 parent: Connect to cloud db
 grand_parent: Cloud
 ---
 
-# How do I login to FeatureBase Cloud?
+# How do I sign in to FeatureBase Cloud?
 {: .no_toc }
 
 ## Before you begin
