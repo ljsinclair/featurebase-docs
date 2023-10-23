@@ -1,41 +1,46 @@
 ---
-title: System Tables
+title: FeatureBase system tables
 layout: default
 parent: SQL guide
 ---
 
-# System Tables
+# Reference: FeatureBase system tables
 {: .no_toc }
 
-System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except `fb_views` are logical, in-memory, and dynamically created upon database creation.
+At a high-level, FeatureBase system tables:
+* describe database configuration, settings and metrics
+* are logical and in-memory tables, dynamically created on database creation
+
+The only exception is `fb_views` which is automatically created when a user runs the [`CREATE VIEW` statement](/docs/sql-guide/statements/statement-view-create)
 
 {% include page-toc.md %}
 
-## fb_views
+## System Database tables
 
-The `fb_views` table is a system table which provides a catalog of all previously created views.
+| System table | Description | Additional information |
+|---|---|---|
+| `fb_views` | Contains a catalog of existing views in the database | Created when one or more views are created |
+| `fb_database_info` | Contains properties and state of each database in the system | One database per row |
+| `fb_database_nodes` | Lists database nodes or **Serverless* database state and worker connectivity | [Learn about Cloud Serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless) |
+| `fb_performance_counters` | Contains metrics on database nodes and database workers |
 
-## fb_database_info
+## System DDL tables
 
-The `fb_database_info` table provides a single row which describes the version and state of the database.
+| System table | Description | Additional information |
+|---|---|---|
+| `fb_table_ddl` | Contains DDL (Data Definition Language) to recreate user tables in the existing database | INSERT statements are not included |
 
-## fb_database_nodes
+## Query tables
 
-The `fb_database_nodes` table provides a listing of all the cluster nodes or workers in the database, including their connectivity and state.
+| System table | Description | Additional information |
+|---|---|---|
+| `fb_exec_requests` | Contains a log of SQL queries executed (and executing) by database node | [fb_exec_requests additional](#fb-exec-requests-additional) |
+|
 
-## fb_exec_requests
+## Additional information
 
-The `fb_exec_requests` table provides a query log of requests executed (and executing) by node.
-
+### fb_exec_requests additional
 * `fb_exec_requests` keeps only the latest 2000 records (queries)
 * `fb_exec_requests.sql` and `fb_exec_requexts.plan` are limited to 4000 characters.
 
 {% include /sql-guide/query-status.md %}
-
-## fb_table_ddl
-
-The `fb_table_ddl` table provides the corresponding Data Definition Language (DDL) to create the existing database's tables.
-
-## fb_performance_counters
-
-The `fb_performance_counters` table provides metrics about the nodes/workers within the database.
