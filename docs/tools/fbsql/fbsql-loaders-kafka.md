@@ -104,6 +104,6 @@ name        = "ts"
 source-type = "timestamp"
 ```
 
-## Additional Resources
+## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)
