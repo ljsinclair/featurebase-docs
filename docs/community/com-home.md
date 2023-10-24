@@ -46,7 +46,7 @@ Like other common distributed data stores, it supports:
 
 By default, FeatureBase uses the following ports:
 
-| Port | Used for | Required? | Further information |
+| Port | Used for | Required? | Additional information |
 |---|---|---|
 | 10101 | FeatureBase UI, HTTP(S) queries, SQL queries | Yes | [HTTPS endpoint](/docs/community/com-api/old-http-endpoint) |
 | 10301 | Cluster membership | For clustering | [embedded etcd](https://pkg.go.dev/github.com/coreos/etcd/embed) |
@@ -71,7 +71,7 @@ The FeatureBase Community application requires:
 
 FeatureBase Community can be used under the [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-| Supported operating system | Further information |
+| Supported operating system | Additional information |
 |---|---|
 | Linux | [Install on Linux](/docs/community/com-install-linux) |
 | Apple Macintosh | [Install on Mac](/docs/community/com-install-mac) |

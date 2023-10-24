@@ -25,7 +25,7 @@ CREATE VIEW view_name
 
 ## Arguments
 
-| Argument | Description | Required? | Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|
 | `view_name` | Valid view name | Yes | [Naming standards](#naming-standards)
 | `IF NOT EXISTS` | Optional argument that stops statement execution if a view of the same name already exists | No |  |

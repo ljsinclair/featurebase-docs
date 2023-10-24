@@ -49,7 +49,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 ## Data Consumption
 
-| Feature | Cloud | Community | Further information |
+| Feature | Cloud | Community | Additional information |
 |---|---|---|---|
 | Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-data) | [Query community tables](/docs/community/com-query/com-query-home) |  |
 | FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
@@ -71,7 +71,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 ## Security
 
-| Feature | Cloud | Community | Further information |
+| Feature | Cloud | Community | Additional information |
 |---|---|---|---|
 | Encryption In Flight | Yes | Yes |  |
 | Encryption at Rest | Yes | Yes |   |

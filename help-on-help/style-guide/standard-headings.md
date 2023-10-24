@@ -9,12 +9,12 @@ Review the following help-on-help before deciding on the standard headings you n
 
 These standard headings are used in help files across docs.featurebase.com
 
-| Heading | Used for | Example | Further information |
+| Heading | Used for | Example | Additional information |
 |---|---|---|---|
 | Before you begin | The ultimate goal of this heading is to tell the user:<br/>* What they need to know before moving forward<br/>* What they need to have done before they get here<br/>Ultimately this is a list of prerequisites and requirements | `/docs/community/com-startup-connect` | [Before you begin FAQ](/help-on-help/faq/faq-before-begin.md) |
 | Step N - <description> | Used to gather a series of steps into a context so the user knows they must be completed before moving forward. Especially useful if a group of steps requires some explanation before they are performed |  |  |
 | Next step | Used for Procedure series to direct user to the next page in the sequence, and also to direct the user to something else they might choose to do (e.g., after loading data, they might want to query it) |  |  |
-| Further information | Related information to the content on the page which will likely include links to other FeatureBase documentation, and also external links which seem useful |  |  |
+| Additional information | Related information to the content on the page which will likely include links to other FeatureBase documentation, and also external links which seem useful |  |  |
 
 ## Reference content
 

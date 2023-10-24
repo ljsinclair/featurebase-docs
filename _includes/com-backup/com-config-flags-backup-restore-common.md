@@ -1,4 +1,4 @@
-| Argument | Data type | Description | Required? | Further information |
+| Argument | Data type | Description | Required? | Additional information |
 |---|---|---|---|
 | `--host` |  | Specify a FeatureBase node | Yes |  |
 | `https://featurebase-hostname-or-ip:port` | string | `https` is required for authenticated FeatureBase clusters. Requires `auth-token` | For authenticated clusters |  |

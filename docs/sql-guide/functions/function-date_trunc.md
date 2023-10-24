@@ -17,7 +17,7 @@ DATE_TRUNC(timeunit, date-time)
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | timeunit | string | String value that specifies the time unit for the duration to be added to the target date-time. | Yes | [Time units](#timeunit).|
 | date-time | timestamp | The target date-time specified as literal or expression the time duration is added to. | Yes | |

@@ -24,7 +24,7 @@ Generate a `secret-key` used when setting up TLS authentication
 
 ## Flags
 
-| Flag | Description | Further information |
+| Flag | Description | Additional information |
 |---|---|---|
 | `h` or `help` | FeatureBase keygen help |
 | `l` or `length` | Integer value for the length of the key | Defaults to 32 |

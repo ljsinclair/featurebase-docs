@@ -19,7 +19,7 @@ TOTIMESTAMP(int_expr, [timeunit])
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | int_expr | integer | Integer value specified as literal or expression to be converted to a timestamp | Yes | |
 | timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#additional-information).|

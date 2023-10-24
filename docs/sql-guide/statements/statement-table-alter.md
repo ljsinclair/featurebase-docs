@@ -43,7 +43,7 @@ ALTER table_name [
 
 ## Arguments
 
-| Argument | Description | Further information |
+| Argument | Description | Additional information |
 |---|---|---|
 | table_name | Name of existing table to alter | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
 | identifier | Column identifier or name |

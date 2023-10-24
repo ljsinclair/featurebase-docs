@@ -32,7 +32,7 @@ SOME COMMAND HERE
 
 ## Arguments
 
-| Key | Description | Required | Further information |
+| Key | Description | Required | Additional information |
 |---|---|---|---|
 | `client-address` / etcd-listen-client-address | New node network address | Yes |  |
 | `etcd.listen-peer-address` | New node network address | Yes |  |

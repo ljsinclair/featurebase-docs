@@ -47,7 +47,7 @@ Add authentication parameters to the `/featurebase/opt/featurebase.conf` TOML fi
 
 ### Keys
 
-| Key | Description | Required | Further information |
+| Key | Description | Required | Additional information |
 |---|---|---|---|
 | `enable=true` | Activate IdP authentication for FeatureBase |  |  |
 | `client-id` | SAML 2.0 Identity Provider (IdP) obtained from Azure AD Applications Overview | Yes | |

@@ -1,4 +1,4 @@
-| Method | Description | Further information |
+| Method | Description | Additional information |
 |---|---|---|
 | CLI | Run SQL statements from the FeatureBase CLI system | [Enable SQL CLI](/docs/community/com-config/com-config-sql-cli-enable) |
 | FeatureBase API | FeatureBase provides an API which can be used to execute PQL statements | [Community API](/docs/community/com-api/com-api-home) |

@@ -79,7 +79,7 @@ At a high level FeatureBase bitmaps are stored as **Shards**, made up of:
 
 FeatureBase stores shards on disk in the following directories:
 
-| FeatureBase Product | Directory | Further information |
+| FeatureBase Product | Directory | Additional information |
 |---|---|---|
 | Cloud | `etc` |  |
 | Community | `pilosa` | [FeatureBase Community data directory](/docs/community/com-config/com-config-data-directory)

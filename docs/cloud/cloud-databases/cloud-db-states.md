@@ -20,7 +20,7 @@ nav_order: 6
 
 ## Database states
 
-| Status | Description | Further information |
+| Status | Description | Additional information |
 |---|---|---|
 | CREATING | FeatureBase Cloud has received the signal to start provisioning a database | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
 | PROVISIONING | Following CREATING, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |

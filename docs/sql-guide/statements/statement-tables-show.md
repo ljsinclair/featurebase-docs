@@ -29,7 +29,7 @@ SHOW TABLES [WITH SYSTEM];
 
 ## Returns
 
-| Column Name | Data type | Description | Further information |
+| Column Name | Data type | Description | Additional information |
 |---|---|---|---|
 | `_id` | id or string  | Table ID | [`_id` column](#_id-column) |
 | name | string | Name of the table | [naming standards](#naming-standards)

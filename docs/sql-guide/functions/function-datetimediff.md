@@ -17,7 +17,7 @@ DATETIMEDIFF(timeunit, start-datetime, end-datetime)
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | timeunit | string | Units in which the function reports the time difference | Yes | [Time units](#timeunit). |
 | start-datetime | timestamp | lower boundary value | Yes | |

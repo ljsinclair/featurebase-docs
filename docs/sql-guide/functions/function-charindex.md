@@ -17,7 +17,7 @@ charindex(substring,expr,[position])
 
 ## Arguments
 
-| Argument | Data type | Description | Required? | Further information |
+| Argument | Data type | Description | Required? | Additional information |
 |---|---|---|---|---|
 | `substring` | string | Character or string to be identified in the input string | Yes |  |
 | `expr` | string | Input string to search for `substring` | Yes |  [SQL expressions](/docs/sql-guide/expressions/expressions-home) |

@@ -13,13 +13,13 @@ nav_order: 1
 
 ## 0-9
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|---|
 | 1,048,576 | FeatureBase Community `batch-size` ingest flag | [CSV ingest flags](/docs/community/com-ingest/com-ingest-flags-csv) |
 
 ## A
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|---|
 | ALL | PQL query | [PQL ALL read query](/docs/pql-guide/pql-read-all) |
 | Anti-entropy | FeatureBase Community cluster | {% include /concepts/concept-anti-entropy.md %} |
@@ -30,7 +30,7 @@ nav_order: 1
 
 ## B
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Batch (ingest) | Data import to FeatureBase | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
 | Bitmap<br/>Bitmap Index (BMI)<br/>Roaring B-Tree format (RBT) | FeatureBase database table rows | FeatureBase uses the [Roaring Bitmap](https://roaringbitmap.org/){:target="_blank"} format to store data. |
@@ -38,7 +38,7 @@ nav_order: 1
 
 ## C
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | CLEAR | PQL query | [PQL CLEAR write query](/docs/pql-guide/pql-write-clear) |
 | CLEARROW | PQL query | [PQL CLEARROW write query](/docs/pql-guide/pql-write-clearrow) |
@@ -49,7 +49,7 @@ nav_order: 1
 
 ## D
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Database | FeatureBase database | Dedicated resources which contain tables and data. [Manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage) |
 | Data source | Source of data imported to FeatureBase | FeatureBase imports data from external data sources via HTTPS, Kafka, SQL or CSV ingest processing |
@@ -60,13 +60,13 @@ nav_order: 1
 
 ## E
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | EXTRACT | PQL query | [PQL EXTRACT read query](/docs/pql-guide/pql-read-extract) |
 
 ## F
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Field | Table rows | Field data types to group rows into different categories:<br/>* [`bool`](/docs/sql-guide/data-types/data-type-bool)<br/>* [`int`](/docs/sql-guide/data-types/data-type-int)<br/>* [`set`](/docs/pql-guide/pql-write-set)<br/>* [`time`]()<br/>* [`timestamp`](/docs/sql-guide/data-types/data-type-timestamp)<br/>* [Mutex]()|
 | Fields, ranked | Table rows | Rows kept in sorted order within the field. |
@@ -75,19 +75,19 @@ nav_order: 1
 
 ## G
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Group By | PQL Query | [PQL Group By Query](/docs/pql-guide/pql-read-groupby) |
 
 ## H
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 |  |  |  |
 
 ## I
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | INCLUDESCOLUMN | PQL query | [PQL INCLUDESCOLUMN read query](/docs/pql-guide/pql-read-includescolumn) |
 | INTERSECT | PQL query | [PQL INTERSECT read query](/docs/pql-guide/pql-read-intersect) |
@@ -96,26 +96,26 @@ nav_order: 1
 
 ## J
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 |  |  |  |
 
 ## K
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 |  |  |  |
 
 ## L
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Latency | SQL/PQL Queries | How much time elapses between when a query is sent to a system and when the results return to the client. |
 
 
 ## M
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | MAX | PQL Read query | [PQL MAX Read query](/docs/pql-guide/pql-read-max) |
 | MAX | SQL `int` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
@@ -127,7 +127,7 @@ nav_order: 1
 
 ## N
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Node | FeatureBase Community Cluster | An individual running instance of FeatureBase server which belongs to a cluster. |
 | Normalizing | The act of identifying the cardinality of your data in order to design the relationships between different tables. | [FeatureBase concepts](/docs/concepts/concepts-home) |
@@ -135,14 +135,14 @@ nav_order: 1
 
 ## O
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Options | PQL Options query | [PQL OPTIONS](/docs/pql-guide/pql-options) |
 | Organization | FeatureBase Cloud | [FeatureBase Organization](/docs/cloud/cloud-org/cloud-org-manage) |
 
 ## P
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | PERCENTILE | PQL query | [PQL PERCENTILE read query](/docs/pql-guide/pql-read-percentile) |
 | Pilosa | Former name of FeatureBase | [Pilosa + Molecula = FeatureBase blog post](https://www.featurebase.com/blog/pilosa-molecula-featurebase-a-story-of-evolution) |
@@ -151,14 +151,14 @@ nav_order: 1
 
 ## Q
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Query (PQL) | Pilosa Query Language | [PQL Guide](/docs/pql-guide/pql-home) |
 | Query (SQL) | Structured Query Language | [SQL Guide](/docs/sql-guide/sql-guide-home) |
 
 ## R
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Record<br/>Row | Database table row | Equivalent to RDBMS table row. FeatureBase uses "Record" to avoid confusion |
 | Replica<br/>`cluster.replicas` parameter | FeatureBase Community Clusters | Replica of shard within a cluster. `cluster.replicas` configuration parameter determines the number of shard replicas within a cluster where `replicas=1` indicates no copies have been made. |
@@ -171,7 +171,7 @@ nav_order: 1
 
 ## S
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
 | Shard | Roaring Bitmap format | [Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format) |
@@ -183,7 +183,7 @@ nav_order: 1
 
 ## T
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | Throughput | Data import/ingestion | Quantity of data that can be imported/ingested in a given time. May involve trade-off between Latency and Freshness |
 | Time Quantum | SQL IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
@@ -195,14 +195,14 @@ nav_order: 1
 
 ## U
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | UNION | PQL query | [PQL UNION read query](/docs/pql-guide/pql-read-union) |
 | UNIONROWS | PQL query | [PQL UNIONROWS read query](/docs/pql-guide/pql-read-unionrows) |
 
 ## V
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | View | FeatureBase fields | Internally managed method to separate data layouts within a field. Not exposed by the API |
 | View (Primary) | FeatureBase fields | Standard view that represents typical base data |
@@ -210,6 +210,6 @@ nav_order: 1
 
 ## W - X - Y - Z
 
-| Term | Context | Further information |
+| Term | Context | Additional information |
 |---|---|---|
 | XOR | PQL query | [PQL XOR read query](/docs/pql-guide/pql-read-xor) |

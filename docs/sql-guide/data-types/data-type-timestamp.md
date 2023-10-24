@@ -21,7 +21,7 @@ TIMESTAMP [TIMEUNIT {value}]
 
 ## Arguments
 
-| Argument | Description | Further information |
+| Argument | Description | Additional information |
 |---|---|---|
 | TIMESTAMP | Time and date data type used for time series analysis | [Time stamp](https://en.wikipedia.org/wiki/Timestamp) |
 | TIMEUNIT | The time unit in which to store a timestamp that defaults to second `s` | See [TIMEUNIT values](#timeunit-value) |

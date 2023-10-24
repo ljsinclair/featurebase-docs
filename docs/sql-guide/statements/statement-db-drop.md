@@ -20,7 +20,7 @@ DROP DATABASE database_name;
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | `database_name` | string |Name of the database to delete | yes | |
 

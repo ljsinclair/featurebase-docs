@@ -17,7 +17,7 @@ prefix(expr, length)
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | `expr` | string | String value or any expression that resolves to a string | Yes| |
 | `length` | int | Length of the prefix to extract | Yes | | 

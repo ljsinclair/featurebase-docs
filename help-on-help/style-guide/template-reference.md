@@ -44,7 +44,7 @@ YAML Header information
 
 ## [Arguments | Parameters | Flags | pick one]
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | `syntax keywords`| Optional for SQL/PQL | Brief description of keyword | Use `optional` or state under which circumstance it's required | [Link to additional information] |
 | `arguments` | Optional for SQL/PQL | Brief description of the argument | can also say "yes", "no" here or leave blank | Can clarify information if *very* short |

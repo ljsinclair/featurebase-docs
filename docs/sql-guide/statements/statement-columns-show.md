@@ -26,7 +26,7 @@ SHOW COLUMNS FROM table_name;
 
 ## Returns
 
-| Column name | Data type | Description | Further information |
+| Column name | Data type | Description | Additional information |
 |---|---|---|
 | `name` | string | column name |  |
 | `type` | string | column data type | [Data types](/docs/sql-guide/data-types/data-types-home) |

@@ -61,7 +61,7 @@ featurebase [backup|backuptar]
 
 ### Backup flags
 
-| Argument | Description | Required? | Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `-no-sync` | Backup runs without the operating system moving data to persistent storage. | Optional | [Override storage synchronization](#override-storage-synchronization) |
 | `-o` or `-output` | Backup output directory. Add file name with `backuptar` | Yes |  |

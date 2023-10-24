@@ -53,7 +53,7 @@ The `INSERT` statement has the following limitations:
 
 There are special assignments for certain literal values.
 
-| Literal Value | Target Data Type | Result | Further information |
+| Literal Value | Target Data Type | Result | Additional information |
 |---|---|---|---|
 | `,'',` | `string`| `''` (empty string) | |
 | `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |

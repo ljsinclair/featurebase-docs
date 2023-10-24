@@ -22,7 +22,7 @@ KILL QUERY 'request_id';
 
 ## Arguments
 
-| Argument | Description | Required? | Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|
 | `request_id` | Request ID of the query to be killed. Value must be enclosed in single quote. | Yes | [List running queries](#list-currently-running-queries)
 

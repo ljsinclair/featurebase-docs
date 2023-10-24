@@ -43,7 +43,7 @@ featurebase auth-token
 
 ## Flags
 
-| Flag | Data type | Description | Default | Required | Further information |
+| Flag | Data type | Description | Default | Required | Additional information |
 | `h` or `help` |  | Auth token help |  | Optional |  |
 | `host string` |  | HTTPS host string `featurebase-host:port` |  | Yes | Default: `https://localhost:10101` |
 

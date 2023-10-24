@@ -126,7 +126,7 @@ When the `TUPLE()` function is used in a `TRANSFORM` clause, the following value
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
 
-| Literal Value | Target Data Type | Resultant | Further information |
+| Literal Value | Target Data Type | Resultant | Additional information |
 |---|---|---|---|
 | `,,` or `,"",` | All unless explicitly listed | `NULL` | |
 | `,,` or `,"",` | `string` | `''` (empty string) | if `CSV_EMPTY_STRING_AS_NULL` is used, the resultant becomes `NULL` |
@@ -137,7 +137,7 @@ There are special assignments for certain literal values when inserting CSV data
 
 There are special assignments for certain literal values when inserting NDJSON data.
 
-| Literal Value | Target Data Type | Resultant | Further information |
+| Literal Value | Target Data Type | Resultant | Additional information |
 |---|---|---|---|
 | `""` | `string` | `''` (empty string) | |
 | `""` | `stringset`<br/>`stringsetq` | `['']` (set with empty string member) | |

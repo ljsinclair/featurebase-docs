@@ -19,7 +19,7 @@ nav_order: 4
 
 Follow this process to safely change the cluster parameter without losing your data.
 
-| Task | Further information |
+| Task | Additional information |
 |---|---|
 | Take a backup of the cluster | [Backup FeatureBase](/docs/community/com-backup/com-config-backup) |
 | Create a new empty cluster | [Create a FeatureBase Cluster](/docs/community/com-cluster/com-cluster-setup) |

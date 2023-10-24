@@ -94,7 +94,7 @@ tuples_only off
 
 The optional time-zone can be set as follows:
 
-| `<tz identifier>` | Description | Further information |
+| `<tz identifier>` | Description | Additional information |
 |---|---|---|
 | `<none>` | Local time |  |
 | `UTC` | UTC time |  |

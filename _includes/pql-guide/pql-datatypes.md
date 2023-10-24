@@ -5,7 +5,7 @@
 <!-- CAPTAIN OBVIOUS -- this include file is a dump and NOT TO BE USED IN ANY LIVE DOCS UNTIL FIXED!! -->
 
 
-| Data type | Description | Values | Default | Further information |
+| Data type | Description | Values | Default | Additional information |
 |---|---|---|---|
 | Layout | Format to parse time strings |
 | Min |

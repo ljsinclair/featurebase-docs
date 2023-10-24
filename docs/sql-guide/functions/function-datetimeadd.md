@@ -17,7 +17,7 @@ DATETIMEADD(timeunit, int_expr, date-time)
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | timeunit | string | String value that specifies the time unit for the duration to be added to the target date-time. | Yes | [Time units](#timeunit).|
 | int_expr | integer | Integer value specified as literal or expression to be added as time duration to the target date-time. | Yes | |

@@ -38,7 +38,7 @@ CREATE TABLE
 
 ## Arguments
 
-| Argument | Description | Required? | Further information |
+| Argument | Description | Required? | Additional information |
 |---|---|---|
 | `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
 | `IF NOT EXISTS` | Optional argument that stops statement execution if a table of the same name already exists | No |  |

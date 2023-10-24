@@ -2,7 +2,7 @@
 * [Learn about data types and constraints](/docs/cloud/cloud-data-modeling/data-types)
 -->
 <!-- commented out because this isn't in the current branch
-| Data type | Optional constraints | Further information |
+| Data type | Optional constraints | Additional information |
 |---|---|---|
 | bool (boolean) | none |  |
 | decimal | SCALE | [DECIMAL data type](/sql-preview/data-types/cloud-decimal-data-type) |
