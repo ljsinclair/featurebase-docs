@@ -6,23 +6,31 @@ grand_parent: Tools
 nav_order: 20
 ---
 
-# How do I load data to FeatureBase using fbsql?
+# How do I import data to FeatureBase using fbsql?
 
-The `fbsql-loader` command can be run from the fbsql CLI to:
-* read data from a specified Impala, Kafka or Postgres data source
-* `BULK INSERT` this data to an existing FeatureBase database and table.
+The `loader` command:
+* processes data source connection information from a TOML configuration file
+* inserts source data into a FeatureBase target table
 
-The command requires a suitably configured TOML file which defines the data source and other settings.
+The TOML configuration file can be setup with connection details to the following data sources:
+* Apache Impala
+* Apache Kafka
+* PostgreSQL
 
 ## Before you begin
 
-* Determine a unique identifier for each row of data to be loaded from your data source to FeatureBase
-* [Learn about SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
+* [Learn about Apache Impala](https://impala.apache.org/){:target="_blank"}
+* [Learn about Apache Kafka](https://kafka.apache.org/documentation/){:target="_blank"}
+* [Learn about PostgreSQL](https://www.postgresql.org/docs/){:target="_blank"}
 * [Learn about TOML format](https://toml.io/)
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 
 ## How do I setup a TOML configuration file for my data source?
+
+
+
+
 
 ### Common keys
 

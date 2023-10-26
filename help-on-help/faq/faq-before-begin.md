@@ -13,7 +13,7 @@
 
 ### What's "Before you begin" for? / Why list stuff under here?
 
-**Before you begin** gives the user a list of things they need to:
+**Before you begin** gives the user **a list** of things they need to:
 * be aware of (e.g., Admin users can perform steps)
 * need to have in place (e.g., Docker running)
 * need to have setup/performed (e.g., added a database)
@@ -47,11 +47,20 @@ Some examples:
 
 As mentioned earlier, **you** might think these are obvious, but you're **not the customer**.
 
+## What doesn't belong in Before you begin?
+
+| Doesn't belong | Example | What to do instead |
+|---|---|
+| Multi-step instructions | You must first install Python on your system and configure it as follows:<br/>* configuration 1<br/>* configuration 2 | Create a separate configuration page and hyperlink as follows: [Learn how to configure Python for this feature](#) |
+| Multi-sentence explanations | Choose an appropriate unique key from your source data which can be ingested as the FeatureBase table _id column. The _id column is required in all FeatureBase tables and cannot be deleted. | If there's an explanation required, it goes in the page summary, above **Before you begin**, and/or as a text callout. You can also hyperlink out to a page that contains further information because in situations like this, you're most likely duplicating information that already exists and has already gone through a review process |
+| Multiple nested bullet levels | * Create a FeatureBase database</br>  * Create a table<br/>  * Learn about data types<br/>    * Vector data type<br/>      * Cosine distance function | **Further information** is used for links that relate to the page content but which are **NOT** required to make things work |
+
+
 ## Should I document third-party systems?
 
-In brief:
+In brief: **NO**
 
-* We **do not** document third party systems
+* We **do not** document third party systems because it's not our responsibility and we've got enough to do as it is
 * We **DO** hyperlink to information to help our users install/configure/setup the third-party system so that **FeatureBase will work as expected**.
 * We **DO** inform users what they need to do with a third-party system in order that **FeatureBase will work as expected**.
 
