@@ -8,7 +8,7 @@ nav_order: 20
 
 # Load data from TOML configuration files
 
-Run the `loader` command with appropriate flags to load data from a specified data source to an existing FeatureBase database.
+The `loader` command reads configuration data from an appropriately formatted TOML file.
 
 ## Before you begin
 
@@ -49,7 +49,7 @@ and submit them to FeatureBase via `BULK INSERT` statements.
  In this mode, fbsql processes messages until terminated by the user.
 
 If fbsql is provided the `--loader-impala=filename` flag, it will
-run in non-interactive mode. 
+run in non-interactive mode.
 
 Based on the configuration provided in filename, fbsql will
 query Impala,

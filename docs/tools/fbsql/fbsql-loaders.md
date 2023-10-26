@@ -6,16 +6,22 @@ grand_parent: Tools
 nav_order: 20
 ---
 
+TEST
+
+
+| Key | Description | Additional information |
+|---|---|---|
+| `batch-size` | {includes test1.md} |  |
+| `batch-max-staleness` |  |  |
+| `timeout` |  |  |
+
+
 # How do I import data to FeatureBase using fbsql?
 
-The `loader` command:
-* processes data source connection information from a TOML configuration file
-* inserts source data into a FeatureBase target table
-
-The TOML configuration file can be setup with connection details to the following data sources:
-* Apache Impala
-* Apache Kafka
-* PostgreSQL
+The `loader` command relies on an appropriately formated TOML configuration file that contains:
+* FeatureBase target table to insert data
+* Connection settings for an Apache Impala, Apache Kafka or PostgreSQL data source
+* A series of key/value pairs, added in the order of destination table columns
 
 ## Before you begin
 
@@ -26,7 +32,51 @@ The TOML configuration file can be setup with connection details to the followin
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 
-## How do I setup a TOML configuration file for my data source?
+## Connection keys
+
+| Key | Description | Required | Additional information |
+|---|---|---|---|
+| `connection-string= "<data-source-type>://<data-source-connection-string>"` | Quoted connection string that includes the data source type | Impala or PostgreSQL | [Data source connection strings](#data-source-connection-strings) |
+| `driver="<impala> | <postgres>"` | Direct the fbsql `loader` command to use the specified driver | Impala or PostgreSQL |
+| `hosts` | Apache Kafka hosts URL | Apache Kafka |  |
+
+## Database keys
+
+| Key | Description | Required | Additional information |
+|---|---|---|---|
+| `table="<target-table-name>" | Double-quoted target table to insert data | Yes | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
+| `query="<SQL Query>" | Valid SQL query to SELECT data from the data source for insertion into the target table | Impala or PostgreSQL |  |
+
+## Optional batching keys
+
+The following keys are optional and determine how much data is batched during ingestion.
+
+
+
+
+
+## Additional information
+
+### Data source connection strings
+
+* [Impala connection string documentation](https://impala.apache.org/docs/build/html/topics/impala_client.html){:target="_blank"}
+* [PostgreSQL connection string documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS){:target="_blank"}
+
+
+
+
+
+
+table=
+query = "SELECT query on data source tables"
+driver = "impala | postgres"
+connection-string = "impala | posgres connection string"
+batch-size =
+
+
+
+
+```
 
 
 
