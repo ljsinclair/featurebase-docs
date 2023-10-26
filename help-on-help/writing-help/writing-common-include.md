@@ -6,6 +6,10 @@ We use `include` files to avoid:
 
 Include files work a little like GitHub gist files in that they are inserted into the target file at build.
 
+## Before you begin
+
+* [Learn about INCLUDE files on the Jekyll site](https://jekyllrb.com/docs/includes/){:target="_blank"}
+
 ## Where are include files found?
 
 `/_includes/<foldername>`
@@ -37,12 +41,20 @@ Add an include file with the following shortcode:
 
 ## Warnings
 
+### Includes in tables
+
+It is possible to use an `include` file in table, but ONLY under the following circumstances:
+
+| Circumstance | Description |
+|---|---|
+| Last row of markdown table | Add an appropriately formatted include file to the END of a table |
+| Inserted in a table cell | This will ONLY work if you construct the whole table as HTML. If the table is markdown, a blank line is inserted after the row that contains the include |
 
 ## Troubleshooting
 
 * **Always** do a search for the include file **Before** editing it because any destination will be affected by your edits
 * Conflicts are likely if include filenames match those under `/docs`
-* **NEVER** nest include files within each other because this makes editing and troubleshooting harder to resolve
+* **NEVER** nest include files within each other because this makes editing and troubleshooting harder to complete
 
 ### Build errors
 
@@ -51,10 +63,5 @@ The build will be affected if:
 * You name an include file the same as a file under `/docs`
 * You've inserted the include shortcode **but** the include file does not exist
 * Shortcode include file name or path is incorrect
-
-## Page rendering errors
-
-Rendering **may** be affected if:
-
-* You try to insert an /include in the middle of a table
-* A shortcode is added within bullets or numbers
+* mis-spelled `include` (e.g., includ, includes, etc)
+* forgotten brackets or percent symbols
