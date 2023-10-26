@@ -8,12 +8,44 @@ nav_order: 20
 
 TEST
 
+This didn't work - whacks a blank line beneath the row it's in which stuffs the table:
 
 | Key | Description | Additional information |
 |---|---|---|
 | `batch-size` | {% include test1.md %} |  |
 | `batch-max-staleness` |  |  |
 | `timeout` |  |  |
+
+Let's try an html table. I wish I didn't need to do this but it may be the only way to get this damn thing to work >.<
+
+<table>
+<thead>
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+    <th>Additional information</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`batch-size`</td>
+    <td>{% include test1.md %}</td>
+    <td>something</td>
+  </tr>
+  <tr>
+    <td>`batch-max-staleness`</td>
+    <td>text</td>
+    <td>text</td>
+  </tr>
+  <tr>
+    <td>`timeout`</td>
+    <td>text</td>
+    <td>text</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 
 # How do I import data to FeatureBase using fbsql?
