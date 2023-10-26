@@ -11,7 +11,7 @@ TEST
 
 | Key | Description | Additional information |
 |---|---|---|
-| `batch-size` | {includes test1.md} |  |
+| `batch-size` | {% includes test1.md %} |  |
 | `batch-max-staleness` |  |  |
 | `timeout` |  |  |
 
