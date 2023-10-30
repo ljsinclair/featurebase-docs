@@ -17,7 +17,7 @@ You can also upload data using the [BULK INSERT statement](/docs/sql-guide/state
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 ## Naming standards
 

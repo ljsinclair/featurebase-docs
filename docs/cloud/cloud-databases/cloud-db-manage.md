@@ -10,62 +10,47 @@ has_toc: false
 # How do I manage databases in FeatureBase Cloud?
 {: .no_toc }
 
-This page provides an overview of FeatureBase databases and links to guide you through the process of creating databases.
+When you login to FeatureBase for the first time, or have deleted all databases, you're offered three choices for a first database:
 
-FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
+* **Start with a small database** which is suitable for small projects or testing
+* **Create a sample database** containing terabytes of data you can use to evaluate FeatureBase at scale
+* **Create a custom database** that meets your specific needs
+
+{: .note}
+You can also [create a database using the Cloud API](#create-database-using-the-cloud-api).
+
+{% include page-toc.md %}
 
 ## Before you begin
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
 
-{% include page-toc.md %}
+## Start with a small database
 
-## Trial accounts
+{% include /cloud-db/cloud-small-db-summary.md %}
 
-{% include /cloud/trial-account-limits.md %}
+* [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-small)
 
-## Cloud database shapes
+## Create a sample database
 
-{% include /cloud-db/cloud-summary-db-shape.md %}
+{% include /cloud-db/cloud-sample-db-summary.md %}
 
-* [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
+* [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
-## Cloud database versions
+## Create a custom database
 
-{% include /cloud-db/cloud-summary-db-version.md %}
+{% include /cloud-db/cloud-db-create-custom.md %}
 
-* [Learn more about your database version](/docs/cloud/cloud-databases/cloud-db-versions)
+## How do I learn more about my database?
 
-## Naming standards
-
-{% include /concepts/standard-naming-obj.md %}
-{% include /cloud-db/cloud-standard-naming-db.md %}
-
-## Database states
-
-{% include /concepts/summary-db-states.md %}
-
-* [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
+* [Database details](/docs/cloud/cloud-databases/cloud-db-details)
+* [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)
 
 ## Cloud database backups
 
 {% include /cloud-db/cloud-db-backup.md %}
 
-## Cloud database metrics
-
-{% include /cloud-db/cloud-summary-db-metrics.md %}
-
-- [Learn more about your database metrics](/docs/cloud/cloud-databases/cloud-db-metrics)
-
-## Managing databases in FeatureBase Cloud
-
-* [Create database](/docs/cloud/cloud-databases/cloud-db-create)
-* [Create database with test data to evaluate the system](/docs/cloud/cloud-databases/cloud-db-create-sample)
-* [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
-
-## Managing databases using the FeatureBase API
-
-* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
+{% include /cloud-db/cloud-db-drop-methods.md %}
 
 ## Next step
 

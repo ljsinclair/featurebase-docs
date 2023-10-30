@@ -1,4 +1,4 @@
-* [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 * [Learn how to import data to FeatureBase](/docs/cloud/cloud-ingest/cloud-ingest-manage)
 * [Learn about SQL](/docs/sql-guide/sql-guide-home)

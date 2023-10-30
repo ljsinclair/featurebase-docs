@@ -4,12 +4,13 @@ layout: default
 parent: Manage Databases
 grand-parent: Cloud
 nav_order: 2
+nav_exclude: true
 ---
 
 # What is FeatureBase Serverless?
 {: .no_toc }
 
-{% include /serverless/serverless-preview-warning.md %}
+{% include /cloud-db/serverless-preview-warning.md %}
 
 FeatureBase Serverless provides a new database architecture which separates computer power and storage so they can be scaled independently.
 
@@ -46,7 +47,7 @@ FeatureBase Serverless databases have compute and storage metered and charged in
 
 ## How do I create a Serverless Database?
 
-* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-serverless)
+* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-custom-serverless)
 
 ## How do I scale a Serverless Database?
 

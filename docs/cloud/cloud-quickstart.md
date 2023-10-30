@@ -59,7 +59,7 @@ While the database is spinning up, you will see updates to "Status" on the ```Ho
 ![Figure 7. New Database: Running](/assets/images/quick-start-guide/cloud/db_running.png)
 
 
-After about 10 minutes, the database status will progress to ```RUNNING``` and some [database metrics](/docs/cloud/cloud-databases/cloud-db-metrics/) will populate on the page. Click on "All Details" under the database name and then the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. Additionally, you will some system tables that contain information about your database. In the next section, we will perform a variety of common analytical queries on both datasets.
+After about 10 minutes, the database status will progress to ```RUNNING``` and some [database metrics](/docs/cloud/cloud-databases/cloud-db-details/) will populate on the page. Click on "All Details" under the database name and then the ```Tables``` tab to see the two tables that have been created in the database. One table is called ```cseg```, short for customer segmentation, and the other is called ```skills```. Additionally, you will some system tables that contain information about your database. In the next section, we will perform a variety of common analytical queries on both datasets.
 
 ![Figure 8. Demo Data restored into tables from backup](/assets/images/quick-start-guide/cloud/tables_page_with_cseg.png)
 

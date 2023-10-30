@@ -25,7 +25,7 @@ There are a number of reasons why you may choose to drop a table, including:
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 
 ## Step 1: View table list

@@ -15,13 +15,26 @@ FeatureBase supports different types of queries that are discussed further in th
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /common/before-begin-database-create.md %}
 
 ## Running SQL queries
 
 SQL queries can be run against FeatureBase tables in the following ways:
 
 {% include /sql-guide/sql-guide-supported-tools.md %}
+
+## Syntax notation
+
+```sql
+KEYWORD
+<variable or element>
+<alternative> | <alternative2>
+<repeat element until indicated>...
+<repeat element separated by commas until indicated>,...
+{ required elements }
+( required parenthesis )
+[ optional elements ]
+```
 
 ## Statements
 

@@ -14,7 +14,7 @@ nav_order: 3
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 
 ## Column data types and constraints
