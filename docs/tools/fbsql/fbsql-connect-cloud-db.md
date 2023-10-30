@@ -12,7 +12,7 @@ Connect to a FeatureBase cloud database when you startup fbsql.
 
 ## Before you begin
 
-* [Create a database](/docs/cloud/databases/cloud-db-manage)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-manage)
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 {% include /fbsql/fbsql-help-quit.md %}
