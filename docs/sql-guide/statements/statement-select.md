@@ -84,7 +84,7 @@ SELECT
 
 | DISTINCT | Description | Examples |
 |---|---|---|
-| Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct) |
+| Values | A query that returns `DISTINCT` values from a table | [SELECT from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target) |
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
 ### `<expr>` filter
@@ -134,47 +134,9 @@ Both expressions can be aliased with a `<table_alias>`
 
 ## Examples
 
-### SELECT COUNT
+{% include /sql-guide/sql-eg-select-statements.md %}
 
-```sql
-SELECT COUNT(*) FROM github-stats;
-```
-
-### SELECT TOP
-
-```sql
-SELECT TOP(10) * FROM github-stats;
-```
-
-### Point SELECT
-
-```sql
-SELECT * FROM tbl WHERE _id = 1
-SELECT fld1, fld2 FROM tbl WHERE _id = 1
-SELECT _id, fld FROM tbl WHERE _id = 1
-```
-
-### SELECT DISTINCT
-
-```sql
-SELECT DISTINCT fld FROM tbl
-```
-### SELECT COUNT
-
-```sql
-SELECT COUNT(*) FROM tbl
-SELECT COUNT(*) FROM tbl WHERE fld = 1
-SELECT COUNT(*) FROM tbl WHERE fld1 = 1 AND fld2 = 2
-SELECT COUNT(distinct fld) FROM tbl
-```
-
-### SELECT ids FROM segment
-```sql
-SELECT _id FROM tbl WHERE fld = 1
-SELECT _id FROM tbl WHERE fld in (1, 2)
-SELECT _id FROM tbl WHERE fld1 = 1 LIMIT 1
-SELECT _id FROM tbl WHERE fld1 = 1 AND fld2 = 2
-```
+<!-- The following examples need to be rolled into the examples, above-->
 
 ### SELECT int function
 
@@ -239,7 +201,7 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 
 ### SELECT with cosine_distance
 
-{% include /sql-guide/select-cosine-distance.md %}
+* [SELECT with COSINE_DISTANCE function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
 
 ### SELECT with two RANGEQ() timestamps
 

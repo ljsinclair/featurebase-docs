@@ -17,6 +17,8 @@ nav_order: 3
 ### column_list
 ![expr](/assets/images/sql-guide/column_list.svg)
 
+{% include /tips/tip-show-table-for-structure.md %}
+
 ### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 
@@ -67,6 +69,10 @@ There are special assignments for certain literal values.
 {% include /sql-guide/update_behavior.md %}
 
 ## Examples
+
+{% include /sql-guide/sql-eg-insert-statements.md %}
+
+<!-- the following headings and sql commented out because most of them are in the insert statements include, above
 
 ### CREATE TABLE with string data types
 
@@ -124,14 +130,8 @@ INSERT
 
 ### INSERT data to vector table
 
-#### CREATE TABLE statement
-
-{% include /sql-guide/table-create-vector.md %}
-
-#### INSERT INTO statement
-
-{% include /sql-guide/insert-into-vector-table.md %}
-
+* [INSERT INTO VECTOR data type column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
+-->
 ## Further information
 
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)

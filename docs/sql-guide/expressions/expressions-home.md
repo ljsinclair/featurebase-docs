@@ -2,6 +2,7 @@
 title: Expressions
 layout: default
 parent: SQL guide
+nav_order: 4
 ---
 
 # SQL Expressions
@@ -57,11 +58,9 @@ Literals are explicitly specified fixed values that conform to a specific data t
 
 ### CAST `<expr>` AS `<data-type>`
 
-| Syntax | Example | Result |
-|---|---|---|
-| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 25 |
-
-* [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"}
+| Syntax | Example | Result | Additional information |
+|---|---|---|---|
+| `CAST <expr> AS <data-type>` | `SELECT CAST (25.65 AS int);` | 25 | [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"} |
 
 ### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)

@@ -2,6 +2,7 @@
 title: FeatureBase system tables
 layout: default
 parent: SQL guide
+nav_order: 30
 ---
 
 # Reference: FeatureBase system tables

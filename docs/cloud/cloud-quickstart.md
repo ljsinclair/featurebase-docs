@@ -208,7 +208,7 @@ If you have issues with your queries, please contact your FeatureBase representa
 We hope that this hands-on experience has further demonstrated the power of FeatureBase to power real-time analytics workflows at scale. While this example focused on a customer segmentation use case, the same type of workflows are often used in anomaly detection or business process optimization use cases and continues to perform as workloads grow to trillions of records. Additionally, FeatureBase excels at combining streaming and historical data in real-time, allowing you to analyze data as soon at is available in FeatureBase with no need for time-consuming preprocessing or preaggregation. From here, partner with your FeatureBase representative to better understand how FeatureBase will work for your organization’s specific needs. If you'd like to continue exploring, you can start learning how to:
 
 * [INGEST DATA OVERVIEW](/docs/cloud/cloud-ingest/cloud-ingest-manage)
-* [BULK INSERT CSV Example](/docs/sql-guide/statements/statement-insert-bulk-csv-example/)
+* [BULK INSERT CSV Example](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target/)
 * [Learn about BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk/)
 
 ## Queries

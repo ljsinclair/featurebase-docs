@@ -42,6 +42,8 @@ The data source must be in one of the following formats:
 ### Column list
 ![expr](/assets/images/sql-guide/column_list.svg)
 
+{% include /tips/tip-show-table-for-structure.md %}
+
 ### Map list
 ![expr](/assets/images/sql-guide/map_list.svg)
 
@@ -146,21 +148,9 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-## Examples
+<!--insert has heading "BULK INSERT examples"-->
 
-* [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
-* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
-
-### MAP examples
-
-| Input type | MAP expression for value in source column | Example | Additional information |
-|---|---|---|
-| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |  |
-| NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
-| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |  |
-| ORC | A string label that precisely matches the column name in the schema within the ORC file. | [BULK INSERT ORC example](/docs/sql-guide/statements/statement-insert-bulk-orc-example) |  |
+{% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
 ### TRANSFORM examples
 
@@ -205,6 +195,9 @@ string
 literal'
 ```
 
+{: .important}
+Place closing quotation marks on the final line of any multi-line string literal.
+
 #### Using INLINE with quotation marks
 
 FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
@@ -231,7 +224,7 @@ with
     input 'FILE';
 ```
 -->
-
+<!-- The following examples to be rolled into the new examples-->
 ### BULK INSERT with read from CSV file
 
 ```sql
@@ -267,7 +260,3 @@ bulk replace
 ```
 
 This would ingest all three files in a single request.
-
-### BULK INSERT using TRANSFORM with TUPLE() function
-
-{% include /sql-guide/insert-bulk-transform-tuple-eg.md %}

@@ -32,10 +32,4 @@ VECTOR({length})
 
 ## Examples
 
-### CREATE TABLE statement with Vector
-
-{% include /sql-guide/table-create-vector.md %}
-
-## Further information
-
-* [COSINE_DISTANCE() function](/docs/sql-guide/functions/function-cosine-distance)
+* [CREATE TABLE with VECTOR data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
