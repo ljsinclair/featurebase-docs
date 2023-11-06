@@ -1,56 +1,14 @@
 ---
-title: Import data using fbsql
+title: Import data to FeatureBase
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 20
 ---
 
-TEST
-
-This didn't work - whacks a blank line beneath the row it's in which stuffs the table:
-
-| Key | Description | Additional information |
-|---|---|---|
-| `batch-size` | {% include test1.md %} |  |
-| `batch-max-staleness` |  |  |
-| `timeout` |  |  |
-
-Let's try an html table. I wish I didn't need to do this but it may be the only way to get this damn thing to work >.<
-
-<table>
-<thead>
-  <tr>
-    <th>Key</th>
-    <th>Description</th>
-    <th>Additional information</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>`batch-size`</td>
-    <td>{% include test1.md %}</td>
-    <td>something</td>
-  </tr>
-  <tr>
-    <td>`batch-max-staleness`</td>
-    <td>text</td>
-    <td>text</td>
-  </tr>
-  <tr>
-    <td>`timeout`</td>
-    <td>text</td>
-    <td>text</td>
-  </tr>
-</tbody>
-</table>
-
-
-
-
 # How do I import data to FeatureBase using fbsql?
 
-The `loader` command relies on an appropriately formated TOML configuration file that contains:
+The fbsql `loader` command relies on an appropriately formatted TOML configuration file that contains:
 * FeatureBase target table to insert data
 * Connection settings for an Apache Impala, Apache Kafka or PostgreSQL data source
 * A series of key/value pairs, added in the order of destination table columns
@@ -63,6 +21,35 @@ The `loader` command relies on an appropriately formated TOML configuration file
 * [Learn about TOML format](https://toml.io/)
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
+* [Create a destination table](/docs/sql-guide/statements/statement-table-create)
+
+## TOML syntax
+
+Using SQL notation for optional vs required. Will backtrack on this afterwards
+
+```toml
+[ #kafka keys
+hosts = ["localhost:9092"]
+group = "grp"
+topics = "events"
+]
+# featurebase target
+table = "target-table"
+# drivers
+driver= "impala | postgres"
+# batching keys
+batch-size = <integer-value>
+batch-max-staleness = "<integer><measure>"
+timeout = "<integer><measure>"
+
+[[fields]]
+name = "<target-table-column>"
+source-type = "<target-table-column-data-type>"
+[primary-key= "true"]
+[source-path = ["<kafka-json-parent-key", "json-child-key"]]
+```
+
+
 
 ## Connection keys
 
