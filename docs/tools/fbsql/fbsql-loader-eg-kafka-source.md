@@ -8,7 +8,7 @@ nav_order: 22
 
 # Kafka Loader
 
-<!-- copied from original fbsql-loaders.md
+<!-- copied from original  fbsql-loader-toml-config.md
 
 Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements.
 -->

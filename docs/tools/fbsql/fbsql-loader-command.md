@@ -1,71 +1,52 @@
 ---
-title: Load data
+title: fbsql loader command
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 20
 ---
 
-# Load data from TOML configuration files
+# fbsql loader command
 
-The `loader` command reads configuration data from an appropriately formatted TOML file.
+The fbsql `loader` command:
+* specifies a supported data source type
+* reads configuration settings from a specified TOML configuration file
+
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
-* [Create a FeatureBase table](/docs/sql-guide/statements/statement-table-create)
-* [Learn how to setup a TOML configuration file]()
+* [Learn how to setup a TOML configuration file](/docs/tools/fbsql/fsql-loader-toml-config)
 
 ## Syntax
 
 ```sh
 (<cli-flag-prefix>)
   <db-connection-string> \
-(--loader-(impala|kafka|postgres)) filename.toml
+(--loader-<data-source>) <filename>.toml
 ```
 
 {% include /fbsql/fbsql-prefix-cli-flags.md %}
 
-### Arguments
+## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `<db-connection-string>` | fbsql connection string to FeatureBase database | Yes | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
-| `--loader-<datasource>` |
-| `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | For Impala data sources | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
-| `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | For Apache Kafka data sources | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
-| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | For PostgreSQL data sources | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |
-| `filename.toml` | filename and path to toml configuration file configured according to the data source | [TOML configuration](#toml-configuration) |
+| `--loader-<datasource>=<filename>.toml` | Provide data source type and filename containing TOML configuration | [TOML configuration file for fbsql loader](/docs/tools/fbsql/ fbsql-loader-toml-config-impala) |
 
+## Additional information
 
-If fbsql is provided the `--loader-kafka=filename` flag, it will run
-as a Kafka consumer in non-interactive mode.
+### fbsql loader operations
 
-Based on the configuration provided in **filename**, fbsql will
-read messages from a Kafka topic
-and submit them to FeatureBase via `BULK INSERT` statements.
+| Data source | Operation |
+|---|---|
+| Kafka | Reads messages from Kafka topic specified in TOML configuration |
+| Impala or PostgreSQL | Reads tuples from SELECT statement included in TOML configuration |
 
- In this mode, fbsql processes messages until terminated by the user.
+## Examples
 
-If fbsql is provided the `--loader-impala=filename` flag, it will
-run in non-interactive mode.
-
-Based on the configuration provided in filename, fbsql will
-query Impala,
-read tuples returned,
-and submit them to FeatureBase via `BULK INSERT` statements.
-
-In this mode, fbsql processes messages until all tuples returned by the query are processed.
-
-
-If fbsql is provided the `--loader-postgres=filename` flag, it will run in
-
-non-interactive mode.
-
-Based on the configuration provided in filename, fbsql will
-query PostgreSQL,
-read tuples returned,
-and submit them to FeatureBase via `BULK INSERT` statements.
-
-In this mode, fbsql processes messages until all tuples returned by the query are processed.
+* Impala
+* Kafka
+* PostgreSQL

@@ -56,4 +56,4 @@ Run SQL queries in the fbsql interface or using text files:
 ## Further information
 
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
-* [Learn about fbsql loaders](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to import data to FeatureBase using fbsql loader command](/docs/tools/fbsql/ fbsql-loader-toml-config)

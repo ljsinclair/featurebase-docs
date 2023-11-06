@@ -8,7 +8,7 @@ nav_order: 23
 
 # PostgreSQL Loader
 
-<!-- taken from original fbsql-loaders.md
+<!-- taken from original  fbsql-loader-toml-config.md
 
 Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded.
 -->

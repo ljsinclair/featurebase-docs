@@ -69,7 +69,7 @@ Connect to a FeatureBase cloud database when you startup fbsql.
 
 ### Load data from data source
 
-* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/ fbsql-loader-toml-config)
 
 ## Additional information
 
