@@ -16,7 +16,7 @@ The fbsql `loader` command relies on an appropriately formatted TOML configurati
 ## Before you begin
 
 * [Learn about Apache Impala](https://impala.apache.org/){:target="_blank"}
-* [Learn about Apache Kafka](https://kafka.apache.org/documentation/){:target="_blank"}
+* [Learn about Apache Kafka Confluent Consumer](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"}
 * [Learn about PostgreSQL](https://www.postgresql.org/docs/){:target="_blank"}
 * [Learn about TOML format](https://toml.io/)
 {% include /fbsql/fbsql-before-begin.md%}
@@ -25,112 +25,116 @@ The fbsql `loader` command relies on an appropriately formatted TOML configurati
 
 ## TOML syntax
 
-Using SQL notation for optional vs required. Will backtrack on this afterwards
+```
+# kafka keys
+hosts = ["<address:port>",...]
+group = "<kafka-confluent-group>"
+topics = "<kafka-confluent-topics>"
 
-```toml
-[ #kafka keys
-hosts = ["localhost:9092"]
-group = "grp"
-topics = "events"
-]
-# featurebase target
-table = "target-table"
-# drivers
-driver= "impala | postgres"
+# connection keys
+driver= "<datasource-type>"
+connection-string = "<datasource-type>://<address:port>/database=<datasource-db-name>"
+
+# data
+table = "<target-table>"
+query = "<select-from-data-source>"
+
 # batching keys
 batch-size = <integer-value>
-batch-max-staleness = "<integer><measure>"
-timeout = "<integer><measure>"
+batch-max-staleness = "<integer-value><time-unit>"
+timeout = "<integer-value><time-unit>"
 
 [[fields]]
 name = "<target-table-column>"
 source-type = "<target-table-column-data-type>"
+source-column = "<target-table-column>"
 [primary-key= "true"]
-[source-path = ["<kafka-json-parent-key", "json-child-key"]]
+[source-path = ["<kafka-json-parent-key>", "<json-child-key>"]]
 ```
 
+## Variables
 
+| Notation | Additional information |
+|---|---|
+| `<address:port>` | URL or IP address and port |
+| `<kafka-confluent-group>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `<kafka-confluent-topics>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `<datasource-type>` | Impala or PostgreSQL data source |
+| `<datasource-db-name>` | Name of Impala or PostgreSQL database |
+| `<target-table>` | Name of FeatureBase target table |
+| `<select-from-data-source>` | Valid SELECT statement on Impala or PostgreSQL data source with results that import to FeatureBase `<target-table>` |
+| `<time-unit>` | [Supported time units](#Supported time units) |
+| `<target-table-column>` | Column contained in table defined by `table` key |
+| `<target-table-column-data-type>` | Column data type |
+| `"<kafka-json-parent-key>", "<json-child-key>"` | Nested JSON object parent and child |
 
 ## Connection keys
 
 | Key | Description | Required | Additional information |
 |---|---|---|---|
-| `connection-string= "<data-source-type>://<data-source-connection-string>"` | Quoted connection string that includes the data source type | Impala or PostgreSQL | [Data source connection strings](#data-source-connection-strings) |
-| `driver="<impala> | <postgres>"` | Direct the fbsql `loader` command to use the specified driver | Impala or PostgreSQL |
-| `hosts` | Apache Kafka hosts URL | Apache Kafka |  |
+| `connection-string` | Quoted connection string that includes the data source type | Impala or PostgreSQL | [Data source connection strings](#data-source-connection-strings) |
+| `hosts` | One or more Kafka confluent consumer hosts. Use `[]` for multiple hosts | Apache Kafka | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `driver` | Driver required for data source | Impala or PostgreSQL |
+| `group` | Kafka consumer group | Kafka | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `topics` | One or more Kafka topics | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
 
 ## Database keys
 
 | Key | Description | Required | Additional information |
 |---|---|---|---|
-| `table="<target-table-name>" | Double-quoted target table to insert data | Yes | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
-| `query="<SQL Query>" | Valid SQL query to SELECT data from the data source for insertion into the target table | Impala or PostgreSQL |  |
+| `table` | Double-quoted target table to insert data | Yes | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
+| `query` | Valid SQL query to SELECT data from the data source for insertion into the target table | Impala or PostgreSQL |  |
 
-## Optional batching keys
+## Batching keys
 
-The following keys are optional and determine how much data is batched during ingestion.
+Data is collected into batches before importing to FeatureBase. Default values are used if batching keys are not supplied.
 
+| Key | Description | Required | Default | Additional information |
+|---|---|---|---|---|
+| `batch-size` | Integer value representing the maximum size of a batch file containing the data to import. | Yes | 1 | Direct correlation to batch size, speed of import and resource usage |
+| `batch-max-staleness` | Maximum length of time the oldest record in a batch can exist before the batch is flushed | Kafka | Can result in timeouts while waiting for datasource |
+| `timeout` | Time to wait before batch is flushed | Kafka | `"1s"` | Set `timeout = 0s` to disable |
 
+## Fields
 
+{: .note}
+Run [SHOW CREATE TABLE `<tablename>`](/docs/sql-guide/statements/statement-table-create-show) to output column names and data types required for `[[fields]]` key-values.
 
+FeatureBase will supply values from specified `table` key when `[[fields]]` values are not supplied.
+
+| Key | Description | Required | Additional information |
+|---|---|---|---|
+| `name` | Target column name |  |  |
+| `source-type` | Target column data type | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |  |  |
+| `source-column` | Target column name | Optional | When omitted, order of `[[fields]]` key-values are correlated to those in `<target-table>` |
+| `primary-key` | Set to `"true"` for FeatureBase `_id` column | Only for `_id` column | Omit for other columns |
+| `source-path` | Nested JSON object parent and child | For Kafka | Defaults to `name` if not supplied |
 
 ## Additional information
 
-### Data source connection strings
+### Supported time-units
+
+One or more `<integer-value><time-unit>` combinations, in descending order.
+
+| Time unit | Declaration | Example |
+|---|---|---|
+| hour | `h` | 24h30m |
+| minute | `m` | 30m45s |
+| second | `s` | 45s10ms |
+| milliseconds | `ms` | 10ms22us |
+| microseconds | `us` | 22us28ns |
+| nanoseconds | `ns` | 28ns |
+
+### Impala and PostgreSQL connection strings
 
 * [Impala connection string documentation](https://impala.apache.org/docs/build/html/topics/impala_client.html){:target="_blank"}
 * [PostgreSQL connection string documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS){:target="_blank"}
 
-
-
-
-
-
-table=
-query = "SELECT query on data source tables"
-driver = "impala | postgres"
-connection-string = "impala | posgres connection string"
-batch-size =
-
-
-
-
-```
-
-
-
-
-
-### Common keys
-
-| TOML key | Description | Default | Required | Additional information |
-|---|---|---|---|---|
-|  
-
-The table below holds the key/value pairs supported in the TOML file independent of the source you want to connect to:
-
-| Key | Description | Example Value | Default |
-|---|---|---|---|
-| `table` | The name of the FeatureBase table into which data, consumed by fbsql, will be written. The table must exist prior to running `fbsql`. | `"tablename"` | |
-
-| `batch-size` | The size of the `BULK INSERT` batches sent to FeatureBase. The ideal value will depend on the data model, available resources, and target load rates. Generally speaking, larger values will increase the rate at which data is loaded but will use more resources. | `100000` | `1`|
-
-
-### Fields
-
-Providing field configuration in the TOML configuration file is optional. If no fields are provided, fbsql will try to map each source data field to a FeatureBase columns from the table specified in the configuration file.
-
-Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#array-of-tables). Each source data field will need an entry in the file.
-
-The table below holds the key/value pairs supported in the TOML file independent of the source you want to connect to:
-
-| Key | Description | Required | Default | Additional information |
-|---|---|---|---|---|
-| `name` | Specify destination column in FeatureBase table to write data. | Yes | none | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
-| `source-type` | Specify destination column data type to format incoming data  |  | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
-| `primary-key` | Specify a unique identifier from your data source to map to the FeatureBase table `_id` column in each row of data | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
-
 ## Further information
 
+* [Apache Impala example]
+* [Confluent Kafka example]
+* [PostgreSQL example]
+* [TOML arrays of tables](https://toml.io/en/v1.0.0#array-of-tables)
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)

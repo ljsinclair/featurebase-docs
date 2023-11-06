@@ -28,6 +28,8 @@ TIMESTAMP [TIMEUNIT {value}]
 
 ## Additional information
 
+### TIMEUNIT value
+
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
 ## Examples

@@ -1,5 +1,3 @@
-### TIMEUNIT value
-
 | Unit | Declaration |
 |---|---|
 | seconds (default) | `s` |
