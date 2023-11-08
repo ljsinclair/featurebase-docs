@@ -86,20 +86,7 @@ There are several ways to create an API key for your FeatureBase Cloud account:
 
 ## Examples
 
-### Connect with API key
-
-```sh
-fbsql --host="https://query.featurebase.com" \
---api-key="asdf-f345-sg-hjyjk-345323"
-```
-
-### Connect with user credentials
-
-```sh
-fbsql --host="https://query.featurebase.com" \
---email="user@example.com" \
---password="a1b2c3d4e5f6"
-```
+{% include /fbsql/fbsql-eg-cloud-connect-api-user.md %}
 
 ### Connect with API key in file
 

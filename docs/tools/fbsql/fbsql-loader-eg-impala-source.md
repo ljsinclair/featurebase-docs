@@ -7,22 +7,16 @@ nav_order: 21
 ---
 # Impala data source example for fbsql loader
 
-This example demonstrates:
-* Creating an Impala data source
-* Creating a TOML configuration file ready for use by `fbsql loader`
+This example provides:
+* valid SQL to create a table and insert data
+* a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
 
 ## Before you begin
 
 * Create an Impala Database
 * Obtain your Impala connection string
-
-Create cloud db/get credentials,etc
-
-Learn about TOML
-* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
-
+* [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create target table](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
-
 
 ## Step 1 - Create data source
 
@@ -62,11 +56,9 @@ batch-size = 1
 
 ## Next step
 
-* [Run fbsql loader command with your `import.toml` file](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
-
-
-
+* [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)
+* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
