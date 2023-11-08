@@ -1,26 +1,26 @@
 ---
-title: TANIMOTO()
+title: TANIMOTO_COEFFICIENT()
 layout: default
 parent: Functions
 grand_parent: SQL guide
 ---
-# TANIMOTO() scalar function
+# TANIMOTO_COEFFICIENT() scalar function
 
-The TANIMOTO scalar function quantifies the degree of similarity between two sets of data in a specified table or view as a part of a SELECT statement.
+The TANIMOTO_COEFFICIENT scalar function quantifies the degree of similarity between two sets of data in a specified table or view as a part of a SELECT statement.
 
 <!-- QUERY - can JACCARD be substituted for TANIMOTO?-->
 
 ## Syntax
 
 ```sql
-tanimoto_distance(<column-name>, [<select-statement>] | {[<item-list>]})
+tanimoto_coefficient(<column-name>, [<select-statement>] | {[<item-list>]})
 ```
 
 ## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `tanimoto_distance` | A function used to assess the similarity between data in a specified column and a nested SELECT statement or item list. |  |  |
+| `tanimoto_coefficient` | A function used to assess the similarity between data in a specified column and a nested SELECT statement or item list. |  |  |
 | `<column-name>` | Table column name contained in the outer SELECT statement. | Optional |  |
 | `<select-statement>` | Nested SELECT statement used to gather values to compare against the <column name> | Optional |  |
 | `[<item-list>]` | comma separated list of items found in the table named in the surrounding SELECT statement. | Yes | Square brackets are required |
@@ -43,4 +43,4 @@ The function is used in a SELECT statement and requires:
 
 ## Examples
 
-* [SELECT using TANIMOTO function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)
+* [SELECT using TANIMOTO_COEFFICIENT function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)

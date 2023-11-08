@@ -10,11 +10,11 @@ nav_exclude: true
 ## Before you begin
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [TANIMOTO function](/docs/sql-guide/functions/function-tanimoto)
+* [TANIMOTO_COEFFICIENT function](/docs/sql-guide/functions/function-tanimoto)
 * [CREATE TABLE tan-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 * [INSERT INTO tan-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 
-## SELECT using TANIMOTO() function
+## SELECT using TANIMOTO_COEFFICIENT() function
 
 ```sql
 SELECT *, tanimoto_coefficient (stuff, ['milk', 'chocolate', 'cookies', 'cup'])
