@@ -5,7 +5,7 @@ parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 21
 ---
-# Impala data source example for fbsql loader
+# Impala data source example for fbsql loader command
 
 This example provides:
 * valid SQL to create a table and insert data
@@ -42,7 +42,7 @@ INSERT INTO testdb.impala_table VALUES
 ## Step 2 - Create TOML configuration file
 
 * Open a terminal then run `nano impala-import.toml`
-* Add the following keys and values:
+* Add the following keys and values and substitute your Impala connection string as directed:
 
 ```toml
 table = "loader-target"
@@ -59,6 +59,7 @@ batch-size = 1
 * [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
 
 ## Further information
+
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)
 * [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)

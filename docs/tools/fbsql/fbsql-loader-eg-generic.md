@@ -16,6 +16,7 @@ This example demonstrates how to use fbsql to:
 
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
+* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
 
 <!-- NEED SOME WAY TO RATIONALISE WHAT'S HERE -- COULD BE JUST HEADINGS AND HYPERLINKS -->
 
