@@ -34,16 +34,6 @@ The `loader` command:
 | `loader-(impala | kafka | postgres)` | Choose a data source for the loader to read from | Yes | Requires `--` prefix when run from CLI |
 | `<file-name>.toml` | TOML configuration file containing key/values for data source and target table. | Yes | [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config) |
 
-## Additional information
-
-### fbsql loader operations
-
-| Data source | Operation |
-|---|---|
-| Kafka | Reads messages from Kafka topic specified in TOML configuration |
-| Impala or PostgreSQL | Reads tuples from SELECT statement included in TOML configuration |
-
 ## Further information
 
-* [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config)
 * [fbsql loader examples](/docs/tools/fbsql/fbsql-loader-eg-generic)
