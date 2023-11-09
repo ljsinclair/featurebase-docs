@@ -8,12 +8,8 @@ nav_order: 13
 
 # fbsql loader command
 
-The fbsql `loader` command supports three data sources:
-* Apache Impala
-* Apache Kafka
-* PostgreSQL
-
-When run, the `loader` command:
+The `loader` command:
+* supports Apache Impala, Apache Kafka and PostgreSQL data sources,
 * reads from a specified TOML configuration file containing key/values for the data source and target table
 * uses that information to ingest data from the data source
 * then copies to the target table
