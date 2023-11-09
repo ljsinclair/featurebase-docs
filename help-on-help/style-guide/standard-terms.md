@@ -16,5 +16,5 @@ NOTE: This list is **in progress** and new content will be added as required.
 
 | Word | Description | Example |
 |---|---|---|
-| Setup | This is a noun, describing a thing, not an action | Setup guide |
-| Set up | This is a verb, describing something you do | Set up FeatureBase Cloud |
+| Setup | This is a noun, describing a thing, not an action | Python Client Library setup guide |
+| Set up | This is a verb, describing something you do | How do I set up FeatureBase Cloud? |
