@@ -18,6 +18,18 @@ This example demonstrates how to use fbsql to:
 {% include /fbsql/fb-db-create.md %}
 * [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
 
+## Step one - create your destination table:
+
+* [Create a table for Impala or PostgreSQL data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
+* [Create a table for Kafka data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-kafka)
+
+## Step two - Setup your data source and TOML configuration file
+
+Based on your choices in step one, create a matching data source and configuration file:
+* [Setup an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
+* [Setup an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
+* [Setup a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
+
 * Choose a data source example to set up:
   * [Learn how to setup an Impala data source and TOML config file](/docs/tools/fbsql/fbsql-loader-eg-impala-source)
   * [Learn how to setup a Kafka data source and TOML config file](/docs/tools/fbsql/fbsql-loader-eg-kafka-source)
@@ -40,7 +52,7 @@ You can connect to your Cloud database using an API key or user credentials.
 Substitute your data source where specified in the following fbsql command:
 
 ```
-loader-[impala|kafka|postgres] 
+loader-[impala|kafka|postgres]
 ```
 
 ## Next step

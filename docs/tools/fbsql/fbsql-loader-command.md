@@ -8,16 +8,20 @@ nav_order: 20
 
 # fbsql loader command
 
-The fbsql `loader` command:
-* specifies a supported data source type
-* reads configuration settings from a specified TOML configuration file
+The fbsql `loader` command supports three data sources:
+* Apache Impala
+* Apache Kafka
+* PostgreSQL
 
+When run, the `loader` command reads from a specified TOML configuration file to:
+* Connect to the data source
+* Ingest data from the data source and saves to a FeatureBase table
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
-{% include /fbsql/fb-db-create.md %}
-* [Learn how to setup a TOML configuration file](/docs/tools/fbsql/fsql-loader-toml-config)
+* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
+* [TOML configuration file settings](/docs/tools/fbsql/fbsql-loader-toml-config)
 
 ## Syntax
 
@@ -47,6 +51,6 @@ The fbsql `loader` command:
 
 ## Examples
 
-* Impala
-* Kafka
-* PostgreSQL
+* [Setup an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
+* [Setup an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
+* [Setup a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)

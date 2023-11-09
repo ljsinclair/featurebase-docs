@@ -24,5 +24,6 @@ CREATE TABLE loader-target (
 
 ## Next step
 
-* [Import data from an Impala data source using fbsql](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
-* [Import data from an PostgreSQL data source using fbsql](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
+Choose from the following:
+* [Setup an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source), OR
+* [Setup a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)

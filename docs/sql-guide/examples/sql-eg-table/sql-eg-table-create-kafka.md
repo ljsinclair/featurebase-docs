@@ -34,4 +34,4 @@ CREATE TABLE loader-target (
 
 ## Next step
 
-* [Part 2 - create Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
+* [Part 2 - Setup an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
