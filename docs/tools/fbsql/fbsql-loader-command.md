@@ -21,7 +21,7 @@ When run, the `loader` command reads from a specified TOML configuration file to
 
 {% include /fbsql/fbsql-before-begin.md%}
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
-* [TOML configuration file settings](/docs/tools/fbsql/fbsql-loader-toml-config)
+* [fbsql loader TOML configuration file settings](/docs/tools/fbsql/fbsql-loader-toml-config)
 
 ## Syntax
 
