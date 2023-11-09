@@ -1,9 +1,9 @@
 ---
-title: Import data to FeatureBase
+title: fbsql loader toml config
 layout: default
 parent: fbsql CLI SQL tool
 grand_parent: Tools
-nav_order: 20
+nav_order: 14
 ---
 
 # How do I import data to FeatureBase using fbsql?
