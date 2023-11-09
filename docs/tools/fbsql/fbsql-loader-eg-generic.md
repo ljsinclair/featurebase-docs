@@ -17,27 +17,25 @@ This example demonstrates how to use fbsql to:
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 * [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
-
-## Step one - create your destination table:
-
-* [Create a table for Impala or PostgreSQL data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
-* [Create a table for Kafka data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-kafka)
-
-## Step two - Setup your data source and TOML configuration file
-
-Based on your choices in step one, create a matching data source and configuration file:
-* [Setup an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
-* [Setup an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
-* [Setup a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
-
-* Choose a data source example to set up:
-  * [Learn how to setup an Impala data source and TOML config file](/docs/tools/fbsql/fbsql-loader-eg-impala-source)
-  * [Learn how to setup a Kafka data source and TOML config file](/docs/tools/fbsql/fbsql-loader-eg-kafka-source)
-  * [Learn how to setup a PostgreSQL data source and TOML config file](/docs/tools/fbsql/fbsql-loader-eg-postgres-source)
-
 * Choose a connection method for your Cloud database:
   * User credentials
   * [Learn how to create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
+
+## Step one - create your destination table
+
+Choose one of the following tables:
+* [Create a table for Impala or PostgreSQL data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
+* [Create a table for Kafka data source](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-kafka)
+
+## Step two - create your data source and TOML configuration file
+
+* [Set up an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
+* [Set up an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
+* [Set up a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
+
+## Step three - run fbsql loader
+
+* [Run ]
 
 ## Step 1 - connect to your Cloud database
 
