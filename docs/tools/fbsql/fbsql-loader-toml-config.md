@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 14
 ---
 
-# How do I import data to FeatureBase using fbsql?
+# FBSQL loader TOML configuration file
 
 The fbsql `loader` command relies on an appropriately formatted TOML configuration file that contains:
 * FeatureBase target table to insert data
