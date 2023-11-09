@@ -9,7 +9,7 @@ nav_order: 22
 # Kafka data source example for fbsql loader command
 
 This example provides:
-* A data source in the form of a json Kafka message
+* A data source in the form of a JSON Kafka message
 * a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
 
 ## Before you begin
@@ -52,7 +52,7 @@ batch-max-staleness = "5s"
 timeout = "5s"
 
 [[fields]]
-name        = "event_id"
+name  = "event_id"
 source-type = "id"
 primary-key = true
 

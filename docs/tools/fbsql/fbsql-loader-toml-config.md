@@ -11,7 +11,7 @@ nav_order: 20
 The fbsql `loader` command relies on an appropriately formatted TOML configuration file that contains:
 * FeatureBase target table to insert data
 * Connection settings for an Apache Impala, Apache Kafka or PostgreSQL data source
-* A series of key/value pairs, added in the order of destination table columns
+* An optional series of key/value pairs that correspond to target table columns.
 
 ## Before you begin
 
@@ -27,22 +27,27 @@ The fbsql `loader` command relies on an appropriately formatted TOML configurati
 
 ```
 # kafka keys
+
 hosts = ["<address:port>",...]
 group = "<kafka-confluent-group>"
 topics = "<kafka-confluent-topics>"
 
 # connection keys
-driver= "<datasource-type>"
-connection-string = "<datasource-type>://<address:port>/database=<datasource-db-name>"
 
-# data
+driver= "<datasource-type>"
+connection-string = "<datasource-type>://<datasource-connection-string>"
+
+# data keys for Impala and PostgreSQL
+
 table = "<target-table>"
 query = "<select-from-data-source>"
 
-# batching keys
+# Ingest batching keys
 batch-size = <integer-value>
 batch-max-staleness = "<integer-value><time-unit>"
 timeout = "<integer-value><time-unit>"
+
+# Optional target table key/value pairs
 
 [[fields]]
 name = "<target-table-column>"
@@ -54,19 +59,21 @@ source-column = "<target-table-column>"
 
 ## Variables
 
-| Notation | Additional information |
-|---|---|
-| `<address:port>` | URL or IP address and port |
-| `<kafka-confluent-group>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
-| `<kafka-confluent-topics>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
-| `<datasource-type>` | Impala or PostgreSQL data source |
-| `<datasource-db-name>` | Name of Impala or PostgreSQL database |
-| `<target-table>` | Name of FeatureBase target table |
-| `<select-from-data-source>` | Valid SELECT statement on Impala or PostgreSQL data source with results that import to FeatureBase `<target-table>` |
-| `<time-unit>` | [Supported time units](#Supported time units) |
-| `<target-table-column>` | Column contained in table defined by `table` key |
-| `<target-table-column-data-type>` | Column data type |
-| `"<kafka-json-parent-key>", "<json-child-key>"` | Nested JSON object parent and child |
+The following variables appear in the syntax:
+
+| Notation | Additional information | Example |
+|---|---|---|
+| `<address:port>` | URL or IP address and port | `hosts = ["localhost:9092"]` |
+| `<kafka-confluent-group>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} | `group = "grp"` |
+| `<kafka-confluent-topics>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} | `topics = "events"` |
+| `<datasource-type>` | Impala or PostgreSQL data source | `driver = "impala"` |
+| `<datasource-db-name>` | Name of Impala or PostgreSQL database | `connection-string = "postgres://<postgres-username>:<postgres-user-password>@localhost:5432/mydatabase?sslmode=disable"` |
+| `<target-table>` | Name of FeatureBase target table | `table = "loader-target"` |
+| `<select-from-data-source>` | Valid SELECT statement on Impala or PostgreSQL data source with results that import to FeatureBase `<target-table>` | |
+| `<time-unit>` | [Supported time units](#Supported time units) | `batch-max-staleness = "5s"` |
+| `<target-table-column>` | Column contained in table defined by `table` key | `name = "event_id"` |
+| `<target-table-column-data-type>` | Column data type | `source-type = "string"` |
+| `"<kafka-json-parent-key>", "<json-child-key>"` | Nested JSON object parent and child | `source-path = ["demo", "categories"]` |
 
 ## Connection keys
 
