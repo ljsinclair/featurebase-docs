@@ -37,10 +37,10 @@ topics = "<kafka-confluent-topics>"
 driver= "<datasource-type>"
 connection-string = "<datasource-type>://<datasource-connection-string>"
 
-# data keys for Impala and PostgreSQL
+# data keys
 
 table = "<target-table>"
-query = "<select-from-data-source>"
+query = "<select-from-impala-or-postgresql-data-source>"
 
 # Ingest batching keys
 batch-size = <integer-value>
@@ -61,19 +61,19 @@ source-column = "<target-table-column>"
 
 The following variables appear in the syntax:
 
-| Notation | Additional information | Example |
-|---|---|---|
-| `<address:port>` | URL or IP address and port | `hosts = ["localhost:9092"]` |
-| `<kafka-confluent-group>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} | `group = "grp"` |
-| `<kafka-confluent-topics>` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} | `topics = "events"` |
-| `<datasource-type>` | Impala or PostgreSQL data source | `driver = "impala"` |
-| `<datasource-db-name>` | Name of Impala or PostgreSQL database | `connection-string = "postgres://<postgres-username>:<postgres-user-password>@localhost:5432/mydatabase?sslmode=disable"` |
-| `<target-table>` | Name of FeatureBase target table | `table = "loader-target"` |
-| `<select-from-data-source>` | Valid SELECT statement on Impala or PostgreSQL data source with results that import to FeatureBase `<target-table>` | |
-| `<time-unit>` | [Supported time units](#Supported time units) | `batch-max-staleness = "5s"` |
-| `<target-table-column>` | Column contained in table defined by `table` key | `name = "event_id"` |
-| `<target-table-column-data-type>` | Column data type | `source-type = "string"` |
-| `"<kafka-json-parent-key>", "<json-child-key>"` | Nested JSON object parent and child | `source-path = ["demo", "categories"]` |
+| Variable | Description | Example | Additional information |
+|---|---|---|---|
+| `<address:port>` | URL or IP address and port | `hosts = ["localhost:9092"]` |  |
+| `<kafka-confluent-group>` | Kafka confluent group name | `group = "grp"` |[Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `<kafka-confluent-topics>` | Kafka Confluent topic name  `topics = "events"` | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `<datasource-type>` | Impala or PostgreSQL data source | `driver = "impala"` |  |
+| `<datasource-db-name>` | Name of Impala or PostgreSQL database | `connection-string = "postgres://<postgres-username>:<postgres-user-password>@localhost:5432/mydatabase?sslmode=disable"` |  |
+| `<target-table>` | Name of FeatureBase target table | `table = "loader-target"` |  |
+| `<select-from-data-source>` | Valid SELECT statement on Impala or PostgreSQL data source with results that import to FeatureBase `<target-table>` |  |  |
+| `<time-unit>` | [Supported time units](#Supported time units) | `batch-max-staleness = "5s"` |  |
+| `<target-table-column>` | Column contained in table defined by `table` key | `name = "event_id"` |  |
+| `<target-table-column-data-type>` | Column data type | `source-type = "string"` |  |
+| `"<kafka-json-parent-key>", "<json-child-key>"` | Nested JSON object parent and child | `source-path = ["demo", "categories"]` |  |
 
 ## Connection keys
 
