@@ -59,7 +59,7 @@ source-column = "<target-table-column>"
 |---|---|---|---|
 | `hosts` | One or more Kafka confluent consumer hosts. Use `[]` for multiple hosts | Apache Kafka | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
 | `group` | Kafka consumer group | Kafka | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
-| `topics` | One or more Kafka topics | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
+| `topics` | One or more Kafka topics | Yes | [Confluent Hosts documentation](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"} |
 
 ## Impala and PostgreSQL connection keys
 
@@ -82,7 +82,7 @@ Data is collected into batches before importing to FeatureBase. Default values a
 | Key | Description | Required | Default | Additional information |
 |---|---|---|---|---|
 | `batch-size` | Integer value representing the maximum size of a batch file containing the data to import. | Yes | 1 | Direct correlation to batch size, speed of import and resource usage |
-| `batch-max-staleness` | Maximum length of time the oldest record in a batch can exist before the batch is flushed | Kafka | Can result in timeouts while waiting for datasource |
+| `batch-max-staleness` | Maximum length of time the oldest record in a batch can exist before the batch is flushed | Kafka |  | Can result in timeouts while waiting for datasource |
 | `timeout` | Time to wait before batch is flushed | Kafka | `"1s"` | Set `timeout = 0s` to disable |
 
 ## Optional target table keys
@@ -92,10 +92,10 @@ Run [SHOW CREATE TABLE `<tablename>`](/docs/sql-guide/statements/statement-table
 
 FeatureBase will supply values from specified `table` key if `[[fields]]` key/values are not supplied.
 
-| Key | Description | Required | Additional information |
+| Key | Description | Required for `[[fields]]` | Additional information |
 |---|---|---|---|
-| `name` | Target column name |  |  |
-| `source-type` | Target column data type |  | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
+| `name` | Target column name | Yes |  |
+| `source-type` | Target column data type | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
 | `source-column` | Target column name | Optional | When omitted, order of `[[fields]]` key-values are correlated to those in `<target-table>` |
 | `primary-key` | Set to `"true"` for FeatureBase `_id` column | Only for `_id` column | Omit for other columns |
 | `source-path` | Nested JSON object parent and child | For Kafka | Defaults to `name` if not supplied |
