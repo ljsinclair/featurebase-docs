@@ -13,9 +13,10 @@ The fbsql `loader` command supports three data sources:
 * Apache Kafka
 * PostgreSQL
 
-When run, the `loader` command reads from a specified TOML configuration file to:
-* Connect to the data source
-* Ingest data from the data source and saves to a FeatureBase table
+When run, the `loader` command:
+* reads from a specified TOML configuration file containing key/values for the data source and target table
+* uses that information to ingest data from the data source
+* then copies to the target table
 
 ## Before you begin
 
