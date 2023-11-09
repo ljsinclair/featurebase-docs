@@ -54,9 +54,11 @@ batch-size = 1
 
 {% include /fbsql/fbsql-loader-config-fields-impala-postgres.md %}
 
+* Save and exit nano.
+
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
+* [Import data from your data source](/docs/tools/fbsql/fbsql-eg-ingest.md )
 
 ## Further information
 

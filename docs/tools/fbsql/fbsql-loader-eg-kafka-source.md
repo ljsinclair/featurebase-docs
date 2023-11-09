@@ -35,11 +35,9 @@ This example provides:
 }
 ```
 
-## Step 2 - Create fbsql configuration file
-
 ## Step 2 - Create TOML configuration file
 
-* Open a terminal then run `nano impala-import.toml`
+* Open a terminal then run `nano example-config.toml`
 * Add the following keys and values:
 
 ```toml
@@ -79,9 +77,11 @@ name        = "ts"
 source-type = "timestamp"
 ```
 
+* Save and exit nano.
+
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
+* [Import data from your data source](/docs/tools/fbsql/fbsql-eg-ingest.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)

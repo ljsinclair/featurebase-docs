@@ -27,26 +27,26 @@ This example provides:
 
 ```sql
 CREATE TABLE postgres_table (
-    idkey int,
-    intf int,
-    stringf varchar(30),
-    idf int,
-    stringsetf varchar(30),
-    idsetf varchar(30));
+  idkey int,
+  intf int,
+  stringf varchar(30),
+  idf int,
+  stringsetf varchar(30),
+  idsetf varchar(30));
 ```
 
 * Insert data to the source table:
 
 ```sql
 INSERT INTO postgres_table VALUES
-	(0, 0, 'a', 0, 'a', '3'),
-	(1, 0, 'a', 0, 'c', '4'),
-	(2, 0, 'a', 0, 'd', '5');
+ (0, 0, 'a', 0, 'a', '3'),
+ (1, 0, 'a', 0, 'c', '4'),
+ (2, 0, 'a', 0, 'd', '5');
 ```
 
 ## Step 2 - Create TOML configuration file
 
-* Open a terminal then run `nano example-import.toml`
+* Open a terminal then run `nano example-config.toml`
 * Add the following keys and values and substitute your PostgreSQL connection string as directed:
 
 ```toml
@@ -57,34 +57,36 @@ connection-string = "postgres://<postgres-username>:<postgres-user-password>@loc
 batch-size = 1
 
 [[fields]]
-name		= "idkey"
-source-type	= "id"
-primary-key	= true
+name = "idkey"
+source-type = "id"
+primary-key = true
 
 [[fields]]
-name		= "intf"
-source-type	= "int"
+name = "intf"
+source-type = "int"
 
 [[fields]]
-name		= "stringf"
-source-type	= "string"
+name = "stringf"
+source-type = "string"
 
 [[fields]]
-name		= "idf"
-source-type	= "id"
+name = "idf"
+source-type = "id"
 
 [[fields]]
-name		= "stringsetf"
-source-type	= "stringset"
+name = "stringsetf"
+source-type = "stringset"
 
 [[fields]]
-name		= "idsetf"
-source-type	= "idset"
+name = "idsetf"
+source-type = "idset"
 ```
+
+* Save and exit nano.
 
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
+* [Import data from your data source](/docs/tools/fbsql/fbsql-eg-ingest.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
