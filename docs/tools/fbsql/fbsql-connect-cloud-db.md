@@ -3,7 +3,7 @@ title: Connect to cloud db
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I connect to a FeatureBase cloud database with fbsql?

@@ -3,7 +3,7 @@ title: Running SQL queries
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 4
+nav_order: 5
 ---
 
 # How do I run SQL queries with fbsql?

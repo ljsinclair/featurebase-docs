@@ -3,7 +3,7 @@ title: Install or upgrade fbsql
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 1
+nav_order: 2
 ---
 # How do I install or upgrade the fbsql CLI?
 

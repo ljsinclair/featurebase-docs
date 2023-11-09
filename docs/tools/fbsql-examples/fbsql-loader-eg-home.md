@@ -1,9 +1,10 @@
 ---
-title: fbsql loader generic example
+title: fbsql loader examples
 layout: default
-parent: CLI SQL tool
-grand_parent: Tools
-nav_order: 20
+has_children: true
+parent: Tools
+nav_order: 2
+has_toc: false
 ---
 
 # How do I use fbsql loader to import data from a data source?
@@ -31,10 +32,10 @@ Choose one of the following tables:
 
 ## Step two - create your data source and TOML configuration file
 
-* [Set up an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
-* [Set up an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
-* [Set up a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
+* [Set up an Apache Impala data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-impala-source)
+* [Set up an Apache Kafka data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-kafka-source)
+* [Set up a PostgreSQL data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-postgres-source)
 
 ## Step three - run fbsql loader
 
-* [Run fbsql loader with your TOML configuration file](/docs/tools/fbsql/fbsql-loader-eg-ingest)
+* [Run fbsql loader with your TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-ingest)

@@ -1,9 +1,9 @@
 ---
-title: fbsql loader generic example
+title: fbsql loader ingest example
 layout: default
-parent: CLI SQL tool
+parent: fbsql loader examples
 grand_parent: Tools
-nav_order: 20
+nav_order: 4
 ---
 
 # How do I use fbsql loader to import data from a data source?
@@ -18,7 +18,8 @@ This example demonstrates how to:
 
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
-* [FBSQL loader examples](/docs/tools/fbsql/fbsql-loader-eg-home)
+* [fbsql loader command](/docs/tools/fbsql/fbsql-loader-command)
+* [FBSQL loader examples]( /docs/tools/fbsql-examples/fbsql-loader-eg-home)
 * Choose a connection method for your Cloud database:
   * User credentials
   * [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)

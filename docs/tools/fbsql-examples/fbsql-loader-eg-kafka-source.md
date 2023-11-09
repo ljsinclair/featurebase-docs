@@ -1,9 +1,9 @@
 ---
 title: Kafka data source example
 layout: default
-parent: CLI SQL tool
+parent: fbsql loader examples
 grand_parent: Tools
-nav_order: 22
+nav_order: 2
 ---
 
 # Kafka data source example for fbsql loader command
@@ -81,7 +81,7 @@ source-type = "timestamp"
 
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql/fbsql-eg-ingest.md )
+* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-eg-ingest.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)

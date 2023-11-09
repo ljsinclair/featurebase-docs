@@ -3,7 +3,7 @@ title: Connect to community db
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 3
+nav_order: 4
 ---
 
 # How do I connect to a FeatureBase Community database with fbsql?

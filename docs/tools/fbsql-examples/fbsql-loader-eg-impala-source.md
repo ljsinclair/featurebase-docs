@@ -1,9 +1,9 @@
 ---
 title: Impala data source example
 layout: default
-parent: CLI SQL tool
+parent: fbsql loader examples
 grand_parent: Tools
-nav_order: 21
+nav_order: 1
 ---
 # Impala data source example for fbsql loader command
 
@@ -58,7 +58,7 @@ batch-size = 1
 
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql/fbsql-eg-ingest.md )
+* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-eg-ingest.md )
 
 ## Further information
 
