@@ -26,19 +26,17 @@ When run, the `loader` command reads from a specified TOML configuration file to
 ## Syntax
 
 ```sh
-(<cli-flag-prefix>)
-  <db-connection-string> \
-(--loader-<data-source>) <filename>.toml
+(fbsql <featurebase-connection> | \)loader-(impala | kafka | postgres) filename.toml
 ```
-
-{% include /fbsql/fbsql-prefix-cli-flags.md %}
 
 ## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `<db-connection-string>` | fbsql connection string to FeatureBase database | Yes | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
-| `--loader-<datasource>=<filename>.toml` | Provide data source type and filename containing TOML configuration | [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config) |
+| `fbsql <featurebase-connection>` | Used when running `loader` from the CLI | <db-connection-string> | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
+| `\` | Used when running `loader` from the fbsql interface |  |  |
+| `--loader-(impala | kafka | postgres)` | Choose a data source for the loader to read from | Yes |  |
+| `filename.toml` | TOML configuration file containing key/values for data source and target table | [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config) |
 
 ## Additional information
 
