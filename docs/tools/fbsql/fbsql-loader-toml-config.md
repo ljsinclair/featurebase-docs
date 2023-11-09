@@ -32,12 +32,10 @@ group = "<kafka-confluent-group>"
 topics = "<kafka-confluent-topics>"
 
 # Impala and PostgreSQL connection keys
-
 driver= "<datasource-type>"
 connection-string = "<datasource-type>://<datasource-connection-string>"
 
 # Data keys
-
 table = "<target-table>"
 query = "<select-from-impala-or-postgresql-data-source>"
 
@@ -47,7 +45,6 @@ batch-max-staleness = "<integer-value><time-unit>"
 timeout = "<integer-value><time-unit>"
 
 # Optional target table keys
-
 [[fields]]
 name = "<target-table-column>"
 source-type = "<target-table-column-data-type>"
