@@ -38,7 +38,7 @@ When run, the `loader` command reads from a specified TOML configuration file to
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `<db-connection-string>` | fbsql connection string to FeatureBase database | Yes | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
-| `--loader-<datasource>=<filename>.toml` | Provide data source type and filename containing TOML configuration | [TOML configuration file for fbsql loader](/docs/tools/fbsql/ fbsql-loader-toml-config-impala) |
+| `--loader-<datasource>=<filename>.toml` | Provide data source type and filename containing TOML configuration | [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config) |
 
 ## Additional information
 
@@ -49,8 +49,7 @@ When run, the `loader` command reads from a specified TOML configuration file to
 | Kafka | Reads messages from Kafka topic specified in TOML configuration |
 | Impala or PostgreSQL | Reads tuples from SELECT statement included in TOML configuration |
 
-## Examples
+## Further information
 
-* [Setup an Apache Impala data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-impala-source)
-* [Setup an Apache Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
-* [Setup a PostgreSQL data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-postgres-source)
+* [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config)
+* [fbsql loader examples](/docs/tools/fbsql/fbsql-loader-eg-generic)
