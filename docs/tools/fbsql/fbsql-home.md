@@ -53,7 +53,11 @@ Run SQL queries in the fbsql interface or using text files:
 
 * [fbsql output reference](/docs/tools/fbsql/fbsql-config-output)
 
+## How do I import data using fbsql?
+
+* [fbsql loader TOML configuration](/docs/tools/fbsql/fbsql-loader-toml-config)
+* [fbsql loader command](/docs/tools/fbsql/fbsql-loader-command)
+
 ## Further information
 
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
-* [Learn how to import data to FeatureBase using fbsql loader command](/docs/tools/fbsql/ fbsql-loader-toml-config)

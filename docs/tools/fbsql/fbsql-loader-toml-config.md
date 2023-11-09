@@ -122,5 +122,5 @@ Batching keys that require `<integer-value><time-unit>` can use one or more comb
 
 ## Further information
 
-* [fbsql loader examples](/docs/tools/fbsql/fbsql-loader-eg-generic)
+* [fbsql loader examples](/docs/tools/fbsql-examples/fbsql-loader-eg-generic)
 * [TOML arrays of tables](https://toml.io/en/v1.0.0#array-of-tables)

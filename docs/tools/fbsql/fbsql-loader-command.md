@@ -36,4 +36,4 @@ The `loader` command:
 
 ## Further information
 
-* [fbsql loader examples](/docs/tools/fbsql/fbsql-loader-eg-generic)
+* [fbsql loader examples](/docs/tools/fbsql-examples/fbsql-loader-eg-home)
