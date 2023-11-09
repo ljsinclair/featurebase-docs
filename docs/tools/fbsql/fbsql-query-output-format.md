@@ -1,7 +1,7 @@
 ---
 title: SQL output flags
 layout: default
-parent: CLI SQL tool
+parent: fbsql CLI SQL tool
 grand_parent: Tools
 nav_order: 11
 ---

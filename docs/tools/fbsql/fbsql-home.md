@@ -1,5 +1,5 @@
 ---
-title: CLI SQL tool
+title: fbsql CLI SQL tool
 layout: default
 parent: Tools
 has_children: true

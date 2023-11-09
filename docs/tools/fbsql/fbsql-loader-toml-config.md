@@ -1,7 +1,7 @@
 ---
 title: Import data to FeatureBase
 layout: default
-parent: fbsql loader examples
+parent: fbsql CLI SQL tool
 grand_parent: Tools
 nav_order: 20
 ---

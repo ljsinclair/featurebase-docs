@@ -1,7 +1,7 @@
 ---
 title: fbsql loader command
 layout: default
-parent: CLI SQL tool
+parent: fbsql CLI SQL tool
 grand_parent: Tools
 nav_order: 13
 ---
