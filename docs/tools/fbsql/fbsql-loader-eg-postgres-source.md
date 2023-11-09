@@ -1,41 +1,30 @@
 ---
-title: fbsql-loader-postgres
+title: PostgreSQL data source example
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 23
 ---
 
-# PostgreSQL Loader
+# PostgreSQL data source example for fbsql loader command
 
-<!-- taken from original  fbsql-loader-toml-config.md
+This example provides:
+* valid SQL to create a table and insert data
+* a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
 
-Based on the configuration file provided as an argument to this flag, fbsql will query PostgreSQL and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from PostgreSQL are loaded.
--->
+## Before you begin
 
-If fbsql is provided the `--loader-postgres=filename` flag, it will run in non-interactive mode. Based on the configuration provided in filename, fbsql will query PostgreSQL, read tuples returned, and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until all tuples returned by the query are processed.
+* Create a PostgreSQL Database
+* Obtain your Postgres database connection string
+* [Learn about TOML configuration settings](/docs/tools/fbsql/fbsql-loader-command)
+* [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Create target table](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
 
-## PostgreSQL Specific Configuration Options
+## Step 1 - Create data source
 
-### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to PostgreSQL:
+* Connect to your database
+* Create the source table:
 
-| Key | Description | Example Value | Default |
-|---|---|---|---|
-| connection-string | PostgreSQL connection string used to connect to the PostgreSQL source. | `"postgres://user:password@localhost:5432/database?sslmode=disable"` | |
-| query | The query sent to PostgreSQL to get the data to store in FeatureBase. | `"select col1, col2, col3 from pg_table;"` | |
-| driver | This must be specified and set to `"postgres"` | `"postgres"` | |
-
-### Fields
-The table below holds the key/value pairs supported in the TOML fields array if you are connecting to PostgreSQL:
-
-| Key | Description | Example Value | Default |
-|---|---|---|---|
-| `source-column` | The column name in the response from `query` that should be used to populate the current field. If `source-column` is not provided, it will default to the value provided in `name`. | `"col1"` | value of `name` |
-
-## Example
-
-PostgreSQL `CREATE TABLE` statement:
 ```sql
 CREATE TABLE postgres_table (
     idkey int,
@@ -46,7 +35,8 @@ CREATE TABLE postgres_table (
     idsetf varchar(30));
 ```
 
-PostgreSQL `INSERT` statement:
+* Insert data to the source table:
+
 ```sql
 INSERT INTO postgres_table VALUES
 	(0, 0, 'a', 0, 'a', '3'),
@@ -54,23 +44,16 @@ INSERT INTO postgres_table VALUES
 	(2, 0, 'a', 0, 'd', '5');
 ```
 
-FeatureBase `CREATE TABLE` statement:
-```sql
-CREATE TABLE tbl (
-    _id id,
-    intf int,
-    stringf string,
-    idf id,
-    stringsetf stringset,
-    idsetf idset);
-```
+## Step 2 - Create TOML configuration file
 
-fbsql configuration file pointed to by `--loader-postgres`:
+* Open a terminal then run `nano example-import.toml`
+* Add the following keys and values and substitute your PostgreSQL connection string as directed:
+
 ```toml
-table = "tbl"
+table = "loader-target"
 query = "select idkey, intf, stringf, idf, stringsetf, idsetf from postgres_table;"
 driver = "postgres"
-connection-string = "postgres://postgres_uesr:user_password@localhost:5432/mydatabase?sslmode=disable"
+connection-string = "postgres://<postgres-username>:<postgres-user-password>@localhost:5432/mydatabase?sslmode=disable"
 batch-size = 1
 
 [[fields]]
@@ -98,6 +81,10 @@ source-type	= "stringset"
 name		= "idsetf"
 source-type	= "idset"
 ```
+
+## Next step
+
+* [Import data from your data source](/docs/tools/fbsql/fbsql-loader-eg-generic-command.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)

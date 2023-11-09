@@ -8,9 +8,18 @@ nav_exclude: true
 
 # CREATE TABLE loader-target
 
-This example table is intended as target for Kafka data ingested via the fbsql `loader` command.
+The `loader-target` table is required for an ingestion process that includes two additional parts:
+* Part 2 - create Kafka data source and TOML configuration file
+* Part 3 - run fbsql `loader` command to import data to `loader-target`
 
-## Syntax
+## Before you begin
+
+* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
+* [FeatureBase SQL editors](/docs/sql-guide/sql-guide-home/#running-sql-queries)
+
+## Create required table
+
+Run the following SQL in a SQL editor:
 
 ```sql
 CREATE TABLE loader-target (
@@ -25,4 +34,4 @@ CREATE TABLE loader-target (
 
 ## Next step
 
-* [Setup Kafka data source](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)
+* [Part 2 - create Kafka data source and TOML configuration file](/docs/tools/fbsql/examples/fbsql-loader-kafka-source)

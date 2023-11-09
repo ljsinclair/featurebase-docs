@@ -46,7 +46,7 @@ This example provides:
 hosts = ["localhost:9092"]
 group = "grp"
 topics = "events"
-table = "events"
+table = "loader-target"
 batch-size = 300
 batch-max-staleness = "5s"
 timeout = "5s"
