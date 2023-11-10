@@ -51,7 +51,7 @@ connection-string = "impala://<connection-string>/database=<source-db-name>"
 batch-size = 1
 ```
 
-{% include /fbsql/fbsql-loader-config-toml-impala-postgres.md %}
+{% include /fbsql/fbsql-loader-toml-fields-impala-postgres.md %}
 
 * Save then exit nano.
 

@@ -56,7 +56,7 @@ connection-string = "postgres://<postgres-username>:<postgres-user-password>@loc
 batch-size = 1
 ```
 
-{% include /fbsql/fbsql-loader-config-toml-impala-postgres.md %}
+{% include /fbsql/fbsql-loader-toml-fields-impala-postgres.md %}
 
 * Save then exit nano.
 
