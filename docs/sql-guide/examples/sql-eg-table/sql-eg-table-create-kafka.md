@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE loader-target
+title: CREATE TABLE for kafka import
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
