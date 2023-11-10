@@ -5,7 +5,7 @@ parent: fbsql loader examples
 grand_parent: Tools
 nav_order: 1
 ---
-# Example Impala data source for fbsql `loader` command
+# Example Impala data source
 
 {% include /fbsql/fbsql-loader-eg-source-summary.md %}
 

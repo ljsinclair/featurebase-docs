@@ -1,12 +1,12 @@
 ---
-title: PostgreSQL data source example
+title: Example PostgreSQL data source
 layout: default
 parent: fbsql loader examples
 grand_parent: Tools
 nav_order: 3
 ---
 
-# PostgreSQL data source example for fbsql loader command
+# Example PostgreSQL data source
 
 {% include /fbsql/fbsql-loader-eg-source-summary.md %}
 

@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# Example Kafka data source for fbsql `loader` command
+# Example Kafka data source
 
 {% include /fbsql/fbsql-loader-eg-source-summary.md %}
 
