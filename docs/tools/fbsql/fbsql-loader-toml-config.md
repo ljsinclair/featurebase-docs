@@ -96,9 +96,13 @@ FeatureBase will supply values from specified `table` key if `[[fields]]` key/va
 |---|---|---|---|
 | `name` | Target column name | Yes |  |
 | `source-type` | Target column data type | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
+| `source-path` | Nested JSON object parent and child | For Kafka | Defaults to `name` if not supplied |
 | `source-column` | Target column name | Optional | When omitted, order of `[[fields]]` key-values are correlated to those in `<target-table>` |
 | `primary-key` | Set to `"true"` for FeatureBase `_id` column | Only for `_id` column | Omit for other columns |
-| `source-path` | Nested JSON object parent and child | For Kafka | Defaults to `name` if not supplied |
+
+
+Specifies the FeatureBase column type the incoming data will be formatted as. For example, if a kafka message contains "foo":"6" the configuration for foo should contain source-type = "string" even if the foo column in FeatureBase is an Int type. If a source-type is not provided, it will default to the FeatureBase field’s type.
+
 
 ## Additional information
 

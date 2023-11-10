@@ -63,4 +63,4 @@ batch-size = 1
 
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)
-* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
+* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-toml-config)

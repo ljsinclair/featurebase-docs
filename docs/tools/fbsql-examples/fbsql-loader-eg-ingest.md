@@ -1,15 +1,15 @@
 ---
-title: fbsql loader ingest example
+title: Example fbsql loader ingest
 layout: default
 parent: fbsql loader examples
 grand_parent: Tools
 nav_order: 4
 ---
 
-# How do I use the fbsql `loader` command to import data?
+# Example fbsql `loader` command
 
 This example demonstrates how to run the `loader` command:
-* with a TOML configuration file setup with data source and target details
+* with a TOML configuration file setup with data source and target key/values
 * to import data from a specified data source to an existing target table
 
 ## Before you begin
