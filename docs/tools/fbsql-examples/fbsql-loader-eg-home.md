@@ -35,9 +35,9 @@ Choose one of the following tables:
 ## Step two - create your data source and TOML configuration file
 
 Create one of the following data sources and TOML files:
-* [Set up an Apache Impala data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-impala-source)
-* [Set up an Apache Kafka data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-kafka-source)
-* [Set up a PostgreSQL data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-postgres-source)
+* [Create an Apache Impala data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-impala-source)
+* [Create an Apache Kafka data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-kafka-source)
+* [Create a PostgreSQL data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-postgres-source)
 
 ## Step three - run fbsql loader
 
