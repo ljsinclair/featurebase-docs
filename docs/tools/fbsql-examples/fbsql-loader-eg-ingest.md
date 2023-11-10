@@ -17,7 +17,7 @@ This example demonstrates how to run the `loader` command:
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 * [fbsql loader syntax](/docs/tools/fbsql/fbsql-loader-command)
-* [FBSQL loader examples]( /docs/tools/fbsql-examples/fbsql-loader-eg-home)
+* [FBSQL loader examples](/docs/tools/fbsql-examples/fbsql-loader-eg-home)
 * Choose a connection method for your Cloud database:
   * User credentials
   * [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
@@ -30,11 +30,17 @@ This example demonstrates how to run the `loader` command:
 
 ## Step 2 - run `loader` command
 
+
 Substitute your data source type where specified in the following fbsql command:
 
 ```
-loader-[impala|kafka|postgres] example-config.toml
+loader-<data-source-type> example-config.toml
 ```
+
+Where `<data-source-type>` is:
+* impala
+* kafka
+* postgres
 
 ## Next step
 

@@ -1,12 +1,12 @@
 ---
-title: TOML configuration for loader
+title: loader TOML configuration
 layout: default
 parent: fbsql CLI SQL tool
 grand_parent: Tools
 nav_order: 14
 ---
 
-# TOML configuration for fbsql loader
+# fbsql loader TOML configuration
 
 The fbsql `loader` command relies on an appropriately formatted TOML configuration file that contains:
 * FeatureBase target table to insert data
@@ -92,11 +92,11 @@ Run [SHOW CREATE TABLE `<tablename>`](/docs/sql-guide/statements/statement-table
 
 FeatureBase will supply values from specified `table` key if `[[fields]]` key/values are not supplied.
 
-| Key | Description | Required for `[[fields]]` | Additional information |
+| Key | Description | Required | Additional information |
 |---|---|---|---|
 | `name` | Target column name | Yes |  |
-| `source-type` | Target column data type | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
-| `source-path` | Nested JSON object parent and child | For Kafka | Defaults to `name` if not supplied |
+| `source-type` | Target column data [^9ab2] | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
+| `source-path` | Nested JSON object parent and child | Kafka | Defaults to `name` value when not supplied |
 | `source-column` | Target column name | Optional | When omitted, order of `[[fields]]` key-values are correlated to those in `<target-table>` |
 | `primary-key` | Set to `"true"` for FeatureBase `_id` column | Only for `_id` column | Omit for other columns |
 
