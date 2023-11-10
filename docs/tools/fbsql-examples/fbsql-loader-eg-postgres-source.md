@@ -54,32 +54,9 @@ query = "select idkey, intf, stringf, idf, stringsetf, idsetf from postgres_tabl
 driver = "postgres"
 connection-string = "postgres://<postgres-username>:<postgres-user-password>@localhost:5432/mydatabase?sslmode=disable"
 batch-size = 1
-
-[[fields]]
-name = "idkey"
-source-type = "id"
-primary-key = true
-
-[[fields]]
-name = "intf"
-source-type = "int"
-
-[[fields]]
-name = "stringf"
-source-type = "string"
-
-[[fields]]
-name = "idf"
-source-type = "id"
-
-[[fields]]
-name = "stringsetf"
-source-type = "stringset"
-
-[[fields]]
-name = "idsetf"
-source-type = "idset"
 ```
+
+{% include /fbsql/fbsql-loader-config-toml-impala-postgres.md %}
 
 * Save then exit nano.
 

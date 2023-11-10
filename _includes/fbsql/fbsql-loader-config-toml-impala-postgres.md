@@ -4,7 +4,7 @@ The following `[[fields]]` keys and values are optional
 ``` toml
 [[fields]]
 name = "idkey"
-source-type = "string"
+source-type = "id"
 primary-key = true
 
 [[fields]]

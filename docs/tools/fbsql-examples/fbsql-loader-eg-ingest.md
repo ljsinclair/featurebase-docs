@@ -41,7 +41,3 @@ Where `<data-source-type>` is:
 * impala
 * kafka
 * postgres
-
-## Next step
-
-QUERY DATA
