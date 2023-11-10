@@ -7,7 +7,7 @@ nav_order: 2
 has_toc: false
 ---
 
-# How do I use fbsql loader to import data from a data source?
+# fbsql loader examples
 
 These examples demonstrate how to:
 * Create a FeatureBase table ready for data to be imported
@@ -21,7 +21,7 @@ When the `loader` process is complete, content from the data source is imported 
 
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
-* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-config)
+* [Learn about fbsql TOML configuration](/docs/tools/fbsql/fbsql-loader-toml-config)
 * Choose a connection method for your Cloud database:
   * User credentials
   * [Learn how to create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
