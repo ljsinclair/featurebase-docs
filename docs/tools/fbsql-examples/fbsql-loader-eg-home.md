@@ -15,7 +15,7 @@ These examples demonstrate how to:
 * Create a TOML configuration file for your data source
 * Run the fbsql `loader` command with the TOML configuration file
 
-The process results in data imported from the data source and saved to the target table. From there, the data can be queried.
+When the `loader` process is complete, content from the data source is imported to the target table ready to be queried.
 
 ## Before you begin
 
@@ -34,8 +34,7 @@ Choose one of the following tables:
 
 ## Step two - create your data source and TOML configuration file
 
-Choose one of the following:
-
+Create one of the following data sources and TOML files:
 * [Set up an Apache Impala data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-impala-source)
 * [Set up an Apache Kafka data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-kafka-source)
 * [Set up a PostgreSQL data source and TOML configuration file]( /docs/tools/fbsql-examples/fbsql-loader-eg-postgres-source)
