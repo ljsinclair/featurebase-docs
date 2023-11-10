@@ -85,7 +85,7 @@ source-type = "idset"
 
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-eg-ingest.md )
+* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-loader-eg-ingest.md )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
