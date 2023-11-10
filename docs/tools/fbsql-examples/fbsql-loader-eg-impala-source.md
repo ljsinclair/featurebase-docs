@@ -13,13 +13,13 @@ nav_order: 1
 
 * [Learn about Apache Impala](https://impala.apache.org/){:target="_blank"}
 * Create an Impala Database
-* Obtain your Impala connection string
+* [Obtain your Impala connection string](https://impala.apache.org/docs/build/html/topics/impala_client.html){:target="_blank"}
 * [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create target table](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
 
 ## Step 1 - Create data source
 
-* Connect to your Impala database
+* Connect to your Impala database.
 * Create the source table:
 ```sql
 CREATE TABLE testdb.impala_table (
@@ -53,7 +53,7 @@ batch-size = 1
 
 {% include /fbsql/fbsql-loader-config-fields-impala-postgres.md %}
 
-* Save and exit nano.
+* Save then exit nano.
 
 ## Next step
 

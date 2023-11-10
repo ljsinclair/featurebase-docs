@@ -76,7 +76,7 @@ name        = "ts"
 source-type = "timestamp"
 ```
 
-* Save and exit nano.
+* Save then exit nano.
 
 ## Next step
 

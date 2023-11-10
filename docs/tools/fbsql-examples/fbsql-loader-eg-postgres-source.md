@@ -14,7 +14,7 @@ nav_order: 3
 
 * [Learn about PostgreSQL](https://www.postgresql.org/docs/){:target="_blank"}
 * Create a PostgreSQL Database
-* Obtain your Postgres database connection string
+* [Obtain your PostgreSQL connection string](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS){:target="_blank"}
 * [Learn about TOML configuration settings](/docs/tools/fbsql/fbsql-loader-command)
 * [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create target table](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
@@ -81,7 +81,7 @@ name = "idsetf"
 source-type = "idset"
 ```
 
-* Save and exit nano.
+* Save then exit nano.
 
 ## Next step
 
