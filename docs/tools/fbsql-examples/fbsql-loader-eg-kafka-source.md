@@ -80,7 +80,7 @@ source-type = "timestamp"
 
 ## Next step
 
-* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-loader-eg-ingest.md )
+* [Import data from your data source](/docs/tools/fbsql-examples/fbsql-loader-eg-ingest )
 
 ## Further information
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
