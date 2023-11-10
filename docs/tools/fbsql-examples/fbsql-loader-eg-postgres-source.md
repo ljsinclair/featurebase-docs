@@ -8,12 +8,11 @@ nav_order: 3
 
 # PostgreSQL data source example for fbsql loader command
 
-This example provides:
-* valid SQL to create a table and insert data
-* a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
+{% include /fbsql/fbsql-loader-eg-source-summary.md %}
 
 ## Before you begin
 
+* [Learn about PostgreSQL](https://www.postgresql.org/docs/){:target="_blank"}
 * Create a PostgreSQL Database
 * Obtain your Postgres database connection string
 * [Learn about TOML configuration settings](/docs/tools/fbsql/fbsql-loader-command)

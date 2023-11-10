@@ -1,19 +1,18 @@
 ---
-title: Kafka data source example
+title: Example Kafka data source
 layout: default
 parent: fbsql loader examples
 grand_parent: Tools
 nav_order: 2
 ---
 
-# Kafka data source example for fbsql loader command
+# Example Kafka data source for fbsql `loader` command
 
-This example provides:
-* A data source in the form of a JSON Kafka message
-* a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
+{% include /fbsql/fbsql-loader-eg-source-summary.md %}
 
 ## Before you begin
 
+* [Learn about Apache Kafka Confluent Consumer](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"}
 * [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create target table](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-impala-postgres)
 

@@ -1,18 +1,17 @@
 ---
-title: Impala data source example
+title: Example Impala data source
 layout: default
 parent: fbsql loader examples
 grand_parent: Tools
 nav_order: 1
 ---
-# Impala data source example for fbsql loader command
+# Example Impala data source for fbsql `loader` command
 
-This example provides:
-* valid SQL to create a table and insert data
-* a TOML configuration file that will be used by the fbsql `loader` command to load data from the Impala table to a target in FeatureBase.
+{% include /fbsql/fbsql-loader-eg-source-summary.md %}
 
 ## Before you begin
 
+* [Learn about Apache Impala](https://impala.apache.org/){:target="_blank"}
 * Create an Impala Database
 * Obtain your Impala connection string
 * [Create a FeatureBase Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)

@@ -1,12 +1,12 @@
 ---
-title: fbsql loader toml config
+title: TOML configuration for loader
 layout: default
 parent: fbsql CLI SQL tool
 grand_parent: Tools
 nav_order: 14
 ---
 
-# FBSQL loader TOML configuration file
+# TOML configuration for fbsql loader
 
 The fbsql `loader` command relies on an appropriately formatted TOML configuration file that contains:
 * FeatureBase target table to insert data
@@ -15,15 +15,15 @@ The fbsql `loader` command relies on an appropriately formatted TOML configurati
 
 ## Before you begin
 
+* [Learn about TOML format](https://toml.io/)
 * [Learn about Apache Impala](https://impala.apache.org/){:target="_blank"}
 * [Learn about Apache Kafka Confluent Consumer](https://docs.confluent.io/platform/current/clients/consumer.html){:target="_blank"}
 * [Learn about PostgreSQL](https://www.postgresql.org/docs/){:target="_blank"}
-* [Learn about TOML format](https://toml.io/)
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
 * [Create a destination table](/docs/sql-guide/statements/statement-table-create)
 
-## TOML syntax
+## TOML configuration syntax
 
 ```
 # Kafka keys
@@ -81,9 +81,9 @@ Data is collected into batches before importing to FeatureBase. Default values a
 
 | Key | Description | Required | Default | Additional information |
 |---|---|---|---|---|
-| `batch-size` | Integer value representing the maximum size of a batch file containing the data to import. | Yes | 1 | Direct correlation to batch size, speed of import and resource usage |
-| `batch-max-staleness` | Maximum length of time the oldest record in a batch can exist before the batch is flushed | Kafka |  | Can result in timeouts while waiting for datasource |
-| `timeout` | Time to wait before batch is flushed | Kafka | `"1s"` | Set `timeout = 0s` to disable |
+| `batch-size` | Integer value representing the maximum size of a batch file containing the data to import. | Yes | 1 | [Batch keys](/#batch-keys) |
+| `batch-max-staleness` | Maximum length of time the oldest record in a batch can exist before the batch is flushed | Kafka |  | [Batch keys](/#batch-keys) |
+| `timeout` | Time to wait before batch is flushed | Kafka | `"1s"` | [Batch keys](/#batch-keys) |
 
 ## Optional target table keys
 
@@ -107,9 +107,15 @@ FeatureBase will supply values from specified `table` key if `[[fields]]` key/va
 * [Impala connection string documentation](https://impala.apache.org/docs/build/html/topics/impala_client.html){:target="_blank"}
 * [PostgreSQL connection string documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING-URIS){:target="_blank"}
 
-### Supported time-units
+### Batch keys
 
-Batching keys that require `<integer-value><time-unit>` can use one or more combinations, in descending order.
+* There is a direct correlation between the `batch-size` value in relation to the speed of import and resource usage.
+* `batch-max-staleness` values may result in timeouts while waiting for a data source
+* `timeout` can be set to `0s` to disable
+
+### Batch key time-unit
+
+Batch keys that require `<integer-value><time-unit>` can use one or more of the following combinations, in descending order.
 
 | Time unit | Declaration | Example |
 |---|---|---|

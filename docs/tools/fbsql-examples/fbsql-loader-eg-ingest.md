@@ -6,19 +6,17 @@ grand_parent: Tools
 nav_order: 4
 ---
 
-# How do I use fbsql loader to import data from a data source?
+# How do I use the fbsql `loader` command to import data?
 
-This example demonstrates how to:
-* Create a FeatureBase table ready for ingested data
-* Create an Impala, Kafka or PostgreSQL data source
-* Create a TOML configuration file for your data source
-* Run the fbsql loader command with the TOML configuration file
+This example demonstrates how to run the `loader` command:
+* with a TOML configuration file setup with data source and target details
+* to import data from a specified data source to an existing target table
 
 ## Before you begin
 
 {% include /fbsql/fbsql-before-begin.md%}
 {% include /fbsql/fb-db-create.md %}
-* [fbsql loader command](/docs/tools/fbsql/fbsql-loader-command)
+* [fbsql loader syntax](/docs/tools/fbsql/fbsql-loader-command)
 * [FBSQL loader examples]( /docs/tools/fbsql-examples/fbsql-loader-eg-home)
 * Choose a connection method for your Cloud database:
   * User credentials
@@ -40,7 +38,4 @@ loader-[impala|kafka|postgres] example-config.toml
 
 ## Next step
 
-THESE WILL BE ADDED TO SQL EXAMPLES
-* [Query data from Impala data source]
-* [Query data from kafka data source]
-* [Query data from PostgreSQL data source]
+QUERY DATA
