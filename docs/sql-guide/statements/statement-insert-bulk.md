@@ -86,7 +86,7 @@ BULK INSERT
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
 | `column_name` | Valid columns belonging to `table_name` starting with the `_id` column | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
-| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
+| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [MAP and TRANSFORM with `SETQ` data types](#map-and-transform-clauses-for-setq-data-types) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
 | `TRANSFORM expr` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
@@ -109,6 +109,8 @@ BULK INSERT
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument that outputs a `NULL` value from the MAP clause if the path expression fails. | Optional |  |
 
 ## Additional information
+
+{% include /sql-guide/insert-bulk-map-trans-setq.md %}
 
 ### Transform additional
 
@@ -148,15 +150,40 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-<!--insert has heading "BULK INSERT examples"-->
-
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
+
+### MAP and TRANSFORM example for SETQ data types
+
+```sql
+BULK INSERT INTO doctest (
+  _id,
+  idsetqcol,
+  stringsetqcol,
+  timestampcol)
+MAP(
+  0 ID,
+  1 IDSET,
+  2 STRINGSET,
+  3 TIMESTAMP
+  )
+TRANSFORM(
+    @0,
+    TUPLE(@3,@1),
+    TUPLE(@3,@2),
+    @3
+)
+FROM x'004,456;567;678;789,this;is;the;first;row,2023-11-22T04:46:59Z'
+WITH
+    BATCHSIZE 1
+    FORMAT 'CSV'
+    input 'INLINE';
+```
 
 ### TRANSFORM examples
 
 | Map clause | TRANSFORM clause |
 |---|---|
-| `MAP (0 id, 1 int, 4 string)` | Variables: `@0`, `@1` and `@2` |
+| `MAP (0 id, 1 int, 4 string)` | `TRANSFORM @0, @1 @2 |
 
 ```sql
 TRANSFORM (
