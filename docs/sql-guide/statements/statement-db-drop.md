@@ -20,14 +20,11 @@ DROP DATABASE database_name;
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Additional information |
-|---|---|---|---|---|
-| `database_name` | string |Name of the database to delete | yes | |
+| Argument | Data type | Description | Required |
+|---|---|---|---|
+| `database_name` | string | Name of the database to delete | yes |
 
-
-## Examples
-
-### Drop database `test_db`
+## Example
 
 ```sql
 DROP DATABASE test_db

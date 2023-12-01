@@ -6,7 +6,7 @@ has_children: true
 nav_order: 9
 ---
 
-# How do I Query my FeatureBase Community database?
+# How do I query my FeatureBase Community database?
 
 FeatureBase community provides several methods to run queries using FeatureBase PQL, or our implementation of SQL.
 
