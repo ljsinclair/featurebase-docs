@@ -16,6 +16,7 @@ nav_order: 3
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
+* * Click **Databases** > database name > **Tables** to view tables.
 
 ## Column data types and constraints
 
@@ -26,20 +27,16 @@ nav_order: 3
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
-## Step 1: View all tables
-
-{% include /cloud-table/cloud-table-view-list.md %}
-
-## Step 2: Add a column to a table
+## Add a column to a table
 
 {: .note }
 Table columns cannot be edited once created.
 
-1. Click the table name.
-2. Click **Columns** > **Add column**.
-3. Enter a name for the column
-4. Choose the data type and enter values for the constraints if available.
-5. Click **Add column**
+* Click the table name.
+* Click **Columns** > **Add column**.
+* Enter a name for the column
+* Choose the data type and enter values for the constraints if available.
+* Click **Add column**
 
 ## Further information
 

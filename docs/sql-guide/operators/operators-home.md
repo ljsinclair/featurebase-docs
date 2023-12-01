@@ -2,7 +2,7 @@
 title: Operators
 layout: default
 parent: SQL guide
-nav_order: 5
+nav_order: 6
 ---
 
 # SQL Operators

@@ -1,7 +1,7 @@
 ---
 title: FLATTEN()
 layout: default
-parent: SELECT hints
+parent: SQL hints
 grand_parent: SQL guide
 ---
 

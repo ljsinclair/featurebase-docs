@@ -3,7 +3,7 @@ title: KILL QUERY
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 20
+nav_order: 30
 ---
 
 ## KILL QUERY statement

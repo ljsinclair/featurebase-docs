@@ -2,7 +2,7 @@
 title: SQL examples
 layout: default
 parent: SQL guide
-nav_order: 7
+nav_order: 10
 has_toc: false
 ---
 
@@ -20,7 +20,7 @@ Supported SQL statements, data-types, expressions, functions and operators are d
 {% include /sql-guide/sql-eg-table-create-statements.md %}
 
 <!-- Excluding because there are no good examples yet
-{% include /sql-guide/sql-eg-table-alter-statements.md %}-->
+{% include /sql-guide/sql-eg-table-alter-statements.md %} -->
 
 {% include /sql-guide/sql-eg-insert-statements.md %}
 

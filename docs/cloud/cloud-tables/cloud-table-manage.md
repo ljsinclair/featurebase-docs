@@ -3,7 +3,7 @@ title: Manage tables
 layout: default
 parent: Cloud
 has_children: true
-nav_order: 8
+nav_order: 7
 has_toc: false
 ---
 
@@ -44,10 +44,13 @@ Perform data modeling **before** creating tables to avoid issues.
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md%}
 
+## View tables
+
+* Click **Databases** > database name > **Tables**.
+
 ## Managing tables in FeatureBase Cloud
 
 * [Create table](/docs/cloud/cloud-tables/cloud-table-create)
-* [Upload data](/docs/cloud/cloud-tables/cloud-table-upload-data)
 * [Add table columns](/docs/cloud/cloud-tables/cloud-table-add-column)
 * [Delete table columns](/docs/cloud/cloud-tables/cloud-table-delete-column)
 * [Delete table](/docs/cloud/cloud-tables/cloud-table-delete)
@@ -55,6 +58,12 @@ Perform data modeling **before** creating tables to avoid issues.
 ## Managing tables using the Cloud API
 
 * [Table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Tables)
+
+## Managing tables using SQL
+
+* [Create table](/docs/sql-guide/statements/statement-table-create)
+* [Alter table](/docs/sql-guide/statements/statement-table-alter)
+* [Drop table](/docs/sql-guide/statements/statement-table-create)
 
 ## Joining tables
 

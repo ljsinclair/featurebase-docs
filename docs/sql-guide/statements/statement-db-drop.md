@@ -3,7 +3,7 @@ title: DROP DATABASE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 9
+nav_order: 4
 ---
 
 # DROP DATABASE statement

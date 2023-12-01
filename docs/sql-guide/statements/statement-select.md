@@ -3,7 +3,7 @@ title: SELECT
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 7
+nav_order: 20
 ---
 
 # SELECT statement

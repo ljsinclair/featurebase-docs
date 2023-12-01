@@ -21,28 +21,25 @@ You can also create a table using a [SQL CREATE TABLE statement](/docs/sql-guide
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Learn how to manage tables](/docs/cloud/cloud-tables/cloud-table-manage)
+* Click **Databases** > database name > **Tables** to view tables.
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 
-## Step 1: view tables
+## Step 1: create table
 
-{% include /cloud-table/cloud-table-view-list.md %}
+* Click **Create table**.
+* Select the destination database.
+* Enter a table name and an optional description.
 
-## Step 2: create table
-
-1. Click **Create table**.
-2. Select the destination database.
-3. Enter a table name and an optional description.
-
-## Step 3: choose the primary key
+## Step 2: choose the primary key
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
-1. Select the ID type.
-2. Click **Create**.
+* Select the ID type.
+* Click **Create**.
 
 ## Next step
 

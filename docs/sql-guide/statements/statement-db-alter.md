@@ -3,7 +3,7 @@ title: ALTER DATABASE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 8
+nav_order: 3
 ---
 
 # ALTER DATABASE statement

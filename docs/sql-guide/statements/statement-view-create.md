@@ -3,7 +3,7 @@ title: CREATE VIEW
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 2
+nav_order: 11
 ---
 
 ## CREATE VIEW statement
@@ -56,9 +56,9 @@ values (3, '1970-01-01T00:00:00Z');
 insert into person(_id, dob)
 values (4, '2080-01-01T00:00:00Z');
 
-create view retiree as 
-select _id, datetimeadd('yy',62,dob) retirement_dt 
-from person 
+create view retiree as
+select _id, datetimeadd('yy',62,dob) retirement_dt
+from person
 where datetimeadd('yy',62,dob)>current_timestamp;
 
 select * from retiree order by retirement_dt;
@@ -84,8 +84,8 @@ values (3, '1970-01-01T00:00:00Z', '123456700', 'John Doe 3');
 insert into person(_id, dob, ssn, name)
 values (4, '2080-01-01T00:00:00Z', '123456000', 'John Doe 4');
 
-create view customer as 
-select _id, name, datetimepart('yy',dob) birth_year 
+create view customer as
+select _id, name, datetimepart('yy',dob) birth_year
 from person;
 
 select * from customer order by birth_year;

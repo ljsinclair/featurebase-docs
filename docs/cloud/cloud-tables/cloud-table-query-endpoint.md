@@ -19,11 +19,7 @@ The query endpoint is used to query a FeatureBase Cloud database.
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 
-## Step 1: view tables
+## Copy the table query endpoint
 
-{% include /cloud-table/cloud-table-view-list.md %}
-
-## Step 2: view the query endpoint
-
-1. Click <span class="material-icons md-18">more_vert</span> for the table to query.
-2. Choose **Copy query endpoint**
+* Click <span class="material-icons md-18">more_vert</span> for the table to query.
+* Choose **Copy query endpoint**

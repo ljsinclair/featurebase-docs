@@ -25,18 +25,15 @@ You may need to delete a column if:
 * [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
 * [Create a table column](/docs/cloud/cloud-tables/cloud-table-add-column)
+* Click **Databases** > database name > **Tables** to view tables.
 
-## Step 1: View all tables
+## Drop the selected column
 
-{% include /cloud-table/cloud-table-view-list.md %}
-
-## Step 2: Drop the selected column
-
-1. Click the table name.
-2. Click **Columns**.
-3. Click <span class="material-icons md-18">more_vert</span> on the column > **Delete**.
-5. Enter "DELETE" in the confirmation dialog.
-6. Click **Delete**.
+* Click the table name.
+* Click **Columns**.
+* Click <span class="material-icons md-18">more_vert</span> on the column > **Delete**.
+* Enter "DELETE" in the confirmation dialog.
+* Click **Delete**.
 
 ## Further information
 

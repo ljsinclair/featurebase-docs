@@ -1,12 +1,12 @@
 ---
-title: Drop table
+title: Delete table
 layout: default
 parent: Manage tables
 grand_parent: Cloud
 nav_order: 6
 ---
 
-# How do I drop a table in FeatureBase Cloud?
+# How do I delete a table in FeatureBase Cloud?
 {: .no_toc }
 
 There are a number of reasons why you may choose to drop a table, including:
@@ -27,18 +27,14 @@ There are a number of reasons why you may choose to drop a table, including:
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
+* Click **Databases** > database name > **Tables** to view tables.
 
-## Step 1: View table list
+## Delete the selected table
 
-{% include /cloud-table/cloud-table-view-list.md %}
-
-## Step 2: Drop the selected table
-
-1. Click <span class="material-icons md-18">more_vert</span> > **Drop table**
-2. Enter "DELETE" in the confirmation dialog.
-3. Click **Drop table**.
+* Click <span class="material-icons md-18">more_vert</span> > **Drop table**
+* Enter "DELETE" in the confirmation dialog.
+* Click **Drop table**.
 
 ## Further information
 
 * [Delete table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deletetable)
-* [Learn how to create tables](/docs/cloud/cloud-tables/cloud-table-create)

@@ -3,12 +3,12 @@ title: CREATE TABLE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 1
+nav_order: 5
 ---
 
 ## CREATE TABLE statement
 
-Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not specified the statement will not be successful.
+Create a FeatureBase table with the specified columns and data types.
 
 ## BNF diagrams
 

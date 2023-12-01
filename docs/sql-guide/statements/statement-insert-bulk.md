@@ -3,7 +3,7 @@ title: BULK INSERT
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 4
+nav_order: 13
 ---
 
 # BULK INSERT statement

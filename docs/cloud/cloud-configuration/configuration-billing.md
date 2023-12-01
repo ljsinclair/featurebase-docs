@@ -29,6 +29,7 @@ Account usage is provided on the **Configuration** page and includes:
 You can upgrade to a Paid account using a US account number or credit card via the Stripe billing system.
 
 * Click **Configuration** > **Upgrade to Paid**.
+* Complete the forms as directed.
 
 ## Further information
 
