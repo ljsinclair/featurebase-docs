@@ -34,7 +34,7 @@ You can also get a subset of details by querying the [fb_database_info and fb_da
 |---|---|---|
 | Database ID | Unique identifier for the database required for API and FBSQL connections that do not require user credentials | * [Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"}<br/>* [FBSQL tool](/docs/tools/fbsql/fbsql-home) |
 | Status | Cloud database states include Provisioning and Running. | [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states) |
-| Memory | Current available memory based on your choice of shaped or serverless database | [Create a custom database](/docs/cloud/cloud-databases/cloud-db-manage/#create-a-custom-database) |
+| Memory | Current available memory based on your choice of shaped database | [Create a custom database](/docs/cloud/cloud-databases/cloud-db-manage/#create-a-custom-database) |
 | Owner | User name of account that created the database | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
 | Version | Database version information | [Issues with Database version](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown/) |
 | Created | Time and date since database creation with user name of creator |  |

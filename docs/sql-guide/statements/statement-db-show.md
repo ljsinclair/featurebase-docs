@@ -28,7 +28,6 @@ SHOW DATABASES
 | `updated_by`| User account that made last update |  |
 | `create_at` | Create date timestamp |  |
 | `updated_at` | Last modified timestamp |  |
-| `workers` | Compute nodes available to a Serverless database | [Learn about Cloud serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless) |
 | `description` | Optional text description of database |  |
 
 ## Examples

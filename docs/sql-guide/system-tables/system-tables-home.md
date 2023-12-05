@@ -22,7 +22,7 @@ The only exception is `fb_views` which is automatically created when a user runs
 |---|---|---|
 | `fb_views` | Contains a catalog of existing views in the database | Created when one or more views are created |
 | `fb_database_info` | Contains properties and state of each database in the system | One database per row |
-| `fb_database_nodes` | Lists database nodes or **Serverless* database state and worker connectivity | [Learn about Cloud Serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless) |
+| `fb_database_nodes` | Lists database nodes |  |
 | `fb_performance_counters` | Contains metrics on database nodes and database workers |
 
 ## System DDL tables

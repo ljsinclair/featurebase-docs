@@ -39,8 +39,6 @@ There are three methods to provision a custom configured database.
 
 Choose from the **Memory** drop-down:
 
-* Serverless (Preview) 2GB Worker, or
-
 {% include /cloud-db/cloud-db-total-shapes.md %}
 
 {% include /cloud-db/cloud-db-click-create.md %}

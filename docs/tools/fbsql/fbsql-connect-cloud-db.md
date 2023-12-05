@@ -43,7 +43,7 @@ Connect to a FeatureBase cloud database when you startup fbsql.
 | Argument | Description | Default | Additional information |
 |---|---|---|---|
 | `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | `localhost` | |
-| `-p`<br>`--port` | Specify TCP port on which FeatureBase is listening for connections. | Cloud serverless: `8080` |  |
+| `-p`<br>`--port` | Specify TCP port on which FeatureBase is listening for connections. |  |  |
 | `--api-key="<public-key>"` | API public key flag that can be used to authenticate with your cloud organization |  | [Obtain Cloud API key](#obtain-cloud-api-key-additional) |
 | `--email="user@example.com" \ --password="a1b2c3d4e5f6"` | User email and password credentials for FeatureBase application |  | [Create Cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
 {% include /fbsql/fbsql-config-filename-arg.md %}
