@@ -39,7 +39,7 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 ## Create a custom database
 
-{% include /cloud-db/cloud-db-create-custom.md %}
+[Learn how to create a database with pre-selected, fixed resources](/docs/cloud/cloud-databases/cloud-db-shaped)
 
 ## How do I learn more about my database?
 
