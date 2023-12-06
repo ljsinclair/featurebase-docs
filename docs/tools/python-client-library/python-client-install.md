@@ -15,7 +15,7 @@ nav_order: 1
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
 
 {: .important}
-Some environments may require `python<version>-venv`
+Some environments may require `python<version>-venv`<br/>
 Installing as root may cause package manager issues
 
 ## Step 1 - clone repository
