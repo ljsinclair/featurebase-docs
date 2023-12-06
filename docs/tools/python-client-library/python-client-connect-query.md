@@ -68,6 +68,8 @@ Keywords can be omitted when connecting to FeatureBase Community installed on th
 
 ## Examples
 
+### Run SQL on FeatureBase Community on same host
+
 ```py
 # import the library
 import featurebase
@@ -79,10 +81,10 @@ client = featurebase.client()
 result=client.query(sql="CREATE TABLE python_demo(_id ID, keycol INT, val1 STRING, val2 STRING)")
 
 # insert data
-result=client.query(sql="INSERT INTO python_demo(_id, keycol, val1, val2) VALUES (1,123,456,'this is val1','this is val2')")
+result=client.query(sql="INSERT INTO python_demo(_id, keycol, val1, val2) VALUES (1,123,'this is val1','this is val2')")
 
 # select statement
-result=client.query(sql="SELECT * FROM demo_upload")
+result=client.query(sql="SELECT * FROM python_demo")
 ```
 
 ### Create client object
