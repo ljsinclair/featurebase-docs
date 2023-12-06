@@ -5,22 +5,38 @@ parent: Python client library
 grand_parent: Tools
 nav_order: 1
 ---
-# How do I install the Python client library?
+# How do I install the FeatureBase Python client library?
+
+
 
 ## Before you begin
 
-* [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
-* [Install python 3.7+](https://www.python.org/downloads/)
+* [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-library-home)
+* Verify Python is installed
+* [Install python 3.7+ if required](https://www.python.org/downloads/){:target="_blank"}
+* [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+*
+{: .important}
+> Some environments may require `python<version>-venv`
+> Installing as root may cause package manager issues
 
-## Step 1 - Navigate to source code
+## Step 1 - clone repository
 
-The source code for FeatureBase Python client library is stored in a public repository on github.
-* [Navigate to FeatureBase repository](https://github.com/FeatureBaseDB/python-featurebase){:target="_blank"}
+* Open a terminal and connect to the target system, then run:
 
-## Step 2 - Download the python client source
+```sh
+git clone git@github.com:FeatureBaseDB/python-featurebase.git
+```
 
-Download the repository content to your local. You can clone the repository using `git` or download the source code as a zip file and extract.
+## Step 2 - install as package in your python environment
 
-## Step 3 - Install the python client library
+Run the following commands:
 
-Navigate to the directory where you have downloaded the `python-featurebase` source files and run `make` command to build and install the library as a new package into your local python environment.
+```sh
+cd python-featurebase
+make
+```
+
+## Next step
+
+* [Create a `.py` file to connect and run SQL against your database](/docs/tools/python-client-connection)

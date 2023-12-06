@@ -15,6 +15,7 @@ Follow these instructions to install FeatureBase on a macOS environment.
 ## Before you begin
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
+{% include /common/common-install-before-begin.md %}
 
 ## Step 1 - Establish the correct release to install
 

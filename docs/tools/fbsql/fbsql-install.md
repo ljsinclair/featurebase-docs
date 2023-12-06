@@ -14,14 +14,10 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 ## Before you begin
 
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
-* Setup Linux or MacOS installation environment:
-  * Obtain administrator permissions
-  * Verify network settings allow access to your FeatureBase database
-  * [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
-  * [Create and login to a GitHub account](https://github.com/){:target="_blank"}
-  * [Install go](https://go.dev/doc/install){:target="_blank"}
-  * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
-  * Delete earlier installations at the CLI with `rm -rf fbsql`
+{% include /common/common-install-before-begin.md %}
+* [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+* [Install go](https://go.dev/doc/install){:target="_blank"}
+* Delete earlier installations at the CLI with `rm -rf fbsql`
 
 ## Step 1 - Create installation directory
 
