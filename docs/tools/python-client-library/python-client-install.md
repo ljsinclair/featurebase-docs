@@ -37,4 +37,4 @@ make
 
 ## Next step
 
-* [Create a `.py` file to connect and run SQL against your database](/docs/tools/python-client-connection)
+* [Create a `.py` file to connect and run SQL against your database](/docs/tools/python-client-connect-query)
