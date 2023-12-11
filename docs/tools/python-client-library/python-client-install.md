@@ -20,8 +20,8 @@ Some environments may require `python<version>-venv`
 
 ## Step 1 - clone repository
 
-* Open a terminal and connect to the target system
-* Run the clone repository command from an appropriate directory:
+* Open a terminal then connect to the target system
+* `CD` to an appropriate directory then run the clone command:
 
 ```sh
 git clone git@github.com:FeatureBaseDB/python-featurebase.git
@@ -38,4 +38,4 @@ make
 
 ## Next step
 
-* [Learn how to connect and run SQL against your database](/docs/tools/python-client-connect-query)
+* [Learn how to connect and run SQL against your database](/docs/tools/python-client-library/python-client-connect-query)
