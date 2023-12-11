@@ -14,11 +14,11 @@ You can add additional Python scripting as required.
 
 ## Before you begin
 
-* [Learn about FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
-* [Create a Cloud database if required](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Start FeatureBase Community if required](/docs/community/com-startup-connect)
+* [Create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage) if required
+* [Start FeatureBase Community](/docs/community/com-startup-connect) if required
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+* [Python `print()` function](https://realpython.com/python-print/)
 
 ## Syntax
 
@@ -86,7 +86,6 @@ print(result.warnings)
 | cafile | Fully qualified CA certificate file path | Optional |  |
 | capath | Community fully qualified CA certificate folder | Optional |  |
 | origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  |  | Optional | Configuration file found in `featurebase/opt/featurebase.conf` |
-| timeout | Integer value that represents number of seconds before connection timeout |  | Optional |  |
 
 ## Query methods
 
@@ -113,7 +112,7 @@ Output flags can be used:
 * with [Python `print()` function](#further-information) to output results
 * in `if-then` function
 
-| Keywords | Description | Additional information |
+| Keywords | Description |
 |---|---|---|
 | `result.ok` | Returns True or False depending on query execution status |
 | `result.schema` | Returns schema definition for tables in schema |
@@ -172,30 +171,11 @@ result=client.query(sql="SELECT * FROM python_demo")
 sqllist=[]
 sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (2,234,'row2, stringcolumn',[500,600,700,800])")
 sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (3,345,'row3, stringcolumn',[900,1000,1100,1200])")
-# run\ the statements and stop on error
+
+# run the statements then stop on error
 results = client.querybatch(sqllist, stoponerror=True)
 if result.ok:
   print("Rows affected:",result.rows_affected,"Execution time:",result.execution_time,"ms")
 else:
   print(result.error)
-
-
-OLDER STUFF BELOW
-
 ```
-# create demo table
-result=client.query(sql="CREATE TABLE python-demo(_id ID,keycol INT,val1 STRING,val2 STRING)")
-
-# insert data
-result=client.query(sql="INSERT INTO python-demo(_id,keycol,val1,val2) VALUES (1,123,'this is val1','this is val2')")
-
-# drop table statement
-result=client.query(sql="SELECT * FROM python-demo")
-if result.ok:
-  print ("Returns:",result.data,"Execution time", result.execution_time, "ms")
-else:
-  print (" Error:", result.error)
-
-## Further information
-
-* [Python `print()` function](https://realpython.com/python-print/)
