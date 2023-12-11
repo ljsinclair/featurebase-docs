@@ -20,11 +20,14 @@ The FeatureBase Python package provides a client class that:
 
 ## How do I install FeatureBase Python client library?
 
-* [Learn how To Install python client library](/docs/tools/python-client-library/python-client-install)
+* [Learn how to Install python client library](/docs/tools/python-client-library/python-client-install)
 
 ## How do I run queries on my database?
 
 * [Learn how to connect and run queries on your database](/docs/tools/python-client-library/python-client-connect-query)
+
+
+OLD BELOW
 
 
 ## Client object parameters

@@ -26,16 +26,24 @@ You can add additional Python scripting as required.
 # Import required libraries
 import featurebase
 
-# FeatureBase connection
-[c_]client = featurebase.client(
-  hostport = "<host:port>"
+## Connect to FeatureBase cloud
+
+c_client = featurebase.client(
   database = "<database-id>"
   apikey = "<api-key-secret>"
+  timeout = "<int-value>"
+)
+
+# Connect to FeatureBase Community
+client = featurebase.client(
+  hostport = "<host:port>"
+  database = "<database-id>"
   cafile = "<certificate-file-path>"
   capath = "<certificate-folder>"
   origin = "<community-origin>"
   timeout = "<int-value>"
 )
+
 # Single query
 result=client.query(sql="<sql-query>")
 
@@ -59,28 +67,25 @@ print(result.warnings)
 {: .important}
 `import featurebase` is required. Add other libraries as necessary.
 
-## FeatureBase connection
-
-Call the FeatureBase client constructor method to instantiate a connection
+## Connect to FeatureBase Cloud
 
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
-| `c_` | prefix used for FeatureBase Cloud connections | For Cloud |  |
+| `c_client = featurebase.client` | Indicates the connection is to FeatureBase Cloud | Yes |  |
+| hostport | Hostname and port for your FeatureBase instance | Optional | `query.featurebase.com/v2` |
+| database | Cloud database ID | Yes | [Obtain database ID from Database details](/docs/cloud/cloud-databases/cloud-db-details) |
+| apikey | Cloud API key secret key | Yes | [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
+| timeout | Integer value that represents number of seconds before connection timeout |  | Optional |  |
+
+## Connect to FeatureBase Community
+
+| Keywords | Description | Required | Additional information |
+|---|---|---|---|
 | `client = featurebase.client` | Defines featurebase.client and optional flags | Yes | Use `featurebase.client()` to connect to Community instance on same host  |
-
-## Optional connection keywords
-
-{: .note}
-Keywords can be omitted when connecting to FeatureBase Community installed on the same host.
-
-| Keywords | Description | Default | Required? | Additional information |
-|---|---|---|---|---|
-| hostport | Hostname and port for your FeatureBase instance | Cloud: `query.featurebase.com/v2`<br/>Community: `localhost:10101` (default) | For Cloud or Community on different host |  |
-| database | Cloud database ID |   | For Cloud | [Cloud ID database details page](/docs/cloud/cloud-databases/cloud-db-details) |
-| apikey | Cloud API key secret key |  | For Cloud or Community on different host | [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
-| cafile | Fully qualified CA certificate file path |   | For Community on different host | |  |
-| capath | Community fully qualified CA certificate folder |  | For Community on different host |  |
-| origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  |  | Optional for Community | Configuration file found in `featurebase/opt/featurebase.conf` |
+| hostport | Hostname and port for your FeatureBase instance | Optional | `localhost:10101` |
+| cafile | Fully qualified CA certificate file path | Optional |  |
+| capath | Community fully qualified CA certificate folder | Optional |  |
+| origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  |  | Optional | Configuration file found in `featurebase/opt/featurebase.conf` |
 | timeout | Integer value that represents number of seconds before connection timeout |  | Optional |  |
 
 ## Query methods
@@ -94,22 +99,22 @@ Keywords can be omitted when connecting to FeatureBase Community installed on th
 
 ### Batched queries
 
-| Keyword | Description | Default | Required | Additional information |
-|---|---|---|---|---|
-| `sqllist[]` | List of SQL queries called by `querybatch` function |  |  |  |
-| `sqllist.append("<sql-query>")` | One or more SQL queries to be called by `querybatch` |  | When preceded by `sqllist[]` |  |
-| `result=client.querybatch(sqllist,<run-flag>)` | Suffix that calls `sqllist[]` list of individual queries in order with optional `<run-type>` |  |  |
-| `asynchronous=True`| Run SQL statements in `sqllist[]` concurrently | False |  |
-| `stoponerror=True` | Stop `sqllist[]` execution if a SQL error occurs. | False | Optional | Ignored when `asynchronous=True` |
+| Keyword | Description | Required | Additional information |
+|---|---|---|---|
+| `sqllist[]` | Start of query list to be called by `querybatch` function |  |  |  |
+| `sqllist.append("<sql-query>")` | Structure for individual SQL queries in the list |  | When preceded by `sqllist[]` |  |
+| `result=client.querybatch(sqllist,<run-flag>)` | Suffix that calls `sqllist[]` list of individual queries in order with optional `<run-flag>` |  |  |
+| `asynchronous=True`| Run flag that concurrently runs SQL statements | Optional | Defaults to `false` |
+| `stoponerror=True` | Run flag that stops `sqllist[]` execution if a SQL error occurs. | False | Optional | Ignored when `asynchronous=True` |
 
 ## Output flags
 
-Output flags:
-* return query results on-screen with the [Python `print()` function](#further-information)
-* can be used with `if-then` function
+Output flags can be used:
+* with [Python `print()` function](#further-information) to output results
+* in `if-then` function
 
-| Keywords | Description |
-|---|---|
+| Keywords | Description | Additional information |
+|---|---|---|
 | `result.ok` | Returns True or False depending on query execution status |
 | `result.schema` | Returns schema definition for tables in schema |
 | `result.data` | Data rows returned by the connected database |
@@ -129,10 +134,9 @@ import featurebase
 # create a client that connects to FeatureBase Cloud
 c_client = featurebase.client(
   hostport="query.featurebase.com/v2",
-  database="<database_id>",
+  database="123456789abcdef",
   apikey="<APIKey_secret>"
   )
-
 ```
 
 ## FeatureBase Community connection on localhost
@@ -174,37 +178,11 @@ if result.ok:
   print("Rows affected:",result.rows_affected,"Execution time:",result.execution_time,"ms")
 else:
   print(result.error)
+
+
+OLDER STUFF BELOW
+
 ```
-
-##
-
-
-### Create client object
-
-Import the FeatureBase library and instantiate a client object by calling the client's constructor method.
-
-```python
-# import the library
-import featurebase
-
-# create a default client that connects to localhost:10101
-client = featurebase.client()
-
-# create a client that connects to FeatureBase Cloud
-c_client = featurebase.client(
-  hostport="query.featurebase.com/v2",
-  database="<database_id>",
-  apikey="<APIKey_secret>"
-  )
-```
-
-
-# import the library
-import featurebase
-
-# create a default client that connects to localhost:10101
-client = featurebase.client()
-
 # create demo table
 result=client.query(sql="CREATE TABLE python-demo(_id ID,keycol INT,val1 STRING,val2 STRING)")
 
