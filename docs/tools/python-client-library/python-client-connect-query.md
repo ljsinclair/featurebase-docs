@@ -25,7 +25,7 @@ You can add additional Python scripting as required.
 # Import required libraries
 import featurebase
 
-## Connect to FeatureBase cloud
+# Connect to FeatureBase cloud
 c_client = featurebase.client(
   database = "<database-id>"
   apikey = "<api-key-secret>"
