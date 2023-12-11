@@ -17,8 +17,7 @@ You can add additional Python scripting as required.
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 * [Create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage) if required
 * [Start FeatureBase Community](/docs/community/com-startup-connect) if required
-* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Python `print()` function](https://realpython.com/python-print/)
+
 
 ## Syntax
 
@@ -27,7 +26,6 @@ You can add additional Python scripting as required.
 import featurebase
 
 ## Connect to FeatureBase cloud
-
 c_client = featurebase.client(
   database = "<database-id>"
   apikey = "<api-key-secret>"
@@ -40,7 +38,7 @@ client = featurebase.client(
   database = "<database-id>"
   cafile = "<certificate-file-path>"
   capath = "<certificate-folder>"
-  origin = "<community-origin>"
+  origin = "<cross-origin-resource-sharing>"
   timeout = "<int-value>"
 )
 
@@ -75,42 +73,50 @@ print(result.warnings)
 | hostport | Hostname and port for your FeatureBase instance | Optional | `query.featurebase.com/v2` |
 | database | Cloud database ID | Yes | [Obtain database ID from Database details](/docs/cloud/cloud-databases/cloud-db-details) |
 | apikey | Cloud API key secret key | Yes | [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
-| timeout | Integer value that represents number of seconds before connection timeout |  | Optional |  |
+| timeout | Integer value that represents number of seconds before connection timeout | Optional |  |
 
 ## Connect to FeatureBase Community
 
+{: .note}
+Key-values can be found in `featurebase/opt/featurebase.conf`
+
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
-| `client = featurebase.client` | Defines featurebase.client and optional flags | Yes | Use `featurebase.client()` to connect to Community instance on same host  |
-| hostport | Hostname and port for your FeatureBase instance | Optional | `localhost:10101` |
+| `client = featurebase.client` | Defines featurebase.client and optional flags | Yes | Use `featurebase.client()` to connect to Community instance on same host |
+| hostport | Hostname and port for your FeatureBase instance | Optional | Defaults to `localhost:10101` |
 | cafile | Fully qualified CA certificate file path | Optional |  |
 | capath | Community fully qualified CA certificate folder | Optional |  |
-| origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  |  | Optional | Configuration file found in `featurebase/opt/featurebase.conf` |
+| origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  | Optional |  |
 
 ## Query methods
 
+The [FeatureBase SQL-Guide](/docs/sql-guide/sql-guide-home) contains guidance on valid SQL.
+
+{: .note}
+Use [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp) to escape double-quotes within any SQL query
+
 ### Single query
 
-| Keywords | Description | Additional information |
+| Keywords | Description | Required |
 |---|---|---|
-| `result=client.query(sql="<sql-query>")` | Run a single SQL query against the connected database | [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home) |
-| `<sql-query>` | Double-quoted SQL query | [Escape double quotes within the `<sql-query>`](https://www.w3schools.com/python/gloss_python_escape_characters.asp) |
+| `result=client.query(sql="<sql-query>")` | Run a single SQL query against the connected database | Yes |
+| `<sql-query>` | Double-quoted SQL query | Yes |
 
 ### Batched queries
 
 | Keyword | Description | Required | Additional information |
 |---|---|---|---|
-| `sqllist[]` | Start of query list to be called by `querybatch` function |  |  |  |
-| `sqllist.append("<sql-query>")` | Structure for individual SQL queries in the list |  | When preceded by `sqllist[]` |  |
-| `result=client.querybatch(sqllist,<run-flag>)` | Suffix that calls `sqllist[]` list of individual queries in order with optional `<run-flag>` |  |  |
+| `sqllist[]` | Start of query list to be called by `querybatch` function | Yes |  |  |
+| `sqllist.append("<sql-query>")` | Structure for individual SQL queries in the list |  | Yes |  |
+| `result=client.querybatch(sqllist,<run-flag>)` | Call `sqllist[]` list of individual queries and modify execution with optional `<run-flag>` | Yes |  |
 | `asynchronous=True`| Run flag that concurrently runs SQL statements | Optional | Defaults to `false` |
-| `stoponerror=True` | Run flag that stops `sqllist[]` execution if a SQL error occurs. | False | Optional | Ignored when `asynchronous=True` |
+| `stoponerror=True` | Run flag that stops `sqllist[]` execution if a SQL error occurs. | Optional | Ignored when `asynchronous=True` |
 
 ## Output flags
 
 Output flags can be used:
-* with [Python `print()` function](#further-information) to output results
-* in `if-then` function
+* to output results with [Python `print()` function](https://realpython.com/python-print/){:target="_blank"}
+* with an `if-then` function
 
 | Keywords | Description |
 |---|---|---|
