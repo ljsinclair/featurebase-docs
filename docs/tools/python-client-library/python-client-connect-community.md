@@ -8,6 +8,8 @@ nav_order: 3
 
 # How do I connect to FeatureBase Community?
 
+Use the following client classes to connect to FeatureBase Community.
+
 ## Before you begin
 
 {% include /tools-python/python-db-setup-before-begin.md %}

@@ -7,7 +7,8 @@ nav_order: 1
 ---
 # How do I install the FeatureBase Python client library?
 
-The FeatureBase Python client library has some dependencies and may experience package manager issues if installed as root.
+{: .important}
+The FeatureBase Python client library has some dependencies and may cause package manager issues if installed as root.
 
 ## Before you begin
 
@@ -38,4 +39,5 @@ make
 
 ## Next step
 
-* [Learn how to connect and run SQL against your database](/docs/tools/python-client-library/python-client-connect-query)
+* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
+* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)

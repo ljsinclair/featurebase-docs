@@ -8,6 +8,8 @@ nav_order: 2
 
 # How do I connect to FeatureBase Cloud using the Python client library?
 
+Use the following client classes to connect to FeatureBase Cloud.
+
 ## Before you begin
 
 {% include /tools-python/python-db-setup-before-begin.md %}
