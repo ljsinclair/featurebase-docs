@@ -30,8 +30,8 @@ The FeatureBase Python Client Library provides client classes to:
 
 ## How do I query my database?
 
-* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-query)
 
 ## Example
 
-* [Example connection and query script](/docs/tools/python-client-library/python-client-connect-community#example)
+* [Example connection and query script](/docs/tools/python-client-library/python-client-query#example)

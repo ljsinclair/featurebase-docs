@@ -50,7 +50,7 @@ Key-values can be found in `featurebase/opt/featurebase.conf`
 
 ## Next step
 
-* [Learn how to query the connected database](/docs/tools/python-client-library/python-client-query-connection)
+* [Learn how to query the connected database](/docs/tools/python-client-library/python-client-query)
 
 ## Further information
 

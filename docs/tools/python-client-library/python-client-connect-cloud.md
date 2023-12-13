@@ -45,7 +45,7 @@ c_client = featurebase.client(
 
 ## Next step
 
-* [Learn how to query the connected database](/docs/tools/python-client-library/python-client-query-connection)
+* [Learn how to query the connected database](/docs/tools/python-client-library/python-client-query)
 
 ## Further information
 
