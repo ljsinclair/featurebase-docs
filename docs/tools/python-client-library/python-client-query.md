@@ -76,57 +76,6 @@ Output flags can be used:
 | `result.execution_time` | Output time taken to execute the queries |
 | `result.rows_affected` | Output number of rows created, updated or deleted |
 
-## Example
+## Examples
 
-Add or remove `#` characters to disable or enable the connection destinations
-
-{: .note}
-Substitute your own `<cloud-database-id>` and `<cloud-api-key>` to connect to your Cloud database
-
-```py
-# import the library
-import featurebase
-
-# FeatureBase Cloud client
-print("Connecting to FeatureBase Cloud...")
-c_client = featurebase.client(
-#hostport = "https://query.featurebase.com/v2/",
-database = "<cloud-database-id>",  # Replace with your own database id
-apikey = "<cloud-api-key>")    # Replace with your API key
-
-# FeatureBase Community client
-#print ("Connecting to FeatureBase Community...")
-#client = featurebase.client(
-#hostport = "localhost:10101")
-
-# DROP demo table
-print ("Dropping table if it exists")
-result=c_client.query(sql="DROP TABLE python-demo") # Remove `_c` prefix to run against Community
-
-# CREATE demo table
-print ("Single CREATE TABLE python-demo statement")
-result=c_client.query(sql="CREATE TABLE python-demo(_id ID, intcol INT, stringcol STRING, idsetcol IDSET)")
-
-# Run SQL statements in sequence and stop on error
-print ("Array of INSERT INTO python-demo statements")
-sqllist=[]
-sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (2,234,'row2, stringcolumn',[500,600,700,800])")
-sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (3,345,'row3, stringcolumn',[900,1000,1100,1200])")
-# run statements then stop on error
-results = client.querybatch(sqllist, stoponerror=True)
-if result.ok:
-  print("Rows affected:",result.rows_affected,"Execution time:",result.execution_time,"ms")
-  print(result.schema)
-else:
-  print(result.error)
-
-# SELECT FROM python-demo
-print("SELECT statement on python-demo")
-result=client.query(sql="SELECT _id,SETCONTAINS(idsetcol,700) FROM python-demo")
-if result.ok:
-  print(result.data)
-  print("Execution time:",result.execution_time,"ms")
-else:
-  print(result.error)
-
-```
+* [Python Client library examples](/docs/tools/python-client-library/python-client-example)

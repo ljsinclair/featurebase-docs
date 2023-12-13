@@ -1,20 +1,83 @@
 ---
-title: Python client library usage example
+title: Python client examples
 layout: default
 parent: Python client library
 grand_parent: Tools
-nav_order: 2
+nav_order: 5
 ---
 
-# Example application using python client library
+# Python client library examples
 
-In this example, FeatureBase python client library is used to bulk insert data into a demo table.
+The following examples demonstrate how the Python client classes work in practice.
+
+Example one contains SQL queries to create a table, insert data then query the table.
+
+Example two is a Python application that:
+* creates a target table in the database of choice
+* randomly generates data
+* inserts that data into the target table using the BULK INSERT statement
 
 ## Before you begin
 
-{% include /cloud/cloud-before-begin.md %}, Or
-{% include /com-install/com-install-before-begin.md %}
-* [Learn How To Install python client library](/docs/tools/python-client-library/python-client-install)
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
+{% include /tools-python/python-db-setup-before-begin.md %}
+* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
+* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+* [Learn how to run SQL queries against your database](/docs/tools/python-client-library/python-client-query)
+* Add or remove `#` characters to disable or enable the connection classes
+
+{: .note}
+Substitute your own `<cloud-database-id>` and `<cloud-api-key>` to connect to your Cloud database
+
+## Example one
+
+```py
+# import the library
+import featurebase
+
+# FeatureBase Cloud client
+print("Connecting to FeatureBase Cloud...")
+c_client = featurebase.client(
+#hostport = "https://query.featurebase.com/v2/",
+database = "<cloud-database-id>",  # Replace with your own database id
+apikey = "<cloud-api-key>")    # Replace with your API key
+
+# FeatureBase Community client
+#print ("Connecting to FeatureBase Community...")
+#client = featurebase.client(
+#hostport = "localhost:10101")
+
+# DROP demo table
+print ("Dropping table if it exists")
+result=c_client.query(sql="DROP TABLE python-demo") # Remove `_c` prefix to run against Community
+
+# CREATE demo table
+print ("Single CREATE TABLE python-demo statement")
+result=c_client.query(sql="CREATE TABLE python-demo(_id ID, intcol INT, stringcol STRING, idsetcol IDSET)")
+
+# Run SQL statements in sequence and stop on error
+print ("Array of INSERT INTO python-demo statements")
+sqllist=[]
+sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (2,234,'row2, stringcolumn',[500,600,700,800])")
+sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (3,345,'row3, stringcolumn',[900,1000,1100,1200])")
+# run statements then stop on error
+results = client.querybatch(sqllist, stoponerror=True)
+if result.ok:
+  print("Rows affected:",result.rows_affected,"Execution time:",result.execution_time,"ms")
+  print(result.schema)
+else:
+  print(result.error)
+
+# SELECT FROM python-demo
+print("SELECT statement on python-demo")
+result=client.query(sql="SELECT _id,SETCONTAINS(idsetcol,700) FROM python-demo")
+if result.ok:
+  print(result.data)
+  print("Execution time:",result.execution_time,"ms")
+else:
+  print(result.error)
+```
 
 ## Example python application
 
@@ -24,10 +87,17 @@ import random
 import featurebase
 import time
 
-# intialize featurebase client for community or cloud featurebase server
-client = featurebase.client(hostport="localhost:10101") #community
-#client = featurebase.client(hostport="query.featurebase.com/v2", database="", apikey="") #cloud
+# FeatureBase Cloud client
+print("Connecting to FeatureBase Cloud...")
+c_client = featurebase.client(
+#hostport = "https://query.featurebase.com/v2/",
+database = "<cloud-database-id>",  # Replace with your own database id
+apikey = "<cloud-api-key>")    # Replace with your API key
 
+# FeatureBase Community client
+#print ("Connecting to FeatureBase Community...")
+#client = featurebase.client(
+#hostport = "localhost:10101")
 
 # generate random data
 def get_random_string(length: int):
@@ -74,7 +144,6 @@ def run(batchSize: int):
         h+=batchSize
         if h>1000000:
             h=1000000
-
 
 run(10000)
 ```
