@@ -7,11 +7,12 @@ nav_order: 3
 has_toc: false
 ---
 
-# How do I access FeatureBase from a Python application?
+# How do use Python to run queries on my FeatureBase database?
 
-The FeatureBase Python package provides a client class that:
-* represents a connection to a FeatureBase Cloud or Community database
-* exposes public methods that allow a Python application to submit queries
+The FeatureBase Python Client Library provides client classes to:
+* Connect to a FeatureBase Cloud or Community database
+* Run SQL queries on your database
+* Output results
 
 ## Before you begin
 
