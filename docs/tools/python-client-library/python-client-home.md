@@ -22,33 +22,15 @@ The FeatureBase Python package provides a client class that:
 
 * [Learn how to install python client library](/docs/tools/python-client-library/python-client-install)
 
-## How do I run queries on my database?
+## How do I connect to my database?
 
-* [Learn how to connect and run queries on your database](/docs/tools/python-client-library/python-client-connect-query)
+* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
+* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
 
+## How do I query my database?
 
-OLD BELOW
+* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
 
+## Example
 
-## Client object parameters
-
-The following parameters can be used with the client constructor method. All parameters are optional.
-
-| Parameter | Description | Default |
-|---|---|---|
-| `hostport` | Hostname and port number of your FeatureBase instance, it should be passed in `host:port` | `localhost:10101` |
-| `database` | Database id of your FeatureBase cloud instance |  |
-| `apikey` | [Cloud API key](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/postKey) that can be used for authn/authz for cloud |  |
-| `cafile` | Fully qualified certificate file path |  |
-| `capath` | Fully qualified certificate folder |  |
-| `origin` | Request origin, should be one of the allowed origins defined for your FeatureBase instance |  |
-| `timeout` | Number of seconds to wait before timing out on server connection attempts |  |
-
-## Usage
-
-
-
-
-## Further information
-
-* [SQL guide](/docs/sql-guide/sql-guide-home)
+* [Example connection and query script](/docs/tools/python-client-library/python-client-connect-community#example)

@@ -6,15 +6,11 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# How do I connect to FeatureBase Cloud?
-
+# How do I connect to FeatureBase Cloud using the Python client library?
 
 ## Before you begin
 
-* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
-* [Create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage) if required
-* [Start FeatureBase Community](/docs/community/com-startup-connect) if required
-
+{% include /tools-python/python-db-setup-before-begin.md %}
 
 ## Syntax
 

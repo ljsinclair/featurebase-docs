@@ -3,7 +3,7 @@ title: Query your database
 layout: default
 parent: Python client library
 grand_parent: Tools
-nav_order: 2
+nav_order: 4
 ---
 
 # How do I connect run queries on my database?
@@ -14,9 +14,7 @@ Query the connected database with individual queries or as a batch that can be r
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
-* Setup a database
-  * [Create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage), OR
-  * [Start FeatureBase Community](/docs/community/com-startup-connect)
+{% include /tools-python/python-db-setup-before-begin.md %}
 * Connect to your database
   * [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
   * [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
@@ -78,7 +76,7 @@ Output flags can be used:
 | `result.execution_time` | Output time taken to execute the queries |
 | `result.rows_affected` | Output number of rows created, updated or deleted |
 
-## Examples
+## Example
 
 Add or remove `#` characters to disable or enable the connection destinations
 
