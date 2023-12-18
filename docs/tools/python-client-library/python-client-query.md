@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 4
 ---
 
-# How do I run SQL queries on my database?
+# How do I use FeatureBase Python classes to run SQL?
 
 SQL queries can be run on your FeatureBase database as:
 * individual commands
