@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 3
 ---
 
-# How do I connect to FeatureBase Community?
+# How do I use FeatureBase Python classes to connect to Community?
 
 Use the following client classes to connect to FeatureBase Community.
 

@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 2
 ---
 
-# How do I connect to FeatureBase Cloud using the Python client library?
+# How do I use FeatureBase Python classes to connect to Cloud?
 
 Use the following client classes to connect to FeatureBase Cloud.
 
