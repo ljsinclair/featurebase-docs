@@ -71,13 +71,13 @@ Output flags can:
 
 | Keywords | Description |
 |---|---|
-| `result.ok` | Returns True or False depending on query execution status |
-| `result.schema` | Returns schema definition for tables in schema |
 | `result.data` | Data rows returned by the connected database |
 | `result.error` | Output execution errors from the connected database |
-| `result.warnings` | Output server warnings from the connected database |
 | `result.execution_time` | Output time taken to execute the queries |
+| `result.ok` | Returns True or False depending on query execution status |
 | `result.rows_affected` | Output number of rows created, updated or deleted |
+| `result.schema` | Returns schema definition for tables in schema |
+| `result.warnings` | Output server warnings from the connected database |
 
 ## Examples
 
