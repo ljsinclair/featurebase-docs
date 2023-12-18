@@ -9,10 +9,7 @@ has_toc: false
 
 # How do use Python to run SQL queries on my FeatureBase database?
 
-The FeatureBase Python Client Library provides client classes that can:
-* connect to a FeatureBase Cloud or Community database
-* run SQL queries on your database
-* output results
+{% include /python-lib/python-lib-classes-summary.md %}
 
 ## Before you begin
 

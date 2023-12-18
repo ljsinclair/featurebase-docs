@@ -7,6 +7,8 @@ nav_order: 1
 ---
 # How do I install the FeatureBase Python client library?
 
+{% include /python-lib/python-lib-classes-summary.md %}
+
 {: .important}
 The FeatureBase Python client library has some dependencies and may cause package manager issues if installed as `root`.
 
