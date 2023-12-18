@@ -12,6 +12,7 @@ nav_order: 1
 ## Before you begin
 
 * [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
+* [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if required
 * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"} if required
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"} if required
 
