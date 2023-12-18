@@ -29,7 +29,7 @@ git clone git@github.com:FeatureBaseDB/python-featurebase.git
 ## Step 2 - install package in your python environment
 
 {: .warning}
-Python Package Manager issues may be encountered if installing as `root`
+Installing as `root` user may cause Python Package Manager issues
 
 Run the following commands:
 
