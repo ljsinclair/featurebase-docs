@@ -39,7 +39,7 @@ client = featurebase.client(
 ## Connect to FeatureBase Community
 
 {: .note}
-Key-values can be found in `featurebase/opt/featurebase.conf`
+Key-values are defined in `featurebase/opt/featurebase.conf`
 
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
