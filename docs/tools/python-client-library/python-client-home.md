@@ -7,7 +7,7 @@ nav_order: 3
 has_toc: false
 ---
 
-# How do use Python to run SQL on my FeatureBase database?
+# How do use Python to run SQL queries on my FeatureBase database?
 
 The FeatureBase Python Client Library provides client classes that can:
 * connect to a FeatureBase Cloud or Community database
