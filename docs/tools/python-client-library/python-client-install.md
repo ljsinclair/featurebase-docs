@@ -40,9 +40,8 @@ make
 
 ## Troubleshooting
 
-Run `make` after resolving reported errors
+* Resolve any reported errors then run `make`.
 
 ## Next step
 
-* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
-* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+{% include /python-lib/python-lib-connect-db-links.md %}
