@@ -14,6 +14,8 @@ Use the following client classes to connect to FeatureBase Cloud.
 
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 * [Learn how to create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to obtain the database ID](/docs/cloud/cloud-databases/cloud-db-details)
+* [Learn how to create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
 
 ## Syntax
 
