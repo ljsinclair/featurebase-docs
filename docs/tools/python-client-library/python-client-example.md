@@ -8,29 +8,26 @@ nav_order: 5
 
 # Python client library examples
 
-The following examples demonstrate how the Python client classes work in practice.
-
-Example one contains SQL queries to create a table, insert data then query the table.
-
-Example two is a Python application that:
-* creates a target table in the database of choice
-* randomly generates data
-* inserts that data into the target table using the BULK INSERT statement
+These examples demonstrate how FeatureBase Python client classes work in practice.
 
 ## Before you begin
 
-* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 {% include /tools-python/python-db-setup-before-begin.md %}
-* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
+
+* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud)
 * [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
 * [Learn how to run SQL queries against your database](/docs/tools/python-client-library/python-client-query)
-* Add or remove `#` characters to disable or enable the connection classes
 
 {: .note}
-Substitute your own `<cloud-database-id>` and `<cloud-api-key>` to connect to your Cloud database
+* Add or remove `#` characters to disable or enable the connection classes
 
-## Example one
+## Example one - SQL queries
+
+This example contains SQL queries to:
+* create a table
+* insert data
+* query the table
+Results are output using the Python `PRINT()` function
 
 ```py
 # import the library
@@ -79,9 +76,14 @@ else:
   print(result.error)
 ```
 
-## Example python application
+## Example two - Python application
 
-```python
+This example is a Python application that:
+* creates a target table in the database of choice
+* randomly generates data
+* inserts that data into the target table using the BULK INSERT statement
+
+```py
 import string
 import random
 import featurebase
@@ -99,13 +101,13 @@ apikey = "<cloud-api-key>")    # Replace with your API key
 #client = featurebase.client(
 #hostport = "localhost:10101")
 
-# generate random data
+# Generate random data
 def get_random_string(length: int):
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
-# build a BULK INSERT sql and execute it using featurebase client
+# Build BULK INSERT SQL statement for later execution
 def upload_data_bulk(key_from: int, key_to: int):
     # build bulk insert sql
     insertClause="BULK INSERT INTO demo_upload(_id, keycol, val1, val2) MAP (0 ID, 1 INT, 2 STRING, 3 STRING) FROM x"
@@ -138,7 +140,7 @@ def run(batchSize: int):
     l=1
     h=batchSize
     for i in range(1, n):
-        if not upload_data_bulk(l, h):
+        if not upload_data_bulk(l, h):   # running BULK INSERT statement
             break
         l=h+1
         h+=batchSize
@@ -148,7 +150,10 @@ def run(batchSize: int):
 run(10000)
 ```
 
-## Further Information
+## Further information
 
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk/)
-* [SQL guide](/docs/sql-guide/sql-guide-home)
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+  * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
+  * [INSERT statement](/docs/sql-guide/statements/statement-insert)
+  * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+  * [SELECT statement](/docs/sql-guide/statements/statement-select)
