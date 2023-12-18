@@ -17,7 +17,7 @@ Query results can be returned using the Python `print()` command.
 
 ## Before you begin
 
-{% include /tools-python/python-db-setup-before-begin.md %}
+* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 * Connect to the database using:
   * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
   * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
