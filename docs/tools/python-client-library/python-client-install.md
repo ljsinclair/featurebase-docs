@@ -19,41 +19,28 @@ nav_order: 1
   * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   * [Install pip](https://pip.pypa.io/en/stable/installation/)
 
-## Step 1 - download
+## Install the FeatureBase Python library
 
-* Open a CLI on the target system.
-* Use one of the following methods to download the library:
+You can install the library by
+* cloning the repository
+* running the pip command
 
-| Method | Command | Additional information |
-|---|---|---|
-| Git clone | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [Python-FeatureBase on GitHub](https://github.com/FeatureBaseDB/python-featurebase) |
-| Python Pip | `pip install featurebase` | [FeatureBase Python library on pypi](https://pypi.org/project/featurebase/) |
+## Method 1 - clone the repository
 
-
-Clone the repository to create the `python-featurebase` directory
-
-* Open a terminal then connect to the target system
-* `CD` to an appropriate directory then run the clone command that
+* Open a CLI on the target system
+* Clone the FeatureBase Client library:
 
 ```sh
-git clone git@github.com:FeatureBaseDB/python-featurebase.git
+`git clone git@github.com:FeatureBaseDB/python-featurebase.git`
 ```
 
-## Step 2 - install package in your python environment
+* CD to `python-featurebase`
+* Run `make`
 
-{: .warning}
-Installing as `root` user may cause Python Package Manager issues
+## Method 2 - Install using `pip`
 
-Run the following commands:
-
-```sh
-cd python-featurebase
-make
-```
-
-## Troubleshooting
-
-* Resolve any reported errors then run `make`.
+* Open a CLI on the target system
+* Run `pip install featurebase`
 
 ## Next step
 
