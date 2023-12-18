@@ -36,13 +36,14 @@ sqllist.append("<sql-query")  # one or more SQL queries on separate lines
 results = client.querybatch(sqllist, <run-flag>)
 
 # Output flags
-print(result.data)
-print(result.error)
-print(result.execution_time)
-print(result.ok)
-print(result.rows_affected)
-print(result.schema)
-print(result.warnings)
+
+# result.data
+# result.error
+# result.execution_time
+# result.ok
+# result.rows_affected
+# result.schema
+# result.warnings
 ```
 
 ## Single query keywords
