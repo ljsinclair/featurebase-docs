@@ -22,7 +22,7 @@ Query results can be returned using the Python `print()` command.
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 {: .note}
-Escape double-quotes in SQL queries using [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
+Escape double-quotes in SQL queries using [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp){:target="_blank"}
 
 ## Syntax
 
