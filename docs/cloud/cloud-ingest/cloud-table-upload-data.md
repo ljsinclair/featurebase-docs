@@ -72,6 +72,6 @@ User cannot procced until all column data types have been selected.
 ## Further information
 
 - [Create table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
-- [Learn how to query your Cloud data](/docs/cloud/cloud-query/cloud-query-data)
+- [Learn how to query your Cloud data](/docs/cloud/cloud-query/cloud-query-home)
 - [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 - [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)

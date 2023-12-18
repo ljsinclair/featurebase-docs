@@ -37,4 +37,4 @@ You can create the database in two ways.
 
 ## Next step
 
-* [Query sample data](/docs/cloud/cloud-query/cloud-query-data)
+* [Query sample data](/docs/cloud/cloud-query/cloud-query-home)

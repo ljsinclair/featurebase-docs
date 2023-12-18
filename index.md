@@ -51,7 +51,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community | Additional information |
 |---|---|---|---|
-| Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-data) | [Query community tables](/docs/community/com-query/com-query-home) |  |
+| Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-home) | [Query community tables](/docs/community/com-query/com-query-home) |  |
 | FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
