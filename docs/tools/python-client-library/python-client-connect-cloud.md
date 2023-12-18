@@ -41,8 +41,8 @@ c_client = featurebase.client(
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
 | `c_client = featurebase.client` | Indicates the connection is to FeatureBase Cloud | Yes |  |
-| hostport | `query.featurebase.com/v2` is the default value for Cloud databases | Optional |  |
-| database | ID for database in Cloud | Yes | [Obtain database ID from Database details](/docs/cloud/cloud-databases/cloud-db-details) |
+| `hostport = "query.featurebase.com/v2"` | Default Cloud query endpoint, found in Database details page | Yes |  |
+| database | FeatureBase Cloud database ID found in Database details page | Yes | [Obtain database ID from Database details](/docs/cloud/cloud-databases/cloud-db-details) |
 | apikey | Cloud API key secret key | Yes | [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
 | timeout | Integer value that represents number of seconds before connection timeout | Optional |  |
 
