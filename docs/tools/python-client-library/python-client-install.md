@@ -12,11 +12,23 @@ nav_order: 1
 ## Before you begin
 
 * [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
-* [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if required
-* [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"} if required
-* [Install make](https://www.gnu.org/software/make/){:target="_blank"} if required
+* Install the following if not already on the target system:
+  * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"}
+  * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+* Install one of the following to download the FeatureBase Python library:
+  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  * [Install pip](https://pip.pypa.io/en/stable/installation/)
 
-## Step 1 - clone repository
+## Step 1 - download
+
+* Open a CLI on the target system.
+* Use one of the following methods to download the library:
+
+| Method | Command | Additional information |
+|---|---|---|
+| Git clone | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [Python-FeatureBase on GitHub](https://github.com/FeatureBaseDB/python-featurebase) |
+| Python Pip | `pip install featurebase` | [FeatureBase Python library on pypi](https://pypi.org/project/featurebase/) |
+
 
 Clone the repository to create the `python-featurebase` directory
 
