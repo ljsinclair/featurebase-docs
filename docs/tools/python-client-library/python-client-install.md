@@ -15,32 +15,23 @@ nav_order: 1
 * Install the following if not already on the target system:
   * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"}
   * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
-* Install one of the following to download the FeatureBase Python library:
-  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), OR
   * [Install pip](https://pip.pypa.io/en/stable/installation/)
 
-## Install the FeatureBase Python library
-
-You can install the library by
-* cloning the repository
-* running the pip command
-
-## Method 1 - clone the repository
+## Step 1 - download the library
 
 * Open a CLI on the target system
-* Clone the FeatureBase Client library:
+* Download using one of the following methods:
 
-```sh
-`git clone git@github.com:FeatureBaseDB/python-featurebase.git`
-```
+| Method | Command | Additional information |
+|---|---|---|
+| Git | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [GitHub repository](https://github.com/FeatureBaseDB/python-featurebase) |
+| Pip | `pip install featurebase` | [Client repository on pypi](https://pypi.org/project/featurebase/) |
+
+## Step 2 - install the library
 
 * CD to `python-featurebase`
 * Run `make`
-
-## Method 2 - Install using `pip`
-
-* Open a CLI on the target system
-* Run `pip install featurebase`
 
 ## Next step
 
