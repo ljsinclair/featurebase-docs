@@ -17,12 +17,11 @@ Query results can be returned using the Python `print()` command.
 
 ## Before you begin
 
-* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 {% include /tools-python/python-db-setup-before-begin.md %}
-* Connect to your database
-  * [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
-  * [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+* Connect to the database with:
+  * [FeatureBase Cloud connection keywords](/docs/tools/python-client-library/python-client-connect-cloud), OR
+  * [FeatureBase Community connection keywords](/docs/tools/python-client-library/python-client-connect-community)
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 {: .note}
 Escape double-quotes in SQL queries using [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
