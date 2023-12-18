@@ -7,7 +7,7 @@ nav_order: 3
 has_toc: false
 ---
 
-# How do I use Python to run SQL queries on FeatureBase?
+# How do I use Python to run FeatureBase SQL queries?
 
 {% include /python-lib/python-lib-classes-summary.md %}
 
