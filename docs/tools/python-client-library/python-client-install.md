@@ -8,7 +8,7 @@ nav_order: 1
 # How do I install the FeatureBase Python client library?
 
 {: .important}
-The FeatureBase Python client library has some dependencies and may cause package manager issues if installed as root.
+The FeatureBase Python client library has some dependencies and may cause package manager issues if installed as `root`.
 
 ## Before you begin
 
@@ -17,12 +17,14 @@ The FeatureBase Python client library has some dependencies and may cause packag
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"} if required
 
 {: .important}
-Some environments may require `python<version>-venv`
+Some environments require `python<version>-venv`
 
 ## Step 1 - clone repository
 
+Clone the repository to create the `python-featurebase` directory
+
 * Open a terminal then connect to the target system
-* `CD` to an appropriate directory then run the clone command:
+* `CD` to an appropriate directory then run the clone command that
 
 ```sh
 git clone git@github.com:FeatureBaseDB/python-featurebase.git
@@ -36,6 +38,10 @@ Run the following commands:
 cd python-featurebase
 make
 ```
+
+## Troubleshooting
+
+Follow on-screen instructions to repair or install requirements missing from your system
 
 ## Next step
 
