@@ -26,7 +26,7 @@ nav_order: 1
 | Method | Command | Additional information |
 |---|---|---|
 | Git | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [GitHub repository](https://github.com/FeatureBaseDB/python-featurebase) |
-| Pip | `pip install featurebase` | [Client repository on pypi](https://pypi.org/project/featurebase/) |
+| Pip | `pip install featurebase` | [Pypi repository](https://pypi.org/project/featurebase/) |
 
 ## Step 2 - install the library
 
