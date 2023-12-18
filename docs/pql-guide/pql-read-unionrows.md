@@ -186,7 +186,7 @@ Which users have purchased from any brand that start with brand_a ?
 }
 ```
 #### Explanation
-`Rows(has_purchased, like="brand_a%")` returns the field values in the has_purchased field that start with brand_a - i.e.  brand_a1, brand_a2, and brand_a3. `Rows(has_purchased, like="brand_c%")` returns the field values in the has_purchased field that start with brand_a -- i.e. brand_c1 and brand_c3. `UnionRows()` returns all the records that have any of those values.
+`Rows(has_purchased, like="brand_a%")` returns the field values in the has_purchased field that start with brand_a - i.e.  brand_a1, brand_a2, and brand_a3. `Rows(has_purchased, like="brand_c%")` returns the field values in the has_purchased field that start with brand_c -- i.e. brand_c1 and brand_c3. `UnionRows()` returns all the records that have any of those values.
 
 The equivalent Union() `query` would be:
 ```
