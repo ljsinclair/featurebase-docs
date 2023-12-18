@@ -9,9 +9,6 @@ nav_order: 1
 
 {% include /python-lib/python-lib-classes-summary.md %}
 
-{: .important}
-The FeatureBase Python client library has some dependencies and may cause package manager issues if installed as `root`.
-
 ## Before you begin
 
 * [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
@@ -33,6 +30,9 @@ git clone git@github.com:FeatureBaseDB/python-featurebase.git
 ```
 
 ## Step 2 - install as package in your python environment
+
+{: .warning}
+Python Package Manager issues may be encountered if installing as `root`
 
 Run the following commands:
 
