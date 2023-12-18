@@ -41,7 +41,7 @@ make
 
 ## Troubleshooting
 
-Follow on-screen instructions to repair or install requirements missing from your system
+Follow on-screen instructions to repair or install requirements missing from your system.
 
 ## Next step
 
