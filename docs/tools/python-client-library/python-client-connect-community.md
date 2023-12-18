@@ -46,8 +46,8 @@ Key-values are defined in `featurebase/opt/featurebase.conf`
 | `client = featurebase.client` | Defines featurebase.client and optional flags | Yes | Use `featurebase.client()` to connect to Community instance on same host |
 | hostport | Hostname and port for your FeatureBase instance | Optional | Defaults to `localhost:10101` |
 | cafile | Fully qualified CA certificate file path | Optional |  |
-| capath | Community fully qualified CA certificate folder | Optional |  |
-| origin | CORS (Cross Origin Resource Sharing) value in FeatureBase configuration file  | Optional |  |
+| capath | Fully qualified CA certificate folder | Optional |  |
+| origin | CORS (Cross Origin Resource Sharing) value  | Optional |  |
 
 ## Next step
 
