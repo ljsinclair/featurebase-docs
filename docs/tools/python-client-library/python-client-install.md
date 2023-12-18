@@ -15,8 +15,8 @@ nav_order: 1
 * Install the following if not already on the target system:
   * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"}
   * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
-  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), OR
-  * [Install pip](https://pip.pypa.io/en/stable/installation/)
+  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}, OR
+  * [Install pip](https://pip.pypa.io/en/stable/installation/){:target="_blank"}
 
 ## Step 1 - download the library
 
@@ -25,8 +25,8 @@ nav_order: 1
 
 | Method | Command | Additional information |
 |---|---|---|
-| Git | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [GitHub repository](https://github.com/FeatureBaseDB/python-featurebase) |
-| Pip | `pip install featurebase` | [Pypi repository](https://pypi.org/project/featurebase/) |
+| Git | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [GitHub repository](https://github.com/FeatureBaseDB/python-featurebase){:target="_blank"} |
+| Pip | `pip install featurebase` | [Pypi repository](https://pypi.org/project/featurebase/){:target="_blank"} |
 
 ## Step 2 - install the library
 
