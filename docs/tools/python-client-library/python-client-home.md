@@ -16,8 +16,8 @@ The FeatureBase Python Client Library provides client classes that can:
 
 ## Before you begin
 
-{% include /cloud/cloud-before-begin.md %}, Or
-{% include /com-install/com-install-before-begin.md %}
+* [Learn how to create a FeatureBase Cloud account](/docs/cloud/cloud-signup)
+* [Learn how to install FeatureBase Community](/docs/community/com-home)
 
 ## How do I install FeatureBase Python client library?
 
@@ -25,8 +25,8 @@ The FeatureBase Python Client Library provides client classes that can:
 
 ## How do I connect to my database?
 
-* [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
-* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+* [Learn how to connect to FeatureBase Cloud](/docs/tools/python-client-library/python-client-connect-cloud)
+* [Learn how to connect to FeatureBase Community](/docs/tools/python-client-library/python-client-connect-community)
 
 ## How do I query my database?
 
