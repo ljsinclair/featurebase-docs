@@ -15,9 +15,6 @@ nav_order: 1
 * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"} if required
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"} if required
 
-{: .important}
-Some environments require `python<version>-venv`
-
 ## Step 1 - clone repository
 
 Clone the repository to create the `python-featurebase` directory
