@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 5
 ---
 
-# Python client library examples
+# FeatureBase Python client examples
 
 These examples demonstrate how FeatureBase Python client classes work in practice.
 
