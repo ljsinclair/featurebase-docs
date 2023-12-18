@@ -12,7 +12,8 @@ Use the following client classes to connect to FeatureBase Community.
 
 ## Before you begin
 
-{% include /tools-python/python-db-setup-before-begin.md %}
+* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
+* [Start FeatureBase Community](/docs/community/com-startup-connect)
 
 ## Syntax
 

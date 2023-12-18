@@ -18,9 +18,9 @@ Query results can be returned using the Python `print()` command.
 ## Before you begin
 
 {% include /tools-python/python-db-setup-before-begin.md %}
-* Connect to the database with:
-  * [FeatureBase Cloud connection keywords](/docs/tools/python-client-library/python-client-connect-cloud), OR
-  * [FeatureBase Community connection keywords](/docs/tools/python-client-library/python-client-connect-community)
+* Connect to the database using:
+  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
+  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 {: .note}

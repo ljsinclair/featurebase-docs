@@ -25,6 +25,12 @@ The FeatureBase Python Client Library provides client classes that can:
 
 ## How do I connect to my database?
 
+* Connect to the database using:
+  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
+  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
+
+Connect to FeatureBase Cloud and Community with
+
 * [Learn how to connect to FeatureBase Cloud](/docs/tools/python-client-library/python-client-connect-cloud)
 * [Learn how to connect to FeatureBase Community](/docs/tools/python-client-library/python-client-connect-community)
 
