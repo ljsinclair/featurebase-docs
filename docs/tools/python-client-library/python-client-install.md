@@ -26,7 +26,7 @@ Clone the repository to create the `python-featurebase` directory
 git clone git@github.com:FeatureBaseDB/python-featurebase.git
 ```
 
-## Step 2 - install as package in your python environment
+## Step 2 - install package in your python environment
 
 {: .warning}
 Python Package Manager issues may be encountered if installing as `root`
@@ -40,7 +40,7 @@ make
 
 ## Troubleshooting
 
-Follow on-screen instructions to repair or install requirements missing from your system.
+Run `make` after resolving reported errors
 
 ## Next step
 
