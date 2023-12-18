@@ -6,9 +6,14 @@ grand_parent: Tools
 nav_order: 4
 ---
 
-# How do I connect run queries on my database?
+# How do I run SQL queries on my database?
 
-Query the connected database with individual queries or as a batch that can be run sequentially, or asynchronously.
+SQL queries can be run on your FeatureBase database as:
+* individual commands
+* a sequential batch
+* an asynchronous batch
+
+Query results can be returned using the Python `print()` command.
 
 ## Before you begin
 
@@ -18,6 +23,9 @@ Query the connected database with individual queries or as a batch that can be r
 * Connect to your database
   * [Learn how to connect to FeatureBase Cloud with the Python client](/docs/tools/python-client-library/python-client-connect-cloud), OR
   * [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)
+
+{: .note}
+Escape double-quotes in SQL queries using [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
 
 ## Syntax
 
@@ -40,9 +48,6 @@ print(result.schema)
 print(result.warnings)
 ```
 
-{: .note}
-Use [Python escape characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp) to escape double-quotes within any SQL query
-
 ## Single query keywords
 
 | Keywords | Description | Required | Additional information |
@@ -54,8 +59,8 @@ Use [Python escape characters](https://www.w3schools.com/python/gloss_python_esc
 
 | Keyword | Description | Required | Additional information |
 |---|---|---|---|
-| `sqllist[]` | Start of query list to be called by `querybatch` function | Yes |  |  |
-| `sqllist.append("<sql-query>")` | Structure for individual SQL queries in the list |  | Yes |  |
+| `sqllist[]` | Start of query list to be called by `querybatch` function | Yes |  |
+| `sqllist.append("<sql-query>")` | Structure for individual SQL queries in the list | Yes |  |
 | `result=client.querybatch(sqllist,<run-flag>)` | Call `sqllist[]` list of individual queries and modify execution with optional `<run-flag>` | Yes |  |
 | `asynchronous=True`| Run flag that concurrently runs SQL statements | Optional | Defaults to `false` |
 | `stoponerror=True` | Run flag that stops `sqllist[]` execution if a SQL error occurs. | Optional | Ignored when `asynchronous=True` |
@@ -64,10 +69,10 @@ Use [Python escape characters](https://www.w3schools.com/python/gloss_python_esc
 
 Output flags can be used:
 * to output results with [Python `print()` function](https://realpython.com/python-print/){:target="_blank"}
-* with an `if-then` function
+* in Python `if-then` function
 
 | Keywords | Description |
-|---|---|---|
+|---|---|
 | `result.ok` | Returns True or False depending on query execution status |
 | `result.schema` | Returns schema definition for tables in schema |
 | `result.data` | Data rows returned by the connected database |
