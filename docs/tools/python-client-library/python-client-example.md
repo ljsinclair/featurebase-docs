@@ -26,6 +26,7 @@ This example contains SQL queries to:
 * create a table
 * insert data
 * query the table
+
 Results are output using the Python `PRINT()` function
 
 ```py
