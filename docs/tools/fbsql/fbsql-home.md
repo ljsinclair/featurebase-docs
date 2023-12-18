@@ -32,7 +32,8 @@ The fbsql Command Line Interface tool for Linux and MacOS systems supports:
 
 ## How do I connect to a FeatureBase database?
 
-{% include /python-lib/python-lib-connect-db-links.md %}
+* [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
+* [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
 
 ## How do I run SQL queries?
 

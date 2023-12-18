@@ -18,9 +18,7 @@ Query results can be returned using the Python `print()` command.
 ## Before you begin
 
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
-* Connect to the database using:
-  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
-  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
+{% include /python-lib/python-lib-connect-db-links.md %}
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 {: .note}
@@ -66,9 +64,9 @@ print(result.warnings)
 
 ## Output flags
 
-Output flags can be used:
-* to output results with [Python `print()` function](https://realpython.com/python-print/){:target="_blank"}
-* in Python `if-then` function
+Output flags can:
+* output results using [Python `print()` function](https://realpython.com/python-print/){:target="_blank"}
+* be used with the Python `if-then` function
 
 | Keywords | Description |
 |---|---|

@@ -1,2 +1,3 @@
-* [Connect to a FeatureBase cloud database](/docs/tools/fbsql/fbsql-connect-cloud-db)
-* [Connect to a FeatureBase community database](/docs/tools/fbsql/fbsql-connect-com-db)
+* Connect to the database using:
+  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
+  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
