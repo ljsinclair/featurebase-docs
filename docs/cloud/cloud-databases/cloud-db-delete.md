@@ -15,9 +15,8 @@ Learn how to delete a FeatureBase Cloud database.
 
 ## Warnings
 
-* You must delete database tables **before** deleting a database.
-* Databases cannot be recovered once deleted.
-* Deletion may take some time.
+* Databases, tables and data cannot be recovered once deleted
+* Deletion may take some time
 
 ## Before you begin
 
