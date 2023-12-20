@@ -35,7 +35,7 @@ import featurebase
 
 # FeatureBase Cloud client
 print("Connecting to FeatureBase Cloud...")
-c_client = featurebase.client(
+client = featurebase.client(
 #hostport = "https://query.featurebase.com/v2/",
 database = "<cloud-database-id>",  # Replace with your own database id
 apikey = "<cloud-api-key>")    # Replace with your API key
@@ -91,7 +91,7 @@ import time
 
 # FeatureBase Cloud client
 print("Connecting to FeatureBase Cloud...")
-c_client = featurebase.client(
+client = featurebase.client(
 #hostport = "https://query.featurebase.com/v2/",
 database = "<cloud-database-id>",  # Replace with your own database id
 apikey = "<cloud-api-key>")    # Replace with your API key

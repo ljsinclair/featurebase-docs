@@ -24,7 +24,7 @@ Use the following client classes to connect to FeatureBase Cloud.
 import featurebase
 
 # Connect to FeatureBase cloud
-c_client = featurebase.client(
+client = featurebase.client(
   hostport = "query.featurebase.com/v2",
   database = "<database-id>",
   apikey = "<api-key-secret>",
@@ -40,7 +40,7 @@ c_client = featurebase.client(
 
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
-| `c_client = featurebase.client` | Indicates the connection is to FeatureBase Cloud | Yes |  |
+| `client = featurebase.client` | Defines featurebase.client and optional flags | Yes |  |
 | `hostport = "query.featurebase.com/v2"` | Default Cloud query endpoint, found in Database details page | Yes |  |
 | database | FeatureBase Cloud database ID found in Database details page | Yes | [Obtain database ID from Database details](/docs/cloud/cloud-databases/cloud-db-details) |
 | apikey | Cloud API key secret key | Yes | [Create a Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
