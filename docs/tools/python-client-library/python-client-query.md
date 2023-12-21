@@ -50,7 +50,7 @@ results = client.querybatch(sqllist, <run-flag>)
 
 | Keywords | Description | Required | Additional information |
 |---|---|---|---|
-| `result=client.query(sql="<sql-query>")` | Run a single SQL query against the connected database | Yes | Use `c_client` for Cloud queries |
+| `result=client.query(sql="<sql-query>")` | Run a single SQL query against the connected database | Yes |  |
 | `<sql-query>` | Double-quoted SQL query | Yes | [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home) |
 
 ## Batched query keywords

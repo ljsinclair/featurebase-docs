@@ -47,11 +47,11 @@ apikey = "<cloud-api-key>")    # Replace with your API key
 
 # DROP demo table
 print ("Dropping table if it exists")
-result=c_client.query(sql="DROP TABLE python-demo") # Remove `_c` prefix to run against Community
+result=client.query(sql="DROP TABLE python-demo") # Remove `_c` prefix to run against Community
 
 # CREATE demo table
 print ("Single CREATE TABLE python-demo statement")
-result=c_client.query(sql="CREATE TABLE python-demo(_id ID, intcol INT, stringcol STRING, idsetcol IDSET)")
+result=client.query(sql="CREATE TABLE python-demo(_id ID, intcol INT, stringcol STRING, idsetcol IDSET)")
 
 # Run SQL statements in sequence and stop on error
 print ("Array of INSERT INTO python-demo statements")
