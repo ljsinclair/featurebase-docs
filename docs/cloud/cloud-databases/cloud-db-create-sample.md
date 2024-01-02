@@ -32,7 +32,7 @@ You can create the database in two ways.
 ### Method two - provision the database with a custom name
 
 {% include /cloud-db/cloud-db-new-name.md %}
-{% include /cloud-db/cloud-db-load-sample.md %}
+* Choose **start with pre-loaded sample data**.
 {% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step

@@ -19,7 +19,9 @@ There are three ways to provision a database with a custom configuration in Feat
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
-{% include /cloud-db/cloud-standard-naming-db.md %}
+
+{: .note}
+FeatureBase Cloud database names can be up to 300 characters in length
 
 ## How do I provision a database with a custom configuration?
 
@@ -35,7 +37,17 @@ There are three methods to provision a custom configured database.
 
 Choose from the **Memory** drop-down:
 
-{% include /cloud-db/cloud-db-total-shapes.md %}
+| Shape (GB) | Memory (GB) | Volume (GB) | Compute (vCPU) |
+|---|---|---|---|
+| 8 | 4 | 8 | 3 |
+| 16 | 8 | 16 | 6 |
+| 32 | 32 | 100 | 12 |
+| 64 | 64 | 300 | 24 |
+| 128 | 128 | 500 | 48 |
+| 256 | 256 | 1200 | 96 |
+| 512 | 512 | 2500 | 192 |
+| 1024 | 1024 | 5000 | 320 |
+| 2048 | 2048 | 10000 | 576 |
 
 {% include /cloud-db/cloud-db-click-create.md %}
 
