@@ -23,15 +23,30 @@ The FeatureBase Community UI does not currently support Apple Safari. Install Mo
 
 ## Start the FeatureBase Community server
 
-{% include /com-install/com-install-startup-fb.md %}
+* Open a terminal and CD to `*/featurebase/opt`.
+* Run the following command:
+
+```
+./featurebase server
+```
+
 
 ## Confirm FeatureBase server is running
 
-{% include /com-install/com-install-verify-fb-server.md %}
+* Run this command to verify FeatureBase is running on the system.
+
+```
+curl localhost:10101
+```
 
 ## How do I connect to FeatureBase community?
 
-{% include /com-install/com-install-connect-fb-server.md %}
+FeatureBase Community is available by default at:
+
+```
+http://localhost:10101/
+```
+
 
 ## Troubleshooting
 

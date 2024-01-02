@@ -81,7 +81,14 @@ sudo systemctl status featurebase
 
 ## Step 6 - connect to FeatureBase server
 
-{% include /com-install/com-install-default-fb-ip.md %}
+{: .note}
+You can change this IP address in `*/featurebase/opt/featurebase.conf`
+
+FeatureBase Community is available by default at:
+
+```
+http://localhost:10101/
+```
 
 ## Next step
 
