@@ -9,6 +9,8 @@ nav_order: 3
 # How do I add a column to an existing table in FeatureBase Cloud?
 {: .no_toc }
 
+Add a column to an existing table and change constraints if required.
+
 {% include page-toc.md %}
 
 ## Before you begin
@@ -23,17 +25,22 @@ nav_order: 3
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
+{: .note }
+Column names cannot be edited once created.
+
 ## Add a column to a table
 
-{: .note }
-Table columns cannot be edited once created.
+{: .note}
+Default constraint values are used if they are not entered.
+
 * Click **Databases** > database name > **Tables** > table name.
 * Click **Columns** > **Add column**.
 * Enter a name for the column
-* Choose the data type and enter values for the constraints if available.
+* Choose the data type and constraint values if required.
 * Click **Add column**
 
 ## Further information
 
-* [Create table column API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTableColumn)
 * [Learn how to delete a table column](/docs/cloud/cloud-tables/cloud-table-delete-column)
+* [`ALTER TABLE` statement](/docs/sql-guide/statements/statement-table-alter)
+* [Create table column API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTableColumn)
