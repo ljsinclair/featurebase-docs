@@ -48,7 +48,10 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 ## Cloud database backups
 
-{% include /cloud-db/cloud-db-backup.md %}
+FeatureBase automatically backs-up your databases every 24 hours.
+
+{: .note}
+[Contact FeatureBase Support on Discord](https://discord.com/invite/bSBYjDbUUb){:target="_blank"} to ask questions or to get help restoring a backup.
 
 {% include /cloud-db/cloud-db-drop-methods.md %}
 
