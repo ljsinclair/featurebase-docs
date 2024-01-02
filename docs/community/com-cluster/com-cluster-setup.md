@@ -58,7 +58,12 @@ log-path = "<log-directory>"
   interval = "<integer><time-unit>..."
 ```
 
-{% include /com-config/com-config-param-advertise.md %}
+### Advertise parameters
+
+| Flag | Data type | Description | Default | Additional information |
+|---|---|---|---|---|---|
+| `advertise` | String | FeatureBase host/IP and port to advertise to:<br/>* other nodes in a cluster<br/>* clients via `/staus` endpoint | `localhost:10101` | Host defaults to the network `bind` IP address |
+| `advertise-grpc` | String | GRPC equivalent of `advertise` | `localhost:20101` |  |
 
 ### Node parameters
 
@@ -66,11 +71,25 @@ log-path = "<log-directory>"
 |---|---|---|---|---|
 | `<node-name>` | String | Unique name for the node used internally by `etcd` | `featurebase1` | Can match `[cluster] name` for parent node. |
 
-{% include /com-config/com-config-param-bind.md %}
+### Bind parameters
 
-{% include /com-config/com-config-param-data.md %}
+| Flag | Data type | Description | Default | Additional information |
+|---|---|---|---|---|---|
+| `bind` | String | Listen for HTTP request on all IPv4 addresses on the local machine at port 10101 | `localhost:10101` | [Bind additional](#bind-additional) |
+| `bind-grpc` | String | Listen for gRPC requests on all IPv4 addresses on the local machine at port 20101 | `0.0.0.0:20101` | [Bind additional](#bind-additional) |
 
-{% include /com-config/com-config-param-log.md %}
+### Data parameters
+
+| Flag | Data type | Description | Default |
+|---|---|---|---|
+| `data-dir` | String | Directory to store FeatureBase data files | `/var/lib/featurebase` |
+
+### Log parameters
+
+| Flag | Data type | Description | Default |
+|---|---|---|---|
+| `log-path` | String | Path to store FeatureBase logs | `/var/log/molecula/featurebase.log` |
+
 
 ### `[cluster]` parameters
 
@@ -99,9 +118,16 @@ log-path = "<log-directory>"
 
 ## Additional information
 
-{% include /com-config/com-config-advertise-extra.md %}
+### `advertise` and `advertise-grpc` additional
 
-{% include /com-config/com-config-bind-extra.md %}
+FeatureBase will automatically determine the most likely IP address for `advertise` and/or `advertise-grpc` where:
+* `advertise` and/or `advertise-grpc` are not defined
+* `bind = 0.0.0.0`
+
+### `bind` additional
+
+* On first install, `featurebase.conf` hostname/IP values default to the `bind` parameter.
+* FeatureBase will listen on all available interfaces when one or both `bind` parameters are set to `0.0.0.0`
 
 ### [Cluster] `replicas`
 

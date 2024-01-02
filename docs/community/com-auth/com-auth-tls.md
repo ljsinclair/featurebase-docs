@@ -24,7 +24,8 @@ Secure your FeatureBase server with TLS authentication.
 
 Add authentication parameters to the `/featurebase/opt/featurebase.conf` TOML file.
 
-{% include /com-config/com-config-old-fb-conf.md %}
+{: .note}
+Earlier versions of FeatureBase saved the `/featurebase.conf` file in the Operating System `/etc` folder.
 
 ## Authentication syntax
 

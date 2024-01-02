@@ -1,8 +1,4 @@
-### Default FeatureBase ports
-
-Default ports can be:
-* used with CLI commands
-* added to the [FeatureBase configuration file](/docs/community/com-config/com-config-home#where-are-configuration-files-found)
+<!-- Keep this in case useful for Cloud too -->
 
 | Port | Used for | Example |
 |---|---|---|---|
