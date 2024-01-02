@@ -9,7 +9,7 @@ nav_order: 3
 # How do I add a column to an existing table in FeatureBase Cloud?
 {: .no_toc }
 
-Add a column to an existing table and change constraints if required.
+Add a column to an existing table and set constraints if required.
 
 {% include page-toc.md %}
 
@@ -31,7 +31,7 @@ Column names cannot be edited once created.
 ## Add a column to a table
 
 {: .note}
-Default constraint values are used if they are not entered.
+Constraint defaults are set automatically if values are not set.
 
 * Click **Databases** > database name > **Tables** > table name.
 * Click **Columns** > **Add column**.
