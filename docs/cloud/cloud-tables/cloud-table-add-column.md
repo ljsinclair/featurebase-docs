@@ -16,11 +16,7 @@ nav_order: 3
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
-* * Click **Databases** > database name > **Tables** to view tables.
-
-## Column data types and constraints
-
-{% include /cloud/cloud-data-type-table.md %}
+* [Learn about FeatureBase data types and constraints](/docs/sql-guide/data-types/data-types-home)
 
 ## Naming standard
 
@@ -31,8 +27,7 @@ nav_order: 3
 
 {: .note }
 Table columns cannot be edited once created.
-
-* Click the table name.
+* Click **Databases** > database name > **Tables** > table name.
 * Click **Columns** > **Add column**.
 * Enter a name for the column
 * Choose the data type and enter values for the constraints if available.
