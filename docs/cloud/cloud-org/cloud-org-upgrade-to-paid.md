@@ -20,7 +20,8 @@ nav_order: 4
 
 ## Important payment information
 
-{% include /cloud-org/cloud-payment-details.md %}
+* FeatureBase supports all major credit cards
+* Only US bank accounts are accepted at this time
 
 ## Add payment information for my organization
 
