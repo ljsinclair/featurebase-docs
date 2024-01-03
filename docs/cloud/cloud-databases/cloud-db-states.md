@@ -9,7 +9,7 @@ nav_order: 10
 # What states can my Database have?
 {: .no_toc }
 
-Database states are listed in the Database description page and can be obtained by querying system tables.
+FeatureBase databases can have different states depending on a number of conditions.
 
 {% include page-toc.md %}
 
@@ -26,7 +26,7 @@ You can query the database state in the following ways:
 * [Query database state using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getDatabase){:target="_blank"}
 * [Query database state in the GUI](/docs/cloud/cloud-databases/cloud-db-details)
 
-## CREATE DATABASE states
+## Post-creation states
 
 | Database Status | Definition | Available for use? |
 |---|---|---|
@@ -42,9 +42,7 @@ You can query the database state in the following ways:
 | BACKUP | Creating a backup of the database | Yes |
 | RESTORING | Restoring data from a backup | No |
 
-### DELETE DATABASE states
-
-The database state passes through the following states after being deleted:
+### Post-delete states
 
 | Database Status | Definition |
 |---|---|
@@ -55,7 +53,7 @@ The database state passes through the following states after being deleted:
 ### Error states
 
 {: .note}
-[Contact support on Discord for help with these errors](https://discord.com/invite/bSBYjDbUUb){:target="_blank"}
+[Contact FeatureBase Support on Discord for help](https://discord.com/invite/bSBYjDbUUb){:target="_blank"}
 
 The database is unavailable when it has the following states:
 
