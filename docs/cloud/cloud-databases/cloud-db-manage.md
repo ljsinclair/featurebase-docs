@@ -25,7 +25,7 @@ has_toc: false
 
 {% include /cloud-db/cloud-db-shape-pricing.md %}
 
-{% include /cloud-db/cloud-db-shape-create.md %}
+{% include /cloud-db/cloud-db-shape-create.html %}
 
 ## How do I learn more about my database?
 
@@ -36,9 +36,6 @@ has_toc: false
 ## Cloud database backups
 
 {% include /cloud-db/cloud-db-backup.md %}
-
-{% include /cloud-db/cloud-db-drop-methods.md %}
-
 
 {% include /cloud-db/cloud-db-drop-methods.md %}
 
