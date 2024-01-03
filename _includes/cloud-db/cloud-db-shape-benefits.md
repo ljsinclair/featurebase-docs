@@ -1,8 +1,9 @@
-## What are the benefits of a shaped database?
+## What are the benefits and limitations of shaped databases?
 
-Shaped databases have the following benefits:
-* customisable to your needs and to ensure best performance
-* nodes are replicated data to ensure availability of your data
+| Benefits | Limitations |
+|---|---|
+| customisable to your needs and to ensure best performance | Cannot be altered once created |
+| Nodes are replicated data to ensure availability of your data |  |
 
 ### Customisable resources
 
