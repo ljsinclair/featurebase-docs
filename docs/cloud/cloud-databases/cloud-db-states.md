@@ -23,9 +23,8 @@ Database states are listed in the Database description page and can be obtained 
 
 You can query the database state in the following ways:
 
-* [Query database state in the UI](/docs/cloud/cloud-databases/cloud-db-details)
 * [Query database state using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getDatabase){:target="_blank"}
-* [Query database state using SQL]
+* [Query database state in the GUI](/docs/cloud/cloud-databases/cloud-db-details)
 
 ## CREATE DATABASE states
 

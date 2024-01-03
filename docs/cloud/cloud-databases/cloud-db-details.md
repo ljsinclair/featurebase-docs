@@ -25,9 +25,6 @@ Additionally, a disk utilization graph is available on the **Home** page which l
 
 * Click **Databases** > `your-database-name` to open the summary page.
 
-{: .note}
-You can query [`fb_database_info` and `fb_database_nodes` system tables](/docs/sql-guide/system-tables/system-tables-home) to get these details.
-
 ## Detail view
 
 | Detail | Description | Additional information |

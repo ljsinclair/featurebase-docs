@@ -50,4 +50,4 @@ In most cases, the solution is to simply wait. Here's a more detailed breakdown:
 
 ## Further information
 
-* [Learn more about the database statuses](/docs/cloud/cloud-databases/cloud-db-states)
+* [Learn about the FeatureBase database status](/docs/cloud/cloud-databases/cloud-db-states)
