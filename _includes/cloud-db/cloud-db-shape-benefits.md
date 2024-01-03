@@ -2,8 +2,8 @@
 
 | Benefits | Limitations |
 |---|---|
-| customisable to your needs and to ensure best performance | Cannot be altered once created |
-| Nodes are replicated data to ensure availability of your data |  |
+| Bundled resources to ensure best performance | Resources cannot be changed once database is created. |
+| Nodes are replicated data to ensure availability of your data | Migrate data to new database if shape does not meet your needs |
 
 ### Customisable resources
 
