@@ -7,17 +7,10 @@ nav_order: 6
 has_toc: false
 ---
 
-# How do I manage databases in FeatureBase Cloud?
+# How do I create a database with predictable pricing?
 {: .no_toc }
 
-When you login to FeatureBase for the first time, or have deleted all databases, you're offered three choices for a first database:
-
-* **Start with a small database** which is suitable for small projects or testing
-* **Create a sample database** containing terabytes of data you can use to evaluate FeatureBase at scale
-* **Create a custom database** that meets your specific needs
-
-{: .note}
-You can also [create a database using the Cloud API](#create-database-using-the-cloud-api).
+{% include /cloud-db/cloud-db-shaped-summary.md %}
 
 {% include page-toc.md %}
 
@@ -25,26 +18,27 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
 
-## Start with a small database
+{% include /cloud-db/cloud-db-shape-benefits.md %}
 
-{% include /cloud-db/cloud-small-db-summary.md %}
+{% include /cloud-db/cloud-db-shape-limits.md %}
 
-* [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-small)
+{% include /cloud-db/cloud-db-shape-pricing.md %}
 
-## Create a sample database
-
-{% include /cloud-db/cloud-sample-db-summary.md %}
-
-* [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
-
-## Create a custom database
-
-[Learn how to create a database with pre-selected, fixed resources](/docs/cloud/cloud-databases/cloud-db-shaped)
+{% include /cloud-db/cloud-db-shape-create.md %}
 
 ## How do I learn more about my database?
 
 * [Database details](/docs/cloud/cloud-databases/cloud-db-details)
+* [Database states](/docs/cloud/cloud-databases/cloud-db-states)
 * [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)
+
+{% include /cloud-db/cloud-db-drop-methods.md %}
+
+
+
+
+
+
 
 ## Cloud database backups
 

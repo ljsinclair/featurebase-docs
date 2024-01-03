@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 4
 ---
 
-# How do I setup a database with predictable pricing?
+# TO BE DELETEDHow do I create a database with predictable pricing?
 
 {% include /cloud-db/cloud-db-shaped-summary.md %}
 
@@ -29,5 +29,11 @@ nav_order: 4
 A shaped database cannot be altered, only recreated.
 
 * [Learn how to recreate your tables and migrate data to a new database](/docs/cloud/cloud-db-shaped-alter)-->
+
+## How do I learn more about my database?
+
+* [Database details](/docs/cloud/cloud-databases/cloud-db-details)
+* [Database states](/docs/cloud/cloud-databases/cloud-db-states)
+* [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)
 
 {% include /cloud-db/cloud-db-drop-methods.md %}
