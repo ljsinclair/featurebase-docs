@@ -17,7 +17,6 @@ FeatureBase databases can have different states depending on a number of conditi
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Learn about shaped databases](/docs/cloud/cloud-databases/cloud-db-shaped)
 
 ## How do I query my database state?
 

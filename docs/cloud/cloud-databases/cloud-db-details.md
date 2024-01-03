@@ -31,7 +31,7 @@ Additionally, a disk utilization graph is available on the **Home** page which l
 |---|---|---|
 | Database ID | Unique identifier for the database required for API and FBSQL connections that do not require user credentials | * [Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"}<br/>* [FBSQL tool](/docs/tools/fbsql/fbsql-home) |
 | Status | Cloud database states include Provisioning and Running. | [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states) |
-| Memory | Current available memory based on your choice of shaped database | [Learn about shaped databases](/docs/cloud/cloud-databases/cloud-db-shaped) |
+| Memory | Current available memory based on your choice of database shape | [Learn about shaped databases](/docs/cloud/cloud-databases/cloud-db-manage) |
 | Owner | User name of account that created the database | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
 | Version | Database version as represented by `<current-featurebase-version>-<commit-hash>` | [Issues with Database version](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown/) |
 | Created | Time and date since database creation with user name of creator |  |
