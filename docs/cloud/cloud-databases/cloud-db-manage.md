@@ -16,6 +16,7 @@ has_toc: false
 
 ## Before you begin
 {: .no_toc }
+
 {% include /cloud/cloud-before-begin.md %}
 
 {% include /cloud-db/cloud-db-shape-benefits.md %}
@@ -32,17 +33,12 @@ has_toc: false
 * [Database states](/docs/cloud/cloud-databases/cloud-db-states)
 * [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)
 
-{% include /cloud-db/cloud-db-drop-methods.md %}
-
-
-
-
-
-
-
 ## Cloud database backups
 
 {% include /cloud-db/cloud-db-backup.md %}
+
+{% include /cloud-db/cloud-db-drop-methods.md %}
+
 
 {% include /cloud-db/cloud-db-drop-methods.md %}
 

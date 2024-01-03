@@ -12,7 +12,7 @@
       Availability
     </th>
     <th>
-      Addititional information
+      Additional information
     </th>
   <tr>
   <tr>
@@ -25,11 +25,10 @@
     <td>
       <ul>
         <li>**Home** page when no other databases exist</li>
-        <li>**Databases** page
       </ul>
     </td>
     <td>
-      [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-small)
+      <a href="/docs/cloud/cloud-databases/cloud-db-create-small">Learn how to create a small database</a>
     </td>
   </tr>
   <tr>
@@ -42,11 +41,10 @@
     <td>
       <ul>
         <li>**Home** page when no other databases exist</li>
-        <li>**Databases** page
       </ul>
     </td>
     <td>
-      [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
+      <a href="/docs/cloud/cloud-databases/cloud-db-create-sample">Learn how to create a sample database</a>
     </td>
   </tr>
   <tr>
@@ -63,7 +61,7 @@
       </ul>
     </td>
     <td>
-      [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
+      <a href="/docs/cloud/cloud-databases/cloud-db-create-custom">Learn how to create a custom database</a>
     </td>
   <tr>
 </table>
