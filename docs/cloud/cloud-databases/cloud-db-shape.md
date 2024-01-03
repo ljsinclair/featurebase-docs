@@ -23,7 +23,7 @@ nav_exclude: true
 
 {% include /cloud-db/cloud-db-shape-pricing.md %}
 
-{% include /cloud-db/cloud-db-shape-create.md %}
+{% include /cloud-db/cloud-db-shape-create.html %}
 
 ## Further information
 

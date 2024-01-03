@@ -21,7 +21,7 @@ nav_order: 4
 
 {% include /cloud-db/cloud-db-shape-pricing.md %}
 
-{% include /cloud-db/cloud-db-shape-create.md %}
+{% include /cloud-db/cloud-db-shape-create.html %}
 
 <!-- removed as of 2023-10-18 because this content is not yet ready
 ## How do I alter a shaped database?
