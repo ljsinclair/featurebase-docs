@@ -1,9 +1,9 @@
 ## What are the benefits and limitations of shaped databases?
 
-| Benefits | Limitations |
-|---|---|
-| Bundled resources to ensure best performance | Resources cannot be changed once database is created. |
-| Nodes are replicated data to ensure availability of your data | Migrate data to new database if shape does not meet your needs |
+|  | Benefits | Limitations |
+|---|---|---|
+| Resources | Bundled resources to ensure best performance | Resources cannot be changed once database is created. |
+| Data | Nodes are replicated data to ensure availability of your data | Migrate data to new database if shape does not meet your needs |
 
 ### Customisable resources
 
