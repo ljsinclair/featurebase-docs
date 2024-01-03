@@ -1,6 +1,3 @@
-A Shaped database provides a number of benefits, the most important of which is predictable pricing.
-
-Database shapes define:
-* How much memory is available
-* how much disk space is available
-* how many vCPUs) are available
+FeatureBase databases can be created:
+* in a specific region, and
+* with an appropriate pre-packaged combination of memory, disk and virtual CPU resources.
