@@ -25,8 +25,9 @@ There are three ways to provision a database with a custom configuration in Feat
 
 There are three methods to provision a custom configured database.
 
-### Method one - provision database from the homepage
-
+| Method | Steps |
+|---|---|
+| Homepage
 {% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
 
 ### Method two - provision database via the Databases page
