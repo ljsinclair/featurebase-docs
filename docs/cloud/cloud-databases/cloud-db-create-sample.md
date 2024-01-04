@@ -23,15 +23,7 @@ Provisioning a sample database takes approximately 10 minutes
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
-## Provision a billion record database
-
-You can create the database in two ways.
-
-### Method one - provision the database with an auto-generated name
-
-{% include /cloud/homepage-db-create-options.md %} under **Start with a billion records**
-
-### Method two - provision the database with a custom name
+## How do I provision a sample database?
 
 {% include /cloud-db/cloud-db-new-name.md %}
 {% include /cloud-db/cloud-db-load-sample.md %}
