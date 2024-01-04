@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 11
 ---
 
-# What states can my Database have?
+# What states can my Cloud database have?
 {: .no_toc }
 
 FeatureBase databases can have different states depending on a number of conditions.
