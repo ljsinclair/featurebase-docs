@@ -14,8 +14,6 @@ nav_order: 2
 {: .note}
 Provisioning a sample database takes approximately 10 minutes.
 
-{% include page-toc.md %}
-
 ## Before you begin
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}

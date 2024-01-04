@@ -13,8 +13,10 @@ nav_order: 3
 
 {% include /cloud-db/cloud-db-create-api.md %}
 
-## Before you begin
+{% include page-toc.md %}
 
+## Before you begin
+{: .no_toc }
 * [Check pricing information on FeatureBase.com](https://www.featurebase.com/pricing)
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
