@@ -9,7 +9,10 @@ nav_order: 3
 # How do I create a custom database?
 {: .no_toc }
 
-There are three ways to provision a database with a custom configuration in FeatureBase Cloud.
+{% include /cloud-db/cloud-db-custom-summary.md %}
+
+{: .note}
+You can also [create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
 ## Before you begin
 
@@ -21,28 +24,18 @@ There are three ways to provision a database with a custom configuration in Feat
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## How do I provision a database with a custom configuration?
-
-There are three methods to provision a custom configured database.
-
-| Method | Steps |
-|---|---|
-| Homepage
-{% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
-
-### Method two - provision database via the Databases page
-
-{% include /cloud-db/cloud-db-new-name.md %}
-
-Choose from the **Memory** drop-down:
+## Provisioning memory, RAM and virtual CPU
 
 {% include /cloud-db/cloud-db-total-shapes.md %}
 
-{% include /cloud-db/cloud-db-click-create.md %}
+## Create a database
 
-## Method 3 - provision the database using Cloud API
-
-* [Create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
+* Click **Databases** > **New database**.
+* Name the database according to the naming standards.
+* Click **Start with a clean database**.
+* Choose the Vendor
+* Choose a shape suitable for your data
+* Click **CREATE DATABASE**
 
 ## Next step
 
