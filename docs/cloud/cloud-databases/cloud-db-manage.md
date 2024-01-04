@@ -40,9 +40,6 @@ has_toc: false
       Description
     </th>
     <th>
-      Availability
-    </th>
-    <th>
       Additional information
     </th>
   </tr>
@@ -52,11 +49,6 @@ has_toc: false
     </td>
     <td>
       {% include /cloud-db/cloud-small-db-summary.md %}
-    </td>
-    <td>
-      <ul>
-        <li><strong>Home</strong> page when no other databases exist</li>
-      </ul>
     </td>
     <td>
       <a href="/docs/cloud/cloud-databases/cloud-db-create-small">Learn how to create a small database</a>
@@ -70,11 +62,6 @@ has_toc: false
       {% include /cloud-db/cloud-sample-db-summary.md %}
     </td>
     <td>
-      <ul>
-        <li><strong>Home</strong> page when no other databases exist</li>
-      </ul>
-    </td>
-    <td>
       <a href="/docs/cloud/cloud-databases/cloud-db-create-sample">Learn how to create a sample database</a>
     </td>
   </tr>
@@ -84,12 +71,6 @@ has_toc: false
     </td>
     <td>
       {% include /cloud-db/cloud-db-custom-summary.md %}
-    </td>
-    <td>
-      <ul>
-        <li><strong>Home</strong> page when no other databases exist</li>
-        <li><strong>Databases</strong> page</li>
-      </ul>
     </td>
     <td>
       <a href="/docs/cloud/cloud-databases/cloud-db-create-custom">Learn how to create a custom database</a>
