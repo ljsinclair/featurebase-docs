@@ -10,7 +10,7 @@ has_toc: false
 # How do I manage FeatureBase Cloud databases?
 {: .no_toc }
 
-{% include /cloud-db/cloud-db-shaped-summary.md %}
+{% include /cloud-db/cloud-db-shaped-summary.html %}
 
 {% include page-toc.md %}
 
@@ -70,7 +70,7 @@ has_toc: false
       Custom
     </td>
     <td>
-      {% include /cloud-db/cloud-db-shaped-summary.md %}
+      {% include /cloud-db/cloud-db-shaped-summary.html %}
     </td>
     <td>
       <a href="/docs/cloud/cloud-databases/cloud-db-create-custom">Learn how to create a custom database</a>

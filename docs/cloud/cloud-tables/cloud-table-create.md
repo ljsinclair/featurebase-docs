@@ -27,7 +27,6 @@ You can also create a table using a [SQL CREATE TABLE statement](/docs/sql-guide
 
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
-{% include /common/common-db-name-limit.md %}
 
 ## Step 1: create table
 

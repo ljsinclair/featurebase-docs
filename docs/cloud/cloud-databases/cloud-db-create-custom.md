@@ -9,7 +9,7 @@ nav_order: 3
 # How do I create a custom database?
 {: .no_toc }
 
-{% include /cloud-db/cloud-db-shaped-summary.md %}
+{% include /cloud-db/cloud-db-shaped-summary.html %}
 
 {: .note}
 You can also [create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
