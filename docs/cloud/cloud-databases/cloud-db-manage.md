@@ -12,6 +12,8 @@ has_toc: false
 
 {% include /cloud-db/cloud-db-shaped-summary.html %}
 
+{% include /cloud-db/cloud-db-create-api.md %}
+
 {% include page-toc.md %}
 
 ## Before you begin

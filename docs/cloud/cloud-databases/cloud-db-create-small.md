@@ -11,6 +11,8 @@ nav_order: 1
 
 {% include /cloud-db/cloud-small-db-summary.md %}
 
+{% include /cloud-db/cloud-db-create-api.md %}
+
 ## Before you begin
 {: .no_toc}
 {% include /cloud/cloud-before-begin.md %}

@@ -11,8 +11,7 @@ nav_order: 3
 
 {% include /cloud-db/cloud-db-shaped-summary.html %}
 
-{: .note}
-You can also [create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
+{% include /cloud-db/cloud-db-create-api.md %}
 
 ## Before you begin
 

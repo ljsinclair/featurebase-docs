@@ -3,7 +3,7 @@ title: Cloud database states
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 10
+nav_order: 11
 ---
 
 # What states can my Database have?
