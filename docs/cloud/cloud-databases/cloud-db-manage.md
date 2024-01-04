@@ -24,7 +24,7 @@ has_toc: false
 
 |  | Benefits | Limitations |
 |---|---|---|
-| Resources | Bundled resources to ensure best performance | Resources cannot be changed once database is created. |
+| Resources | Bundled resources to ensure best performance, [priced by the hour](https://www.featurebase.com/pricing){:target="_blank"} | Resources cannot be changed once database is created. |
 | Data | Nodes are replicated data to ensure availability of your data | Migrate data to new database if resources do not meet your needs |
 
 ## How do I create a Cloud database?
