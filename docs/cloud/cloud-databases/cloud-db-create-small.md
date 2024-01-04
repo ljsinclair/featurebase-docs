@@ -11,20 +11,22 @@ nav_order: 1
 
 {% include /cloud-db/cloud-small-db-summary.md %}
 
-{% include /cloud-db/cloud-db-custom-note.md %}
-
 ## Before you begin
 {: .no_toc}
 {% include /cloud/cloud-before-begin.md %}
 
-## Method one - provision the database with an auto-generated name
+## How do I provision a small database?
 
-{% include /cloud/homepage-db-create-options.md %} under **Start with a small database**
-
-## Method two -- provision a small database with a custom name and size
-
-* [Create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
+{% include /cloud-db/cloud-db-new-name.md %}
+* Click **Start with a clean database**.
+* Choose the Vendor.
+* Choose 8GB shape.
+{% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
 
 * [Manage and create tables](/docs/cloud/cloud-tables/cloud-table-manage)
+
+## Further information
+
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db/cloud-db-create-custom)

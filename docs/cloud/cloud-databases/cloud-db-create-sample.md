@@ -14,8 +14,6 @@ nav_order: 2
 {: .note}
 Provisioning a sample database takes approximately 10 minutes
 
-{% include /cloud-db/cloud-db-custom-note.md %}
-
 {% include page-toc.md %}
 
 ## Before you begin
@@ -32,3 +30,7 @@ Provisioning a sample database takes approximately 10 minutes
 ## Next step
 
 * [Query sample data](/docs/cloud/cloud-query/cloud-query-home)
+
+## Further information
+
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db/cloud-db-create-custom)
