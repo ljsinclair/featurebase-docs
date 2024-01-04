@@ -11,19 +11,12 @@ nav_order: 3
 
 {% include /cloud-db/cloud-db-custom-summary.md %}
 
-You can choose from different bundles of database resources between the following minimum and maximum values:
-
-| Resource | Minimum | Maximum |
-|---|---|
-| Memory | 32GB | 2TB |
-| Disk storage | 100GB | 2TB |
-| Virtual CPU | 12 | 576 |
-
 {: .note}
 You can also [create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
 ## Before you begin
 
+* [Check pricing information on FeatureBase.com](https://www.featurebase.com/pricing)
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
@@ -32,9 +25,15 @@ You can also [create a database using Cloud API](https://api-docs-featurebase-cl
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## Provisioning memory, RAM and virtual CPU
+## Provisioning memory, RAM and virtual CPU for production systems
 
-{% include /cloud-db/cloud-db-total-shapes.md %}
+Choose bundled resources for your production system between the following values:
+
+| Resource | Minimum | Maximum |
+|---|---|
+| Memory | 32GB | 2TB |
+| Disk storage | 100GB | 2TB |
+| Virtual CPU | 12 | 576 |
 
 ## Create a database
 
