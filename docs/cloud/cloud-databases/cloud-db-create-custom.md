@@ -9,7 +9,7 @@ nav_order: 3
 # How do I create a custom database?
 {: .no_toc }
 
-{% include /cloud-db/cloud-db-custom-summary.md %}
+{% include /cloud-db/cloud-db-shaped-summary.md %}
 
 {: .note}
 You can also [create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
@@ -23,7 +23,7 @@ You can also [create a database using Cloud API](https://api-docs-featurebase-cl
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
-{% include /cloud-db/cloud-standard-naming-db.md %}
+* database names can be up to 300 characters in length
 
 ## Provisioning memory, RAM and virtual CPU for production systems
 

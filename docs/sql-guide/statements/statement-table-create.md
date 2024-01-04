@@ -51,6 +51,7 @@ CREATE TABLE
 
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /common/common-db-name-limit.md %}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
 ### `_id` column

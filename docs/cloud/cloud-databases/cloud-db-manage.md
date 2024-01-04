@@ -70,7 +70,7 @@ has_toc: false
       Custom
     </td>
     <td>
-      {% include /cloud-db/cloud-db-custom-summary.md %}
+      {% include /cloud-db/cloud-db-shaped-summary.md %}
     </td>
     <td>
       <a href="/docs/cloud/cloud-databases/cloud-db-create-custom">Learn how to create a custom database</a>
@@ -88,7 +88,11 @@ has_toc: false
 
 {% include /cloud-db/cloud-db-backup.md %}
 
-{% include /cloud-db/cloud-db-drop-methods.md %}
+## How do I drop my database?
+
+There are two ways to drop (delete) FeatureBase Cloud databases:
+* [Delete database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deleteDatabase){:target="_blank"}
+* [Delete database using Cloud GUI](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Next step
 
