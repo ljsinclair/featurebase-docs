@@ -7,7 +7,7 @@ nav_order: 6
 has_toc: false
 ---
 
-# How do I create a database with predictable pricing?
+# How do I manage FeatureBase Cloud databases?
 {: .no_toc }
 
 {% include /cloud-db/cloud-db-shaped-summary.md %}
@@ -20,27 +20,14 @@ has_toc: false
 {% include /cloud/cloud-before-begin.md %}
 * [FeatureBase database pricing](https://www.featurebase.com/pricing){:target="_blank"}
 
-## What are the benefits and limitations of shaped databases?
+## What are the benefits and limitations of Cloud databases?
 
 |  | Benefits | Limitations |
 |---|---|---|
 | Resources | Bundled resources to ensure best performance | Resources cannot be changed once database is created. |
-| Data | Nodes are replicated data to ensure availability of your data | Migrate data to new database if shape does not meet your needs |
+| Data | Nodes are replicated data to ensure availability of your data | Migrate data to new database if resources do not meet your needs |
 
-### Customisable resources
-
-Database resources are bundled to ensure best performance:
-
-| Resource | Minimum | Maximum |
-|---|---|
-| Memory | 32GB | 2TB |
-| Disk storage | 100GB | 2TB |
-| Virtual CPU | 12 | 576 |
-
-{: .note}
-You can also [create databases for testing purposes](#create-db)
-
-## How do I create a shaped database?
+## How do I create a Cloud database?
 
 <!--The following is HTML because includes cause issues in markdown tables-->
 
@@ -61,7 +48,7 @@ You can also [create databases for testing purposes](#create-db)
   </tr>
   <tr>
     <td>
-      Small
+      <a name="small-db"></a>Small
     </td>
     <td>
       {% include /cloud-db/cloud-small-db-summary.md %}
@@ -77,7 +64,7 @@ You can also [create databases for testing purposes](#create-db)
   </tr>
   <tr>
     <td>
-      Sample
+      <a name="sample-db"></a>Sample
     </td>
     <td>
       {% include /cloud-db/cloud-sample-db-summary.md %}
