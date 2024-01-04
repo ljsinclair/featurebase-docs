@@ -18,7 +18,7 @@ You can also [create a database using Cloud API](https://api-docs-featurebase-cl
 
 * [Check pricing information on FeatureBase.com](https://www.featurebase.com/pricing)
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Naming standards
 

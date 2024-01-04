@@ -14,6 +14,7 @@ nav_order: 1
 ## Before you begin
 {: .no_toc}
 {% include /cloud/cloud-before-begin.md %}
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## How do I provision a small database?
 

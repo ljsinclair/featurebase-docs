@@ -12,7 +12,7 @@ nav_order: 2
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
 {: .note}
-Provisioning a sample database takes approximately 10 minutes
+Provisioning a sample database takes approximately 10 minutes.
 
 {% include page-toc.md %}
 
@@ -24,7 +24,7 @@ Provisioning a sample database takes approximately 10 minutes
 ## How do I provision a sample database?
 
 {% include /cloud-db/cloud-db-new-name.md %}
-{% include /cloud-db/cloud-db-load-sample.md %}
+* Choose **start with pre-loaded sample data**.
 {% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
