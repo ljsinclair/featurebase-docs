@@ -11,7 +11,8 @@ nav_order: 2
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
-There are two methods to provision the sample database with an approximate duration of 10 minutes.
+{: .note}
+Provisioning a sample database takes approximately 10 minutes
 
 {% include /cloud-db/cloud-db-custom-note.md %}
 
@@ -20,6 +21,7 @@ There are two methods to provision the sample database with an approximate durat
 ## Before you begin
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Provision a billion record database
 

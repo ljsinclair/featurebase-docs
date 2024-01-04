@@ -97,7 +97,6 @@ has_toc: false
   </tr>
 </table>
 
-
 ## How do I learn more about my database?
 
 * [Learn where to find database details](/docs/cloud/cloud-databases/cloud-db-details)

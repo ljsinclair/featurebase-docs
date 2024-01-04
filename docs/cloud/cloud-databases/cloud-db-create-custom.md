@@ -38,12 +38,11 @@ You can also [create a database using Cloud API](https://api-docs-featurebase-cl
 
 ## Create a database
 
-* Click **Databases** > **New database**.
-* Name the database according to the naming standards.
+{% include /cloud-db/cloud-db-new-name.md %}
 * Click **Start with a clean database**.
-* Choose the Vendor
-* Choose a shape suitable for your data
-* Click **CREATE DATABASE**
+* Choose the Vendor.
+* Choose a shape suitable for your data.
+{% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step
 
