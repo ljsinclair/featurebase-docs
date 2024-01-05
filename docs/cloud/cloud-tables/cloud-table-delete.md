@@ -38,4 +38,3 @@ There are a number of reasons why you may choose to drop a table, including:
 ## Further information
 
 * [Delete table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deletetable){:target="_blank"}
-* [`DROP TABLE` statement](/docs/sql-guide/statements/statement-table-drop)
