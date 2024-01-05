@@ -31,4 +31,4 @@ Provisioning a sample database takes approximately 10 minutes.
 
 ## Further information
 
-* [Create a custom database](/docs/cloud/cloud-databases/cloud-db/cloud-db-create-custom)
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom/)

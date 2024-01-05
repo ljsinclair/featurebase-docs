@@ -32,4 +32,4 @@ nav_order: 1
 
 ## Further information
 
-* [Create a custom database](/docs/cloud/cloud-databases/cloud-db/cloud-db-create-custom)
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom/)
