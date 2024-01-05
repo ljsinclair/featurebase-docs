@@ -11,25 +11,15 @@ nav_order: 2
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
-There are two methods to provision the sample database with an approximate duration of 10 minutes.
-
-{% include /cloud-db/cloud-db-custom-note.md %}
-
-{% include page-toc.md %}
+{: .note}
+Provisioning a sample database takes approximately 10 minutes.
 
 ## Before you begin
 {: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
-## Provision a billion record database
-
-You can create the database in two ways.
-
-### Method one - provision the database with an auto-generated name
-
-{% include /cloud/homepage-db-create-options.md %} under **Start with a billion records**
-
-### Method two - provision the database with a custom name
+## How do I provision a sample database?
 
 {% include /cloud-db/cloud-db-new-name.md %}
 * Choose **start with pre-loaded sample data**.
@@ -38,3 +28,7 @@ You can create the database in two ways.
 ## Next step
 
 * [Query sample data](/docs/cloud/cloud-query/cloud-query-home)
+
+## Further information
+
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db/cloud-db-create-custom)

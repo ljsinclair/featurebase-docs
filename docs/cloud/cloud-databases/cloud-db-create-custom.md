@@ -9,31 +9,43 @@ nav_order: 3
 # How do I create a custom database?
 {: .no_toc }
 
-There are three ways to provision a database with a custom configuration in FeatureBase Cloud.
+{% include /cloud-db/cloud-db-shaped-summary.html %}
+
+{% include /cloud-db/cloud-db-create-api.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
-
+{: .no_toc }
+* [Check pricing information on FeatureBase.com](https://www.featurebase.com/pricing)
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
+<<<<<<< HEAD
 
 {: .note}
 FeatureBase Cloud database names can be up to 300 characters in length
+=======
+* database names can be up to 300 characters in length
+>>>>>>> main
 
-## How do I provision a database with a custom configuration?
+## Provisioning memory, RAM and virtual CPU for production systems
 
-There are three methods to provision a custom configured database.
+Choose bundled resources for your production system between the following values:
 
-### Method one - provision database from the homepage
+| Resource | Minimum | Maximum |
+|---|---|
+| Memory | 32GB | 2TB |
+| Disk storage | 100GB | 2TB |
+| Virtual CPU | 12 | 576 |
 
-{% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
-
-### Method two - provision database via the Databases page
+## Create a database
 
 {% include /cloud-db/cloud-db-new-name.md %}
+<<<<<<< HEAD
 
 Choose from the **Memory** drop-down:
 
@@ -49,11 +61,12 @@ Choose from the **Memory** drop-down:
 | 1024 | 1024 | 5000 | 320 |
 | 2048 | 2048 | 10000 | 576 |
 
+=======
+* Click **Start with a clean database**.
+* Choose the Vendor.
+* Choose a shape suitable for your data.
+>>>>>>> main
 {% include /cloud-db/cloud-db-click-create.md %}
-
-## Method 3 - provision the database using Cloud API
-
-* [Create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
 ## Next step
 

@@ -3,7 +3,7 @@ title: Cloud query and ingestion stats
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 11
+nav_order: 12
 ---
 
 # Where do I find query and ingestion statistics?
