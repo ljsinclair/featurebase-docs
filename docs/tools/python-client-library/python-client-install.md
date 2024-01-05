@@ -11,7 +11,7 @@ nav_order: 1
 
 ## Before you begin
 
-* [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
+* [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-library-home)
 * Install the following if not already on the target system:
   * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"}
   * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
