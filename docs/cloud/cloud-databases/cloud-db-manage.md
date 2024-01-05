@@ -31,7 +31,7 @@ has_toc: false
 
 ## How do I create a Cloud database?
 
-<!--The following is HTML because includes cause issues in markdown tables-->
+<!--The following is HTML because issues occur when `include` files are inserted into markdown tables-->
 
 <table>
   <tr>
