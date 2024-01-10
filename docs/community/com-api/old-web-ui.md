@@ -21,11 +21,11 @@ It contains information about the cluster nodes, data, and has an interface for 
 
 ## Home
 
-![introduction](/assets/images/ui-home.png)
+![introduction](/assets/images/com-api/ui-home.png)
 
 ### Cluster Health
 
-![cluster health problem](/assets/images/ui-cluster-health-problem.png)
+![cluster health problem](/assets/images/com-api/ui-cluster-health-problem.png)
 
 Cluster Health shows the global status of the cluster,
 and it contains an expanded view for each node.
@@ -40,7 +40,7 @@ The cluster state display has five possible values:
 
 #### Node Health
 
-![cluster health](/assets/images/ui-node-status.png)
+![cluster health](/assets/images/com-api/ui-node-status.png)
 
 Each node's individual state is indicated by the colored icon:
 - <Status color="#57a852" /> NORMAL: Node is working ok and all data is available.
@@ -48,7 +48,7 @@ Each node's individual state is indicated by the colored icon:
 
 #### Metrics
 
-![metrics](/assets/images/ui-metrics.png)
+![metrics](/assets/images/com-api/ui-metrics.png)
 
 Metrics provide useful information about nodes.
 
@@ -61,14 +61,14 @@ Clicking `Force Finish` will close an open transaction.
 <!-- COMMENTED OUT because there's no apparent link between transactions and metrics in this context
 More info about them can be found [here](/docs/community/com-monitoring/com-monitoring-home).-->
 
-![transaction](/assets/images/ui-transactions.png)
+![transaction](/assets/images/com-api/ui-transactions.png)
 
 ## Tables
-![tables ui](/assets/images/ui-tables.png)
+![tables ui](/assets/images/com-api/ui-tables.png)
 
 All Tables are shown here.
 We can explore their fields and metadata,
 like types, cache type and size,
 and also if there are keys associated with a particular field.
 
-![fields](/assets/images/ui-fields.png)
+![fields](/assets/images/com-api/ui-fields.png)
