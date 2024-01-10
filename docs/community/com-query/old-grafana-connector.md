@@ -57,10 +57,10 @@ From `grafana-7-x.x/` run the following command:
     - If your molecula-datasource plugin is installed, it should appear in the data source list.
 
 
-![Grafana Welcome](/assets/images/grafana-welcome.png "Grafana Welcome")  
+![Grafana Welcome](/assets/images/com-grafana/grafana-welcome.png "Grafana Welcome")  
 *Click "Add your first data source"*
 
-![Grafana Add Datasource](/assets/images/grafana-add-datasource.png "Grafana Add Datasource")  
+![Grafana Add Datasource](/assets/images/com-grafana/grafana-add-datasource.png "Grafana Add Datasource")  
 *Select the "Molecula" option. The "unsigned" label is expected*
 
 ### Configure Server
@@ -70,7 +70,7 @@ Point Grafana to a running FeatureBase server
 - Default FeatureBase GRPC port: `20101`
 - `Max Query Results` limits the number of records returned by the server if no `Limit` call is provided.
 
-![Grafana Configure Datasource](/assets/images/grafana-configure-server.png "Grafana Configure Datasource")  
+![Grafana Configure Datasource](/assets/images/com-grafana/grafana-configure-server.png "Grafana Configure Datasource")  
 *If Featurebase server is running, you will see a similar message indicating success*
 
 ### Configure Authentication
@@ -79,7 +79,7 @@ If FeatureBase server has authentication enabled, select Auth Enabled Server in 
 - `Password`: the password for the user account associated with the configured IDP.
 - `Server CA Cert`: the contents of the certificate used for TLS on the FeatureBase server
 
-![Grafana Configure Authentication](/assets/images/grafana-configure-auth.png "Grafana Configure Authentication")  
+![Grafana Configure Authentication](/assets/images/com-grafana/grafana-configure-auth.png "Grafana Configure Authentication")  
 *These are secure fields. Contents will be hidden once saved and will require resetting to change the value*
 
 ### Other Installation Methods
@@ -116,7 +116,7 @@ If your environment requires a different installation method, please refer to th
 ### Querying
 The plugin supports any [SQL](/docs/sql-guide/sql-guide-home) and [PQL](/docs/pql-guide/pql-home) queries that FeatureBase supports. When using PQL, the index must be selected from the respective drop down.
 
-![Query FeatureBase through Grafana](/assets/images/grafana-query.png "Query FeatureBase through Grafana")  
+![Query FeatureBase through Grafana](/assets/images/com-grafana/grafana-query.png "Query FeatureBase through Grafana")  
 *Enter your SQL or PQL query*
 
 #### Fetching Ids
@@ -170,12 +170,12 @@ Extract(Limit(Row(customer=$customer), limit=1000), Rows(data_size), Rows(timest
         -  `select distinct <field> from <index> limit <integer>`
 - Under Selection Options, you can choose if you would like users to be able to select multiple (or all) values for the variable
 
-![Grafana Variables Edit](/assets/images/grafana-variables-edit.png "Grafana Variables Edit")  
+![Grafana Variables Edit](/assets/images/com-grafana/grafana-variables-edit.png "Grafana Variables Edit")  
 *Define your variable by setting the Name, Type, Query (or Custom values), and whether you would like the variable to take multiple values*
 
 At the top of the dashboard, you can now dynamically select a value with which to process your query.   
 
-![Grafana Variable Select](/assets/images/grafana-variable-select.png "Grafana Variable Select")  
+![Grafana Variable Select](/assets/images/com-grafana/grafana-variable-select.png "Grafana Variable Select")  
 *Select a value for your variable in the drop down on the dashboard*
 
 ### Variable Interpolation
@@ -207,10 +207,10 @@ which is not a valid query. Instead, you'll want to use it as a child of another
 
 Grafana has time range controls at the top of each graph and dashboard.
 
-![Grafana Variable Select](/assets/images/grafana-time-range-control.png "Grafana Variable Select")  
+![Grafana Variable Select](/assets/images/com-grafana/grafana-time-range-control.png "Grafana Variable Select")  
 *Grafana time range selector*
 
 To utilize these controls, you must associate it with a field in your dataset. This can be done by adding the field name to `TimeField` in the query editor. The type of this field must be `timestamp`.
 
-![Grafana Variable Select](/assets/images/grafana-timefield.png "Grafana Variable Select")  
+![Grafana Variable Select](/assets/images/com-grafana/grafana-timefield.png "Grafana Variable Select")  
 *Select the field you would like to associate with Grafana's time range controls*
