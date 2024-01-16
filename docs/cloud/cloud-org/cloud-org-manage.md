@@ -37,4 +37,4 @@ has_toc: false
 
 ## How do I upgrade my organization to a paid account?
 
-* [Learn how to upgrade your organization to paid](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid)
+* [Learn how to upgrade your organization account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid)

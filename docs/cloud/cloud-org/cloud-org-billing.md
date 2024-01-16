@@ -8,26 +8,24 @@ nav_order: 5
 
 # How do I manage payments and billing for my organization?
 {: .no_toc }
-Learn how to manage payments and invoices for before and after your trial expires.
-
-{% include page-toc.md %}
+Learn how to manage payments and invoices after your trial expires.
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
 
-* [Database usage pricing](https://www.featurebase.com/pricing){:target="\_blank:}
+* [Database usage pricing](https://www.featurebase.com/pricing){:target="_blank:}
 * [Available database sizes](https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/)
 * [Upgrade to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/)
 
 ## Billing cycle
 
-* Billing follows a monthly cycle that starts on the date your organization was created
+Billing follows a monthly cycle that starts on the date your organization was created.
 
 ## Paying your bill
 
 * An invoice is issued at the end of the billing cycle and your payment method is automatically charged
-* An email confirmation will be sent with the invoice and payment details to the email that created the organization
+* An email confirmation is sent to the email used to create the organization with an invoice and payment details
 
 ## Questions about your bill
 

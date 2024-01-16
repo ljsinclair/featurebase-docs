@@ -51,13 +51,10 @@ You can query the database state in the following ways:
 
 ### Error states
 
-The database is unavailable when it has the following states:
+{: .note}
+* {% include contact-support.md%} for help with error states.
 
 | Database Status | Definition |
 |---|---|
 | FROZEN | An error has occurred with a database backup |
 | FAILED | Database is in unrecoverable state as a result of failed provisioning of resources, restoration from backup or deletion |
-
-## Further information
-
-* {% include contact-support.md%}

@@ -11,7 +11,7 @@ nav_order: 2
 
 {% include /cloud-org/cloud-summary-billing-contact.md %}
 
-{% include page-toc.md %}
+Your billing address is included on billing invoices and should be kept up-to-date.
 
 ## Before you begin
 
