@@ -51,12 +51,13 @@ You can query the database state in the following ways:
 
 ### Error states
 
-{: .note}
-[Contact FeatureBase Support on Discord for help](https://discord.com/invite/bSBYjDbUUb){:target="_blank"}
-
 The database is unavailable when it has the following states:
 
 | Database Status | Definition |
 |---|---|
 | FROZEN | An error has occurred with a database backup |
 | FAILED | Database is in unrecoverable state as a result of failed provisioning of resources, restoration from backup or deletion |
+
+## Further information
+
+* {% include contact-support.md%}

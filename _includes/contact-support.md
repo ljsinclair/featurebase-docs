@@ -1,1 +1,1 @@
-[Contact FeatureBase Support on Discord](https://discord.com/invite/bSBYjDbUUb){:target=_blank}
+[Contact FeatureBase Support](https://featurebase.com/slack){:target=_blank}

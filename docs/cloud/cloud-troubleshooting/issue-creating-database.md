@@ -19,4 +19,4 @@ Your account may be limited due to one or more of the following issues:
 
 * [Check FeatureBase Cloud status](https://status.featurebase.com/){:target="_blank"}
 * [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/)
-* [Contact the FeatureBase Support channel on Discord](https://discord.com/invite/bSBYjDbUUb){:target="_blank"}
+* {% include contact-support.md%}
