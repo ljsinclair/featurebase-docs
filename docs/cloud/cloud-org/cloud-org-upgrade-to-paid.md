@@ -9,8 +9,6 @@ nav_order: 4
 # How do I pay for my Database usage?
 {: .no_toc }
 
-{% include page-toc.md %}
-
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
@@ -36,4 +34,4 @@ nav_order: 4
 
 ## Further information
 
-* [Manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)
+* [Learn how to manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)

@@ -11,8 +11,6 @@ nav_order: 3
 
 {% include /cloud-org/cloud-summary-tech-contact.md %}
 
-{% include page-toc.md %}
-
 ## Before you begin
 
 {% include /cloud-users/cloud-user-admin-role-needed.md %}

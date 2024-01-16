@@ -30,3 +30,10 @@ Billing follows a monthly cycle that starts on the date your organization was cr
 ## Questions about your bill
 
 * {% include contact-support.md %}
+
+## How do I generate an invoice?
+
+* Click Configuration.
+* Find your invoice in the **Invoices** panel, bottom right.
+* Click **PDF** under **Export As**.
+* Choose a folder to save the PDF.
