@@ -1,19 +1,20 @@
 ---
-title: COSINE_DISTANCE()
+title: EUCLIDEAN_DISTANCE()
 layout: default
 parent: Functions
 grand_parent: SQL guide
 ---
-# COSINE_DISTANCE() function
+# EUCLIDEAN_DISTANCE() function
 
-`COSINE_DISTANCE()` is a mathematical function that can be performed on `VECTOR` data type columns.
-The cosine distance, sometimes called the cosine similarity, of two vectors is a measure of the
-angle between them. This gives a measure of similarity ignoring the magnitude of the vectors.
+`EUCLIDEAN_DISTANCE()` is a mathematical function that can be performed on `VECTOR` data type columns.
+The Euclidean (or Euclidian) distance between two vectors is the square root of the sum of the squares
+the pairwise differences between the vectors. This is the distance metric most commonly used when talking
+about distances between locations on a plane.
 
 ## Syntax
 
 ```sql
-COSINE_DISTANCE (<vector1>, <vector2>)
+EUCLIDEAN_DISTANCE (<vector1>, <vector2>)
 ```
 
 Vectors can be either vector literals, such as `[0.0, 1.0]` or vector expressions, such as a vector
