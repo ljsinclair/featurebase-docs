@@ -15,10 +15,13 @@ nav_exclude: true
 * [CREATE TABLE cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 * [INSERT INTO cosvec-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 
-## Comparing the distance metrics
+## Comparing distance metrics
 
-The following example illustrates the difference in behavior between the cosine and
-euclidean distance:
+FeatureBase supplies two functions to measure `VECTOR` data type values:
+* **cosine_distance** measures the similarity of angles between two vectors, and is unaffected by their magnitude
+* **euclidean distance** measures the distance between points, rather than the angle between vectors
+
+The following example illustrates the difference between these measures:
 
 ```sql
 SELECT cosine_distance([1.0, 0.0], [0.0, 1.0]) as cos_1_0,
@@ -30,11 +33,6 @@ SELECT cosine_distance([1.0, 0.0], [0.0, 1.0]) as cos_1_0,
 ---------+-----------+---------+----------
        1 | 1.4142135 |       1 | 2.828427
 ```
-
-The cosine distance between two vectors is unaffected by their magnitude,
-and measures only the similarity of their angles. The euclidean distance
-is measuring the distance between points, rather than the angle between
-vectors.
 
 ## Further information
 
