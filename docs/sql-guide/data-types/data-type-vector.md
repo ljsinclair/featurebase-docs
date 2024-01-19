@@ -33,3 +33,11 @@ VECTOR({length})
 ## Examples
 
 * [CREATE TABLE with VECTOR data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
+* [INSERT INTO VECTOR data type](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
+* [SELECT FROM VECTOR data type](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
+
+## Further information
+
+The following functions can be included in SELECT queries to measure VECTOR values:
+* [COSINE_DISTANCE function](/docs/sql-guide/functions/function_cosine_distance)
+* [EUCLIDEAN_DISTANCE function](/docs/sql-guide/functions/function_euclidean_distance)
