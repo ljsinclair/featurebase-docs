@@ -1,22 +1,29 @@
 ---
-title: Move account
+title: Accept invitation to new organization
 layout: default
 parent: Manage my account
 grand_parent: Cloud
 nav_order: 3
 ---
 
-## How do I move my account to another FeatureBase organization?
+## How do I accept an invitation to a new organization?
 {: .no_toc }
 
-FeatureBase users may be invited to join a different organization.
+There is a 1:1 relationship between a FeatureBase user and its organisation.
+
+However, FeatureBase users can be invited to join a different organization.
+
+When completed, the user account:
+* is unlinked from the original organization
+* is linked to the new organization
+* can login ONLY to the new organization
 
 {% include page-toc.md %}
 
 {% include /cloud-users/cloud-summary-user-move.md %}
 
 {: .note}
-Users can opt-out of the account move by ignoring the email or click **No, thanks** on the confirmation page.
+Users can opt-out of the account move by ignoring the invitation email or click **No, thanks** on the confirmation page.
 
 ## Before you begin
 
@@ -26,7 +33,7 @@ Users can opt-out of the account move by ignoring the email or click **No, thank
 ## How do I move my account to another organization?
 
 {: .warning}
-Accepting the move means you **cannot** access your original organization.
+Accepting the move means you **cannot** login to your original organization.
 
 ## Step one - delete resources
 
@@ -39,4 +46,4 @@ Resources cannot be transferred and must be deleted before an account move can t
 
 * Click **Move account** in the invitation email.
 * Click **Move account** on the FeatureBase confirmation page.
-* Login with your current user name and password.
+* Login to the new organization with your current user name and password.
