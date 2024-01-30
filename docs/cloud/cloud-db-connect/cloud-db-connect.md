@@ -1,5 +1,5 @@
 ---
-title: Connect to cloud db
+title: Connect to cloud
 layout: default
 parent: Cloud
 has_children: true
@@ -9,31 +9,20 @@ has_toc: false
 
 # How do I connect to my FeatureBase Cloud database?
 
-There are several methods to connect to your database:
-
-* via the web portal
-* via REST API calls used in applications
-* via fbsql, a command-line SQL tool you can install on a local Linux or MacOS machine
+Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-line tool.
 
 ## Before you begin
+* [Create a FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
 
-* [Create a FeatureBase Cloud account](/docs/cloud/cloud-signup)
+## What are the different methods to connect to Cloud?
 
-## Connect via the web portal
+| Method | Description | Additional information |
+|---|---|---|
+| API | Create an API key or access token | * [Cloud API security JWT access token](https://api-docs-featurebase-cloud.redoc.ly/latest#section/Security){:target="_blank"}<br/>* [Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-manage) |
+| CLI | Install the fbsql tool then connect to Cloud | * [Learn how to install and connect using fbsql](/docs/tools/fbsql/fbsql-home) |
+| URL | FeatureBase Cloud is available via a web portal at [https://cloud.featurebase.com](https://cloud.featurebase.com){:target="_blank"} | [Learn how to sign-in via the Web portal](/docs/cloud/cloud-db-connect/cloud-login) |
 
-* [Learn how to sign-in via the Web portal](/docs/cloud/cloud-db-connect/cloud-login)
+## Next step
 
-## Connect via REST API calls
-
-The Cloud API allows two methods to authenticate with your FeatureBase Cloud database:
-
-* [Cloud API security JWT access token](https://api-docs-featurebase-cloud.redoc.ly/latest#section/Security){:target="_blank"}
-* [Cloud API key](/docs/cloud/cloud-authentication/cloud-auth-manage)
-
-## Connect via fbsql command-line query editor
-
-You can connect to your FeatureBase database and run SQL statements using the fbsql command line tool.
-
-fbsql connections require a registered user account, or a Cloud API-Key
-
-* [Learn more about fbsql](/docs/tools/fbsql/fbsql-home)
+* [Learn how to evaluate FeatureBase Cloud and test our claims with a billion records](/docs/cloud/cloud-evaluate), or
+* [Learn how to set up a custom database for your data](/docs/cloud/cloud-setup)

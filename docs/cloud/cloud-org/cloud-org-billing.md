@@ -8,7 +8,10 @@ nav_order: 5
 
 # How do I manage payments and billing for my organization?
 {: .no_toc }
-Learn how to manage payments and invoices after your trial expires.
+
+Learn how to manage payments and invoices for before and after your trial expires.
+
+{% include page-toc.md %}
 
 ## Before you begin
 

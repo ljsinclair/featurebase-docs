@@ -17,31 +17,22 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 
 | Feature | Benefit | Additional information |
 |---|---|---|
-| Fully managed | No need to maintain your own infrastructure and calculate processor and memory requirements | [FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
+| Fully managed | No need to maintain your own infrastructure and calculate processor and memory requirements | [Learn about FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
 | Automated backups | Full backups to S3 and EBS snapshotting are automated and occur daily for all databases |  |
-| Usage-based metering and billing | GUI provides detailed intra-hour insights into your spend |  |
-| Low-latency database | Database design won't be impacted by queries across billions of records or large ingest streams inserting and updating records | [Breaking the latency floor whitepaper](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"} |
-| One-click GUI for DB creation and monitoring | Tools to create standard or custom databases, monitor and configure available at a single click | [Manage databases](/docs/cloud/cloud-databases/cloud-db-manage) |
-| Simple user management | Create accounts directly in the GUI for users in your organization to collaborate on your data | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
+| Usage-based metering and billing | GUI provides detailed intra-hour insights into your spend | [Learn how to view billing](/docs/cloud/my-account/cloud-account-billing) |
+| Low-latency database | FeatureBase is a bitmap database which traditionally have been extremely fast, even when working with billions of records. FeatureBase adds new data types, to collapse traditional data models like the star schema, and efficiently store multiple values within a single column. | [Test our claims with a database of a billion rows](/docs/cloud/cloud-evaluate) |
+| One-click GUI for DB creation and monitoring | Tools to create standard or custom databases, monitor and configure available at a single click | [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage) |
+| Simple user management | Create accounts directly in the GUI or via the Cloud API for users in your organization to collaborate on your data | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
+| Import data from multiple sources | Import data from CSV, inline, ndJSON, Orc or Parquet data sources | [Learn how to import/ingest data](/docs/cloud/cloud-ingest/cloud-ingest-manage) |
 | HTTPS API | Programmatic access to all Cloud features over HTTPS | [FeatureBase Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
-| SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON , Parquet or ORC | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
-
-## Cloud trial
-
-{% include /cloud/trial-account-limits.md %}
-
-## Terms and conditions
-
-Cloud users must agree to the FeatureBase terms of service to complete sign-up.
-
-* [Learn about the Cloud terms of service](https://www.featurebase.com/cloud-terms){:target="_blank"}
-
-## Troubleshooting
-
-Refer to troubleshooting pages if you experience issues:
-
-* [FeatureBase Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home)
+| Command-line interface | Install `fbsql` to run SQL queries on your data from the command line of any internet-connected computer | [Learn about the fbsql CLI tool](/docs/tools/fbsql/fbsql-home) |
+| Python client library | Run SQL queries on Cloud data via the Python Client Library | [Learn about the Python client library](/docs/tools/python-client-library/python-client-library-home) |
 
 ## Next step
 
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-signup)
+* [Learn how to sign-up for a FeatureBase Trial account with $300USD credit](/docs/cloud/cloud-org/cloud-signup)
+* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
+
+## Further information
+
+* [Learn about the FeatureBase database and its features](/docs/concepts/concepts-home)

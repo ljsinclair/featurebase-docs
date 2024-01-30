@@ -59,3 +59,7 @@ KEYWORD
 ## System Tables
 
 * [System Tables](/docs/sql-guide/system-tables/system-tables-home)
+
+## Further information
+
+* [FeatureBase SQL issues](/docs/sql-guide/issues/sql-guide-issues)

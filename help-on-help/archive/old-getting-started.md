@@ -1,9 +1,4 @@
----
-title: Community Getting started
-layout: default
-parent: Community setup
-grand_parent: Community
----
+Moved here from community because it contains JSON for community ingest and testing. It's otherwise a ton of duplication
 
 # Getting Started With FeatureBase
 

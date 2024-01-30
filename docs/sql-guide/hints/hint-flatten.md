@@ -7,13 +7,11 @@ grand_parent: SQL guide
 
 # FLATTEN() hint
 
-{: .note}
-`FLATTEN()` is supported on [FeatureBase Cloud](/docs/cloud/cloud-home)
+{% include /sql-guide/datatype-set-setq-summary.md %}
 
-The FLATTEN() hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
-* SELECT...WITH...GROUP BY queries
-* SELECT DISTINCT... queries
-* queries with one input argument that matches the sole DISTINCT/GROUP BY column
+{% include /sql-guide/select-set-setq-unexpected-results.md %}
+
+The `FLATTEN()` hint overcomes this issue.
 
 ## Before you begin
 
@@ -23,19 +21,14 @@ The FLATTEN() hint is used to return distinct or group on individual members of 
 ## Syntax
 
 ```sql
-[DISTINCT
-  (FLATTEN(<colname>))]
-[WITH
   (FLATTEN(<colname>))
-GROUP BY
-  (<colname>)]
 ```
 
 ## Arguments
 
-| Argument | Data type | Required? |
-|---|---|---|
-| `<colname>` | [SET or SETQ](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) | Yes |
+| Argument | Description | Data type | Required? |
+|---|---|---|---|
+| `<colname>` | `SET` or `SETQ` column | [SET or SETQ](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) | Yes |
 
 ## Returns
 
@@ -46,34 +39,56 @@ Individual values are returned from the specified column based on the source dat
 | IDSET/IDSETQ | ID (unsigned integer) |
 | STRINGSET/STRINGSETQ | String |
 
+## Additional information
+
+{% include /sql-guide/issue-select-set-setq-link.md%}
+
 ## Examples
 
-{% include /sql-guide/table-create-segments-eg.md %}
-
-<!-- commented out because this query doesn't work, has an "query error: 1:17: expected expression, found 'DISTINCT'
-"
-### DISTINCT...flatten
+<!-- replace with all-datatypes-->
 
 ```sql
-SELECT DISTINCT(flatten(segment)) FROM segments;
+CREATE TABLE demo-table (_id id, hobby stringset, income int);
+
+INSERT INTO demo-table VALUES
+  (0, ['running', 'biking', 'swimming'], 80000),
+  (1, ['biking'], 100000);
 ```
--->
 
-### GROUP BY with flatten()
-
-{: .note}
-This query can also be run as a [SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
-
-Count individual values from the `segments` table
+A `SELECT` query returns:
 
 ```sql
-SELECT count(*) AS cnt, segment FROM segments
-WITH (flatten(segment))
-group by segment;
+SELECT * FROM demo-table;
+ _id | hobby                             | income
+-----+-----------------------------------+--------
+   0 | ['running', 'biking', 'swimming'] |  80000
+   1 | ['biking']                        | 100000
+```
 
- cnt | segment
------+-----------
-   2 | ['RED']
-   2 | ['BLUE']
-   3 | ['GREEN']
+### Unexpected results
+
+Both queries return results based on the number of fields, rather than the results themselves.
+
+```sql
+SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
+ hobby                             |        
+-----------------------------------+--------
+ ['biking']                        | 100000
+ ['running', 'biking', 'swimming'] |  80000
+```
+
+```sql
+SELECT COUNT(DISTINCT hobby) FROM demo-table;
+```
+
+### Expected results
+
+Use the `FLATTEN()` hint to return expected results.
+
+```sql
+SELECT hobby, sum(income) FROM demo-table WITH (flatten(hobby)) GROUP BY hobby;
+```
+
+```sql
+SELECT COUNT(DISTINCT hobby) FROM demo-table WITH (FLATTEN(hobby));
 ```

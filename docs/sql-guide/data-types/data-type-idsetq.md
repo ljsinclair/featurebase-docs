@@ -49,6 +49,8 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
+{% include /sql-guide/issue-select-set-setq-link.md%}
+
 ## Examples
 
 ### CREATE TABLE with SETQ Timequantum

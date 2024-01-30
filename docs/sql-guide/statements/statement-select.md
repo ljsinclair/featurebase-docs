@@ -107,6 +107,8 @@ SELECT
 
 SELECT LIST Columns referenced in non-aggregate expressions must also appear in the GROUP BY clause.
 
+{% include /sql-guide/issue-select-set-setq-link.md%}
+
 ### SELECT...LIKE wildcards
 
 Wildcards are used with the `LIKE` clause.

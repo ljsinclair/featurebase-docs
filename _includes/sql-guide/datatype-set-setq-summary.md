@@ -1,10 +1,7 @@
-Data mapped to `SET` and `SETQ` data types are:
-* identified by a single unique value
-* imported as comma-separated values
-* to a single column and row
+In a typical database, each field -- the intersection of row and column -- contains an individual value.
 
-This method:
-* overcomes the need to normalize data into separate tables
-* reduces the number of rows imported
+FeatureBase `SET` and `SETQ` data types are designed to contain an array of comma-separated values within each field.
 
-The data can be queried individually or as a range of values.
+This means:
+* data does not need to be normalized into separate tables, and
+* import/ingest actions are faster because there are less rows to import.

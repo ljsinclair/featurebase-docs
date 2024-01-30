@@ -50,3 +50,7 @@ The FeatureBase Query builder is a drag-and-drop UI which supports the following
 ```
 [users]Extract(Limit(All(), limit=1000), Rows(created_at), Rows(salary))
 ```
+
+## Further information
+
+* [FeatureBase SQL issues](/docs/sql-guide/issues/sql-guide-issues)

@@ -33,7 +33,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community |
 |---|---|---|
-| Deployment | [Cloud deployment](/docs/cloud/cloud-signup) | [Community installation](/docs/community/com-home) |
+| Deployment | [Cloud deployment](/docs/cloud/cloud-org/cloud-signup) | [Community installation](/docs/community/com-home) |
 | Regional Deployment | No | Yes |  |
 | Automated Scale Up/Down|  No | No |   |
 | Automated Scale In/Out |  No | No |   |
@@ -80,14 +80,9 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
 | Audit Logging | Yes | Yes |   |
 
-## How do I set up FeatureBase Cloud?
+## Next step
 
-Follow these instructions which will guide you through the setup process:
+Learn more about the two products and how to set up your database
 
-* [Set up your FeatureBase cloud account](/docs/cloud/cloud-home)
-
-## How do I install FeatureBase Community?
-
-Follow these instructions to learn about system requirements and how to install FeatureBase on your operating system.
-
-* [Install FeatureBase Community locally](/docs/community/com-home)
+* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
+* [Learn about FeatureBase Community](/docs/community/com-home)

@@ -30,6 +30,8 @@ The STRINGSET data type:
   * grouping by
   * searching for discrete values
 
+{% include /sql-guide/issue-select-set-setq-link.md%}
+
 ## Examples
 
 ### CREATE TABLE with all data types

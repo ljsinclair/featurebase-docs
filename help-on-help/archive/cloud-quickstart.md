@@ -1,10 +1,4 @@
----
-title: Cloud Quick Start Guide
-layout: default
-parent: Cloud
-has_children: false
-nav_order: 1
----
+Moved here from cloud because it's old material that's been recreated as new content. Keeping for the moment in case there's anything missing.
 
 # Welcome to FeatureBase!
 
@@ -51,7 +45,7 @@ In order to use FeatureBase, you’ll need data. In a real-life situation, the F
 
 >This is a great time to grab a cup of coffee or reply to all those waiting Slack messages! A new database is spinning up and over 1B records are loading. Alternatively, you can browse the linked cookbooks and content on the home page. These are there to help you start interacting with FeatureBase cloud, as well as keep you updated on new releases and functionality.
 
-While the database is spinning up, you will see updates to "Status" on the ```Home``` page as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the creation process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database. 
+While the database is spinning up, you will see updates to "Status" on the ```Home``` page as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the creation process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database.
 
 ![Figure 6. New Database: PROVISIONING](/assets/images/quick-start-guide/cloud/db_creating.png)
 
@@ -111,7 +105,7 @@ It is unlikely to need to ```SUM``` in this manner across all records. It is muc
 Here we introduce comparative and logical operators including ```GREATER THAN```, ```AND```, and ```OR```. 
 
 ```sql
-SELECT SUM(income) FROM cseg 
+SELECT SUM(income) FROM cseg
 WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
 ```
 
@@ -137,7 +131,7 @@ SELECT AVG(income) FROM cseg;
 <!--
 This needs to be updated back to INNER JOIN and SQL once SQL3 JOIN functionality is stable
 -->
-FeatureBase supports **INNER JOIN** functionality, but it should be noted it's preferable to merge data from multiple separate tables or sources into a single normalized table. FeatureBase makes this possible and easy by defaulting to ingest process to use `UPSERT` behavior. Workflows requiring ```INNER JOIN```s in traditional databases can be simplified with FeatureBase by merging disparate datasets at ingest into a single table. 
+FeatureBase supports **INNER JOIN** functionality, but it should be noted it's preferable to merge data from multiple separate tables or sources into a single normalized table. FeatureBase makes this possible and easy by defaulting to ingest process to use `UPSERT` behavior. Workflows requiring ```INNER JOIN```s in traditional databases can be simplified with FeatureBase by merging disparate datasets at ingest into a single table.
 
 If this cannot be avoided, FeatureBase does support **INNER JOIN**  between two tables. In the following example, we are combining many of the queries in this guide and adding the ```INNER JOIN``` functionality using the `DISTINCT` function in FeatureBase's native language called [PQL](/docs/pql-guide/pql-home). The ```INNER JOIN``` is facilitating a ```COUNT``` of records, or people, that are ```available for hire``` as indicated by having a ```STRING``` column true for ```available_for_hire``` located in the skills table, and having a ```STRING``` column true for ```Teaching```. In other words, we would like to ```COUNT``` the number of people who are teachers and also available for hire. The latency on this type of ```INNER JOIN``` at the billion records scale is still sub-second allowing for several interesting data models.
 
@@ -153,7 +147,7 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 ### TopK - A FeatureBase Superpower
 
-Ranking queries are notorious for being computationally intensive - aka slow. Some solutions will use statistics to speed up a ranking query by approximating the true results, but that’s not always a desirable option. In PQL, [```TopK```](/docs/pql-guide/pql-read-topk) queries can be run to return exact results in milliseconds. 
+Ranking queries are notorious for being computationally intensive - aka slow. Some solutions will use statistics to speed up a ranking query by approximating the true results, but that’s not always a desirable option. In PQL, [```TopK```](/docs/pql-guide/pql-read-topk) queries can be run to return exact results in milliseconds.
 
 This query returns the top five hobbies across all customers from the cseg table, sifting through a billion records in milliseconds.
 
@@ -226,7 +220,7 @@ SELECT COUNT(*) FROM cseg;
 ### Complex Segmentation 
 
 ```sql
-SELECT SUM(income) FROM cseg 
+SELECT SUM(income) FROM cseg
 WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
 ```
 
@@ -285,7 +279,7 @@ GROUP BY education;
 
 When you have completed this guide, please take a few minutes to drop your tables and spin down your database. If you do not, it will continue to create charges on your account.
 
-You can delete the database directly in the ```Databases``` section, which will drop all of the tables within it. Click the three dots and select ```Delete```. 
+You can delete the database directly in the ```Databases``` section, which will drop all of the tables within it. Click the three dots and select ```Delete```.
 
 ![Figure 20. Delete Database](/assets/images/quick-start-guide/cloud/delete_database.png)
 
