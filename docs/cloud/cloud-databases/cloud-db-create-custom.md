@@ -38,11 +38,13 @@ Choose bundled resources for your production system between the following values
 | Disk storage | 100GB | 2TB |
 | Virtual CPU | 12 | 576 |
 
+{% include /cloud-db/cloud-db-vendors.md %}
+
 ## Create a database
 
 {% include /cloud-db/cloud-db-new-name.md %}
 * Click **Start with a clean database**.
-* Choose the Vendor.
+* Choose AWS or Azure from the **Vendor**.
 * Choose a shape suitable for your data.
 {% include /cloud-db/cloud-db-click-create.md %}
 

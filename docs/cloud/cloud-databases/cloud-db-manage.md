@@ -29,6 +29,8 @@ has_toc: false
 | Resources | Bundled resources to ensure best performance, [priced by the hour](https://www.featurebase.com/pricing){:target="_blank"} | Resources cannot be changed once database is created. |
 | Data | Nodes are replicated data to ensure availability of your data | Migrate data to new database if resources do not meet your needs |
 
+{% include /cloud-db/cloud-db-vendors.md %}
+
 ## How do I create a Cloud database?
 
 <!--The following is HTML because issues occur when `include` files are inserted into markdown tables-->
