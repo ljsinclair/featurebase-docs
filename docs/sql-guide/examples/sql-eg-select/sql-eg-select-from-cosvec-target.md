@@ -10,8 +10,7 @@ nav_exclude: true
 ## Before you begin
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [COSINE_DISTANCE function](/docs/sql-guide/functions/function-cosine-distance)
-* [EUCLIDEAN_DISTANCE function](/docs/sql-guide/functions/function-euclidean-distance)
+* [COSINE_DISTANCE and EUCLIDEAN_DISTANCE functions](/docs/sql-guide/functions/function-vector-distances)
 * [CREATE TABLE cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 * [INSERT INTO cosvec-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 

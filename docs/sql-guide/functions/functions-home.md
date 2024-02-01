@@ -65,3 +65,6 @@ has_toc: false
 * [DATE_TRUNC()](/docs/sql-guide/functions/function-date_trunc)
 * [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
 * [DATETIMEDIFF()](/docs/sql-guide/functions/function-datetimediff)
+
+## Vector functions
+* [COSINE_DISTANCE(), EUCLIDEAN_DISTANCE()](/docs/sql-guide/functions/function-vector-distances)
