@@ -19,7 +19,7 @@ The theme supports 3 level of pages
 | Level | Description | Optional pages you can add | Example |
 |---|---|---|---|
 | Home | HTML homepage | One or more L1 pages | /index.md |
-| L1 | Appears at navigation root. | One or more L2 pages | /docs/cloud/cloud-home.md |
+| L1 | Appears at navigation root. | One or more L2 pages | index |
 | L2 | Appears beneath L1 page | One or more L3 pages | /docs/cloud/cloud-databases/cloud-db-manage.md |
 | L3 | Appears beneath L2 page | /docs/cloud/cloud-databases/cloud-db-create-custom.md |
 

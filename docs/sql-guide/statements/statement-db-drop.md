@@ -10,8 +10,6 @@ nav_order: 4
 
 Drops the specified database.
 
-{% include /cloud/cloud-only-note.md %}
-
 ## Syntax
 
 ```sql

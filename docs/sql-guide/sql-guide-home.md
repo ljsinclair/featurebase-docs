@@ -2,7 +2,7 @@
 title: SQL guide
 layout: default
 has_children: true
-nav_order: 5
+nav_order: 10
 has_toc: true
 ---
 
@@ -15,7 +15,9 @@ FeatureBase supports different types of queries that are discussed further in th
 
 ## Before you begin
 
-{% include /common/before-begin-database-create.md %}
+Create a FeatureBase database using one of the following methods:
+* [Create database using Cloud GUI](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Create database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest/#operation/createDatabase){:target="_blank"}
 
 ## Running SQL queries
 

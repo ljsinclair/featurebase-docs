@@ -51,7 +51,6 @@ Additional implementation details:
 - Fields with cache type lru will maintain an LRU (Least Recently Used replacement policy) cache, thus a TopN query on this type of field will return rows sorted in order of most recently set bit.
 - Once full, the cache will truncate the set of rows according to the field option CacheSize. Rows that straddle the limit and have the same count will be truncated in no particular order.
 
-See [field creation](/docs/community/com-api/old-http-endpoint#create-field) for more information about the cache.
 
 ## Examples
 

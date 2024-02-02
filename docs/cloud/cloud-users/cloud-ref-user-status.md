@@ -2,7 +2,7 @@
 title: Reference - Cloud user status
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 8
 has_toc: false
 ---

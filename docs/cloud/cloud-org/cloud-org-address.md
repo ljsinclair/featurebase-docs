@@ -2,8 +2,6 @@
 title: Update organization
 layout: default
 parent: Manage organization
-grand_parent: Cloud
-nav_order: 1
 ---
 
 # How do I change my organization name and address?

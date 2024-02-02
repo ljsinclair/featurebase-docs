@@ -1,8 +1,7 @@
 ---
 title: Update account
 layout: default
-parent: Manage my account
-grand_parent: Cloud
+parent: My account
 nav_order: 2
 ---
 
@@ -17,7 +16,8 @@ The user profile summary displays:
 * Dates the profile was created and last modified
 * The account status
 
-{% include /cloud-users/cloud-username-nochange.md %}
+{: .note}
+FeatureBase registers email addresses as user names. These cannot be changed.
 
 ## Before you begin
 

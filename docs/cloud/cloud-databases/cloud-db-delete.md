@@ -2,7 +2,6 @@
 title: Delete database
 layout: default
 parent: Manage databases
-grand_parent: Cloud
 nav_order: 20
 ---
 

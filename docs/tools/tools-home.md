@@ -2,7 +2,7 @@
 title: Tools
 layout: default
 has_children: true
-nav_order: 6
+nav_order: 13
 has_toc: false
 ---
 
@@ -14,8 +14,7 @@ FeatureBase also provides three tools that allow you to interact with your datab
 
 ## Before you begin
 
-* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
-* [Learn about FeatureBase Community](/docs/community/com-home)
+* [Learn about FeatureBase Cloud](index)
 
 ## What tools are available?
 

@@ -29,7 +29,7 @@ The `loader` command:
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `fbsql <featurebase-connection>` | Run fbsql with a connection to a FeatureBase database | When run from CLI | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [fbsql connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
+| `fbsql <featurebase-connection>` | Run fbsql with a connection to a FeatureBase database | When run from CLI | * [fbsql connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db) |
 | `\!` | Run `loader` from fbsql interface | Existing FeatureBase database connection |  |
 | `loader-(impala | kafka | postgres)` | Choose a data source for the loader to read from | Yes | Requires `--` prefix when run from CLI |
 | `<file-name>.toml` | TOML configuration file containing key/values for data source and target table. | Yes | [TOML configuration file for fbsql loader](/docs/tools/fbsql/fbsql-loader-toml-config) |

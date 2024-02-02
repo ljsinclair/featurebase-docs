@@ -8,6 +8,10 @@ nav_order: 7
 
 # STRING data type
 
+The `STRING` data type has a `keyed-mutex` internal type and is recommended for queries:
+* on discrete values,
+* with `group by` where cardinality is low
+
 ## Syntax
 
 ```
@@ -22,14 +26,7 @@ STRING
 
 ## Additional information
 
-The STRING data type has a `keyed mutex` internal data type and recommended for queries:
-* on discrete values,
-* with `group by` where cardinality is low
-
-{: .note}
->High cardinality data will:
->* decrease performance
->* increase storage overheads
+{% include /sql-guide/unique-id-string-warning.md %}
 
 ### Constraining string values
 

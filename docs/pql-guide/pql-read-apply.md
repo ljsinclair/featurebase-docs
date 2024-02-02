@@ -26,9 +26,6 @@ Read the mandatory arguments section below for more on the map and reduce phases
 
 ## Before you begin
 
-Learn about float64 and int64 data types in:
-* [dataframe consumer](/docs/community/com-ingest/old-ingest-dataframe)
-* [HTTP API](/docs/community/com-api/old-http-endpoint)
 Learn about IVY
 * [Learn about IVY APL-like language](https://github.com/robpike/ivy){:target="_blank"}
 * [Watch the IVY demo](https://github.com/robpike/ivy/blob/master/demo/demo.ivy){:target="_blank"}

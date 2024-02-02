@@ -1,9 +1,9 @@
 ---
 title: Activate account
 layout: default
-parent: Manage my account
-grand_parent: Cloud
+parent: My account
 nav_order: 1
+has_children: true
 ---
 
 ## How do I activate my FeatureBase account?
@@ -18,7 +18,7 @@ FeatureBase users can create an FeatureBase account in two ways:
 
 ## Sign up to create a new organization and account
 
-* [Learn how to sign-up and create a new FeatureBase organization](/docs/cloud/cloud-org/cloud-signup)
+* [Learn how to sign-up and create a new FeatureBase organization](/docs/cloud/cloud-getstart/cloud-signup)
 
 ## Accept an invitation
 
@@ -47,4 +47,10 @@ Your user is now **Active** and you have the **user** role.
 
 ## Next step
 
+* [Update my account details](/docs/cloud/my-account/cloud-user-personal-update)
 * [Learn about FeatureBase user roles](/docs/cloud/cloud-users/cloud-ref-user-roles)
+
+## Further information
+
+* [Learn how to accept an invitation to another organization](/docs/cloud/my-account/cloud-user-move)
+*

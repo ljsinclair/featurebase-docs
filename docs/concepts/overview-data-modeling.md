@@ -13,11 +13,6 @@ nav_order: 2
 
 {% include page-toc.md %}
 
-## Before you begin
-
-{% include /com-install/com-install-before-begin.md %}
-
-
 ## Concepts
 
 When importing data into FeatureBase, you have a number of choices about how to represent that data.

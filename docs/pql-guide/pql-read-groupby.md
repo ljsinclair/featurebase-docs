@@ -9,7 +9,7 @@ grand_parent: PQL guide
 
 `GroupBy()` can be used similar to `SELECT-FROM-WHERE-GROUP BY`... in `SQL`. See below for the current functionality.
 
-`GroupBy()` can be a very memory intensive opperation in FeatureBase. Ensure you have adequate memory to run large `GroupBy()` queries or use the [max-query-memory](/docs/community/com-config/com-config-flags#max-query-memory) FeatureBase configuration option to prevent out of memory issues.
+`GroupBy()` can be a very memory intensive opperation in FeatureBase. Ensure you have adequate memory to run large `GroupBy()` queries.
 
 ## Call Definition
 

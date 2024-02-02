@@ -10,8 +10,6 @@ nav_order: 2
 
 Show detail on all databases in the system.
 
-{% include /cloud/cloud-only-note.md %}
-
 ## Syntax
 
 ```

@@ -31,7 +31,6 @@ An overview of folder structure and files
 | `/assets/images` | Site image files found in logically named subfolders | As of 2023-02-21 contains images from /molecula/documentation which will be removed in future PRs |
 | `/docs` | All content pages found in this folder. |  |
 | `/docs/cloud` | All FeatureBase Cloud help pages | `old` prefix folders and files are originals to be rewritten |
-| `/docs/community` | All FeatureBase Community help pages |  |
 | `/docs/concepts` | High level conceptual information regarding FeatureBase applications | Updates in progress |
 | `/docs/pql-guide` | All FeatureBase PQL-Guide help pages | Files largely unchanged from `/molecula/documentation` |
 | `/docs/sql-guide` | All FeatureBase SQL-Guide help pages | Was `/sql-preview` |
@@ -64,7 +63,3 @@ An overview of folder structure and files
 ## Further information
 
 * [Just-The-Docs Theme help](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
-
-## Need support?
-
-* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

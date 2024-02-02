@@ -2,7 +2,7 @@
 title: Update user role
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 3
 has_toc: false
 ---

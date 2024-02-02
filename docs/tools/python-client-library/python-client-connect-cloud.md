@@ -49,7 +49,3 @@ client = featurebase.client(
 ## Next step
 
 * [Learn how to query the connected database](/docs/tools/python-client-library/python-client-query)
-
-## Further information
-
-* [Learn how to connect to FeatureBase Community with the Python client](/docs/tools/python-client-library/python-client-connect-community)

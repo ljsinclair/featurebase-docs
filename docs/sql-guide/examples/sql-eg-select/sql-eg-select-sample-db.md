@@ -19,8 +19,7 @@ Learn how fast the FeatureBase database is by running queries against the `cseg`
 ## Before you begin
 {: .no_toc }
 
-* [Create a Cloud database with sample data](/docs/cloud/cloud-evaluate), OR
-* [Create a Community database with sample data](/docs/community/com-evaluate)
+* [Create a Cloud database with sample data](/docs/cloud/cloud-getstart/cloud-evaluate)
 
 ## Table statements
 

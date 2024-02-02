@@ -13,8 +13,7 @@ has_toc: false
 
 ## Before you begin
 
-* [Learn how to create a FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup), or
-* [Learn how to install FeatureBase Community](/docs/community/com-home/#install-featurebase-community)
+* [Learn how to create a FeatureBase Cloud account](/docs/cloud/cloud-getstart/cloud-signup)
 
 ## How do I install FeatureBase Python client library?
 
@@ -22,9 +21,7 @@ has_toc: false
 
 ## How do I connect to my database?
 
-* Connect to the database using:
-  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
-  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
+* [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud)
 
 ## How do I query my database?
 

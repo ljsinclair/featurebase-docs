@@ -2,7 +2,7 @@
 title: Delete table
 layout: default
 parent: Manage tables
-grand_parent: Cloud
+
 nav_order: 6
 ---
 

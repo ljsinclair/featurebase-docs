@@ -2,7 +2,7 @@
 title: Activate or deactivate users
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 5
 has_toc: false
 ---

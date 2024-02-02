@@ -10,7 +10,7 @@ grand_parent: PQL guide
 
 This page contains information that only applies to preview functionality involving `float64` and `int64` data types. This page represents a work in progress that is subject to frequent changes. To enable this functionality, you must use the `--dataframe.enable` flag when running FeatureBase.
 
-- `Arrow()` is a query against the `float64` and `int64` field types. For more information on using these data types in FeatureBase, visit the [ingest documentation](/docs/community/com-ingest/old-ingest-dataframe) and the [HTTP API](/docs/community/com-api/old-http-endpoint#dataframe-endpoints) endpoints for them.
+- `Arrow()` is a query against the `float64` and `int64` field types.
 - `Arrow()` is currently limited to use with the community version. `Arrow()` and the `float64`/`int64` field types are not applicable to cloud at this time.
 
 `Arrow()` can be used to extract data when it's stored using the `float64` or `int64` data types. This is equivalent to `Extract()` for other data types or `SELECT <columns> FROM <tbl> WHERE <condition>` in SQL.

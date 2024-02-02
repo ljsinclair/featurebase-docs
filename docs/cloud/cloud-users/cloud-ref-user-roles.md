@@ -2,7 +2,7 @@
 title: Reference - Cloud user roles
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 8
 has_toc: false
 ---
@@ -19,7 +19,7 @@ has_toc: false
 
 | Privilege | Applicable role(s) |
 |---|---|
-| [Login](/docs/cloud/cloud-db-connect/cloud-login) | User, Administrator |
+| [Login](/docs/cloud/cloud-getstart/cloud-login) | User, Administrator |
 | [Invite users](/docs/cloud/cloud-users/cloud-user-invite) | Administrator |
 | [Copy invite URL](/docs/cloud/cloud-users/cloud-user-invite#provide-invitation-url-optional) | Administrator|
 | [Read user profiles](/docs/cloud/cloud-users/cloud-users-view-search) | User (Own account), Administrator |
@@ -53,7 +53,7 @@ has_toc: false
 |---|---|
 | Read organization details | Administrator |
 | [Update organization details](/docs/cloud/cloud-org/cloud-org-address) | Administrator |
-| [Update billing contact](/docs/cloud/cloud-org/cloud-org-update-billing) | Administrator |
+| [Update billing contact](/docs/cloud/cloud-org/cloud-org-update-billing-address) | Administrator |
 | [Update technical contact](/docs/cloud/cloud-org/cloud-org-update-tech-contact) | Administrator |
 
 

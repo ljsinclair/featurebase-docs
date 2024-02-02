@@ -1,8 +1,7 @@
 ---
-title: Query cloud data
+title: Run queries in Cloud GUI
 layout: default
-parent: Cloud query
-grand_parent: Cloud
+parent: Running queries
 nav_order: 1
 has_toc: false
 ---

@@ -2,7 +2,7 @@
 title: Update user details
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 4
 has_toc: false
 ---

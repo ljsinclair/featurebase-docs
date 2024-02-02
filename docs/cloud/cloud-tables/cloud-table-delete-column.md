@@ -2,7 +2,7 @@
 title: Drop column
 layout: default
 parent: Manage tables
-grand_parent: Cloud
+
 nav_order: 5
 ---
 

@@ -10,7 +10,7 @@ grand_parent: PQL guide
 
 The `Set()` call associates or assigns a value to a record in a specified field. If the value we are assigning is in a Mutex, Int, Decimal, or Timestamp field, the current value is overwritten. If the value we are assigning is in a Set or Time field, all previous values will remain.
 
-While using "Set" in PQL is a convenient way to get familiar with FeatureBase, it's almost always better to use a dedicated ingest tool. See [ingesters](/docs/community/com-ingest/com-ingest-manage) for details.
+While using "Set" in PQL is a convenient way to get familiar with FeatureBase, it's almost always better to use a dedicated ingest tool. 
 
 ## Call Definition
 ```

@@ -1,88 +1,52 @@
 ---
-title: FeatureBase help
+title: FeatureBase Cloud
 layout: home
 has_children: false
 nav_order: 1
 has_toc: false
 ---
 
-# Welcome to FeatureBase help
+# Welcome to FeatureBase Cloud help
 {: .no_toc }
 
-FeatureBase Help contains high level overviews of software functionality, plus procedural documentation for FeatureBase Cloud and the self-managed Community edition.
+FeatureBase Cloud help contains everything you need to create a database and tables, import your data then run queries.
 
 {% include page-toc.md %}
-
-## What is FeatureBase?
-
-FeatureBase is a feature-oriented database platform that powers real-time analytics and machine learning applications by executing low-latency, high-throughput, and highly concurrent workloads. Similar to the evolution of data formats from row-oriented to columnar, FeatureBase further evolves columnar into a feature-oriented format that makes each distinct data value individually addressable (accessible, readable, writable and retrievable).
-
-FeatureBase is similar to a columnar store, but breaks each column into each of its unique values so that they can be represented as a single bit. This data representation is excellent for a variety of analytical workloads.
-
-Our novel approach minimizes I/O on queries by allowing the database engine to read and write exactly the data it needs and intelligently compress that data in memory. The result is a step-function improvement in analytical workloads.
 
 ## Before you begin
 
 * [Learn more about FeatureBase](https://www.featurebase.com/){:target="_blank"}
+* [Learn about FeatureBase Cloud pricing](https://www.featurebase.com/pricing){:target="_blank"}
 
-## Comparing Cloud and Community editions
+## Summary of features
 
-These tables provided a side-by-side comparison of Cloud and Community functionality.
-
-## Infrastructure
-
-| Feature | Cloud | Community |
+| Feature | Benefit | Additional information |
 |---|---|---|
-| Deployment | [Cloud deployment](/docs/cloud/cloud-org/cloud-signup) | [Community installation](/docs/community/com-home) |
-| Regional Deployment | No | Yes |  |
-| Automated Scale Up/Down|  No | No |   |
-| Automated Scale In/Out |  No | No |   |
+| API | Programmatic access to all Cloud features over HTTPS | [FeatureBase Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
+| Audit logging | FeatureBase Cloud keeps an audit log of activity |  |
+| Authentication | OAuth authentication for users, and SSH keys for API calls |  |
+| Automated backups | Full backups to S3 and EBS snapshotting are automated and occur daily for all databases |  |
+| Deployment | Deploy on Microsoft Azure or Amazon AWS S3 infrastructure in the US, with additional regions coming soon |  |
+| Encryption | Data is encrypted in flight and at rest |
+| Fully managed | No need to maintain your own infrastructure and calculate processor and memory requirements | [FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
+| Low-latency database | Database design won't be impacted by queries across billions of records or large ingest streams inserting and updating records | [Breaking the latency floor whitepaper](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"} |
+| One-click GUI for DB creation and monitoring | Tools to create standard or custom databases, monitor and configure available at a single click | [Manage databases](/docs/cloud/cloud-databases/cloud-db-manage) |
+| Query data | Query data using SQL via the GUI, using the API, the Python client library or CLI tool |  |
+| Simple user management | Create accounts directly in the GUI for users in your organization to collaborate on your data | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
+| SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON , Parquet or ORC | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
+| Usage-based metering and billing | GUI provides detailed intra-hour insights into your spend |  |
+| User control | Users can be invited via their email address, then assigned Admin or User roles |  |
 
-## Data Ingestion
+## Cloud trial
 
-| Feature | Cloud | Community |
-|---|---|---|
-| Streaming (HTTPS)  | Yes | Yes |
-| Kafka (Pull-based) | Client-side kafka consumption & push | [Kafka ingestion](/docs/community/com-ingest/com-ingest-manage/#kafka-import-method) |
-| Database (Pull-based) | Client-side SQL consumption & push | [SQL ingestion](/docs/community/com-ingest/com-ingest-manage/#sql-import-method) |
-| CSV/Bulk Ingest  | Yes | [CSV ingestion](docs/community/com-ingest/com-ingest-manage/#csv-import-method) |
+{% include /cloud/trial-account-limits.md %}
 
-## Data Consumption
+## Terms and conditions
 
-| Feature | Cloud | Community | Additional information |
-|---|---|---|---|
-| Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-home) | [Query community tables](/docs/community/com-query/com-query-home) |  |
-| FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
-| FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
-| gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
-| Pilosa Query Language (PQL) Query Builder | No | Yes | [Learn about PQL](/docs/pql-guide/pql-home) |
-| Python Client | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | |
-| Grafana Plug-In | No | [Community grafana connector](/docs/community/com-query/old-grafana-connector) |  |
-| Postgres Lookup Database Option | No | Yes |   |
+Cloud users must agree to the FeatureBase terms of service to complete sign-up.
 
-## Operations
-
-| Feature | Cloud | Community |
-|---|---|---|
-| Backup and Restore | Yes | [Community backup and restore](/docs/community/com-backup/com-config-backup) |
-| Data Replication | Yes | Yes |
-| Metrics & Monitoring | [Cloud metrics](/docs/cloud/cloud-databases/cloud-db-details/) | [Community metrics & monitoring](/docs/community/com-monitoring/com-monitoring-home) |
-| Editable FeatureBase Config File | No | Yes |
-
-## Security
-
-| Feature | Cloud | Community | Additional information |
-|---|---|---|---|
-| Encryption In Flight | Yes | Yes |  |
-| Encryption at Rest | Yes | Yes |   |
-| Authentication + Authorization (OAuth) | Yes | [Community authentication](/docs/community/com-auth/com-auth-manage) |  |
-| Role-Based Access Control (Basic) | [Cloud user roles](/docs/cloud/cloud-users/cloud-ref-user-roles) | Yes |   |
-| User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
-| Audit Logging | Yes | Yes |   |
+* [Learn about the Cloud terms of service](https://www.featurebase.com/cloud-terms){:target="_blank"}
 
 ## Next step
 
-Learn more about the two products and how to set up your database
-
-* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
-* [Learn about FeatureBase Community](/docs/community/com-home)
+* [Sign-up for a trial account](/docs/cloud/cloud-getstart/cloud-signup)

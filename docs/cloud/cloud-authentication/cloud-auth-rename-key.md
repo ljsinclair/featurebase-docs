@@ -1,9 +1,8 @@
 ---
 title: Update Key Description
 layout: default
-parent: Manage API Keys
-grand_parent: Cloud
-nav_order: 4
+parent: Manage authentication
+nav_order: 2
 ---
 
 # How do I update an API key's description in FeatureBase Cloud?

@@ -14,7 +14,6 @@ These examples demonstrate how FeatureBase Python client classes work in practic
 
 * [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
 * [Learn how to connect to FeatureBase Cloud](/docs/tools/python-client-library/python-client-connect-cloud)
-* [Learn how to connect to FeatureBase Community](/docs/tools/python-client-library/python-client-connect-community)
 * [Learn how to run SQL queries against your database](/docs/tools/python-client-library/python-client-query)
 
 {: .note}

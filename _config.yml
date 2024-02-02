@@ -27,11 +27,12 @@ exclude:
 aux_links_new_tab: true
   # Anchor text and hyperlinks that appear in top of page nav
 aux_links:
-  Featurebase home: https://featurebase.com
-  Cloud Status: https://status.featurebase.com/
-  Glossary: /docs/concepts/glossary
-  API docs: https://api-docs-featurebase-cloud.redoc.ly/
-  Contact us: https://www.featurebase.com/contact-us
+  Home: https://featurebase.com
+  FAQ: /docs/cloud/cloud-faq/cloud-faq-home
+  API: https://api-docs-featurebase-cloud.redoc.ly/
+  SQL: /docs/sql-guide/sql-guide-home
+  Status: https://status.featurebase.com/
+  Support: https://featurebase.com/slack
 
 # permalink info found on https://jekyllrb.com/docs/permalinks/
 # WARNING: SITE LINKS WILL BREAK IF THIS IS CHANGED FROM `pretty`

@@ -1,25 +1,24 @@
 ---
-title: Manage cloud ingestion
+title: Manage data
 layout: default
-parent: Cloud
 has_children: false
-nav_order: 8
+nav_order: 7
 has_toc: false
 ---
 
-# How do I import data to my FeatureBase Cloud database?
+# How do I add data to my FeatureBase Cloud database?
 {: .no_toc }
 
-There are several ways to import data to an existing table in your database.
+There are several ways to add data to an existing table in your database.
 
 ## Before you begin
 
-* [Signup to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
-* [Learn how to connect to Cloud](/docs/cloud/cloud-db-connect/cloud-db-connect)
+* [Signup to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
+* [Learn how to connect to Cloud](/docs/cloud/cloud-getstart/cloud-db-connect)
 * [Learn how to create databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
-## What data sources can I import to FeatureBase Cloud?
+## Which data sources are supported by FeatureBase?
 
 | Data source | Method |
 |---|---|
@@ -28,6 +27,15 @@ There are several ways to import data to an existing table in your database.
 | ndjson | [SQL statements](#how-do-i-use-sql-to-import-data) |
 | orc | [SQL statements](#how-do-i-use-sql-to-import-data) |
 | parquet | [SQL statements](#how-do-i-use-sql-to-import-data) |
+
+## Is existing data overwritten or lost during import?
+
+Featurebase **does not** directly interface with your source data. Instead, FeatureBase reads data from a supported data source, and upserts to destination tables:
+
+| If rows contain... | Data is... |
+|---|---|
+| No data | Data is inserted from data source |
+| Existing data | Row is updated from data source |
 
 ## How do I use SQL to import data?
 

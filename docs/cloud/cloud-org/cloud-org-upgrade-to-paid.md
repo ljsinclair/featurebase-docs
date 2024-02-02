@@ -2,12 +2,12 @@
 title: Upgrade to a paid account
 layout: default
 parent: Manage organization
-grand_parent: Cloud
-nav_order: 4
 ---
 
-# How do I pay for my Database usage?
+# How do I upgrade my account?
 {: .no_toc }
+
+Upgrade from a Trial to Paid account
 
 ## Before you begin
 
@@ -16,17 +16,12 @@ nav_order: 4
 * [Database usage pricing](https://www.featurebase.com/pricing){:target="\_blank:}
 * [Available database sizes](https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/)
 
-## Important payment information
+## How do I upgrade my account?
 
-* FeatureBase supports all major credit cards
-* Only US bank accounts are accepted at this time
-
-## Add payment information for my organization
+You can upgrade to a Paid account using a US account number or credit card via the Stripe billing system.
 
 * Click **Configuration** > **Upgrade to Paid**.
-* Choose your payment method: **Card** or **US bank account**
-* Enter your credit card information or your bank account details.
-* Click **Submit**.
+* Complete the forms as directed.
 
 ## Modify payment or cancel account
 
@@ -34,4 +29,4 @@ nav_order: 4
 
 ## Further information
 
-* [Learn how to manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)
+* [Learn how to download PDF invoices](/docs/cloud/cloud-org/cloud-org-usage/)

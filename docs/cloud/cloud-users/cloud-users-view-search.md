@@ -2,7 +2,7 @@
 title: View users
 layout: default
 parent: Manage users
-grand_parent: Cloud
+
 nav_order: 1
 has_toc: false
 ---

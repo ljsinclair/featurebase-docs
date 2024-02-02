@@ -13,7 +13,7 @@ Int is a numeric datatype used with the `min` and `max` constraints.
 ## Syntax
 
 ```
-INT [MIN {value}] [MAX {value}]
+INT [MIN {<value>}] [MAX {<value>}]
 ```
 
 ## Arguments
@@ -25,6 +25,9 @@ INT [MIN {value}] [MAX {value}]
 | MAX | Maximum value constraint | 2^63 -1 |
 
 ## Additional information
+
+{: .warning}
+Values are truncated if they fall outside the default or user-specified `min` and `max` constraints.
 
 INT is **not suitable** for queries that
 * group by

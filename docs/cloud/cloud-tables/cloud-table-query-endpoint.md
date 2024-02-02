@@ -2,7 +2,7 @@
 title: Copy query endpoint
 layout: default
 parent: Manage tables
-grand_parent: Cloud
+
 nav_order: 4
 ---
 

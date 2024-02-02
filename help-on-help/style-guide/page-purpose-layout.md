@@ -8,6 +8,6 @@ There are seven types of page to choose from, each with a specific purpose and l
 | Process | A list of tasks that provide general information without delving into functionality | `/help-on-help/publishing-workflow/deployment-process.md` |
 | Procedure | Specific list of functional steps to perform to complete a **single** task in a **specific** area of the application. | `/docs/cloud/cloud-tables/cloud-table-create.md` |
 | Procedure series | A set of procedures that guide the user through an end-to-end use case. Constructed so individual procedures can be reused for other purposes | Community setup on Windows is a good example<br/> Part one -- `/docs/community/com-install-windows.md`<br/> Part two -- `/docs/community/com-install-linux.md` (which can **also** be performed in isolation) |
-| FAQ | Frequently asked questions kept to a minimal answer and/or link to another file which contains the correct answers. These **must** be confined to a single area of functionality. Endless scroll FAQs make content hard for users to follow. | `/docs/concepts/glossary.md` |
-| Issue | known issues which contain a description of the issue, the probable cause and workarounds or solutions. | Docs in `/docs/cloud/cloud-troubleshooting.md` |
+| FAQ | Frequently asked questions kept to a minimal answer and/or link to another file which contains the correct answers. These **must** be confined to a single area of functionality. Endless scroll FAQs make content hard for users to follow. | `/docs/cloud/cloud-faq/glossary.md` |
+| Issue | known issues which contain a description of the issue, the probable cause and workarounds or solutions. | Docs in `/docs/cloud/cloud-faq` |
 | Reference | Specifically structured reference content | Docs found under `/docs/sql-guide` |

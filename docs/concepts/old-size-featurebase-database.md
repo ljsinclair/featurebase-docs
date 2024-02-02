@@ -8,15 +8,9 @@ nav-order: 10
 
 # Sizing FeatureBase database
 
-## Before you start
-
-* [Learn how to install FeatureBase Community](/docs/community/com-home)
-
 ## Determining Hardware Requirements
 
 Ingesters in FeatureBase are stateless and can be deployed in containers and easily scaled up and down. FeatureBase is stateful and has widely varying hardware requirements depending on the size of the data and query workload. FeatureBase can also be scaled up and down, but there's enough overhead in this process that you wouldn't want to be resizing it constantly in response to shifting demand. You may also need to adjust some operating system configuration features to take full advantage of larger systems.
-
-* [Learn how to address performance issues](/docs/community/com-troubleshooting/com-troubleshooting-home)
 
 ## Memory
 

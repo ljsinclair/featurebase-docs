@@ -1,9 +1,8 @@
 ---
-title: Cloud query
+title: Running queries
 layout: default
-parent: Cloud
 has_children: true
-nav_order: 9
+nav_order: 8
 has_toc: false
 ---
 

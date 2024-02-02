@@ -19,7 +19,7 @@ Data types and constraints are used to define table columns when creating tables
 ## Before you begin
 
 {% include /sql-guide/sql-guide-before-begin.md %}
-* [Learn about data cardinality](/docs/concepts/concepts-home)
+* [Learn about data cardinality](/docs/cloud/cloud-faq/cloud-faq-data-cardinality)
 
 ## Mapping data types
 
