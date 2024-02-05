@@ -15,9 +15,6 @@ nav_order: 1
 
 | Term | Context | Additional information |
 |---|---|---|---|
-| ALL | PQL query | [PQL ALL read query](/docs/pql-guide/pql-read-all) |
-| APPLY | PQL query | [PQL APPLY read query](/docs/pql-guide/pql-read-apply) |
-| ARROW | PQL query | [PQL ARROW read query](/docs/pql-guide/pql-read-arrow) |
 | Authentication | FeatureBase Cloud | [Manage cloud users](/docs/cloud/cloud-users/cloud-users-manage) |
 | Authentication | FeatureBase Cloud | [Cloud authentication](/docs/cloud/cloud-authentication/cloud-auth-manage) |
 
@@ -26,35 +23,22 @@ nav_order: 1
 | Term | Context | Additional information |
 |---|---|---|
 | Batch (ingest) | Data import to FeatureBase | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
-| Bitmap<br/>Bitmap Index (BMI)<br/>Roaring B-Tree format (RBT) | FeatureBase database table rows | FeatureBase uses the [Roaring Bitmap](https://roaringbitmap.org/){:target="_blank"} format to store data. |
-| Bit Sliced Indexing (BSI) | Multi-bit integer and timestamp data types used for Range, Min, Max and Sum queries | * [INT data type](/docs/sql-guide/data-types/data-type-int)<br/>* [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp)<br/>* [MIN query](/docs/pql-guide/pql-read-min)<br/>* [MAX query](/docs/pql-guide/pql-read-max)<br/>* [SUM query](/docs/pql-guide/pql-read-sum) |
+| Bitmap<br/>Bitmap Index (BMI)<br/>Roaring B-Tree format (RBT) | FeatureBase database table rows | [Learn about FeatureBase Bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps) |
 
 ## C
 
 | Term | Context | Additional information |
 |---|---|---|
-| CLEAR | PQL query | [PQL CLEAR write query](/docs/pql-guide/pql-write-clear) |
-| CLEARROW | PQL query | [PQL CLEARROW write query](/docs/pql-guide/pql-write-clearrow) |
 | Concurrency | SQL/PQL Queries | Number of concurrent users running queries on data and how this may affect query latency |
-| CONSTROW | PQL query | [PQL CONSTROW read query](/docs/pql-guide/pql-read-constrow) |
-| COUNT | PQL query | [PQL COUNT read query](/docs/pql-guide/pql-read-count) |
 
 ## D
 
 | Term | Context | Additional information |
 |---|---|---|
 | Database | FeatureBase database | Dedicated resources which contain tables and data. [Manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage) |
-| Data source | Source of data imported to FeatureBase | FeatureBase imports data from external data sources via HTTPS, Kafka, SQL or CSV ingest processing |
-| Data types | Table columns | [Data types and constraints](/docs/sql-guide/data-types/data-types-home) |
-| DELETE | PQL query | [PQL DELETE write query](/docs/pql-guide/pql-write-delete) |
-| DIFFERENCE | PQL query | [PQL DIFFERENCE read query](/docs/pql-guide/pql-read-difference) |
-| DISTINCT | PQL query | [PQL DISTINCT read query](/docs/pql-guide/pql-read-distinct) |
-
-## E
-
-| Term | Context | Additional information |
-|---|---|---|
-| EXTRACT | PQL query | [PQL EXTRACT read query](/docs/pql-guide/pql-read-extract) |
+| Data modeling | Data curation prior to ingestion | [Learn about Data modeling in FeatureBase](/docs/cloud/cloud-faq/cloud-faq-data-modeling) |
+| Data source | External source of data which inclues CSV files, inline and other sources | [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
+| Data type | Table columns | [Data types and constraints](/docs/sql-guide/data-types/data-types-home) |
 
 ## F
 
@@ -68,33 +52,14 @@ nav_order: 1
 
 | Term | Context | Additional information |
 |---|---|---|
-| Group By | PQL Query | [PQL Group By Query](/docs/pql-guide/pql-read-groupby) |
-
-## H
-
-| Term | Context | Additional information |
-|---|---|---|
-|  |  |  |
+| Group By | SELECT statement | [SELECT statement](/docs/sql-guide/statements/statement-select) |
 
 ## I
 
 | Term | Context | Additional information |
 |---|---|---|
-| INCLUDESCOLUMN | PQL query | [PQL INCLUDESCOLUMN read query](/docs/pql-guide/pql-read-includescolumn) |
-| INTERSECT | PQL query | [PQL INTERSECT read query](/docs/pql-guide/pql-read-intersect) |
-| Index | FeatureBase tables | Denormalized top-level container roughly the same as an RDBMS table. |
-
-## J
-
-| Term | Context | Additional information |
-|---|---|---|
-|  |  |  |
-
-## K
-
-| Term | Context | Additional information |
-|---|---|---|
-|  |  |  |
+| `_id` | FeatureBase tables | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
+| Index | FeatureBase tables | [Learn about FeatureBase bitmap indexes](/docs/cloud/cloud-faq/cloud-faq-bitmaps) |
 
 ## L
 
@@ -102,45 +67,36 @@ nav_order: 1
 |---|---|---|
 | Latency | SQL/PQL Queries | How much time elapses between when a query is sent to a system and when the results return to the client. |
 
-
 ## M
 
 | Term | Context | Additional information |
 |---|---|---|
-| MAX | PQL Read query | [PQL MAX Read query](/docs/pql-guide/pql-read-max) |
-| MAX | SQL `int` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
-| MIN | PQL Read query | [PQL MIN Read query](/docs/pql-guide/pql-read-min) |
-| Min | SQL `int` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
+| MAX | SQL `INT` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
+| Min | SQL `INT` constraint | [INT data type](/docs/sql-guide/data-types/data-type-int) |
 | Mutex | String Data type | A FeatureBase field type similar to the Set type, in which only a single value can be set at any time. Conceptually similar to an enum type, but implemented on top of Set fields, with a performance cost from the single-value constraint. Not to be confused with the mutex synchronization primitive. |
 
 ## N
 
 | Term | Context | Additional information |
 |---|---|---|
-| Normalizing | The act of identifying the cardinality of your data in order to design the relationships between different tables. | [FeatureBase concepts](/docs/cloud/cloud-faq/cloud-faq-data-cardinality) |
-| NOT | PQL query | [PQL NOT read query](/docs/pql-guide/pql-read-not) |
+| Normalizing | Data relationships | [Learn about data cardinality](/docs/cloud/cloud-faq/cloud-faq-data-cardinality) |
 
 ## O
 
 | Term | Context | Additional information |
 |---|---|---|
-| Options | PQL Options query | [PQL OPTIONS](/docs/pql-guide/pql-options) |
-| Organization | FeatureBase Cloud | [FeatureBase Organization](/docs/cloud/cloud-org/cloud-org-manage) |
+| Organization | FeatureBase Cloud account| [FeatureBase Organization](/docs/cloud/cloud-org/cloud-org-manage) |
 
 ## P
 
 | Term | Context | Additional information |
 |---|---|---|
-| PERCENTILE | PQL query | [PQL PERCENTILE read query](/docs/pql-guide/pql-read-percentile) |
-| Pilosa | Former name of FeatureBase | [Pilosa + Molecula = FeatureBase blog post](https://www.featurebase.com/blog/pilosa-molecula-featurebase-a-story-of-evolution) |
-| Pilosa Query Language (PQL) | Database queries | [PQL-Guide](/docs/pql-guide/pql-home) |
 | Protobuf |  | Binary serialization format used for internal messages which can be used by clients as an alternative to JSON.  [Protobuf](https://developers.google.com/protocol-buffers/) |
 
 ## Q
 
 | Term | Context | Additional information |
 |---|---|---|
-| Query (PQL) | Pilosa Query Language | [PQL Guide](/docs/pql-guide/pql-home) |
 | Query (SQL) | Structured Query Language | [SQL Guide](/docs/sql-guide/sql-guide-home) |
 
 ## R
@@ -149,50 +105,27 @@ nav_order: 1
 |---|---|---|
 | Record<br/>Row | Database table row | Equivalent to RDBMS table row. FeatureBase uses "Record" to avoid confusion |
 | Roaring Bitmap | FeatureBase database | [roaringbitmap.org](https://roaringbitmap.org/){:target="_blank"} |
-| Row |  | Rows are the fundamental vertical data axis within FeatureBase. Rows are namespaced by field so the same row ID in a different field refers to a different row. |
-| Row `_id` |  |  |
-| Row (Ranged) | PQL query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
-| Row (Timestamp) | PQL query | [PQL Row read query](/docs/pql-guide/pql-read-row) |
-| Rows | PQL query | [PQL Rows read query](/docs/pql-guide/pql-read-rows) |
 
 ## S
 
 | Term | Context | Additional information |
 |---|---|---|
-| SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
+| `SET` and `SETQ` | SQL data types | [Low cardinality data types](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
 | Shard | Roaring Bitmap format | [Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format) |
-| SORT | PQL query | [PQL SORT read query](/docs/pql-guide/pql-read-sort) |
-| STORE | PQL query | [PQL STORE write query](/docs/pql-guide/pql-write-store) |
-| SUM | PQL query | [PQL SUM read query](/docs/pql-guide/pql-read-sum) |
 
 ## T
 
 | Term | Context | Additional information |
 |---|---|---|
 | Throughput | Data import/ingestion | Quantity of data that can be imported/ingested in a given time. May involve trade-off between Latency and Freshness |
-| Time Quantum | SQL IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| Time Quantum | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq) |
 | Timestamp | Data type | [Timestamp data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| TTL (Time To Live) |  IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
-| TopK | PQL query | [PQL TOPK read query](/docs/pql-guide/pql-read-topk) |
-| TopN | PQL query | [PQL TOPN read query](/docs/pql-guide/pql-read-topn) |
-
-## U
-
-| Term | Context | Additional information |
-|---|---|---|
-| UNION | PQL query | [PQL UNION read query](/docs/pql-guide/pql-read-union) |
-| UNIONROWS | PQL query | [PQL UNIONROWS read query](/docs/pql-guide/pql-read-unionrows) |
+| TTL (Time To Live) | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq) |
 
 ## V
 
 | Term | Context | Additional information |
 |---|---|---|
-| View | FeatureBase fields | Internally managed method to separate data layouts within a field. Not exposed by the API |
+| View | FeatureBase fields | [CREATE VIEW statement](/docs/sql-guide/statements/statement-view-create) |
 | View (Primary) | FeatureBase fields | Standard view that represents typical base data |
 | View (Time-based) | FeatureBase fields | Automatically generated view for time quantum fields |
-
-## W - X - Y - Z
-
-| Term | Context | Additional information |
-|---|---|---|
-| XOR | PQL query | [PQL XOR read query](/docs/pql-guide/pql-read-xor) |

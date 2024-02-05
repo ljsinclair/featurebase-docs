@@ -21,7 +21,7 @@ You can also upload CSV data using the [BULK INSERT statement](/docs/sql-guide/s
 
 ## Naming standards
 
-{% include /concepts/standard-naming-obj.md%}
+{% include /faq/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 
 ## CSV file structure

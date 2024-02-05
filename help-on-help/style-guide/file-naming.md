@@ -6,7 +6,7 @@ Content files are added to `/docs` subfolders.
 
 | Area of interest | Parent | Subfolders | Filenames | Example |
 |---|---|---|---|---|
-| High level overviews | `/docs/concepts` | none | `/concepts/overview-<concept>.md` | `/concepts/overview-data-modeling.md` |
+| High level overviews | `/docs/cloud/cloud-faq/cloud-faq-home` | none | `/docs/cloud/cloud-faq/cloud-faq-<subject>` | `/docs/cloud/cloud-faq/cloud-faq-data-modeling` |
 | Cloud product | `/docs/cloud` | `/cloud-<feature>` | `cloud-<feature>-<task>.md` | `/cloud/cloud-database/cloud-database-manage.md` |
 | Community product | `/docs/community/` | `/com-<feature>` | `com-<feature>-<task>.md` | `/community/com-tables/com-tables-create.md` |
 | SQL-guide (was SQL-preview) | `/docs/sql-guide` | `/docs/sql-guide/statements/statement-table-create.md`<br/>`/docs/sql-guide/functions/functions-home.md` |  

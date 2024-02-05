@@ -39,5 +39,5 @@ VECTOR({length})
 ## Further information
 
 The following functions can be included in SELECT queries to measure VECTOR values:
-* [COSINE_DISTANCE function](/docs/sql-guide/functions/function-cosine-distance)
-* [EUCLIDEAN_DISTANCE function](/docs/sql-guide/functions/function-euclidean-distance)
+* [COSINE_DISTANCE function](/docs/sql-guide/functions/function-vector-distances)
+* [EUCLIDEAN_DISTANCE function](/docs/sql-guide/functions/function-vector-distances)

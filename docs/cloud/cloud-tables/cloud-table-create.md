@@ -9,7 +9,7 @@ nav_order: 1
 # How do I create a table in FeatureBase Cloud?
 {: .no_toc }
 
-{% include /concepts/summary-table-create.md %}
+{% include /faq/summary-table-create.md %}
 
 {% include page-toc.md %}
 
@@ -22,7 +22,7 @@ nav_order: 1
 
 ## Naming standards
 
-{% include /concepts/standard-naming-obj.md%}
+{% include /faq/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 
 ## Step 1: create table

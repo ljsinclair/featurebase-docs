@@ -39,7 +39,7 @@ FeatureBase equality encoding:
 
 ## How does FeatureBase equality encode data?
 
-{% include /concepts/concept-bitmap-source-data-table.md %}
+{% include /faq/concept-bitmap-source-data-table.md %}
 
 The `historical_name` data can be equality-encoded as follows:
 
@@ -112,7 +112,7 @@ FeatureBase avoids these issues by bit-slicing integer values.
 
 ## Bitmap storage overheads
 
-{% include /concepts/concept-bitmap-storage-overhead-table.md %}
+{% include /faq/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 * [Learn about bitmap compression with Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)

@@ -16,13 +16,9 @@ has_toc: false
 
 ## Looking for older documentation?
 
-{: .important}
-FeatureBase Community help has been moved.
-
 | Question | Answer |
 |---|---|
-Where do I find older documentation? | [Link to FB Community help repo](url here) |
-| GRPC endpoint has gone boom | [GRPC Help]()
+| Where do I find older documentation? | [Link to FB Community help repo](https://featurebasedb.github.io/FB-community-help/){:target="_blank"} |
 
 ## Conceptual FAQ
 

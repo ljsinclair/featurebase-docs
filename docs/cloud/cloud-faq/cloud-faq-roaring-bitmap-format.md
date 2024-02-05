@@ -8,7 +8,7 @@ nav_order: 3
 # How does FeatureBase reduce storage overheads?
 {: .no_toc }
 
-{% include /concepts/concept-bitmap-storage-overhead-table.md %}
+{% include /faq/concept-bitmap-storage-overhead-table.md %}
 
 {% include page-toc.md %}
 

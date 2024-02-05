@@ -31,7 +31,7 @@ An overview of folder structure and files
 | `/assets/images` | Site image files found in logically named subfolders | As of 2023-02-21 contains images from /molecula/documentation which will be removed in future PRs |
 | `/docs` | All content pages found in this folder. |  |
 | `/docs/cloud` | All FeatureBase Cloud help pages | `old` prefix folders and files are originals to be rewritten |
-| `/docs/concepts` | High level conceptual information regarding FeatureBase applications | Updates in progress |
+| `/docs/cloud/cloud-faq` | High level conceptual information regarding FeatureBase applications | Updates in progress |
 | `/docs/pql-guide` | All FeatureBase PQL-Guide help pages | Files largely unchanged from `/molecula/documentation` |
 | `/docs/sql-guide` | All FeatureBase SQL-Guide help pages | Was `/sql-preview` |
 | `/help-on-help` | Internal only help on FeatureBase Docs | Folder excluded from production build in `/_config.yml` |

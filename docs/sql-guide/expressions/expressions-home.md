@@ -17,7 +17,7 @@ nav_order: 5
 ## `identifier`
 ![expr](/assets/images/sql-guide/identifier.svg)
 
-{% include /concepts/standard-naming-obj.md %}
+{% include /faq/standard-naming-obj.md %}
 
 ## `expr`
 

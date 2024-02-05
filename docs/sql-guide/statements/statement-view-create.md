@@ -35,7 +35,7 @@ CREATE VIEW view_name
 
 ### Naming standards
 
-{% include /concepts/standard-naming-obj.md %}
+{% include /faq/standard-naming-obj.md %}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 

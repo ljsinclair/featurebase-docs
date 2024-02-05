@@ -20,7 +20,7 @@ The sample database uses 32GB and costs $1USD/hour. Remember to [Delete the data
 
 ## Naming standards
 
-{% include /concepts/standard-naming-obj.md %}
+{% include /faq/standard-naming-obj.md %}
 
 ## How do I provision a sample database?
 

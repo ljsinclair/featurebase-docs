@@ -21,7 +21,7 @@ Add a column to an existing table and set constraints if required.
 
 ## Naming standard
 
-{% include /concepts/standard-naming-obj.md%}
+{% include /faq/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
 {: .note }

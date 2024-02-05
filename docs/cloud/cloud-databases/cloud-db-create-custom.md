@@ -22,7 +22,7 @@ nav_order: 3
 
 ## Naming standards
 
-{% include /concepts/standard-naming-obj.md %}
+{% include /faq/standard-naming-obj.md %}
 
 {: .note}
 FeatureBase Cloud database names can be up to 300 characters in length

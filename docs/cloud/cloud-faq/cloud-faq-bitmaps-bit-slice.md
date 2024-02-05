@@ -30,7 +30,7 @@ User data mapped to the following data types is converted to bit-sliced bitmaps:
 
 ## How does FeatureBase bit-slice integer data?
 
-{% include /concepts/concept-bitmap-source-data-table.md %}
+{% include /faq/concept-bitmap-source-data-table.md %}
 
 By bit-slicing, the `downloads` data can be encoded:
 * as 3 bits
@@ -95,7 +95,7 @@ The bit-slice columns can now be saved as individual bitmaps. For example:
 
 ## Bitmap storage overheads
 
-{% include /concepts/concept-bitmap-storage-overhead-table.md %}
+{% include /faq/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
