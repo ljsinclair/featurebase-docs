@@ -1,6 +1,9 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
+env:
+  NODE_VERSION: '20.x'
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -26,7 +29,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }} 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -51,3 +56,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }} 
