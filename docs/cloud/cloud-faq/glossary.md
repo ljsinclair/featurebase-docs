@@ -44,7 +44,7 @@ nav_order: 1
 
 | Term | Context | Additional information |
 |---|---|---|
-| Field | Table rows | Field data types to group rows into different categories:<br/>* [`bool`](/docs/sql-guide/data-types/data-type-bool)<br/>* [`int`](/docs/sql-guide/data-types/data-type-int)<br/>* [`set`](/docs/pql-guide/pql-write-set)<br/>* [`time`]()<br/>* [`timestamp`](/docs/sql-guide/data-types/data-type-timestamp)<br/>* [Mutex]()|
+| Field | Table rows | Field data types to group rows into different categories:<br/>* [`bool`](/docs/sql-guide/data-types/data-type-bool)<br/>* [`int`](/docs/sql-guide/data-types/data-type-int)<br/>* [`timestamp`](/docs/sql-guide/data-types/data-type-timestamp)|
 | Fields, ranked | Table rows | Rows kept in sorted order within the field. |
 | Freshness | Data import/ingest | How much time elapses from when a data point is "sensed" by the system, until that data point will affect the results of a query. |
 

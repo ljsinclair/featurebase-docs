@@ -18,8 +18,7 @@ FeatureBase Cloud has a built-in query editor that supports queries written usin
 {% include /cloud-db/cloud-db-dependencies.md %}
 * [Learn how to import data to FeatureBase](/docs/cloud/cloud-ingest/cloud-ingest-manage)
 * [Learn how to query FeatureBase data](/docs/cloud/cloud-query/cloud-query-home)
-* [FeatureBase SQL](/docs/sql-guide/sql-guide-home)
-* [Pilosa Query Language](/docs/pql-guide/pql-home)
+* [FeatureBase SQL-guide](/docs/sql-guide/sql-guide-home)
 
 ## How do I use the Cloud Query editor?
 

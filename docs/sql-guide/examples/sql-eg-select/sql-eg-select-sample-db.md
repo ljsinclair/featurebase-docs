@@ -113,61 +113,6 @@ WHERE age=18
 GROUP BY education;
 ```
 
-### Count records using joins
-
-The following ```INNER JOIN``` query is built using the PQL query language, native to FeatureBase.
-
-{: .note}
->**PQL** (Pilosa Query Language) is the native query language in FeatureBase
->* [Learn more about PQL](/docs/pql-guide/pql-home)
-
-Prove there are 89 teachers available to hire by running this PQL query:
-
-```
-[cseg]Count(Intersect(
-Row(hobbies="Teaching"),
-Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
-```
-
-### Ranking queries
-
-Return the top five hobbies from the `cseg` table using the PQL equivalent to a `GROUP BY` query.
-
-```
-[cseg]TopK(hobbies, k=5)
-```
-
-Result:
-```
-field           | count
-----------------+-----------
-Lego building   | 533344432
-Watching movies | 464147056
-Watch making    | 406943232
-Slacklining     | 359565952
-BMX             | 319970304
-```
-
-Return the top 10 hobbies for women who also like scuba-diving:
-```
-[cseg]TopK(hobbies, k=10, filter=Intersect(Row(sex=Female),Row(hobbies='Scuba Diving')))
-```
-
-Result:
-```
-field              |count
--------------------+----------
-Scuba Diving       | 94048
-Lego building      | 88624
-Watching movies    | 85648
-Watch making       | 83680
-Slacklining        | 81248
-BMX                | 78800
-Cricket            | 75968
-Sketching          | 73536
-Satellite watching | 71152
-```
-
 ## Next step
 
 {: .important}

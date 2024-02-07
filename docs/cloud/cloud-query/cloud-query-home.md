@@ -17,8 +17,7 @@ FeatureBase cloud supports SQL and native Pilosa Query Language (PQL) for querie
 
 {% include /cloud-db/cloud-db-dependencies.md %}
 * [Learn how to import data to FeatureBase](/docs/cloud/cloud-ingest/cloud-ingest-manage)
-* [Learn about SQL](/docs/sql-guide/sql-guide-home)
-* [Learn about PQL](/docs/pql-guide/pql-home)
+* [FeatureBase SQL-Guide](/docs/sql-guide/sql-guide-home)
 
 ## How do I run SQL on Cloud data?
 
