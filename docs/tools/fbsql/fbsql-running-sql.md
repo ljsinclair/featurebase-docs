@@ -78,7 +78,7 @@ This reference explains fbsql flags relating to database connections and schema
 | Flag | Description | Additional information |
 |---|---|---|
 | `set` | List all variable names |  |
-| `[set|unset] <variable-name>` | Set or unset named variable |  |
+| `[set|unset] <variable-name>` | Set or unset named variable | Named variables in single quotation marks are treated as string literals in queries |
 | `set <variable-name> <value>...` | Set a variable name and value. Multiple values are concatenated. | [SET variable names](#set-variable-names) |
 
 ## SQL query syntax
