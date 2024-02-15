@@ -43,7 +43,10 @@ Data types and constraints are used to define table columns when creating tables
 
 ## String data types
 
-* [STRING](/docs/sql-guide/data-types/data-type-string)
+| User data | Data type |
+|---|---|
+| Sequence of characters up to 256mb | [STRING](/docs/sql-guide/data-types/data-type-string) |
+| Fixed-length sequence of characters | [VARCHAR](/docs/sql-guide/data-types/data-type-varchar) |
 
 ## Low-cardinality data types
 

@@ -32,6 +32,10 @@ SHOW CREATE TABLE table_name;
 |---|---|---|
 | `ddl` | String | DDL for CREATE TABLE statement |
 
+## Additional information
+
+* Run `SELECT * FROM fb_table_ddl` to output all table DDL
+
 ## Examples
 
 ### Show DDL for sample data `skills` table

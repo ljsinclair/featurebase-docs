@@ -38,6 +38,15 @@ KEYWORD
 [ optional elements ]
 ```
 
+## View history
+
+System tables contain a history of queries and other information
+
+| History required | Query |
+|---|---|
+| Database metrics | `SELECT * FROM fb_performance_counters;` |
+| Query log | `SELECT * FROM fb_exec_requests;` |
+
 ## Statements
 
 * [SQL statements](/docs/sql-guide/statements/statements-home)

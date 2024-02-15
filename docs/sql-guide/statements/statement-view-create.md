@@ -33,6 +33,8 @@ CREATE VIEW view_name
 
 ## Additional information
 
+* Run `SELECT * FROM fb_views` to output SELECT statements used to populate a view.
+
 ### Naming standards
 
 {% include /faq/standard-naming-obj.md %}

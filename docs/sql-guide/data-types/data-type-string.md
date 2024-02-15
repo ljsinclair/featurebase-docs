@@ -15,14 +15,14 @@ The `STRING` data type has a `keyed-mutex` internal type and is recommended for 
 ## Syntax
 
 ```
-STRING
+STRING[(max)]
 ```
 
 ## Arguments
 
 | Argument | Description |
 |---|---|
-| STRING | Used for STRING, CHAR and VARCHAR data. |
+{% include /sql-guide/max-val-string-varchar.md %}
 
 ## Additional information
 

@@ -3,7 +3,7 @@ title: VECTOR
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 11
+nav_order: 12
 ---
 
 # VECTOR() data type
