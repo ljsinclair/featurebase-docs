@@ -35,14 +35,9 @@ import featurebase
 # FeatureBase Cloud client
 print("Connecting to FeatureBase Cloud...")
 client = featurebase.client(
-#hostport = "https://query.featurebase.com/v2/",
+hostport = "https://query.featurebase.com/v2/",
 database = "<cloud-database-id>",  # Replace with your own database id
 apikey = "<cloud-api-key>")    # Replace with your API key
-
-# FeatureBase Community client
-#print ("Connecting to FeatureBase Community...")
-#client = featurebase.client(
-#hostport = "localhost:10101")
 
 # DROP demo table
 print ("Dropping table if it exists")
@@ -91,14 +86,9 @@ import time
 # FeatureBase Cloud client
 print("Connecting to FeatureBase Cloud...")
 client = featurebase.client(
-#hostport = "https://query.featurebase.com/v2/",
+hostport = "https://query.featurebase.com/v2/",
 database = "<cloud-database-id>",  # Replace with your own database id
 apikey = "<cloud-api-key>")    # Replace with your API key
-
-# FeatureBase Community client
-#print ("Connecting to FeatureBase Community...")
-#client = featurebase.client(
-#hostport = "localhost:10101")
 
 # Generate random data
 def get_random_string(length: int):
