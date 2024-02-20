@@ -35,4 +35,4 @@ nav_order: 1
 
 ## Next step
 
-{% include /python-lib/python-lib-connect-db-links.md %}
+* [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud)
