@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 30
 ---
 
-## KILL QUERY statement
+# KILL QUERY statement
 
 Kills a running SQL query. If the targeted query is not in running status then the kill statement will not be successful.
 

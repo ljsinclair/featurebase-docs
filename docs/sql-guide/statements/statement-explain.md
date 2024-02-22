@@ -11,6 +11,11 @@ nav_order: 13
 
 Prefix any valid SQL query with `EXPLAIN` to output an execution plan for the statement that follows.
 
+## BNF diagram
+
+![expr](/assets/images/sql-guide/explain_stmt.svg)
+![expr](/assets/images/sql-guide/statement.svg)
+
 ## Before you begin
 
 

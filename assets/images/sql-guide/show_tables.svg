@@ -1,77 +1,77 @@
-<svg class="railroad-diagram" height="71" viewbox="0 0 408.5 71" width="408.5" xmlns="http://www.w3.org/2000/svg">
+<svg class="railroad-diagram" height="70" viewbox="0 0 408.5 70" width="408.5" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(.5 .5)">
   <g>
-   <path d="M20 30v20m10 -20v20m-10 -10h20">
+   <path d="M20 29v20m10 -20v20m-10 -10h20">
    </path>
   </g>
-  <path d="M40 40h10">
+  <path d="M40 39h10">
   </path>
   <g>
-   <path d="M50 40h0">
+   <path d="M50 39h0">
    </path>
-   <path d="M358.5 40h0">
+   <path d="M358.5 39h0">
    </path>
    <g class="terminal">
-    <path d="M50 40h0">
+    <path d="M50 39h0">
     </path>
-    <path d="M104 40h0">
+    <path d="M104 39h0">
     </path>
-    <rect height="22" rx="10" ry="10" width="54" x="50" y="29">
+    <rect height="22" rx="10" ry="10" width="54" x="50" y="28">
     </rect>
-    <text x="77" y="44">
+    <text x="77" y="43">
      SHOW
     </text>
    </g>
-   <path d="M104 40h10">
+   <path d="M104 39h10">
    </path>
-   <path d="M114 40h10">
+   <path d="M114 39h10">
    </path>
    <g class="terminal">
-    <path d="M124 40h0">
+    <path d="M124 39h0">
     </path>
-    <path d="M195 40h0">
+    <path d="M195 39h0">
     </path>
-    <rect height="22" rx="10" ry="10" width="71" x="124" y="29">
+    <rect height="22" rx="10" ry="10" width="71" x="124" y="28">
     </rect>
-    <text x="159.5" y="44">
+    <text x="159.5" y="43">
      TABLES
     </text>
    </g>
-   <path d="M195 40h10">
+   <path d="M195 39h10">
    </path>
    <g>
-    <path d="M205 40h0">
+    <path d="M205 39h0">
     </path>
-    <path d="M358.5 40h0">
+    <path d="M358.5 39h0">
     </path>
-    <path d="M205 40a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+    <path d="M205 39a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
     </path>
     <g>
-     <path d="M225 20h113.5">
+     <path d="M225 19h113.5">
      </path>
     </g>
-    <path d="M338.5 20a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+    <path d="M338.5 19a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
     </path>
-    <path d="M205 40h20">
+    <path d="M205 39h20">
     </path>
     <g class="terminal">
-     <path d="M225 40h0">
+     <path d="M225 39h0">
      </path>
-     <path d="M338.5 40h0">
+     <path d="M338.5 39h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="113.5" x="225" y="29">
+     <rect height="22" rx="10" ry="10" width="113.5" x="225" y="28">
      </rect>
-     <text x="281.75" y="44">
+     <text x="281.75" y="43">
       WITH SYSTEM
      </text>
     </g>
-    <path d="M338.5 40h20">
+    <path d="M338.5 39h20">
     </path>
    </g>
   </g>
-  <path d="M358.5 40h10">
+  <path d="M358.5 39h10">
   </path>
-  <path d="M 368.5 40 h 20 m -10 -10 v 20 m 10 -20 v 20">
+  <path d="M 368.5 39 h 20 m -10 -10 v 20 m 10 -20 v 20">
   </path>
  </g>
  <style>

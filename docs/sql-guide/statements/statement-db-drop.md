@@ -10,6 +10,10 @@ nav_order: 4
 
 Drops the specified database.
 
+## BNF diagram
+
+![expr](/assets/images/sql-guide/drop_db.svg)
+
 ## Syntax
 
 ```sql
@@ -25,5 +29,5 @@ DROP DATABASE database_name;
 ## Example
 
 ```sql
-DROP DATABASE test_db
+DROP DATABASE test_db;
 ```

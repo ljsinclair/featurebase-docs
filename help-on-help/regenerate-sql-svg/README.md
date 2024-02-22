@@ -17,9 +17,9 @@ The following files perform specific functions:
 ## Before you begin
 
 * Install python3
-* Install `npn` if not already installed
+* Install `npm` if not already installed
 * Install `pip` or `conda` if not already installed
-* Clone `/featurebase-docs` and create an appropriate branch.
+* Clone `https://github.com/FeatureBaseDB/featurebase-docs` and create a branch for the BNF updates
 
 ## Step 1 - install dependencies if required
 
@@ -36,7 +36,11 @@ Use `pip` or `conda` to install dependencies if these are not already installed.
 
 ## Step 2 - Make changes to source file
 
-Make required alterations to the `sql3.ebnf` file
+{: .note}
+Extended Bakaus Naur Form grammar is listed at the end of the sql3.ebnf file
+
+* CD to `featurebase-docs/help-on-help/regenerate-sql-svg`
+* Edit  `sql3.ebnf`
 
 ## Step 3 - generate the sql3.html file
 

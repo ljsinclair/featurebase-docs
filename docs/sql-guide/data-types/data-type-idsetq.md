@@ -13,7 +13,7 @@ IDSETQ is a FeatureBase datatype used to associate multiple TIMESTAMP values wit
 ## Syntax
 
 ```
-IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]
+IDSETQ TIMEQUANTUM {value} [TTL '{value}']
 ```
 
 ## Arguments

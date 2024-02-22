@@ -1,4 +1,4 @@
-<svg class="railroad-diagram" height="122" viewbox="0 0 425.5 122" width="425.5" xmlns="http://www.w3.org/2000/svg">
+<svg class="railroad-diagram" height="92" viewbox="0 0 533.5 92" width="533.5" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(.5 .5)">
   <g>
    <path d="M20 21v20m0 -10h20">
@@ -9,7 +9,7 @@
   <g>
    <path d="M50 31h0">
    </path>
-   <path d="M375.5 31h0">
+   <path d="M483.5 31h0">
    </path>
    <g class="terminal">
     <path d="M50 31h0">
@@ -39,67 +39,67 @@
    </g>
    <path d="M195 31h10">
    </path>
+   <path d="M205 31h10">
+   </path>
+   <g class="non-terminal">
+    <path d="M215 31h0">
+    </path>
+    <path d="M320 31h0">
+    </path>
+    <rect height="22" width="105" x="215" y="20">
+    </rect>
+    <a>
+     <text x="267.5" y="35">
+      table_name
+     </text>
+    </a>
+   </g>
+   <path d="M320 31h10">
+   </path>
    <g>
-    <path d="M205 31h0">
+    <path d="M330 31h0">
     </path>
-    <path d="M375.5 31h0">
+    <path d="M483.5 31h0">
     </path>
-    <path d="M205 31h20">
+    <path d="M330 31h20">
     </path>
     <g class="non-terminal">
-     <path d="M225 31h12.75">
+     <path d="M350 31h4.25">
      </path>
-     <path d="M342.75 31h12.75">
+     <path d="M459.25 31h4.25">
      </path>
-     <rect height="22" width="105" x="237.75" y="20">
+     <rect height="22" width="105" x="354.25" y="20">
      </rect>
      <a>
-      <text x="290.25" y="35">
+      <text x="406.75" y="35">
        add_column
       </text>
      </a>
     </g>
-    <path d="M355.5 31h20">
+    <path d="M463.5 31h20">
     </path>
-    <path d="M205 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10">
+    <path d="M330 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10">
     </path>
     <g class="non-terminal">
-     <path d="M225 61h8.5">
+     <path d="M350 61h0">
      </path>
-     <path d="M347 61h8.5">
+     <path d="M463.5 61h0">
      </path>
-     <rect height="22" width="113.5" x="233.5" y="50">
+     <rect height="22" width="113.5" x="350" y="50">
      </rect>
      <a>
-      <text x="290.25" y="65">
+      <text x="406.75" y="65">
        drop_column
       </text>
      </a>
     </g>
-    <path d="M355.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10">
-    </path>
-    <path d="M205 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10">
-    </path>
-    <g class="non-terminal">
-     <path d="M225 91h0">
-     </path>
-     <path d="M355.5 91h0">
-     </path>
-     <rect height="22" width="130.5" x="225" y="80">
-     </rect>
-     <a>
-      <text x="290.25" y="95">
-       rename_column
-      </text>
-     </a>
-    </g>
-    <path d="M355.5 91a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10">
+    <path d="M463.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10">
     </path>
    </g>
   </g>
-  <path d="M375.5 31h10">
+  <path d="M483.5 31h10">
   </path>
-  <path d="M 385.5 31 h 20 m 0 -10 v 20">
+  <path d="M 493.5 31 h 20 m 0 -10 v 20">
   </path>
  </g>
  <style>

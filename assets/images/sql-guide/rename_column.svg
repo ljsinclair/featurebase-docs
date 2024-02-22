@@ -1,109 +1,109 @@
-<svg class="railroad-diagram" height="71" viewbox="0 0 589 71" width="589" xmlns="http://www.w3.org/2000/svg">
+<svg class="railroad-diagram" height="70" viewbox="0 0 589 70" width="589" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(.5 .5)">
   <g>
-   <path d="M20 30v20m0 -10h20">
+   <path d="M20 29v20m0 -10h20">
    </path>
   </g>
-  <path d="M40 40h10">
+  <path d="M40 39h10">
   </path>
   <g>
-   <path d="M50 40h0">
+   <path d="M50 39h0">
    </path>
-   <path d="M539 40h0">
+   <path d="M539 39h0">
    </path>
    <g class="terminal">
-    <path d="M50 40h0">
+    <path d="M50 39h0">
     </path>
-    <path d="M121 40h0">
+    <path d="M121 39h0">
     </path>
-    <rect height="22" rx="10" ry="10" width="71" x="50" y="29">
+    <rect height="22" rx="10" ry="10" width="71" x="50" y="28">
     </rect>
-    <text x="85.5" y="44">
+    <text x="85.5" y="43">
      RENAME
     </text>
    </g>
-   <path d="M121 40h10">
+   <path d="M121 39h10">
    </path>
    <g>
-    <path d="M131 40h0">
+    <path d="M131 39h0">
     </path>
-    <path d="M242 40h0">
+    <path d="M242 39h0">
     </path>
-    <path d="M131 40a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+    <path d="M131 39a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
     </path>
     <g>
-     <path d="M151 20h71">
+     <path d="M151 19h71">
      </path>
     </g>
-    <path d="M222 20a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+    <path d="M222 19a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
     </path>
-    <path d="M131 40h20">
+    <path d="M131 39h20">
     </path>
     <g class="terminal">
-     <path d="M151 40h0">
+     <path d="M151 39h0">
      </path>
-     <path d="M222 40h0">
+     <path d="M222 39h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="71" x="151" y="29">
+     <rect height="22" rx="10" ry="10" width="71" x="151" y="28">
      </rect>
-     <text x="186.5" y="44">
+     <text x="186.5" y="43">
       COLUMN
      </text>
     </g>
-    <path d="M222 40h20">
+    <path d="M222 39h20">
     </path>
    </g>
-   <path d="M242 40h10">
+   <path d="M242 39h10">
    </path>
    <g class="non-terminal">
-    <path d="M252 40h0">
+    <path d="M252 39h0">
     </path>
-    <path d="M357 40h0">
+    <path d="M357 39h0">
     </path>
-    <rect height="22" width="105" x="252" y="29">
+    <rect height="22" width="105" x="252" y="28">
     </rect>
     <a>
-     <text x="304.5" y="44">
+     <text x="304.5" y="43">
       identifier
      </text>
     </a>
    </g>
-   <path d="M357 40h10">
+   <path d="M357 39h10">
    </path>
-   <path d="M367 40h10">
+   <path d="M367 39h10">
    </path>
    <g class="terminal">
-    <path d="M377 40h0">
+    <path d="M377 39h0">
     </path>
-    <path d="M414 40h0">
+    <path d="M414 39h0">
     </path>
-    <rect height="22" rx="10" ry="10" width="37" x="377" y="29">
+    <rect height="22" rx="10" ry="10" width="37" x="377" y="28">
     </rect>
-    <text x="395.5" y="44">
+    <text x="395.5" y="43">
      TO
     </text>
    </g>
-   <path d="M414 40h10">
+   <path d="M414 39h10">
    </path>
-   <path d="M424 40h10">
+   <path d="M424 39h10">
    </path>
    <g class="non-terminal">
-    <path d="M434 40h0">
+    <path d="M434 39h0">
     </path>
-    <path d="M539 40h0">
+    <path d="M539 39h0">
     </path>
-    <rect height="22" width="105" x="434" y="29">
+    <rect height="22" width="105" x="434" y="28">
     </rect>
     <a>
-     <text x="486.5" y="44">
+     <text x="486.5" y="43">
       identifier
      </text>
     </a>
    </g>
   </g>
-  <path d="M539 40h10">
+  <path d="M539 39h10">
   </path>
-  <path d="M 549 40 h 20 m 0 -10 v 20">
+  <path d="M 549 39 h 20 m 0 -10 v 20">
   </path>
  </g>
  <style>

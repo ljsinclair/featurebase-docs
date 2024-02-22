@@ -10,6 +10,10 @@ nav_order: 2
 
 Show detail on all databases in the system.
 
+## BNF diagram
+
+![expr](/assets/images/sql-guide/show_db.svg)
+
 ## Syntax
 
 ```

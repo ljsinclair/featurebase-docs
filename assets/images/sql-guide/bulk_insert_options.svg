@@ -1,84 +1,84 @@
-<svg class="railroad-diagram" height="80" viewbox="0 0 516 80" width="516" xmlns="http://www.w3.org/2000/svg">
+<svg class="railroad-diagram" height="79" viewbox="0 0 516 79" width="516" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(.5 .5)">
   <g>
-   <path d="M20 30v20m0 -10h20">
+   <path d="M20 29v20m0 -10h20">
    </path>
   </g>
-  <path d="M40 40h10">
+  <path d="M40 39h10">
   </path>
   <g>
-   <path d="M50 40h0">
+   <path d="M50 39h0">
    </path>
-   <path d="M466 40h0">
+   <path d="M466 39h0">
    </path>
    <g class="non-terminal">
-    <path d="M50 40h0">
+    <path d="M50 39h0">
     </path>
-    <path d="M223 40h0">
+    <path d="M223 39h0">
     </path>
-    <rect height="22" width="173" x="50" y="29">
+    <rect height="22" width="173" x="50" y="28">
     </rect>
     <a>
-     <text x="136.5" y="44">
+     <text x="136.5" y="43">
       bulk_insert_option
      </text>
     </a>
    </g>
-   <path d="M223 40h10">
+   <path d="M223 39h10">
    </path>
    <g>
-    <path d="M233 40h0">
+    <path d="M233 39h0">
     </path>
-    <path d="M466 40h0">
+    <path d="M466 39h0">
     </path>
-    <path d="M233 40a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+    <path d="M233 39a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
     </path>
     <g>
-     <path d="M253 20h193">
+     <path d="M253 19h193">
      </path>
     </g>
-    <path d="M446 20a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+    <path d="M446 19a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
     </path>
-    <path d="M233 40h20">
+    <path d="M233 39h20">
     </path>
     <g>
-     <path d="M253 40h0">
+     <path d="M253 39h0">
      </path>
-     <path d="M446 40h0">
+     <path d="M446 39h0">
      </path>
-     <path d="M253 40h10">
+     <path d="M253 39h10">
      </path>
      <g class="non-terminal">
-      <path d="M263 40h0">
+      <path d="M263 39h0">
       </path>
-      <path d="M436 40h0">
+      <path d="M436 39h0">
       </path>
-      <rect height="22" width="173" x="263" y="29">
+      <rect height="22" width="173" x="263" y="28">
       </rect>
       <a>
-       <text x="349.5" y="44">
+       <text x="349.5" y="43">
         bulk_insert_option
        </text>
       </a>
      </g>
-     <path d="M436 40h10">
+     <path d="M436 39h10">
      </path>
-     <path d="M263 40a10 10 0 0 0 -10 10v0a10 10 0 0 0 10 10">
+     <path d="M263 39a10 10 0 0 0 -10 10v0a10 10 0 0 0 10 10">
      </path>
      <g>
-      <path d="M263 60h173">
+      <path d="M263 59h173">
       </path>
      </g>
-     <path d="M436 60a10 10 0 0 0 10 -10v0a10 10 0 0 0 -10 -10">
+     <path d="M436 59a10 10 0 0 0 10 -10v0a10 10 0 0 0 -10 -10">
      </path>
     </g>
-    <path d="M446 40h20">
+    <path d="M446 39h20">
     </path>
    </g>
   </g>
-  <path d="M466 40h10">
+  <path d="M466 39h10">
   </path>
-  <path d="M 476 40 h 20 m 0 -10 v 20">
+  <path d="M 476 39 h 20 m 0 -10 v 20">
   </path>
  </g>
  <style>

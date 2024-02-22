@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-## CREATE TABLE statement
+# CREATE TABLE statement
 
 Create a FeatureBase table with the specified columns and data types.
 
@@ -17,11 +17,8 @@ Create a FeatureBase table with the specified columns and data types.
 ### COLUMN_LIST
 ![expr](/assets/images/sql-guide/column_def.svg)
 
-#### Type_name
+#### Data types
 ![expr](/assets/images/sql-guide/type_name.svg)
-
-#### Column_constraint
-![expr](/assets/images/sql-guide/column_constraint.svg)
 
 ### Table_options
 ![expr](/assets/images/sql-guide/table_options.svg)
@@ -31,19 +28,19 @@ Create a FeatureBase table with the specified columns and data types.
 ```
 CREATE TABLE
   [IF NOT EXISTS]
-  table_name
+  <table_name>
   (COLUMN_LIST)
-  [with comment 'comment'];
+  [WITH COMMENT 'comment'];
 ```
 
 ## Arguments
 
 | Argument | Description | Required? | Additional information |
 |---|---|---|
-| `table_name` | Valid table name | Yes | [Naming standards](#naming-standards)
-| `IF NOT EXISTS` | Optional argument that stops statement execution if a table of the same name already exists | No |  |
-| COLUMN_LIST | List of column names, data types and optional constraints. The list must include the `_id` column | Yes | * [_id column](#_id-column)<br/>* [Naming standards](#naming-standards)<br/>* [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `with comment` | Optional string literal that describes the table | No |  |
+| `<table_name>` | String literal table identifier | Yes | [Naming standards](#naming-standards) |
+| `IF NOT EXISTS` | Stop statement execution if a table of the same name already exists | Optional |  |
+| COLUMN_LIST | List of column names, data types and optional constraints with leading `_id` column that can be `ID` or `STRING` data type | Yes | * [_id column](#_id-column)<br/>* [Naming standards](#naming-standards)<br/>* [ID data type](/docs/sql-guide/data-types/data-types-id)<br/>* [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+| `WITH COMMENT` | Optional string literal that describes the table | No |  |
 
 ## Additional information
 

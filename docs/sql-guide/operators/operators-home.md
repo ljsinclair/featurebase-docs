@@ -15,6 +15,8 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ## Unary Operators
 
+![expr](/assets/images/sql-guide/unary_op.svg)
+
 ### Sign
 
 | Operator | Description | Example | Result |
@@ -28,6 +30,8 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 | `!` | **Not** inverts all the bits of the operand using [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) | `SELECT !5;` | `0101` | `1010` --> `(-8)+(0)+(2)+(0) = -6`|
 
 ## Binary Operators
+
+![expr](/assets/images/sql-guide/binary_op.svg)
 
 ### Logical
 

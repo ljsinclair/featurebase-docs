@@ -13,7 +13,7 @@ STRINGSETQ is a FeatureBase datatype used to associate multiple TIMESTAMP values
 ## Syntax
 
 ```
-STRINGSETQ [TIMEQUANTUM {value} [TTL '{value}']]
+STRINGSETQ TIMEQUANTUM {value} [TTL '{value}']
 ```
 
 ## Arguments

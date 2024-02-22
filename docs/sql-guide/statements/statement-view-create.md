@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 11
 ---
 
-## CREATE VIEW statement
+# CREATE VIEW statement
 
 Creates a FeatureBase view. The view already exists and `IF NOT EXISTS` is not specified the statement will not be successful.
 
