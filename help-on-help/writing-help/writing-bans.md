@@ -42,11 +42,10 @@ Please **DO NOT** use any of the following to make information stand out:
 
 ---
 [^45b9]: Software development is one of these things where there's **always** time pressures, which makes it tempting to:
-* Roll your own docs to get them done before the end of the sprint
-* Cut corners with videos and screenshots
-* Avoid writing docs altogether because it's something you're not good at
-* Assume end-users should *just know* the stuff you do
-
-And now I've accepted things aren't always perfect, I'll reiterate that PRs will be rejected/sent for rework if any of these things occur.
+>* Roll your own docs to get them done before the end of the sprint
+>* Cut corners with videos and screenshots
+>* Avoid writing docs altogether because it's something you're not good at
+>* Assume end-users should *just know* the stuff you do
+>And now I've accepted things aren't always perfect, I'll reiterate that PRs will be rejected/sent for rework if any of these things occur.
 
 [^63bd]: BNF diagrams **do** get out-of-date, and they **are** a maintenance overhead with the **only** benefit being they can be rebuilt **moderately** easily now I've documented the process.
