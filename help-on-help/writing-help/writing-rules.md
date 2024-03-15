@@ -8,7 +8,7 @@ You can make **one** assumption about our customers: they know how to do their j
 
 These rules will help us communicate better with our customers, and provide all the information they need in a way that is clear, understandable and comprehensive.
 
-Ignore these rules, and you cause problems for our users.
+Ignore these rules, and you cause problems for our users (and yourself because PRs will be sent back for review).
 
 ## Rule 1 - Write in plain English
 
@@ -38,6 +38,8 @@ Refer to [Page purpose and layout](/help-on-help/style-guide/page-purpose-layout
 
 You don’t need to document what’s in the UI unless it’s **NOT** immediately obvious to the user.
 
+And this goes **double** for images
+
 | Don't say this | Do say this |
 |---|---|
 | Fill in your name, surname, date of birth, mother’s maiden name, your Social Security number or equivalent, then  tick the Terms of service on the sign-up page. | Complete the fields on the sign-up page. |
@@ -57,20 +59,9 @@ We allow six ways to provide a way to make information stand out:
 | Text callouts/colored background | Important information such as warnings | [Text callouts](/help-on-help/writing-help/writing-content-callouts) |
 | Material icons | UI buttons and menu items | [/help-on-help/style-guide/material-icons] |
 
-## [Prohibited | Verboten | Interdit | απαγορευμένος | ] text styling
+* [Banned text formatting](/help-on-help/writing-help/writing-bans#banned-text-styling)
 
-Please **DO NOT** use any of the following to make information stand out:
-
-| Do not use | Issue | Use instead |
-|---|---|---|
-| heading styles for sentences and paragraphs | The Table Of Contents shortcode reads heading styles, which means it'll expand uncontrollably if you use any heading style for highlighting | [Text callouts](/help-on-help/writing-help/writing-content-callouts) |
-| **bold** for more than a specific UI element | Menu items can be bold. Anything else cannot. | [Text callouts](/help-on-help/writing-help/writing-content-callouts) |
-| *italic text* | Italic text isn't clear enough on its own. | [Text callouts](/help-on-help/writing-help/writing-content-callouts) |
-| html styles | The SCSS has been customised for the FeatureBase style guide, so anything else is unnecessary | [Text callouts](/help-on-help/writing-help/writing-content-callouts) |
-| Manual syntax highlighting | The css is likely to override them, and they may not render properly in production help | Raise a question in the [Slack docs-feedback-team channel](https://moleculacorp.slack.com/archives/C02JJQR01EY) where your issues can be discussed and fixed |
-| HTML5/Javascript features (e.g., [Collapsibles/accordion](https://www.w3schools.com/howto/howto_js_accordion.asp)) | The only reason you'd use a collapsible/accordion (or related feature) is to compress a page that is **too long** and contains **too much information**, which is the opposite approach to stated in this stye guide. In short: don't do it. | [Write modular content instead](/help-on-help/writing-help/writing-modular-content) |
-
-## Rule 5 - Single word hyperlink anchor text
+## Rule 5 - DO NOT use single words as hyperlink anchor text
 
 * [Learn more about hyperlink anchor text](/help-on-help/writing-help/writing-hyperlinks)
 
@@ -78,7 +69,7 @@ Please **DO NOT** use any of the following to make information stand out:
 
 Content duplication occurs when:
 * there's insufficient time available to review and revise existing documentation
-* when existing documentation has been [written from too many contexts](/)
+* when existing documentation has been [written from too many contexts](/help-on-help/writing-help/writing-planning-content)
 * when it's too difficult to work out which page to revise
 
 Content duplication is a problem:
@@ -86,6 +77,11 @@ Content duplication is a problem:
 * For users -- how do they know which content is up-to-date and correct for their particular use-case?
 * For maintenance -- how do we tell which content is accurate, if it's for a particular version of the product(s), etc
 
-Further information:
+## Rule 7 -- don't add images, videos or unnecessary text formatting
+
+* [Writing bans](/help-on-help/writing-help/writing-bans)
+
+## Further information
+
 * [Writing modular content](/help-on-help/writing-help/writing-modular-content)
 * [Writing reusable content](/help-on-help/writing-help/writing-common-include)
