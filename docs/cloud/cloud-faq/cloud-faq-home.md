@@ -65,7 +65,7 @@ has_toc: false
 | Question | Answer |
 |---|---|
 | How is my data stored in FeatureBase?<br/>What kind of bitmaps are used for my data? | [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps) |
-| What data sources can I import data from?<br/>Can I import data from the web interface (GUI)?<br/>What format should I use to export my data from my database? | [Supported data sources](/docs/cloud/cloud-ingest/cloud-ingest-manage/#what-data-sources-can-i-import-to-featurebase-cloud) |
+| What data sources can I import data from?<br/>Can I import data from the web interface (GUI)?<br/>What format should I use to export my data from my database? | [Supported data sources](/docs/cloud/cloud-ingest/cloud-ingest-manage/#which-data-sources-are-supported-by-featurebase) |
 | What happens to my data?<br/>Is my data lost during import?<br/>Does FeatureBase use INSERT or UPSERT behaviour? | [Is existing data overwritten or lost during import?](/docs/cloud/cloud-ingest/cloud-ingest-manage/#is-existing-data-overwritten-or-lost-during-import) |
 
 ## Query FAQ

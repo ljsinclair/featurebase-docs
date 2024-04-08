@@ -54,6 +54,4 @@ from myspecies;
 
 ## Further information
 
-* [SETCONTAINS function](/docs/sql-guide/functions/function-setcontains)
-* [SETCONTAINSALL function](/docs/sql-guide/functions/function-setcontainsall)
-* [SETCONTAINSANY function](/docs/sql-guide/functions/function-setcontainsany)
+* [SET functions](/docs/sql-guide/functions/function-set)

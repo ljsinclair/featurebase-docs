@@ -9,13 +9,18 @@ grand_parent: SQL guide
 
 `TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
+It is especially important for use in `BULK INSERT` statements to combine values intended for `SETQ` columns.
+
+## Before you begin
+
+* [SELECT statement](/docs/sql-guide/statements/statement-select)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [SETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
+
 ## Syntax
 
 ```sql
-TUPLE (
-  [ordinal_position,...] |
-  [column_name,...]
-  )
+TUPLE ([@<map-position>,...] | [<column-name>,... ])
 ```
 <!-- original syntax
 TUPLE(expr1,expr2,...)
@@ -25,14 +30,14 @@ TUPLE(expr1,expr2,...)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `ordinal_position` | An ordinal position defined in the `MAP` clause of a `BULK INSERT` statement | When used in BULK INSERT `TRANSFORM` clause | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
-| `column_name`| Table column name in existing table | When used in SELECT statement `select-list` | [SELECT statement](/docs/sql-guide/statements/statement-select) |
+| `@<map-position>,...` | Used with `BULK INSERT` statements in the `TRANSFORM` clause to combine two or more values represented in the `MAP` clause |  | [BULK INSERT...MAP]() |
+| `<column-name>,...` | Used in a `SELECT` statement to combine values from one or more columns in a given table |
 
 ## Returns
 
 | Data type | Value |
 |---|---|---|
-| tuple | tuple with an element per evaluated expression `(eval_expr1,eval_expr2,...)` |
+| `TUPLE` | tuple with an element per evaluated expression `(eval_expr1,eval_expr2,...)` |
 
 {% include /sql-guide/setq-tuple-returns.md %}
 

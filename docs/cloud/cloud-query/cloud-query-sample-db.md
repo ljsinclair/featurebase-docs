@@ -29,7 +29,7 @@ SHOW CREATE TABLE skills;
 
 ### What are `IDSET` and `STRINGSET` data types?
 
-The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types. These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
+The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-set-setq) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-set-setq) data types. These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
 
 ## SQL queries
 

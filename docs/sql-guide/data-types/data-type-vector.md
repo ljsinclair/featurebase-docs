@@ -15,20 +15,28 @@ These vectors can be compared using the [COSINE_DISTANCE() function](#further-in
 ## Syntax
 
 ```
-VECTOR({length})
+VECTOR({<length>})
 ```
 
 ## Arguments
 
 | Argument | Description | Additional information |
 |---|---|---|
-| length | An integer value representing the number of elements in the array | Cannot have a zero length |
+| `<length>` | Integer value representing the number of elements in the array | Cannot have a zero length |
 
 ## Additional information
 
 * values in the array must be floats
 * vector itself can be null
 * maximum precision is 64-bit float
+
+## Value definition
+
+| Column data type | Assignment | Additional information |
+|---|---|---|
+{% include /sql-guide/vector-value-def.md %}
+
+{% include /sql-guide/vector-csv-definition.md %}
 
 ## Examples
 
@@ -38,6 +46,4 @@ VECTOR({length})
 
 ## Further information
 
-The following functions can be included in SELECT queries to measure VECTOR values:
-* [COSINE_DISTANCE function](/docs/sql-guide/functions/function-vector-distances)
-* [EUCLIDEAN_DISTANCE function](/docs/sql-guide/functions/function-vector-distances)
+* [VECTOR distance functions](/docs/sql-guide/functions/function-vector-distances)

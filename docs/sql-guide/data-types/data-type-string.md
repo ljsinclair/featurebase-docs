@@ -28,11 +28,9 @@ STRING[(max)]
 
 {% include /sql-guide/unique-id-string-warning.md %}
 
-### Constraining string values
+### String literals
 
-Single quotation marks are used for string values in the following statements:
-* [INSERT/REPLACE](/docs/sql-guide/statements/statement-insert)
-* [SELECT](/docs/sql-guide/statements/statement-select)
+{% include /sql-guide/string-literal-def.md %}
 
 ## Examples
 

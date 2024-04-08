@@ -28,7 +28,7 @@ The following query statistics are available:
 
 | Statistic | Description | Additional information |
 |---|---|---|
-| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in `fb_exec_requests system table` | [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#fb_exec_requests) |
+| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in `fb_exec_requests system table` | [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#query-tables) |
 | Queries per second | A graph of queries processed each second on the database, updated every 15 seconds | Graph is reset on page refresh |
 
 ## Data ingestion graph

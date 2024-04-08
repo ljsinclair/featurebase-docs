@@ -15,7 +15,7 @@ The `STRINGSET` data type allows a comma-separated array of data to be inserted 
 ## Before you begin
 
 * [Learn about data modeling low-cardinality data](/docs/cloud/cloud-faq/cloud-faq-data-modeling)
-* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+* [STRINGSET data type](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## CREATE TABLE statement
 

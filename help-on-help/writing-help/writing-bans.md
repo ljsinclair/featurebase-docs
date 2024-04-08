@@ -41,6 +41,12 @@ Please **DO NOT** use any of the following to make information stand out:
 | HTML5/Javascript features (e.g., [Collapsibles/accordion](https://www.w3schools.com/howto/howto_js_accordion.asp)) | The only reason you'd use a collapsible/accordion (or related feature) is to compress a page that is **too long** and contains **too much information**, which is the opposite approach to stated in this stye guide. In short: don't do it. | [Write modular content instead](/help-on-help/writing-help/writing-modular-content) |
 
 ---
-[^45b9]: Software development is one of these things where there's **always** time pressures, which makes it tempting to:<br/>* Roll your own docs to get them done before the end of the sprint<br/>* Cut corners with videos and screenshots<br/>* Avoid writing docs altogether because it's something you're not good at<br/>* Assume end-users should *just know* the stuff you do<br/>And now I've accepted things aren't always perfect, I'll reiterate that PRs will be rejected/sent for rework if any of these things occur.
+[^45b9]: Software development is one of these things where there's **always** time pressures, which makes it tempting to:
+* Roll your own docs to get them done before the end of the sprint
+* Cut corners with videos and screenshots
+* Avoid writing docs altogether because it's something you're not good at
+* Assume end-users should *just know* the stuff you do
+
+And now I've accepted things aren't always perfect, I'll reiterate that PRs will be rejected/sent for rework if any of these things occur.
 
 [^63bd]: BNF diagrams **do** get out-of-date, and they **are** a maintenance overhead with the **only** benefit being they can be rebuilt **moderately** easily now I've documented the process.

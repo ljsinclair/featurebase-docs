@@ -9,6 +9,8 @@ nav_order: 6
 
 SQL Operators are used in SELECT statements to perform mathematical and logical operations on operands.
 
+{% include /sql-guide/note-operator-logic-wrong.md %}
+
 ## Before you begin
 
 {% include /sql-guide/sql-guide-before-begin.md %}

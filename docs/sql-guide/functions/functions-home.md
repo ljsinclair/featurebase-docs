@@ -32,9 +32,7 @@ has_toc: false
 
 ![expr](/assets/images/sql-guide/non_agg_function.svg)
 
-* [SETCONTAINS()](/docs/sql-guide/functions/function-setcontains)
-* [SETCONTAINSANY()](/docs/sql-guide/functions/function-setcontainsany)
-* [SETCONTAINSALL()](/docs/sql-guide/functions/function-setcontainsall)
+* [SET functions](/docs/sql-guide/functions/function-set)
 
 ## String scalar functions
 

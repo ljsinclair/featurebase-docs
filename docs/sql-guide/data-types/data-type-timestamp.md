@@ -8,29 +8,38 @@ nav_order: 10
 
 # TIMESTAMP data type
 
-Timestamp is a date-time data type which represents the specified `timeunit` as integer values elapsed since the specified Unix Epoch.
+`TIMESTAMP()` accepts any unix-epoch or ISO-8601 timestamp value.
+
+These values are encoded by FeatureBase as a unix-epoch integer based on the chosen time-unit.
 
 ## Before you begin
+
+* [Learn about ISO-8601 timestamp standard](https://www.iso.org/iso-8601-date-and-time-format.html){:target="_blank"}
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 ## Syntax
 
 ```
-TIMESTAMP [TIMEUNIT {value}]
+TIMESTAMP [TIMEUNIT {time-unit}]
 ```
 
 ## Arguments
 
-| Argument | Description | Additional information |
+| Argument | Description | Default | Additional information |
 |---|---|---|
-| TIMESTAMP | Time and date data type used for time series analysis | [Time stamp](https://en.wikipedia.org/wiki/Timestamp) |
-| TIMEUNIT | The time unit in which to store a timestamp that defaults to second `s` | See [TIMEUNIT values](#timeunit-value) |
+| TIMESTAMP | Data type that accepts unix epoch integer or string literal ISO-8601 timestamps |  | [Time stamp converter](https://www.timestamp-converter.com/){:target="_blank"} |
+| TIMEUNIT | Time unit used to convert the value to unix-epoch timestamp | `s` (second) | [TIMEUNIT values](#timeunit-value) |
 
 ## Additional information
 
 ### TIMEUNIT value
 
-{% include /sql-guide/timestamp-timeunit-table.md %}
+{: .important}
+Time units are treated as string literals and require a single quotation mark.
+
+| Unit | Declaration |
+|---|---|
+{% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
 ## Examples
 

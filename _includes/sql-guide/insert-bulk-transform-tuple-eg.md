@@ -5,7 +5,7 @@ BULK INSERT INTO tuple-demo(
     _id,
     time_col,
     stringset_col,
-    ideset_col,
+    idset_col,
     stringsetq_col,
     idesetq_col
   )

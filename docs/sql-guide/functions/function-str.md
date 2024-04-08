@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # STR() function
 
-The `STR()` string funtion returns the given numerical value as a String, with the option to specify precision rounding and return string length.
+The `STR()` string funtion returns the given numerical value as a STRING, with the option to specify precision rounding and return string length.
 
 ## Syntax
 
@@ -87,4 +87,3 @@ select _id, str(segment, 7, 2) as text from segments;
 |   1 | ******* |
 +-----+---------+
 ```
-

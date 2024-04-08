@@ -16,7 +16,7 @@ The table `tan-target` is required for an `INSERT` statement, and contains:
 * [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)
-* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+* [STRINGSET data type](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## CREATE TABLE statement
 

@@ -118,9 +118,9 @@ nav_order: 1
 | Term | Context | Additional information |
 |---|---|---|
 | Throughput | Data import/ingestion | Quantity of data that can be imported/ingested in a given time. May involve trade-off between Latency and Freshness |
-| Time Quantum | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq) |
+| Time Quantum | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setq) |
 | Timestamp | Data type | [Timestamp data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| TTL (Time To Live) | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq) |
+| TTL (Time To Live) | `SETQ` constraints  | [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)  <br/>[STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setq) |
 
 ## V
 

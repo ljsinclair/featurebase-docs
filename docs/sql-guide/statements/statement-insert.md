@@ -24,45 +24,42 @@ nav_order: 12
 
 ## Syntax
 
-```
+```sql
 INSERT INTO
-  table_name [(column_list)]
+  <table_name> [(<column_list>)]
   VALUES
-      {(value_list),...};
+      {(<value_list>),...};
 ```
 
 ## Arguments
 
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
-| table_name | Target table name | Yes |  |
-| column_list | List of columns which must include the `_id` column | Optional | FeatureBase assumes values to be inserted into existing columns if omitted |
-| value_list | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | [Value list additional](#value-list-additional) |
+|`<table-name>` | Target table name | Yes |  |
+| `<column_list>` | List of columns which must include the `_id` column | Optional | When omitted, FeatureBase assumes `<value-list>` will be inserted into existing `<column-list>` |
+| `<value-list>` | The list of constants and/or functions joined by operators, or a subquery to be inserted into the column. | Yes | [Value list additional](#value-list-additional) |
 
 ## Additional information
 
 ### Limitations
 
 The `INSERT` statement has the following limitations:
-
-| Limitation | Example | Result |
-|---|---|---|
-| Number of values to INSERT must match the number of columns in `column_list` | `INSERT INTO productnames (_id, products, sales)` VALUES (1, 'FeatureBase') | Run fails with error |
-| Values in rows with duplicate `_id` keys are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
-| Null values in rows with duplicate `_id` keys are ignored | | `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
+* `<value-list>` must match `<column-list>`
+* Rows with duplicate `_id` are overwritten
+* NULL values in duplicate `_id` rows are ignored
 
 ### Value assignment
 
-There are special assignments for certain literal values.
+| Data type | Assignment | Additional information |
+|---|---|---|
+| All | `NULL` (case insensitive)<br/>`''`(String) | Cannot be assigned for `SETQ` value list |
+| String | `'<value>'` | Empty string can also be represented as `NULL` |
+{% include /sql-guide/set-setq-value-def.md %}
+{% include /sql-guide/vector-value-def.md %}
 
-| Literal Value | Target Data Type | Result | Additional information |
-|---|---|---|---|
-| `,'',` | `string`| `''` (empty string) | |
-| `,NULL,`(case insensitive) | All unless explicitly listed | `NULL`| |
-| `[]` | `idset` <br/>`stringset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
-| `{}` | `idsetq`<br/>`stringsetq` | Curly brackets surround each datestamp and value to be inserted into the array | May also be used for vector arrays |
+{% include /sql-guide/set-setq-csv-datasource-ref.md %}
 
-{% include /sql-guide/timequantum-timestamp-summary.md %}
+{% include /sql-guide/vector-csv-definition.md %}
 
 ## UPDATE/REPLACE behavior
 
@@ -134,5 +131,5 @@ INSERT
 -->
 ## Further information
 
-* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
-* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq)
+* [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
+* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)

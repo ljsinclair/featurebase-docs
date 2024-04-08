@@ -32,8 +32,8 @@ SHOW CREATE TABLE skills;
 
 {: .note}
 >FeatureBase `IDSET` and `STRINGSET` data types are present in both tables:
->* [Learn about the IDSET data type](/docs/sql-guide/data-types/data-type-idset)
->* [Learn about the STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+>* [Learn about the IDSET data type](/docs/sql-guide/data-types/data-type-set-setq)
+>* [Learn about the STRINGSET data type](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## SQL queries
 
@@ -73,7 +73,7 @@ The following query, based on the aggregate queries above, has the following con
 
 | Query | Result | Additional information |
 |---|---|---|
-| `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 | [SETCONTAINSANY function](/docs/sql-guide/functions/function-setcontainsany) |
+| `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 | [SETCONTAINSANY function](/docs/sql-guide/functions/function-set) |
 
 ### Grouping with Complex Conditions
 
