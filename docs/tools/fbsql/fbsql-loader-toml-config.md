@@ -95,14 +95,16 @@ FeatureBase will supply values from specified `table` key if `[[fields]]` key/va
 | Key | Description | Required | Additional information |
 |---|---|---|---|
 | `name` | Target column name | Yes |  |
-| `source-type` | Target column data [^9ab2] | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home) |
+| `source-type` | Target column data | Yes | [Featurebase data types](/docs/sql-guide/data-types/data-types-home)<br/>[Configuring Record Time for Time Quantum fields](#configuring-record-time-for-time-quantum-fields)|
 | `source-path` | Nested JSON object parent and child | Kafka | Defaults to `name` value when not supplied |
 | `source-column` | Target column name | Optional | When omitted, order of `[[fields]]` key-values are correlated to those in `<target-table>` |
 | `primary-key` | Set to `"true"` for FeatureBase `_id` column | Only for `_id` column | Omit for other columns |
 
-
+### source-type
 Specifies the FeatureBase column type the incoming data will be formatted as. For example, if a kafka message contains "foo":"6" the configuration for foo should contain source-type = "string" even if the foo column in FeatureBase is an Int type. If a source-type is not provided, it will default to the FeatureBase field’s type.
 
+### Configuring Record Time for Time Quantum fields
+To load data into set type columns with `TIMEQUATUM` option, the loader configuration should have their mapped fields defined with `source-type` set to `StringSetQ` or `IDSetQ`. Also, an optional timestamp field can be defined in the loader configuration to specify a record time for these time quantum set fields, this special timestamp field must be defined with `source-type` set to `recordTime`. Loader will automatically apply the timestamp value from record time field to all the time quantum set fields found in the record. If the optional record time field is not configured or data for that field is not available then time quantum fields will be loaded without a record time and they will be visible to all time ranges without restrictions. 
 
 ## Additional information
 

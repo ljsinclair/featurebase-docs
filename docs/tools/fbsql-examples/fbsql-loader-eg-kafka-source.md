@@ -30,7 +30,9 @@ nav_order: 2
         "categories":["A", "C"],
         "level":24.56
     },
-    "ts":"2023-02-27T12:26:25.091284-06:00"
+    "ts":"2023-02-27T12:26:25.091284-06:00",
+    "events":["e1", "e2", "e3"],
+    "memberships":[1,2,3]
 }
 ```
 
@@ -74,9 +76,25 @@ source-path = ["demo", "level"]
 [[fields]]
 name        = "ts"
 source-type = "timestamp"
+
+[[fields]]
+name        = "events"
+source-type = "stringsetq"
+
+[[fields]]
+name        = "memberships"
+source-type = "idsetq"
+
+[[fields]]
+name        = "recordTimestamp"
+source-type = "recordTime"
+source-path = ["ts"]
 ```
 
 * Save then exit nano.
+
+{: .note}
+In the example loader configuration shown above, loader will automatically associate the timestamp value from  `recordTimestamp` to the time quantum fields `events` and `memberships`. Loader relates this timestamp to time quantum fields because `recordTimestamp` is defined with `source-type = "recordTime"` to indicate that the time value in this field is the record time and it should be used to process the views associated with the time quantum fields. 
 
 ## Next step
 
