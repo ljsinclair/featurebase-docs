@@ -1,6 +1,14 @@
 # FeatureBase Docs fork
 
-Forked to save the work for future reference.
+This is a fork of documentation I wrote for the FeatureBase bitmap database. 
+
+You can find documentation in the DOCS folder, but to get the full effect, you'll need to deploy a Jekyll instance.
+
+I'm going to work on a way to get the docs up FYI.
+
+## Deployment action
+
+This deployment action was designed for the subdomain `docs.featurebase.com` but as featurebase.com is now gone, I need to get in and give it another try. 
 
 [![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
